@@ -1,0 +1,106 @@
+{
+  "amendments": [
+    {
+      "before_preserved_pass": true,
+      "event": "pre-pass runner crash: KeyError adj while recording overhead",
+      "id": "B2-A1",
+      "impact": "crashed before any verdict was recorded or results.json was written; no outcomes observed",
+      "new_runner_sha256": "08af179262cbf469c3dcc2c09b5b265016e2ea167c04162763d02375fa9702f5",
+      "old_runner_sha256": "bd2e308fc4f719235d3c75dd8f3c19d2ae044dc658991d63b20a6a6b03e03620",
+      "repair": "include adj in OVERHEAD_SYSTEMS and initialize its overhead bucket",
+      "superseded_freeze": "sp2027/analysis/experiment_b_20261019/b2/freeze/B2_FREEZE_v1_superseded.json",
+      "time": "2026-10-19 14:04:53"
+    }
+  ],
+  "created": "2026-10-19 14:04:53",
+  "frozen_reference_hashes": {
+    "eb_adjudicator.py": "c7c6a62cd6e288a4e1f92d910ed70eceafa621d8c3389eb09242c3e0f893425e",
+    "eb_v3_full.py": "6c7d0d8b564e0d0bdeace6ba59be90cd03cb9a8700df7649d6366a97ff280670",
+    "eb_v3_sig.py": "6b17954b0441dcf7ef0973d7e9c755df9707658119290a9d4e4bb5db64727329",
+    "heb1_v2_claim_binding.py": "3585f876a39d136eb550db1cccb04a4b23f30e4b46a5bb2e6d97efb55194c53d",
+    "iab_b_freeze": "cc0fde9e750b84baea80fe3d9bf58f6ca88ae53370b769b74508856de59e0570"
+  },
+  "h4_resolution": {
+    "cases": [
+      "eb-073a6be418",
+      "eb-3f6eabbf38",
+      "eb-78846df244",
+      "eb-d11a746760"
+    ],
+    "cert_executor": "eb-executor-y",
+    "d7_result": "fails (trace.executor != cert.execution.executor)",
+    "effect": "H4 is rejected at L2 by D7; no H4 false promotion for digest-only or abl-tracejoin; conditional resolves to none.",
+    "trace_executor": "eb-executor-x"
+  },
+  "modules": {
+    "b2_prov_baselines.py": "43df1bb3349535bffe0bd7eb86699bb938462471956a71e94d94ed1c9c9474ed",
+    "b2_runner.py": "08af179262cbf469c3dcc2c09b5b265016e2ea167c04162763d02375fa9702f5"
+  },
+  "prediction_derivation": "Held-out family sets are the pre-registered predictions from B2_PROTOCOL.md. Dev predictions are derived mechanically by intersecting the held-out prediction families with the families present in the frozen dev case inventory (H10 is absent from dev).",
+  "predictions": {
+    "dev": {
+      "abl-authjoin": [
+        "H6b"
+      ],
+      "abl-executor": [
+        "H9"
+      ],
+      "abl-refjoin": [],
+      "abl-tracejoin": [],
+      "digest-only": [
+        "H6b"
+      ],
+      "digest-session": []
+    },
+    "heldout": {
+      "abl-authjoin": [
+        "H6b"
+      ],
+      "abl-executor": [
+        "H9"
+      ],
+      "abl-refjoin": [
+        "H10"
+      ],
+      "abl-tracejoin": [],
+      "digest-only": [
+        "H6b",
+        "H10"
+      ],
+      "digest-session": []
+    }
+  },
+  "protected": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "protocol": {
+    "path": "sp2027/analysis/experiment_b_20261019/b2/B2_PROTOCOL.md",
+    "sha256": "adc953619d13bf2f06e03305dff6616d13477a2bb6efe7741168dae7eabbe18b"
+  },
+  "schema": "b2-freeze/1",
+  "sets": {
+    "dev": {
+      "case_inventory_sha256": "71960c78a027d275f260562116c3c61576d843a5b9e59a7796fdc643aa4ba2f7",
+      "cases": 54,
+      "cases_root": "sp2027/analysis/experiment_b_20261019/iar_b/cases/dev",
+      "labels": "sp2027/analysis/experiment_b_20261019/iar_b/labels/dev_labels.json",
+      "labels_sha256": "1a7f440077e7f1ce8dad64fd9ba69f8563a726f7cd20e99a209b4fc0d05f66be",
+      "private_root": "sp2027/analysis/experiment_b_20261019/iar_b/private/dev",
+      "trust": "sp2027/analysis/experiment_b_20261019/iar_b/trust/dev_run_keys.json",
+      "trust_sha256": "ff710e220e6801b9ca08c95b3cb55927ada57c8abe4180ed64dbd51acc9138f6"
+    },
+    "heldout": {
+      "case_inventory_sha256": "48d4b442ebbb882acbeab0d8429ebe55add818406a30b256958ece6e0b4aced8",
+      "cases": 58,
+      "cases_root": "sp2027/analysis/experiment_b_20261019/iar_b_heldout/cases/dev",
+      "labels": "sp2027/analysis/experiment_b_20261019/iar_b_heldout/labels/heldout_labels.json",
+      "labels_sha256": "fd00498ea704af8568e3c3580ad71af0bc51ecfc097a5977aa364fc94053a504",
+      "private_root": "sp2027/analysis/experiment_b_20261019/iar_b_heldout/private/dev",
+      "trust": "sp2027/analysis/experiment_b_20261019/iar_b_heldout/trust/heldout_run_keys.json",
+      "trust_sha256": "f2dd785c807897b4a0b80cfb0af1b5de827b05be6e569e5fa52c42353925195b"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "composition_ops": [
+    "agent_artifact re-pointed to run A session/hash",
+    "trace, effect, acceptance, claims kept from run B",
+    "candidate attached is run A faulty output",
+    "request binds run A"
+  ],
+  "runs": {
+    "sess-5dd1eeb26b2d938c": {
+      "base_instance_id": "inst-d3456d63165b",
+      "candidate_sha256": "6f069ac0f5e24fa9b18a60792929e417de40e10c5c307e0b3f91e2dccf3fada4",
+      "condition_id": "C0",
+      "crypto_ok": false,
+      "effect_status": "NOT_OBSERVED",
+      "reference_accepted": false,
+      "target_id": "target-b1-ecdsa-01"
+    },
+    "sess-a414f317f012c2de": {
+      "base_instance_id": "inst-d3456d63165b",
+      "candidate_sha256": "6ac3a4f2763ba6ed8b314f7cf3f130f0218e3f736c7759955a7854324990bd60",
+      "condition_id": "C0",
+      "crypto_ok": true,
+      "effect_status": "OBSERVED",
+      "reference_accepted": true,
+      "target_id": "target-b1-ecdsa-01"
+    }
+  }
+}

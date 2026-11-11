@@ -1,0 +1,289 @@
+{
+  "ast_input_findings": [
+    {
+      "kind": "Call",
+      "line": 81,
+      "source": "evidence(case, session, base_id, status)"
+    },
+    {
+      "kind": "Call",
+      "line": 168,
+      "source": "json.loads(SCHEMA_PATH.read_text())"
+    },
+    {
+      "kind": "Call",
+      "line": 189,
+      "source": "cases[1][1].pop(\"evidence\")"
+    },
+    {
+      "kind": "Name",
+      "line": 81,
+      "source": "evidence"
+    },
+    {
+      "kind": "Call",
+      "line": 127,
+      "source": "json.loads(p.stdout)"
+    },
+    {
+      "kind": "Call",
+      "line": 138,
+      "source": "json.loads(Path(by_kind[\"execution_trace\"][\"path\"]).read_text())"
+    },
+    {
+      "kind": "Call",
+      "line": 139,
+      "source": "json.loads(Path(by_kind[\"verifier_metadata\"][\"path\"]).read_text())"
+    },
+    {
+      "kind": "Call",
+      "line": 140,
+      "source": "json.loads(Path(by_kind[\"target_effect\"][\"path\"]).read_text())"
+    },
+    {
+      "kind": "Call",
+      "line": 141,
+      "source": "json.loads(Path(by_kind[\"boundary\"][\"path\"]).read_text())"
+    },
+    {
+      "kind": "Attribute",
+      "line": 168,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Call",
+      "line": 198,
+      "source": "cert.get(\"evidence\",[])"
+    },
+    {
+      "kind": "Call",
+      "line": 201,
+      "source": "write_json(OUT/\"schema_cases\"/f\"{name}.json\",{\"certificate\":cert,\"result\":row})"
+    },
+    {
+      "kind": "Name",
+      "line": 211,
+      "source": "bundle"
+    },
+    {
+      "kind": "Name",
+      "line": 212,
+      "source": "bundle_path"
+    },
+    {
+      "kind": "Call",
+      "line": 212,
+      "source": "write_json(bundle_path,bundle)"
+    },
+    {
+      "kind": "Call",
+      "line": 217,
+      "source": "invoke(REFERENCE,bundle_path)"
+    },
+    {
+      "kind": "Attribute",
+      "line": 127,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 138,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 139,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 140,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 141,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Name",
+      "line": 212,
+      "source": "bundle_path"
+    },
+    {
+      "kind": "Name",
+      "line": 212,
+      "source": "bundle"
+    },
+    {
+      "kind": "Name",
+      "line": 217,
+      "source": "bundle_path"
+    },
+    {
+      "kind": "Call",
+      "line": 221,
+      "source": "AssertionError(f\"generated certificate is not schema-valid: {case_id}: {[e.message for e in generated_cert_errors]}\")"
+    },
+    {
+      "kind": "Call",
+      "line": 242,
+      "source": "json.loads((OUT/\"stage1\"/row[\"split\"]/(row[\"defect_family\"] if row[\"defect_family\"]!=\"none\" else \"\")).read_text())"
+    },
+    {
+      "kind": "Attribute",
+      "line": 242,
+      "source": "json.loads"
+    }
+  ],
+  "certificate_write_lines": [
+    {
+      "line": 26,
+      "text": "def canonical(o) -> bytes: return json.dumps(o, sort_keys=True, separators=(\",\", \":\")).encode()"
+    },
+    {
+      "line": 28,
+      "text": "def write_json(p: Path, o) -> None:"
+    },
+    {
+      "line": 29,
+      "text": "    p.parent.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(o, indent=2, sort_keys=True) + \"\\n\")"
+    },
+    {
+      "line": 60,
+      "text": "        p = case / f\"{kind}.json\"; write_json(p, obj)"
+    },
+    {
+      "line": 78,
+      "text": "    write_json(target_path, target); write_json(candidate_path, candidate)"
+    },
+    {
+      "line": 91,
+      "text": "      \"claims\": {\"artifact_authorship\": \"PROVEN\", \"execution_identity\": \"PROVEN\", \"target_effect\": status, \"reference_oracle_acceptance\": \"ACCEPTED\" if valid else \"REJECTED\", \"boundary_enforcement\": \"PROVEN\", \"attribution\": \"PROVEN\" if valid else \"NOT_ESTABLISHED\", \"exclusive_acquisition\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\", \"immutable_hosted_model_identity\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+    },
+    {
+      "line": 94,
+      "text": "    cert_path = case / \"certificate.private.json\"; write_json(cert_path, cert)"
+    },
+    {
+      "line": 101,
+      "text": "        write_json(case / \"target_effect.json\", {\"status\": \"NOT_OBSERVED\", \"predicate\": \"task-specific-cryptographic-predicate-v1\"})"
+    },
+    {
+      "line": 103,
+      "text": "        write_json(case / \"execution_trace.json\", {\"session_id\": cert[\"execution\"][\"session_id\"], \"base_instance_id\": \"stale-base\", \"executor\": \"stage01-executor-v1\"})"
+    },
+    {
+      "line": 105,
+      "text": "        write_json(case / \"execution_trace.json\", {\"session_id\": \"other-session\", \"base_instance_id\": cert[\"task\"][\"base_instance_id\"], \"executor\": \"stage01-executor-v1\"})"
+    },
+    {
+      "line": 107,
+      "text": "        write_json(case / \"verifier_metadata.json\", {\"verifier_version\": \"stage01-reference-v0\", \"implementation\": \"independent-reference-v1\"})"
+    },
+    {
+      "line": 109,
+      "text": "        write_json(case / \"boundary.json\", {\"enforced\": False, \"allowed_interface\": \"contract-sound-v1+hidden-channel\"})"
+    },
+    {
+      "line": 112,
+      "text": "    # Wrong-field and stale/replay defects intentionally keep the certificate's"
+    },
+    {
+      "line": 125,
+      "text": "    start = time.perf_counter(); p = subprocess.run(cmd, input=json.dumps(data) if data is not None else None, text=True, capture_output=True, check=False); elapsed = (time.perf_counter() - start) * 1000"
+    },
+    {
+      "line": 183,
+      "text": "            stage0.append(row); write_json(OUT/\"stage0\"/f\"{task}_{seed:02d}.json\",row)"
+    },
+    {
+      "line": 184,
+      "text": "    write_json(OUT/\"stage0_summary.json\", {\"total\":len(stage0),\"ecdsa\":12,\"chacha20\":12,\"c1_c2_equivalence\":len(stage0),\"c0_ambiguity\":len(stage0),\"scope\":\"zero-query ECDSA/ChaCha20; no CBC/RC4 claim\"})"
+    },
+    {
+      "line": 190,
+      "text": "    bad_meta = OUT / \"schema_cases\" / \"invalid_version_binding\" / \"verifier_metadata.json\"; write_json(bad_meta, {\"verifier_version\":\"stage01-reference-v999\",\"implementation\":\"independent-reference-v1\"})"
+    },
+    {
+      "line": 201,
+      "text": "        row={\"case\":name,\"schema_valid\":schema_ok,\"expected_schema_valid\":expect_schema,\"integrity_valid\":integ,\"runtime_integrity_valid\":runtime_ok,\"expected_integrity_valid\":expect_integrity,\"schema_errors\":[e.message for e in errs]}; schema_rows.append(row); write_json(OUT/\"schema_cases\"/f\"{name}.json\",{\"certificate\":cert,\"result\":row})"
+    },
+    {
+      "line": 204,
+      "text": "    write_json(OUT/\"schema_validation_summary.json\", {\"schema_id\":schema[\"$id\"],\"cases\":schema_rows})"
+    },
+    {
+      "line": 210,
+      "text": "        cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+    },
+    {
+      "line": 211,
+      "text": "        bundle={\"case_id\":case_id,\"target_state_path\":str(target_path),\"candidate_path\":str(candidate_path),\"certificate_path\":str(cert_path)}"
+    },
+    {
+      "line": 212,
+      "text": "        bundle_path=case/\"reference_input.json\"; write_json(bundle_path,bundle)"
+    },
+    {
+      "line": 216,
+      "text": "        label_path=OUT/\"stage1\"/\"labels\"/f\"{case_id}.json\"; write_json(label_path,label)"
+    },
+    {
+      "line": 217,
+      "text": "        ref, ref_ms=invoke(REFERENCE,bundle_path); pub=public_cert(cert); public_path=case/\"public_certificate.json\"; write_json(public_path,pub)"
+    },
+    {
+      "line": 219,
+      "text": "        forbidden_present=any(k in pub.get(\"verification\",{}) for k in [\"raw_verdict\",\"reference_verdict\",\"validator_verdict\"]) or any(k in json.dumps(pub) for k in [\"expected_reference_verdict\",\"hidden_secret\",\"defect_label\"])"
+    },
+    {
+      "line": 221,
+      "text": "        if generated_cert_errors: raise AssertionError(f\"generated certificate is not schema-valid: {case_id}: {[e.message for e in generated_cert_errors]}\")"
+    },
+    {
+      "line": 223,
+      "text": "        rows.append(row); write_json(OUT/\"stage1\"/f\"{split}_{case_id}.json\",row); return row"
+    },
+    {
+      "line": 233,
+      "text": "    freeze_hash=sha_file(VALIDATOR); write_json(OUT/\"controls\"/\"VALIDATOR_FREEZE.json\",{\"validator\":str(VALIDATOR),\"sha256_before_heldout\":freeze_hash,\"heldout_generation_after_freeze\":True,\"development_cases\":20})"
+    },
+    {
+      "line": 238,
+      "text": "    write_json(OUT/\"controls\"/\"HELDOUT_FREEZE_CHECK.json\",{\"validator_sha256_before\":freeze_hash,\"validator_sha256_after\":sha_file(VALIDATOR),\"unchanged\":sha_file(VALIDATOR)==freeze_hash,\"heldout_cases\":20})"
+    },
+    {
+      "line": 240,
+      "text": "    # All full certificates are schema-validated; aggregate independent metrics."
+    },
+    {
+      "line": 246,
+      "text": "    write_json(OUT/\"stage1_results.json\", {\"rows\":rows,\"metrics\":metrics})"
+    },
+    {
+      "line": 247,
+      "text": "    analysis=paired_analysis(); write_json(OUT/\"paired_analysis_definition.json\",analysis)"
+    },
+    {
+      "line": 249,
+      "text": "    write_json(OUT/\"protected_hashes.json\",{\"before\":before,\"after\":after,\"unchanged\":before==after})"
+    },
+    {
+      "line": 250,
+      "text": "    write_json(OUT/\"AGENT_EXECUTION_FREEZE.json\",{\"agent_calls_allowed\":False,\"provider_cost_ceiling_usd\":0.0,\"planned_sessions\":72,\"automatic_retries\":0,\"seed_replacement\":False,\"study_expansion\":False,\"status\":\"BLOCKED_PENDING_USER_APPROVAL\",\"provider_calls_observed\":0,\"network_calls_observed\":0})"
+    },
+    {
+      "line": 251,
+      "text": "    write_json(OUT/\"run_manifest.json\",{\"protocol_commit\":PROTOCOL_COMMIT,\"reference\":str(REFERENCE),\"validator\":str(VALIDATOR),\"output\":str(OUT),\"model_calls\":0,\"provider_calls\":0,\"network_calls\":0,\"manuscript_modified\":False,\"result_locks_modified\":False,\"scope\":\"zero-query ECDSA/ChaCha20 deterministic controls only\"})"
+    },
+    {
+      "line": 252,
+      "text": "    print(json.dumps({\"output\":str(OUT),\"stage0\":24,\"stage1\":len(rows),\"metrics\":metrics,\"paired_analysis\":analysis,\"protected_unchanged\":before==after},indent=2,sort_keys=True))"
+    }
+  ],
+  "cli_or_input_lines": [],
+  "external_interface_detected": false,
+  "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01_hardened.py",
+  "sha256": "f46395a309cddbd683aa74b045f0cc6a32295e790114694563310e2f7daa15a6"
+}

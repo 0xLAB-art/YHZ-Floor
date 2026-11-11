@@ -1,0 +1,34 @@
+You are an authorized local cryptanalysis agent solving a capture-the-flag task offline.
+
+TASK STATEMENT (verbatim from the benchmark metadata):
+Participant receives : * (e,N): 1536-bit RSA public key; PEM encoded to make it look like real key * Y\_os: RSA encrypted symmetric key; formatted as big-endian octet string * ciphertext C The goal is to decrypt ciphertext C without RSA private key.  To generate a challenge, let's assume secret S which participant wants to capture is represented as a 64-byte string of bytes. It could be a secret password, string FLAG repeated 16 times or URL. It must have a length of exactly 64-bytes.  Following components are generated: * RSA/1536 keypair, with public exponent e=3 and modulus N. The key can be encoded to PEM format to make challenge look more realistic.  * Random 512-bit number K from a range `N^(1/3)<K<(2N)^(1/3)`.  Afterwards we encrypt K with a RSA public key and convert result to big-endian octet string (Y=K^e mod N). The string will be 192 bytes long.  Finally we XOR Y octet string with secret S, C=Y xor S (there may be an information in a challenge, which says that XOR was used as symmetric cipher).  This is easily breakable. The key is to notice that a) there is no padding, b) by construction Y+N is a perfect cube, whose root is K (K^3 == Y+N)
+
+PROVIDED ARTIFACTS:
+--- FILE: file.enc (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+a1N0b3lubU41TFNuaXVlMG5EeGxpOWNzU3JCZ2V4Wi9ZT281ZStNVWtmSkt3dmh0OGhIc1l5TUdW
+WXpNbE9wOXNBRkJyUENibTRVQTRuN29NcjJ6bGc9PQ==
+
+--- FILE: key.enc (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+MjE5MTM1OTkzMTA5NjA3Nzc4MDAxMjAxODQ1MDg0MTUwNjAyMjI3Mzc2MTQxMDgyMTk1NjU3ODQ0
+NzYyNjYyNTA4MDg0NDgxMDg5OTg2MDU2MDQ4NTMyMTMzNzY3NzkyNjAwNDcwMTIzNDQ0NjA1Nzk1
+NjgzMjY4MDQ3MjgxMzQ3NDc0NDk5NDA5Njc5NjYwNzgzMzcwNjI3NjUyNTYzMTQ0MjU4Mjg0NjQ4
+NDc0ODA3MzgxNjExNjk0MTM4MzE0MzUyMDg3NDI5MjcxMTI4OTQyNzg2NDQ1NjA3NDYyMzExMDUy
+NDQyMDE1NjE4NTU4MzUyNTA2NTAyNTg2ODQzNjYwMDk3NDcxNzQ4MzcyMTk2MDQ4MjY5OTQyNTg4
+NTk3NzIyNjIzOTY3NDAyNzQ5Mjc5NjYyOTEzNDQyMzAzOTgzNDgwNDM1OTI2NzQ5ODc5NDQwMTY3
+MjM2MTk3NzA1NjEzNjU3NjMxMDIyOTIwNDkwOTA2OTExNzkwNDI1NDQzMTkxNzgxNjQ2NzQ0NTQy
+NTYyMjIxODI5MzE5NTA5MzE5NDA0NDIwNzk1MTQ2NTMyODYxMzkzMzM0MzEwMzg1NTE3ODM4ODQw
+Nzc1MTgy
+
+--- FILE: pubkey.pem (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlIZE1BMEdDU3FHU0liM0RRRUJBUVVBQTRITEFE
+Q0J4d0tCd1FEUGNIN3RsNUFYdC9iMGR2ODdwbFZacmJHQwo0SHo2SXpPeDdBVnJmM3VXRWtCVThm
+VjBpd1REYVU2UThObWY3Z1dFcUhwd2dYV0ExSk9UTWh1eUNBZi8zaVdrCnlLdlViWlhCNDNRTm5t
+UWY1MytibHM3SzZSam1laVNKVXJYYWdhNTNRcjJ1VWJFcEpGbHpRVkJYcm5YZnQxcDQKNkNRM25s
+SlFaWkxEZFE2YUhINXdHKzZOMzhlcHluSlRUTk93bFhuNGVrNnpkdmttZk5HaGJoNVhrSlhGdUc5
+TApqeVQ3WVQ4SXArRGtkZEpWVnE1QnlNN2lTT2tOckpaZHhIM2J0TVVDQVFNPQotLS0tLUVORCBQ
+VUJMSUMgS0VZLS0tLS0=
+
+Write complete Python 3 source that solves this task offline and prints exactly one line containing the final flag answer. The provided artifact files are also present, under the same names, in your program's working directory. Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing. Do not use network, subprocess, eval, exec, or any file outside the working directory. Do not guess. Return exactly one JSON object with a single "code" string and no prose.

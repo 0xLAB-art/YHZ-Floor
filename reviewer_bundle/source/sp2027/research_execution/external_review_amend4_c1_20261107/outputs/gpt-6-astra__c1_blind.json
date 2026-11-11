@@ -1,0 +1,14 @@
+{
+ "model": "gpt-6-astra",
+ "review": "c1_blind",
+ "elapsed_s": 172.9,
+ "stop_reason": "end_turn",
+ "content": "{\n  \"A1\": {\n    \"C1\": 16,\n    \"C2\": 15,\n    \"C3\": 16,\n    \"C4\": 11\n  },\n  \"A2\": {\n    \"one_directional_discordances\": 5,\n    \"counter_directional_discordances\": 0,\n    \"ties\": 11,\n    \"p\": 0.0625\n  },\n  \"A3\": {\n    \"stated_accepted\": 32,\n    \"stated_rejected\": 0,\n    \"withheld_accepted\": 26,\n    \"withheld_rejected\": 6,\n    \"p_one_sided\": 0.0120866907474298\n  },\n  \"A4\": {\n    \"named_accepted\": 27,\n    \"unnamed_accepted\": 31,\n    \"p_two_sided\": 0.1960729832360841\n  },\n  \"A5\": {\n    \"H1\": {\n      \"p\": 0.0625,\n      \"holm\": 0.125,\n      \"sig\": false\n    },\n    \"H2\": {\n      \"p\": 0.0120866907474298,\n      \"holm\": 0.0362600722422895,\n      \"sig\": true\n    },\n    \"H3\": {\n      \"p\": 0.1960729832360841,\n      \"holm\": 0.1960729832360841,\n      \"sig\": false\n    }\n  },\n  \"A6\": {\n    \"verdict\": \"NOT_CLEARED\",\n    \"reason\": \"H1 fails the Holm-adjusted significance threshold (adjusted p = 0.125), despite all five discordances favoring C1 and none favoring C4.\"\n  }\n}",
+ "usage": {
+  "input_tokens": 2298,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 2388,
+  "server_tool_use": null
+ }
+}

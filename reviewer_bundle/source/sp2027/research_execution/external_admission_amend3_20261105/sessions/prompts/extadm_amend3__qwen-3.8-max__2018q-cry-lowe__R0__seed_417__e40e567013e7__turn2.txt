@@ -1,0 +1,24 @@
+You are an authorized local cryptanalysis agent solving a capture-the-flag task offline.
+
+TASK STATEMENT (verbatim from the benchmark metadata):
+Participant receives : * (e,N): 1536-bit RSA public key; PEM encoded to make it look like real key * Y\_os: RSA encrypted symmetric key; formatted as big-endian octet string * ciphertext C The goal is to decrypt ciphertext C without RSA private key.  To generate a challenge, let's assume secret S which participant wants to capture is represented as a 64-byte string of bytes. It could be a secret password, string FLAG repeated 16 times or URL. It must have a length of exactly 64-bytes.  Following components are generated: * RSA/1536 keypair, with public exponent e=3 and modulus N. The key can be encoded to PEM format to make challenge look more realistic.  * Random 512-bit number K from a range `N^(1/3)<K<(2N)^(1/3)`.  Afterwards we encrypt K with a RSA public key and convert result to big-endian octet string (Y=K^e mod N). The string will be 192 bytes long.  Finally we XOR Y octet string with secret S, C=Y xor S (there may be an information in a challenge, which says that XOR was used as symmetric cipher).  This is easily breakable. The key is to notice that a) there is no padding, b) by construction Y+N is a perfect cube, whose root is K (K^3 == Y+N)
+
+PROVIDED ARTIFACTS:
+--- FILE: file.enc (verbatim) ---
+kStoynmN5LSniue0nDxli9csSrBgexZ/YOo5e+MUkfJKwvht8hHsYyMGVYzMlOp9sAFBrPCbm4UA4n7oMr2zlg==
+
+--- FILE: key.enc (verbatim) ---
+219135993109607778001201845084150602227376141082195657844762662508084481089986056048532133767792600470123444605795683268047281347474499409679660783370627652563144258284648474807381611694138314352087429271128942786445607462311052442015618558352506502586843660097471748372196048269942588597722623967402749279662913442303983480435926749879440167236197705613657631022920490906911790425443191781646744542562221829319509319404420795146532861393334310385517838840775182
+
+--- FILE: pubkey.pem (verbatim) ---
+-----BEGIN PUBLIC KEY-----
+MIHdMA0GCSqGSIb3DQEBAQUAA4HLADCBxwKBwQDPcH7tl5AXt/b0dv87plVZrbGC
+4Hz6IzOx7AVrf3uWEkBU8fV0iwTDaU6Q8Nmf7gWEqHpwgXWA1JOTMhuyCAf/3iWk
+yKvUbZXB43QNnmQf53+bls7K6RjmeiSJUrXaga53Qr2uUbEpJFlzQVBXrnXft1p4
+6CQ3nlJQZZLDdQ6aHH5wG+6N38epynJTTNOwlXn4ek6zdvkmfNGhbh5XkJXFuG9L
+jyT7YT8Ip+DkddJVVq5ByM7iSOkNrJZdxH3btMUCAQM=
+-----END PUBLIC KEY-----
+
+Write complete Python 3 source that solves this task offline and prints exactly one line containing the final flag answer. The provided artifact files are also present, under the same names, in your program's working directory. Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing. Do not use network, subprocess, eval, exec, or any file outside the working directory. Do not guess. Return exactly one JSON object with a single "code" string and no prose.
+
+EXECUTION_OR_ORACLE_REJECTED: your previous submission did not run to completion or the oracle did not accept its output. Revise the program using only the provided artifacts and resubmit. Return exactly one JSON object with a single "code" string and no prose.

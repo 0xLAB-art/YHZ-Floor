@@ -1,0 +1,17 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"d": "64 lowercase hex characters"}
+
+Instance (JSON):
+{"encoding":"hex-v1","public_key":{"x":"95564e79273b6ed49289773865bc90557fd80dae852af2564fab943899b2600f","y":"7fa877ac21bd8769a1bfb1840c401a5b1dddeeec362158d83b31075aa2484402"},"signatures":[{"r":"ae78137f4a1d5a9bf9f5fb7b1d17b710b361acfa8b9effecfb0c56386d1f51ec","s":"53e939cf5cb11b7a93cfa3f9e353ef46e9843ee2ba0909b46cae4e344b2eaba6","z":"15bee5610e4b1fab20bf3411b10a65b4fbdb4c2f9832b918cf7f98d1411fdac8"},{"r":"31871911a1319d93565eb4115ebffef93f65d0b21075587e7b4528d96f96360d","s":"d80668a5082664f0af186410d66beeaaebf710d6c776d8baf07ac97d9af92d85","z":"f4fa2dad904ab32e8e12bdb9d91db99083be5dc9961125521fb526b16d26ec53"},{"r":"80c5c68ddd1a39741430134c59e0fde3b5799e636aa2754ff2c126382cb42bcf","s":"894b3f1d69e42e50129d59f6e0e5719e0bf33f4a744268968655f791e7920c8b","z":"978b0ce613b2f4cc5e406c5e1fae68ae3ba92f6927ec8973adf581931b538aaf"},{"r":"c777aec8736e49f9f0a9fa1c637d64e1fa23df479b648bfabe063729c13b20d8","s":"bb8e2de868cac23fe4fbf5ff2ae550ce261eec671c32ef23234ea9f91a969204","z":"a099e2ea15c3bb90d3a247a717edceb2e6ec9b6dd8eca2f7b0f8fe441bae4b74"},{"r":"632c6e5325bf93d9d4e47b17e755d44db71a476e6ff3b250d404ae108b1a1222","s":"c5562b1683bcb3e7b5aad0a78deaf019515c1c9989db5ff4f766a44cba6ffbea","z":"ab396e77c9e442b914c1d0dc45e4be925084cb512c8cb2c4b1de1e494bcb5b22"},{"r":"ae78137f4a1d5a9bf9f5fb7b1d17b710b361acfa8b9effecfb0c56386d1f51ec","s":"e0dc6a26c9b3d7a9961c8cc8882c8a70ebef058bd41b7a7e033f042cb69871e0","z":"8beb66a3076c84e57363cff8cd4cd07494515e7def72053edf774f6fb65d93ec"}]}

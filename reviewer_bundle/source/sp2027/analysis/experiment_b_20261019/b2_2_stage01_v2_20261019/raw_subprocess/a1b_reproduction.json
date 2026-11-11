@@ -1,0 +1,120 @@
+{
+  "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction",
+  "input_case_files": {
+    "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+    "evidence/agent_artifact.json": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+    "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+    "evidence/execution_trace.json": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+    "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+    "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+    "private_certificate.json": "ba6346bcd673d71658b601367e00002855f028a445ad17cde14082d84d2f08e7",
+    "public_certificate.json": "509b2a429771108f3fb9b960b354c3243429cd43a9f0c8bca2f0681bf852f770",
+    "reference_input.json": "794580d5b180165a6fd0d886475c0a8d471bc8c3983a21e04786b05063643a43",
+    "source_private_certificate.json": "198e407d8844a56b3947b1476094d81fe2b54dc795ff9c9f171d69737b2bd7ee",
+    "source_public_certificate.json": "87714a70e5ceb23f0fb201eed0bc45ec2f5cb1e84b18ace08c87a0769fa36002",
+    "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+  },
+  "name": "a1b_reproduction",
+  "outer_integrity": {
+    "candidate": {
+      "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+      "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+      "match": true,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/candidate.json"
+    },
+    "evidence": [
+      {
+        "actual_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+        "declared_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+        "kind": "agent_artifact",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/agent_artifact.json"
+      },
+      {
+        "actual_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+        "declared_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+        "kind": "execution_trace",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/execution_trace.json"
+      },
+      {
+        "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "kind": "target_effect",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/target_effect.json"
+      },
+      {
+        "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "kind": "verifier_metadata",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/verifier_metadata.json"
+      },
+      {
+        "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "kind": "boundary",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/boundary.json"
+      }
+    ]
+  },
+  "reference": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/reference_input.json"
+    ],
+    "elapsed_ms": 188.981,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"certificate_errors\": [\"execution-session-binding\"], \"certificate_integrity\": false, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"REJECTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+    "verdict": {
+      "certificate_errors": [
+        "execution-session-binding"
+      ],
+      "certificate_integrity": false,
+      "crypto_details": {
+        "public_key_matches": true,
+        "recovered_d_matches": true,
+        "recovered_k_matches": true,
+        "repeated_r": true,
+        "signatures_verify": true
+      },
+      "cryptographic_predicate": true,
+      "reference_verdict": "REJECTED",
+      "truth_source": "recomputed-target-candidate-and-certificate"
+    }
+  },
+  "validator": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+    ],
+    "elapsed_ms": 59.275,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"decision\": \"REJECT\", \"reason\": \"execution-session-binding\"}\n",
+    "verdict": {
+      "decision": "REJECT",
+      "reason": "execution-session-binding"
+    }
+  },
+  "wrapper": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/public_certificate.json"
+    ],
+    "elapsed_ms": 47.13,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+    "verdict": {
+      "reason": "trace-has-no-candidate-hash",
+      "status": "INCONCLUSIVE",
+      "system": "external-candidate-binding-wrapper"
+    }
+  }
+}

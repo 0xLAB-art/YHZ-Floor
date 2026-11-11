@@ -1,0 +1,145 @@
+{
+ "schema": "external-admission-amend4-c2-execution/1",
+ "commitment": "(C2) Two boundary-evasion operators (dynamic exec; submodule import) added to the mutation roster",
+ "registered_expectation": "both operators rejected under both v5 arms on both bases",
+ "operators": [
+  "dynamic exec",
+  "submodule import"
+ ],
+ "bases": [
+  "battery program",
+  "real amend-4 program"
+ ],
+ "arms": [
+  "declared v5",
+  "stress v5"
+ ],
+ "rows": [
+  {
+   "operator": "dynamic exec",
+   "base": "battery program",
+   "arm": "declared v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-call",
+     "value": "exec",
+     "line": 7
+    }
+   ]
+  },
+  {
+   "operator": "dynamic exec",
+   "base": "battery program",
+   "arm": "stress v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-call",
+     "value": "exec",
+     "line": 7
+    }
+   ]
+  },
+  {
+   "operator": "dynamic exec",
+   "base": "real amend-4 program (eps R0 421 turn1)",
+   "arm": "declared v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-call",
+     "value": "exec",
+     "line": 13
+    }
+   ]
+  },
+  {
+   "operator": "dynamic exec",
+   "base": "real amend-4 program (eps R0 421 turn1)",
+   "arm": "stress v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-call",
+     "value": "exec",
+     "line": 13
+    }
+   ]
+  },
+  {
+   "operator": "submodule import",
+   "base": "battery program",
+   "arm": "declared v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-import",
+     "value": "os.path",
+     "line": 1
+    },
+    {
+     "rule": "disallowed-import-from",
+     "value": "subprocess",
+     "line": 2
+    }
+   ]
+  },
+  {
+   "operator": "submodule import",
+   "base": "battery program",
+   "arm": "stress v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-import",
+     "value": "os.path",
+     "line": 1
+    },
+    {
+     "rule": "disallowed-import-from",
+     "value": "subprocess",
+     "line": 2
+    }
+   ]
+  },
+  {
+   "operator": "submodule import",
+   "base": "real amend-4 program (eps R0 421 turn1)",
+   "arm": "declared v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-import",
+     "value": "os.path",
+     "line": 1
+    },
+    {
+     "rule": "disallowed-import-from",
+     "value": "subprocess",
+     "line": 2
+    }
+   ]
+  },
+  {
+   "operator": "submodule import",
+   "base": "real amend-4 program (eps R0 421 turn1)",
+   "arm": "stress v5",
+   "qualified": false,
+   "violations": [
+    {
+     "rule": "disallowed-import",
+     "value": "os.path",
+     "line": 1
+    },
+    {
+     "rule": "disallowed-import-from",
+     "value": "subprocess",
+     "line": 2
+    }
+   ]
+  }
+ ],
+ "all_evasions_caught": true,
+ "verdict": "EXECUTED \u2014 both boundary-evasion operators rejected under both arms on both bases; roster updated"
+}

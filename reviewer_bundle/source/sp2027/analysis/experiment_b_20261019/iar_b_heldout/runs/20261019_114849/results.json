@@ -1,0 +1,1760 @@
+{
+  "case_set": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_b_heldout/cases/dev",
+  "date": "2026-10-19 11:48:49",
+  "experiment": "IAR-B dev pass (authenticated provenance vs composition)",
+  "fixture_failure_detail": [],
+  "gates": {
+    "G-B1": {
+      "detail": "v3-full level6 FP on H1-H4 == 0",
+      "pass": true
+    },
+    "G-B2": {
+      "detail": "v3-sig level6 FP on attack families > 0",
+      "pass": true
+    },
+    "G-B3": {
+      "detail": "H5/H6a: v2 EMIT6 while v3-sig+v3-full reject",
+      "pass": true
+    },
+    "G-B4": {
+      "detail": "H0 accept 6; H7 accept at k; no promotion; no false rejects",
+      "pass": true
+    },
+    "G-B5": {
+      "detail": "determinism, protected hashes, offline manifest",
+      "pass": true
+    }
+  },
+  "manifest": {
+    "model_calls": 0,
+    "network_calls": 0,
+    "provider_calls": 0
+  },
+  "metrics": {
+    "agreement": {
+      "v2": 4,
+      "v3-full": 14,
+      "v3-sig": 14
+    },
+    "cases": 58,
+    "determinism_mismatches": [],
+    "false_reject": {
+      "v2": 10,
+      "v3-full": 0,
+      "v3-sig": 0
+    },
+    "fixture_failures": 0,
+    "fp_level6": {
+      "v2_all": 16,
+      "v3full_all": 0,
+      "v3full_h1_h4": 0,
+      "v3sig_attack": 28
+    },
+    "label_deviations": [
+      {
+        "cid": "eb-190e22557b",
+        "expected": {
+          "decision": "REJECT",
+          "level": 3
+        },
+        "got": {
+          "decision": "REJECT",
+          "level": 5
+        },
+        "system": "v2"
+      },
+      {
+        "cid": "eb-818c4158e6",
+        "expected": {
+          "decision": "REJECT",
+          "level": 3
+        },
+        "got": {
+          "decision": "REJECT",
+          "level": 5
+        },
+        "system": "v2"
+      },
+      {
+        "cid": "eb-aea73f76f0",
+        "expected": {
+          "decision": "REJECT",
+          "level": 3
+        },
+        "got": {
+          "decision": "REJECT",
+          "level": 5
+        },
+        "system": "v2"
+      },
+      {
+        "cid": "eb-c081a76535",
+        "expected": {
+          "decision": "REJECT",
+          "level": 3
+        },
+        "got": {
+          "decision": "REJECT",
+          "level": 5
+        },
+        "system": "v2"
+      }
+    ],
+    "overclaim": {
+      "v2": 16,
+      "v3-full": 0,
+      "v3-sig": 28
+    },
+    "overhead_ms_mean": {
+      "adj": 132.54,
+      "v2": 36.75,
+      "v3-full": 50.25,
+      "v3-sig": 49.36
+    }
+  },
+  "per_case": [
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-0047e8ccf0",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-0a6f457592",
+      "family": "H5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 4,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "cid": "eb-10c51c2370",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 4,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "cid": "eb-164ff5597c",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 5,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-190e22557b",
+      "family": "H10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-1c7b4f632b",
+      "family": "H2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-1e45a4a052",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-22aa3a91a1",
+      "family": "H3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "cid": "eb-235ef4485c",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 3,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-28f46c63cd",
+      "family": "H5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 4,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "cid": "eb-3042b9b63d",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 4,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-35d062cdc6",
+      "family": "H1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "cid": "eb-363c2cb194",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 3,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-3a50a93b9b",
+      "family": "H6a",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-3ca1a8d917",
+      "family": "H2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-4aac3c306f",
+      "family": "H4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-4d9ae59105",
+      "family": "H1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-5a8851830d",
+      "family": "H4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-5f9666cfb1",
+      "family": "H6a",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-66e55f3ca7",
+      "family": "H5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-6b577adb71",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "cid": "eb-6d5fb2585e",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 1,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "eb-7350c171ba",
+      "family": "H0",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-74a7ac3021",
+      "family": "H6b",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-8153e61bb9",
+      "family": "H6b",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-818c4158e6",
+      "family": "H10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-8ab8aac16b",
+      "family": "H9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-8fe8ff5d58",
+      "family": "H2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-97d030342b",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "cid": "eb-9c92dc33e2",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 1,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-a0932f39d2",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-a75aed9831",
+      "family": "H3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "eb-a83eeee451",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 2,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "eb-aa05c3bb4c",
+      "family": "H0",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-aea73f76f0",
+      "family": "H10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-b34994a519",
+      "family": "H5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-b39e1e1f90",
+      "family": "H1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-b3cd3df744",
+      "family": "H3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-b5882be736",
+      "family": "H3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-ba99a42393",
+      "family": "H6b",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "eb-bfba218e01",
+      "family": "H0",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-c081a76535",
+      "family": "H10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-c0a8b79646",
+      "family": "H9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-c3828c08d3",
+      "family": "H4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "eb-c602d2eaab",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 2,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-c696ead851",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-c9dde7e101",
+      "family": "H6b",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "eb-cbe961f442",
+      "family": "H0",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-cd09c9182e",
+      "family": "H4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-d2d7be3615",
+      "family": "H2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-d82feafcfc",
+      "family": "H1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-db3147d1ab",
+      "family": "H9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-dc5d4fc421",
+      "family": "H6a",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-dfb7b0f028",
+      "family": "H6a",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-e8f1f7bfd0",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "ecdsa",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "eb-ed8878e57e",
+      "family": "H9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "eb-ed8c0bb21a",
+      "family": "H8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 6,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "cid": "eb-fa66905e2a",
+      "family": "H7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "primitive": "chacha",
+      "requested": 5,
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    }
+  ],
+  "protected_after": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "protected_before": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "systems": {
+    "adj": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_adjudicator.py",
+    "v2": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/build/heb1_v2_claim_binding.py",
+    "v3-full": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_v3_full.py",
+    "v3-sig": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_v3_sig.py"
+  },
+  "trust": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_b_heldout/trust/heldout_run_keys.json"
+}

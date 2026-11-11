@@ -1,0 +1,1609 @@
+{
+  "boundaries": {
+    "no_benchmark_quality_claim": true,
+    "no_cross_label_pooling": true,
+    "no_new_execution": true,
+    "registered_quantity_only": true,
+    "report_may_quote_only_verdicts": true,
+    "undefined_is_not_zero": true
+  },
+  "cross_label": {
+    "applicable": true,
+    "f1_false": [
+      "free/deepseek-v4.1-flash",
+      "free/gpt-6-luna",
+      "free/qwen-3.8-max"
+    ],
+    "f1_true": [],
+    "f1_true_and_f3_passed": [],
+    "labels": [
+      "free/deepseek-v4.1-flash",
+      "free/gpt-6-luna",
+      "free/qwen-3.8-max"
+    ],
+    "note": "per-label verdicts are reported side by side; no pooling; undefined is never counted as movement",
+    "registered_label_count": 3,
+    "replicable_across_labels": false,
+    "rule": ">=2 of 3 registered labels with F1 TRUE and F3 PASSED"
+  },
+  "derived_from": [
+    "regrade_results_amend3.json",
+    "."
+  ],
+  "inputs_sha256": {
+    "cleanup_policy": "7419e861a4d1abeb5f9d7623ab2b4c4d79ef4647b7ea186639379771313a4373",
+    "declared_policy": "3f68c3cbd001212bf4b4ca1473988dec15f09439747c74b1410202d5e34b4cf8",
+    "results": "6bb56d2bf4f45ffa6053dc9dcedb5995df98189d7dbe2395a8a258570784377b",
+    "stress_policy": "e1a2885236a0ca404ac249889d51c911c2ce7b14c876fafd6fd2a37bef166bd4"
+  },
+  "labels": [
+    "free/deepseek-v4.1-flash",
+    "free/gpt-6-luna",
+    "free/qwen-3.8-max"
+  ],
+  "margin_pp": 10.0,
+  "namespace": "external_admission_amend3_20261105",
+  "per_label": {
+    "free/deepseek-v4.1-flash": {
+      "admission": {
+        "declared_recall_of_correct": null,
+        "note": "admission is qualification AND the session-time oracle label; informative numbers are recall of correct programs and how many oracle-failing programs also qualify",
+        "oracle_correct_programs": 0,
+        "oracle_correct_qualified_declared": 0,
+        "oracle_correct_qualified_stress": 0,
+        "stress_discards_correct": 0,
+        "stress_recall_of_correct": null
+      },
+      "per_task": {
+        "2015q-cry-eps": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 9,
+            "declared_v4": 16,
+            "stress_repaired": 9
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2015q-cry-eps_part2": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 2,
+            "RT": 7
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 8,
+            "declared_v4": 8,
+            "stress_repaired": 8
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-almost_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 5,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 5,
+            "declared_v4": 10,
+            "stress_repaired": 4
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-another_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 5,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 12,
+            "declared_v4": 13,
+            "stress_repaired": 8
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": null
+          }
+        },
+        "2018q-cry-babycrypto": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 7
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 15,
+            "declared_v4": 15,
+            "stress_repaired": 15
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2018q-cry-lowe": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 8,
+            "RT": 6
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 13,
+            "declared_v4": 14,
+            "stress_repaired": 0
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          }
+        },
+        "2021q-cry-crack_me": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 0,
+            "declared_v4": 12,
+            "stress_repaired": 0
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          }
+        }
+      },
+      "verdicts": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 4,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps",
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2017q-cry-another_xor",
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      }
+    },
+    "free/gpt-6-luna": {
+      "admission": {
+        "declared_recall_of_correct": null,
+        "note": "admission is qualification AND the session-time oracle label; informative numbers are recall of correct programs and how many oracle-failing programs also qualify",
+        "oracle_correct_programs": 0,
+        "oracle_correct_qualified_declared": 0,
+        "oracle_correct_qualified_stress": 0,
+        "stress_discards_correct": 0,
+        "stress_recall_of_correct": null
+      },
+      "per_task": {
+        "2015q-cry-eps": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": null
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 8,
+            "RT": 5
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 5,
+            "declared_v4": 13,
+            "stress_repaired": 5
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": null
+          }
+        },
+        "2015q-cry-eps_part2": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 5
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 12,
+            "declared_v4": 13,
+            "stress_repaired": 12
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-almost_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 7
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 8,
+            "declared_v4": 13,
+            "stress_repaired": 5
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-another_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 15,
+            "declared_v4": 16,
+            "stress_repaired": 14
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2018q-cry-babycrypto": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 7
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 15,
+            "declared_v4": 15,
+            "stress_repaired": 15
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2018q-cry-lowe": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 8,
+            "RT": 2
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 10,
+            "declared_v4": 10,
+            "stress_repaired": 0
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          }
+        },
+        "2021q-cry-crack_me": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 3,
+            "RT": 7
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 0,
+            "declared_v4": 6,
+            "stress_repaired": 0
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          }
+        }
+      },
+      "verdicts": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 4,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2017q-cry-another_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2015q-cry-eps",
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      }
+    },
+    "free/qwen-3.8-max": {
+      "admission": {
+        "declared_recall_of_correct": null,
+        "note": "admission is qualification AND the session-time oracle label; informative numbers are recall of correct programs and how many oracle-failing programs also qualify",
+        "oracle_correct_programs": 0,
+        "oracle_correct_qualified_declared": 0,
+        "oracle_correct_qualified_stress": 0,
+        "stress_discards_correct": 0,
+        "stress_recall_of_correct": null
+      },
+      "per_task": {
+        "2015q-cry-eps": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 9,
+            "declared_v4": 16,
+            "stress_repaired": 9
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2015q-cry-eps_part2": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 5
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 12,
+            "declared_v4": 13,
+            "stress_repaired": 12
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-almost_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 2
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 7,
+            "declared_v4": 10,
+            "stress_repaired": 6
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 5
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2017q-cry-another_xor": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 14,
+            "declared_v4": 15,
+            "stress_repaired": 14
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2018q-cry-babycrypto": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": 0.0,
+          "n_programs": {
+            "R0": 4,
+            "RT": 6
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 10,
+            "declared_v4": 10,
+            "stress_repaired": 10
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 4
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          }
+        },
+        "2018q-cry-lowe": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 7
+            },
+            "contrast_pp": 0.0
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 8,
+            "RT": 8
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 15,
+            "declared_v4": 16,
+            "stress_repaired": 3
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 8
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 3
+            },
+            "contrast_pp": null
+          }
+        },
+        "2021q-cry-crack_me": {
+          "cleanup_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          },
+          "declared_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "movement_stress_minus_declared_pp": null,
+          "n_programs": {
+            "R0": 1,
+            "RT": 6
+          },
+          "oracle_correct_programs": 0,
+          "qualified_per_arm": {
+            "cleanup": 0,
+            "declared_v4": 7,
+            "stress_repaired": 0
+          },
+          "reference_contrast": {
+            "R0": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 1
+            },
+            "RT": {
+              "acceptance_pp": 0.0,
+              "oracle_correct": 0,
+              "qualified": 6
+            },
+            "contrast_pp": 0.0
+          },
+          "stress_contrast": {
+            "R0": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "RT": {
+              "acceptance_pp": null,
+              "oracle_correct": 0,
+              "qualified": 0
+            },
+            "contrast_pp": null
+          }
+        }
+      },
+      "verdicts": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 5,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps",
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2017q-cry-another_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      }
+    }
+  },
+  "quantity": "per-label per-task representation contrast (RT minus R0 acceptance, pp), the registered F1",
+  "schema": "external-admission-amend3-contrast/2-draft",
+  "verdicts": {
+    "cross_label": {
+      "applicable": true,
+      "f1_false": [
+        "free/deepseek-v4.1-flash",
+        "free/gpt-6-luna",
+        "free/qwen-3.8-max"
+      ],
+      "f1_true": [],
+      "f1_true_and_f3_passed": [],
+      "labels": [
+        "free/deepseek-v4.1-flash",
+        "free/gpt-6-luna",
+        "free/qwen-3.8-max"
+      ],
+      "note": "per-label verdicts are reported side by side; no pooling; undefined is never counted as movement",
+      "registered_label_count": 3,
+      "replicable_across_labels": false,
+      "rule": ">=2 of 3 registered labels with F1 TRUE and F3 PASSED"
+    },
+    "per_label": {
+      "free/deepseek-v4.1-flash": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 4,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps",
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2017q-cry-another_xor",
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      },
+      "free/gpt-6-luna": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 4,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2017q-cry-another_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2015q-cry-eps",
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      },
+      "free/qwen-3.8-max": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 7,
+        "margin_pp": 10.0,
+        "movement_defined_on": 5,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps",
+          "2015q-cry-eps_part2",
+          "2017q-cry-almost_xor",
+          "2017q-cry-another_xor",
+          "2018q-cry-babycrypto"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2018q-cry-lowe",
+          "2021q-cry-crack_me"
+        ],
+        "threshold_M": 4,
+        "undefined_not_zero": true
+      }
+    }
+  }
+}

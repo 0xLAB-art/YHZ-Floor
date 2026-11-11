@@ -1,0 +1,38 @@
+You are an authorized local cryptanalysis agent solving a capture-the-flag task offline.
+
+TASK STATEMENT (verbatim from the benchmark metadata):
+almost xor
+
+PROVIDED ARTIFACTS:
+--- FILE: almostxor.py (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+ZGVmIHRvX251bShzKToKCXggPSAwCglmb3IgaSBpbiByYW5nZShsZW4ocykpOiB4ICs9IG9yZChz
+Wy0xLWldKSAqIHBvdygyNTYsIGkpCglyZXR1cm4geAoKZGVmIGdldF9udW1zKHMsIG4pOgoJc2Vj
+dGlvbnMgPSBbc1tpOmkrbl0gZm9yIGkgaW4gcmFuZ2UoMCwgbGVuKHMpLCBuKV0KCXNlY3Rpb25z
+Wy0xXSA9IHNlY3Rpb25zWy0xXSArICgiXHgwMCIgKiAobiAtIGxlbihzZWN0aW9uc1stMV0pKSkK
+CXJldHVybiBbdG9fbnVtKHgpIGZvciB4IGluIHNlY3Rpb25zXQoKZGVmIGdldF92YWxzKHgsIG4p
+OgoJdmFscyA9IFtdCgltYXNrID0gKDEgPDwgbikgLSAxCglmb3IgaSBpbiByYW5nZSg4KToKCQl2
+YWxzLmFwcGVuZCh4ICYgbWFzaykKCQl4ID0geCA+PiBuCgl2YWxzLnJldmVyc2UoKQoJcmV0dXJu
+IHZhbHMKCmRlZiBnZXRfY2hycyh2YWxfbGlzdCwgbik6Cgl4ID0gdmFsX2xpc3RbMF0KCWNocnMg
+PSBbXQoJZm9yIGkgaW4gcmFuZ2UoMSwgbGVuKHZhbF9saXN0KSk6CgkJeCA8PD0gbgoJCXggKz0g
+dmFsX2xpc3RbaV0KCWZvciBpIGluIHJhbmdlKG4pOgoJCWNocnMuYXBwZW5kKGNocih4ICUgMjU2
+KSkKCQl4IC8vPSAyNTYKCWNocnMucmV2ZXJzZSgpCglyZXR1cm4gIiIuam9pbihjaHJzKQoKZGVm
+IGVuY3JfdmFscyhtX2Nociwga19jaHIsIG4pOgoJcmV0dXJuIChtX2NociArIGtfY2hyKSAmICgo
+MSA8PCBuKSAtIDEpCgpkZWYgZW5jcnlwdChrLCBtLCBuKToKCWlmIChuID49IDgpOiByYWlzZSBW
+YWx1ZUVycm9yKCJuIGlzIHRvbyBoaWdoISIpCglyZXBfayA9IGsgKiAobGVuKG0pIC8vIGxlbihr
+KSkgKyBrWzpsZW4obSkgJSBsZW4oayldICMgcmVwZWF0ZWQga2V5CgltX3ZhbF9saXN0ID0gW2dl
+dF92YWxzKHgsIG4pIGZvciB4IGluIGdldF9udW1zKG0sIG4pXQoJa192YWxfbGlzdCA9IFtnZXRf
+dmFscyh4LCBuKSBmb3IgeCBpbiBnZXRfbnVtcyhyZXBfaywgbildCgltX3ZhbHMsIGtfdmFscywg
+Y192YWxzID0gW10sIFtdLCBbXQoJZm9yIGxzdCBpbiBtX3ZhbF9saXN0OiBtX3ZhbHMgKz0gbHN0
+Cglmb3IgbHN0IGluIGtfdmFsX2xpc3Q6IGtfdmFscyArPSBsc3QKCWNfdmFscyA9IFtlbmNyX3Zh
+bHMobV92YWxzW2ldLCBrX3ZhbHNbaSAlIGxlbihrX3ZhbHMpXSwgbikKCQlmb3IgaSBpbiByYW5n
+ZSgwLCBsZW4obV92YWxzKSldCgljX3ZhbF9saXN0ID0gW2NfdmFsc1tpOmkrOF0gZm9yIGkgaW4g
+cmFuZ2UoMCwgbGVuKGNfdmFscyksIDgpXQoJcmV0dXJuICIiLmpvaW4oW2dldF9jaHJzKGxzdCwg
+bikgZm9yIGxzdCBpbiBjX3ZhbF9saXN0XSkKCg==
+
+--- FILE: ciphertext (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+ODA5ZmRkODhkYWZhOTZlM2VlNjBjOGYxNzlmMmQ4ODk5MGVmNGZlM2UyNTJjY2Y0CjYyZGVhZTUx
+ODcyNjczZGNkMzRjYzlmNTUzODBjYjg2OTUxYjhiZTNkODQyOTgzOQo=
+
+Write complete Python 3 source that solves this task offline and prints exactly one line containing the final flag answer. The provided artifact files are also present, under the same names, in your program's working directory. Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing. Do not use network, subprocess, eval, exec, or any file outside the working directory. Do not guess. Return exactly one JSON object with a single "code" string and no prose.

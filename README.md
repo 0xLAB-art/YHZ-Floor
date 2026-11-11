@@ -2,35 +2,38 @@
 
 **The complete, verifiable evidence bundle for a pre-registered ownership audit of AI-agent attack success.**
 
-*Prepared for double-blind review (IEEE S&P 2027, Cycle 2). This repository is the anonymized reviewer projection: no author identities, no experimental reruns during packaging, every retained record byte-preserving.*
+*Prepared for double-blind review (IEEE S&P 2027, Cycle 2). This repository is the anonymized evidence projection: no author identities, no experimental reruns during packaging, every retained record byte-preserving. The manuscript itself is delivered to reviewers through the venue's submission system.*
+
+<img src="assets/owners_3d.svg" width="860" alt="The five owners of a reported attack success — animated isometric decomposition with the YHZ floor"/>
 
 ---
 
 ## What this is
 
-A reported AI-agent attack-success number is a property of the **evaluation contract** that produced it — not an intrinsic property of the agent. The associated manuscript ("*Who Owns the Number? A Pre-Registered Audit of Five Owners Behind AI-Agent Attack Success*") measures the share of each owner through **hash-frozen, one-owner-at-a-time interventions** on matched cryptographic tasks:
+A reported AI-agent attack-success number is a property of the **evaluation contract** that produced it — not an intrinsic property of the agent. The associated manuscript ("*Who Owns the Number? A Pre-Registered Audit of Five Owners Behind AI-Agent Attack Success*") measures the share of each owner through **hash-frozen, one-owner-at-a-time interventions** on matched cryptographic tasks: 33 registered cohorts, 3,562 retained sessions, plus a 60-session published-protocol audit — every design pre-specified, every number frozen before the first call.
 
-| Owner | Intervention | Registered result |
-|---|---|---|
-| **Admission** | regrade fixed bytes; cleanup | $-0.8 \to -32.8 \to +3.9$ pp; trigger executes in 100/101 traces |
-| **Information contract** | $2{\times}2$ prompt slots | paired one-way in all 16 family members (96/0, Holm $4.04{\times}10^{-28}$); RC4 + ECDSA nulls; AES-GCM-SIV accepts nothing |
-| **Session wrapper** | interactive vs one-shot | powered 32-pair null: 0/32 each direction, advantage $\le 10.7\%$ (Wilson 95%) |
-| **Compute allowance** | declared vs raised | 20/50 at 12,000 tokens $\to$ 28/50 raised (8/10 task-level); 17 slots transport-unmeasured |
-| **Execution evidence** | attribution ablations | joins-only 16/44, signatures-only 28/44, combination 0/44 |
+## The registered 16-member family
 
-**The headline finding of the external audit:** a published protocol's *declared 12,000-token allowance* censors 30 of 60 sessions into unshown reasoning (zero visible output, zero submissions) — six of ten task-level pairs are **unmeasured, not failed**. Raising the allowance recovers the ceiling-censored slots (28/50; 8/10 pairs) under all five evaluator rules. **A published rate is only as strong as the allowance it was measured under.**
+Every information-contract cohort's paired contrast is **one-way**: no withheld seed ever beats its stated counterpart.
+
+<img src="assets/discordance_family.svg" width="860" alt="Animated bars: the 16 Holm-family cohorts, every paired contrast one-way; the 5/0 borderline prints as its own bound"/>
+
+## The allowance owns part of the number
+
+The external audit's headline finding: a published protocol's *declared 12,000-token allowance* censors 30 of 60 sessions into unshown reasoning — **six of ten task-level pairs are unmeasured, not failed**. Raising the allowance recovers the ceiling-censored slots under all five evaluator rules. A published rate is only as strong as the allowance it was measured under.
+
+<img src="assets/allowance_censoring.svg" width="860" alt="Animated slot grid: 20/50 solved at the declared allowance rising to 28/50 after the 32k/64k amendments"/>
 
 ## Repository layout
 
 ```
 YHZ-Floor/
 ├── README.md                        ← this file
-├── paper/
-│   ├── submission.pdf               ← the 18-page S&P submission build (13 text + 5 refs/appendix)
-│   ├── evidence_bundle.pdf          ← 36-page build: main + full supplement (S01–S32 records)
-│   ├── ABSTRACT_HOTCRP.txt          ← the registered abstract
-│   └── source/
-│       └── sp27_anonymous_source_20261111.tar.gz   ← compile-verified double-anonymous LaTeX source
+├── assets/                          ← animated SVG figures (CSS/SMIL, no scripts)
+│   ├── gen_animations.py            ← the generator
+│   ├── owners_3d.svg                ← the five-owner decomposition (3D)
+│   ├── discordance_family.svg       ← the Holm family, animated
+│   └── allowance_censoring.svg      ← the M1 censoring story, animated
 └── reviewer_bundle/                 ← the anonymized evidence projection (24,023 manifest files)
     ├── offline_checks.py            ← safe-default verification (no execution required)
     ├── MANIFEST.json                ← SHA-256 per file
@@ -44,8 +47,7 @@ YHZ-Floor/
     └── source/sp2027/               ← analysis trees + the external-boundary wave records
         ├── research_execution/external_admission_amend1..5/   (HTB grid, NYU panel, frontier repanel)
         ├── research_execution/external_review_amend4_c1/      (C1 confirmatory review)
-        └── research_execution/external_published_audit_20261110/  (the M1 published-protocol audit:
-            60 registered sessions, Amendments 1–16, ERRATUM_accepted_c2, M1_FINAL_RESULTS)
+        └── research_execution/external_published_audit_20261110/  (the M1 published-protocol audit)
 ```
 
 ## Quick start — verify without executing anything
@@ -72,9 +74,20 @@ Every registered statistic regenerates from the raw per-seed rows by **closed-fo
 ## Provenance and anonymity
 
 - **Byte-preserving packaging**: `COPY_LINEAGE.json` records source→destination SHA-256 for every copied payload; failed attempts remain separate and no trial was added or removed.
-- **Anonymity**: `ANONYMITY_SCOPE.json` reports the direct-identifier scan (0 hits across author-name, email, affiliation, and handle needles). The submission PDF renders with an empty author field; reference [1] is anonymized.
+- **Anonymity**: `ANONYMITY_SCOPE.json` reports the direct-identifier scan (0 hits across author-name, email, affiliation, and handle needles). The submission renders with an empty author field; reference [1] is anonymized.
 - **Frozen records carry infrastructure paths**: per the byte-preservation contract, some archived records retain the originating workstation's mount prefix (`/mnt/nvme5/ACTS-Attack/...`) — a filesystem location, not a user identity. Frozen records are never rewritten to conceal or decorate.
 - **No rerun during packaging**: no attack program, mutation test, or provider call was executed while preparing this bundle; the component-level prior validation is bound to its exact archive (`prior_validation/BINDING.json`).
+
+## The full campaign record
+
+The reviewer bundle above is the *curated projection*. The complete campaign record — every registered cohort's per-session records, raw provider responses, prompts, failure bodies, censuses, and analysis trees (~8 GB, 2018-2026 campaign) — ships as chunked release assets with a SHA-256 manifest:
+
+**[Releases → v1.0.0-evidence](../../releases/tag/v1.0.0-evidence)** — download all parts of an archive set, then:
+
+```sh
+cat yhz_core.part-*.tar.gz | tar xzf -
+sha256sum -c MANIFEST.sha256          # verify every extracted file
+```
 
 ## Scope
 

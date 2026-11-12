@@ -36,7 +36,7 @@ The M1 audit re-ran a published protocol on its own frozen inputs. At the protoc
 
 ## 5. Reading the ownership ledger
 
-Table 4 of the paper (and the README hero) gives one row per owner: the intervention, the registered result, and the **bound** — the null or limit that stays attached to that row. The Bound column is the paper's honesty mechanism: every claim carries its own boundary in the same cell.
+The ownership ledger (Table 4 of the manuscript) gives one row per owner: the intervention, the registered result, and the **bound** — the null or limit that stays attached to that row. The Bound column is the paper's honesty mechanism: every claim carries its own boundary in the same cell.
 
 ## 6. What the external record does — and refuses to do
 

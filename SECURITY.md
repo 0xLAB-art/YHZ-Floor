@@ -8,7 +8,7 @@ Retained attack programs in `reviewer_bundle/h1r3/` target **local, self-contain
 
 ## Handling guidance
 
-- Execute retained programs only inside the provided sandboxed replay (`review.py h1r3` uses bubblewrap + prlimit namespaces) or your own equivalent isolation.
+- Execute retained programs only inside the provided sandboxed replay (`reviewer_bundle/h1r3/h1r3_complete_replay_v1/execute_replay.py` uses bubblewrap + prlimit namespaces) or your own equivalent isolation.
 - The synthetic fixture secrets and test signing keys shipped for evaluation are evaluation materials, not credentials to anything.
 - Escrow-style secrets are revealed only after a verification attempt, mirroring the study's own protocol.
 

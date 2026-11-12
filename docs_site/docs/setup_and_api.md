@@ -59,3 +59,11 @@ The fingerprint audit re-checks every stored call echoes the registered label ex
 2. Register the route in the cohort's `_REGISTRATION.json` (label, base URL, allowance, seeds).
 3. Record **any** deviation from the frozen protocol as an amendment *before* the run it governs.
 4. Substitute labels are disclosed per-label and never pooled: the cross-vendor withdrawal row (Appendix E) is the worked example.
+
+---
+
+<div align="center">
+
+Next: <b><a href="docs/RUNNING_EXPERIMENTS.md">Running experiments</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

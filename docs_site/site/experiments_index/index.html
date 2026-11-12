@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#experiments-index-every-registered-cohort-browsable" class="md-skip">
+        <a href="#experiments-index-every-record-directory-browsable" class="md-skip">
           Skip to content
         </a>
       
@@ -625,10 +625,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#top-level-records" class="md-nav__link">
+  <a href="#top-level-records-not-cohort-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Top-level records
+        Top-level records (not cohort directories)
       
     </span>
   </a>
@@ -724,10 +724,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#top-level-records" class="md-nav__link">
+  <a href="#top-level-records-not-cohort-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Top-level records
+        Top-level records (not cohort directories)
       
     </span>
   </a>
@@ -754,1263 +754,551 @@
   
 
 
-<h1 id="experiments-index-every-registered-cohort-browsable">Experiments index — every registered cohort, browsable<a class="headerlink" href="#experiments-index-every-registered-cohort-browsable" title="Permanent link">&para;</a></h1>
-<p>Each directory is a registered cohort: its frozen registration, per-session <code>results.jsonl</code> rows,
-analyses, and the sweep/summary outputs. The paper's §7.1 table (registered session inventory) counts
-3,562 retained sessions across 33 cohorts; the M1 published-protocol audit is a separate 60-session population, never pooled.</p>
+<h1 id="experiments-index-every-record-directory-browsable">Experiments index — every record directory, browsable<a class="headerlink" href="#experiments-index-every-record-directory-browsable" title="Permanent link">&para;</a></h1>
+<p>One row per record directory under <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments"><code>experiments/</code></a>. "rows" is the exact line count of
+the directory's append-only <code>results.jsonl</code> ("—" where the cohort records outcomes only in
+per-slot or summary files). "§" is the section of the accompanying manuscript the record
+backs — the manuscript itself travels through the venue's submission system and is not
+served here. Registered cohorts, diagnostics, controls and superseded first passes all
+appear; nothing is pooled and nothing is hidden.</p>
 <table>
 <thead>
 <tr>
 <th>Directory</th>
-<th>rows</th>
-<th>artifacts</th>
-<th>what it is (paper section)</th>
+<th style="text-align: right;">rows</th>
+<th>What it is</th>
+<th>§</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="blind_opportunity_chacha20_20261018/"><code>blind_opportunity_chacha20_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="blind_opportunity_ecdsa_20261018/"><code>blind_opportunity_ecdsa_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/blind_opportunity_chacha20_20261018"><code>blind_opportunity_chacha20_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ChaCha20 blind-opportunity diagnostic</td>
+<td>§4</td>
 </tr>
 <tr>
-<td><a href="blind_opportunity_rc4_20261018/"><code>blind_opportunity_rc4_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/blind_opportunity_ecdsa_20261018"><code>blind_opportunity_ecdsa_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ECDSA blind-opportunity diagnostic</td>
+<td>§4</td>
 </tr>
 <tr>
-<td><a href="cvebench_census_20261024/"><code>cvebench_census_20261024/</code></a></td>
-<td>1</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/blind_opportunity_rc4_20261018"><code>blind_opportunity_rc4_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the RC4 blind-opportunity diagnostic</td>
+<td>§4</td>
 </tr>
 <tr>
-<td><a href="diag_empty_20261103/"><code>diag_empty_20261103/</code></a></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/cvebench_census_20261024"><code>cvebench_census_20261024/</code></a></td>
+<td style="text-align: right;">1</td>
+<td>the CVE-Bench census — 40 web-CVE targets, zero crypto</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_20261017/"><code>exploratory_code_feedback_20261017/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/diag_empty_20261103"><code>diag_empty_20261103/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the empty-diagnostic control</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_20261017_v2/"><code>exploratory_code_feedback_20261017_v2/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_20261017"><code>exploratory_code_feedback_20261017/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the exploratory code-feedback probe (pre-registered cohort era)</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_chacha20_20261018/"><code>exploratory_code_feedback_chacha20_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_20261017_v2"><code>exploratory_code_feedback_20261017_v2/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the second pass of the code-feedback probe</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_chacha20_replication_20261018/"><code>exploratory_code_feedback_chacha20_replication_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_chacha20_20261018"><code>exploratory_code_feedback_chacha20_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ChaCha20 code-feedback probe</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_chacha20_replication_20261018_seeds56/"><code>exploratory_code_feedback_chacha20_replication_20261018_seeds56/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_chacha20_replication_20261018"><code>exploratory_code_feedback_chacha20_replication_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ChaCha20 code-feedback replication</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_ecdsa_replication_20261018/"><code>exploratory_code_feedback_ecdsa_replication_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_chacha20_replication_20261018_seeds56"><code>exploratory_code_feedback_chacha20_replication_20261018_seeds56/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ChaCha20 replication, seeds-56 variant</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_ecdsa_replication_20261018_seeds56/"><code>exploratory_code_feedback_ecdsa_replication_20261018_seeds56/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_ecdsa_replication_20261018"><code>exploratory_code_feedback_ecdsa_replication_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ECDSA code-feedback replication</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_rc4_20261018/"><code>exploratory_code_feedback_rc4_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_ecdsa_replication_20261018_seeds56"><code>exploratory_code_feedback_ecdsa_replication_20261018_seeds56/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the ECDSA replication, seeds-56 variant</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_rc4_replication_20261018/"><code>exploratory_code_feedback_rc4_replication_20261018/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_rc4_20261018"><code>exploratory_code_feedback_rc4_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the RC4 code-feedback probe</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_code_feedback_rc4_replication_20261018_seeds56/"><code>exploratory_code_feedback_rc4_replication_20261018_seeds56/</code></a></td>
-<td>2</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_rc4_replication_20261018"><code>exploratory_code_feedback_rc4_replication_20261018/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the RC4 code-feedback replication</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="exploratory_output_contract_20261017/"><code>exploratory_output_contract_20261017/</code></a></td>
-<td>9</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_code_feedback_rc4_replication_20261018_seeds56"><code>exploratory_code_feedback_rc4_replication_20261018_seeds56/</code></a></td>
+<td style="text-align: right;">2</td>
+<td>the RC4 replication, seeds-56 variant</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="external_admission_20261024/"><code>external_admission_20261024/</code></a></td>
-<td>1</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/exploratory_output_contract_20261017"><code>exploratory_output_contract_20261017/</code></a></td>
+<td style="text-align: right;">9</td>
+<td>the output-contract exploration probe (pre-registered cohort era)</td>
+<td>§8</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend1_20261024/"><code>external_admission_amend1_20261024/</code></a></td>
-<td>33</td>
-<td>results.jsonl,summary.json</td>
-<td>the HTB grid cohort A — 31/37 vs 0/37 admission contrast (paper §7)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_20261024"><code>external_admission_20261024/</code></a></td>
+<td style="text-align: right;">1</td>
+<td>the single-session external-admission qualification probe</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend2_20261025/"><code>external_admission_amend2_20261025/</code></a></td>
-<td></td>
-<td>summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend1_20261024"><code>external_admission_amend1_20261024/</code></a></td>
+<td style="text-align: right;">33</td>
+<td>the HTB grid cohort A — 31/37 vs 0/37 admission contrast</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend2_20261029/"><code>external_admission_amend2_20261029/</code></a></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend2_20261025"><code>external_admission_amend2_20261025/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the Amend-2 first pass, superseded by the 20261029 qualification cohort</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend3_20261105/"><code>external_admission_amend3_20261105/</code></a></td>
-<td>168</td>
-<td>results.jsonl</td>
-<td>the NYU three-label panel cohort B — 282 programs, 0 oracle-correct, 18/282 regrade (paper §7)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend2_20261029"><code>external_admission_amend2_20261029/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the Amend-2 registration + qualification arms</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend4_frontier_20261106/"><code>external_admission_amend4_frontier_20261106/</code></a></td>
-<td>168</td>
-<td>results.jsonl</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend3_20261105"><code>external_admission_amend3_20261105/</code></a></td>
+<td style="text-align: right;">168</td>
+<td>the NYU three-label panel cohort B — 282 programs, 0 oracle-correct, 18/282 regrade</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_admission_amend5_transport_20261109/"><code>external_admission_amend5_transport_20261109/</code></a></td>
-<td>36</td>
-<td>results.jsonl,freeze</td>
-<td>the frontier repanel cohort C — 35/36 oracle-correct, 7/61 admission, 61/61 external (paper §7)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend4_frontier_20261106"><code>external_admission_amend4_frontier_20261106/</code></a></td>
+<td style="text-align: right;">168</td>
+<td>the Amend-4 frontier panel on the damaged transport — superseded by the Amend-5 repanel</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_published_audit_20261110/"><code>external_published_audit_20261110/</code></a></td>
-<td>60</td>
-<td>results.jsonl,freeze</td>
-<td>the M1 published-protocol audit — 60 sessions, censoring finding, 20/50→28/50 (paper §7, abstract)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_admission_amend5_transport_20261109"><code>external_admission_amend5_transport_20261109/</code></a></td>
+<td style="text-align: right;">36</td>
+<td>the Amend-5 frontier repanel on the visible-completion transport — 35/36 oracle-correct, 7/61 admission, 61/61 external</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_review_amend4_c1_20261107/"><code>external_review_amend4_c1_20261107/</code></a></td>
-<td></td>
-<td></td>
-<td>the blind 3-reviewer re-derivation of the headline counts (paper §7)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_published_audit_20261110"><code>external_published_audit_20261110/</code></a></td>
+<td style="text-align: right;">60</td>
+<td>the M1 published-protocol audit — 60 sessions, the censoring finding, 20/50 → 28/50</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_rule_admission_20261110/"><code>external_rule_admission_20261110/</code></a></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_review_amend4_c1_20261107"><code>external_review_amend4_c1_20261107/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the blind 3-reviewer re-derivation of the headline counts</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="external_transfer_nondomain_20261109/"><code>external_transfer_nondomain_20261109/</code></a></td>
-<td>16</td>
-<td>results.jsonl</td>
-<td>the out-of-domain premise witness — 8/8 vs 0/8, Fisher 7.8e-5 (paper §10.2)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_rule_admission_20261110"><code>external_rule_admission_20261110/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the external-rule admission read on the frozen windows</td>
+<td>§7</td>
 </tr>
 <tr>
-<td><a href="h2_cbc_agency_20261023/"><code>h2_cbc_agency_20261023/</code></a></td>
-<td>8</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_transfer_nondomain_20261109"><code>external_transfer_nondomain_20261109/</code></a></td>
+<td style="text-align: right;">16</td>
+<td>the out-of-domain premise witness — 8/8 vs 0/8, exact Fisher 7.77e-5</td>
+<td>§10.2</td>
 </tr>
 <tr>
-<td><a href="h2_no_oracle_p025_20261103/"><code>h2_no_oracle_p025_20261103/</code></a></td>
-<td>10</td>
-<td>results.jsonl,summary.json</td>
-<td>the oracle-separation control — 0/10, 256 probes (paper §6)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/h2_cbc_agency_20261023"><code>h2_cbc_agency_20261023/</code></a></td>
+<td style="text-align: right;">8</td>
+<td>the CBC agency probe cohort</td>
+<td>§6</td>
 </tr>
 <tr>
-<td><a href="h2_pairs_extension_20261024/"><code>h2_pairs_extension_20261024/</code></a></td>
-<td>20</td>
-<td>results.jsonl,summary.json</td>
-<td>the 10-pair extension + the format-compliance reversal diagnosis (paper §6)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/h2_no_oracle_p025_20261103"><code>h2_no_oracle_p025_20261103/</code></a></td>
+<td style="text-align: right;">10</td>
+<td>the oracle-separation control — 0/10 with 256 probes</td>
+<td>§6</td>
 </tr>
 <tr>
-<td><a href="h2_pairs_powered_20261107/"><code>h2_pairs_powered_20261107/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td>the powered 32-pair wrapper cohort — 0/32 each direction, ≤10.7% Wilson (paper §6)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/h2_pairs_extension_20261024"><code>h2_pairs_extension_20261024/</code></a></td>
+<td style="text-align: right;">20</td>
+<td>the 10-pair wrapper extension + the format-compliance reversal diagnosis</td>
+<td>§6</td>
 </tr>
 <tr>
-<td><a href="info_contract_2x2_20261018/"><code>info_contract_2x2_20261018/</code></a></td>
-<td>16</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/h2_pairs_powered_20261107"><code>h2_pairs_powered_20261107/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the powered 32-pair wrapper cohort — 0/32 each direction, ≤10.7% Wilson upper</td>
+<td>§6</td>
 </tr>
 <tr>
-<td><a href="info_contract_2x2_rc4_20261024/"><code>info_contract_2x2_rc4_20261024/</code></a></td>
-<td>16</td>
-<td>results.jsonl,summary.json</td>
-<td>the saturated RC4 honest null — 4/4 (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_2x2_20261018"><code>info_contract_2x2_20261018/</code></a></td>
+<td style="text-align: right;">16</td>
+<td>the original 2×2 factorial that isolated the zero-reference premise</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesctr_20261026/"><code>info_contract_aesctr_20261026/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td>the AES-CTR boundary run — both withheld arms 0/16 (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_2x2_rc4_20261024"><code>info_contract_2x2_rc4_20261024/</code></a></td>
+<td style="text-align: right;">16</td>
+<td>the saturated RC4 honest null — 4/4</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_20261102/"><code>info_contract_aesgcm_20261102/</code></a></td>
-<td>65</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesctr_20261026"><code>info_contract_aesctr_20261026/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the AES-CTR boundary run — both withheld arms 0/16</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_20261102__rerun_ar_20261103/"><code>info_contract_aesgcm_20261102__rerun_ar_20261103/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_20261102"><code>info_contract_aesgcm_20261102/</code></a></td>
+<td style="text-align: right;">65</td>
+<td>the AES-GCM cohort opening the modern-AEAD wave</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_apinex_20261102/"><code>info_contract_aesgcm_apinex_20261102/</code></a></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_20261102__rerun_ar_20261103"><code>info_contract_aesgcm_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the AgentRouter-transport rerun of the AES-GCM cohort opening the modern-AEAD wave</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_c2_floor8000_p026_20261103/"><code>info_contract_aesgcm_c2_floor8000_p026_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td>floor-sensitivity dose-response: 53.1%→7.3% floor-exhaustion, zero acceptance at both floors (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_apinex_20261102"><code>info_contract_aesgcm_apinex_20261102/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the APINEX-routed cohort — transport deviation disclosed, never pooled</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_labels_20261102/"><code>info_contract_aesgcm_labels_20261102/</code></a></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_c2_floor8000_p026_20261103"><code>info_contract_aesgcm_c2_floor8000_p026_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the floor-sensitivity dose-response — 53.1% → 7.3% floor exhaustion, zero acceptance at both floors</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103/"><code>info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103/</code></a></td>
-<td>62</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_labels_20261102"><code>info_contract_aesgcm_labels_20261102/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the multi-label scheduling cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103/"><code>info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103/</code></a></td>
-<td>62</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103"><code>info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">62</td>
+<td>the multi-label scheduling rerun on the gpt-5.6-sol label (AgentRouter transport)</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p017_20261102/"><code>info_contract_aesgcm_p017_20261102/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103"><code>info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">62</td>
+<td>the multi-label scheduling rerun on the gpt-6.1-sol label (AgentRouter transport)</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p017_20261102__rerun_ar_20261103/"><code>info_contract_aesgcm_p017_20261102__rerun_ar_20261103/</code></a></td>
-<td>93</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p017_20261102"><code>info_contract_aesgcm_p017_20261102/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the P017 AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p022a_20261102/"><code>info_contract_aesgcm_p022a_20261102/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p017_20261102__rerun_ar_20261103"><code>info_contract_aesgcm_p017_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">93</td>
+<td>the AgentRouter-transport rerun of the P017 AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p022a_20261102__rerun_ar_20261103/"><code>info_contract_aesgcm_p022a_20261102__rerun_ar_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p022a_20261102"><code>info_contract_aesgcm_p022a_20261102/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the P022a AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p022b_20261102/"><code>info_contract_aesgcm_p022b_20261102/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p022a_20261102__rerun_ar_20261103"><code>info_contract_aesgcm_p022a_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the AgentRouter-transport rerun of the P022a AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p022b_20261102__rerun_ar_20261103/"><code>info_contract_aesgcm_p022b_20261102__rerun_ar_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p022b_20261102"><code>info_contract_aesgcm_p022b_20261102/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the P022b AES-GCM cohort — the transport-damaged first pass</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p024a_20261103/"><code>info_contract_aesgcm_p024a_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td>the truncation-reading closure — withholding makes every answer wrong (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p022b_20261102__rerun_ar_20261103"><code>info_contract_aesgcm_p022b_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the AgentRouter-transport rerun of the P022b AES-GCM cohort — the transport-damaged first pass</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p024b_20261103/"><code>info_contract_aesgcm_p024b_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td>the printed boundary condition — consistent, under-powered at every coding (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p024a_20261103"><code>info_contract_aesgcm_p024a_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the truncation-reading closure — withholding makes every answer wrong</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_p024b_20261103__rerun_ar_20261103/"><code>info_contract_aesgcm_p024b_20261103__rerun_ar_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p024b_20261103"><code>info_contract_aesgcm_p024b_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the printed boundary condition — consistent, under-powered at every coding</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_20261102/"><code>info_contract_aesgcm_random_20261102/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_p024b_20261103__rerun_ar_20261103"><code>info_contract_aesgcm_p024b_20261103__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the AgentRouter-transport rerun of the printed boundary condition — consistent, under-powered at every coding</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_20261102__rerun_ar_20261103/"><code>info_contract_aesgcm_random_20261102__rerun_ar_20261103/</code></a></td>
-<td>102</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_20261102"><code>info_contract_aesgcm_random_20261102/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the first CSPRNG-sampled AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_p021_20261102/"><code>info_contract_aesgcm_random_p021_20261102/</code></a></td>
-<td>385</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_20261102__rerun_ar_20261103"><code>info_contract_aesgcm_random_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">102</td>
+<td>the AgentRouter-transport rerun of the first CSPRNG-sampled AES-GCM cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_p021ar_20261103/"><code>info_contract_aesgcm_random_p021ar_20261103/</code></a></td>
-<td>384</td>
-<td>results.jsonl,summary.json</td>
-<td>the 96-instance CSPRNG power cohort (repairs P021) — paired C1-vs-C4 96/0, Holm 4.04e-28 (paper §5, Table 3)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_p021_20261102"><code>info_contract_aesgcm_random_p021_20261102/</code></a></td>
+<td style="text-align: right;">385</td>
+<td>the P021 power cohort, first pass on the degraded transport</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_p021r_20261103/"><code>info_contract_aesgcm_random_p021r_20261103/</code></a></td>
-<td>73</td>
-<td>results.jsonl</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_p021ar_20261103"><code>info_contract_aesgcm_random_p021ar_20261103/</code></a></td>
+<td style="text-align: right;">384</td>
+<td>the 96-instance CSPRNG power cohort (repairs P021) — paired C1-vs-C4 96/0, Holm 4.04e-28</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_p023_20261103/"><code>info_contract_aesgcm_random_p023_20261103/</code></a></td>
-<td>384</td>
-<td>results.jsonl,summary.json</td>
-<td>the fresh-seed 96-instance cohort — paired 95/0 (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_p021r_20261103"><code>info_contract_aesgcm_random_p021r_20261103/</code></a></td>
+<td style="text-align: right;">73</td>
+<td>the APINEX label probe — superseded, never pooled</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103/"><code>info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103/</code></a></td>
-<td>384</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_p023_20261103"><code>info_contract_aesgcm_random_p023_20261103/</code></a></td>
+<td style="text-align: right;">384</td>
+<td>the fresh-seed 96-instance cohort — paired 95/0</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_chachapoly_random_20261102/"><code>info_contract_chachapoly_random_20261102/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103"><code>info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">384</td>
+<td>the AgentRouter-transport rerun of the fresh-seed 96-instance cohort — paired 95/0</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_chachapoly_random_20261102__rerun_ar_20261103/"><code>info_contract_chachapoly_random_20261102__rerun_ar_20261103/</code></a></td>
-<td>96</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_chachapoly_random_20261102"><code>info_contract_chachapoly_random_20261102/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the ChaCha20-Poly1305 CSPRNG cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_confirmatory_c1_20261107/"><code>info_contract_confirmatory_c1_20261107/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td>the m=3 confirmatory cohort on gpt-5.6-sol — bar NOT cleared, the observability axis's prediction (paper §11)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_chachapoly_random_20261102__rerun_ar_20261103"><code>info_contract_chachapoly_random_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">96</td>
+<td>the AgentRouter-transport rerun of the ChaCha20-Poly1305 CSPRNG cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_ecdsa_20261018/"><code>info_contract_ecdsa_20261018/</code></a></td>
-<td></td>
-<td></td>
-<td>the observable-premise ECDSA control — 32/32 withheld null (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_confirmatory_c1_20261107"><code>info_contract_confirmatory_c1_20261107/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the m=3 confirmatory cohort on gpt-5.6-sol — bar NOT cleared, the observability axis's registered prediction</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_ecdsa_20261026/"><code>info_contract_ecdsa_20261026/</code></a></td>
-<td>66</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_ecdsa_20261026"><code>info_contract_ecdsa_20261026/</code></a></td>
+<td style="text-align: right;">66</td>
+<td>the observable-premise ECDSA control (nonce-reuse family) — 16/16 stated vs 32/32 withheld</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_gcmsiv_random_20261102/"><code>info_contract_gcmsiv_random_20261102/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td>the registered negative control — accepts nothing in any cell (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_gcmsiv_random_20261102"><code>info_contract_gcmsiv_random_20261102/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the registered negative control — AES-GCM-SIV accepts nothing in any cell</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_gcmsiv_random_20261102__rerun_ar_20261103/"><code>info_contract_gcmsiv_random_20261102__rerun_ar_20261103/</code></a></td>
-<td>35</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_gcmsiv_random_20261102__rerun_ar_20261103"><code>info_contract_gcmsiv_random_20261102__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">35</td>
+<td>the AgentRouter-transport rerun of the registered negative control — AES-GCM-SIV accepts nothing in any cell</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label2_20261025/"><code>info_contract_label2_20261025/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label2_20261025"><code>info_contract_label2_20261025/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the label-2 replication</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label2_20261025__rerun_ar_20261103/"><code>info_contract_label2_20261025__rerun_ar_20261103/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label2_20261025__rerun_ar_20261103"><code>info_contract_label2_20261025__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the AgentRouter-transport rerun of the label-2 replication</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label3_20261029/"><code>info_contract_label3_20261029/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label3_20261029"><code>info_contract_label3_20261029/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the label-3 replication</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label3_n32_20261101/"><code>info_contract_label3_n32_20261101/</code></a></td>
-<td>129</td>
-<td>results.jsonl,summary.json</td>
-<td>the n=32 scale-up + its damaged first pass and clean rerun (paper §5)</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label3_n32_20261101"><code>info_contract_label3_n32_20261101/</code></a></td>
+<td style="text-align: right;">129</td>
+<td>the n=32 scale-up + its damaged first pass and clean rerun</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label3_n32_20261101__rerun_ar_20261103/"><code>info_contract_label3_n32_20261101__rerun_ar_20261103/</code></a></td>
-<td>128</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label3_n32_20261101__rerun_ar_20261103"><code>info_contract_label3_n32_20261101__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">128</td>
+<td>the AgentRouter-transport rerun of the n=32 scale-up + its damaged first pass and clean rerun</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label4_20261030/"><code>info_contract_label4_20261030/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label4_20261030"><code>info_contract_label4_20261030/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the label-4 replication</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label4_20261030__rerun_ar_20261103/"><code>info_contract_label4_20261030__rerun_ar_20261103/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label4_20261030__rerun_ar_20261103"><code>info_contract_label4_20261030__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the AgentRouter-transport rerun of the label-4 replication</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label5_20261030/"><code>info_contract_label5_20261030/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label5_20261030"><code>info_contract_label5_20261030/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the label-5 replication, first pass after quota exhaustion</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label5_20261030__rerun_ar_20261103/"><code>info_contract_label5_20261030__rerun_ar_20261103/</code></a></td>
-<td>44</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label5_20261030__rerun_ar_20261103"><code>info_contract_label5_20261030__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">44</td>
+<td>the AgentRouter-transport rerun of the label-5 replication, first pass after quota exhaustion</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label5r_20261030/"><code>info_contract_label5r_20261030/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label5r_20261030"><code>info_contract_label5r_20261030/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the label-5 recovery rerun, disclosed per-label</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_label5r_20261030__rerun_ar_20261103/"><code>info_contract_label5r_20261030__rerun_ar_20261103/</code></a></td>
-<td>44</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_label5r_20261030__rerun_ar_20261103"><code>info_contract_label5r_20261030__rerun_ar_20261103/</code></a></td>
+<td style="text-align: right;">44</td>
+<td>the AgentRouter-transport rerun of the label-5 recovery rerun, disclosed per-label</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_n16_20261026/"><code>info_contract_n16_20261026/</code></a></td>
-<td>64</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_n16_20261026"><code>info_contract_n16_20261026/</code></a></td>
+<td style="text-align: right;">64</td>
+<td>the n=16 ChaCha20 cohort resolving the exact-test floor — paired 10/0</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_p010_driftcheck_20261026/"><code>info_contract_p010_driftcheck_20261026/</code></a></td>
-<td>17</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_p010_driftcheck_20261026"><code>info_contract_p010_driftcheck_20261026/</code></a></td>
+<td style="text-align: right;">17</td>
+<td>the drift check on the P010 family</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_powered_20261025/"><code>info_contract_powered_20261025/</code></a></td>
-<td>32</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_powered_20261025"><code>info_contract_powered_20261025/</code></a></td>
+<td style="text-align: right;">32</td>
+<td>the powered information-contract cohort</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="info_contract_x1_gptoss_20261026/"><code>info_contract_x1_gptoss_20261026/</code></a></td>
-<td>67</td>
-<td>results.jsonl,summary.json</td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/info_contract_x1_gptoss_20261026"><code>info_contract_x1_gptoss_20261026/</code></a></td>
+<td style="text-align: right;">67</td>
+<td>the X1-family cohort on the gpt-oss label</td>
+<td>§5</td>
 </tr>
 <tr>
-<td><a href="paper_tables_20261103/"><code>paper_tables_20261103/</code></a></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/paper_tables_20261103"><code>paper_tables_20261103/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the generator for the manuscript's registered tables</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
-<td><a href="provider_health_20261023/"><code>provider_health_20261023/</code></a></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/provider_health_20261023"><code>provider_health_20261023/</code></a></td>
+<td style="text-align: right;">—</td>
+<td>the provider-health calibration record (infrastructure, not a cohort)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="top-level-records">Top-level records<a class="headerlink" href="#top-level-records" title="Permanent link">&para;</a></h2>
+<h2 id="top-level-records-not-cohort-directories">Top-level records (not cohort directories)<a class="headerlink" href="#top-level-records-not-cohort-directories" title="Permanent link">&para;</a></h2>
+<p>The remaining entries at this level are campaign-level records and runners. The notable ones:</p>
 <table>
 <thead>
 <tr>
 <th>File</th>
-<th>What it carries</th>
+<th>What it is</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="ACTS_ATTACK_FINAL_EVIDENCE_INDEX.csv"><code>ACTS_ATTACK_FINAL_EVIDENCE_INDEX.csv</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/BUDGET_LEDGER.jsonl"><code>BUDGET_LEDGER.jsonl</code></a></td>
+<td>per-call cost estimates for the whole campaign (3,494 rows)</td>
 </tr>
 <tr>
-<td><a href="ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md"><code>ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md"><code>ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md</code></a></td>
+<td>the campaign-level scientific synthesis record</td>
 </tr>
 <tr>
-<td><a href="ACTS_MULTITIER_LOCAL_RECONCILIATION.md"><code>ACTS_MULTITIER_LOCAL_RECONCILIATION.md</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/ACTS_ATTACK_FINAL_EVIDENCE_INDEX.csv"><code>ACTS_ATTACK_FINAL_EVIDENCE_INDEX.csv</code></a></td>
+<td>the final evidence index (machine-readable)</td>
 </tr>
 <tr>
-<td><a href="ARCHIVE_JOIN_AUDIT_20261018.json"><code>ARCHIVE_JOIN_AUDIT_20261018.json</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/PAPER_EVIDENCE_20261103.json"><code>PAPER_EVIDENCE_20261103.json</code></a></td>
+<td>the evidence-to-manuscript mapping ledger</td>
 </tr>
 <tr>
-<td><a href="ARCHIVE_PROVENANCE_MATRIX.csv"><code>ARCHIVE_PROVENANCE_MATRIX.csv</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/CENSUS_P_PROVIDER_20261103.json"><code>CENSUS_P_PROVIDER_20261103.json</code></a></td>
+<td>the provider-side census (with its CORRECTED variant)</td>
 </tr>
 <tr>
-<td><a href="BACKLOG.md"><code>BACKLOG.md</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/CROSS_FAMILY_STAGE_ANALYSIS.json"><code>CROSS_FAMILY_STAGE_ANALYSIS.json</code></a></td>
+<td>the cross-family stage analysis</td>
 </tr>
 <tr>
-<td><a href="BLIND_OPPORTUNITY_CONTRAST_20261018.json"><code>BLIND_OPPORTUNITY_CONTRAST_20261018.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="BLIND_OPPORTUNITY_CONTRAST_20261018.md"><code>BLIND_OPPORTUNITY_CONTRAST_20261018.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="BUDGET_LEDGER.jsonl"><code>BUDGET_LEDGER.jsonl</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="C3_SERVICE_RELAY_QUALIFICATION_20261018.md"><code>C3_SERVICE_RELAY_QUALIFICATION_20261018.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="C3_TARGET_QUALIFICATION_20261018.md"><code>C3_TARGET_QUALIFICATION_20261018.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CENSUS_P_PROVIDER_20261103.json"><code>CENSUS_P_PROVIDER_20261103.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CENSUS_P_PROVIDER_20261103.md"><code>CENSUS_P_PROVIDER_20261103.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CENSUS_P_PROVIDER_20261103_CORRECTED.json"><code>CENSUS_P_PROVIDER_20261103_CORRECTED.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CLAIM_MATRIX_AUDIT.json"><code>CLAIM_MATRIX_AUDIT.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CLAIM_MATRIX_AUDIT.md"><code>CLAIM_MATRIX_AUDIT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMMIT_MESSAGE_P021_P022.txt"><code>COMMIT_MESSAGE_P021_P022.txt</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMPARISON_P021_P023.json"><code>COMPARISON_P021_P023.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMPARISON_P021_P023.md"><code>COMPARISON_P021_P023.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMPARISON_P021_P023_by_position.csv"><code>COMPARISON_P021_P023_by_position.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMPARISON_P022_P024.json"><code>COMPARISON_P022_P024.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="COMPARISON_P022_P024.md"><code>COMPARISON_P022_P024.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CROSS_FAMILY_STAGE_ANALYSIS.csv"><code>CROSS_FAMILY_STAGE_ANALYSIS.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CROSS_FAMILY_STAGE_ANALYSIS.json"><code>CROSS_FAMILY_STAGE_ANALYSIS.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="CROSS_FAMILY_STAGE_ANALYSIS.md"><code>CROSS_FAMILY_STAGE_ANALYSIS.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="DECISION_LOG.md"><code>DECISION_LOG.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="EMPTY_RESPONSE_CAUSAL_ANALYSIS_20261103.md"><code>EMPTY_RESPONSE_CAUSAL_ANALYSIS_20261103.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="EVIDENCE_SCIENCE_INTEGRATION.md"><code>EVIDENCE_SCIENCE_INTEGRATION.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="EXPERIMENT_INDEX.csv"><code>EXPERIMENT_INDEX.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="FINAL_RECOVERY_20261103.log"><code>FINAL_RECOVERY_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="H1_V2_FAILURE_STAGE_AUDIT.md"><code>H1_V2_FAILURE_STAGE_AUDIT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="H1_V2_FAILURE_STAGE_MATRIX.csv"><code>H1_V2_FAILURE_STAGE_MATRIX.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="H1_V2_FAILURE_STAGE_SUMMARY.json"><code>H1_V2_FAILURE_STAGE_SUMMARY.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="KIMI_FINISH_20261103.log"><code>KIMI_FINISH_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="KIMI_SEQUENTIAL_20261103.log"><code>KIMI_SEQUENTIAL_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MANUSCRIPT_ARTIFACT_REPRO_STATUS.md"><code>MANUSCRIPT_ARTIFACT_REPRO_STATUS.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MATCHED_REPLICATION_DESIGN.md"><code>MATCHED_REPLICATION_DESIGN.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MATCHED_REPLICATION_EXTENDED_20261018.md"><code>MATCHED_REPLICATION_EXTENDED_20261018.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MATCHED_REPLICATION_EXTENDED_SUMMARY.json"><code>MATCHED_REPLICATION_EXTENDED_SUMMARY.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MATCHED_REPLICATION_REPORT.md"><code>MATCHED_REPLICATION_REPORT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MATCHED_REPLICATION_SUMMARY.json"><code>MATCHED_REPLICATION_SUMMARY.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="MISSION.md"><code>MISSION.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="NEXT_RUN.md"><code>NEXT_RUN.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="NOVELTY_FULLTEXT_REVIEW.md"><code>NOVELTY_FULLTEXT_REVIEW.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="NOVELTY_MATRIX.json"><code>NOVELTY_MATRIX.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="NOVELTY_MATRIX.md"><code>NOVELTY_MATRIX.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="P018_PARALLEL.log"><code>P018_PARALLEL.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PAPER_CLAIM_MATRIX.csv"><code>PAPER_CLAIM_MATRIX.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PAPER_EVIDENCE_20261103.json"><code>PAPER_EVIDENCE_20261103.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PAPER_EVIDENCE_20261103.md"><code>PAPER_EVIDENCE_20261103.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PARALLEL_WAVE_20261103.log"><code>PARALLEL_WAVE_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PHASES_1_3_SUMMARY_20261024.md"><code>PHASES_1_3_SUMMARY_20261024.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POLICY_ATTACK_TRAJECTORY_AUDIT.md"><code>POLICY_ATTACK_TRAJECTORY_AUDIT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POLICY_ATTACK_TRAJECTORY_MATRIX.csv"><code>POLICY_ATTACK_TRAJECTORY_MATRIX.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POLICY_SIDECHANNEL_BINARY_PQC_CONTEXT.md"><code>POLICY_SIDECHANNEL_BINARY_PQC_CONTEXT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POSITION_CLUSTER_P021_P023.json"><code>POSITION_CLUSTER_P021_P023.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POSITION_CLUSTER_P021_P023.md"><code>POSITION_CLUSTER_P021_P023.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POSITION_MATRIX_P021.csv"><code>POSITION_MATRIX_P021.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="POSITION_MATRIX_P023.csv"><code>POSITION_MATRIX_P023.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PQC_FAMILY_RECONCILIATION.md"><code>PQC_FAMILY_RECONCILIATION.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="PQC_POLICY_ATTACK_AUDIT.md"><code>PQC_POLICY_ATTACK_AUDIT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RECOVERY_20261103.log"><code>RECOVERY_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="REMAINING_EXPERIMENTS_PLAN_20261023.md"><code>REMAINING_EXPERIMENTS_PLAN_20261023.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RERUN_QUEUE_20261103.log"><code>RERUN_QUEUE_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RERUN_SPECS_20261103.json"><code>RERUN_SPECS_20261103.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RERUN_VS_ORIGINAL_20261103.json"><code>RERUN_VS_ORIGINAL_20261103.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RERUN_VS_ORIGINAL_20261103.md"><code>RERUN_VS_ORIGINAL_20261103.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RESEARCH_STATE.json"><code>RESEARCH_STATE.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="RESUME_20261103.log"><code>RESUME_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="SCIENCE_LEDGER.jsonl"><code>SCIENCE_LEDGER.jsonl</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="SEMANTIC_CLOSURE_STATUS.md"><code>SEMANTIC_CLOSURE_STATUS.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="SEMANTIC_JOIN_STATUS.md"><code>SEMANTIC_JOIN_STATUS.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="V4_TRAJECTORY_AUDIT.md"><code>V4_TRAJECTORY_AUDIT.md</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="V4_TRAJECTORY_MATRIX.csv"><code>V4_TRAJECTORY_MATRIX.csv</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="V4_TRAJECTORY_SUMMARY.json"><code>V4_TRAJECTORY_SUMMARY.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="WAVE2_20261103.log"><code>WAVE2_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="WAVE3_20261103.log"><code>WAVE3_20261103.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="WORK_GRAPH.json"><code>WORK_GRAPH.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="_shard_worker.py"><code>_shard_worker.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="amend3_full_stdout_rescan.json"><code>amend3_full_stdout_rescan.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analysis_info_contract_2x2.py"><code>analysis_info_contract_2x2.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analyze_code_feedback_exploration.py"><code>analyze_code_feedback_exploration.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analyze_initial_evidence.py"><code>analyze_initial_evidence.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analyze_random_cohort.py"><code>analyze_random_cohort.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analyze_rerun_vs_original.py"><code>analyze_rerun_vs_original.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="analyze_v4_trajectories.py"><code>analyze_v4_trajectories.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="apmix_entitlement_20261102.json"><code>apmix_entitlement_20261102.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="apmix_entitlement_20261102.py"><code>apmix_entitlement_20261102.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="append_budget_p014.py"><code>append_budget_p014.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="append_budget_to_ledger.py"><code>append_budget_to_ledger.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="audit_claim_matrix.py"><code>audit_claim_matrix.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="audit_scale_inventory.py"><code>audit_scale_inventory.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="build_cross_family_stage_analysis.py"><code>build_cross_family_stage_analysis.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="build_p024_registration.py"><code>build_p024_registration.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="build_paper_evidence_20261103.py"><code>build_paper_evidence_20261103.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="census_p_provider.json"><code>census_p_provider.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="census_p_provider.py"><code>census_p_provider.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="census_p_provider_corrected.py"><code>census_p_provider_corrected.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_compare_p021_p023.log"><code>chain_compare_p021_p023.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_compare_p022_p024.log"><code>chain_compare_p022_p024.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_p018_p020.log"><code>chain_p018_p020.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_p021.log"><code>chain_p021.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_p022.log"><code>chain_p022.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_p023.log"><code>chain_p023.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_p024.log"><code>chain_p024.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="chain_position_cluster.log"><code>chain_position_cluster.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="compare_p021_p023.py"><code>compare_p021_p023.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="compare_p022_p024.py"><code>compare_p022_p024.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="final_synthesis_validation.jsonl"><code>final_synthesis_validation.jsonl</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="fixtures_aead_modern.py"><code>fixtures_aead_modern.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="h1_campaign.py"><code>h1_campaign.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="labels_probe_20261102.json"><code>labels_probe_20261102.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="leakscan_info_contract_2x2.py"><code>leakscan_info_contract_2x2.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="p023_parallel.log"><code>p023_parallel.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="parallelize_cohort.py"><code>parallelize_cohort.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="position_cluster_p021_p023.py"><code>position_cluster_p021_p023.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="preflight_info_contract_2x2.py"><code>preflight_info_contract_2x2.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="probe_labels_20261102.py"><code>probe_labels_20261102.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="probe_p024_failures.jsonl"><code>probe_p024_failures.jsonl</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="probe_p024_floor.json"><code>probe_p024_floor.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="probe_p024_floor.py"><code>probe_p024_floor.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter.py"><code>provider_adapter_agentrouter.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p016_floor2800.py"><code>provider_adapter_agentrouter_p016_floor2800.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p017.py"><code>provider_adapter_agentrouter_p017.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p023.py"><code>provider_adapter_agentrouter_p023.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p024.py"><code>provider_adapter_agentrouter_p024.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p024b_floor8400.py"><code>provider_adapter_agentrouter_p024b_floor8400.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_agentrouter_p026_floor8000.py"><code>provider_adapter_agentrouter_p026_floor8000.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_apinex.py"><code>provider_adapter_apinex.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_apinex_l6.py"><code>provider_adapter_apinex_l6.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_apinex_l6_paced.py"><code>provider_adapter_apinex_l6_paced.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="provider_adapter_apinex_p021.py"><code>provider_adapter_apinex_p021.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="recover_transport_rows.py"><code>recover_transport_rows.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="recovery_p016a.log"><code>recovery_p016a.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="recovery_p017.log"><code>recovery_p017.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="refamily_info_contract.py"><code>refamily_info_contract.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="register_instance_seeds.py"><code>register_instance_seeds.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="rerun_ar_clone.py"><code>rerun_ar_clone.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="rerun_ar_cohort.py"><code>rerun_ar_cohort.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="rerun_ar_queue.sh"><code>rerun_ar_queue.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="rerun_p016_arm.py"><code>rerun_p016_arm.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="resume_all_after_quota.sh"><code>resume_all_after_quota.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="route_probe2_20261102.json"><code>route_probe2_20261102.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="route_probe2_20261102.py"><code>route_probe2_20261102.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="route_probe_20261102.json"><code>route_probe_20261102.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="route_probe_20261102.py"><code>route_probe_20261102.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_code_feedback_chacha20.py"><code>run_code_feedback_chacha20.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_code_feedback_exploration.py"><code>run_code_feedback_exploration.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_code_feedback_exploration_v2.py"><code>run_code_feedback_exploration_v2.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_code_feedback_rc4.py"><code>run_code_feedback_rc4.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_final_recovery.sh"><code>run_final_recovery.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_info_contract_2x2_aesctr.py"><code>run_info_contract_2x2_aesctr.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_info_contract_2x2_aesgcm.py"><code>run_info_contract_2x2_aesgcm.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_info_contract_2x2_chacha20.py"><code>run_info_contract_2x2_chacha20.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_info_contract_2x2_ecdsa.py"><code>run_info_contract_2x2_ecdsa.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_kimi_finish.sh"><code>run_kimi_finish.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_kimi_sequential.sh"><code>run_kimi_sequential.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_modern_aead_cohort.py"><code>run_modern_aead_cohort.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_output_contract_exploration.py"><code>run_output_contract_exploration.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_parallel_wave.sh"><code>run_parallel_wave.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_recovery_after_recharge.sh"><code>run_recovery_after_recharge.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_wave2_after_queue.sh"><code>run_wave2_after_queue.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="run_wave3_after_resume.sh"><code>run_wave3_after_resume.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_chain_p018_p020.sh"><code>schedule_chain_p018_p020.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_compare_p021_p023.sh"><code>schedule_compare_p021_p023.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_compare_p022_p024.sh"><code>schedule_compare_p022_p024.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_p021.sh"><code>schedule_p021.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_p022.sh"><code>schedule_p022.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_p023.sh"><code>schedule_p023.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_p024.sh"><code>schedule_p024.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="schedule_position_cluster.sh"><code>schedule_position_cluster.sh</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="score_output_contract_exploration.py"><code>score_output_contract_exploration.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_20261102T104901Z.json"><code>seeds_random_20261102T104901Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_20261102T105650Z.json"><code>seeds_random_20261102T105650Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_20261103T080050Z.json"><code>seeds_random_20261103T080050Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_p020_20261102T1057Z.json"><code>seeds_random_p020_20261102T1057Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_p021_20261102T182345Z.json"><code>seeds_random_p021_20261102T182345Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_p022_20261102T183823Z.json"><code>seeds_random_p022_20261102T183823Z.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="seeds_random_p024_20261103.json"><code>seeds_random_p024_20261103.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="selftest_modern_aead.py"><code>selftest_modern_aead.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="shard_base_main.py"><code>shard_base_main.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="smoke_p023_failures.jsonl"><code>smoke_p023_failures.jsonl</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="smoke_p023_transport.json"><code>smoke_p023_transport.json</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="smoke_p023_transport.py"><code>smoke_p023_transport.py</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="sweep_label5.log"><code>sweep_label5.log</code></a></td>
-<td>campaign-level record</td>
-</tr>
-<tr>
-<td><a href="verify_final_synthesis.py"><code>verify_final_synthesis.py</code></a></td>
-<td>campaign-level record</td>
+<td><a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/NOVELTY_FULLTEXT_REVIEW.md"><code>NOVELTY_FULLTEXT_REVIEW.md</code></a></td>
+<td>the prior-art full-text review record</td>
 </tr>
 </tbody>
 </table>
+<p>The other 180 files are run artifacts of the waves above: cohort runners (<code>run_*.py</code>),
+sweep/summary outputs, per-wave logs and resume scripts — retained verbatim as part of the
+frozen record, safe to ignore when reading a specific cohort.</p>
+<hr />
+<p><em>Regenerated by <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/../tools/build_experiments_index.py"><code>tools/build_experiments_index.py</code></a> from
+the frozen tree — re-run it after adding a cohort.</em></p>
 
 
 

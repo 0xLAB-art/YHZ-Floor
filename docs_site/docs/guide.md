@@ -48,11 +48,11 @@ sequenceDiagram
     R->>G: per-call attestation (model echo, finish, reasoning tokens)
     G-->>R: results.jsonl (append-only, one row per slot)
     R->>A: closed-form enumeration (stdlib only)
-    A->>V: verify_evidence_revision.py (194 checks)
+    A->>V: the evidence gate (needle + arithmetic checks)
     V-->>V: any amendment recorded BEFORE the run it governs
 ```
 
-Concretely (the M1 published-protocol audit as the worked example — see [`experiments/external_published_audit_20261110/`](experiments/external_published_audit_20261110/)):
+Concretely (the M1 published-protocol audit as the worked example — see [`experiments/external_published_audit_20261110/`](https://github.com/0xLAB-art/YHZ-Floor/blob/main/experiments/external_published_audit_20261110/)):
 
 ```sh
 # 1. the freeze is live: inputs SHA-256 frozen, hash mismatch refuses to run
@@ -85,13 +85,13 @@ Three independent layers, none requiring trust:
 |---|---|---|
 | Bundle integrity | `python3 -B offline_checks.py verify` (in `reviewer_bundle/`) | every manifest payload's SHA-256 |
 | Recorded-outcome census | `python3 -B offline_checks.py census` | the frozen verdict rows, no execution |
-| Paper-level gate | `verify_evidence_revision.py` (in the source bundle) | 194 checks: needles, arithmetic, Holm tables, page budgets |
+| Release manifest | `sha256sum -c MANIFEST_CODES_RESULTS.sha256` (release bundle) | 70,337 entries over the full codes+results tree |
 
 Per-cohort regeneration is closed-form (standard library only): each cohort's `results.jsonl` rows → the printed statistic, by one script. **[Verifying results](verifying.md)** walks a worked example.
 
 ## 5. Where every number lives
 
-**[experiments/INDEX.md](experiments_index.md)** maps all 60+ registered cohorts to their directory, their paper section, and their registered statistic. Highlights:
+**[experiments/INDEX.md](experiments_index.md)** maps all 80 record directories to their registered statistic and their manuscript section. Highlights:
 
 | Cohort family | Paper section | Directory |
 |---|---|---|
@@ -108,3 +108,11 @@ Per-cohort regeneration is closed-form (standard library only): each cohort's `r
 - **The manuscript**: during double-blind review the paper travels through the venue's submission system only.
 - **Raw per-turn provider responses** (the largest bulk): the per-slot `results.jsonl` rows and per-slot summaries carry every recorded outcome; raw response dumps remain with the authors and can be shared on request.
 - **Anything identity-carrying**: the bundle passed a direct-identifier scan (0 hits); frozen records retain a bare mount prefix (`/mnt/nvme5/...`) — a filesystem location, not an identity.
+
+---
+
+<div align="center">
+
+Next: <b><a href="docs/SETUP_AND_API.md">Setup & API</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

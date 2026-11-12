@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-reviewer-bundle" class="md-skip">
+        <a href="#reviewer_bundle-the-curated-offline-projection" class="md-skip">
           Skip to content
         </a>
       
@@ -626,6 +626,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reviewer bundle
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -642,6 +660,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verify-without-executing-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify without executing anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-projection-is-and-is-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this projection is — and is not
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -667,6 +737,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verify-without-executing-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify without executing anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-projection-is-and-is-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this projection is — and is not
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -685,19 +796,81 @@
   
 
 
-<h1 id="the-reviewer-bundle">The reviewer bundle<a class="headerlink" href="#the-reviewer-bundle" title="Permanent link">&para;</a></h1>
-<p>The <code>reviewer_bundle/</code> directory in the repository is the curated offline projection (24,023 manifest files). Its own README, reproduced below, describes its contents, verification commands, and exclusion boundaries.</p>
-<hr />
-<h1 id="anonymous-reviewer-candidate-2026-11-11">Anonymous reviewer candidate (2026-11-11)<a class="headerlink" href="#anonymous-reviewer-candidate-2026-11-11" title="Permanent link">&para;</a></h1>
-<p>Locally prepared for anonymous review; not uploaded or published. This is an explicitly reduced anonymous projection of the private full candidate, not the entire full package.</p>
-<p>The H1-R3 component includes 852 retained sessions and the original sandboxed execute_replay.py. Its retained programs, fixture state, prompts and outputs are byte-preserving copies. Executing retained programs checks outputs; it does not regenerate model responses. See the component README for execution requirements and commands. No experimental evaluation was run while preparing this projection.</p>
-<p>The experiment_b, crossboundary/build and heb1_remediation trees retain the anonymous ablation evidence and original policy implementations. These constructed cases establish bounded policy behavior, not deployed failure prevalence or independent benchmark replication.</p>
-<p>The external-boundary wave evidence (Amendment-1 regrade lab, Amendment-3/4/5 admission records, the C1 confirmatory review, and the M1 published-protocol audit under namespace external_published_audit_20261110) ships as byte-preserving copies of the frozen per-session records: results.jsonl rows, per-session prompts and raw provider responses, the registered preregistrations, amendments, the ERRATUM_accepted_c2 record, and M1_FINAL_RESULTS. These are the records behind Section 7's external-boundary numbers and the allowance-dependence finding; they are retained observations, not a fresh execution.</p>
-<p>The fixed-executor operation_records.jsonl contains the historical twelve recorded successes whose executor clock medians match the manuscript: RC4 0.214196 ms, ChaCha20 0.131647 ms, CBC 1981.556789 ms, ECDSA 6.956233 ms. These are recorded observations, not freshly verified operations. A different later file with the same basename has different clocks and is deliberately not pooled with this cohort.</p>
-<p>Identifying signed RQ3 property certificates, their observation records, original provider/archive wrappers, declared-author LaTeX sources and identifying in-toto runner sources remain in the separate private full candidate. Their exclusion preserves signed originals without redaction or re-signing. This projection therefore does not independently reproduce all property-check and in-toto claims. Synthetic fixture truth and synthetic test keys included here are evaluation materials.</p>
-<p>COPY_LINEAGE.json preserves copied payload hashes. MANIFEST.json describes this projection independently of original nested manifests. Inspect without executing experiments:</p>
-<div class="highlight"><pre><span></span><code>python3 -B offline_checks.py verify
+<h1 id="reviewer_bundle-the-curated-offline-projection">reviewer_bundle — the curated offline projection<a class="headerlink" href="#reviewer_bundle-the-curated-offline-projection" title="Permanent link">&para;</a></h1>
+<p>This directory is the <strong>review-facing projection</strong> of the audit: 24,023 payloads whose
+SHA-256 values are pinned in <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/reviewer_bundle/MANIFEST.json"><code>MANIFEST.json</code></a>, with every source→destination
+copy recorded in <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/reviewer_bundle/COPY_LINEAGE.json"><code>COPY_LINEAGE.json</code></a> (byte-preserving packaging — no
+trial was added or removed). The full codes+results tree is manifested separately in the
+<a href="https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results">v1.0.0 release</a>.</p>
+<h2 id="verify-without-executing-anything">Verify without executing anything<a class="headerlink" href="#verify-without-executing-anything" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-B<span class="w"> </span>offline_checks.py<span class="w"> </span>verify<span class="w">     </span><span class="c1"># SHA-256 over all 24,023 payloads</span>
+python3<span class="w"> </span>-B<span class="w"> </span>offline_checks.py<span class="w"> </span>census<span class="w">     </span><span class="c1"># the frozen verdict rows, read-only</span>
 </code></pre></div>
+<p>Expected: <code>integrity: PASS</code>, 0 errors. These checks never run an attack program and
+never contact a provider.</p>
+<h2 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>offline_checks.py</code></td>
+<td>the no-execution verifier (<code>verify</code>) and census (<code>census</code>)</td>
+</tr>
+<tr>
+<td><code>MANIFEST.json</code></td>
+<td>SHA-256 per payload — the projection's integrity envelope</td>
+</tr>
+<tr>
+<td><code>COPY_LINEAGE.json</code></td>
+<td>source→destination hashes for every byte-preserving copy</td>
+</tr>
+<tr>
+<td><code>ANONYMITY_SCOPE.json</code></td>
+<td>the direct-identifier scan result (0 hits; empty author fields)</td>
+</tr>
+<tr>
+<td><code>evidence/fixed_executor/</code></td>
+<td>the fixed-executor operation records: twelve historical recorded successes (RC4 0.214196 ms, ChaCha20 0.131647 ms, CBC 1981.556789 ms, ECDSA 6.956233 ms executor-clock medians). These are recorded observations; a different later file with the same basename has different clocks and is deliberately <strong>not pooled</strong> with this cohort.</td>
+</tr>
+<tr>
+<td><code>h1r3/h1r3_complete_replay_v1/</code></td>
+<td>the complete 852-session H1-R3 component: retained programs, fixture state, prompts, outputs, and the sandboxed <code>execute_replay.py</code></td>
+</tr>
+<tr>
+<td><code>source/sp2027/</code></td>
+<td>the wave trees the manuscript cites (<code>research_execution/</code> — the external-boundary waves including the M1 audit; <code>analysis/</code> — the ablation and remediation trees)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-projection-is-and-is-not">What this projection is — and is not<a class="headerlink" href="#what-this-projection-is-and-is-not" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Byte-preserving copies, not fresh execution.</strong> The retained records (preregistrations,
+  amendments, <code>results.jsonl</code> rows, per-session prompts and outputs) are verbatim copies of
+  the frozen campaign files. Executing retained programs checks their outputs; it does not
+  regenerate model responses. No experimental evaluation was run while preparing this
+  projection.</li>
+<li><strong>The external-boundary evidence ships as the frozen records</strong>: the Amendment-1 regrade
+  lab, the Amendment-3/4/5 admission records, the C1 confirmatory review, and the M1
+  published-protocol audit (namespace <code>external_published_audit_20261110</code>) — including the
+  registered preregistrations, the numbered amendments, the <code>ERRATUM_accepted_c2</code> record,
+  and <code>M1_FINAL_RESULTS</code>. These are the records behind the manuscript's external-boundary
+  numbers and the allowance-dependence finding.</li>
+<li><strong>Constructed cases, bounded claims.</strong> The ablation trees establish bounded policy
+  behaviour on constructed cases — not deployed failure prevalence, and not an independent
+  replication of any benchmark.</li>
+<li><strong>Deliberately excluded:</strong> identifying signed RQ3 property certificates, their observation
+  records, original provider/archive wrappers, declared-author LaTeX sources, and
+  identifying in-toto runner sources remain in the private full candidate. Their exclusion
+  preserves the signed originals without redaction or re-signing, so this projection does
+  not independently reproduce every property-check and in-toto claim.</li>
+<li><strong>Synthetic fixture truth and test signing keys</strong> included here are evaluation materials,
+  not credentials to anything.</li>
+</ul>
 
 
 

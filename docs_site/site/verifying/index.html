@@ -606,10 +606,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#layer-2-per-cohort-regeneration-closed-form-stdlib" class="md-nav__link">
+  <a href="#layer-2-per-cohort-regeneration-closed-form-standard-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2 — per-cohort regeneration (closed-form, stdlib)
+        Layer 2 — per-cohort regeneration (closed-form, standard library)
       
     </span>
   </a>
@@ -617,32 +617,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#layer-3-the-paper-level-evidence-gate" class="md-nav__link">
+  <a href="#layer-3-the-release-manifest-the-reviewer-projection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 3 — the paper-level evidence gate
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-the-rows-prove-and-what-they-dont" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What the rows prove — and what they don't
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-chain-of-custody" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The chain of custody
+        Layer 3 — the release manifest + the reviewer projection
       
     </span>
   </a>
@@ -784,10 +762,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#layer-2-per-cohort-regeneration-closed-form-stdlib" class="md-nav__link">
+  <a href="#layer-2-per-cohort-regeneration-closed-form-standard-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2 — per-cohort regeneration (closed-form, stdlib)
+        Layer 2 — per-cohort regeneration (closed-form, standard library)
       
     </span>
   </a>
@@ -795,32 +773,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#layer-3-the-paper-level-evidence-gate" class="md-nav__link">
+  <a href="#layer-3-the-release-manifest-the-reviewer-projection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 3 — the paper-level evidence gate
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-the-rows-prove-and-what-they-dont" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What the rows prove — and what they don't
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-chain-of-custody" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The chain of custody
+        Layer 3 — the release manifest + the reviewer projection
       
     </span>
   </a>
@@ -848,14 +804,23 @@
 
 
 <h1 id="verifying-results">Verifying results<a class="headerlink" href="#verifying-results" title="Permanent link">&para;</a></h1>
-<p>Three independent layers, from zero-execution to full re-derivation.</p>
+<p>Three independent layers, from zero-execution to full re-derivation. None of them
+requires trusting a summary: everything regenerates from the frozen rows.</p>
 <h2 id="layer-1-bundle-integrity-no-execution">Layer 1 — bundle integrity (no execution)<a class="headerlink" href="#layer-1-bundle-integrity-no-execution" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>reviewer_bundle
 python3<span class="w"> </span>-B<span class="w"> </span>offline_checks.py<span class="w"> </span>verify
 </code></pre></div>
-<p>Checks <strong>every manifest-listed payload</strong> (24,023 files) against its SHA-256. Expected: <code>integrity: PASS</code>, 0 errors. The census subcommand reads archived records only — it never runs attack programs or contacts anything.</p>
-<h2 id="layer-2-per-cohort-regeneration-closed-form-stdlib">Layer 2 — per-cohort regeneration (closed-form, stdlib)<a class="headerlink" href="#layer-2-per-cohort-regeneration-closed-form-stdlib" title="Permanent link">&para;</a></h2>
-<p>Every printed statistic regenerates from the raw per-seed rows. Worked example — the 96/0 paired contrast of the power cohort:</p>
+<p>Checks every manifest-listed payload (24,023 files) against its SHA-256. Expected:
+<code>integrity: PASS</code>, 0 errors. The <code>census</code> subcommand reads archived records only —
+it never runs attack programs or contacts anything.</p>
+<p>For the full codes+results tree, the <a href="https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results">v1.0.0 release</a>
+ships <code>MANIFEST_CODES_RESULTS.sha256</code> (70,337 entries). Verify it from the extracted
+bundle root:</p>
+<div class="highlight"><pre><span></span><code>sha256sum<span class="w"> </span>-c<span class="w"> </span>MANIFEST_CODES_RESULTS.sha256
+</code></pre></div>
+<h2 id="layer-2-per-cohort-regeneration-closed-form-standard-library">Layer 2 — per-cohort regeneration (closed-form, standard library)<a class="headerlink" href="#layer-2-per-cohort-regeneration-closed-form-standard-library" title="Permanent link">&para;</a></h2>
+<p>Every printed statistic regenerates from the raw per-seed rows. Worked example — the
+headline paired contrast of the power cohort (§5):</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>experiments/info_contract_aesgcm_random_p021ar_20261103/
 python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
 <span class="s">import json</span>
@@ -871,17 +836,28 @@ python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;
 <span class="s">print('paired C1-vs-C4 discordance:', discord)   # expected: (96, 0)</span>
 <span class="s">PY</span>
 </code></pre></div>
-<p>The exact two-sided binomial p for (96, 0) is <code>2.5e-29</code>; the Holm step-down over the registered 16-member family gives <code>4.04e-28</code> — reproduce the whole table from <code>experiments/</code> rows with the same enumeration.</p>
-<h2 id="layer-3-the-paper-level-evidence-gate">Layer 3 — the paper-level evidence gate<a class="headerlink" href="#layer-3-the-paper-level-evidence-gate" title="Permanent link">&para;</a></h2>
-<p><code>verify_evidence_revision.py</code> (shipped with the source bundle) runs <strong>194 checks</strong>: every headline number is pinned to the source text as a case-sensitive needle, per-cohort arithmetic is recomputed from the raw rows (P021AR/P022 cells, Fisher/McNemar/Holm), page budgets are measured, and the abstract echoes the body. Cross-references the build logs and the dist manifests.</p>
-<h2 id="what-the-rows-prove-and-what-they-dont">What the rows prove — and what they don't<a class="headerlink" href="#what-the-rows-prove-and-what-they-dont" title="Permanent link">&para;</a></h2>
+<p>The exact two-sided binomial p for (96, 0) is <code>2.5e-29</code>; the Holm step-down over the
+registered 16-member family gives <code>4.04e-28</code>. Reproduce the whole table from the
+<code>experiments/</code> rows with the same enumeration — no statistics package required.</p>
+<blockquote>
+<p>Field names can differ per cohort (<code>oracle_verdict</code> vs <code>status</code>, per-cell files). If the
+one-liner above hits an unfamiliar key, read the cohort's <code>summary.json</code> first — it
+carries the registered per-cell counts this snippet re-derives.</p>
+</blockquote>
+<h2 id="layer-3-the-release-manifest-the-reviewer-projection">Layer 3 — the release manifest + the reviewer projection<a class="headerlink" href="#layer-3-the-release-manifest-the-reviewer-projection" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Each <code>results.jsonl</code> row is a <strong>recorded outcome</strong>: the per-slot verdict under the registered rules, with its attestation block.</li>
-<li>The rows do <strong>not</strong> independently re-prove the cryptography (that would require executing the retained programs — see <code>reviewer_bundle/review.py h1r3</code> for the sandboxed path, and <code>prior_validation/BINDING.json</code> for what the prior validation covered).</li>
-<li>Censored slots (<code>COMPLETION_TRUNCATED</code>, <code>submissions = 0</code>) are <strong>unmeasured, not failed</strong> — the estimand is the paired contrast on evaluable pairs, printed beside the all-registered-session sensitivity.</li>
+<li>The release bundle's 70,337-entry manifest pins every file of the codes+results tree,
+  so any extracted copy is checkable byte-for-byte.</li>
+<li>Inside the projection, <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/docs/../reviewer_bundle/COPY_LINEAGE.json"><code>COPY_LINEAGE.json</code></a>
+  records source→destination SHA-256 for every payload, proving the served copies are
+  the frozen originals; <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/docs/../reviewer_bundle/ANONYMITY_SCOPE.json"><code>ANONYMITY_SCOPE.json</code></a>
+  records the direct-identifier scan (0 hits).</li>
 </ul>
-<h2 id="the-chain-of-custody">The chain of custody<a class="headerlink" href="#the-chain-of-custody" title="Permanent link">&para;</a></h2>
-<p><code>COPY_LINEAGE.json</code> (in <code>reviewer_bundle/</code>) records source→destination SHA-256 for every copied payload; <code>MANIFEST.json</code> hashes the assembled package; failed attempts remain separate (no trial added or removed); nothing was executed during packaging. Records retain the originating workstation's bare mount prefix — a filesystem location, not an identity.</p>
+<p>The authoring-time evidence gate (the script that pinned every manuscript number to its
+rows during writing) is part of the private full candidate and is not served here; the
+public reproducibility surface is Layers 1–2 plus the manifests. If you need a specific
+gate check re-run, open an issue and the corresponding Layer-2 derivation will be added
+to this document.</p>
 
 
 

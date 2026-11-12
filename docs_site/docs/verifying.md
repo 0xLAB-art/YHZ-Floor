@@ -1,6 +1,7 @@
 # Verifying results
 
-Three independent layers, from zero-execution to full re-derivation.
+Three independent layers, from zero-execution to full re-derivation. None of them
+requires trusting a summary: everything regenerates from the frozen rows.
 
 ## Layer 1 — bundle integrity (no execution)
 
@@ -9,11 +10,22 @@ cd reviewer_bundle
 python3 -B offline_checks.py verify
 ```
 
-Checks **every manifest-listed payload** (24,023 files) against its SHA-256. Expected: `integrity: PASS`, 0 errors. The census subcommand reads archived records only — it never runs attack programs or contacts anything.
+Checks every manifest-listed payload (24,023 files) against its SHA-256. Expected:
+`integrity: PASS`, 0 errors. The `census` subcommand reads archived records only —
+it never runs attack programs or contacts anything.
 
-## Layer 2 — per-cohort regeneration (closed-form, stdlib)
+For the full codes+results tree, the [v1.0.0 release](https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results)
+ships `MANIFEST_CODES_RESULTS.sha256` (70,337 entries). Verify it from the extracted
+bundle root:
 
-Every printed statistic regenerates from the raw per-seed rows. Worked example — the 96/0 paired contrast of the power cohort:
+```sh
+sha256sum -c MANIFEST_CODES_RESULTS.sha256
+```
+
+## Layer 2 — per-cohort regeneration (closed-form, standard library)
+
+Every printed statistic regenerates from the raw per-seed rows. Worked example — the
+headline paired contrast of the power cohort (§5):
 
 ```sh
 cd experiments/info_contract_aesgcm_random_p021ar_20261103/
@@ -32,18 +44,25 @@ print('paired C1-vs-C4 discordance:', discord)   # expected: (96, 0)
 PY
 ```
 
-The exact two-sided binomial p for (96, 0) is `2.5e-29`; the Holm step-down over the registered 16-member family gives `4.04e-28` — reproduce the whole table from `experiments/` rows with the same enumeration.
+The exact two-sided binomial p for (96, 0) is `2.5e-29`; the Holm step-down over the
+registered 16-member family gives `4.04e-28`. Reproduce the whole table from the
+`experiments/` rows with the same enumeration — no statistics package required.
 
-## Layer 3 — the paper-level evidence gate
+> Field names can differ per cohort (`oracle_verdict` vs `status`, per-cell files). If the
+> one-liner above hits an unfamiliar key, read the cohort's `summary.json` first — it
+> carries the registered per-cell counts this snippet re-derives.
 
-`verify_evidence_revision.py` (shipped with the source bundle) runs **194 checks**: every headline number is pinned to the source text as a case-sensitive needle, per-cohort arithmetic is recomputed from the raw rows (P021AR/P022 cells, Fisher/McNemar/Holm), page budgets are measured, and the abstract echoes the body. Cross-references the build logs and the dist manifests.
+## Layer 3 — the release manifest + the reviewer projection
 
-## What the rows prove — and what they don't
+- The release bundle's 70,337-entry manifest pins every file of the codes+results tree,
+  so any extracted copy is checkable byte-for-byte.
+- Inside the projection, [`COPY_LINEAGE.json`](https://github.com/0xLAB-art/YHZ-Floor/blob/main/docs/../reviewer_bundle/COPY_LINEAGE.json)
+  records source→destination SHA-256 for every payload, proving the served copies are
+  the frozen originals; [`ANONYMITY_SCOPE.json`](https://github.com/0xLAB-art/YHZ-Floor/blob/main/docs/../reviewer_bundle/ANONYMITY_SCOPE.json)
+  records the direct-identifier scan (0 hits).
 
-- Each `results.jsonl` row is a **recorded outcome**: the per-slot verdict under the registered rules, with its attestation block.
-- The rows do **not** independently re-prove the cryptography (that would require executing the retained programs — see `reviewer_bundle/review.py h1r3` for the sandboxed path, and `prior_validation/BINDING.json` for what the prior validation covered).
-- Censored slots (`COMPLETION_TRUNCATED`, `submissions = 0`) are **unmeasured, not failed** — the estimand is the paired contrast on evaluable pairs, printed beside the all-registered-session sensitivity.
-
-## The chain of custody
-
-`COPY_LINEAGE.json` (in `reviewer_bundle/`) records source→destination SHA-256 for every copied payload; `MANIFEST.json` hashes the assembled package; failed attempts remain separate (no trial added or removed); nothing was executed during packaging. Records retain the originating workstation's bare mount prefix — a filesystem location, not an identity.
+The authoring-time evidence gate (the script that pinned every manuscript number to its
+rows during writing) is part of the private full candidate and is not served here; the
+public reproducibility surface is Layers 1–2 plus the manifests. If you need a specific
+gate check re-run, open an issue and the corresponding Layer-2 derivation will be added
+to this document.

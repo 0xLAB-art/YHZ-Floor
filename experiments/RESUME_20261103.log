@@ -1,0 +1,389 @@
+[15:54:02Z] resume armed; probing route every 10 min until quota/key restored
+Traceback (most recent call last):
+  File "<string>", line 7, in <module>
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/provider_adapter_agentrouter_p023.py", line 160, in call
+    return self._attempt(request_meta, headers, payload, timeout, attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/provider_adapter_agentrouter_p023.py", line 211, in _attempt
+    raise ProviderFailure("HTTP_ERROR", f"HTTP {response.status_code}", response,
+pa.ProviderFailure: HTTP 403
+[15:59:49Z] resume armed; probing route every 10 min until quota/key restored
+PROBE_OK READY
+[15:59:52Z] route restored
+[15:59:52Z] salvaging gcmsiv (resume incomplete shards, then merge)
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_00",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    1047792615613731969,
+    8318222496953004377
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 8,
+  "started": 1793721593.0516024,
+  "token_floor": 4200
+}
+{"cell": "C1", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "e23233d97787a0cfa213fb03fcce69d7296328d3e67a0988b41b2a190ece60f3", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C1__seed_8318222496953004377__7150a95be66d", "seed": 8318222496953004377, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C2", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "e23233d97787a0cfa213fb03fcce69d7296328d3e67a0988b41b2a190ece60f3", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C2__seed_8318222496953004377__a354c50fe157", "seed": 8318222496953004377, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C3", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "e23233d97787a0cfa213fb03fcce69d7296328d3e67a0988b41b2a190ece60f3", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C3__seed_8318222496953004377__573b6e197ff2", "seed": 8318222496953004377, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C4", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "e23233d97787a0cfa213fb03fcce69d7296328d3e67a0988b41b2a190ece60f3", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C4__seed_8318222496953004377__953b2d0b0363", "seed": 8318222496953004377, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{
+  "confirmatory": false,
+  "finished": 1793722045.7753398,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 1,
+  "provider_responses": 6,
+  "sessions": 4
+}
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_01",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    5197379716332103652,
+    4557560747022903031
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 8,
+  "started": 1793722045.95206,
+  "token_floor": 4200
+}
+{"cell": "C1", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "3f71c0f78a11a69a1e4ceed5de92f592756e8b2d2b215cd0a2df806d62c249a7", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C1__seed_4557560747022903031__1beac9b1178e", "seed": 4557560747022903031, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C2", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "3f71c0f78a11a69a1e4ceed5de92f592756e8b2d2b215cd0a2df806d62c249a7", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C2__seed_4557560747022903031__3ce8bb9f47ee", "seed": 4557560747022903031, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C3", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "3f71c0f78a11a69a1e4ceed5de92f592756e8b2d2b215cd0a2df806d62c249a7", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C3__seed_4557560747022903031__32c91995c2fe", "seed": 4557560747022903031, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C4", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "3f71c0f78a11a69a1e4ceed5de92f592756e8b2d2b215cd0a2df806d62c249a7", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C4__seed_4557560747022903031__f9ac873254c6", "seed": 4557560747022903031, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{
+  "confirmatory": false,
+  "finished": 1793722494.9469755,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 1,
+  "provider_responses": 6,
+  "sessions": 4
+}
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_04",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    3475759585745935795
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 4,
+  "started": 1793722495.2015007,
+  "token_floor": 4200
+}
+{"cell": "C1", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77524b04d45c375aa42f118f31089f344874d2f9bb72d8c2c1e58347e56c582f", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C1__seed_3475759585745935795__6a6665ded569", "seed": 3475759585745935795, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C2", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77524b04d45c375aa42f118f31089f344874d2f9bb72d8c2c1e58347e56c582f", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C2__seed_3475759585745935795__c3d25bb9b4af", "seed": 3475759585745935795, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C3", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77524b04d45c375aa42f118f31089f344874d2f9bb72d8c2c1e58347e56c582f", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C3__seed_3475759585745935795__824f79e610d5", "seed": 3475759585745935795, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C4", "fixture": "aesgcmsiv", "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77524b04d45c375aa42f118f31089f344874d2f9bb72d8c2c1e58347e56c582f", "run_id": "p020-info-contract-2x2-gcmsiv-csprng-seeds__C4__seed_3475759585745935795__0da73316740e", "seed": 3475759585745935795, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{
+  "confirmatory": false,
+  "finished": 1793723077.562953,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 1,
+      "submissions": 2,
+      "turns": 2
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 0,
+  "provider_responses": 8,
+  "sessions": 4
+}
+merged sessions 35 planned 32
+[16:24:37Z] gcmsiv still incomplete (35/32); pass 1 done, retrying
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_00",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    1047792615613731969,
+    8318222496953004377
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 8,
+  "started": 1793723077.9115348,
+  "token_floor": 4200
+}
+{
+  "confirmatory": false,
+  "finished": 1793723077.9126532,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 0,
+  "provider_responses": 0,
+  "sessions": 0
+}
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_01",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    5197379716332103652,
+    4557560747022903031
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 8,
+  "started": 1793723078.153616,
+  "token_floor": 4200
+}
+{
+  "confirmatory": false,
+  "finished": 1793723078.1548235,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 0,
+  "provider_responses": 0,
+  "sessions": 0
+}
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcmsiv",
+  "fixture_name": "AES-GCM-SIV",
+  "fixtures_sha256": "03da2adbfa2eacd3cd57b7b0c5b71014b972785a809b2d6516e834185ed655ae",
+  "keystream_exposed": false,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_04",
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "ec5bb5f18b0960d436797c621d54cf0ec9eb43e78f9a666550725cb9d210a84a",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p020_20261102T1057Z.json",
+  "seeds": [
+    3475759585745935795
+  ],
+  "seeds_registered_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "sessions_registered": 4,
+  "started": 1793723078.3954513,
+  "token_floor": 4200
+}
+{
+  "confirmatory": false,
+  "finished": 1793723078.3965957,
+  "fixture": "aesgcmsiv",
+  "keystream_exposed": false,
+  "per_cell": {
+    "C1": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C3": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 0,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "provider_failures": 0,
+  "provider_responses": 0,
+  "sessions": 0
+}
+merged sessions 35 planned 32
+[16:24:38Z] gcmsiv still incomplete (35/32); pass 2 done, retrying
+[16:24:38Z] relaunching the 14-cohort rerun queue (restart-safe)
+[16:24:38Z] queue start; waiting for info_contract_aesgcm_random_p021ar_20261103 to finish
+[16:24:38Z] P021AR finished or stopped; starting cohort queue
+[16:24:38Z] skip info_contract_gcmsiv_random_20261102 (already complete)
+[16:24:38Z] start info_contract_chachapoly_random_20261102
+[16:45:07Z] done info_contract_chachapoly_random_20261102 provider_failures=14
+[16:45:07Z] start info_contract_aesgcm_random_20261102
+[17:54:38Z] resume sequence complete (parallel wave)

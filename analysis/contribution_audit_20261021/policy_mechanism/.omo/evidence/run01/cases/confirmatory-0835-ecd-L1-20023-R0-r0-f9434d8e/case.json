@@ -1,0 +1,125 @@
+{
+  "arm": "R0",
+  "current_outcome_correct": true,
+  "derivative_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "derivative_legacy_admitted": true,
+  "edits": [],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": null,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "legacy_class": "qualified",
+  "legacy_disallowed_but_prompt_allowed": [],
+  "legacy_rejected_correct": false,
+  "level": "L1",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0835-ecd-L1-20023-R0-r0-f9434d8e/original",
+    "candidate": {
+      "d": "4a7a64f77fb099646e57ded45122c7eb330821388756c6edb9635bf85c16be92"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "68b2c89cdf6e74176cf258ba0c7afcab17a0443f5d652bd00434f2bacc8a8bb9"
+  },
+  "original_legacy_admitted": true,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "1bdb5006773073f9852e763274284681173f374252f480104f1f8ad16c45e702",
+  "replicate_index": 0,
+  "runtime_import_use": null,
+  "seed": 20023,
+  "session_id": "confirmatory-0835-ecd-L1-20023-R0-r0-f9434d8e",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0835-ecd-L1-20023-R0-r0-f9434d8e/candidate.py",
+  "source_sha256": "8d14173d44d3bd486c3f9e572cd1a702c077139c5feaab4130f66ebff6f302f4",
+  "transform_eligibility": "no_eligible_full_import_statement",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": false,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  }
+}

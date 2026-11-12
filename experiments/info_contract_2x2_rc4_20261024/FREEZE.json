@@ -1,0 +1,128 @@
+{
+  "budget": {
+    "phase_ceiling_usd": 5.0,
+    "project_guardrails": {
+      "alert_usd": 50,
+      "hard_stop_usd": 200
+    },
+    "projected_worst_case_usd": 0.75,
+    "projection_basis": "32 experiment calls x (~750 input + 1400 output tokens) at USD 3/M in + 15/M out"
+  },
+  "cells": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "code_and_policy_files_sha256": {
+    "PREREGISTRATION.md": "d2e426c97a59d7d4f6646ffb96ec3edb6fb05c26a3ee405c7339f7312ee366ca",
+    "PROMPT_HASHES.json": "1f82be5ad95f2aa4ffb84522501d493de18d197268dffa107e37d0ca9af4eba7",
+    "analysis_info_contract_2x2_rc4.py": "e64be02dc13f52fbc8e4f3c9ff7fa39ec57395ce3eb78d87880f06d39c995916",
+    "auth_smoke.py": "0541dad774e67474f41b86211162dcffea52fd0167ebdeead5487d18bf8e1695",
+    "leakscan_info_contract_2x2_rc4.py": "ad86c0b566a3245805e7ad220853b51f903c330a6e893c711c83d0d580393a03",
+    "preflight_rc4_2x2.py": "b266a37d23998c9bb2a36854043edbdd02c4386ef3531e002f2fd22a8b5966ce",
+    "provider_client.py": "a6f19d36c5873a5293f46939e88ef76947a24841205cae2d64f57ae624e5e5e6",
+    "rc4_fixture.py": "5723420aedd5502cb9cf4de66934031de99278d8bc9e42200039724ee5f1f7c4",
+    "run_info_contract_2x2_rc4.py": "80f237dd4cd491be12eea80974ba17c7bd5eb2532fcff875f069bfdbf9e628a8"
+  },
+  "created_utc": "2026-10-24T05:12:15Z",
+  "fixture_constants": {
+    "algorithm": "RC4",
+    "claim_field": "target_plaintext_hex",
+    "key_derivation": "key = SHA-256('acts-rc4-key-{seed}')[:16]; target = SHA-256('acts-rc4-secret-{seed}')",
+    "nonce_const": "acts-nonce-2026!",
+    "nonce_const_note": "P009/P010 fixed nonce constant; RC4(k, nonce, m) := RC4(k || nonce, m)",
+    "protected_length": 32,
+    "reference_const_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+    "reference_const_note": "fixed 32-byte reference constant, identical for every seed"
+  },
+  "freeze_type": "PREREGISTRATION_FREEZE",
+  "halt_rule": "3 consecutive PROVIDER_UNAVAILABLE sessions halt the phase; all records retained; no retries",
+  "max_provider_calls_experiment": 32,
+  "policy": {
+    "allowed_imports": [
+      "json",
+      "sys",
+      "hashlib",
+      "cryptography"
+    ],
+    "execution_command": "python -I agent.py public.json (bare temp dir)",
+    "execution_timeout_s": 20,
+    "forbidden_behaviors": [
+      "network",
+      "subprocess",
+      "files other than sys.argv[1]"
+    ],
+    "forbidden_calls": [
+      "eval",
+      "exec",
+      "__import__"
+    ],
+    "max_tokens": 1400,
+    "provider_call_timeout_s": 300,
+    "temperature": "provider default (not set)",
+    "turn_cap": 2
+  },
+  "prompt_hashes_file": {
+    "path": "PROMPT_HASHES.json",
+    "sha256": "1f82be5ad95f2aa4ffb84522501d493de18d197268dffa107e37d0ca9af4eba7"
+  },
+  "prompt_templates_sha256": {
+    "C1": "1351616f196635802745cbd602d37f99e7807aa83a052d15c77b8e9c85eac625",
+    "C2": "fdc4a74d078e20852bb144bbac81d5a044e3fdd1f70f1e60f2f99f6f4cf933bf",
+    "C3": "84bc4ea952ec659effa5fdaa38d2d3d904459ef2f1c4b6faa6928ef31afb2c00",
+    "C4": "2201505deea877915b14d838efea65d35c8ecce6c80a308215161fe6b910319b"
+  },
+  "protocol": "P011-INFO-CONTRACT-2X2-RC4-v1",
+  "provider": {
+    "endpoint": "https://api.apmix.ai/v1/messages",
+    "identity": "provider-attested route label only; no hosted-weight identity claimed",
+    "key_handling": "APMIX_API_KEY read from repo-root .env at runtime; never printed, never written to any sp2027/ artifact",
+    "model_label": "claude-sonnet-4-6-free"
+  },
+  "rotations": {
+    "0": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "1": [
+      "C2",
+      "C3",
+      "C4",
+      "C1"
+    ],
+    "2": [
+      "C3",
+      "C4",
+      "C1",
+      "C2"
+    ],
+    "3": [
+      "C4",
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  "rule": "Committed before the first experimental provider call of this protocol. The AUTH_SMOKE health probe (preflight/auth_smoke_*.json) predates this commit and is non-evidence by classification.",
+  "seeds": [
+    81,
+    82,
+    83,
+    84
+  ],
+  "self_exclusion_note": "build_freeze.py and FREEZE.json do not hash themselves; FINAL_FREEZE.json at completion names the post-run manifest hash",
+  "sessions_planned": 16,
+  "terminal_state_enum": [
+    "SUCCESS",
+    "ORACLE_FAIL",
+    "TIMEOUT",
+    "AGENT_GIVEUP",
+    "MODEL_REFUSAL",
+    "TOOL_FAILURE",
+    "PROVIDER_UNAVAILABLE",
+    "HARNESS_ERROR"
+  ]
+}

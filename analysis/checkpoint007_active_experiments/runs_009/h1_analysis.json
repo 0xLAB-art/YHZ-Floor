@@ -1,0 +1,237 @@
+{
+  "genuine_model_calls": 94,
+  "h1_records": 90,
+  "matched_named_unnamed_pairs": 30,
+  "oracle_backed_model_successes": 0,
+  "undertermination_correct_decisions": 30,
+  "provider_failures": 0,
+  "tokens": {
+    "input": 13108,
+    "output": 3421
+  },
+  "estimated_cost_usd": 0.094371,
+  "h1_by_arm": {
+    "ecdsa_named": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 2491,
+        "output": 514
+      },
+      "cost_usd": 0.015183
+    },
+    "ecdsa_undetermined": {
+      "n": 10,
+      "correct": 10,
+      "proportion": 1.0,
+      "wilson_95": [
+        0.722467,
+        1.0
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 790,
+        "output": 290
+      },
+      "cost_usd": 0.00672
+    },
+    "ecdsa_unnamed": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 2347,
+        "output": 380
+      },
+      "cost_usd": 0.012741
+    },
+    "rc4_named": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 1240,
+        "output": 301
+      },
+      "cost_usd": 0.008235
+    },
+    "rc4_undetermined": {
+      "n": 10,
+      "correct": 10,
+      "proportion": 1.0,
+      "wilson_95": [
+        0.722467,
+        1.0
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 780,
+        "output": 340
+      },
+      "cost_usd": 0.00744
+    },
+    "rc4_unnamed": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 1110,
+        "output": 733
+      },
+      "cost_usd": 0.014325
+    },
+    "xor_named": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 1860,
+        "output": 313
+      },
+      "cost_usd": 0.010275
+    },
+    "xor_undetermined": {
+      "n": 10,
+      "correct": 10,
+      "proportion": 1.0,
+      "wilson_95": [
+        0.722467,
+        1.0
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 750,
+        "output": 238
+      },
+      "cost_usd": 0.00582
+    },
+    "xor_unnamed": {
+      "n": 10,
+      "correct": 0,
+      "proportion": 0.0,
+      "wilson_95": [
+        0.0,
+        0.277533
+      ],
+      "provider_statuses": {
+        "model_response": 10
+      },
+      "tokens": {
+        "input": 1740,
+        "output": 312
+      },
+      "cost_usd": 0.0099
+    }
+  },
+  "paired_named_unnamed": {
+    "rc4": {
+      "n_pairs": 10,
+      "named_only": 0,
+      "unnamed_only": 0,
+      "both_correct": 0,
+      "both_incorrect": 10
+    },
+    "ecdsa": {
+      "n_pairs": 10,
+      "named_only": 0,
+      "unnamed_only": 0,
+      "both_correct": 0,
+      "both_incorrect": 10
+    },
+    "xor": {
+      "n_pairs": 10,
+      "named_only": 0,
+      "unnamed_only": 0,
+      "both_correct": 0,
+      "both_incorrect": 10
+    }
+  },
+  "integration": {
+    "latest": {
+      "status": "model_response",
+      "run_id": "sp2027_009__INTEGRATION_XOR__seed_901__480eceed82834777",
+      "truth_boundary": {
+        "prompt_contains_key": false,
+        "prompt_contains_target": false
+      },
+      "output_complete": true,
+      "syntax_valid": true,
+      "oracle_grade": "FAIL",
+      "cost_usd": 0.001008,
+      "tokens": {
+        "input_tokens": 186,
+        "output_tokens": 30,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      }
+    },
+    "calls": 3,
+    "estimated_cost_usd": 0.003045
+  },
+  "annotation": {
+    "run_id": "sp2027_009__E_ANNOTATION__seed_1__114d064bba6f494a",
+    "status": "model_response",
+    "input_truth_excluded": true,
+    "annotation_label": "COMPLETE_RESPONSE",
+    "schema_valid": true,
+    "gold_label_held_out": "COMPLETE_RESPONSE",
+    "model_agrees_with_gold": true,
+    "tokens": {
+      "input_tokens": 119,
+      "output_tokens": 22,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+    },
+    "cost_usd": 0.000687
+  },
+  "populations": {
+    "h1_model": 90,
+    "integration_model": 3,
+    "annotation_model": 1,
+    "deterministic_controls": 5,
+    "cbc_deterministic": "separate; not pooled",
+    "pilots": "separate; not pooled"
+  }
+}

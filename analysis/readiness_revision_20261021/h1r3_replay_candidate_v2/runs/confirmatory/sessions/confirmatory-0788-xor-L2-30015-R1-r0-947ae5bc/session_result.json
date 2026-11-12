@@ -1,0 +1,131 @@
+{
+  "arm": "R1",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0788-xor-L2-30015-R1-r0-947ae5bc/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0788-xor-L2-30015-R1-r0-947ae5bc/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0788-xor-L2-30015-R1-r0-947ae5bc/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0788-xor-L2-30015-R1-r0-947ae5bc/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "XOR_Keystream_Reuse-L2-seed930015",
+    "reference": {
+      "cryptographic_predicate": true,
+      "detail": {
+        "candidate_len": 64,
+        "expected_len": 64
+      },
+      "verdict": "ACCEPTED"
+    },
+    "stage": "SUCCESS",
+    "success": 1
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L2-seed30015",
+  "kind": "primary",
+  "latency_s": 13.213901996612549,
+  "legacy_would_reject": false,
+  "level": "L2",
+  "max_tokens": 2600,
+  "ordinal": 788,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 2519,
+  "payload_sha256": "6c7fdf7dfdf8f144ba63cb6f6f9713cb8d23dccaaff704aa66b69d3f69d338c8",
+  "phase": "confirmatory",
+  "prompt_chars": 3470,
+  "prompt_sha256": "edf5c6a517efa5ac82b2f3456d53a2f084bb9af315e36ba707d4024c7516c561",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 64,
+      "expected_len": 64
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2
+      ],
+      "plaintext": "d8bd04c0b4bbcd72afac16a500bff2a8a29bb83c2d86c45e1dc31d8e8322cf0d101097f5eff7f90b2f68c27ee39871dbf4eaacf368698055cb4d02220a76034e",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2461,
+  "response_sha256": "c196e2c05b41ef14c991b0a4ed23c47885a84d6f70293eb3252846746f9ec1d3",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 30015,
+  "session_id": "confirmatory-0788-xor-L2-30015-R1-r0-947ae5bc",
+  "source_chars": 1959,
+  "source_sha256": "ac36747607003c76d1b6133a7d590d3be28e15be8ef148bb9e4d2f9a2d0f317a",
+  "stderr_tail": "",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 996,
+    "output_tokens": 742
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "state": "STOPPED_BY_RESOURCE_SAFETY_CHECK",
+  "planned": 12,
+  "completed_records": 4,
+  "completed_record_status_counts": {"PROVIDER_UNAVAILABLE": 4},
+  "unrecorded_planned_cases": 8,
+  "reason": "Three completed attempts timed out at the frozen 40-second deadline; no loaded model reported by ollama ps. Observed host had about 1.5 GiB available memory and essentially full swap. Memory pressure is a plausible explanation, not a proven causal diagnosis.",
+  "action": "Terminated only this experiment client, not user applications or the Ollama service.",
+  "in_flight_request": "A further request may have begun before termination; no completed record was fabricated for it.",
+  "missing_cases": "All unrecorded scheduled cases are NOT_RUN_OR_INTERRUPTED, not model or oracle failures.",
+  "analysis_eligible": false,
+  "stable_backend_validated": false,
+  "security_campaign_complete": false,
+  "preservation": "Original PLAN.json and all completed per-case records remain unchanged."
+}

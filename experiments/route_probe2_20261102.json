@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "error": {
+        "code": "model_not_found",
+        "message": "Unknown model. See apmix.ai/models for the current list.",
+        "type": "not_found_error"
+      },
+      "http_status": 404,
+      "label": "apmix/claude-opus-5.5 [anthropic]",
+      "latency_s": 0.9,
+      "output_head": "",
+      "status": "HTTP_ERROR",
+      "url": "https://api.apmix.ai/v1/messages"
+    },
+    {
+      "error": {
+        "code": "model_not_in_plan",
+        "message": "gpt-6-astra needs the Max plan. This key (apx_live_mvde\u2026Uq0N) belongs to khangalal88@gmail.com on the Free plan. If you pay on another account, use a key from that account; otherwise choose a plan at apmix.ai/dashboard/billing.",
+        "type": "permission_error"
+      },
+      "http_status": 403,
+      "label": "apmix/gpt-6-astra [anthropic]",
+      "latency_s": 0.8,
+      "output_head": "",
+      "status": "HTTP_ERROR",
+      "url": "https://api.apmix.ai/v1/messages"
+    },
+    {
+      "error": {
+        "code": "model_not_in_plan",
+        "message": "gemini-3.1-pro needs the Pro plan. This key (apx_live_mvde\u2026Uq0N) belongs to khangalal88@gmail.com on the Free plan. If you pay on another account, use a key from that account; otherwise choose a plan at apmix.ai/dashboard/billing.",
+        "type": "permission_error"
+      },
+      "http_status": 403,
+      "label": "apmix/gemini-3.1-pro [anthropic]",
+      "latency_s": 1.1,
+      "output_head": "",
+      "status": "HTTP_ERROR",
+      "url": "https://api.apmix.ai/v1/messages"
+    }
+  ],
+  "finished": 1793603924.1060917,
+  "probe": "route-probe2-20261102",
+  "started": 1793603921.2233038
+}

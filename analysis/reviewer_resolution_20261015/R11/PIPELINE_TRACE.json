@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "one_named_open_pipeline": true,
+    "three_distinct_recorded_runs": true,
+    "all_wire_format_valid": true,
+    "binary_verification_not_established": true,
+    "same_transformation_sizes": true
+  },
+  "all_pass": true,
+  "open_pipeline": "Python3 + radare2 + struct (no proprietary tools)",
+  "recorded_runs": 3,
+  "operation_seconds": [
+    1.2e-05,
+    3.2e-05,
+    9e-06
+  ],
+  "input_sha256": "7b8c16bf492b32cdb5746fcf67dbf7e4e2785a52477b1b8be00eda2f8c78d049",
+  "scope": "One pipeline's three summary-level run entries. Not three independent pipelines, proof of autonomous construction, verified binary analysis, or a completed live TLS downgrade."
+}

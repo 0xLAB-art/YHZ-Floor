@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "9e40499bc30dbeecd9d7fcb01a972d3699f9c8a898925c6b6bf6c2bf6608c145",
+  "output_text": "```python\nimport json\nimport sys\n\ndef modinv(a, m):\n    def extended_gcd(a, b):\n        if a == 0:\n            return b, 0, 1\n        gcd, x1, y1 = extended_gcd(b % a, a)\n        x = y1 - (b // a) * x1\n        y = x1\n        return gcd, x, y\n    \n    _, x, _ = extended_gcd(a % m, m)\n    return (x % m + m) % m\n\ndata = json.load(open(sys.argv[1]))\n\nr1 = int(data['signature_1']['r'], 16)\ns1 = int(data['signature_1']['s'], 16)\nz1 = int(data['signature_1']['z'], 16)\n\nr2 = int(data['signature_2']['r'], 16)\ns2 = int(data['signature_2']['s'], 16)\nz2 = int(data['signature_2']['z'], 16)\n\nn = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141\n\nk = ((z1 - z2) * modinv(s1 - s2, n)) % n\nd = ((s1 * k - z1) * modinv(r1, n)) % n\n\nprint(json.dumps({\"d\": f\"{d:064x}\", \"k\": f\"{k:064x}\"}))\n```",
+  "prompt_sha256": "7f8ae8f94683b3ed86b7439f40722d6aef9f893404a068d515975ce5a87bab15",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341499.5424876,
+  "response_bytes": 1137,
+  "response_finished": 1792341507.196801,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:38:27 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2581065",
+    "x-apmix-request-id": "req_c051fb89bab34c64928bf1ba",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "418935",
+    "x-apmix-weighted-tokens": "717",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "62d0f96c6766197e50505e08e6385b0814af48f7243d767dfe8dcea76f50823d",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 333,
+    "output_tokens": 384
+  }
+}

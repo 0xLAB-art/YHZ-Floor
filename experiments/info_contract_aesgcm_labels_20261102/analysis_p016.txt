@@ -1,0 +1,31 @@
+# P016 AES-GCM cross-label cohort analysis
+# generated: 2026-11-02T12:30:13+02:00
+# estimator: analyze_p016.py (frozen before either label completed)
+# same frozen AES-GCM runner, same floor 2800 as P014, labels differ
+
+=== gpt-6.1-sol (16 seeds recorded) ===
+accepted / evaluable: {'C1': '13/13', 'C2': '0/0', 'C3': '15/15', 'C4': '0/10'}
+terminal drops: {'C1': 3, 'C2': 16, 'C3': 1, 'C4': 6}
+paired C1-vs-C4: 8/0 over 8 evaluable pairs, p=0.0078125
+premise marginal 28/28 vs 0/10, p=0.0
+classification: direction replicated
+
+=== gpt-5.6-sol (16 seeds recorded) ===
+accepted / evaluable: {'C1': '16/16', 'C2': '0/0', 'C3': '16/16', 'C4': '0/0'}
+terminal drops: {'C1': 0, 'C2': 16, 'C3': 0, 'C4': 16}
+paired C1-vs-C4: 0/0 over 0 evaluable pairs, p=None
+premise marginal 32/32 vs 0/0, p=None
+classification: direction replicated
+
+=== comparison vs P014 (same fixture, same floor 2800, same route) ===
+cell    P014 gpt-6-astra        gpt-6.1-sol        gpt-5.6-sol
+C1            16/16              13/13              16/16     
+C2             0/16               0/0                0/0      
+C3            16/16              15/15              16/16     
+C4             0/16               0/10               0/0      
+
+P014 column is accepted/registered (dropout shown in REPORT_P014.md);
+label columns are accepted/evaluable in this cohort.
+
+NOT POOLED: these labels share one route, one key and one adapter;
+the table supports 'direction on label X', not a provider or model-family rate.

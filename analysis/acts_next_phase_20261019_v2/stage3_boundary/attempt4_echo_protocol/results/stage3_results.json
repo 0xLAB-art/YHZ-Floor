@@ -1,0 +1,206 @@
+{
+  "ingress": "POST /claim on a loopback HTTP gateway in front of the frozen aggregator",
+  "live_observation": {
+    "execution_status": "EXECUTED",
+    "reference_crypto_details": {
+      "secret_disclosed": true,
+      "secret_matches_reserved": true
+    },
+    "reference_crypto_ok": true,
+    "reference_verdict": "ACCEPTED",
+    "stdout_sha256": "4359241b079c496ba35aecebe1ea46ebc6250951ab76ce9a7b8792399c1a9cef"
+  },
+  "no_fallback": true,
+  "no_retry": true,
+  "provider_calls": 5,
+  "provider_endpoint": "https://api.apmix.ai",
+  "provider_log": [
+    {
+      "call_index": 1,
+      "elapsed_seconds": 9.359147,
+      "family": "fabricated_evidence",
+      "http_status": 200,
+      "prompt_sha256": "f57bd9c049694d47f769c41dcd145358d58b4d71e88ebfb6bc3f912d896df921",
+      "provider_model": "claude-sonnet-4-6-free",
+      "response_sha256": "06d64bfa1db8efc65f339ae78ede2c77d10a6cb8b006a35d46e1d68351b3c7df",
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 422,
+        "output_tokens": 280
+      }
+    },
+    {
+      "call_index": 2,
+      "elapsed_seconds": 7.224773,
+      "family": "tampered_observation",
+      "http_status": 200,
+      "prompt_sha256": "5565566aae26448aceb4e954daed610b9a6dbada139f616f2cf95ce4be63fbd5",
+      "provider_model": "claude-sonnet-4-6-free",
+      "response_sha256": "c74ff31e2acf5424ac46ae8276cfe5db6ccda93b81ca300c8335e5e62aff4d45",
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 413,
+        "output_tokens": 111
+      }
+    },
+    {
+      "call_index": 3,
+      "elapsed_seconds": 5.896453,
+      "family": "replayed_attempt",
+      "http_status": 200,
+      "prompt_sha256": "824d7984d5993e2e64b46e18eebb1cab1ba6f4a0c56ac481fa2c85e490ebe75d",
+      "provider_model": "claude-sonnet-4-6-free",
+      "response_sha256": "645a40e763a19d91118ca931157c2492eb80ec607fc89d4d0ba924dc72aafed5",
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 422,
+        "output_tokens": 96
+      }
+    },
+    {
+      "call_index": 4,
+      "elapsed_seconds": 6.87995,
+      "family": "declared_target",
+      "http_status": 200,
+      "prompt_sha256": "147f29015113bddaff6066dff00b5e39aa48475603e364672b86cd1cf4e26dd9",
+      "provider_model": "claude-sonnet-4-6-free",
+      "response_sha256": "bef00b1061db5d89adcf1e5948d4336ef86116f9f61f8c475b572e2d3784eae0",
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 405,
+        "output_tokens": 94
+      }
+    },
+    {
+      "call_index": 5,
+      "elapsed_seconds": 7.053223,
+      "family": "omitted_observation",
+      "http_status": 200,
+      "prompt_sha256": "9cf84b904abbc19c26ba7229b7a9c30b6c986213ab779e10622870ceffdf2959",
+      "provider_model": "claude-sonnet-4-6-free",
+      "response_sha256": "c34832870621e460564031498e2fb202e7c89638130986c9a5c6a13ae0b4e4dc",
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 392,
+        "output_tokens": 80
+      }
+    }
+  ],
+  "provider_route": "claude-sonnet-4-6-free",
+  "run_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage3_boundary/runs/20261020T084433Z_live",
+  "schema": "acts-stage3-boundary/1",
+  "submissions": [
+    {
+      "author": "harness",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "evidence_unchanged": true,
+      "family": "positive_control",
+      "http_status": 200,
+      "reason": "predicate-true-and-chain-complete"
+    },
+    {
+      "author": "harness",
+      "decision": "REJECT",
+      "evidence_unchanged": true,
+      "family": "network_replay",
+      "http_status": 200,
+      "reason": "observation-replayed"
+    },
+    {
+      "author": "harness",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "fabricated_evidence",
+      "http_status": 200,
+      "reason": "observation-signature-invalid"
+    },
+    {
+      "author": "model",
+      "body_sha256": "d1f25403d97d67e1d42c096ec99ddd40fa07bec72e0d3743498d68fc87ba8a70",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "fabricated_evidence",
+      "http_status": 200,
+      "reason": "observation-signature-invalid"
+    },
+    {
+      "author": "harness",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "tampered_observation",
+      "http_status": 200,
+      "reason": "observation-signature-invalid"
+    },
+    {
+      "author": "model",
+      "body_sha256": "d1f25403d97d67e1d42c096ec99ddd40fa07bec72e0d3743498d68fc87ba8a70",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "tampered_observation",
+      "http_status": 200,
+      "reason": "observation-signature-invalid"
+    },
+    {
+      "author": "harness",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "replayed_attempt",
+      "http_status": 200,
+      "reason": "observation-context-binding"
+    },
+    {
+      "author": "model",
+      "body_sha256": "422f9f7f4da435057fab713ff8770a588bc7a3b85ba875fe26d2f44729575de3",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": true,
+      "family": "replayed_attempt",
+      "http_status": 200,
+      "reason": "observation-context-binding"
+    },
+    {
+      "author": "harness",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "declared_target",
+      "http_status": 200,
+      "reason": "observation-context-binding"
+    },
+    {
+      "author": "model",
+      "body_sha256": "422f9f7f4da435057fab713ff8770a588bc7a3b85ba875fe26d2f44729575de3",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": true,
+      "family": "declared_target",
+      "http_status": 200,
+      "reason": "observation-context-binding"
+    },
+    {
+      "author": "harness",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "omitted_observation",
+      "http_status": 200,
+      "reason": "evidence-record-missing"
+    },
+    {
+      "author": "model",
+      "body_sha256": "d2edf675a3cde6cd2defd7f888bc64533d69443f1533a2bce268f05f8d51eaa4",
+      "decision": "INCONCLUSIVE",
+      "evidence_unchanged": false,
+      "family": "omitted_observation",
+      "http_status": 200,
+      "reason": "evidence-record-missing"
+    }
+  ],
+  "target": "crypto_misuse_unauthenticated",
+  "target_binding": "127.0.0.1 (loopback only)",
+  "trust_bundle_sha256": "0612796df86f8e2413547208cc89716fcb68f7e26af38412953f5b0c836a23c5",
+  "trust_policy_sha256": "6ee72589852c16ccc963c61f1a8d82388d24106c278300a5c7a3b99d425988bf",
+  "unauthorized_attribution_count": 0,
+  "unauthorized_attributions": []
+}

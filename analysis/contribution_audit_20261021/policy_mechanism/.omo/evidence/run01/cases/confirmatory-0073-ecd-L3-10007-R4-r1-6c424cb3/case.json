@@ -1,0 +1,257 @@
+{
+  "arm": "R4",
+  "current_outcome_correct": true,
+  "derivative_legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "derivative_legacy_admitted": false,
+  "edits": [],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": null,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    }
+  ],
+  "kind": "noise",
+  "legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "legacy_class": "referenced_import_present",
+  "legacy_disallowed_but_prompt_allowed": [
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    }
+  ],
+  "legacy_rejected_correct": true,
+  "level": "L3",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3/original",
+    "candidate": {
+      "d": "8c173104afb4f0200f74708b535db48fda8653d1708c3002cec4182c3e3c9722",
+      "k": "6f9a730930045c2811b594027303ccec4420fe969d022b471343eafb0a6d52f4"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "179529a07ed4cea7ceba9f398fdf704663182b7b772791cf367ffa81d299d3f2"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "f27523b00a2b221823fedc94e3dca80a91ae190afb5d054c8e4c60214fbc92aa",
+  "replicate_index": 1,
+  "runtime_import_use": {
+    "arm": "R4",
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/import_use_trace_v2/confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3",
+    "family": "ECDSA_Nonce_Reuse",
+    "kind": "noise",
+    "level": "L3",
+    "observed_loaded_import_bindings": [
+      [
+        "Dict",
+        "typing",
+        "Dict",
+        23,
+        "LOAD_NAME"
+      ],
+      [
+        "List",
+        "typing",
+        "List",
+        23,
+        "LOAD_NAME"
+      ],
+      [
+        "Tuple",
+        "typing",
+        "Tuple",
+        14,
+        "LOAD_NAME"
+      ]
+    ],
+    "returncode": 0,
+    "same_output_as_uninstrumented": true,
+    "scope": "actual LOAD opcode reached with imported-object identity; observation is not branch coverage proof",
+    "session_id": "confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3",
+    "source_sha256": "07ae2d4e5e1ad6fc6e29476a3900aadbd993e43f78815f71fe05aef05c1adafb"
+  },
+  "seed": 10007,
+  "session_id": "confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3/candidate.py",
+  "source_sha256": "07ae2d4e5e1ad6fc6e29476a3900aadbd993e43f78815f71fe05aef05c1adafb",
+  "transform_eligibility": "no_eligible_full_import_statement",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": false,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": []
+  }
+}

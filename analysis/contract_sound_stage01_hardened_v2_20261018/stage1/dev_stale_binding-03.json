@@ -1,0 +1,32 @@
+{
+  "case_id": "stale_binding-03",
+  "defect_family": "stale_binding",
+  "label_disagreement": false,
+  "primitive": "ECDSA_Nonce_Reuse",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "hash:execution_trace",
+      "task-session-binding"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "public_key_matches": true,
+      "recovered_d_matches": true,
+      "recovered_k_matches": true,
+      "repeated_r": true,
+      "signatures_verify": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 136.5475990169216,
+  "split": "dev",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "hash:execution_trace"
+  },
+  "validator_overhead_ms": 43.19895102526061
+}

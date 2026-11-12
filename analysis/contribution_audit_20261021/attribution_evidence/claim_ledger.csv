@@ -1,0 +1,13 @@
+claim_id,allowed_claim,numerator,denominator,unit,population,recomputed_artifact,qualification
+H01,Schema and hash baselines emitted unsupported attribution on HEB1 heldout defects,36,36,constructed bundle,heb1_heldout B1-B5,recomputed_summary.json,"64 total; excludes28 coherent/control bundles; six patterns, two primitives; synthetic"
+H02,Join-only blocked all HEB1 heldout defect promotions,0,36,constructed bundle,heb1_heldout B1-B5,recomputed_summary.json,Not authenticated composition or general soundness
+C01,Join-only emitted unsupported level6 claims,10,28,constructed bundle,iar_c_preserved attack families,recomputed_summary.json,Calibration saw same cases before freeze;44 total;not28 independent attacks
+C02,Signature-only emitted unsupported level6 claims,14,28,constructed bundle,iar_c_preserved attack families,recomputed_summary.json,Authentic record origin does not imply claim-specific coherence
+C03,Combined validator emitted no unsupported level6 claim,0,28,constructed bundle,iar_c_preserved attack families,recomputed_summary.json,Trust anchor and uncorrupted relevant signers assumed; known joins tested
+C04,Join-only rejected honest-within-evidence bundles,14,16,constructed bundle,iar_c_preserved honest,recomputed_summary.json,14 are lower-level requests outside V2 full-attribution acceptance contract;not comparative FR evidence
+B01,Join-only emitted unsupported level6 claims,16,44,constructed bundle,iar_b_heldout non-H0/H7,recomputed_summary.json,58 total;44 attack/control-negative cases includes8 malformed H8
+B02,Signature-only emitted unsupported level6 claims,28,44,constructed bundle,iar_b_heldout non-H0/H7,recomputed_summary.json,Different population from44-case IAR-C
+S01,Stage1 full strict emitted no false attribution under posthoc attribution truth,0,25,constructed bundle,TOEEA-1 strict non-success,stage1_summary.json,Preregistered crypto truth is different:0/6 FA and19/21 crypto-positive not attributed
+S02,Historical Stage01 falsely attributed two direct-analogue non-successes,2,11,applicable constructed analogue,TOEEA-1 Stage01,stage1_summary.json,13 analogues total;14 N/A;archived component decisions recomputed not rerun
+P01,Configured stateful in-toto inspection agrees with ACTS decisions,22,22,constructed bundle,stage6 matched translation,supplementary_census.json,"Archived upstream outcomes recounted;implementation agreement,not superiority;policy arms added after review"
+M01,Four aggregate mutation censuses report zero soundness violations,0,11256,mutant-semantic evaluation,four HEB2 corpora x1407 mutants x2 semantics,supplementary_census.json,"Not11256 unique attacks;archived aggregates,no fresh proof;property and evaluator share contract module"

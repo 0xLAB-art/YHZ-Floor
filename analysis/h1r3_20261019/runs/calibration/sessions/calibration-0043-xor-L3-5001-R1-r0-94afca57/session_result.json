@@ -1,0 +1,121 @@
+{
+  "arm": "R1",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/calibration/sessions/calibration-0043-xor-L3-5001-R1-r0-94afca57/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/calibration/sessions/calibration-0043-xor-L3-5001-R1-r0-94afca57/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/calibration/sessions/calibration-0043-xor-L3-5001-R1-r0-94afca57/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/calibration/sessions/calibration-0043-xor-L3-5001-R1-r0-94afca57/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L3-seed5001",
+  "kind": "primary",
+  "latency_s": 12.210341930389404,
+  "legacy_would_reject": false,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 43,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 8926,
+  "payload_sha256": "d6d8618752bd77af160af0051a6f8fbbdf974306722fcc66b453e27404578495",
+  "phase": "calibration",
+  "prompt_chars": 9739,
+  "prompt_sha256": "acceb754ce3634f8a2b70caa1d422074b19948e611cd9895c757eabd30f32aac",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 128,
+      "expected_len": 128
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "plaintext": "f034092412ea1e9930dd7e420c03bc2a9d48bc74363dddabee492e81ae80ebc7797f88904c8f0de81035cb2dcc214d75454f36a95c9b78022ec45116a717c37aad2266b9608e899711705533e9907ae5614b87cacf99a997d96d19ae65c7bad66319b8026b0043ae7f1e109d4f315f006a5736de8170281becc1cfabdc5b9623",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2236,
+  "response_sha256": "6298b05f7d4c8130387cb569149dd87ca4cffca4ea3a9530eb5a9ef7433be9af",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 5001,
+  "session_id": "calibration-0043-xor-L3-5001-R1-r0-94afca57",
+  "source_chars": 2223,
+  "source_sha256": "af9208a1af1e967528ea70228d7ae11f3554d4268721232ea85fd3ac10d58a35",
+  "stderr_tail": "",
+  "template_sha256": "cb3d05b8ea84025351f17064b9d0e938f13d7d09443a12c5b9c9d5725687f7a6",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 2787,
+    "output_tokens": 710
+  }
+}

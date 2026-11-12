@@ -1,0 +1,37 @@
+{
+  "attempts": [
+    {
+      "attempt": 0,
+      "elapsed_ns": 5083975,
+      "http_code": 429
+    },
+    {
+      "attempt": 1,
+      "elapsed_ns": 5093289,
+      "http_code": 200
+    }
+  ],
+  "case": {
+    "integers": [
+      7,
+      -2,
+      11,
+      4
+    ],
+    "latency_ms": 5,
+    "replicate": 4,
+    "retry_limit": 2,
+    "run_id": "f39f9c1d-e9b7-5737-8796-7bb035c03bf3",
+    "scenario": "429_once",
+    "task": "integer_sum",
+    "track": "synthetic_fault"
+  },
+  "finished_utc": "2026-10-04T17:21:17.376361+00:00",
+  "grader_elapsed_ns": 40108,
+  "plan_sha256": "f60d356f7890f9109bfa27e466efb4771986d5b222d42160b27ffdd1bb6338b5",
+  "request_elapsed_ns": 12255861,
+  "response": "20",
+  "started_utc": "2026-10-04T17:21:17.364031+00:00",
+  "status": "SUCCESS",
+  "synthetic": true
+}

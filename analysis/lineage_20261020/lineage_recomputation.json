@@ -1,0 +1,6456 @@
+{
+ "schema": "lineage-recomputation/1",
+ "lineage_cells": {
+  "IAR-B dev": {
+   "artifact": "sp2027/analysis/experiment_b_20261019/iar_b/runs/20261019_112227/results.json",
+   "cases": 54,
+   "attack_inclusive": 40,
+   "substantive_attack": 32,
+   "honest_within_evidence": 14,
+   "fp": {
+    "v2": 16,
+    "v3-sig": 24,
+    "v3-full": 0
+   },
+   "fr": {
+    "v2": 10,
+    "v3-sig": 0,
+    "v3-full": 0
+   },
+   "cross_check": "PASS",
+   "cross_check_errors": []
+  },
+  "IAR-B held-out": {
+   "artifact": "sp2027/analysis/experiment_b_20261019/iar_b_heldout/runs/20261019_114849/results.json",
+   "cases": 58,
+   "attack_inclusive": 44,
+   "substantive_attack": 36,
+   "honest_within_evidence": 14,
+   "fp": {
+    "v2": 16,
+    "v3-sig": 28,
+    "v3-full": 0
+   },
+   "fr": {
+    "v2": 10,
+    "v3-sig": 0,
+    "v3-full": 0
+   },
+   "cross_check": "PASS",
+   "cross_check_errors": []
+  },
+  "IAR-C preserved": {
+   "artifact": "sp2027/analysis/experiment_b_20261019/iar_c/runs/20261019_121621/results.json",
+   "cases": 44,
+   "attack_inclusive": 28,
+   "substantive_attack": 20,
+   "honest_within_evidence": 16,
+   "fp": {
+    "v2": 10,
+    "v3-sig": 14,
+    "v3-full": 0
+   },
+   "fr": {
+    "v2": 14,
+    "v3-sig": 0,
+    "v3-full": 0
+   },
+   "cross_check": "PASS",
+   "cross_check_errors": []
+  }
+ },
+ "ecdsa_cause_taxonomy": {
+  "ecdsa_sessions": 426,
+  "ecdsa_success": 399,
+  "ecdsa_failing": 27,
+  "by_arm": {
+   "R0/R1/R4": {
+    "programs": 298,
+    "success": 290,
+    "failing": 8,
+    "wrong_order_in_success": 0,
+    "wrong_order_in_failures": 2,
+    "causes": {
+     "correct order, scalar wrong, cause undetermined": 3,
+     "wrong group-order literal": 2,
+     "secret recovered, nonce wrong": 2,
+     "source syntax error": 1
+    }
+   },
+   "R2": {
+    "programs": 128,
+    "success": 109,
+    "failing": 19,
+    "wrong_order_in_success": 0,
+    "wrong_order_in_failures": 18,
+    "causes": {
+     "wrong group-order literal": 18,
+     "correct order, scalar wrong, cause undetermined": 1
+    }
+   }
+  },
+  "causes": {
+   "correct order, scalar wrong, cause undetermined": 4,
+   "wrong group-order literal": 20,
+   "secret recovered, nonce wrong": 2,
+   "source syntax error": 1
+  },
+  "sessions": [
+   {
+    "session": "confirmatory-0002-ecd-L2-30002-R1-r0-d772098d",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0004-ecd-L2-30022-R0-r0-1aae9132",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0007-ecd-L3-10045-R1-r0-0e0c0a63",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0009-ecd-L3-10002-R4-r1-87d07a6f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0010-ecd-L3-10004-R0-r0-4f12a83e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0012-ecd-L2-30022-R2-r0-346529a6",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0013-ecd-L2-30017-R2-r0-3589ec41",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0014-ecd-L3-10002-R0-r0-c0a3d4a0",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0015-ecd-L3-10015-R4-r1-65b24691",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0021-ecd-L1-20012-R1-r0-12be1ddd",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0023-ecd-L3-10028-R0-r0-ff34b9fe",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0025-ecd-L3-10061-R2-r0-fea55c75",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0026-ecd-L1-20019-R2-r0-92ed32ed",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0027-ecd-L1-20018-R1-r0-8255f2bf",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0028-ecd-L3-10011-R2-r0-47ac9af0",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0030-ecd-L3-10045-R0-r0-fc408d40",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0034-ecd-L1-20024-R1-r0-ad5b50bb",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0035-ecd-L2-30009-R0-r0-03428e7a",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0036-ecd-L1-20009-R2-r0-45dfc07b",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0038-ecd-L3-10002-R4-r2-e33e5fd0",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0039-ecd-L3-10008-R4-r1-f88e9e9a",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0040-ecd-L1-20015-R0-r0-74750c7a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0041-ecd-L3-10006-R2-r0-aa9c3faf",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0043-ecd-L3-10025-R2-r0-d34b8bb6",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0045-ecd-L3-10064-R2-r0-38912437",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0047-ecd-L3-10016-R2-r0-9c5c347a",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0048-ecd-L3-10043-R2-r0-88668370",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0049-ecd-L2-30006-R2-r0-c66b43c4",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0050-ecd-L2-30013-R2-r0-16e915db",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0051-ecd-L3-10005-R0-r0-85181c83",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0054-ecd-L3-10040-R1-r0-2922239d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0056-ecd-L3-10005-R4-r2-dd8d2315",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0057-ecd-L2-30031-R0-r0-35888f13",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0061-ecd-L3-10042-R0-r0-38ccf589",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "secp256k1 order with 2 leading F digits dropped",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0064-ecd-L1-20005-R1-r0-bd0c988b",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0066-ecd-L2-30014-R1-r0-47af6e65",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0067-ecd-L1-20029-R2-r0-a582bb42",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0068-ecd-L3-10049-R1-r0-5c761743",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0069-ecd-L3-10029-R0-r0-4e422fd6",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0071-ecd-L1-20003-R0-r0-9c349a1b",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0072-ecd-L2-30027-R2-r0-43dcd368",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0073-ecd-L3-10007-R4-r1-6c424cb3",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0074-ecd-L3-10014-R4-r1-c8515257",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0077-ecd-L2-30025-R2-r0-583dce31",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0078-ecd-L3-10021-R1-r0-1862a571",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0079-ecd-L3-10008-R2-r0-fd0884c0",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0086-ecd-L2-30001-R2-r0-927c6ca3",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0087-ecd-L3-10061-R1-r0-2aff77ac",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0090-ecd-L3-10004-R4-r1-7a1e6261",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0091-ecd-L3-10001-R1-r0-0943e5d3",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "secp256k1 order with 4 leading F digits dropped",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0094-ecd-L3-10019-R0-r0-e0b90ec5",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0096-ecd-L1-20010-R0-r0-e233a972",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0097-ecd-L2-30024-R2-r0-df15160f",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0099-ecd-L3-10005-R2-r0-f65752bf",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0101-ecd-L3-10041-R2-r0-09c18714",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0102-ecd-L3-10031-R0-r0-b6dae21b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0106-ecd-L3-10003-R1-r0-aface56e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0107-ecd-L3-10007-R2-r0-dc27ac54",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0108-ecd-L2-30006-R0-r0-02c77ad3",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0109-ecd-L3-10044-R0-r0-afbea82f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0112-ecd-L3-10060-R2-r0-539ba99a",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0115-ecd-L3-10020-R0-r0-b7536b27",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0116-ecd-L3-10034-R0-r0-0d412dea",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0121-ecd-L1-20007-R1-r0-939d074a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0124-ecd-L3-10022-R0-r0-90e40a61",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0125-ecd-L3-10038-R2-r0-c0fdc357",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0126-ecd-L3-10018-R0-r0-e1781a9b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0130-ecd-L2-30016-R2-r0-06896279",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0131-ecd-L3-10052-R1-r0-da5e2e0e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0132-ecd-L3-10053-R2-r0-e0c5865c",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0134-ecd-L2-30023-R2-r0-b3ec9145",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0135-ecd-L3-10055-R0-r0-5517f6c1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0136-ecd-L3-10034-R1-r0-dabcc5c1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0138-ecd-L3-10020-R1-r0-5de719de",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0139-ecd-L3-10004-R0-r0-e6758635",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0141-ecd-L1-20011-R1-r0-5efa2e8a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0143-ecd-L3-10021-R2-r0-b548bb88",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0146-ecd-L3-10016-R4-r2-2f969fbe",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0147-ecd-L3-10062-R1-r0-ac29b947",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0148-ecd-L3-10032-R1-r0-801a53b7",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0152-ecd-L3-10016-R0-r0-36ed0503",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0157-ecd-L1-20024-R2-r0-019d4c07",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0158-ecd-L2-30029-R2-r0-201836b9",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0159-ecd-L2-30018-R0-r0-b65dfbdd",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0161-ecd-L3-10035-R0-r0-f069d810",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0163-ecd-L3-10039-R1-r0-35c74d61",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0167-ecd-L3-10007-R4-r2-3bf51257",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0171-ecd-L3-10053-R0-r0-b208e14b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0173-ecd-L3-10012-R0-r0-14405898",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0177-ecd-L1-20026-R0-r0-be1713ba",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0178-ecd-L2-30012-R2-r0-9410ba3e",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0179-ecd-L3-10030-R0-r0-9c5e56d8",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0181-ecd-L3-10013-R0-r0-d0ff9d01",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0182-ecd-L1-20030-R2-r0-60cf2ec8",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0183-ecd-L1-20001-R0-r0-4840f695",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0185-ecd-L2-30013-R1-r0-729644ef",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0188-ecd-L3-10039-R2-r0-97e719de",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0190-ecd-L3-10012-R4-r2-e4866ca9",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0191-ecd-L3-10036-R2-r0-0b2159b4",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0193-ecd-L3-10042-R1-r0-5962554f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0194-ecd-L2-30008-R0-r0-9f053799",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0197-ecd-L1-20032-R2-r0-329cb3b9",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0199-ecd-L1-20007-R2-r0-fc7a8d49",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0201-ecd-L1-20021-R0-r0-fa033654",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0203-ecd-L2-30032-R0-r0-4d5fd24a",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0205-ecd-L3-10026-R1-r0-6d7735e1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0206-ecd-L3-10057-R1-r0-949dc2b4",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0208-ecd-L2-30006-R1-r0-d4bb88b1",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0211-ecd-L2-30007-R0-r0-bc1c4bc3",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0213-ecd-L3-10056-R1-r0-d5dc54ab",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0214-ecd-L3-10009-R1-r0-d3ecc92c",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0215-ecd-L3-10042-R2-r0-bdc54413",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0219-ecd-L3-10061-R0-r0-1d248328",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0220-ecd-L3-10024-R2-r0-92c86e19",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0223-ecd-L2-30030-R1-r0-b6d4bb25",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0226-ecd-L2-30028-R0-r0-90a994a6",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0227-ecd-L3-10009-R4-r1-d2f1c2e7",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0228-ecd-L3-10003-R0-r0-f55b96d2",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0229-ecd-L2-30008-R2-r0-24fa0b92",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0234-ecd-L2-30017-R0-r0-e7a27c31",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0235-ecd-L3-10030-R1-r0-737918a1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0237-ecd-L3-10025-R0-r0-d409a43c",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0238-ecd-L1-20031-R1-r0-768069b5",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0240-ecd-L1-20009-R1-r0-3e7bd76d",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0241-ecd-L3-10001-R2-r0-dda32b3f",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0242-ecd-L3-10059-R0-r0-78823748",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0245-ecd-L3-10032-R0-r0-15013c58",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0250-ecd-L3-10038-R0-r0-edc7ec52",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0251-ecd-L2-30015-R1-r0-679786d0",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0253-ecd-L2-30019-R1-r0-d0e75acf",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0254-ecd-L3-10015-R4-r2-77c7c5a9",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0256-ecd-L3-10014-R1-r0-cc820147",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0257-ecd-L3-10007-R1-r0-793cc935",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0258-ecd-L2-30011-R0-r0-5b448bcb",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0262-ecd-L3-10012-R1-r0-ffffe849",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0264-ecd-L2-30029-R1-r0-fd870ca8",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0265-ecd-L3-10029-R2-r0-ee6e6fda",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0267-ecd-L3-10006-R4-r1-7152474d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0268-ecd-L3-10063-R1-r0-41cd630e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0270-ecd-L3-10011-R4-r2-c4a646aa",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0275-ecd-L3-10057-R2-r0-588632bb",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0276-ecd-L1-20032-R0-r0-7f1657db",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0277-ecd-L1-20008-R2-r0-f000204e",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0278-ecd-L1-20017-R2-r0-346e303f",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0280-ecd-L3-10007-R0-r0-133ee407",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0283-ecd-L1-20018-R0-r0-808cade2",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0285-ecd-L1-20013-R0-r0-be547bb8",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0291-ecd-L3-10056-R0-r0-e7acd51b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0292-ecd-L3-10037-R2-r0-72e00d2b",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0293-ecd-L2-30007-R1-r0-029a62fd",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0296-ecd-L1-20031-R0-r0-352e1a46",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0298-ecd-L3-10028-R2-r0-504d393f",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0299-ecd-L2-30021-R1-r0-adfcda99",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0304-ecd-L3-10064-R0-r0-fc34e447",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0305-ecd-L1-20004-R0-r0-ef016d7b",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0308-ecd-L3-10054-R1-r0-7e9b466e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0309-ecd-L2-30015-R2-r0-490a0add",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0311-ecd-L3-10014-R4-r2-7e2a462d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0312-ecd-L3-10008-R1-r0-4c50a5c2",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0313-ecd-L2-30004-R2-r0-662dfc5f",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0314-ecd-L3-10017-R1-r0-57b1c8b0",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0315-ecd-L3-10002-R1-r0-b554cdca",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0317-ecd-L2-30004-R0-r0-fb483742",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0318-ecd-L3-10003-R4-r1-0b2f9cb5",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0321-ecd-L3-10046-R1-r0-24c0f094",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0322-ecd-L3-10064-R1-r0-71e5deb0",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0323-ecd-L1-20027-R1-r0-421b695c",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0326-ecd-L2-30010-R1-r0-561953ad",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0327-ecd-L1-20002-R1-r0-c9386f5f",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0328-ecd-L3-10013-R4-r2-f3641337",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0329-ecd-L1-20014-R1-r0-005f3985",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0332-ecd-L1-20026-R1-r0-fe26da0c",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0335-ecd-L1-20016-R0-r0-cd954aa9",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0340-ecd-L3-10049-R0-r0-419a029f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0341-ecd-L2-30016-R0-r0-edb84bbe",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0342-ecd-L3-10038-R1-r0-0cb5f065",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0343-ecd-L1-20016-R2-r0-73a0a3c9",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0346-ecd-L3-10044-R2-r0-e0781840",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0349-ecd-L3-10013-R2-r0-a08f17b0",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0350-ecd-L2-30025-R1-r0-baa81ae3",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0351-ecd-L1-20003-R1-r0-d5ca390d",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0353-ecd-L3-10040-R0-r0-d741a43f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0357-ecd-L1-20018-R2-r0-2916c6b6",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0358-ecd-L3-10036-R1-r0-4f42a248",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0360-ecd-L3-10001-R4-r1-bb2f218f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0362-ecd-L1-20010-R2-r0-fccb2208",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0365-ecd-L3-10051-R2-r0-83813c1f",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0369-ecd-L3-10043-R1-r0-31142c56",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0371-ecd-L2-30023-R0-r0-b20d1012",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0372-ecd-L1-20024-R0-r0-0ae66bf8",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0374-ecd-L3-10051-R1-r0-fc7dd435",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0377-ecd-L3-10013-R4-r1-3e3b8fb2",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0378-ecd-L3-10011-R0-r0-997f7048",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0379-ecd-L1-20012-R2-r0-3b4f3666",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0382-ecd-L1-20009-R0-r0-4a0606c4",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0383-ecd-L3-10027-R2-r0-a819267d",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0384-ecd-L2-30021-R0-r0-54a5f748",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0385-ecd-L2-30026-R1-r0-306f173b",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0386-ecd-L1-20002-R0-r0-22be321c",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0387-ecd-L2-30011-R1-r0-2b445809",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0388-ecd-L3-10033-R2-r0-ae4cb9ac",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0390-ecd-L1-20016-R1-r0-a048a1c7",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0391-ecd-L1-20015-R1-r0-ef646c66",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0392-ecd-L1-20019-R1-r0-18aae2b0",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0394-ecd-L3-10031-R2-r0-8b02e2d2",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0396-ecd-L1-20025-R0-r0-ea9347a2",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0397-ecd-L2-30029-R0-r0-6486ace6",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0398-ecd-L1-20001-R2-r0-32e65dec",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0404-ecd-L2-30026-R0-r0-8ef01393",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0407-ecd-L2-30003-R2-r0-7b79c762",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0408-ecd-L3-10003-R2-r0-30b124d7",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0409-ecd-L3-10026-R2-r0-fd0750fa",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0412-ecd-L3-10003-R4-r2-873200e8",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0413-ecd-L2-30010-R2-r0-ff7489ad",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0415-ecd-L2-30020-R1-r0-a2122247",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0416-ecd-L2-30002-R2-r0-bcc226f3",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0421-ecd-L2-30005-R2-r0-4a8a8d67",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0422-ecd-L1-20028-R1-r0-f4f71eb5",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0425-ecd-L1-20023-R1-r0-a5e152d0",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0426-ecd-L1-20005-R2-r0-c3f750ac",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0427-ecd-L3-10009-R2-r0-5f821a17",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0428-ecd-L2-30024-R1-r0-da07be6c",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0430-ecd-L3-10010-R0-r0-168641e3",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0431-ecd-L3-10023-R0-r0-63a1ca7b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0432-ecd-L3-10009-R0-r0-89538ff4",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0434-ecd-L2-30004-R1-r0-c92dd494",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0435-ecd-L3-10013-R1-r0-7be50930",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0436-ecd-L3-10012-R2-r0-112ea45e",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0437-ecd-L3-10050-R1-r0-daf37926",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0439-ecd-L2-30023-R1-r0-63359097",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0442-ecd-L3-10011-R4-r1-b878403e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0447-ecd-L3-10027-R0-r0-0185e2f8",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0448-ecd-L1-20017-R1-r0-8beb545e",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0449-ecd-L3-10022-R2-r0-491974f2",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0458-ecd-L3-10015-R2-r0-52bb4022",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0460-ecd-L1-20032-R1-r0-461f6d76",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0461-ecd-L1-20003-R2-r0-61d29953",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0465-ecd-L3-10023-R1-r0-544cb766",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0467-ecd-L1-20022-R2-r0-ee5f53e1",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0468-ecd-L2-30032-R2-r0-d8975142",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0470-ecd-L3-10018-R1-r0-886681ef",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0471-ecd-L2-30011-R2-r0-c9694f2d",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0473-ecd-L2-30014-R0-r0-f995df30",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0474-ecd-L3-10058-R1-r0-3fe0904c",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0476-ecd-L1-20014-R2-r0-bd3fe163",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0478-ecd-L2-30031-R1-r0-2888df07",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0480-ecd-L1-20008-R1-r0-298a03de",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0482-ecd-L2-30024-R0-r0-1ec6ca31",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0484-ecd-L3-10059-R2-r0-996924ac",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0486-ecd-L3-10046-R0-r0-24139bce",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0487-ecd-L3-10040-R2-r0-0c433049",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0490-ecd-L3-10033-R1-r0-1eac1d66",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0491-ecd-L3-10019-R2-r0-2c481626",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0493-ecd-L3-10031-R1-r0-c568d7c7",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0496-ecd-L1-20008-R0-r0-7fe959ab",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0498-ecd-L1-20013-R2-r0-001d91f6",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0499-ecd-L3-10002-R0-r0-66225f7f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0500-ecd-L2-30009-R1-r0-0488b3f0",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0501-ecd-L1-20029-R1-r0-d9c14020",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0502-ecd-L2-30017-R1-r0-95ebf347",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0504-ecd-L1-20011-R2-r0-580dd5be",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0507-ecd-L3-10004-R4-r2-32de95e1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0511-ecd-L3-10002-R2-r0-23136998",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0512-ecd-L2-30013-R0-r0-ff5ee8ba",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0513-ecd-L3-10055-R1-r0-f0670610",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0516-ecd-L1-20027-R2-r0-dd668dc9",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0519-ecd-L1-20021-R2-r0-70329412",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0521-ecd-L3-10039-R0-r0-f906d990",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0522-ecd-L3-10062-R0-r0-4fe20ebc",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0523-ecd-L3-10008-R4-r2-623efcbe",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0524-ecd-L1-20026-R2-r0-f7fe04b2",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0526-ecd-L3-10035-R1-r0-f06196ff",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0527-ecd-L2-30016-R1-r0-e77b13f3",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0528-ecd-L2-30022-R1-r0-31bd7645",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0529-ecd-L3-10015-R0-r0-5d4e974e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0530-ecd-L1-20021-R1-r0-720cae45",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0533-ecd-L3-10037-R1-r0-7802a853",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0536-ecd-L3-10018-R2-r0-81be2e54",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0537-ecd-L1-20006-R1-r0-5a6b450e",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0540-ecd-L3-10008-R0-r0-227f8e62",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0541-ecd-L2-30027-R1-r0-e39832fa",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0543-ecd-L3-10062-R2-r0-f33a3cdf",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0544-ecd-L3-10007-R0-r0-f7e4e337",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0545-ecd-L1-20013-R1-r0-0b91595e",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0546-ecd-L3-10001-R4-r2-de9d656d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0551-ecd-L1-20017-R0-r0-10c87c2a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0552-ecd-L3-10060-R1-r0-5d7a30df",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0553-ecd-L2-30002-R0-r0-01c940ad",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0557-ecd-L3-10044-R1-r0-3e942b0e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0559-ecd-L3-10003-R0-r0-2c3c2be6",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0560-ecd-L1-20006-R2-r0-4304da54",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "secp256k1 order with 4 leading F digits dropped",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0562-ecd-L1-20023-R2-r0-4b1c57b6",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0564-ecd-L2-30012-R1-r0-c3a449aa",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0565-ecd-L3-10006-R0-r0-9ee8bda1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0566-ecd-L3-10058-R2-r0-192511cb",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0567-ecd-L1-20022-R0-r0-81ab7802",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0568-ecd-L2-30020-R0-r0-ab14ff3d",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0569-ecd-L3-10060-R0-r0-fdcb44cc",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0570-ecd-L3-10005-R4-r1-5a3e3f9e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0574-ecd-L1-20029-R0-r0-5423fbea",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0577-ecd-L3-10012-R4-r1-48cdaf8f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0580-ecd-L3-10037-R0-r0-26f6970f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0582-ecd-L3-10010-R4-r2-a37bf270",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0583-ecd-L1-20020-R0-r0-9ae3c6f0",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0586-ecd-L3-10032-R2-r0-f19888e2",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0587-ecd-L1-20020-R1-r0-20a7f1d8",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0588-ecd-L2-30018-R1-r0-60d32f28",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0589-ecd-L3-10022-R1-r0-c08544e8",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0590-ecd-L1-20031-R2-r0-f7a72128",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0591-ecd-L3-10026-R0-r0-9a2ee275",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0593-ecd-L3-10016-R4-r1-fc63e02d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0594-ecd-L3-10043-R0-r0-92792d48",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0597-ecd-L3-10052-R2-r0-5a0bd348",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0598-ecd-L3-10001-R0-r0-ada0964a",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0602-ecd-L3-10009-R0-r0-3395189e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0603-ecd-L1-20030-R1-r0-b1f1434a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0607-ecd-L2-30015-R0-r0-670e2486",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0608-ecd-L2-30003-R1-r0-8575a1a1",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0615-ecd-L3-10051-R0-r0-a0cab3bd",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0616-ecd-L3-10054-R2-r0-0796cb16",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0618-ecd-L3-10049-R2-r0-d559f4f9",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0619-ecd-L1-20014-R0-r0-8c9c0732",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0621-ecd-L1-20028-R2-r0-e94a1294",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0622-ecd-L3-10041-R1-r0-3f155f83",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0623-ecd-L3-10023-R2-r0-3dcde1d8",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0624-ecd-L1-20022-R1-r0-151de862",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0631-ecd-L3-10048-R1-r0-eb26b45a",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0633-ecd-L1-20007-R0-r0-30cc9e74",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0635-ecd-L3-10036-R0-r0-e3b7a86b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0637-ecd-L3-10057-R0-r0-8c64777a",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0640-ecd-L3-10047-R2-r0-6dd3bd30",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0645-ecd-L3-10030-R2-r0-bcb00afb",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0646-ecd-L3-10014-R2-r0-535a4916",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0648-ecd-L3-10027-R1-r0-66e098f0",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0651-ecd-L3-10014-R0-r0-159ef88b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0653-ecd-L3-10005-R1-r0-e2d34b56",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0654-ecd-L2-30028-R1-r0-14653aec",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0655-ecd-L3-10059-R1-r0-0dfec5c9",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0657-ecd-L3-10041-R0-r0-f7a6549a",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0664-ecd-L1-20025-R2-r0-c0d51511",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0665-ecd-L3-10009-R4-r2-7faf5385",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0666-ecd-L2-30021-R2-r0-99c52f65",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0668-ecd-L3-10015-R1-r0-81c65fab",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0669-ecd-L1-20015-R2-r0-cae12a81",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0671-ecd-L2-30005-R1-r0-b1d2c2de",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0672-ecd-L2-30031-R2-r0-d3f31e7e",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0674-ecd-L3-10045-R2-r0-b4a30525",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0675-ecd-L2-30005-R0-r0-447779f9",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0676-ecd-L1-20020-R2-r0-fa2adf50",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0680-ecd-L3-10046-R2-r0-19b4a22f",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0682-ecd-L3-10017-R2-r0-8dcbc92e",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0685-ecd-L3-10063-R2-r0-f903d4ab",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0689-ecd-L3-10029-R1-r0-4956f663",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "secret recovered, nonce wrong",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0690-ecd-L3-10019-R1-r0-de8f6e23",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0692-ecd-L3-10025-R1-r0-afe5524e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0694-ecd-L2-30003-R0-r0-22619025",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0697-ecd-L1-20030-R0-r0-a70802f8",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0701-ecd-L2-30028-R2-r0-52ab3277",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0703-ecd-L3-10021-R0-r0-3379c5e1",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0721-ecd-L1-20028-R0-r0-fdd7a1e3",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0723-ecd-L2-30010-R0-r0-fb5c381d",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0724-ecd-L1-20019-R0-r0-d9d4990a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0726-ecd-L2-30019-R0-r0-c8d6adcf",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0727-ecd-L3-10050-R0-r0-ebe04b94",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0729-ecd-L1-20025-R1-r0-73f93bba",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0730-ecd-L3-10048-R2-r0-b78af2be",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0731-ecd-L3-10001-R0-r0-18a8a3ab",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "correct order, scalar wrong, cause undetermined",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": null
+   },
+   {
+    "session": "confirmatory-0733-ecd-L3-10024-R1-r0-6e8a5398",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0734-ecd-L2-30032-R1-r0-61db6368",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0739-ecd-L1-20002-R2-r0-8329b8af",
+    "arm": "R2",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0740-ecd-L3-10017-R0-r0-e4057b9b",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0744-ecd-L3-10006-R0-r0-f8a4feae",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0745-ecd-L3-10050-R2-r0-898ab04e",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0748-ecd-L3-10024-R0-r0-ed4e144e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0750-ecd-L3-10006-R4-r2-14908cde",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0751-ecd-L2-30008-R1-r0-f452bdd9",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0755-ecd-L2-30012-R0-r0-5ffcb0d8",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0757-ecd-L2-30018-R2-r0-2550b002",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0759-ecd-L3-10004-R1-r0-984267a5",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0760-ecd-L3-10011-R1-r0-d66a99c8",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0762-ecd-L3-10034-R2-r0-df872a4a",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0763-ecd-L1-20011-R0-r0-8dd69a8c",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0764-ecd-L2-30020-R2-r0-b349aa2a",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0765-ecd-L3-10010-R4-r1-9a3aeb92",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0769-ecd-L3-10047-R1-r0-2a5c956f",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0770-ecd-L3-10058-R0-r0-21941587",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0771-ecd-L1-20005-R0-r0-ab175c9a",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SOURCE_SYNTAX",
+    "cause": "source syntax error",
+    "order_defect": null,
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": false,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0773-ecd-L3-10052-R0-r0-4c23eb91",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "secret recovered, nonce wrong",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0774-ecd-L3-10010-R1-r0-c7c4f4ec",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0777-ecd-L3-10010-R2-r0-50d9cfa0",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0781-ecd-L1-20001-R1-r0-e42d6b20",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0783-ecd-L3-10063-R0-r0-97a9a176",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0786-ecd-L2-30001-R0-r0-2adb7400",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0787-ecd-L2-30009-R2-r0-c467848f",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0790-ecd-L3-10033-R0-r0-1e8c34d7",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0792-ecd-L3-10016-R1-r0-4f771388",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0796-ecd-L2-30026-R2-r0-3caf2dbe",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0798-ecd-L3-10048-R0-r0-b804edcb",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0799-ecd-L3-10006-R1-r0-8c0f138e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0800-ecd-L2-30007-R2-r0-a79afa8e",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0803-ecd-L3-10054-R0-r0-81e3a05d",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0806-ecd-L1-20006-R0-r0-32e20dc2",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0807-ecd-L3-10008-R0-r0-8b0ada8c",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0809-ecd-L3-10020-R2-r0-8e36978a",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0813-ecd-L3-10004-R2-r0-e02fd4f4",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0817-ecd-L3-10035-R2-r0-d84c4efd",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "CRYPTOGRAPHIC_PREDICATE",
+    "cause": "wrong group-order literal",
+    "order_defect": "P-256 order",
+    "d_ok_as_recorded": false,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": false,
+     "k_ok": false,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0818-ecd-L2-30030-R0-r0-0fbe8260",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0821-ecd-L1-20010-R1-r0-27007de7",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0824-ecd-L1-20027-R0-r0-10e02fa4",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0828-ecd-L1-20004-R1-r0-d18dced3",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0832-ecd-L2-30030-R2-r0-4c2f0d0e",
+    "arm": "R2",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0834-ecd-L3-10028-R1-r0-06fe4ebe",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0835-ecd-L1-20023-R0-r0-f9434d8e",
+    "arm": "R0/R1/R4",
+    "level": "L1",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0837-ecd-L2-30027-R0-r0-87d7dfcf",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0838-ecd-L3-10056-R2-r0-1caac251",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0843-ecd-L3-10053-R1-r0-8626670e",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0846-ecd-L2-30025-R0-r0-8f10c94d",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0847-ecd-L2-30001-R1-r0-94b932fc",
+    "arm": "R0/R1/R4",
+    "level": "L2",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": false
+    }
+   },
+   {
+    "session": "confirmatory-0850-ecd-L3-10055-R2-r0-02c7f31b",
+    "arm": "R2",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   },
+   {
+    "session": "confirmatory-0852-ecd-L3-10010-R0-r0-64c31638",
+    "arm": "R0/R1/R4",
+    "level": "L3",
+    "terminal": "SUCCESS",
+    "cause": "secret recovered, recorded failure elsewhere",
+    "order_defect": null,
+    "d_ok_as_recorded": true,
+    "d_ok_with_correct_order": true,
+    "predicate_detail": {
+     "d_ok": true,
+     "k_ok": true,
+     "require_k": true
+    }
+   }
+  ]
+ },
+ "cross_arm_instance_identity": {
+  "instances_compared": 256,
+  "identical_after_decoding": 256,
+  "mismatches": []
+ }
+}

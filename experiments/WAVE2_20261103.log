@@ -1,0 +1,282 @@
+[15:47:10Z] wave2 watcher armed; waiting for rerun_ar_queue.sh to finish
+[15:49:10Z] queue finished; starting A3b transport recovery
+{
+ "amendment": "A3B",
+ "source_pass": "amendment_a3",
+ "basis": "pairs whose A3-pass row has status HTTP_ERROR (retryable transport)",
+ "pairs": [
+  [
+   302845600709497997,
+   "C2"
+  ],
+  [
+   620231313522468899,
+   "C2"
+  ],
+  [
+   1520766850644894012,
+   "C2"
+  ],
+  [
+   1834647212504960430,
+   "C2"
+  ],
+  [
+   2067529140659777298,
+   "C2"
+  ],
+  [
+   2199645560792692162,
+   "C2"
+  ],
+  [
+   2350881398197153970,
+   "C2"
+  ],
+  [
+   2625614960770379670,
+   "C2"
+  ],
+  [
+   2959271349689180594,
+   "C2"
+  ],
+  [
+   3319544269512995414,
+   "C2"
+  ],
+  [
+   3931438432150149866,
+   "C2"
+  ],
+  [
+   4395080619161278131,
+   "C2"
+  ],
+  [
+   6104428037686938069,
+   "C2"
+  ],
+  [
+   6632372836066312210,
+   "C2"
+  ],
+  [
+   6882154211307148073,
+   "C2"
+  ],
+  [
+   7437076425135041386,
+   "C2"
+  ],
+  [
+   7650551694612446740,
+   "C2"
+  ],
+  [
+   8254304695070130144,
+   "C2"
+  ]
+ ],
+ "sessions_planned": 18,
+ "note": "floor-exhaustion signatures in this pass are reported as FLOOR_EXHAUSTED, not retried"
+}
+parallel run: 18 sessions to run, 0 already recorded, 3 workers
+[1/18] C2 seed=302845600709497997 HTTP_ERROR accepted_so_far=0 3039/h eta=0.0h
+[2/18] C2 seed=6882154211307148073 HTTP_ERROR accepted_so_far=0 5846/h eta=0.0h
+[3/18] C2 seed=3319544269512995414 HTTP_ERROR accepted_so_far=0 8586/h eta=0.0h
+[4/18] C2 seed=6632372836066312210 HTTP_ERROR accepted_so_far=0 6814/h eta=0.0h
+[5/18] C2 seed=1834647212504960430 HTTP_ERROR accepted_so_far=0 7401/h eta=0.0h
+[6/18] C2 seed=2199645560792692162 HTTP_ERROR accepted_so_far=0 8765/h eta=0.0h
+[7/18] C2 seed=2625614960770379670 HTTP_ERROR accepted_so_far=0 7499/h eta=0.0h
+[8/18] C2 seed=620231313522468899 HTTP_ERROR accepted_so_far=0 7962/h eta=0.0h
+[9/18] C2 seed=1520766850644894012 HTTP_ERROR accepted_so_far=0 8893/h eta=0.0h
+[10/18] C2 seed=6104428037686938069 HTTP_ERROR accepted_so_far=0 7900/h eta=0.0h
+[11/18] C2 seed=2350881398197153970 HTTP_ERROR accepted_so_far=0 8175/h eta=0.0h
+[12/18] C2 seed=2067529140659777298 HTTP_ERROR accepted_so_far=0 8867/h eta=0.0h
+[13/18] C2 seed=4395080619161278131 HTTP_ERROR accepted_so_far=0 8546/h eta=0.0h
+[14/18] C2 seed=8254304695070130144 HTTP_ERROR accepted_so_far=0 8704/h eta=0.0h
+[15/18] C2 seed=7650551694612446740 HTTP_ERROR accepted_so_far=0 8878/h eta=0.0h
+[16/18] C2 seed=3931438432150149866 HTTP_ERROR accepted_so_far=0 9014/h eta=0.0h
+[17/18] C2 seed=2959271349689180594 HTTP_ERROR accepted_so_far=0 9130/h eta=0.0h
+[18/18] C2 seed=7437076425135041386 HTTP_ERROR accepted_so_far=0 8833/h eta=0.0h
+{
+  "confirmatory": false,
+  "execution": {
+    "driver_sha256": "0999f580f6c1c06184653def7a2f665a4a20621eeefa24847d5c949f4132a8e9",
+    "mode": "thread_pool",
+    "pairs_skipped_on_resume": 0,
+    "phase": "amendment_a3b",
+    "wall_seconds": 7.3,
+    "workers": 3
+  },
+  "finished": 1793720958.77405,
+  "interpretation": "Scheduling-only change: sessions independent, each still two turns at most with harness feedback in between. No prompt, cell, floor, label, or oracle differs from the registered runner.",
+  "per_cell": {
+    "C2": {
+      "accepted": 0,
+      "sessions": 18,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P021AR-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-RERUN-AGENTROUTER-v1-A3B-TRANSPORT-RECOVERY",
+  "provider_failures": 18,
+  "provider_responses": 0,
+  "sessions": 18
+}
+{
+ "C2": {
+  "sessions": 18,
+  "accepted": 0,
+  "submissions": 0,
+  "turns": 0
+ }
+}
+[15:49:18Z] A3b done
+[15:49:18Z] starting P026 C2 floor-sensitivity (96 sessions, floor 8000)
+{
+ "protocol": "P026-INFO-CONTRACT-C2-FLOOR8000-AESGCM-CSPRNG-SEEDS-v1",
+ "seeds": 96,
+ "cells": [
+  "C2"
+ ],
+ "sessions_planned": 96,
+ "token_floor": 8000,
+ "basis": "EMPTY_RESPONSE_CAUSAL_ANALYSIS_20261103.md",
+ "registered": "2026-11-03"
+}
+parallel run: 96 sessions to run, 0 already recorded, 6 workers
+[1/96] C2 seed=1340615996027902832 HTTP_ERROR accepted_so_far=0 3665/h eta=0.0h
+[2/96] C2 seed=3827227303048011440 HTTP_ERROR accepted_so_far=0 7264/h eta=0.0h
+[3/96] C2 seed=8379700575302290099 HTTP_ERROR accepted_so_far=0 8265/h eta=0.0h
+[4/96] C2 seed=6997760829077771257 HTTP_ERROR accepted_so_far=0 10971/h eta=0.0h
+[5/96] C2 seed=2582472062208147225 HTTP_ERROR accepted_so_far=0 13651/h eta=0.0h
+[6/96] C2 seed=7504064282103882118 HTTP_ERROR accepted_so_far=0 16346/h eta=0.0h
+[7/96] C2 seed=2510809874215977019 HTTP_ERROR accepted_so_far=0 10290/h eta=0.0h
+[8/96] C2 seed=3474480877873073011 HTTP_ERROR accepted_so_far=0 11704/h eta=0.0h
+[9/96] C2 seed=8969508380227249873 HTTP_ERROR accepted_so_far=0 12468/h eta=0.0h
+[10/96] C2 seed=8562830165814646324 HTTP_ERROR accepted_so_far=0 12779/h eta=0.0h
+[11/96] C2 seed=9057523449355627621 HTTP_ERROR accepted_so_far=0 10906/h eta=0.0h
+[12/96] C2 seed=4691650167613907948 HTTP_ERROR accepted_so_far=0 11098/h eta=0.0h
+[13/96] C2 seed=8760350850660951244 HTTP_ERROR accepted_so_far=0 11872/h eta=0.0h
+[14/96] C2 seed=5434183162525103062 HTTP_ERROR accepted_so_far=0 12649/h eta=0.0h
+[15/96] C2 seed=1730327012702418060 HTTP_ERROR accepted_so_far=0 13510/h eta=0.0h
+[16/96] C2 seed=7978403074785245310 HTTP_ERROR accepted_so_far=0 14378/h eta=0.0h
+[17/96] C2 seed=3472171690611606918 HTTP_ERROR accepted_so_far=0 12737/h eta=0.0h
+[18/96] C2 seed=2348044133535976979 HTTP_ERROR accepted_so_far=0 13115/h eta=0.0h
+[19/96] C2 seed=4065138588678140780 HTTP_ERROR accepted_so_far=0 13454/h eta=0.0h
+[20/96] C2 seed=994849061417959738 HTTP_ERROR accepted_so_far=0 13855/h eta=0.0h
+[21/96] C2 seed=2912749395643754944 HTTP_ERROR accepted_so_far=0 14535/h eta=0.0h
+[22/96] C2 seed=2741819122686579594 HTTP_ERROR accepted_so_far=0 15116/h eta=0.0h
+[23/96] C2 seed=5422400040672313403 HTTP_ERROR accepted_so_far=0 13865/h eta=0.0h
+[24/96] C2 seed=8592063721497998535 HTTP_ERROR accepted_so_far=0 14444/h eta=0.0h
+[25/96] C2 seed=4629933786682788364 HTTP_ERROR accepted_so_far=0 14663/h eta=0.0h
+[26/96] C2 seed=4885610450031803403 HTTP_ERROR accepted_so_far=0 14588/h eta=0.0h
+[27/96] C2 seed=7508101218900141604 HTTP_ERROR accepted_so_far=0 15136/h eta=0.0h
+[28/96] C2 seed=7443454743093850114 HTTP_ERROR accepted_so_far=0 15683/h eta=0.0h
+[29/96] C2 seed=1317848266575579555 HTTP_ERROR accepted_so_far=0 15091/h eta=0.0h
+[30/96] C2 seed=2968090732396341361 HTTP_ERROR accepted_so_far=0 15138/h eta=0.0h
+[31/96] C2 seed=7948256073518061078 HTTP_ERROR accepted_so_far=0 15269/h eta=0.0h
+[32/96] C2 seed=4821983803586843330 HTTP_ERROR accepted_so_far=0 15089/h eta=0.0h
+[33/96] C2 seed=4519575699059483540 HTTP_ERROR accepted_so_far=0 15507/h eta=0.0h
+[34/96] C2 seed=4204083393849060968 HTTP_ERROR accepted_so_far=0 15934/h eta=0.0h
+[35/96] C2 seed=5414261265238272436 HTTP_ERROR accepted_so_far=0 16098/h eta=0.0h
+[36/96] C2 seed=6900946503262969879 HTTP_ERROR accepted_so_far=0 16114/h eta=0.0h
+[37/96] C2 seed=4140836951224162353 HTTP_ERROR accepted_so_far=0 15712/h eta=0.0h
+[38/96] C2 seed=5766659430993534744 HTTP_ERROR accepted_so_far=0 15914/h eta=0.0h
+[39/96] C2 seed=9069172963309734977 HTTP_ERROR accepted_so_far=0 15896/h eta=0.0h
+[40/96] C2 seed=2322619189653576120 HTTP_ERROR accepted_so_far=0 16247/h eta=0.0h
+[41/96] C2 seed=1204129079526320418 HTTP_ERROR accepted_so_far=0 16546/h eta=0.0h
+[42/96] C2 seed=7339381365145036939 HTTP_ERROR accepted_so_far=0 16838/h eta=0.0h
+[43/96] C2 seed=8754117771804225574 HTTP_ERROR accepted_so_far=0 16443/h eta=0.0h
+[44/96] C2 seed=4515448170609577394 HTTP_ERROR accepted_so_far=0 16222/h eta=0.0h
+[45/96] C2 seed=6470026854721302554 HTTP_ERROR accepted_so_far=0 16515/h eta=0.0h
+[46/96] C2 seed=3473310052928217414 HTTP_ERROR accepted_so_far=0 16802/h eta=0.0h
+[47/96] C2 seed=6603423294996300297 HTTP_ERROR accepted_so_far=0 17083/h eta=0.0h
+[48/96] C2 seed=5326662180973829787 HTTP_ERROR accepted_so_far=0 17210/h eta=0.0h
+[49/96] C2 seed=198882200642611995 HTTP_ERROR accepted_so_far=0 17114/h eta=0.0h
+[50/96] C2 seed=7047709331519613599 HTTP_ERROR accepted_so_far=0 16635/h eta=0.0h
+[51/96] C2 seed=591925817359160207 HTTP_ERROR accepted_so_far=0 16819/h eta=0.0h
+[52/96] C2 seed=5585361028098844620 HTTP_ERROR accepted_so_far=0 17127/h eta=0.0h
+[53/96] C2 seed=1127615024047797383 HTTP_ERROR accepted_so_far=0 17225/h eta=0.0h
+[54/96] C2 seed=4127434296006863199 HTTP_ERROR accepted_so_far=0 17142/h eta=0.0h
+[55/96] C2 seed=302845600709497997 HTTP_ERROR accepted_so_far=0 17366/h eta=0.0h
+[56/96] C2 seed=9019750642416281879 HTTP_ERROR accepted_so_far=0 16836/h eta=0.0h
+[57/96] C2 seed=7924421654450735880 HTTP_ERROR accepted_so_far=0 17076/h eta=0.0h
+[58/96] C2 seed=343718899735628692 HTTP_ERROR accepted_so_far=0 17191/h eta=0.0h
+[59/96] C2 seed=2000037269699064426 HTTP_ERROR accepted_so_far=0 17462/h eta=0.0h
+[60/96] C2 seed=6882154211307148073 HTTP_ERROR accepted_so_far=0 17604/h eta=0.0h
+[61/96] C2 seed=6522502421204877471 HTTP_ERROR accepted_so_far=0 17824/h eta=0.0h
+[62/96] C2 seed=4826570160520858725 HTTP_ERROR accepted_so_far=0 17092/h eta=0.0h
+[63/96] C2 seed=7358033349812481603 HTTP_ERROR accepted_so_far=0 17344/h eta=0.0h
+[64/96] C2 seed=3319544269512995414 HTTP_ERROR accepted_so_far=0 17549/h eta=0.0h
+[65/96] C2 seed=8980111015164862804 HTTP_ERROR accepted_so_far=0 17780/h eta=0.0h
+[66/96] C2 seed=8448714758333459702 HTTP_ERROR accepted_so_far=0 17917/h eta=0.0h
+[67/96] C2 seed=6632372836066312210 HTTP_ERROR accepted_so_far=0 17882/h eta=0.0h
+[68/96] C2 seed=3332053416527313326 HTTP_ERROR accepted_so_far=0 17509/h eta=0.0h
+[69/96] C2 seed=2199645560792692162 HTTP_ERROR accepted_so_far=0 17563/h eta=0.0h
+[70/96] C2 seed=1834647212504960430 HTTP_ERROR accepted_so_far=0 17672/h eta=0.0h
+[71/96] C2 seed=2728841733660031672 HTTP_ERROR accepted_so_far=0 17919/h eta=0.0h
+[72/96] C2 seed=2624456114989847342 HTTP_ERROR accepted_so_far=0 18028/h eta=0.0h
+[73/96] C2 seed=2625614960770379670 HTTP_ERROR accepted_so_far=0 17896/h eta=0.0h
+[74/96] C2 seed=620231313522468899 HTTP_ERROR accepted_so_far=0 17625/h eta=0.0h
+[75/96] C2 seed=172904571885381593 HTTP_ERROR accepted_so_far=0 17486/h eta=0.0h
+[76/96] C2 seed=4857534414719986814 HTTP_ERROR accepted_so_far=0 17699/h eta=0.0h
+[77/96] C2 seed=1520766850644894012 HTTP_ERROR accepted_so_far=0 17703/h eta=0.0h
+[78/96] C2 seed=6104428037686938069 HTTP_ERROR accepted_so_far=0 17739/h eta=0.0h
+[79/96] C2 seed=2067529140659777298 HTTP_ERROR accepted_so_far=0 17603/h eta=0.0h
+[80/96] C2 seed=7606962919699903820 HTTP_ERROR accepted_so_far=0 17788/h eta=0.0h
+[81/96] C2 seed=8634494007947897132 HTTP_ERROR accepted_so_far=0 17824/h eta=0.0h
+[82/96] C2 seed=5687612179762202009 HTTP_ERROR accepted_so_far=0 18037/h eta=0.0h
+[83/96] C2 seed=9131998880486052341 HTTP_ERROR accepted_so_far=0 17852/h eta=0.0h
+[84/96] C2 seed=2350881398197153970 HTTP_ERROR accepted_so_far=0 17956/h eta=0.0h
+[85/96] C2 seed=4413922883497004412 HTTP_ERROR accepted_so_far=0 17664/h eta=0.0h
+[86/96] C2 seed=4395080619161278131 HTTP_ERROR accepted_so_far=0 17859/h eta=0.0h
+[87/96] C2 seed=8067681351862209100 HTTP_ERROR accepted_so_far=0 17863/h eta=0.0h
+[88/96] C2 seed=2759928771104119193 HTTP_ERROR accepted_so_far=0 18063/h eta=0.0h
+[89/96] C2 seed=8254304695070130144 HTTP_ERROR accepted_so_far=0 18182/h eta=0.0h
+[90/96] C2 seed=7650551694612446740 HTTP_ERROR accepted_so_far=0 18229/h eta=0.0h
+[91/96] C2 seed=3931438432150149866 HTTP_ERROR accepted_so_far=0 17960/h eta=0.0h
+[92/96] C2 seed=5753908311568405574 HTTP_ERROR accepted_so_far=0 17943/h eta=0.0h
+[93/96] C2 seed=3404289400218955506 HTTP_ERROR accepted_so_far=0 18127/h eta=0.0h
+[94/96] C2 seed=5366487138368369684 HTTP_ERROR accepted_so_far=0 18304/h eta=0.0h
+[95/96] C2 seed=2959271349689180594 HTTP_ERROR accepted_so_far=0 18192/h eta=0.0h
+[96/96] C2 seed=7437076425135041386 HTTP_ERROR accepted_so_far=0 18236/h eta=0.0h
+{
+  "confirmatory": false,
+  "execution": {
+    "driver_sha256": "0999f580f6c1c06184653def7a2f665a4a20621eeefa24847d5c949f4132a8e9",
+    "mode": "thread_pool",
+    "pairs_skipped_on_resume": 0,
+    "phase": "p026_floor8000",
+    "wall_seconds": 19.0,
+    "workers": 6
+  },
+  "finished": 1793720979.2163978,
+  "interpretation": "Scheduling-only change: sessions independent, each still two turns at most with harness feedback in between. No prompt, cell, floor, label, or oracle differs from the registered runner.",
+  "per_cell": {
+    "C2": {
+      "accepted": 0,
+      "sessions": 96,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P026-INFO-CONTRACT-C2-FLOOR8000-AESGCM-CSPRNG-SEEDS-v1",
+  "provider_failures": 96,
+  "provider_responses": 0,
+  "sessions": 96
+}
+{
+ "C2": {
+  "sessions": 96,
+  "accepted": 0,
+  "submissions": 0,
+  "turns": 0
+ }
+}
+[15:49:39Z] P026 done
+[15:49:39Z] wave2 complete

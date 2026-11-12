@@ -1,0 +1,129 @@
+{
+  "arm": "R1",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0505-xor-L1-20024-R1-r0-30bc332c/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0505-xor-L1-20024-R1-r0-30bc332c/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0505-xor-L1-20024-R1-r0-30bc332c/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0505-xor-L1-20024-R1-r0-30bc332c/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "XOR_Keystream_Reuse-L1-seed920024",
+    "reference": {
+      "cryptographic_predicate": true,
+      "detail": {
+        "candidate_len": 64,
+        "expected_len": 64
+      },
+      "verdict": "ACCEPTED"
+    },
+    "stage": "SUCCESS",
+    "success": 1
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L1-seed20024",
+  "kind": "primary",
+  "latency_s": 13.49480652809143,
+  "legacy_would_reject": false,
+  "level": "L1",
+  "max_tokens": 2600,
+  "ordinal": 505,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 725,
+  "payload_sha256": "b947c6866e7576fbaff3af497cd80170545412a269bcffd2063172f70fb0750c",
+  "phase": "confirmatory",
+  "prompt_chars": 1676,
+  "prompt_sha256": "c8717579a0c559879e9066ddd2e61cddc406ab367082b6aeb00a271d14953b11",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 64,
+      "expected_len": 64
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0
+      ],
+      "plaintext": "a3cba03ace198c8180155234d05afd653887845f81423f06adf52f9cf16c4374ff9a04c5aa901ac05f417c3dd3684760ef32abb12e6b915ab2758787602d3cae",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2068,
+  "response_sha256": "c1ab6d8c4436b7e35ec94d928ca454256dc1f396f940a19b07bf6ada9576acd5",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 20024,
+  "session_id": "confirmatory-0505-xor-L1-20024-R1-r0-30bc332c",
+  "source_chars": 1400,
+  "source_sha256": "8b12af8e867cc2555630b5c87a0d33509b79d799345a54c402c1c14b7ed8754d",
+  "stderr_tail": "",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 483,
+    "output_tokens": 830
+  }
+}

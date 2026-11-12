@@ -1,0 +1,173 @@
+{
+  "author": "Alphacode",
+  "bugs_fixed": [
+    "REPO_ROOT off-by-one (parents[2] -> parents[3]) in prepare.py and runner.py",
+    "Role constants ROLE_* re-exported from canonical.py into remediation.py",
+    "Manifest hash drift fixed by regenerating manifest immediately before execution",
+    "Key file permissions (0600) provisioned on /tmp tmpfs (fuseblk mount ignores chmod)",
+    "runner.py missing swap_run directory creation before run_teo",
+    "runner.py never wrote candidate_output.json before run_baseline read it",
+    "observer.py passed absolute instance_path with cwd=case_dir (double path join)",
+    "aggregator.py read parsed_candidate_sha256 at payload level instead of payload[\"parse\"][\"parsed_candidate_sha256\"]"
+  ],
+  "date": "2026-10-20T07:03:00Z",
+  "historical_experiments": {
+    "experiment_a_h1r3": {
+      "directory": "sp2027/analysis/h1r3_20261019/",
+      "key_documents": [
+        "H1R3_PREREGISTRATION.md",
+        "H1R3_FREEZE.json",
+        "H1R3_FREEZE_AMENDMENT_01.json",
+        "H1R3_FREEZE_AMENDMENT_02.json",
+        "H1R3_ANALYSIS.json",
+        "H1R3_ANALYSIS.md",
+        "H1R3_EVIDENCE_PACKAGE_20261019.md",
+        "H1R3_INTEGRITY_AUDIT.json",
+        "H1R3_FAILURE_DOSSIER.json",
+        "runs/confirmatory/results.jsonl"
+      ],
+      "status": "FOUND"
+    },
+    "experiment_b_heb1_iar": {
+      "directory": "sp2027/analysis/experiment_b_20261019/",
+      "key_documents": [
+        "EXPERIMENT_B_PROTOCOL.md",
+        "EXPERIMENT_B_REPORT.md",
+        "IAR_B_RESULTS_REPORT.md",
+        "iar_c/IAR_C_RESULTS_REPORT.md",
+        "b2_2_stage01/B2_2_STAGE01_REPORT.md"
+      ],
+      "status": "FOUND"
+    },
+    "heb1_crossboundary": {
+      "directory": "sp2027/analysis/heb1_crossboundary_20261019/",
+      "key_documents": [
+        "HEB1_EXPERIMENT_PROTOCOL_20261019.md",
+        "HEB1_EVALUATION_REPORT.md",
+        "HEB1_PRIOR_ART_ASSESSMENT_20261019.md",
+        "HEB1_ADJUDICATION_RESPONSE_20261019.md"
+      ],
+      "status": "FOUND"
+    },
+    "heb1_independent_adversarial_audit": {
+      "directory": "sp2027/analysis/heb1_independent_adversarial_audit_20261019/",
+      "key_documents": [
+        "AUDIT_PROTOCOL.md",
+        "EVIDENCE_LEDGER.md",
+        "HEB1_INDEPENDENT_ADVERSARIAL_AUDIT.md",
+        "HEB1_MULTIAGENT_REAUDIT_20261019.md"
+      ],
+      "status": "FOUND"
+    },
+    "heb1_remediation_v1": {
+      "components": [
+        "signing/",
+        "integrity/",
+        "adjudication/",
+        "context/",
+        "stage01/",
+        "scientific_corrections/"
+      ],
+      "directory": "sp2027/analysis/heb1_remediation_v1/",
+      "status": "FOUND"
+    },
+    "stage01_components": {
+      "directory": "sp2027/analysis/",
+      "files": [
+        "contract_sound_stage01_validator_v2.py",
+        "contract_sound_stage01_reference_verifier_v2.py",
+        "run_contract_sound_stage01.py"
+      ],
+      "status": "FOUND"
+    }
+  },
+  "missing_or_incompatible_items": [
+    "Stage 3 native interoperability absent: ACTS envelopes are not accepted directly as in-toto/SLSA metadata",
+    "Stage 4 strong representation-effect threshold not met (C2-C1=-0.083; threshold=0.25)",
+    "Stage 4 model used the P-521 curve order for P-256 instances; 3 honest ECDSA cases were not attributed",
+    "No externally reachable gateway exists in this project; the live campaign used a loopback-published container",
+    "Stage 5 model agent did not retrieve the reserved secret within the task card caps (0 of 8 turns)",
+    "Stage 3 first attempt did not persist the model refusal text (quoted in STAGE3_BOUNDARY_RESULTS.md from a later diagnostic call)",
+    "HEB-2 first evaluation applied the soundness property to refused bundles; corrected and the attempt retained",
+    "SLSA could not be exercised in this environment (keyless provenance published in Rekor is required); the SLSA comparison is model-level only",
+    "The attribution semantic for an unsuccessful execution is a decision, not a discovery: two preregistered readings are frozen and their difference is one case per model-arm run"
+  ],
+  "post_stage0_resolutions": {
+    "heb2_contract_v2": "two preregistered execution-completion semantics, hash-frozen with a fail-closed preflight; 11,256 mutation evaluations with 0 soundness violations",
+    "model_route": "authorized; exact route claude-sonnet-4-6-free confirmed by fresh HTTP 200 attestations",
+    "provenance_tools": "authorized, installed in isolation, bounded comparison executed",
+    "provider_calls_total": "42 across Stages 3 and 4, all HTTP 200 on the single approved free route, no retry, no fallback",
+    "stage3_ingress": "controlled loopback ingress constructed and exercised: 12 submissions, 0 unauthorized attributions",
+    "stage4_matched_arm": "14 provider calls, 22 cases, 18/22 decision agreement, all 4 disagreements mechanically explained, 0 false promotions",
+    "stage5_live_campaign": "the project's own containerised target was started, exploited over a live network interface, its reserved secret adjudicated by a separate-process oracle, and the frozen contract attributed it; the model agent did not complete the exploit within the task card's caps (8 turns, 3 graded submissions, 0 successes) and the contract refused it",
+    "stage6_matched_translation": "corrected after review: a minimally configured in-toto promotes 16/16 non-attributable cases (a default-configuration measurement); in-toto given its own artifact rules and an independent inspection reproduces the ACTS contract exactly (22/22 with a stateful inspection, 21/22 stateless); SLSA is NOT_COMPARABLE, stopping at provenance acquisition before any policy stage. The earlier superiority framing is withdrawn."
+  },
+  "project": "ACTS-Attack",
+  "protected_artifacts": {
+    "sp2027/analysis/RESULTS_LOCK.json": {
+      "expected_sha256": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "match": true,
+      "observed_sha256": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39"
+    },
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": {
+      "expected_sha256": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "match": true,
+      "observed_sha256": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103"
+    },
+    "sp2027/paper/main.pdf": {
+      "expected_sha256": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "match": true,
+      "observed_sha256": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a"
+    },
+    "sp2027/paper/main.tex": {
+      "expected_sha256": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "match": true,
+      "observed_sha256": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+    }
+  },
+  "schema": "stage0-evidence-ledger/1",
+  "stage1_e2a_confirmatory_run": {
+    "all_attack_controls_rejected_or_inconclusive": true,
+    "all_honest_controls_accepted": true,
+    "case_count": 22,
+    "decision_summary": {
+      "ATTRIBUTED_SUCCESS": 6,
+      "INCONCLUSIVE": 4,
+      "REJECT": 12
+    },
+    "false_negatives": 0,
+    "false_positives": 0,
+    "frozen_reference": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+    "frozen_validator": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py",
+    "manifest_schema": "e2a-run-manifest/1",
+    "model_calls": 0,
+    "network_calls": 0,
+    "preflight_errors": [],
+    "preflight_passed": true,
+    "provider_calls": 0,
+    "results_sha256": "49e3ee28e206b0175826996f56d02cc09f0def7e552ede5f98c62f3e2d068a69",
+    "run_dir": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/runs/20261020T065943Z_confirmatory/"
+  },
+  "stages_executed_after_stage0": {
+    "heb2_contract_v2": "22 cases, both semantics, 0 semantic changes on the scripted inventory; 1 change per model run, confined to a non-completed execution",
+    "stage1_e2a": "22 cases, 6 ATTRIBUTED_SUCCESS, 12 REJECT, 4 INCONCLUSIVE, 0 false negatives, 0 false positives",
+    "stage2_provenance": "Cosign 128/128 authentic signatures verified, 128/128 tamper controls rejected, 0/22 native in-toto, 0/22 native SLSA",
+    "stage3_boundary": "live local target over a loopback ingress; 1 positive control attributed, 11 non-control submissions refused",
+    "stage4_matched_arm": "model-authored producers through the frozen evaluator; 4 attributions, all predicate-backed",
+    "stage5_live_campaign": "live containerised target, separate-process oracle; control attributed, model arm refused",
+    "stage6_matched_translation": "22 cases, 4 arms; native in-toto 22/22 accepted, delegated 7/22, SLSA 0/22"
+  },
+  "tests_executed": {
+    "e2a_package_tests": {
+      "command": "pytest tests/ -q",
+      "result": "11 passed",
+      "status": "PASS"
+    },
+    "heb1_remediation_v1_tests": {
+      "command": "python3 -m pytest -q",
+      "result": "55 passed in 3.36s",
+      "status": "PASS"
+    }
+  },
+  "working_directory": "sp2027/analysis/acts_next_phase_20261019_v2/research/"
+}

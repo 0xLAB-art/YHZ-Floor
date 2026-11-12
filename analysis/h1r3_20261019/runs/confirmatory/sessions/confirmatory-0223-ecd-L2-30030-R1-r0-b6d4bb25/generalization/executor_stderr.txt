@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0223-ecd-L2-30030-R1-r0-b6d4bb25/generalization/candidate.py", line 57, in <module>
+    d = recover_private_key(sig5, sig6, n)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0223-ecd-L2-30030-R1-r0-b6d4bb25/generalization/candidate.py", line 28, in recover_private_key
+    assert r1 == r2, "Signatures must share the same r value"
+           ^^^^^^^^
+AssertionError: Signatures must share the same r value

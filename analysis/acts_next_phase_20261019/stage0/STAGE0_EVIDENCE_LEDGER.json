@@ -1,0 +1,190 @@
+{
+  "schema": "acts-next-phase/stage0-evidence-ledger/1",
+  "generated": "2026-10-20",
+  "repository_root": "/mnt/nvme5/ACTS-Attack",
+  "git": {
+    "branch": "master",
+    "head": "4743d18",
+    "head_subject": "preregister contract-sound exploitation novelty study",
+    "pre_existing_dirty_state": true,
+    "pre_existing_dirty_state_note": ".gitignore modified, ACTS-ATTACK modified, DEPOSIT_V1.1_STAGING/** deleted. Deliberately NOT reset, cleaned, restored or committed. No git write operation was performed in this phase."
+  },
+  "protected_artifacts": [
+    {
+      "path": "sp2027/analysis/RESULTS_LOCK.json",
+      "expected_sha256": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "observed_pre": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "observed_post": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "status": "UNCHANGED"
+    },
+    {
+      "path": "sp2027/analysis/RESULTS_LOCK_H1PC.json",
+      "expected_sha256": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "observed_pre": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "observed_post": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "status": "UNCHANGED"
+    },
+    {
+      "path": "sp2027/paper/main.tex",
+      "expected_sha256": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "observed_pre": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "observed_post": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "status": "UNCHANGED"
+    },
+    {
+      "path": "sp2027/paper/main.pdf",
+      "expected_sha256": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "observed_pre": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "observed_post": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "status": "UNCHANGED"
+    }
+  ],
+  "historical_documents_required": {
+    "total_required": 28,
+    "found": 28,
+    "missing": [],
+    "resolved_paths": [
+      "sp2027/analysis/h1r3_20261019/H1R3_PREREGISTRATION.md",
+      "sp2027/analysis/h1r3_20261019/H1R3_FREEZE.json",
+      "sp2027/analysis/h1r3_20261019/H1R3_FREEZE_AMENDMENT_01.json",
+      "sp2027/analysis/h1r3_20261019/H1R3_ANALYSIS.json",
+      "sp2027/analysis/h1r3_20261019/H1R3_ANALYSIS.md",
+      "sp2027/analysis/h1r3_20261019/H1R3_EVIDENCE_PACKAGE_20261019.md",
+      "sp2027/analysis/h1r3_20261019/H1R3_INTEGRITY_AUDIT.json",
+      "sp2027/analysis/h1r3_20261019/H1R3_FAILURE_DOSSIER.json",
+      "sp2027/analysis/h1r3_20261019/runs/confirmatory/results.jsonl",
+      "sp2027/analysis/EVALUATOR_BOUNDARY_NOVELTY_PROPOSAL.md",
+      "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EXPERIMENT_PROTOCOL_20261019.md",
+      "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EVALUATION_REPORT.md",
+      "sp2027/analysis/heb1_crossboundary_20261019/heldout/heldout_results.json",
+      "sp2027/analysis/heb1_crossboundary_20261019/iar/verify_iar_a.py",
+      "sp2027/analysis/experiment_b_20261019/EXPERIMENT_B_PROTOCOL.md",
+      "sp2027/analysis/experiment_b_20261019/EXPERIMENT_B_REPORT.md",
+      "sp2027/analysis/experiment_b_20261019/IAR_B_RESULTS_REPORT.md",
+      "sp2027/analysis/experiment_b_20261019/iar_c/IAR_C_RESULTS_REPORT.md",
+      "sp2027/analysis/experiment_b_20261019/iar_c/runs/20261019_121621/results.json",
+      "sp2027/analysis/experiment_b_20261019/b2_2_stage01/B2_2_STAGE01_REPORT.md",
+      "sp2027/analysis/contract_sound_stage01_validator_v2.py",
+      "sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+      "sp2027/analysis/heb1_independent_adversarial_audit_20261019/AUDIT_PROTOCOL.md",
+      "sp2027/analysis/heb1_independent_adversarial_audit_20261019/EVIDENCE_LEDGER.md",
+      "sp2027/analysis/heb1_independent_adversarial_audit_20261019/HEB1_INDEPENDENT_ADVERSARIAL_AUDIT.md",
+      "sp2027/analysis/heb1_independent_adversarial_audit_20261019/HEB1_MULTIAGENT_REAUDIT_20261019.md",
+      "sp2027/analysis/heb1_remediation_v1/scientific_corrections/HISTORICAL_CORRECTION_LEDGER.md",
+      "sp2027/analysis/heb1_remediation_v1/adjudication/AUDIT_NOTES.md"
+    ]
+  },
+  "frozen_components_hash_pinned_this_phase": [
+    {
+      "path": "sp2027/analysis/contract_sound_stage01_validator_v2.py",
+      "sha256": "f248413d9b476531faf786ab92f513595959b02563576749e4c3b0b196875b3a",
+      "corroboration": "identical to FROZEN_VALIDATOR_SHA256 in heb1_remediation_v1/stage01/external_binding_wrapper.py:21"
+    },
+    {
+      "path": "sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+      "sha256": "15bb4095ee39f6ff558c5989450238e20f1d371712b31817d657f49232c7584b",
+      "corroboration": "newly pinned this phase; not previously pinned anywhere in the tree"
+    }
+  ],
+  "reproductions": [
+    {
+      "id": "R-01",
+      "claim": "the prior team's '55 passing remediation tests'",
+      "source": "heb1_remediation_v1/ (user-reported)",
+      "command": "python3 -m pytest -p no:cacheprovider -q",
+      "result": "55 passed in 17.13s",
+      "verdict": "REPRODUCED"
+    },
+    {
+      "id": "R-02",
+      "claim": "H1-R3 reference replay over the 852 retained results",
+      "command": "replay of runs/confirmatory/results.jsonl",
+      "result": "852/852 agreement, 0 disagreements; H1R3_ANALYSIS.md byte-reproducible",
+      "verdict": "REPRODUCED"
+    },
+    {
+      "id": "R-03",
+      "claim": "H1-R3 test suite",
+      "command": "pytest",
+      "result": "322/322 pass",
+      "verdict": "REPRODUCED"
+    },
+    {
+      "id": "R-04",
+      "claim": "HEB-1 / IAR-C / B2 / IAR-A published figures",
+      "method": "independent recomputation from retained raw artefacts (Agent 2)",
+      "result": "7/7 checked numeric claims reproduced exactly; 23/23 quoted artefact hashes verified",
+      "verdict": "REPRODUCED, with 6 scope/denominator discrepancies recorded"
+    },
+    {
+      "id": "R-05",
+      "claim": "RFC 9334 section 8.1 and 12.3 text",
+      "method": "curl of https://www.rfc-editor.org/rfc/rfc9334.txt to /tmp/opencode/rfc/rfc9334.txt, read directly",
+      "result": "quotes verified verbatim at lines 1244-1247 and ~1842-1844; also verified §8.4 (binary verdict) and §8.5/§10/§12.2",
+      "verdict": "VERIFIED"
+    },
+    {
+      "id": "R-06",
+      "claim": "Stage 1 confirmatory metrics",
+      "method": "s1_metrics.py recomputation over frozen runs/results.json + s1_case_manifest.json",
+      "result": "E3 strict: 0/25 false attribution, 0/2 false rejection, 25/25 correct rejection, 5/5 correct INCONCLUSIVE; frozen Stage01 pair: 2/25 false attribution",
+      "verdict": "REPRODUCED"
+    }
+  ],
+  "not_reproduced": [
+    {"item": "H1-R3 live provider re-run", "reason": "out of scope by instruction; provider authorisation not granted"},
+    {"item": "acts_next_phase_20261019_v2/stage1_e2a/", "reason": "authored but not frozen and not executed; not executed, imported or modified by this phase"},
+    {"item": "in-toto / slsa-verifier / cosign runtime behaviour", "reason": "not installed; installation requires explicit user approval not granted in this session"},
+    {"item": "preprints.org 202610.0322 'Grounded but Wrong' full text", "reason": "HTTP 403 from preprints.org; abstract verified via OpenAlex, full text not obtained -> novelty comparison incomplete for this work"},
+    {"item": "deployed attacker reachability", "reason": "no authorised ingress exists (source-verified negative)"},
+    {"item": "manuscript rebuild", "reason": "latexmk missing; main.tex/main.pdf are protected and were not rebuilt"}
+  ],
+  "material_defects_found": [
+    {"id": "H1-1", "severity": "MATERIAL", "finding": "manuscript states L3 pooled R2 = 123/128 in six places; recomputed value is 124/128", "repair_status": "reported only; main.tex is protected"},
+    {"id": "H1-2", "severity": "MATERIAL", "finding": "on-disk h1r3_run.py (6605cf7a) differs from the frozen hash (b0ba8cc2); the post-campaign edit relaxes the provider health gate and is unrecorded", "repair_status": "reported only"},
+    {"id": "H1-3", "severity": "MATERIAL", "finding": "the H1-R3 freeze contract covers 14 files and excludes results.jsonl, the session bundles, the analysis outputs and provider_adapter.py", "repair_status": "reported only"},
+    {"id": "H1-4", "severity": "MATERIAL", "finding": "the evidence package's 'same wrong formula appears in R0, R1 and R2' is literally false (R1 0, R2 0)", "repair_status": "reported only"},
+    {"id": "H1-5", "severity": "MATERIAL", "finding": "preregistration section 7 contradicts the raw records on four counts (9/10 sanity, 17 bundles, 0 generalisations, OUTPUT_SCHEMA label)", "repair_status": "reported only"},
+    {"id": "H1-6", "severity": "MINOR", "finding": "failure dossier 30/27 vs the run's 31/28, silently scoped to kind==primary", "repair_status": "reported only"},
+    {"id": "HEB-1", "severity": "SCOPE", "finding": "two published denominators for one IAR-C numerator (10/28 and 10/20)", "repair_status": "reported; both denominators stated in the new reports"},
+    {"id": "HEB-2", "severity": "SCOPE", "finding": "'10 eligible partial claims' is a hard-coded family whitelist; the raw data contain 14", "repair_status": "reported"},
+    {"id": "HEB-3", "severity": "SCOPE", "finding": "HEB-1 36/36 is attack-family-scoped; the raw held-out total is 40", "repair_status": "reported"},
+    {"id": "HEB-4", "severity": "SCOPE", "finding": "B2 publishes counts without denominators; its held-out set is IAR-B's held-out set", "repair_status": "reported"},
+    {"id": "HEB-5", "severity": "RETENTION", "finding": "the IAR-A 75/2/0 artifact is outside the repository; the committed results file lacks the A1b entry", "repair_status": "reported"},
+    {"id": "HEB-6", "severity": "INCONSISTENCY", "finding": "the two B2-2 reports give opposite dispositions for the same non-event", "repair_status": "reported"}
+  ],
+  "stage1_artifacts": {
+    "root": "sp2027/analysis/acts_next_phase_20261019/stage1_attribution/",
+    "protocol": "s1_protocol.md",
+    "deviations": "s1_deviations.md",
+    "case_manifest": "s1_case_manifest.json",
+    "case_inventory_root": "s1_case_inventory",
+    "case_inventory_files": 56,
+    "integrity_manifest": "s1_integrity_manifest.json",
+    "integrity_manifest_schema": "acts-integrity-remediation/1",
+    "files_checked_by_preflight": 77,
+    "preflight_result": "passed, 0 errors (before and after the run)",
+    "unit_tests": "test_s1_attribution.py -- 17 passed in 98.17s",
+    "raw_results": "runs/results.json (schema acts-next-phase/s1-results/1)",
+    "metrics": "runs/summary.md, runs/summary.json (produced by s1_metrics.py)"
+  },
+  "new_artefacts_this_phase": [
+    "sp2027/analysis/acts_next_phase_20261019/stage0/STAGE0_REPOSITORY_INVENTORY.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/STAGE0_EVIDENCE_LEDGER.json",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/STAGE0_REPRODUCTION_REPORT.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/STAGE0_RESOURCE_GAPS.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/AGENT1_TRUST_BOUNDARY_MAP.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/AGENT2_HISTORY_FORENSIC_EXTRACTION.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/AGENT4B_H1R3_FORENSIC_EXTRACTION.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/AGENT5_PRIOR_ART_NOVELTY_MATRIX.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage0/AGENT5B_PRIOR_ART_VERIFICATION.md",
+    "sp2027/analysis/acts_next_phase_20261019/stage2_provenance/AGENT3_PROVENANCE_COMPARATOR_ANALYSIS.md"
+  ],
+  "standing_prohibitions_observed": [
+    "no model or provider call was made",
+    "no network request was made to any third party",
+    "no package was installed",
+    "no historical file was modified, reset, cleaned, amended or committed",
+    "no metric, threshold, denominator, decision rule or case expectation was changed after the confirmatory run began"
+  ]
+}

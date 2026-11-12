@@ -1,0 +1,25 @@
+{
+  "scope": "Static source trace; no network or service execution",
+  "checks": {
+    "handler_reads_operation_and_candidate": true,
+    "handler_dispatches_delivery_compare_reveal": true,
+    "generated_code_uses_host_popen": true,
+    "inherits_environment_and_cwd": true,
+    "launcher_binds_all_interfaces": true
+  },
+  "all_pass": true,
+  "handler_fields": [
+    "op",
+    "candidate_hex"
+  ],
+  "handler_escrow_calls": [
+    "send_key",
+    "verify",
+    "reveal"
+  ],
+  "input_sha256": {
+    "ACTS-ATTACK/targets/e5/escrow.py": "d19c54b3652b7df5bb053e94021faa249f2aaa166459700d93fbe088cdf72d21",
+    "ACTS-ATTACK/harness/v2/agent_loop_v2.py": "ed0ebf0aeb8ca97e12b8d1dbe8e56984a1aca8cfa3c86d72f58cd6249a84c8b9",
+    "ACTS-ATTACK/targets/e5/e5_session.py": "5c9003a8a9b76a1c24761d0eb726dc222b9066d533de137bcb140bd051a3358c"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "results-lock-v4/1.0.0",
+  "predecessor_lock": "sp2027/analysis/RESULTS_LOCK.json",
+  "predecessor_lock_sha256": "335ea2a10afe3cfe02ea8ee7d0f3aafeb3d63078ba5efc21c4fe1a10f06e50eb",
+  "historical_values_unchanged": true,
+  "new_arm": "EXP-034",
+  "v4": {
+    "manifest": "sp2027/agent-eval/R1_CLEAN_COHORT_V4_02_MANIFEST.json",
+    "manifest_sha256": "0ccfc7337eb19a0ea40162634bf247592cfe5644d60525132e1a8629f1c3af15",
+    "row_ledger": "sp2027/agent-eval/R1_CLEAN_COHORT_V4_ROW_LEDGER.csv",
+    "row_ledger_sha256": "763955badf181f37cc08e1572ae340bc9e6462a3d67c309c40c04a2c0e7fa3d7",
+    "planned": 12,
+    "physical": 12,
+    "retained": 12,
+    "unique_identities": 12,
+    "terminal_statuses": 12,
+    "transcripts": 12,
+    "success": 8,
+    "oracle_fail": 4,
+    "provider_unavailable": 0,
+    "conditional": {"success": 8, "denominator": 12, "fraction": 0.6666666666666666, "wilson_95": [0.391, 0.862]},
+    "operational": {"success": 8, "denominator": 12, "fraction": 0.6666666666666666, "wilson_95": [0.391, 0.862]},
+    "e1_positive_control_h1": {"numerator": 0, "denominator": 12, "verdict": "H1_POSITIVE_CONTROL_NOT_ESTABLISHED", "blocking_fields": ["immutable_environment"], "model_weight_note": "not a separate H1 gate under the existing definition"},
+    "duplicates": 0,
+    "overwrites": 0,
+    "fallback": 0,
+    "repairs": 0,
+    "protocol_edits_after_observation": 0
+  },
+  "legacy_values_retained": {
+    "planned": 54,
+    "provider_unavailable": 28,
+    "non_gateway": 26,
+    "relay_defects": 3,
+    "valid_graded": 23,
+    "historical_clock_exclusions": 4,
+    "strict_admissible": 19,
+    "success": 10,
+    "conditional": {"success": 10, "denominator": 19, "wilson_95": [0.317, 0.727]},
+    "operational": {"success": 10, "denominator": 47, "wilson_95": [0.120, 0.349]}
+  },
+  "arm_accounting": {
+    "mapped_scientific_evidence_arms": 34,
+    "historical_raw_arms": 1,
+    "actual_repository_evidence_arms": 35,
+    "administrative_non_arm": "MAP-CLOSURE-034"
+  },
+  "status": "ACTIVE_V4_LOCK"
+}

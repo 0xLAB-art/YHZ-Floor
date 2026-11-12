@@ -1,0 +1,14 @@
+# P014 AES-GCM -- INTERIM monitoring output. NOT A RESULT.
+# state: cohort still running | slots 22/64 | seeds 6/16: [401, 402, 403, 404, 405, 406]
+# The registered primary test needs the full 16-seed pairing; this file exists so
+# the estimator is demonstrably runnable and deterministic before completion.
+# The authoritative analysis is written to analysis_p014.txt by finalize_p014.sh
+# the moment the 64th slot closes.
+
+=== P014 AES-GCM (6 seeds x 4 cells) ===
+accepted / evaluable: {'C1': '5/5', 'C2': '0/1', 'C3': '6/6', 'C4': '0/4'}
+provider drops: {'C1': 0, 'C2': 5, 'C3': 0, 'C4': 1}
+instrument-duplicate rows: 1: ['info_contract_2x2_aesgcm_20261102__C1__seed_401__11a15b2da9d5']
+paired C1-vs-C4: 4/0 over 4 evaluable pairs, p=0.125
+premise marginal 11/11 vs 0/5, p=0.0
+naming marginal 5/9 vs 6/7, p=0.03365384615384616

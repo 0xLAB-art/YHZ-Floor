@@ -1,0 +1,17 @@
+# P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1
+# fixture: AES-GCM (keystream-exposing), floor 4200, label gpt-6-astra
+# instances: 24 drawn from seeds_random_20261102T104901Z.json (seeds_sha256 4bc60999fa6747971828c0e2c0642edc0225802556751c41a37e88be75763f06)
+
+cell  accepted/evaluable  wilson95            drops
+C1    22/22             (0.8513, 1.0)        2
+C2     0/13             (0.0, 0.2281)        11
+C3    24/24             (0.862, 1.0)         0
+C4     0/24             (0.0, 0.138)         0
+
+paired C1-vs-C4: 22/0 over 22 evaluable instance pairs, exact binomial two-sided p=4.76837158203125e-07
+premise marginal: 46/46 vs 0/37, Fisher two-sided p=1.919560832558479e-24
+
+classification: direction replicated
+  rule (frozen): b10 > b01 and exact two-sided p < 0.05 on evaluable instance pairs
+
+No rate is pooled across cohorts; instances are the unit of analysis.

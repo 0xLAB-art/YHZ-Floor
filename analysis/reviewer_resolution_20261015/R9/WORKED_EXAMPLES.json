@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "example_has_50_infected_hosts": true,
+    "example_has_48_exfiltrated_files": true,
+    "example_has_614_action_records": true,
+    "example_timing_components_sum": true,
+    "five_cybench_output_lfs_pointers": true
+  },
+  "all_pass": true,
+  "incalmo_example": {
+    "result_member": "output/example_output/results.json",
+    "actions_member": "output/example_output/action_log.jsonl",
+    "action_records": 614,
+    "timing_components_seconds": {
+      "experiment_time": 4802.260221481323,
+      "execution_time": 4408.439571619034,
+      "setup_time": 393.82064986228943
+    }
+  },
+  "cybench_pointer_evidence": [
+    {
+      "path": "agent/outputs/benchmark/1d0b47440190cdaf/[Very Easy] Dynastic_completion.json",
+      "pointer_sha256": "5af13e0cdd29905519b779f436e868883cca5fcb62f3da6e3063c8cba2a28da1",
+      "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:569b09e3e695cff9c8db2816b48b283ef2a1c27a12f22195b716040059e0d637\nsize 38876"
+    },
+    {
+      "path": "agent/outputs/benchmark/1d0b47440190cdaf/[Very Easy] Primary Knowledge_completion.json",
+      "pointer_sha256": "00214141422ce582ef80ecd9b1f14061f821ac99c0141b4f3b21a94e402d6b4c",
+      "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:ea3894822f41887ee24fc1ba013df9c6acb6e9820d148ce2c24b9688da6a4ae6\nsize 51349"
+    },
+    {
+      "path": "agent/outputs/benchmark/unknown_benchmark_id/[Very Easy] Primary Knowledge_completion.json",
+      "pointer_sha256": "e77ca0f0a80baca717fd46be0a287cbe2e8cc540998e9bbdc3ca62e27ba2602f",
+      "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:e5cbd2c9547f4958188bb44e4c81302862b3297e5313a78c6232e3148afbdcce\nsize 77216"
+    },
+    {
+      "path": "agent/outputs/openai/gpt-4-turbo-2024-04-09/[Very Easy] Dynastic/2024_05_20_18_46_53_run_output.json",
+      "pointer_sha256": "a12a4d472750b17ba8425b25b2b0ea73068137f69f7ed5d09307157054684f06",
+      "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:29dd345fd51922030a5fa7ecb18a7b3baa7e7220b7bbe9e5061244510ea8bcfc\nsize 52910"
+    },
+    {
+      "path": "agent/outputs/openai/gpt-4-turbo-2024-04-09/[Very Easy] Primary Knowledge/2024_05_21_12_00_02_run_output.json",
+      "pointer_sha256": "c1005ea45677e11d4b1dea56836491a7d459bcdea1fe377b0fea0cd516518808",
+      "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:7a6cfdbd3305e679e9a4ce447383d5cbd5d17563ce7e8f994f1789a0908796ad\nsize 71799"
+    }
+  ],
+  "interpretation": "Positive example timing/log evidence is not full-grid historical reconstruction. LFS pointers establish object references, not payload contents or global nonpublication.",
+  "input_sha256": {
+    "human_audit/source_freeze_20261005/archives/incalmo__Incalmo__932c5fcd_head.tar.gz": "36b0e1a7c4d7107f19260a4bab01cdc1bd6489e2569711d5e1ee5875a7b055f7",
+    "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz": "261cc002d315776cf424322a18a645a21b48b418f1425e3b10271e298da0b805"
+  }
+}

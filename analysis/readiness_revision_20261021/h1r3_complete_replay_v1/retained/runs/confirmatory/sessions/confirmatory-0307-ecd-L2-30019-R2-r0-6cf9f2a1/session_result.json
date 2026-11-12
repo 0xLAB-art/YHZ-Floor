@@ -1,0 +1,155 @@
+{
+  "arm": "R2",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "base64",
+        "hashlib",
+        "json",
+        "sha256",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [
+        "hashlib",
+        "sha256"
+      ],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "CRYPTOGRAPHIC_PREDICATE",
+  "family": "ECDSA_Nonce_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "ECDSA_Nonce_Reuse-L2-seed930019",
+    "reference": {
+      "cryptographic_predicate": false,
+      "detail": {
+        "d_ok": false,
+        "k_ok": true,
+        "require_k": false
+      },
+      "verdict": "REJECTED"
+    },
+    "stage": "CRYPTOGRAPHIC_PREDICATE",
+    "success": 0
+  },
+  "http_status": 200,
+  "instance_id": "ECDSA_Nonce_Reuse-L2-seed30019",
+  "kind": "primary",
+  "latency_s": 15.361794471740723,
+  "legacy_would_reject": true,
+  "level": "L2",
+  "max_tokens": 2600,
+  "ordinal": 307,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 1086,
+  "payload_sha256": "3c137b31eba848917ecc883ca758a2388570167492f9a0c489da5af95768afc5",
+  "phase": "confirmatory",
+  "prompt_chars": 2014,
+  "prompt_sha256": "e9e628f92d5dd37648c104473454141512d04bd40f286651c70d7c991c6e13ba",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "base64",
+      "hashlib",
+      "json",
+      "sha256",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "hashlib",
+      "sha256"
+    ],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "base64",
+      "hashlib",
+      "json",
+      "sha256",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "hashlib",
+      "sha256"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "hashlib"
+      }
+    ]
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "d_ok": false,
+      "k_ok": true,
+      "require_k": false
+    },
+    "process": null,
+    "public_reconstruction": {
+      "pair": [
+        3,
+        5
+      ],
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 3112,
+  "response_sha256": "1c427883df62dafcf8ab10bdea13518b8c547926d3f184d6e0be26493734e7a7",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 30019,
+  "session_id": "confirmatory-0307-ecd-L2-30019-R2-r0-6cf9f2a1",
+  "source_chars": 3099,
+  "source_sha256": "9b950df8949d578a65679f69853d69597b4d34de98382517d6fcad98652077b8",
+  "stderr_tail": "",
+  "template_sha256": "54d7bbb68987d71771098bc475196e01c23ee1d8328de2e563b58f5f51236c8f",
+  "terminal": "CRYPTOGRAPHIC_PREDICATE",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 580,
+    "output_tokens": 1118
+  }
+}

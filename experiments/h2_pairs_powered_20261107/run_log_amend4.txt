@@ -1,0 +1,40 @@
+{"accepted": true, "accepted_queries": 1926, "accepted_turn": 1, "arm": "A_INTERACTIVE", "run_id": "h2_pairs_powered_20261107__cbc__A_INTERACTIVE__seed_441__7c55d731ea07", "seed": 441, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"accepted": true, "accepted_queries": 1926, "accepted_turn": 1, "arm": "B_ONESHOT", "run_id": "h2_pairs_powered_20261107__cbc__B_ONESHOT__seed_441__42d803aed6bc", "seed": 441, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"accepted": true, "accepted_queries": 1744, "accepted_turn": 1, "arm": "A_INTERACTIVE", "run_id": "h2_pairs_powered_20261107__cbc__A_INTERACTIVE__seed_442__e083b3b80fe3", "seed": 442, "status": "SUCCESS", "submissions": 1, "turns": 1}
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/agentrouter_client.py", line 57, in call
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/run_h2_pairs_powered.py", line 788, in <module>
+    main()
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/run_h2_pairs_powered.py", line 511, in main
+    result, attempts = call_with_retries(provider, prompt, MAX_TOKENS)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/run_h2_pairs_powered.py", line 127, in call_with_retries
+    result = provider.call(prompt, max_tokens)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/agentrouter_client.py", line 72, in call
+    raise ProviderFailure("BAD_RESPONSE", f"HTTP {exc.code}: {detail}")
+agentrouter_client.ProviderFailure: BAD_RESPONSE: HTTP 400: {"error":{"message":"Bad request: The 'stream_options' parameter is only allowed when 'stream' is enabled. [trace_id=40a0f044ecec25df1d9297a01cb7004e] (request id: 20261107191901501703328fq6gxDiXKyCJf)","type":"\u003cnil\u003e"},"type":"error"}

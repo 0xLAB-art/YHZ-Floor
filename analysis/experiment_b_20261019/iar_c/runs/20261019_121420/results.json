@@ -1,0 +1,1621 @@
+{
+  "case_set": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_c/data/cases",
+  "date": "2026-10-19 12:14:20",
+  "experiment": "IAR-C independent adversarial replication (preserved pass)",
+  "fixture_failure_detail": [],
+  "frozen_component_check": null,
+  "gates": {
+    "G-C1": {
+      "detail": "independent adjudicator == generator labels on all cases",
+      "pass": true
+    },
+    "G-C2": {
+      "detail": "determinism, frozen components, protected hashes, offline",
+      "pass": true
+    },
+    "G-C3": {
+      "detail": "v3-full level-6 false promotions on attack families == 0",
+      "pass": true
+    },
+    "G-C4": {
+      "detail": "v2 > 0 and v3-sig > 0 level-6 false promotions on attack families",
+      "pass": true
+    },
+    "G-C5": {
+      "detail": "v3-full: 0 false rejects, 0 overclaim, full agreement within evidence",
+      "pass": true
+    }
+  },
+  "label_deviations": [],
+  "labels": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_c/data/labels/iar_c_labels.json",
+  "labels_sha256": "75776db2e9f2eea454c59a7db785633701537dd9859f0c8cc5adeee7a2291fa7",
+  "manifest": {
+    "model_calls": 0,
+    "network_calls": 0,
+    "provider_calls": 0
+  },
+  "metrics": {
+    "agreement": {
+      "v2": 2,
+      "v3-full": 16,
+      "v3-sig": 16
+    },
+    "cases": 44,
+    "determinism_mismatches": 0,
+    "false_reject": {
+      "v2": 14,
+      "v3-full": 0,
+      "v3-sig": 0
+    },
+    "fixture_failures": 0,
+    "fp_level6": {
+      "v2": {
+        "all": 10,
+        "attack": 10,
+        "by_family": {
+          "S10": 2,
+          "S11": 2,
+          "S12": 2,
+          "S7": 2,
+          "S9": 2
+        }
+      },
+      "v3-full": {
+        "all": 0,
+        "attack": 0,
+        "by_family": {}
+      },
+      "v3-sig": {
+        "all": 14,
+        "attack": 14,
+        "by_family": {
+          "S11": 2,
+          "S14": 2,
+          "S4": 2,
+          "S5": 2,
+          "S6": 2,
+          "S7": 2,
+          "S8": 2
+        }
+      }
+    },
+    "honest_accept_full": {
+      "v2": 2,
+      "v3-full": 16,
+      "v3-sig": 16
+    },
+    "honest_within_evidence_cases": 16,
+    "label_deviations": 0,
+    "overclaim": {
+      "v2": 10,
+      "v3-full": 0,
+      "v3-sig": 14
+    },
+    "overhead_ms_mean": {
+      "adj": 132.14,
+      "v2": 38.27,
+      "v3-full": 52.61,
+      "v3-sig": 51.86
+    },
+    "system_failures": 0
+  },
+  "per_case": [
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-10969360a1",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-c",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-1464fa1c6b",
+      "family": "S12",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "unauthorized-signer-record",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "cid": "ic-15bb375f23",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-3",
+      "primitive": "ecdsa",
+      "requested": 3,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-1903edc495",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-b",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-1b827d36f6",
+      "family": "S6",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "stale-instance-target-swap",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 5,
+        "v3-full": 5,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-1e1b13c2f2",
+      "family": "S7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "foreign-authentic-authorship",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 0,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-210a57ae5e",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-2",
+      "primitive": "chacha",
+      "requested": 2,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-248ee90712",
+      "family": "S6",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "stale-instance-target-swap",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 5,
+        "v3-full": 5,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "cid": "ic-2e994c683a",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-1",
+      "primitive": "chacha",
+      "requested": 1,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-2f34401c30",
+      "family": "S11",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "unsigned-executor-rewrite",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 1,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-31f4141b72",
+      "family": "S7",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "foreign-authentic-authorship",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 0,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-335af886ef",
+      "family": "S8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "foreign-authentic-reference-acceptance",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 3,
+        "v3-full": 3,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-33cacf20ec",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-a",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "cid": "ic-37da04e503",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-1",
+      "primitive": "ecdsa",
+      "requested": 1,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 1,
+        "v3-sig": 1
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-417ece7af8",
+      "family": "S2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "clean-failure-no-effect-honest-level-2",
+      "primitive": "chacha",
+      "requested": 2,
+      "system_levels": {
+        "v2": 2,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-42d4751ff1",
+      "family": "S10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "forged-authorship-signature",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-47e138c07a",
+      "family": "S5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "cross-condition-relabel",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 5,
+        "v3-full": 5,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "ic-4a46d8388d",
+      "family": "S1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "mechanism": "clean-success-full-attribution",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-508fa26eaa",
+      "family": "S4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "cross-run-splice-failed-records-with-successful-candidate",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 0,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-56fae0d2a6",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-d",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "cid": "ic-5a74bc29c0",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-5",
+      "primitive": "ecdsa",
+      "requested": 5,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 6,
+        "truth_strong": true
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "cid": "ic-69930ad52c",
+      "family": "S1",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": true,
+        "v3-sig": true
+      },
+      "mechanism": "clean-success-full-attribution",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 6,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-7f084f5a2a",
+      "family": "S10",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "forged-authorship-signature",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-84f379ccc0",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-b",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-8d9903d999",
+      "family": "S5",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "cross-condition-relabel",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 5,
+        "v3-full": 5,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-9afe181da3",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-a",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-a2afd75393",
+      "family": "S3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "clean-failure-wrong-candidate-honest-level-2",
+      "primitive": "chacha",
+      "requested": 2,
+      "system_levels": {
+        "v2": 2,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 5,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "cid": "ic-a867f4c2e7",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-5",
+      "primitive": "chacha",
+      "requested": 5,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 5,
+        "v3-sig": 5
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-b0fc9cda9e",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-2",
+      "primitive": "ecdsa",
+      "requested": 2,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "cid": "ic-b96fb64212",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-3",
+      "primitive": "chacha",
+      "requested": 3,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 3,
+        "v3-sig": 3
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-bd80ccdc92",
+      "family": "S3",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "clean-failure-wrong-candidate-honest-level-2",
+      "primitive": "ecdsa",
+      "requested": 2,
+      "system_levels": {
+        "v2": 2,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-c0851246ae",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-c",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 4,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "cid": "ic-c28995df8a",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-4",
+      "primitive": "ecdsa",
+      "requested": 4,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 2,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "cid": "ic-c2b03fb397",
+      "family": "S2",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "clean-failure-no-effect-honest-level-2",
+      "primitive": "ecdsa",
+      "requested": 2,
+      "system_levels": {
+        "v2": 2,
+        "v3-full": 2,
+        "v3-sig": 2
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": false,
+        "malformed": true,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-cacc56ca12",
+      "family": "S15",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "malformed-d",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-cc9bea933a",
+      "family": "S9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "forged-trace-signature",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-e0f901fca5",
+      "family": "S8",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "foreign-authentic-reference-acceptance",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 3,
+        "v3-full": 3,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-e6273aa105",
+      "family": "S12",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "unauthorized-signer-record",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-e8ff0e1824",
+      "family": "S11",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "unsigned-executor-rewrite",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": 1,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 1,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "cid": "ic-eb1f3cdef2",
+      "family": "S9",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": true,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "forged-trace-signature",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 6,
+        "v3-full": null,
+        "v3-sig": null
+      },
+      "systems": {
+        "v2": "EMIT",
+        "v3-full": "REJECT",
+        "v3-sig": "REJECT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-f1cb585e50",
+      "family": "S14",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "unsupported-high-claim-over-partial-evidence",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 3,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 0,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-f63098442a",
+      "family": "S4",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "cross-run-splice-failed-records-with-successful-candidate",
+      "primitive": "chacha",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 0,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 3,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": null,
+        "v3-sig": 6
+      },
+      "cid": "ic-f77834fb2e",
+      "family": "S14",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": true
+      },
+      "mechanism": "unsupported-high-claim-over-partial-evidence",
+      "primitive": "ecdsa",
+      "requested": 6,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 3,
+        "v3-sig": 6
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "REJECT",
+        "v3-sig": "ACCEPT"
+      }
+    },
+    {
+      "adj": {
+        "crypto_ok": true,
+        "malformed": false,
+        "supported": 4,
+        "truth_strong": false
+      },
+      "asserted": {
+        "v2": null,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "cid": "ic-f9efdd14cd",
+      "family": "S13",
+      "fixture_ok": true,
+      "level6_promotion": {
+        "v2": false,
+        "v3-full": false,
+        "v3-sig": false
+      },
+      "mechanism": "incomplete-legitimate-level-4",
+      "primitive": "chacha",
+      "requested": 4,
+      "system_levels": {
+        "v2": 0,
+        "v3-full": 4,
+        "v3-sig": 4
+      },
+      "systems": {
+        "v2": "REJECT",
+        "v3-full": "ACCEPT",
+        "v3-sig": "ACCEPT"
+      }
+    }
+  ],
+  "protected_after": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "protected_before": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "system_failure_detail": [],
+  "systems": {
+    "adj": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_c/eb_independent_adj.py",
+    "v2": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/build/heb1_v2_claim_binding.py",
+    "v3-full": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_v3_full.py",
+    "v3-sig": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_v3_sig.py"
+  },
+  "trust": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_c/data/trust/iar_c_run_keys.json",
+  "trust_sha256": "d4629a4aa477f0bdb001bb2624d4ddef8a81f2dc0d6beef76a1057d4a9283952"
+}

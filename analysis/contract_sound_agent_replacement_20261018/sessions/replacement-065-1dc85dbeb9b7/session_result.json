@@ -1,0 +1,43 @@
+{
+  "condition": "C0",
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/candidate.py",
+    "output": {
+      "reason": "Nonce reuse in ChaCha20 enables keystream recovery from two ciphertexts, but without a known plaintext, crib, or distinguishing oracle, we cannot definitively confirm the nonce was reused or recover actionable plaintext.",
+      "status": "UNDERDETERMINED"
+    },
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/candidate_output.json",
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/executor_stdout.txt"
+  },
+  "kind": "control",
+  "latency_s": 5.640054941177368,
+  "ordinal": 65,
+  "provider_charge_usd": 0.0,
+  "provider_status": "SUCCESS",
+  "reference": {
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "crypto_details": {
+      "parse_or_math_error": true
+    },
+    "cryptographic_predicate": false,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "seed": 5,
+  "session_id": "replacement-065-1dc85dbeb9b7",
+  "task": "ChaCha20_Nonce_Repeat",
+  "token_usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 244,
+    "output_tokens": 116
+  },
+  "validator": {
+    "decision": "ACCEPT",
+    "reason": "public-evidence-consistent"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "artifact": "CLAIM_MATRIX_AUDIT",
+  "claims": 13,
+  "all_sources_exist": true,
+  "all_manuscript_locations_present": true,
+  "claims_with_explicit_limits": 13,
+  "rows": [
+    {
+      "claim_id": "PAPER-H1-V2-BOUND",
+      "source_checks": [
+        {
+          "path": "H1_V2_FAILURE_STAGE_AUDIT.md",
+          "exists": true
+        },
+        {
+          "path": "H1_V2_FAILURE_STAGE_MATRIX.csv",
+          "exists": true
+        },
+        {
+          "path": "revalidation_v2/events.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "90 envelopes delivered; 81/90 strict JSON; 35/60 sufficient responses with candidate fields; 0/60 oracle recovery; 30/30 correct abstention",
+      "counterexample_or_limit": "does not identify inference vs construction vs tool/feedback failure"
+    },
+    {
+      "claim_id": "PAPER-H1-EXP-OUTPUT",
+      "source_checks": [
+        {
+          "path": "exploratory_output_contract_20261017/summary.json",
+          "exists": true
+        },
+        {
+          "path": "scored_results.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "diagnostic 9-call exploration; 4/9 strict JSON; 0/9 local recovery",
+      "counterexample_or_limit": "not randomized against model sampling; not a capability or causal estimate"
+    },
+    {
+      "claim_id": "PAPER-H1-CODE-FEEDBACK-V1",
+      "source_checks": [
+        {
+          "path": "exploratory_code_feedback_20261017/REPORT.md",
+          "exists": true
+        },
+        {
+          "path": "failure_stage_summary.json",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "excluded_instrument_defect",
+      "permitted_wording": "4 submissions reached execution but failed with KeyError under a harness schema defect",
+      "counterexample_or_limit": "excluded from capability inference; defect retained as instrumentation evidence"
+    },
+    {
+      "claim_id": "PAPER-H1-CODE-FEEDBACK-V2",
+      "source_checks": [
+        {
+          "path": "exploratory_code_feedback_20261017_v2/REPORT.md",
+          "exists": true
+        },
+        {
+          "path": "FAILURE_STAGE_SUMMARY.json",
+          "exists": true
+        },
+        {
+          "path": "events.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "2/2 generated programs executed and were accepted by the independent verifier on first submission",
+      "counterexample_or_limit": "n=2; exploratory; no causal estimate; separate from V2/V4"
+    },
+    {
+      "claim_id": "PAPER-CHACHA20-CODE-FEEDBACK",
+      "source_checks": [
+        {
+          "path": "exploratory_code_feedback_chacha20_20261018/REPORT.md",
+          "exists": true
+        },
+        {
+          "path": "FAILURE_STAGE_SUMMARY.json",
+          "exists": true
+        },
+        {
+          "path": "events.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "2/2 generated programs executed and were accepted by the independent verifier on first submission",
+      "counterexample_or_limit": "n=2; explicit all-zero reference fixture; exploratory; no causal estimate; separate from ECDSA/V4"
+    },
+    {
+      "claim_id": "PAPER-RC4-CODE-FEEDBACK",
+      "source_checks": [
+        {
+          "path": "exploratory_code_feedback_rc4_20261018/REPORT.md",
+          "exists": true
+        },
+        {
+          "path": "FAILURE_STAGE_SUMMARY.json",
+          "exists": true
+        },
+        {
+          "path": "events.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "2/2 generated programs executed and were accepted by the independent verifier on first submission",
+      "counterexample_or_limit": "n=2; explicit known-plaintext fixture; exploratory; no causal estimate; separate from ECDSA/ChaCha20/V4"
+    },
+    {
+      "claim_id": "PAPER-V4-COHORT",
+      "source_checks": [
+        {
+          "path": "V4_TRAJECTORY_AUDIT.md",
+          "exists": true
+        },
+        {
+          "path": "R1_CLEAN_COHORT_V4_RESULTS.md",
+          "exists": true
+        },
+        {
+          "path": "V4_ORACLE_VERDICT_AUTHORITY_AUDIT.md",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "supported_bounded",
+      "permitted_wording": "8/12 accepted; 4/12 oracle failed; 31 programs",
+      "counterexample_or_limit": "n=3 per task; no matched feedback ablation; separate from fixed executor"
+    },
+    {
+      "claim_id": "PAPER-CBC-CONTROL",
+      "source_checks": [
+        {
+          "path": "sp2027/analysis/checkpoint007_active_experiments/runs_009/RUNS_009_STATUS.md",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "not model-backed; not original 16-byte task",
+      "permitted_wording": "amended 15-byte-plus-padding local control succeeded at 2",
+      "counterexample_or_limit": "021 queries; frozen 400-query condition failed"
+    },
+    {
+      "claim_id": "PAPER-MATCHED-REPLICATION",
+      "source_checks": [
+        {
+          "path": "MATCHED_REPLICATION_DESIGN.md",
+          "exists": true
+        },
+        {
+          "path": "MATCHED_REPLICATION_REPORT.md",
+          "exists": true
+        },
+        {
+          "path": "MATCHED_REPLICATION_SUMMARY.json",
+          "exists": true
+        },
+        {
+          "path": "MATCHED_REPLICATION_EXTENDED_20261018.md",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_ecdsa_replication_20261018/",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_chacha20_replication_20261018/",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_rc4_replication_20261018/",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_ecdsa_replication_20261018_seeds56/",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_chacha20_replication_20261018_seeds56/",
+          "exists": true
+        },
+        {
+          "path": "exploratory_code_feedback_rc4_replication_20261018_seeds56/",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "ECDSA ChaCha20 and RC4 each accepted 2/2 first-submission programs in each of four unseen seeds; 12/12 total; zero provider failures",
+      "counterexample_or_limit": "four sampled seeds per family; no pooled capability rate; no causal feedback claim; provider route attested"
+    },
+    {
+      "claim_id": "PAPER-BLIND-OPPORTUNITY-CONTRAST",
+      "source_checks": [
+        {
+          "path": "BLIND_OPPORTUNITY_CONTRAST_20261018.md",
+          "exists": true
+        },
+        {
+          "path": "BLIND_OPPORTUNITY_CONTRAST_20261018.json",
+          "exists": true
+        },
+        {
+          "path": "blind_opportunity_ecdsa_20261018/events.jsonl",
+          "exists": true
+        },
+        {
+          "path": "blind_opportunity_chacha20_20261018/events.jsonl",
+          "exists": true
+        },
+        {
+          "path": "blind_opportunity_rc4_20261018/events.jsonl",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "ECDSA 2/2 and RC4 2/2 accepted sessions; ChaCha20 0/2 accepted sessions and 3/3 rejected candidate verdicts; zero provider failures",
+      "counterexample_or_limit": "n=2 sessions per family; one ChaCha20 session submitted twice; no randomized causal disclosure estimate or pooled capability rate"
+    },
+    {
+      "claim_id": "PAPER-C3-POLICY-TRAJECTORIES",
+      "source_checks": [
+        {
+          "path": "POLICY_ATTACK_TRAJECTORY_MATRIX.csv",
+          "exists": true
+        },
+        {
+          "path": "POLICY_ATTACK_TRAJECTORY_AUDIT.md",
+          "exists": true
+        },
+        {
+          "path": "sp2027/agent-eval/runs_e2_r230_opencode_01/",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "TLS 4/10 and SSH 4/10 reserved-oracle successes with failure stages retained",
+      "counterexample_or_limit": "historical provider/task contract; no on-path downgrade claim; no pooled capability rate; separate from corrected cohorts"
+    },
+    {
+      "claim_id": "PAPER-C3-TARGET-QUALIFICATION",
+      "source_checks": [
+        {
+          "path": "C3_TARGET_QUALIFICATION_20261018.md",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "qualification_only",
+      "permitted_wording": "health params and exchange paths passed under new local image tags",
+      "counterexample_or_limit": "different image digests from frozen cards; no model or oracle result; not manuscript capability evidence"
+    },
+    {
+      "claim_id": "PAPER-PQC-POLICY-CONTROL",
+      "source_checks": [
+        {
+          "path": "PQC_POLICY_ATTACK_AUDIT.md",
+          "exists": true
+        },
+        {
+          "path": "../../ACTS-ATTACK/data/C2_pqc_generality.json",
+          "exists": true
+        },
+        {
+          "path": "../../ACTS-ATTACK/data/c2b_hybrid_required_control.json",
+          "exists": true
+        }
+      ],
+      "all_sources_exist": true,
+      "manuscript_location_present": true,
+      "status": "integrated_bounded",
+      "permitted_wording": "four local downgrade target demonstrations and 45 trace-backed policy-control handshakes",
+      "counterexample_or_limit": "not model-backed; not an ML-KEM break; environment-bounded; no on-path or all-deployment claim"
+    }
+  ],
+  "interpretation": "Source existence and scope fields are audited mechanically; this does not prove semantic truth or causal identification."
+}

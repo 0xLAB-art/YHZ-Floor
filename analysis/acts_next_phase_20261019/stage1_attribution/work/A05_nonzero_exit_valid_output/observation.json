@@ -1,0 +1,74 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "execution_observer",
+  "key_id": "ed25519-9db076cd2140268153030d07",
+  "kind": "execution_observation",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-A05_nonzero_exit_valid_output",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "execution_observation",
+      "role": "execution_observer",
+      "target_id": "s1-target-A05_nonzero_exit_valid_output"
+    },
+    "context_signature_hex": "746370afa435c48616bab361a41c15125af12ca01674649ccb4dd11e4f33c1c2790d6f51fed386bf92425137b19fada92297e42da413bd964c89d5e925449a0b",
+    "facts": {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A05_nonzero_exit_valid_output/program/candidate.py",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A05_nonzero_exit_valid_output/program/public_instance.json"
+      ],
+      "attempt_id": "s1-attempt-A05_nonzero_exit_valid_output",
+      "boundary": {
+        "allowed_interface": "argv-instance-json",
+        "enforced": true,
+        "network": "none-declared",
+        "restricted_python_subset": [
+          "base64",
+          "json",
+          "sys"
+        ]
+      },
+      "cwd": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A05_nonzero_exit_valid_output/execution",
+      "duration_ms": 32,
+      "env_allowlist": [
+        "PATH",
+        "PYTHONHASHSEED",
+        "LC_ALL"
+      ],
+      "env_sha256": "ab4390dda94a5975560e4eeeab9d3dc1ded6abf369c4317b40390913d63f325e",
+      "epoch": 1,
+      "executed_program_sha256": "c76c65565029705c1a1ed287f07a90baddc3cba04feda8d995008a56a9ebb9dc",
+      "finished_at": "2026-10-20T08:29:30.662+00:00",
+      "input_sha256": "735fd5c8ee850b3db34e4381475f434b9b3d8f08911b89141f298a7e27209489",
+      "observer_nonce": "483c6881cff43bdfffb520edd272702e54f49a6119b47726286beb9bf7de9d3b",
+      "observer_version": "acts-s1-trusted-observer/1",
+      "output_file_bytes": 153,
+      "output_file_present": true,
+      "output_file_sha256": "203d2bfec4c8d2e795b39d337faa8f1f1000f07e0393e542367f6c21fd295b7a",
+      "output_parsed": true,
+      "parser": "json-last-line-v1",
+      "program_source_sha256": "c76c65565029705c1a1ed287f07a90baddc3cba04feda8d995008a56a9ebb9dc",
+      "program_source_sha256_after": "c76c65565029705c1a1ed287f07a90baddc3cba04feda8d995008a56a9ebb9dc",
+      "returncode": 3,
+      "session_id": "s1-session-A05_nonzero_exit_valid_output",
+      "source_policy": {
+        "reason": "syntax-and-boundary-pass",
+        "status": "PASS"
+      },
+      "started_at": "2026-10-20T08:29:30.630+00:00",
+      "status": "EXECUTED",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdin_sha256": "735fd5c8ee850b3db34e4381475f434b9b3d8f08911b89141f298a7e27209489",
+      "stdout_bytes": 147,
+      "stdout_sha256": "2b39851597ddcca0bbc35429b40aec38a7b2f5e424415f685b8cc2497ddc044c",
+      "target_id": "s1-target-A05_nonzero_exit_valid_output"
+    }
+  },
+  "signature_hex": "6a964013499d72e605dda651faa01f1476155e857489a3a867b26c2286e4f77f0419d4779fedfbf679cef527884e780670677b974847a878ec1bec558207c90b"
+}

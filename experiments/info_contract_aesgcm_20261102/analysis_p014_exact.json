@@ -1,0 +1,69 @@
+{
+  "attrition_test": {
+    "fisher_two_sided_p": 7.967395759334484e-08,
+    "note": "dropout is cell-correlated; it is an attrition contrast, not an outcome",
+    "stated_drops": 0,
+    "stated_evaluable": 32,
+    "withheld_drops": 19,
+    "withheld_evaluable": 13
+  },
+  "cohort": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+  "estimator_note": "analyze_p014.py prints p=0.0 for the premise marginal because the value is below its float display floor; exact values here come from scipy.stats, same test family, and the frozen estimator was NOT edited after results",
+  "generated": "2026-11-02T08:21:30Z",
+  "namespace": "sp2027/research_execution/info_contract_aesgcm_20261102",
+  "naming_marginal": {
+    "fisher_two_sided_p": 0.04548543101249313,
+    "named_accepted": 16,
+    "named_evaluable": 27,
+    "unnamed_accepted": 16,
+    "unnamed_evaluable": 18
+  },
+  "per_cell": {
+    "C1": {
+      "accepted": 16,
+      "evaluable": 16,
+      "submissions": 16,
+      "terminal_drops": 0,
+      "turns": 16
+    },
+    "C2": {
+      "accepted": 0,
+      "evaluable": 2,
+      "submissions": 7,
+      "terminal_drops": 14,
+      "turns": 7
+    },
+    "C3": {
+      "accepted": 16,
+      "evaluable": 16,
+      "submissions": 16,
+      "terminal_drops": 0,
+      "turns": 16
+    },
+    "C4": {
+      "accepted": 0,
+      "evaluable": 11,
+      "submissions": 23,
+      "terminal_drops": 5,
+      "turns": 23
+    }
+  },
+  "premise_marginal": {
+    "fisher_two_sided_p": 1.3697465093463684e-11,
+    "stated_accepted": 32,
+    "stated_evaluable": 32,
+    "withheld_accepted": 0,
+    "withheld_evaluable": 13
+  },
+  "primary_paired_C1_vs_C4": {
+    "b01": 0,
+    "b10": 11,
+    "evaluable_pairs": 11,
+    "exact_two_sided_p": 0.0009765625,
+    "note": "evaluable pairs only; registered denominator was 16"
+  },
+  "provider_failures": 19,
+  "provider_responses": 62,
+  "sessions_recorded": 64,
+  "sessions_registered": 64
+}

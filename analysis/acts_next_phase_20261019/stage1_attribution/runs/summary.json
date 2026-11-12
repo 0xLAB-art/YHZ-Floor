@@ -1,0 +1,505 @@
+{
+  "case_count": 27,
+  "schema": "acts-next-phase/s1-summary/1",
+  "set1_crypto_truth": {
+    "digest_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct",
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0"
+      ],
+      "false_attribution": [
+        "C03_submitted_output_not_observed"
+      ],
+      "false_rejection": [
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest"
+      ]
+    },
+    "full": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "C03_submitted_output_not_observed"
+      ],
+      "false_attribution": [],
+      "false_rejection": [
+        "A05_nonzero_exit_valid_output",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ]
+    },
+    "full_lenient": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct",
+        "A05_nonzero_exit_valid_output"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "C03_submitted_output_not_observed"
+      ],
+      "false_attribution": [],
+      "false_rejection": [
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ]
+    },
+    "signed_context_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct",
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C05_target_substitution",
+        "C12_observation_output_absent_from_bundle"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0"
+      ],
+      "false_attribution": [
+        "C03_submitted_output_not_observed"
+      ],
+      "false_rejection": [
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C04_context_attempt_conflict",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ]
+    },
+    "signed_digest_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct",
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0"
+      ],
+      "false_attribution": [
+        "C03_submitted_output_not_observed"
+      ],
+      "false_rejection": [
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest"
+      ]
+    }
+  },
+  "set2_attribution_truth": {
+    "digest_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest"
+      ],
+      "fa_rate": [
+        13,
+        25
+      ],
+      "false_attribution": [
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C03_submitted_output_not_observed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "false_rejection": [],
+      "fr_rate": [
+        0,
+        2
+      ]
+    },
+    "full": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A05_nonzero_exit_valid_output",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C03_submitted_output_not_observed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "fa_rate": [
+        0,
+        25
+      ],
+      "false_attribution": [],
+      "false_rejection": [],
+      "fr_rate": [
+        0,
+        2
+      ]
+    },
+    "full_lenient": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C03_submitted_output_not_observed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "fa_rate": [
+        1,
+        25
+      ],
+      "false_attribution": [
+        "A05_nonzero_exit_valid_output"
+      ],
+      "false_rejection": [],
+      "fr_rate": [
+        0,
+        2
+      ]
+    },
+    "signed_context_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C04_context_attempt_conflict",
+        "C06_stale_epoch",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest",
+        "C11_stale_attempt",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "fa_rate": [
+        6,
+        25
+      ],
+      "false_attribution": [
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C03_submitted_output_not_observed",
+        "C05_target_substitution",
+        "C12_observation_output_absent_from_bundle"
+      ],
+      "false_rejection": [],
+      "fr_rate": [
+        0,
+        2
+      ]
+    },
+    "signed_digest_only": {
+      "correct_attribution": [
+        "A01_ecdsa_correct",
+        "A02_chacha_correct"
+      ],
+      "correct_rejection": [
+        "A03_ecdsa_wrong_answer",
+        "A04_chacha_wrong_answer",
+        "A06_malformed_stdout",
+        "A07_empty_stdout",
+        "A08_underdetermined_c0",
+        "B01_missing_observation",
+        "B02_missing_reference_verdict",
+        "B03_missing_artifact_record",
+        "B04_missing_program_source_file",
+        "B05_missing_stdout_entry",
+        "C07_tampered_signature",
+        "C08_unauthorized_signer",
+        "C09_conflicting_duplicate_record",
+        "C10_stale_bundle_digest"
+      ],
+      "fa_rate": [
+        11,
+        25
+      ],
+      "false_attribution": [
+        "A05_nonzero_exit_valid_output",
+        "C01_producer_digest_mismatch",
+        "C02_credited_program_not_executed",
+        "C03_submitted_output_not_observed",
+        "C04_context_attempt_conflict",
+        "C05_target_substitution",
+        "C06_stale_epoch",
+        "C11_stale_attempt",
+        "C12_observation_output_absent_from_bundle",
+        "R01_replay_shared_ledger",
+        "R02_prior_attempt_observation_replayed"
+      ],
+      "false_rejection": [],
+      "fr_rate": [
+        0,
+        2
+      ]
+    }
+  },
+  "set3_family": {
+    "digest_only": {
+      "a_non_success_promoted": 1,
+      "a_success_attributed": [
+        2,
+        2
+      ],
+      "b_inconclusive": [
+        5,
+        5
+      ],
+      "b_reject": 0,
+      "cr_detected": [
+        2,
+        14
+      ]
+    },
+    "full": {
+      "a_non_success_promoted": 0,
+      "a_success_attributed": [
+        2,
+        2
+      ],
+      "b_inconclusive": [
+        5,
+        5
+      ],
+      "b_reject": 0,
+      "cr_detected": [
+        14,
+        14
+      ]
+    },
+    "full_lenient": {
+      "a_non_success_promoted": 1,
+      "a_success_attributed": [
+        2,
+        2
+      ],
+      "b_inconclusive": [
+        5,
+        5
+      ],
+      "b_reject": 0,
+      "cr_detected": [
+        14,
+        14
+      ]
+    },
+    "signed_context_only": {
+      "a_non_success_promoted": 1,
+      "a_success_attributed": [
+        2,
+        2
+      ],
+      "b_inconclusive": [
+        5,
+        5
+      ],
+      "b_reject": 0,
+      "cr_detected": [
+        9,
+        14
+      ]
+    },
+    "signed_digest_only": {
+      "a_non_success_promoted": 1,
+      "a_success_attributed": [
+        2,
+        2
+      ],
+      "b_inconclusive": [
+        5,
+        5
+      ],
+      "b_reject": 0,
+      "cr_detected": [
+        4,
+        14
+      ]
+    }
+  },
+  "stage01": {
+    "accepted": [
+      "A01_ecdsa_correct",
+      "A02_chacha_correct",
+      "C02_credited_program_not_executed",
+      "C03_submitted_output_not_observed"
+    ],
+    "applicable": 13,
+    "false_acceptances": [
+      "C02_credited_program_not_executed",
+      "C03_submitted_output_not_observed"
+    ]
+  }
+}

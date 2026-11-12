@@ -1,0 +1,44 @@
+{
+  "checks": 6,
+  "all_pass": true,
+  "failures": [],
+  "check_details": [
+    {
+      "check": "main_narrative_focused",
+      "pass": true,
+      "detail": "intro Finding 1-3 + RQ1-RQ4 + six-item Contributions list; conclusion restates central argument; campaign names bounded to census/tier statements"
+    },
+    {
+      "check": "worked_assessment_with_actual_fields",
+      "pass": true,
+      "detail": "supp_sections/S03_e1_fields.tex: exact 10-row worksheet to 9-field mapping F1-F9 with per-field evidence question, frozen values, qualifiers, reconstruction normalization"
+    },
+    {
+      "check": "historical_coverage_in_supplement",
+      "pass": true,
+      "detail": "supp_sections/S17_historical_arms.tex: arm map 001-035 + SP2-05, EXP-034/EXP-035 identified, lineage-not-revived-performance stated"
+    },
+    {
+      "check": "tier_assignment_no_pooling",
+      "pass": true,
+      "detail": "every quantitative result carries V/R/E tier; honesty flags honored: never pool, 74 != 148, historical 16/16 not escrow baseline, WSL2 supplement-only n=90,000"
+    },
+    {
+      "check": "page_budget",
+      "pass": true,
+      "detail": "main_content 13 / submission 18 / supplement 7 pages, zero LaTeX errors"
+    },
+    {
+      "check": "numbers_lock_section_g",
+      "pass": true,
+      "detail": "NUMBERS_LOCK.md Section G records the lock on reported counts; corpus accounting 33,746 entries/15 families; 14,131 files/7.46GB; 6,020 structured; 655,424 JSONL records"
+    }
+  ],
+  "files": {
+    "sp2027/paper/capability_merge_20261016/main_sections/01_intro.tex": "Finding 1-3, RQ1-RQ4, Contributions six bullets",
+    "sp2027/paper/capability_merge_20261016/main_sections/10_conclusion.tex": "central argument restated",
+    "sp2027/paper/capability_merge_20261016/supp_sections/S03_e1_fields.tex": "F1-F9 worked evidence-field mapping",
+    "sp2027/paper/capability_merge_20261016/supp_sections/S17_historical_arms.tex": "historical arm map 001-035 + SP2-05",
+    "sp2027/paper/capability_merge_20261016/NUMBERS_LOCK.md": "Section G numbers lock"
+  }
+}

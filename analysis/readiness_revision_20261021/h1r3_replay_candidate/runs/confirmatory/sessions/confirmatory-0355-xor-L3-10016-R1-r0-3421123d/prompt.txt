@@ -1,0 +1,245 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"plaintext": "lowercase hex, exactly target.length bytes"}
+
+Instance (JSON):
+{
+  "target": {
+    "message_index": 7,
+    "offset": 64,
+    "length": 128
+  },
+  "ciphertexts": [
+    {
+      "message_index": 0,
+      "data": "62da04cfb60784a5fd48ef9d638c42d7b27a36cdd6453347aef659d31f1c85a395ead8225081c2ea58e33bf6220000862ee0709be943d962ebbd4d6b05c9f1277dfdf2211433c3caf7f81847eba0fb1fbb53ea8c1579e2e32868376992c545c77c54cd53da46eb530a2da895df6f06ed49c9ed38f1c5270f910d2021a0d967ed6e2b68d9dbf7c40b36061e5b651018e6c742afcf2c4d9ce0a4561aa068d29458b725a53430ad25692bd23a68c0d3cd23b2c2033741705564cab7bc183f10320cbb4309eae28c4b32876d302a4317e3b5b5ef38eff1ada4dc1fcaf93333583d774e4f50d406c6ef483bd98c23c31977a9557d3efab1ded12571b313a46f50ddc3"
+    },
+    {
+      "message_index": 1,
+      "data": "f2ba0a00da05ba9d053160195d40e1456b80d23d019d60cd950f65b132d0c6ae154456cd3f4fb1a7486b99efdfd6958486eccb56d7a3d945953b76fc4fffd3654e950949a79c597029e67825c59ea44b0331590f0c54c90b7b6d284325d365f0c40562204b7f083c213a572d5309551770cdc74d35809a5a18ae30bbab914c2f692b5e21af169d342f352a03b29478ca7e489cc7bb4d15f6633e66d8f09b241758d7a1a2608e7c873b387514a1695f85fa4b1ce4476e68a728611671a1b04fbf278efe49ad9395471369dc77366281bed050c54af4e2cff16dcaca87196a1cdf218211aa193575d52311b956efb50d3f4042858f0cf115529546e719a7359c83"
+    },
+    {
+      "message_index": 2,
+      "data": "33e9c0203e4844aa3f31c20aa293aa2cf2cafb7e34e91d93c0a40c70069ffe5440bd12372cf11f4c6c1affc77a3d728602875f35ef50b55ef188e57dcfe759031ad57b9153f93c7aaacaec7a61c54194a713f8185ab8dc89ff28a9b23959d9b1451f7bf7a2c72d5edd989f8ce72f4caeca112cdec51c186f86a0cfd4beedfa66fb759c403007a488715f8bf3dd09a96c19ae785d621fefe12117c2a9d45d106d14b54ccc5ce143cbc8e82db8392957f27ff9120bd7cf7a86d0e0a57f1186d45fae8b1efea3f4097dcb40037755800d4e29957dac4d142981e9613bf7230b85cf1bd8a1f3f8afbb80a7e4b4463b97db6fd0a960042043b1aee634cc5b46c63545"
+    },
+    {
+      "message_index": 3,
+      "data": "ccbe5677dea81fd028a9a00b9b17b1d413ad00aeb5277ec4368f9521321c09b42dd0458eae2a871ecc865ed2e720ebc7662182c5e94705887ebeb08e28cb50ef24984cb54563176514b04d7c9fa12939f4c7a7ef3facbb00ef9b117d3f59876c0f12a7b8b4d835d0ec470892bcb743fe16cba54608b437d895c53f0f90769d2b5ebbee85ff375a942e2b555b39b2e227ec6eb92e4a7d9bbee2073ed696cf2e495b3233b7ff770b307962ba26aaf9dbc3803c38bcdec7ac4354974fd59f3098fc26196ef8a06fdf42a6e1fd618962e77d3f1867886598e3871ec17260759f31093950cc3a5c1ef9452bc1074d243e1975233bcdb8ccd705b374ac523c14f171e4"
+    },
+    {
+      "message_index": 4,
+      "data": "51e32a9bbe18c29f786d32d5de42ea59c35f97f8df88a7f5cfa8e15e71df48423067168c78e4a58f728a34b37056472b3bed87b6350fb98d701b100d6466b70d30ea4f861b77e44207b598c4c0cd43c475738733ac7a138185c85836efed17e11e80aee9f3fc61f7e3f89a981fd274da7dfb48d2052a0fd9c0922db0bca0a10c9b732b11c1d9183318848ec446e3673fd00a2a254d55b5706ba1b9ec09d7581be303f607763c22c40161e2e1da9cda97ebef79339e77f25c9f48385b865fdbab3a70b85110450718e6ef72ee11f01f9a417e3a35acbc8ef51f8f4296b3a661c0eada968d567f7d41f3031937b03814f5b490159c1a71fee67c9c349c9dddb719"
+    },
+    {
+      "message_index": 5,
+      "data": "94463fddb495c4e2fa1682d1605fff0886937cee635e557ee9871d6a7d8104d8c17b69da7a341fc088075c59631c28fa7b8d7df075889997c37430556b1ea445e4086d404ab0dd3516780b1f263d36b3ea654138e067b078791f900723a9d64fb555f6ae367969b6421ad30e1a3bc31729560b46cb83b44a6cf7b223cdb5c20df230f216d50b97c490efb5ff315a3f5537039d633ae70f2ecf87c8010301742f51f78f8169e7f2b1b197a6e4df379bb24e36ca3c4f2fd73134e130ffb905da0219bddf5fd62ff406c6cf185770d7b4d5494b68744fbf632ce44162f46cdd1acaedf6cf68da9a008fcfb5094a2c161ef5d1be03072f3f4bd120b02d542b8589af"
+    },
+    {
+      "message_index": 6,
+      "data": "670e1982982a84b0fcd102b9398c8bc212fb364a3bd11aeaf05bf3c3f3d3ff8627aa4e7a6cc6681ecb7509b22ad5a43c33fc47bcd15cb3dc7500f1c333cf64822a75115957cc0299deed6a3a3be10ef484214f03de816c85afe6e92805b60a93a29f6c0a844aa7cbb3e314c08158277c3ed3ca602003fec5a257686882088bcfbd5b143a4d3dd75b9eecfa9a3a1dca5b982c461834c1ba3902b50c515c15947c63e919afe9d77ffd544ee2dd071ceadd7a508510c712661f615684354e99769862b8c26eee9739b7227dde6c18583eb3add233151a3250c16ebe385b3cee9c04a8b893f81b81b1256146e4998c41254d5a792ad39edbd2e6db03b16555ec3377"
+    },
+    {
+      "message_index": 7,
+      "data": "c868da8dfde7291e60ca1f86c45d679fc61c0eb348e2d296ee8062b496b57c703c1eb4286a418c73b6fcb349233be05a094d7ad156002b24cd28788c6c34106f99b14da6f97612fd8ed7686b4acc5a706f64e881fe8e026466dd29f3ffdd3cab2bb1a67503d7e38bdc3c8d60226b3de4b1698576f9c2716706fd0b8c85c693627b1bf6e69d1587ffa8d3cebf2651ec8c77148257703fd7cee73a6674097816099593440d2bfe6be1b942eed0180b8ba1d1036039673a496da699b0d25a358aa5b436c8f0cbff3e54b16c0d79fd5fc6ab305f4ea153f37671dd1ec9b912a5d2c1c57cd3538f3ffd350c8367c7d3d30699271392335b695cf8b1261eefeb46749a"
+    }
+  ],
+  "encoding": "hex-v1",
+  "known_plaintexts": [
+    {
+      "message_index": 6,
+      "offset": 64,
+      "data": "2aea3828185c"
+    },
+    {
+      "message_index": 1,
+      "offset": 70,
+      "data": "117f"
+    },
+    {
+      "message_index": 3,
+      "offset": 72,
+      "data": "f8441f8e9f"
+    },
+    {
+      "message_index": 2,
+      "offset": 77,
+      "data": "ec"
+    },
+    {
+      "message_index": 6,
+      "offset": 78,
+      "data": "2f0397"
+    },
+    {
+      "message_index": 2,
+      "offset": 81,
+      "data": "4e30"
+    },
+    {
+      "message_index": 3,
+      "offset": 83,
+      "data": "e291193e162c"
+    },
+    {
+      "message_index": 1,
+      "offset": 89,
+      "data": "c42b"
+    },
+    {
+      "message_index": 5,
+      "offset": 91,
+      "data": "c80b0693"
+    },
+    {
+      "message_index": 4,
+      "offset": 95,
+      "data": "832a"
+    },
+    {
+      "message_index": 2,
+      "offset": 97,
+      "data": "4d8c4f50b7d8"
+    },
+    {
+      "message_index": 5,
+      "offset": 103,
+      "data": "df"
+    },
+    {
+      "message_index": 2,
+      "offset": 104,
+      "data": "42e5"
+    },
+    {
+      "message_index": 5,
+      "offset": 106,
+      "data": "4100"
+    },
+    {
+      "message_index": 3,
+      "offset": 108,
+      "data": "6409a00e9ef91c84be"
+    },
+    {
+      "message_index": 5,
+      "offset": 117,
+      "data": "6c50e4"
+    },
+    {
+      "message_index": 2,
+      "offset": 120,
+      "data": "6e"
+    },
+    {
+      "message_index": 0,
+      "offset": 121,
+      "data": "80"
+    },
+    {
+      "message_index": 4,
+      "offset": 122,
+      "data": "7c3f"
+    },
+    {
+      "message_index": 1,
+      "offset": 124,
+      "data": "acc32cac0945e5ace2255d"
+    },
+    {
+      "message_index": 3,
+      "offset": 135,
+      "data": "69f456f3229f2c48"
+    },
+    {
+      "message_index": 6,
+      "offset": 143,
+      "data": "5965ea551db3"
+    },
+    {
+      "message_index": 1,
+      "offset": 149,
+      "data": "b6c0"
+    },
+    {
+      "message_index": 2,
+      "offset": 151,
+      "data": "3e1fdfcbf1b5"
+    },
+    {
+      "message_index": 0,
+      "offset": 157,
+      "data": "f3c097b9c0"
+    },
+    {
+      "message_index": 3,
+      "offset": 162,
+      "data": "f5a0"
+    },
+    {
+      "message_index": 5,
+      "offset": 164,
+      "data": "cd"
+    },
+    {
+      "message_index": 2,
+      "offset": 165,
+      "data": "ee"
+    },
+    {
+      "message_index": 5,
+      "offset": 166,
+      "data": "56"
+    },
+    {
+      "message_index": 6,
+      "offset": 167,
+      "data": "1c"
+    },
+    {
+      "message_index": 4,
+      "offset": 168,
+      "data": "7c2765"
+    },
+    {
+      "message_index": 0,
+      "offset": 171,
+      "data": "261c0eb35a"
+    },
+    {
+      "message_index": 2,
+      "offset": 176,
+      "data": "e1"
+    },
+    {
+      "message_index": 4,
+      "offset": 177,
+      "data": "00"
+    },
+    {
+      "message_index": 0,
+      "offset": 178,
+      "data": "39"
+    },
+    {
+      "message_index": 1,
+      "offset": 179,
+      "data": "d8e20f"
+    },
+    {
+      "message_index": 4,
+      "offset": 182,
+      "data": "ab7fddff72288caecd71"
+    }
+  ]
+}

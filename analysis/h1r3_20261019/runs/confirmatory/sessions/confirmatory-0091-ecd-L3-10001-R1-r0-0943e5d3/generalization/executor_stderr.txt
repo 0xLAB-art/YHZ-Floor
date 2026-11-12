@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0091-ecd-L3-10001-R1-r0-0943e5d3/generalization/candidate.py", line 52, in <module>
+    d, k = recover_private_key(signatures[13], signatures[15], n)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0091-ecd-L3-10001-R1-r0-0943e5d3/generalization/candidate.py", line 28, in recover_private_key
+    assert r1 == r2, "Signatures must have same r"
+           ^^^^^^^^
+AssertionError: Signatures must have same r

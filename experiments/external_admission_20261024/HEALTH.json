@@ -1,0 +1,32 @@
+{
+  "classification": "AUTH_SMOKE, non-evidence",
+  "config": {
+    "base_url": "https://api.apmix.ai",
+    "identity_note": "provider-attested route label only; no hosted-weight identity claimed",
+    "model": "claude-sonnet-4-6-free"
+  },
+  "estimated_cost_usd": 4.8e-05,
+  "namespace": "external_admission_20261024",
+  "precedent": "2026-10-18 contract-sound pilot invalidated by pre-output HTTP 401s; health must be verified before session creation",
+  "probes": [
+    {
+      "attempted": 1792818168.2396092,
+      "observed": {
+        "id": "msg_a185a3eb47b22dec20ce6bf3",
+        "model_label": "claude-sonnet-4-6-free",
+        "reply": "OK",
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 11,
+          "output_tokens": 1
+        }
+      },
+      "probe": "POST /v1/messages (16-token smoke)",
+      "result": "ok"
+    }
+  ],
+  "purpose": "Provider health verification before Phase 2 sessions; excluded from all analyses per project protocol (2026-10-18 NO-GO pilot)",
+  "recorded": "2026-10-24T05:03:02Z"
+}

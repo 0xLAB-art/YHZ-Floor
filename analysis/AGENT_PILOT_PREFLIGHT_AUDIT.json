@@ -1,0 +1,146 @@
+{
+  "c0_audit": {
+    "all_decisive_observation_withheld": true,
+    "all_two_ambiguity_examples": true,
+    "controls": 24
+  },
+  "component_gates": {
+    "reference_recomputes_crypto_and_cert_integrity": true,
+    "runner_is_one_shot": true,
+    "runner_protected_paths_absent": true,
+    "schema_present": true,
+    "validator_forbidden_fields_declared": true
+  },
+  "offline_dry_run": {
+    "all_provider_calls_zero": true,
+    "all_session_results_present": true,
+    "c0_reference_rejected": 24,
+    "c1_c2_reference_accepted": 48,
+    "estimated_cost_usd": 0.0,
+    "mode": "offline-deterministic-stand-in",
+    "network_calls": 0,
+    "provider_calls": 0,
+    "reference_counts": {
+      "ACCEPTED": 48,
+      "REJECTED": 24
+    },
+    "rows": 72,
+    "schedule_seed": 20261018,
+    "schema_valid_certificates": 72,
+    "validator_counts": {
+      "ACCEPT": 72,
+      "REJECT": 0
+    }
+  },
+  "pair_audit": {
+    "all_common_interface_fields_equal": true,
+    "all_feedback_equal": true,
+    "all_parser_equal": true,
+    "all_payloads_semantically_equal": true,
+    "all_query_budgets_equal": true,
+    "all_raw_representations_distinct": true,
+    "all_seeds_same": true,
+    "all_timeout_equal": true,
+    "all_witnesses_present": true,
+    "pairs": 24,
+    "payload_failures": []
+  },
+  "protected_hashes": {
+    "sp2027/analysis/RESULTS_LOCK.json": {
+      "actual": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "expected": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "unchanged": true
+    },
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": {
+      "actual": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "expected": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "unchanged": true
+    },
+    "sp2027/paper/main.pdf": {
+      "actual": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "expected": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "unchanged": true
+    },
+    "sp2027/paper/main.tex": {
+      "actual": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "expected": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461",
+      "unchanged": true
+    }
+  },
+  "protocol_freeze": {
+    "cost_ceiling_in_current_blocked_freeze_usd": 0.0,
+    "execution_gate_locked": true,
+    "max_input_token_estimate_at_4_chars": 287.5,
+    "max_output_tokens_per_call": 1800,
+    "max_prompt_chars": 1150,
+    "model_cost_forecast_if_paid_rate_used_usd": 2.0061,
+    "provider_behavior_live_checked": false,
+    "provider_endpoint_in_adapter": true,
+    "provider_route_in_runner": "claude-sonnet-4-6-free",
+    "runner_constants": {
+      "ALERT_USD": 50.0,
+      "HALT_USD": 200.0,
+      "MAX_TURNS": 1,
+      "ROUTE": "claude-sonnet-4-6-free",
+      "TIMEOUT_SECONDS": 600
+    },
+    "stage_freeze": {
+      "agent_calls_allowed": false,
+      "automatic_retries": 0,
+      "network_calls_observed": 0,
+      "planned_sessions": 72,
+      "provider_calls_observed": 0,
+      "provider_cost_ceiling_usd": 0.0,
+      "seed_replacement": false,
+      "status": "BLOCKED_PENDING_USER_APPROVAL",
+      "study_expansion": false
+    }
+  },
+  "recommendation": "NO-GO: preflight evidence is strong for deterministic controls, but execution must remain locked because the current freeze is agent_calls_allowed=false and provider behavior was intentionally not live-checked; resolve runner/freeze ceiling alignment and obtain explicit approval before any provider call.",
+  "schedule_audit": {
+    "automatic_retries": 0,
+    "control_rows": 24,
+    "matches_frozen_generator": true,
+    "primary_rows": 48,
+    "rows": 72,
+    "seed_replacement": false,
+    "study_expansion": false
+  },
+  "stage1_audit": {
+    "metrics": {
+      "clean_invalid_rejected": 10,
+      "clean_valid_accepted": 10,
+      "defect_by_family": {
+        "interface_contamination": 8,
+        "replay_cross_session": 8,
+        "stale_binding": 8,
+        "verifier_version_mismatch": 8,
+        "wrong_field": 8
+      },
+      "defects_rejected": 40,
+      "heldout_by_family": {
+        "interface_contamination": 4,
+        "replay_cross_session": 4,
+        "stale_binding": 4,
+        "verifier_version_mismatch": 4,
+        "wrong_field": 4
+      },
+      "heldout_rejected": 20,
+      "mislabeled_fixture_disagreements": 2,
+      "overhead_ms": {
+        "reference_mean": 89.34476643238061,
+        "validator_mean": 40.87218576508652
+      },
+      "public_forbidden_field_cases": 0,
+      "reference_validator_disagreements": 0,
+      "total": 60
+    },
+    "reference_crypto_truth_is_recomputed": true,
+    "reference_validator_disagreements": 0,
+    "rows": 60,
+    "schema_certificate_files_found": 60,
+    "schema_certificate_files_valid": 60,
+    "schema_errors": [],
+    "validator_only_public_evidence": true
+  }
+}

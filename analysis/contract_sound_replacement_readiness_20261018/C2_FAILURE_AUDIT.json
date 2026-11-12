@@ -1,0 +1,42 @@
+[
+  {
+    "candidate_output_present": false,
+    "classification": "genuine_contract_policy_violation",
+    "diagnostic_only": true,
+    "ordinal": 5,
+    "qualification": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "hashlib"
+      }
+    ],
+    "reference_verdict": null,
+    "seed": 3,
+    "session_id": "contract-sound-005-1f13f6e4cd6e",
+    "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_forensic_replay_20261018/005-contract-sound-005-1f13f6e4cd6e/candidate.py",
+    "source_sha256": "acc4a84ff04c4b6f25bc81c289117e39f2e179688e2030f1f0ccee1abc658fc4",
+    "source_text": "import json\nimport sys\nfrom hashlib import sha256\n\ndef modinv(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return b, 0, 1\n        gcd, x1, y1 = egcd(b % a, a)\n        x = y1 - (b // a) * x1\n        y = x1\n        return gcd, x, y\n    gcd, x, _ = egcd(a % m, m)\n    if gcd != 1:\n        raise ValueError(\"No inverse\")\n    return (x % m + m) % m\n\ndef bytes_to_int(b):\n    return int.from_bytes(b, 'big')\n\ndef int_to_hex(n):\n    return format(n, '064x')\n\nwith open(sys.argv[1], 'r') as f:\n    data = json.load(f)\n\nimport base64\n\npx = bytes_to_int(base64.b64decode(data['public_key'][0]))\npy = bytes_to_int(base64.b64decode(data['public_key'][1]))\n\nr1 = bytes_to_int(base64.b64decode(data['signature_1']['r']))\ns1 = bytes_to_int(base64.b64decode(data['signature_1']['s']))\nz1 = bytes_to_int(base64.b64decode(data['signature_1']['z']))\n\nr2 = bytes_to_int(base64.b64decode(data['signature_2']['r']))\ns2 = bytes_to_int(base64.b64decode(data['signature_2']['s']))\nz2 = bytes_to_int(base64.b64decode(data['signature_2']['z']))\n\np = 0xFFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551\n\nk = ((z1 - z2) * modinv(s1 - s2, p)) % p\nd = ((s1 * k - z1) * modinv(r1, p)) % p\n\nprint(json.dumps({\"d\": int_to_hex(d), \"k\": int_to_hex(k)}))\n",
+    "stderr": "",
+    "stderr_path": null,
+    "task": "ECDSA_Nonce_Reuse",
+    "terminal_status": "SANDBOX_REJECTED"
+  },
+  {
+    "candidate_output_present": false,
+    "classification": "candidate_runtime_failure",
+    "diagnostic_only": true,
+    "ordinal": 25,
+    "qualification": [],
+    "reference_verdict": null,
+    "seed": 1,
+    "session_id": "contract-sound-025-9c90a80b0096",
+    "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_forensic_replay_20261018/025-contract-sound-025-9c90a80b0096/candidate.py",
+    "source_sha256": "a9702512ffa1c0f85c3902a3adca483ed2bb5921d87340854321b9f46bad62bb",
+    "source_text": "import sys\nimport json\nimport base64\n\ndef xor_bytes(a, b):\n    return bytes(x ^ y for x, y in zip(a, b))\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nc1 = base64.b64decode(data['ciphertext_1'])\nc2 = base64.b64decode(data['ciphertext_2'])\np1 = bytes.fromhex(data['known_plaintext_1'])\n\nkeystream = xor_bytes(c1, p1)\np2 = xor_bytes(c2, keystream)\n\nprint(json.dumps({\"plaintext_2\": p2.hex()}))\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_forensic_replay_20261018/025-contract-sound-025-9c90a80b0096/candidate.py\", line 13, in <module>\n    p1 = bytes.fromhex(data['known_plaintext_1'])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: non-hexadecimal number found in fromhex() arg at position 0\n",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_forensic_replay_20261018/025-contract-sound-025-9c90a80b0096/executor_stderr.txt",
+    "task": "ChaCha20_Nonce_Repeat",
+    "terminal_status": "EXECUTION_FAILED"
+  }
+]

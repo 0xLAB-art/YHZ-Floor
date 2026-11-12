@@ -1,0 +1,303 @@
+{
+  "deltas": {
+    "C1": {
+      "delta": -0.4375,
+      "fisher_p": 1.4289172787786214e-14,
+      "newcombe": [
+        -0.537437352745648,
+        -0.33133504687154625
+      ],
+      "p021": [
+        43,
+        96
+      ],
+      "p023": [
+        1,
+        96
+      ]
+    },
+    "C2": {
+      "delta": -0.3125,
+      "fisher_p": 4.56623131804819e-06,
+      "newcombe": [
+        -0.4279393213756798,
+        -0.1833182887483577
+      ],
+      "p021": [
+        81,
+        96
+      ],
+      "p023": [
+        51,
+        96
+      ]
+    },
+    "C3": {
+      "delta": -0.4479166666666667,
+      "fisher_p": 4.977990987561715e-16,
+      "newcombe": [
+        -0.5474854093599193,
+        -0.3449005121294494
+      ],
+      "p021": [
+        43,
+        96
+      ],
+      "p023": [
+        0,
+        96
+      ]
+    },
+    "C4": {
+      "delta": -0.6145833333333334,
+      "fisher_p": 6.037113860031007e-24,
+      "newcombe": [
+        -0.7057438504344169,
+        -0.5074567439865708
+      ],
+      "p021": [
+        59,
+        96
+      ],
+      "p023": [
+        0,
+        96
+      ]
+    },
+    "total": {
+      "delta": -0.453125,
+      "fisher_p": 1.1164084340341722e-40,
+      "newcombe": [
+        -0.5101571152574079,
+        -0.3905217756697798
+      ],
+      "p021": [
+        226,
+        384
+      ],
+      "p023": [
+        52,
+        384
+      ]
+    }
+  },
+  "failure_attempts": {
+    "p021": {
+      "C1:HTTP_ERROR": 43,
+      "C2:EMPTY_RESPONSE": 35,
+      "C2:HTTP_ERROR": 46,
+      "C3:HTTP_ERROR": 42,
+      "C3:TIMEOUT": 1,
+      "C4:HTTP_ERROR": 58,
+      "C4:TIMEOUT": 1
+    },
+    "p023": {
+      "C1:HTTP_ERROR": 1,
+      "C2:EMPTY_RESPONSE": 51
+    }
+  },
+  "p021": {
+    "acc_rate": 0.6708860759493671,
+    "accepted": 106,
+    "drop_rate": 0.5885416666666666,
+    "drop_wilson": [
+      0.5386811298230674,
+      0.6366481798744998
+    ],
+    "drops": 226,
+    "evaluable": 158,
+    "model_drops": 35,
+    "sessions": 384,
+    "transport_drops": 191
+  },
+  "p023": {
+    "acc_rate": 0.5753012048192772,
+    "accepted": 191,
+    "drop_rate": 0.13541666666666666,
+    "drop_wilson": [
+      0.1047829343162196,
+      0.17327284928203285
+    ],
+    "drops": 52,
+    "evaluable": 332,
+    "model_drops": 51,
+    "sessions": 384,
+    "transport_drops": 1
+  },
+  "p023_registered": 384,
+  "p023_sessions": 384,
+  "partial": false,
+  "per_cell": {
+    "p021": {
+      "C1": {
+        "acc_rate": 1.0,
+        "acc_wilson": [
+          0.9324156955469234,
+          1.0
+        ],
+        "accepted": 53,
+        "drop_rate": 0.4479166666666667,
+        "drop_statuses": {
+          "HTTP_ERROR": 43
+        },
+        "drop_wilson": [
+          0.35235593933641585,
+          0.5474854093599193
+        ],
+        "drops": 43,
+        "evaluable": 53,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 43
+      },
+      "C2": {
+        "acc_rate": 0.0,
+        "acc_wilson": [
+          0.0,
+          0.20388926630434784
+        ],
+        "accepted": 0,
+        "drop_rate": 0.84375,
+        "drop_statuses": {
+          "EMPTY_RESPONSE": 35,
+          "HTTP_ERROR": 46
+        },
+        "drop_wilson": [
+          0.7580833433259717,
+          0.9029637552782173
+        ],
+        "drops": 81,
+        "evaluable": 15,
+        "model_drops": 35,
+        "sessions": 96,
+        "transport_drops": 46
+      },
+      "C3": {
+        "acc_rate": 1.0,
+        "acc_wilson": [
+          0.9324156955469234,
+          1.0
+        ],
+        "accepted": 53,
+        "drop_rate": 0.4479166666666667,
+        "drop_statuses": {
+          "HTTP_ERROR": 42,
+          "TIMEOUT": 1
+        },
+        "drop_wilson": [
+          0.35235593933641585,
+          0.5474854093599193
+        ],
+        "drops": 43,
+        "evaluable": 53,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 43
+      },
+      "C4": {
+        "acc_rate": 0.0,
+        "acc_wilson": [
+          0.0,
+          0.09406095745514377
+        ],
+        "accepted": 0,
+        "drop_rate": 0.6145833333333334,
+        "drop_statuses": {
+          "HTTP_ERROR": 58,
+          "TIMEOUT": 1
+        },
+        "drop_wilson": [
+          0.5146051824336462,
+          0.7057438504344169
+        ],
+        "drops": 59,
+        "evaluable": 37,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 59
+      }
+    },
+    "p023": {
+      "C1": {
+        "acc_rate": 1.0,
+        "acc_wilson": [
+          0.9611337736337738,
+          1.0
+        ],
+        "accepted": 95,
+        "drop_rate": 0.010416666666666666,
+        "drop_statuses": {
+          "HTTP_ERROR": 1
+        },
+        "drop_wilson": [
+          0.001841122818436635,
+          0.056667554927112326
+        ],
+        "drops": 1,
+        "evaluable": 95,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 1
+      },
+      "C2": {
+        "acc_rate": 0.0,
+        "acc_wilson": [
+          0.0,
+          0.07865426194064076
+        ],
+        "accepted": 0,
+        "drop_rate": 0.53125,
+        "drop_statuses": {
+          "EMPTY_RESPONSE": 51
+        },
+        "drop_wilson": [
+          0.4321542477927087,
+          0.6279409429894902
+        ],
+        "drops": 51,
+        "evaluable": 45,
+        "model_drops": 51,
+        "sessions": 96,
+        "transport_drops": 0
+      },
+      "C3": {
+        "acc_rate": 1.0,
+        "acc_wilson": [
+          0.9615230525151842,
+          1.0
+        ],
+        "accepted": 96,
+        "drop_rate": 0.0,
+        "drop_statuses": {},
+        "drop_wilson": [
+          0.0,
+          0.03847694748481595
+        ],
+        "drops": 0,
+        "evaluable": 96,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 0
+      },
+      "C4": {
+        "acc_rate": 0.0,
+        "acc_wilson": [
+          0.0,
+          0.03847694748481595
+        ],
+        "accepted": 0,
+        "drop_rate": 0.0,
+        "drop_statuses": {},
+        "drop_wilson": [
+          0.0,
+          0.03847694748481595
+        ],
+        "drops": 0,
+        "evaluable": 96,
+        "model_drops": 0,
+        "sessions": 96,
+        "transport_drops": 0
+      }
+    }
+  }
+}

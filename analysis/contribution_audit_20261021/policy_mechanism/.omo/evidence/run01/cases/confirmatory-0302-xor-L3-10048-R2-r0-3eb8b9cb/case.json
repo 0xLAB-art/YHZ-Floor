@@ -1,0 +1,140 @@
+{
+  "arm": "R2",
+  "current_outcome_correct": true,
+  "derivative_legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "derivative_legacy_admitted": true,
+  "edits": [],
+  "family": "XOR_Keystream_Reuse",
+  "fresh_output_equality": null,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "base64",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 3,
+      "module": "base64",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "legacy_class": "qualified",
+  "legacy_disallowed_but_prompt_allowed": [],
+  "legacy_rejected_correct": false,
+  "level": "L3",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0302-xor-L3-10048-R2-r0-3eb8b9cb/original",
+    "candidate": {
+      "plaintext": "a4c8aba7cf542fc91b6db0771b3953a14b57a0e3071628e75a68959907659fa8ad8d81a2b6dcbfe5b01afa5e29f802fe659898bb0f968e7f47956343f3b73a61de377be2ca548b2d3296907c015128a31c0211f4ff6de4172d03b8f9c84b88ea4ab8601b12ff19cf24ff16cbb20711c8d042f8824af094790c1ce7ac1f3c8840"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "8281e5261ad1e203ffbdc2dd594b0489bf7ee75d524aa67219d3749a73c1d6d6"
+  },
+  "original_legacy_admitted": true,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "17a79b1afe03a999ddc3a44290bd74b11d75bc9843f90595dc2f5b24e4733150",
+  "replicate_index": 0,
+  "runtime_import_use": null,
+  "seed": 10048,
+  "session_id": "confirmatory-0302-xor-L3-10048-R2-r0-3eb8b9cb",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0302-xor-L3-10048-R2-r0-3eb8b9cb/candidate.py",
+  "source_sha256": "c16699b7a50731aac948b3ef54e976f0e42aa83b2fd849f7e9f49484108a5dd4",
+  "transform_eligibility": "no_eligible_full_import_statement",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": false,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  }
+}

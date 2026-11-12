@@ -1,0 +1,177 @@
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "attempts_used": [
+    1,
+    2
+  ],
+  "calls": 12,
+  "completed": 12,
+  "completion_rate": 1.0,
+  "failure_categories": {},
+  "latency_s_median": 6.8,
+  "policy": {
+    "backoff_seconds": [
+      2,
+      5,
+      12
+    ],
+    "jitter": false,
+    "max_attempts_per_call": 4,
+    "never_retried": [
+      "EMPTY_RESPONSE",
+      "INCOMPLETE_RESPONSE",
+      "HTTP_ERROR outside retry_status",
+      "CREDENTIAL_MISSING",
+      "CREDENTIAL_EMPTY"
+    ],
+    "retried_classes": [
+      "TIMEOUT",
+      "PROVIDER_UNAVAILABLE",
+      "MALFORMED_PROVIDER_JSON",
+      "HTTP_ERROR with retry_status",
+      "HTTP 400 carrying a retry_body_marker"
+    ],
+    "retry_body_markers": [
+      "stream_options"
+    ],
+    "retry_status": [
+      408,
+      409,
+      425,
+      429,
+      500,
+      501,
+      502,
+      503,
+      504,
+      520,
+      521,
+      522,
+      523,
+      524,
+      529
+    ]
+  },
+  "rows": [
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 0,
+      "latency_s": 4.0,
+      "outcome": "OK",
+      "output_tokens": 33,
+      "prompt_kind": "short",
+      "text_chars": 12
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 1,
+      "latency_s": 6.0,
+      "outcome": "OK",
+      "output_tokens": 155,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 2,
+      "http_status": 200,
+      "i": 2,
+      "latency_s": 10.3,
+      "outcome": "OK",
+      "output_tokens": 158,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 3,
+      "latency_s": 3.7,
+      "outcome": "OK",
+      "output_tokens": 26,
+      "prompt_kind": "short",
+      "text_chars": 12
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 4,
+      "latency_s": 6.5,
+      "outcome": "OK",
+      "output_tokens": 176,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 5,
+      "latency_s": 9.4,
+      "outcome": "OK",
+      "output_tokens": 192,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 6,
+      "latency_s": 3.9,
+      "outcome": "OK",
+      "output_tokens": 35,
+      "prompt_kind": "short",
+      "text_chars": 12
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 7,
+      "latency_s": 6.5,
+      "outcome": "OK",
+      "output_tokens": 177,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 8,
+      "latency_s": 7.2,
+      "outcome": "OK",
+      "output_tokens": 187,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 2,
+      "http_status": 200,
+      "i": 9,
+      "latency_s": 8.4,
+      "outcome": "OK",
+      "output_tokens": 22,
+      "prompt_kind": "short",
+      "text_chars": 12
+    },
+    {
+      "attempts": 2,
+      "http_status": 200,
+      "i": 10,
+      "latency_s": 11.4,
+      "outcome": "OK",
+      "output_tokens": 174,
+      "prompt_kind": "long",
+      "text_chars": 62
+    },
+    {
+      "attempts": 1,
+      "http_status": 200,
+      "i": 11,
+      "latency_s": 7.4,
+      "outcome": "OK",
+      "output_tokens": 201,
+      "prompt_kind": "long",
+      "text_chars": 60
+    }
+  ]
+}

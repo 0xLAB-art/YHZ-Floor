@@ -1,0 +1,34 @@
+{
+  "signatures": [],
+  "signed": {
+    "_type": "https://in-toto.io/Statement/v1",
+    "subject": [
+      {
+        "name": "candidate_output.json",
+        "digest": {
+          "sha256": "0e0b9d47a710fbe5511357b917945ad6c1e3c0e60b310dd6a07b88c6612d77a3"
+        }
+      }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v1",
+    "predicate": {
+      "buildDefinition": {
+        "buildType": "https://acts-attack.invalid/e2a-attribution/v1",
+        "externalParameters": {
+          "target_id": "ChaCha20_Nonce_Repeat-seed-01",
+          "attempt_id": "e2a-H_BAD_CH_01",
+          "epoch": 1
+        },
+        "internalParameters": {}
+      },
+      "runDetails": {
+        "builder": {
+          "id": "https://acts-attack.invalid/e2a-aggregator/v1"
+        },
+        "metadata": {
+          "invocationId": "e2a-H_BAD_CH_01"
+        }
+      }
+    }
+  }
+}

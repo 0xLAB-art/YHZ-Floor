@@ -1,0 +1,31 @@
+{
+  "case_id": "invalid-05",
+  "defect_family": "none",
+  "label_disagreement": false,
+  "primitive": "ECDSA_Nonce_Reuse",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "attribution"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "public_key_matches": false,
+      "recovered_d_matches": false,
+      "recovered_k_matches": true,
+      "repeated_r": true,
+      "signatures_verify": true
+    },
+    "cryptographic_predicate": false,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 129.8465750005562,
+  "split": "clean",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "attribution"
+  },
+  "validator_overhead_ms": 39.39077598624863
+}

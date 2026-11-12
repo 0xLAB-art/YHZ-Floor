@@ -1,0 +1,38 @@
+{
+  "attempt_id": "e2a-H_UNDET_EC_01",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage4_arms/runs/20261020T082440Z_model_arm/cases/H_UNDET_EC_01",
+  "case_id": "H_UNDET_EC_01",
+  "context": {
+    "attempt_id": "e2a-H_UNDET_EC_01",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ECDSA_Nonce_Reuse-seed-01"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_UNDET_EC_01",
+    "producer_id": "e2a-model-producer-v1",
+    "producer_kind": "model",
+    "producer_nonce": "955312c0aac9d7f746c6b18590bf947fee9ecf3a3af3bac2d7dc15cbabc6001f",
+    "provider_call_index": 14,
+    "provider_endpoint": "https://api.apmix.ai",
+    "provider_response_sha256": "d1f4f626799232eb236ca0deb5de3efdecc8033e8603899a4a8bb636d2c51a86",
+    "provider_route": "claude-sonnet-4-6-free"
+  },
+  "program_source_text": "import sys\nimport json\n\nwith open(sys.argv[1], 'r') as f:\n    data = json.load(f)\n\nprint(json.dumps({\"status\": \"UNDERDETERMINED\", \"reason\": \"only one signature provided, need two signatures with shared nonce to recover private key\"}))\n",
+  "public_instance": {
+    "encoding": "json-hex-v1",
+    "public_key": [
+      "286a592fc9259c05137208d79725950ca3b591fcdc5ff482153ddefa1774a7eb",
+      "924636cff9e61ccd3be181df379a425ee366611f0339ae377c9be728538e8cea"
+    ],
+    "signature_1": {
+      "r": "367b2679871807d0a761e213a533d80d48ab7db5cc03cd2d4aedc90e0113bb3d",
+      "s": "2974c5f5bbe0d6637d2666f66d46aa4e68a6b40badfebe1f46484fe01c32b16c",
+      "z": "a5327cbd8fef280bddbe80766681b03694695bd6f6ae3b2205f7c8e190aea844"
+    }
+  },
+  "target_id": "ECDSA_Nonce_Reuse-seed-01"
+}

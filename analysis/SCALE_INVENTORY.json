@@ -1,0 +1,57 @@
+{
+  "families": [
+    {
+      "family": "Admission counterfactual (L3)",
+      "cohorts": 1,
+      "rows": 852,
+      "slots": 852,
+      "printed": 852
+    },
+    {
+      "family": "Information contract (premise/slot)",
+      "cohorts": 24,
+      "rows": 2119,
+      "slots": 2112,
+      "printed": 2119
+    },
+    {
+      "family": "Info-contract scale-up P011-L3-N32",
+      "cohorts": 1,
+      "rows": 129,
+      "slots": 128,
+      "printed": 129
+    },
+    {
+      "family": "Wrapper / agency (H2)",
+      "cohorts": 3,
+      "rows": 92,
+      "slots": 46,
+      "printed": 28
+    },
+    {
+      "family": "External boundary",
+      "cohorts": 4,
+      "rows": 370,
+      "slots": 14,
+      "printed": 34
+    }
+  ],
+  "total_rows": 3562,
+  "total_slots": 3152,
+  "printed_total": 3162,
+  "drift": [
+    {
+      "family": "Wrapper / agency (H2)",
+      "printed": 28,
+      "rows": 92,
+      "delta": 64
+    },
+    {
+      "family": "External boundary",
+      "printed": 34,
+      "rows": 370,
+      "delta": 336
+    }
+  ],
+  "rule": "the printed session column must be results.jsonl row counts; slot counts are recorded here because the information-contract row printed slots (7 flagged duplicates excluded) beside a scale-up row printed as rows (1 duplicate included)"
+}

@@ -1,0 +1,201 @@
+{
+  "arm": "R2",
+  "current_outcome_correct": true,
+  "derivative": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0041-ecd-L3-10006-R2-r0-aa9c3faf/derivative",
+    "candidate": {
+      "d": "cb8aa003008c1a853daea379b1bc209b9ec95fc245d37d16272a2245ecec1829",
+      "k": "f2c5545967d54529199fd5924cf06f7812e8b73cbea110bc4b07391288229b7a"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "428bd7ce087ddd667e16238b992b40d9cadb688219e6cbab5dc9c6f5015cb837"
+  },
+  "derivative_legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "derivative_legacy_admitted": true,
+  "derivative_same_output_as_original": true,
+  "derivative_sha256": "7d24ee03426769413073367e7c29e250954c9d63c622a2832d4e91e2a43870a6",
+  "edits": [
+    {
+      "after": "\n",
+      "before": "import hashlib\n",
+      "bindings": [
+        "hashlib"
+      ],
+      "end_line": 4,
+      "start_line": 4
+    }
+  ],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": true,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "base64",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 3,
+      "module": "base64",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "hashlib",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "hashlib",
+      "reasons": []
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "base64",
+      "hashlib",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "hashlib"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import",
+        "value": "hashlib"
+      }
+    ]
+  },
+  "legacy_class": "unused_only_removable",
+  "legacy_disallowed_but_prompt_allowed": [
+    {
+      "alias": null,
+      "binding": "hashlib",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "hashlib",
+      "reasons": []
+    }
+  ],
+  "legacy_rejected_correct": true,
+  "level": "L3",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0041-ecd-L3-10006-R2-r0-aa9c3faf/original",
+    "candidate": {
+      "d": "cb8aa003008c1a853daea379b1bc209b9ec95fc245d37d16272a2245ecec1829",
+      "k": "f2c5545967d54529199fd5924cf06f7812e8b73cbea110bc4b07391288229b7a"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "428bd7ce087ddd667e16238b992b40d9cadb688219e6cbab5dc9c6f5015cb837"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "b43a56da9f0a2910a8cc03e742bf5e88fd6cefd2ca35de73c7a87e51ef59a2d7",
+  "replicate_index": 0,
+  "runtime_import_use": null,
+  "seed": 10006,
+  "session_id": "confirmatory-0041-ecd-L3-10006-R2-r0-aa9c3faf",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0041-ecd-L3-10006-R2-r0-aa9c3faf/candidate.py",
+  "source_sha256": "bc08a2011a97a677f2addd223869cc82fc4e47c34d6fea26dbb7ca55462b8744",
+  "transform_eligibility": "eligible_full_import_statements_removed",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": true,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": true,
+  "v3": {
+    "imported_modules": [
+      "base64",
+      "hashlib",
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "hashlib"
+    ],
+    "violations": []
+  }
+}

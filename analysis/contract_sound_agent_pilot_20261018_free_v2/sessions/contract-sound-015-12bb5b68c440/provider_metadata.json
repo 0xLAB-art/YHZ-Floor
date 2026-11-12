@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "a0b4e904f06525113849c385200037f1f88825ed2fdf8f533cd1ed390101a24d",
+  "output_text": "```python\n#!/usr/bin/env python3\nimport sys\nimport json\n\ndef modinv(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return b, 0, 1\n        gcd, x1, y1 = egcd(b % a, a)\n        x = y1 - (b // a) * x1\n        y = x1\n        return gcd, x, y\n    \n    gcd, x, _ = egcd(a % m, m)\n    if gcd != 1:\n        raise Exception('Modular inverse does not exist')\n    return (x % m + m) % m\n\ndef recover_nonce_and_private_key(r, s1, z1, s2, z2, n):\n    s1_minus_s2 = (s1 - s2) % n\n    z1_minus_z2 = (z1 - z2) % n\n    \n    k = (z1_minus_z2 * modinv(s1_minus_s2, n)) % n\n    \n    d = ((s1 * k - z1) * modinv(r, n)) % n\n    \n    return k, d\n\nwith open(sys.argv[1], 'r') as f:\n    data = json.load(f)\n\nn = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141\n\nr = int(data['signature_1']['r'], 16)\ns1 = int(data['signature_1']['s'], 16)\nz1 = int(data['signature_1']['z'], 16)\ns2 = int(data['signature_2']['s'], 16)\nz2 = int(data['signature_2']['z'], 16)\n\nk, d = recover_nonce_and_private_key(r, s1, z1, s2, z2, n)\n\nresult = {\n    \"d\": f\"{d:064x}\",\n    \"k\": f\"{k:064x}\"\n}\n\nprint(json.dumps(result))\n```",
+  "prompt_sha256": "901403250b1549ed63e2de73af56da1efd2cd017b14b8fc741e3c6f7b2544a74",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792338899.4258785,
+  "response_bytes": 1462,
+  "response_finished": 1792338908.061031,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 15:55:07 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2611639",
+    "x-apmix-request-id": "req_215db0251b1a422a9e15f6c2",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "388361",
+    "x-apmix-weighted-tokens": "850",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "b7ec85321e59dbf74ecd6fb0a967af79abb417f003190bab3ae36015f83309b2",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 333,
+    "output_tokens": 517
+  }
+}

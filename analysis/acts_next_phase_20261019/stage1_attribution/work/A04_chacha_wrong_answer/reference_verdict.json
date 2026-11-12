@@ -1,0 +1,41 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "reference_verifier",
+  "key_id": "ed25519-6182b592ccb8804bbada5420",
+  "kind": "reference_verdict",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-A04_chacha_wrong_answer",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "reference_verdict",
+      "role": "reference_verifier",
+      "target_id": "s1-target-A04_chacha_wrong_answer"
+    },
+    "context_signature_hex": "b8884c488ec1cecb0667e2274e323b271bf4a99f1de8820a0900447f10646a3ef889c2b629adcbf49d0556034f6e50ac65fb8a056274eef0c676ea22baabd700",
+    "facts": {
+      "attempt_id": "s1-attempt-A04_chacha_wrong_answer",
+      "candidate_bytes": 115,
+      "candidate_parse_ok": true,
+      "candidate_sha256": "99727f132581e8622845b840d3d0801f903a4ff089471ffe2bb0a30c5a93a9ac",
+      "crypto_details": {
+        "lengths_match": true,
+        "xor_recovery_matches": false
+      },
+      "cryptographic_predicate": false,
+      "epoch": 1,
+      "parser": "json-last-line-v1",
+      "predicate_source": "frozen:contract_sound_stage01_reference_verifier_v2.py",
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "session_id": "s1-session-A04_chacha_wrong_answer",
+      "stdout_sha256": "cf7e17e3140a880cb80292a03d59663b72eeb76d0750ec079bf1fce76d232743",
+      "target_id": "s1-target-A04_chacha_wrong_answer",
+      "target_state_sha256": "7418f982a48809f7498a25566e36d65a00f3bac4fb1a2c4c80b16e4cbb8d7273",
+      "verdict": "REJECTED",
+      "verifier_version": "acts-s1-reference-verifier/1"
+    }
+  },
+  "signature_hex": "46ce0993abc8cb759ea2e87faf6b72ef661e621706a745e52baec8c90381bd78113b80775b40d1e04fd477a393a0505ca23e4d22053f4ef30b73876a3e966c0a"
+}

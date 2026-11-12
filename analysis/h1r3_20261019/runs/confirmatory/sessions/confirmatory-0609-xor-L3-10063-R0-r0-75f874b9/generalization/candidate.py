@@ -1,0 +1,66 @@
+import sys
+import json
+
+def main():
+    # Read instance
+    with open(sys.argv[1], 'r') as f:
+        instance = json.load(f)
+    
+    ciphertexts = instance['ciphertexts']
+    known_plaintexts = instance['known_plaintexts']
+    target = instance['target']
+    
+    # Convert hex ciphertexts to bytes
+    ct_bytes = []
+    for ct in ciphertexts:
+        ct_bytes.append(bytes.fromhex(ct['data']))
+    
+    # This appears to be a many-time pad attack on stream cipher reuse
+    # Same keystream is used for multiple messages
+    # If we know plaintext P1 at position i for message m1, and we have ciphertexts C1, C2:
+    # C1[i] = P1[i] ^ K[i]
+    # C2[i] = P2[i] ^ K[i]
+    # Therefore: K[i] = P1[i] ^ C1[i]
+    # And: P2[i] = C2[i] ^ K[i]
+    
+    # Recover keystream bytes from known plaintexts
+    keystream = {}
+    
+    for kp in known_plaintexts:
+        msg_idx = kp['message_index']
+        offset = kp['offset']
+        plaintext_hex = kp['data']
+        plaintext_bytes = bytes.fromhex(plaintext_hex)
+        
+        ciphertext = ct_bytes[msg_idx]
+        
+        for i, p_byte in enumerate(plaintext_bytes):
+            pos = offset + i
+            if pos < len(ciphertext):
+                k_byte = ciphertext[pos] ^ p_byte
+                keystream[pos] = k_byte
+    
+    # Now decrypt the target using recovered keystream
+    target_msg_idx = target['message_index']
+    target_offset = target['offset']
+    target_length = target['length']
+    
+    target_ciphertext = ct_bytes[target_msg_idx]
+    
+    plaintext_bytes = []
+    for i in range(target_length):
+        pos = target_offset + i
+        if pos in keystream and pos < len(target_ciphertext):
+            p_byte = target_ciphertext[pos] ^ keystream[pos]
+            plaintext_bytes.append(p_byte)
+        else:
+            # Should not happen if we have enough known plaintexts
+            plaintext_bytes.append(0)
+    
+    plaintext_hex = bytes(plaintext_bytes).hex()
+    
+    result = {"plaintext": plaintext_hex}
+    print(json.dumps(result))
+
+if __name__ == "__main__":
+    main()

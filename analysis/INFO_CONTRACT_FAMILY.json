@@ -1,0 +1,161 @@
+{
+  "conventions": {
+    "clopper_pearson": "two-sided 95% exact lower bound, 2 dp, ROUND_HALF_UP",
+    "holm": "step-down, adjusted_i = min(1, max_{j<=i} (m-j+1)*p_j)",
+    "p": "exact two-sided binomial; p = min(1, 2**(1-n)) with zero C4-direction discordant pairs",
+    "rounding": "3 significant figures, ROUND_HALF_UP, decimal for |x| >= 1e-3"
+  },
+  "family": "info-contract paired C1-vs-C4 exact tests",
+  "latex": {
+    "cp_set": "$96/0$ at $\\ge0.96$, $95/0$ at $\\ge0.96$, $32/0$ at $\\ge0.89$, $24/0$ at $\\ge0.86$, $24/0$ at $\\ge0.86$, $24/0$ at $\\ge0.86$, $22/0$ at $\\ge0.85$, $16/0$ at $\\ge0.79$, $16/0$ at $\\ge0.79$, $13/0$ at $\\ge0.75$, $12/0$ at $\\ge0.74$, $10/0$ at $\\ge0.69$, $10/0$ at $\\ge0.69$, $8/0$ at $\\ge0.63$, $8/0$ at $\\ge0.63$, $5/0$ at $\\ge0.48$",
+    "holm_set": "{4.04\\times10^{-28}, 7.57\\times10^{-28}, 6.52\\times10^{-9}, 1.55\\times10^{-6}, 1.55\\times10^{-6}, 1.55\\times10^{-6}, 4.77\\times10^{-6}, 2.75\\times10^{-4}, 2.75\\times10^{-4}, 0.00171, 0.00293, 0.00977, 0.00977, 0.0234, 0.0234, 0.0625}",
+    "p_set": "{2.52\\times10^{-29}, 5.05\\times10^{-29}, 4.66\\times10^{-10}, 1.19\\times10^{-7}, 1.19\\times10^{-7}, 1.19\\times10^{-7}, 4.77\\times10^{-7}, 3.05\\times10^{-5}, 3.05\\times10^{-5}, 2.44\\times10^{-4}, 4.88\\times10^{-4}, 0.00195, 0.00195, 0.00781, 0.00781, 0.0625}"
+  },
+  "m": 16,
+  "members": [
+    {
+      "cohort": "P010P",
+      "discordant_c1_only": 5,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 5,
+      "evaluable_pairs": 8,
+      "holm_adjusted": 0.0625,
+      "p_two_sided": 0.0625
+    },
+    {
+      "cohort": "P010N16",
+      "discordant_c1_only": 10,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 10,
+      "evaluable_pairs": 16,
+      "holm_adjusted": 0.009765625,
+      "p_two_sided": 0.001953125
+    },
+    {
+      "cohort": "P010X1",
+      "discordant_c1_only": 10,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 10,
+      "evaluable_pairs": 16,
+      "holm_adjusted": 0.009765625,
+      "p_two_sided": 0.001953125
+    },
+    {
+      "cohort": "P010L2",
+      "discordant_c1_only": 8,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 8,
+      "evaluable_pairs": 8,
+      "holm_adjusted": 0.0234375,
+      "p_two_sided": 0.0078125
+    },
+    {
+      "cohort": "P010L3",
+      "discordant_c1_only": 8,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 8,
+      "evaluable_pairs": 8,
+      "holm_adjusted": 0.0234375,
+      "p_two_sided": 0.0078125
+    },
+    {
+      "cohort": "P013",
+      "discordant_c1_only": 16,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 16,
+      "evaluable_pairs": 16,
+      "holm_adjusted": 0.000274658203125,
+      "p_two_sided": 3.0517578125e-05
+    },
+    {
+      "cohort": "P011-L3-N32",
+      "discordant_c1_only": 32,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 32,
+      "evaluable_pairs": 32,
+      "holm_adjusted": 6.51925802230835e-09,
+      "p_two_sided": 4.656612873077393e-10
+    },
+    {
+      "cohort": "P014",
+      "discordant_c1_only": 13,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 13,
+      "evaluable_pairs": 13,
+      "holm_adjusted": 0.001708984375,
+      "p_two_sided": 0.000244140625
+    },
+    {
+      "cohort": "P016-6.1sol",
+      "discordant_c1_only": 12,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 12,
+      "evaluable_pairs": 12,
+      "holm_adjusted": 0.0029296875,
+      "p_two_sided": 0.00048828125
+    },
+    {
+      "cohort": "P017",
+      "discordant_c1_only": 16,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 16,
+      "evaluable_pairs": 16,
+      "holm_adjusted": 0.000274658203125,
+      "p_two_sided": 3.0517578125e-05
+    },
+    {
+      "cohort": "P018",
+      "discordant_c1_only": 22,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 22,
+      "evaluable_pairs": 22,
+      "holm_adjusted": 4.76837158203125e-06,
+      "p_two_sided": 4.76837158203125e-07
+    },
+    {
+      "cohort": "P019",
+      "discordant_c1_only": 24,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 24,
+      "evaluable_pairs": 24,
+      "holm_adjusted": 1.5497207641601562e-06,
+      "p_two_sided": 1.1920928955078125e-07
+    },
+    {
+      "cohort": "P021AR",
+      "discordant_c1_only": 96,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 96,
+      "evaluable_pairs": 96,
+      "holm_adjusted": 4.0389678347315804e-28,
+      "p_two_sided": 2.524354896707238e-29
+    },
+    {
+      "cohort": "P022a",
+      "discordant_c1_only": 24,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 24,
+      "evaluable_pairs": 24,
+      "holm_adjusted": 1.5497207641601562e-06,
+      "p_two_sided": 1.1920928955078125e-07
+    },
+    {
+      "cohort": "P023",
+      "discordant_c1_only": 95,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 95,
+      "evaluable_pairs": 95,
+      "holm_adjusted": 7.573064690121713e-28,
+      "p_two_sided": 5.048709793414476e-29
+    },
+    {
+      "cohort": "P024a",
+      "discordant_c1_only": 24,
+      "discordant_c4_only": 0,
+      "discordant_pairs": 24,
+      "evaluable_pairs": 24,
+      "holm_adjusted": 1.5497207641601562e-06,
+      "p_two_sided": 1.1920928955078125e-07
+    }
+  ]
+}

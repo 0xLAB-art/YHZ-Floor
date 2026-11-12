@@ -1,0 +1,2002 @@
+{
+  "metadata": {
+    "status": "EXPLORATORY_NO_NEW_EQUIVALENCE_DECISION",
+    "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/results.jsonl",
+    "source_sha256": "192d4669f9a2b8e9af253e5f1d0afe1134050fa736e4c7f1ebf8eae8a412e9a7",
+    "rows": 852,
+    "primary_rows": 768,
+    "matched_instances": 256,
+    "resamples": 50000,
+    "seed": 20261021,
+    "rng": "numpy default_rng PCG64",
+    "versions": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.4.6",
+      "scipy": "1.18.1"
+    },
+    "source_admission_rechecks": 852,
+    "models": {
+      "claude-sonnet-4-6-free": 852
+    },
+    "kind_counts": {
+      "primary": 768,
+      "noise": 64,
+      "c0": 20
+    },
+    "separate_controls": {
+      "R4": {
+        "n": 64,
+        "success": 63
+      },
+      "C0": {
+        "n": 20,
+        "correct_abstention": 20
+      }
+    },
+    "inputs": {
+      "sp2027/analysis/h1r3_20261019/runs/confirmatory/results.jsonl": "192d4669f9a2b8e9af253e5f1d0afe1134050fa736e4c7f1ebf8eae8a412e9a7",
+      "sp2027/analysis/h1r3_20261019/H1R3_PREREGISTRATION.md": "d28aab278452854c5e3bb40490d1c6d067b90ee9e130750ceda02eee7b9ae1a7",
+      "sp2027/analysis/h1r3_20261019/h1r3_stats.py": "e09f7268e4e9e87e546b152df8462e02429a7286a7cce5c325457d78f246bd85",
+      "sp2027/analysis/h1r3_20261019/h1r3_analyze.py": "3bc48e6f0552d519a376916c697173377db717486e6a5cb70a794734ad910dfa",
+      "sp2027/analysis/h1r3_20261019/h1r3_contract.py": "85141ccdc4ede93418872d1203cbd5aa9371e28b3155a1b9a212aec7a1f9c8b1",
+      "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex": "40deaab13fb8f3ef62a8b0c3bf9fa563947037d216db58ad9bf30bc747a0e4fe"
+    },
+    "main_bootstrap": "joint matched-instance resampling within fixed family strata, both outcomes and contrast changes retained in each draw",
+    "multiplicity": "36 McNemar p values Holm-adjusted together; 54 main intervals have unadjusted 95% and Bonferroni54 percentile bounds; exploratory coverage only; sensitivity intervals unadjusted",
+    "policy_change_definition": "(legacy treatment - legacy R0) - (current treatment - current R0); negative means legacy admission widens treatment disadvantage"
+  },
+  "contrasts": [
+    {
+      "level": "L1",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": 0.09375,
+          "ci95_percentile": [
+            0.0,
+            0.21875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.3125
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 3,
+          "zero_pairs": 29,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 29,
+          "treatment_success": 32,
+          "both_success": 29,
+          "both_failure": 0,
+          "mcnemar_p": 0.25,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.09375,
+          "ci95_percentile": [
+            0.0,
+            0.21875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.3125
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 3,
+          "zero_pairs": 29,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 29,
+          "treatment_success": 32,
+          "both_success": 29,
+          "both_failure": 0,
+          "mcnemar_p": 0.25,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214
+        }
+      }
+    },
+    {
+      "level": "L1",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": -0.1875,
+          "ci95_percentile": [
+            -0.375,
+            0.03125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.53125,
+            0.15625
+          ],
+          "negative_pairs": 9,
+          "positive_pairs": 3,
+          "zero_pairs": 20,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 29,
+          "treatment_success": 23,
+          "both_success": 20,
+          "both_failure": 0,
+          "mcnemar_p": 0.14599609375,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.78125,
+          "ci95_percentile": [
+            -0.9375,
+            -0.5625
+          ],
+          "ci_bonferroni54_percentile": [
+            -1.0,
+            -0.40625
+          ],
+          "negative_pairs": 27,
+          "positive_pairs": 2,
+          "zero_pairs": 3,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 29,
+          "treatment_success": 4,
+          "both_success": 2,
+          "both_failure": 1,
+          "mcnemar_p": 1.6242265701293945e-06,
+          "mcnemar_holm36": 5.684792995452881e-05
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.59375,
+          "ci95_percentile": [
+            -0.75,
+            -0.40625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.875,
+            -0.2858651620369983
+          ],
+          "negative_pairs": 19,
+          "positive_pairs": 0,
+          "zero_pairs": 13,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L1",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214
+        }
+      }
+    },
+    {
+      "level": "L1",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214
+        }
+      }
+    },
+    {
+      "level": "L1",
+      "family": "pooled",
+      "contrast": "R1-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": 0.046875,
+          "ci95_percentile": [
+            0.0,
+            0.109375
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.15625
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 3,
+          "zero_pairs": 61,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 61,
+          "treatment_success": 64,
+          "both_success": 61,
+          "both_failure": 0,
+          "mcnemar_p": 0.25,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.046875,
+          "ci95_percentile": [
+            0.0,
+            0.109375
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.15625
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 3,
+          "zero_pairs": 61,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 61,
+          "treatment_success": 64,
+          "both_success": 61,
+          "both_failure": 0,
+          "mcnemar_p": 0.25,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 64,
+          "zero_nonzero_event_upper95": 0.045729702330762456,
+          "zero_nonzero_event_upper97_5": 0.056009089386636624,
+          "zero_nonzero_event_upper_bonferroni54": 0.10339170214472815
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": 0.0,
+            "legacy_admission": 0.0,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.25": {
+            "current": 0.0234375,
+            "legacy_admission": 0.0234375,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.5": {
+            "current": 0.046875,
+            "legacy_admission": 0.046875,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.75": {
+            "current": 0.0703125,
+            "legacy_admission": 0.0703125,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "1.0": {
+            "current": 0.09375,
+            "legacy_admission": 0.09375,
+            "policy_change_legacy_minus_current": 0.0
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            0.0,
+            0.109375
+          ],
+          "legacy_admission": [
+            0.0,
+            0.109375
+          ],
+          "policy_change_legacy_minus_current": [
+            0.0,
+            0.0
+          ]
+        },
+        "shared_seed_cluster_n": 32,
+        "shared_seed_zero_event_upper95": {
+          "current": null,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": 0.0893681989862648
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            0.0,
+            0.109375
+          ],
+          "legacy_admission": [
+            0.0,
+            0.109375
+          ],
+          "policy_change_legacy_minus_current": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "level": "L1",
+      "family": "pooled",
+      "contrast": "R2-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": -0.09375,
+          "ci95_percentile": [
+            -0.1875,
+            0.015625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.265625,
+            0.078125
+          ],
+          "negative_pairs": 9,
+          "positive_pairs": 3,
+          "zero_pairs": 52,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 61,
+          "treatment_success": 55,
+          "both_success": 52,
+          "both_failure": 0,
+          "mcnemar_p": 0.14599609375,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.390625,
+          "ci95_percentile": [
+            -0.46875,
+            -0.28125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.5,
+            -0.203125
+          ],
+          "negative_pairs": 27,
+          "positive_pairs": 2,
+          "zero_pairs": 35,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 61,
+          "treatment_success": 36,
+          "both_success": 34,
+          "both_failure": 1,
+          "mcnemar_p": 1.6242265701293945e-06,
+          "mcnemar_holm36": 5.684792995452881e-05
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.296875,
+          "ci95_percentile": [
+            -0.375,
+            -0.203125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.4375,
+            -0.14293258101849915
+          ],
+          "negative_pairs": 19,
+          "positive_pairs": 0,
+          "zero_pairs": 45,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": 0.0,
+            "legacy_admission": 0.0,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.25": {
+            "current": -0.046875,
+            "legacy_admission": -0.1953125,
+            "policy_change_legacy_minus_current": -0.1484375
+          },
+          "0.5": {
+            "current": -0.09375,
+            "legacy_admission": -0.390625,
+            "policy_change_legacy_minus_current": -0.296875
+          },
+          "0.75": {
+            "current": -0.140625,
+            "legacy_admission": -0.5859375,
+            "policy_change_legacy_minus_current": -0.4453125
+          },
+          "1.0": {
+            "current": -0.1875,
+            "legacy_admission": -0.78125,
+            "policy_change_legacy_minus_current": -0.59375
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            -0.203125,
+            0.015625
+          ],
+          "legacy_admission": [
+            -0.53125,
+            -0.25
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.40625,
+            -0.1875
+          ]
+        },
+        "shared_seed_cluster_n": 32,
+        "shared_seed_zero_event_upper95": {
+          "current": null,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": null
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            -0.1875,
+            0.015625
+          ],
+          "legacy_admission": [
+            -0.46875,
+            -0.28125
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.375,
+            -0.203125
+          ]
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.53125,
+          "ci95_percentile": [
+            0.34375,
+            0.71875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.1875,
+            0.84375
+          ],
+          "negative_pairs": 1,
+          "positive_pairs": 18,
+          "zero_pairs": 13,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 14,
+          "treatment_success": 31,
+          "both_success": 13,
+          "both_failure": 0,
+          "mcnemar_p": 7.62939453125e-05,
+          "mcnemar_holm36": 0.0023651123046875
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.53125,
+          "ci95_percentile": [
+            0.34375,
+            0.71875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.1875,
+            0.84375
+          ],
+          "negative_pairs": 1,
+          "positive_pairs": 18,
+          "zero_pairs": 13,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": -0.21875,
+          "ci95_percentile": [
+            -0.375,
+            -0.09375
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.46875,
+            -0.03125
+          ],
+          "negative_pairs": 7,
+          "positive_pairs": 0,
+          "zero_pairs": 25,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 32,
+          "treatment_success": 25,
+          "both_success": 25,
+          "both_failure": 0,
+          "mcnemar_p": 0.015625,
+          "mcnemar_holm36": 0.40625
+        },
+        "legacy_admission": {
+          "estimate": -0.40625,
+          "ci95_percentile": [
+            -0.59375,
+            -0.25
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.6875,
+            -0.15625
+          ],
+          "negative_pairs": 13,
+          "positive_pairs": 0,
+          "zero_pairs": 19,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 14,
+          "treatment_success": 1,
+          "both_success": 1,
+          "both_failure": 18,
+          "mcnemar_p": 0.000244140625,
+          "mcnemar_holm36": 0.0068359375
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.1875,
+          "ci95_percentile": [
+            -0.4375,
+            0.0625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.59375,
+            0.25
+          ],
+          "negative_pairs": 12,
+          "positive_pairs": 6,
+          "zero_pairs": 14,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214,
+          "ref_success": 32,
+          "treatment_success": 32,
+          "both_success": 32,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 32,
+      "metrics": {
+        "current": {
+          "estimate": -0.0625,
+          "ci95_percentile": [
+            -0.15625,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.25,
+            0.0
+          ],
+          "negative_pairs": 2,
+          "positive_pairs": 0,
+          "zero_pairs": 30,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 32,
+          "treatment_success": 30,
+          "both_success": 30,
+          "both_failure": 0,
+          "mcnemar_p": 0.5,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.0625,
+          "ci95_percentile": [
+            -0.15625,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.25,
+            0.0
+          ],
+          "negative_pairs": 2,
+          "positive_pairs": 0,
+          "zero_pairs": 30,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 32,
+          "treatment_success": 30,
+          "both_success": 30,
+          "both_failure": 0,
+          "mcnemar_p": 0.5,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 32,
+          "zero_nonzero_event_upper95": 0.0893681989862648,
+          "zero_nonzero_event_upper97_5": 0.10888116067935294,
+          "zero_nonzero_event_upper_bonferroni54": 0.19609356021707214
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "pooled",
+      "contrast": "R1-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 64,
+          "zero_nonzero_event_upper95": 0.045729702330762456,
+          "zero_nonzero_event_upper97_5": 0.056009089386636624,
+          "zero_nonzero_event_upper_bonferroni54": 0.10339170214472815,
+          "ref_success": 64,
+          "treatment_success": 64,
+          "both_success": 64,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.265625,
+          "ci95_percentile": [
+            0.171875,
+            0.359375
+          ],
+          "ci_bonferroni54_percentile": [
+            0.09375,
+            0.421875
+          ],
+          "negative_pairs": 1,
+          "positive_pairs": 18,
+          "zero_pairs": 45,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 46,
+          "treatment_success": 63,
+          "both_success": 45,
+          "both_failure": 0,
+          "mcnemar_p": 7.62939453125e-05,
+          "mcnemar_holm36": 0.0023651123046875
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.265625,
+          "ci95_percentile": [
+            0.171875,
+            0.359375
+          ],
+          "ci_bonferroni54_percentile": [
+            0.09375,
+            0.421875
+          ],
+          "negative_pairs": 1,
+          "positive_pairs": 18,
+          "zero_pairs": 45,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": 0.0,
+            "legacy_admission": 0.0,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.25": {
+            "current": 0.0,
+            "legacy_admission": 0.1328125,
+            "policy_change_legacy_minus_current": 0.1328125
+          },
+          "0.5": {
+            "current": 0.0,
+            "legacy_admission": 0.265625,
+            "policy_change_legacy_minus_current": 0.265625
+          },
+          "0.75": {
+            "current": 0.0,
+            "legacy_admission": 0.3984375,
+            "policy_change_legacy_minus_current": 0.3984375
+          },
+          "1.0": {
+            "current": 0.0,
+            "legacy_admission": 0.53125,
+            "policy_change_legacy_minus_current": 0.53125
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            0.0,
+            0.0
+          ],
+          "legacy_admission": [
+            0.15625,
+            0.390625
+          ],
+          "policy_change_legacy_minus_current": [
+            0.15625,
+            0.390625
+          ]
+        },
+        "shared_seed_cluster_n": 32,
+        "shared_seed_zero_event_upper95": {
+          "current": 0.0893681989862648,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": null
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            0.0,
+            0.0
+          ],
+          "legacy_admission": [
+            0.171875,
+            0.359375
+          ],
+          "policy_change_legacy_minus_current": [
+            0.171875,
+            0.359375
+          ]
+        }
+      }
+    },
+    {
+      "level": "L2",
+      "family": "pooled",
+      "contrast": "R2-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": -0.140625,
+          "ci95_percentile": [
+            -0.234375,
+            -0.0625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.296875,
+            -0.015625
+          ],
+          "negative_pairs": 9,
+          "positive_pairs": 0,
+          "zero_pairs": 55,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 64,
+          "treatment_success": 55,
+          "both_success": 55,
+          "both_failure": 0,
+          "mcnemar_p": 0.00390625,
+          "mcnemar_holm36": 0.10546875
+        },
+        "legacy_admission": {
+          "estimate": -0.234375,
+          "ci95_percentile": [
+            -0.328125,
+            -0.140625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.40625,
+            -0.09375
+          ],
+          "negative_pairs": 15,
+          "positive_pairs": 0,
+          "zero_pairs": 49,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 46,
+          "treatment_success": 31,
+          "both_success": 31,
+          "both_failure": 18,
+          "mcnemar_p": 6.103515625e-05,
+          "mcnemar_holm36": 0.001953125
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.09375,
+          "ci95_percentile": [
+            -0.21875,
+            0.03125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.296875,
+            0.125
+          ],
+          "negative_pairs": 12,
+          "positive_pairs": 6,
+          "zero_pairs": 46,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": -0.0625,
+            "legacy_admission": -0.0625,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.25": {
+            "current": -0.1015625,
+            "legacy_admission": -0.1484375,
+            "policy_change_legacy_minus_current": -0.046875
+          },
+          "0.5": {
+            "current": -0.140625,
+            "legacy_admission": -0.234375,
+            "policy_change_legacy_minus_current": -0.09375
+          },
+          "0.75": {
+            "current": -0.1796875,
+            "legacy_admission": -0.3203125,
+            "policy_change_legacy_minus_current": -0.140625
+          },
+          "1.0": {
+            "current": -0.21875,
+            "legacy_admission": -0.40625,
+            "policy_change_legacy_minus_current": -0.1875
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            -0.234375,
+            -0.0625
+          ],
+          "legacy_admission": [
+            -0.34375,
+            -0.140625
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.21875,
+            0.03125
+          ]
+        },
+        "shared_seed_cluster_n": 32,
+        "shared_seed_zero_event_upper95": {
+          "current": null,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": null
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            -0.234375,
+            -0.0625
+          ],
+          "legacy_admission": [
+            -0.328125,
+            -0.140625
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.21875,
+            0.03125
+          ]
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            -0.0625,
+            0.0625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.109375,
+            0.109375
+          ],
+          "negative_pairs": 2,
+          "positive_pairs": 2,
+          "zero_pairs": 60,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 62,
+          "treatment_success": 62,
+          "both_success": 60,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.15625,
+          "ci95_percentile": [
+            0.0,
+            0.3125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.10706741898148148,
+            0.421875
+          ],
+          "negative_pairs": 9,
+          "positive_pairs": 19,
+          "zero_pairs": 36,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 37,
+          "treatment_success": 47,
+          "both_success": 28,
+          "both_failure": 8,
+          "mcnemar_p": 0.08715855330228806,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.15625,
+          "ci95_percentile": [
+            0.0,
+            0.3125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.09375,
+            0.40625
+          ],
+          "negative_pairs": 8,
+          "positive_pairs": 18,
+          "zero_pairs": 38,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "ECDSA_Nonce_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": -0.015625,
+          "ci95_percentile": [
+            -0.078125,
+            0.046875
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.140625,
+            0.09375
+          ],
+          "negative_pairs": 3,
+          "positive_pairs": 2,
+          "zero_pairs": 59,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 62,
+          "treatment_success": 61,
+          "both_success": 59,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.4375,
+          "ci95_percentile": [
+            -0.59375,
+            -0.265625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.703125,
+            -0.15625
+          ],
+          "negative_pairs": 34,
+          "positive_pairs": 6,
+          "zero_pairs": 24,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 37,
+          "treatment_success": 9,
+          "both_success": 3,
+          "both_failure": 21,
+          "mcnemar_p": 8.364584573428147e-06,
+          "mcnemar_holm36": 0.00027603129092312884
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.421875,
+          "ci95_percentile": [
+            -0.59375,
+            -0.234375
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.703125,
+            -0.109375
+          ],
+          "negative_pairs": 36,
+          "positive_pairs": 9,
+          "zero_pairs": 19,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R1-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": 0.015625,
+          "ci95_percentile": [
+            0.0,
+            0.046875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.09375
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 1,
+          "zero_pairs": 63,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 63,
+          "treatment_success": 64,
+          "both_success": 63,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.015625,
+          "ci95_percentile": [
+            0.0,
+            0.046875
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.09375
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 1,
+          "zero_pairs": 63,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 63,
+          "treatment_success": 64,
+          "both_success": 63,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "ci_bonferroni54_percentile": [
+            0.0,
+            0.0
+          ],
+          "negative_pairs": 0,
+          "positive_pairs": 0,
+          "zero_pairs": 64,
+          "zero_nonzero_event_upper95": 0.045729702330762456,
+          "zero_nonzero_event_upper97_5": 0.056009089386636624,
+          "zero_nonzero_event_upper_bonferroni54": 0.10339170214472815
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "XOR_Keystream_Reuse",
+      "contrast": "R2-R0",
+      "n_pairs": 64,
+      "metrics": {
+        "current": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            -0.046875,
+            0.046875
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.078125,
+            0.078125
+          ],
+          "negative_pairs": 1,
+          "positive_pairs": 1,
+          "zero_pairs": 62,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 63,
+          "treatment_success": 63,
+          "both_success": 62,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.21875,
+          "ci95_percentile": [
+            -0.328125,
+            -0.125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.40625,
+            -0.0625
+          ],
+          "negative_pairs": 14,
+          "positive_pairs": 0,
+          "zero_pairs": 50,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 63,
+          "treatment_success": 49,
+          "both_success": 49,
+          "both_failure": 1,
+          "mcnemar_p": 0.0001220703125,
+          "mcnemar_holm36": 0.0035400390625
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.21875,
+          "ci95_percentile": [
+            -0.328125,
+            -0.125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.40625,
+            -0.0625
+          ],
+          "negative_pairs": 14,
+          "positive_pairs": 0,
+          "zero_pairs": 50,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "pooled",
+      "contrast": "R1-R0",
+      "n_pairs": 128,
+      "metrics": {
+        "current": {
+          "estimate": 0.0078125,
+          "ci95_percentile": [
+            -0.0234375,
+            0.0390625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.0546875,
+            0.0703125
+          ],
+          "negative_pairs": 2,
+          "positive_pairs": 3,
+          "zero_pairs": 123,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 125,
+          "treatment_success": 126,
+          "both_success": 123,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": 0.0859375,
+          "ci95_percentile": [
+            0.0078125,
+            0.1640625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.046875,
+            0.22540870949075043
+          ],
+          "negative_pairs": 9,
+          "positive_pairs": 20,
+          "zero_pairs": 99,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 100,
+          "treatment_success": 111,
+          "both_success": 91,
+          "both_failure": 8,
+          "mcnemar_p": 0.06142834573984146,
+          "mcnemar_holm36": 1.0
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": 0.078125,
+          "ci95_percentile": [
+            0.0,
+            0.15625
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.046875,
+            0.203125
+          ],
+          "negative_pairs": 8,
+          "positive_pairs": 18,
+          "zero_pairs": 102,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": 0.015625,
+            "legacy_admission": 0.015625,
+            "policy_change_legacy_minus_current": 0.0
+          },
+          "0.25": {
+            "current": 0.01171875,
+            "legacy_admission": 0.05078125,
+            "policy_change_legacy_minus_current": 0.0390625
+          },
+          "0.5": {
+            "current": 0.0078125,
+            "legacy_admission": 0.0859375,
+            "policy_change_legacy_minus_current": 0.078125
+          },
+          "0.75": {
+            "current": 0.00390625,
+            "legacy_admission": 0.12109375,
+            "policy_change_legacy_minus_current": 0.1171875
+          },
+          "1.0": {
+            "current": 0.0,
+            "legacy_admission": 0.15625,
+            "policy_change_legacy_minus_current": 0.15625
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            -0.0234375,
+            0.0390625
+          ],
+          "legacy_admission": [
+            0.0078125,
+            0.1640625
+          ],
+          "policy_change_legacy_minus_current": [
+            0.0,
+            0.15625
+          ]
+        },
+        "shared_seed_cluster_n": 64,
+        "shared_seed_zero_event_upper95": {
+          "current": null,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": null
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            -0.0234375,
+            0.0390625
+          ],
+          "legacy_admission": [
+            0.0078125,
+            0.1640625
+          ],
+          "policy_change_legacy_minus_current": [
+            0.0,
+            0.15625
+          ]
+        }
+      }
+    },
+    {
+      "level": "L3",
+      "family": "pooled",
+      "contrast": "R2-R0",
+      "n_pairs": 128,
+      "metrics": {
+        "current": {
+          "estimate": -0.0078125,
+          "ci95_percentile": [
+            -0.046875,
+            0.03125
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.078125,
+            0.0625
+          ],
+          "negative_pairs": 4,
+          "positive_pairs": 3,
+          "zero_pairs": 121,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 125,
+          "treatment_success": 124,
+          "both_success": 121,
+          "both_failure": 0,
+          "mcnemar_p": 1.0,
+          "mcnemar_holm36": 1.0
+        },
+        "legacy_admission": {
+          "estimate": -0.328125,
+          "ci95_percentile": [
+            -0.421875,
+            -0.234375
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.484375,
+            -0.1640625
+          ],
+          "negative_pairs": 48,
+          "positive_pairs": 6,
+          "zero_pairs": 74,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null,
+          "ref_success": 100,
+          "treatment_success": 58,
+          "both_success": 52,
+          "both_failure": 22,
+          "mcnemar_p": 3.2565301566478407e-09,
+          "mcnemar_holm36": 1.1723508563932227e-07
+        },
+        "policy_change_legacy_minus_current": {
+          "estimate": -0.3203125,
+          "ci95_percentile": [
+            -0.421875,
+            -0.21875
+          ],
+          "ci_bonferroni54_percentile": [
+            -0.4921875,
+            -0.140625
+          ],
+          "negative_pairs": 50,
+          "positive_pairs": 9,
+          "zero_pairs": 69,
+          "zero_nonzero_event_upper95": null,
+          "zero_nonzero_event_upper97_5": null,
+          "zero_nonzero_event_upper_bonferroni54": null
+        }
+      },
+      "pooling_sensitivity": {
+        "fixed_families": [
+          "ECDSA_Nonce_Reuse",
+          "XOR_Keystream_Reuse"
+        ],
+        "first_family_weight_estimates": {
+          "0.0": {
+            "current": 0.0,
+            "legacy_admission": -0.21875,
+            "policy_change_legacy_minus_current": -0.21875
+          },
+          "0.25": {
+            "current": -0.00390625,
+            "legacy_admission": -0.2734375,
+            "policy_change_legacy_minus_current": -0.26953125
+          },
+          "0.5": {
+            "current": -0.0078125,
+            "legacy_admission": -0.328125,
+            "policy_change_legacy_minus_current": -0.3203125
+          },
+          "0.75": {
+            "current": -0.01171875,
+            "legacy_admission": -0.3828125,
+            "policy_change_legacy_minus_current": -0.37109375
+          },
+          "1.0": {
+            "current": -0.015625,
+            "legacy_admission": -0.4375,
+            "policy_change_legacy_minus_current": -0.421875
+          }
+        },
+        "unstratified_instance_ci95": {
+          "current": [
+            -0.046875,
+            0.03125
+          ],
+          "legacy_admission": [
+            -0.4296875,
+            -0.234375
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.421875,
+            -0.21875
+          ]
+        },
+        "shared_seed_cluster_n": 64,
+        "shared_seed_zero_event_upper95": {
+          "current": null,
+          "legacy_admission": null,
+          "policy_change_legacy_minus_current": null
+        },
+        "shared_seed_cluster_ci95": {
+          "current": [
+            -0.046875,
+            0.03125
+          ],
+          "legacy_admission": [
+            -0.4140625,
+            -0.2421875
+          ],
+          "policy_change_legacy_minus_current": [
+            -0.4140625,
+            -0.2265625
+          ]
+        }
+      }
+    }
+  ],
+  "cells": [
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L1",
+      "arm": "R0",
+      "n": 32,
+      "current_success": 29,
+      "legacy_admission_success": 29,
+      "successes_removed": 0,
+      "current_failure_headroom": 3
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L1",
+      "arm": "R1",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L1",
+      "arm": "R2",
+      "n": 32,
+      "current_success": 23,
+      "legacy_admission_success": 4,
+      "successes_removed": 19,
+      "current_failure_headroom": 9
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L2",
+      "arm": "R0",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 14,
+      "successes_removed": 18,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L2",
+      "arm": "R1",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 31,
+      "successes_removed": 1,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L2",
+      "arm": "R2",
+      "n": 32,
+      "current_success": 25,
+      "legacy_admission_success": 1,
+      "successes_removed": 24,
+      "current_failure_headroom": 7
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L3",
+      "arm": "R0",
+      "n": 64,
+      "current_success": 62,
+      "legacy_admission_success": 37,
+      "successes_removed": 25,
+      "current_failure_headroom": 2
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L3",
+      "arm": "R1",
+      "n": 64,
+      "current_success": 62,
+      "legacy_admission_success": 47,
+      "successes_removed": 15,
+      "current_failure_headroom": 2
+    },
+    {
+      "family": "ECDSA_Nonce_Reuse",
+      "level": "L3",
+      "arm": "R2",
+      "n": 64,
+      "current_success": 61,
+      "legacy_admission_success": 9,
+      "successes_removed": 52,
+      "current_failure_headroom": 3
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L1",
+      "arm": "R0",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L1",
+      "arm": "R1",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L1",
+      "arm": "R2",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L2",
+      "arm": "R0",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L2",
+      "arm": "R1",
+      "n": 32,
+      "current_success": 32,
+      "legacy_admission_success": 32,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L2",
+      "arm": "R2",
+      "n": 32,
+      "current_success": 30,
+      "legacy_admission_success": 30,
+      "successes_removed": 0,
+      "current_failure_headroom": 2
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L3",
+      "arm": "R0",
+      "n": 64,
+      "current_success": 63,
+      "legacy_admission_success": 63,
+      "successes_removed": 0,
+      "current_failure_headroom": 1
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L3",
+      "arm": "R1",
+      "n": 64,
+      "current_success": 64,
+      "legacy_admission_success": 64,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "XOR_Keystream_Reuse",
+      "level": "L3",
+      "arm": "R2",
+      "n": 64,
+      "current_success": 63,
+      "legacy_admission_success": 49,
+      "successes_removed": 14,
+      "current_failure_headroom": 1
+    },
+    {
+      "family": "pooled",
+      "level": "L1",
+      "arm": "R0",
+      "n": 64,
+      "current_success": 61,
+      "legacy_admission_success": 61,
+      "successes_removed": 0,
+      "current_failure_headroom": 3
+    },
+    {
+      "family": "pooled",
+      "level": "L1",
+      "arm": "R1",
+      "n": 64,
+      "current_success": 64,
+      "legacy_admission_success": 64,
+      "successes_removed": 0,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "pooled",
+      "level": "L1",
+      "arm": "R2",
+      "n": 64,
+      "current_success": 55,
+      "legacy_admission_success": 36,
+      "successes_removed": 19,
+      "current_failure_headroom": 9
+    },
+    {
+      "family": "pooled",
+      "level": "L2",
+      "arm": "R0",
+      "n": 64,
+      "current_success": 64,
+      "legacy_admission_success": 46,
+      "successes_removed": 18,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "pooled",
+      "level": "L2",
+      "arm": "R1",
+      "n": 64,
+      "current_success": 64,
+      "legacy_admission_success": 63,
+      "successes_removed": 1,
+      "current_failure_headroom": 0
+    },
+    {
+      "family": "pooled",
+      "level": "L2",
+      "arm": "R2",
+      "n": 64,
+      "current_success": 55,
+      "legacy_admission_success": 31,
+      "successes_removed": 24,
+      "current_failure_headroom": 9
+    },
+    {
+      "family": "pooled",
+      "level": "L3",
+      "arm": "R0",
+      "n": 128,
+      "current_success": 125,
+      "legacy_admission_success": 100,
+      "successes_removed": 25,
+      "current_failure_headroom": 3
+    },
+    {
+      "family": "pooled",
+      "level": "L3",
+      "arm": "R1",
+      "n": 128,
+      "current_success": 126,
+      "legacy_admission_success": 111,
+      "successes_removed": 15,
+      "current_failure_headroom": 2
+    },
+    {
+      "family": "pooled",
+      "level": "L3",
+      "arm": "R2",
+      "n": 128,
+      "current_success": 124,
+      "legacy_admission_success": 58,
+      "successes_removed": 66,
+      "current_failure_headroom": 4
+    }
+  ]
+}

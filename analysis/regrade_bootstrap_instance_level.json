@@ -1,0 +1,41 @@
+{
+ "schema": "regrade-bootstrap-instance-level/1.0",
+ "motivation": "R2 round-2 observation: the printed interval's endpoints equal the per-family point estimates, i.e. the earlier resampling unit was the family (2 units). This script resamples instances within family; the point estimate is unchanged.",
+ "seed": 20261021,
+ "draws": 50000,
+ "gates": {
+  "pairs_128": true,
+  "families_64_each": true,
+  "declared_minus_0_8": true,
+  "legacy_minus_32_8": true,
+  "xor_minus_21_9": true,
+  "ecdsa_minus_42_2": true,
+  "combined_minus_32_0": true
+ },
+ "point_estimates_pp": {
+  "declared_rule": -0.8,
+  "legacy_rule": -32.8,
+  "change_combined": -32.0,
+  "per_family": {
+   "XOR_Keystream_Reuse": -21.9,
+   "ECDSA_Nonce_Reuse": -42.2
+  }
+ },
+ "instance_level_ci_95_pp": {
+  "combined": [
+   -42.2,
+   -21.9
+  ],
+  "per_family": {
+   "XOR_Keystream_Reuse": [
+    -32.8,
+    -10.9
+   ],
+   "ECDSA_Nonce_Reuse": [
+    -59.4,
+    -25.0
+   ]
+  }
+ },
+ "manuscript_sentence_after": "a paired bootstrap (50,000 draws, seed 20261021; instances resampled within family, families weighted equally) gives an unadjusted 95% interval [-42.2, -21.9] points for the -32.0 point change"
+}

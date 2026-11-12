@@ -1,0 +1,178 @@
+{
+  "acts_aggregator_loc": 270,
+  "guarantee_ladder": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5"
+  ],
+  "independent_policy_loc": 231,
+  "integration_adapter_loc": 37,
+  "per_case_detail": {
+    "H_BAD_CH_01": {
+      "stateful_failed_checks": [
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "H_BAD_CH_02": {
+      "stateful_failed_checks": [
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "H_BAD_EC_01": {
+      "stateful_failed_checks": [
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "H_BAD_EC_02": {
+      "stateful_failed_checks": [
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "H_FAIL_CH_01": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ]
+    },
+    "H_FAIL_EC_01": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ]
+    },
+    "H_MALFORMED_EC_01": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:reference-unparseable"
+      ]
+    },
+    "H_OK_CH_01": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_OK_CH_02": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_OK_CH_03": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_OK_EC_01": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_OK_EC_02": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_OK_EC_03": {
+      "stateful_failed_checks": [],
+      "stateless_failed_checks": []
+    },
+    "H_UNDET_EC_01": {
+      "stateful_failed_checks": [
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "M_MISSING_OBS": {
+      "stateful_failed_checks": [
+        "evidence-present:observation-missing"
+      ],
+      "stateless_failed_checks": [
+        "evidence-present:observation-missing"
+      ]
+    },
+    "M_MISSING_REF": {
+      "stateful_failed_checks": [
+        "evidence-present:reference-missing"
+      ],
+      "stateless_failed_checks": [
+        "evidence-present:reference-missing"
+      ]
+    },
+    "X_CONTEXT_CONFLICT": {
+      "stateful_failed_checks": [
+        "observation-context-binding:context-attempt_id-mismatch",
+        "reference-context-binding:context-attempt_id-mismatch"
+      ],
+      "stateless_failed_checks": [
+        "observation-context-binding:context-attempt_id-mismatch",
+        "reference-context-binding:context-attempt_id-mismatch"
+      ]
+    },
+    "X_IDENTITY": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:declared-source-mismatch"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:declared-source-mismatch"
+      ]
+    },
+    "X_OUTPUT_SWAP": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:predicate-false"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:declared-candidate-mismatch",
+        "predicate-independent:predicate-false"
+      ]
+    },
+    "X_REF_MISMATCH": {
+      "stateful_failed_checks": [
+        "cross-record-consistency:reference-adjudicates-other-observation"
+      ],
+      "stateless_failed_checks": [
+        "cross-record-consistency:reference-adjudicates-other-observation"
+      ]
+    },
+    "X_REPLAY": {
+      "stateful_failed_checks": [
+        "replay-ledger:context-already-consumed"
+      ],
+      "stateless_failed_checks": []
+    },
+    "X_STALE_ATTEMPT": {
+      "stateful_failed_checks": [
+        "observation-context-binding:context-attempt_id-mismatch",
+        "reference-context-binding:context-attempt_id-mismatch"
+      ],
+      "stateless_failed_checks": [
+        "observation-context-binding:context-attempt_id-mismatch",
+        "reference-context-binding:context-attempt_id-mismatch"
+      ]
+    }
+  },
+  "schema": "acts-stage6-analysis-v2/1"
+}

@@ -1,0 +1,226 @@
+{
+  "analysis": "prospective power/precision for paired binary outcome",
+  "design": {
+    "alpha": 0.05,
+    "equivalence_margin": 0.1,
+    "multiplicity": "Holm across the two primary contrasts, per family-stratified set",
+    "primary_contrasts": [
+      "R1_vs_R0",
+      "R2_vs_R0"
+    ],
+    "primary_level": "L3",
+    "primary_n_per_family": 64,
+    "primary_n_pooled": 128
+  },
+  "interpretation_rules": {
+    "non_inferiority": "declared only if the 95% CI upper bound for tau < margin and the point estimate is within the margin",
+    "otherwise": "INCONCLUSIVE; never reported as equivalence",
+    "superiority_or_harm": "declared only if the 95% CI excludes 0 in the observed direction AND Holm-adjusted exact McNemar p < alpha",
+    "zero_discordance_rule": "report the exact one-sided bound on the discordance rate rather than a degenerate interval"
+  },
+  "known_limitations": [
+    "Calibration showed ceiling performance at every tested level; the confirmatory design is therefore primarily a precision / non-inferiority design, not a powered superiority test in a non-ceiling regime.",
+    "The provider exposes no sampling controls; replicate duplicates measure, but do not control, sampling variance.",
+    "Single model route and single provider; no cross-model generalisation is claimed.",
+    "The effect, if any, is only identified for zero-query synthetic recovery tasks at the tested observation-complexity levels."
+  ],
+  "primary_per_family_L3": {
+    "n": 64,
+    "power_at_moderate_harm": 0.3139,
+    "zero_discordance_95_upper_bound": 0.0457
+  },
+  "primary_pooled_L3": {
+    "halfwidth_at_10pct_discordance": 0.0548,
+    "halfwidth_at_5pct_discordance": 0.0387,
+    "n_pooled": 128,
+    "power_at_moderate_harm": 0.7076,
+    "power_at_small_harm": 0.313,
+    "zero_discordance_95_upper_bound": 0.0231
+  },
+  "scenario_table": [
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.1733,
+        "power": 0.248,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.1348,
+        "power": 0.019,
+        "tau": -0.08
+      },
+      "n_pairs": 24,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.08,
+        "power": 0.0,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0967,
+        "power": 0.0008,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0967,
+        "power": 0.0008,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.1173
+    },
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.1501,
+        "power": 0.453,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.1168,
+        "power": 0.057,
+        "tau": -0.08
+      },
+      "n_pairs": 32,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.0693,
+        "power": 0.0,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0837,
+        "power": 0.0035,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0837,
+        "power": 0.0035,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.0894
+    },
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.1225,
+        "power": 0.7404,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.0953,
+        "power": 0.179,
+        "tau": -0.08
+      },
+      "n_pairs": 48,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.0566,
+        "power": 0.0003,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0684,
+        "power": 0.0211,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0684,
+        "power": 0.0211,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.0605
+    },
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.1061,
+        "power": 0.885,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.0826,
+        "power": 0.3139,
+        "tau": -0.08
+      },
+      "n_pairs": 64,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.049,
+        "power": 0.0011,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0592,
+        "power": 0.0593,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0592,
+        "power": 0.0593,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.0457
+    },
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.0866,
+        "power": 0.9819,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.0674,
+        "power": 0.5397,
+        "tau": -0.08
+      },
+      "n_pairs": 96,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.04,
+        "power": 0.0045,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0483,
+        "power": 0.1795,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0483,
+        "power": 0.1795,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.0307
+    },
+    {
+      "large-harm": {
+        "expected_ci_halfwidth": 0.075,
+        "power": 0.9974,
+        "tau": -0.18
+      },
+      "moderate-harm": {
+        "expected_ci_halfwidth": 0.0584,
+        "power": 0.7076,
+        "tau": -0.08
+      },
+      "n_pairs": 128,
+      "noise-only": {
+        "expected_ci_halfwidth": 0.0346,
+        "power": 0.0093,
+        "tau": 0.0
+      },
+      "small-benefit": {
+        "expected_ci_halfwidth": 0.0419,
+        "power": 0.313,
+        "tau": 0.04
+      },
+      "small-harm": {
+        "expected_ci_halfwidth": 0.0419,
+        "power": 0.313,
+        "tau": -0.04
+      },
+      "zero_discordance_95_upper_bound": 0.0231
+    }
+  ],
+  "secondary_blocks": {
+    "n24": {
+      "power_at_moderate_harm": 0.019,
+      "zero_discordance_95_upper_bound": 0.1173
+    },
+    "n32": {
+      "power_at_moderate_harm": 0.057,
+      "zero_discordance_95_upper_bound": 0.0894
+    }
+  }
+}

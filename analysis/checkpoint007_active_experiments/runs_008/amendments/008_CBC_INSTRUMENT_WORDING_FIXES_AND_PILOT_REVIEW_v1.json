@@ -1,0 +1,52 @@
+{
+  "amendment_id": "008_CBC_INSTRUMENT_WORDING_FIXES_AND_PILOT_REVIEW_v1",
+  "checkpoint": "008",
+  "parent_checkpoint": "007",
+  "created_at": "2026-10-17T18:40:58Z",
+  "status": "PENDING_QUALIFICATION",
+  "amendment_type": "VERSIONED_PROTOCOL_AMENDMENT",
+  "preserves_frozen_preregistration_documents": true,
+  "preserves_historical_experiment_results": true,
+  "changes_are_prospective_and_distinct_from_strictly_preregistered_conditions": true,
+  "frozen_manifest_sha256": "39f744894b4bec8c5ee84d2d4909b6ce6f67ec3bca5ee7dac9a115499b8c97ed",
+  "frozen_utc": "2026-10-17T15:27:25Z",
+  "cbc_instrument_finalized_in_frozen": true,
+  "cbc_instrument_finalized_at_in_frozen": "2026-10-17T15:47:06Z",
+  "pilot_ledger_entries": [
+    {
+      "when": "2026-10-17T15:51:15Z",
+      "what": "pilot_arms",
+      "arm_namespace": "P003_CBC_CONFIRMABLE_PILOT",
+      "status": 200,
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 434,
+        "output_tokens": 1024,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      }
+    }
+  ],
+  "cbc_instrument_wording_fixes_preserved_as_pending": true,
+  "cbc_instrument_wording_fixes_were_not_silently_applied": true,
+  "pilot_issue_1024_token_incomplete_code": true,
+  "pilot_issue_description": "CBC pilot response truncated at 1024 output tokens; incomplete code may result from token limit, not from model competence. This must be reviewed and resolved before generating confirmatory attack results.",
+  "pilot_review_required_before_confirmatory_cbc_model_execution": true,
+  "cbc_qualification_required_before_cbc_confirmatory_model_execution": true,
+  "cbc_confirmatory_model_arms_on_hold_until_qualification": [
+    "B_CBC_INTERACTIVE",
+    "B_CBC_ONESHOT",
+    "C_CBC_BINARY",
+    "C_CBC_ENRICHED"
+  ],
+  "cbc_deterministic_control_outcome_from_007": {
+    "success_predicate_met": false,
+    "queries": 400,
+    "budget": 400,
+    "note": "actual deterministic CBC probe executed locally against synthetic instance; success_predicate_met compares recovered block to secret only under controlled IV construction"
+  },
+  "cbc_deterministic_control_failed_in_007": true,
+  "cbc_deterministic_control_not_a_substitute_for_model_execution": true,
+  "cbc_instrument_not_claimed_impossible_from_average_complexity_estimate": true,
+  "reason": "Checkpoint 007 executed the CBC deterministic control and found it did not meet the feasibility predicate under the frozen 400-query budget. However, the CBC instrument wording fixes and the 1024-token pilot issue remain pending from the frozen artifact, and CBC confirmatory model arms must not be executed until the instrument is qualified. This amendment records those pending items and keeps CBC confirmatory model arms on hold until qualification; it does not claim CBC recovery is impossible merely from an average-complexity estimate."
+}

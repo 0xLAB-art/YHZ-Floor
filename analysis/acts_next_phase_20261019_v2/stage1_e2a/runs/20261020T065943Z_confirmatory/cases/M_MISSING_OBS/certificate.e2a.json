@@ -1,0 +1,84 @@
+{
+  "agent_artifact": {
+    "language": "python",
+    "path": "runs/20261020T065943Z_confirmatory/cases/M_MISSING_OBS/program_source.py",
+    "sha256": "9ad852241e63f3d4015949eaa3ec776844ddc9d917419dafde7aa3f68fb1a8b1"
+  },
+  "attempt_id": "e2a-M_MISSING_OBS",
+  "candidate_output": {
+    "path": "runs/20261020T065943Z_confirmatory/cases/M_MISSING_OBS/candidate_output.json",
+    "sha256": "0cba8d3b868d7d3f556ceb7fd6edef10383e2580d7f36e19b31d37f3c23252c5"
+  },
+  "case_id": "M_MISSING_OBS",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "PROVEN",
+    "boundary_enforcement": "PROVEN",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "ACCEPTED",
+    "target_effect": "OBSERVED"
+  },
+  "epoch": 1,
+  "evidence": {
+    "reference": {
+      "context": {
+        "attempt_id": "e2a-M_MISSING_OBS",
+        "domain": "e2a:evidence:v1",
+        "epoch": 1,
+        "kind": "reference_adjudication",
+        "role": "reference_verifier",
+        "target_id": "ECDSA_Nonce_Reuse-seed-01"
+      },
+      "context_signature_hex": "423ad19f9b7f7bc0c0fc2e7e7e8d018d004d60b823db813ea987e2ececc2691900f0fd91c714c699c68260711fbf593b0f980257a6be7e4f36b2c4e3248db40f",
+      "issuer_role": "reference_verifier",
+      "kind": "reference_adjudication",
+      "record": {
+        "context": "e2a:evidence:v1",
+        "domain": "heb1:evidence:v1",
+        "format": "heb1-protected-signing-v1",
+        "issuer_role": "reference_verifier",
+        "key_id": "ed25519-5dc672dcadb99cc511c8770f",
+        "kind": "reference_adjudication",
+        "payload": {
+          "attempt_id": "e2a-M_MISSING_OBS",
+          "candidate_digest": "0cba8d3b868d7d3f556ceb7fd6edef10383e2580d7f36e19b31d37f3c23252c5",
+          "candidate_parse_status": "OK",
+          "case_id": "M_MISSING_OBS",
+          "context": {
+            "attempt_id": "e2a-M_MISSING_OBS",
+            "domain": "e2a:evidence:v1",
+            "epoch": 1,
+            "kind": "reference_adjudication",
+            "role": "reference_verifier",
+            "target_id": "ECDSA_Nonce_Reuse-seed-01"
+          },
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "crypto_ok": true,
+          "epoch": 1,
+          "observation_context_signature_valid": true,
+          "observation_record_sha256": "1533e276951b642be574c1287c2be8d30e416993b292487752f471feb79e0249",
+          "observation_signature_valid": true,
+          "public_target_digest": "10a0aeab605203134cf024a90352ea9987ce8c6cdf74b14d7d06becfaeadcf69",
+          "status": "ADJUDICATED",
+          "stdout_length": 147,
+          "stdout_pin_match": true,
+          "stdout_sha256": "1e1af612cc5375f207c93c39a637d540fe35b556a705364d0bf1f6b14f183d80",
+          "stdout_sha256_recomputed": "1e1af612cc5375f207c93c39a637d540fe35b556a705364d0bf1f6b14f183d80",
+          "target_id": "ECDSA_Nonce_Reuse-seed-01",
+          "target_state_sha256": "5adaa2f6075a806e520b7a8270eb71bb33eb0038ba8ca3676a85a10a39882c68",
+          "verdict": "ACCEPTED"
+        },
+        "signature_hex": "2b239ab4358c2f6da07dfd2e64fb749bb6c84540aaf6293632899001282c3eeb696f545c74b877b92f39130e5aece032f0df59e39d1d5e985c9001624eb33104"
+      },
+      "schema": "e2a-signed-record/1"
+    }
+  },
+  "schema": "e2a-attribution-certificate/1",
+  "target_id": "ECDSA_Nonce_Reuse-seed-01"
+}

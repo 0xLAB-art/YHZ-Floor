@@ -1,0 +1,264 @@
+{
+  "arm": "R2",
+  "current_outcome_correct": false,
+  "derivative": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9/derivative",
+    "candidate": {
+      "d": "a7bbffa48c1398204b41fd1b4ec0d5b33da413bc4021898ad1cd278984cdfe89"
+    },
+    "cryptographic_predicate": false,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4496fad78aba812ad021ab49ab2a89dc05089c2ece50ce82a5254db252c521da"
+  },
+  "derivative_legacy": {
+    "imported_modules": [
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "derivative_legacy_admitted": false,
+  "derivative_same_output_as_original": true,
+  "derivative_sha256": "4859804e15b1fbe1eda53cf7ed3b8fa628b660a294777ce614a4aed19aa0c309",
+  "edits": [
+    {
+      "after": "\n",
+      "before": "import hashlib\n",
+      "bindings": [
+        "hashlib"
+      ],
+      "end_line": 3,
+      "start_line": 3
+    }
+  ],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": true,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": false,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "hashlib",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "hashlib",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "base64",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 26,
+      "module": "base64",
+      "reasons": [
+        "name-reference-any-scope",
+        "string-reference-uncertain",
+        "nested-import-uncertain",
+        "module-side-effects-not-qualified"
+      ]
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "Tuple",
+      "base64",
+      "hashlib",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "hashlib",
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import",
+        "value": "hashlib"
+      },
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "legacy_class": "referenced_import_present",
+  "legacy_disallowed_but_prompt_allowed": [
+    {
+      "alias": null,
+      "binding": "hashlib",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "hashlib",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    }
+  ],
+  "legacy_rejected_correct": false,
+  "level": "L2",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9/original",
+    "candidate": {
+      "d": "a7bbffa48c1398204b41fd1b4ec0d5b33da413bc4021898ad1cd278984cdfe89"
+    },
+    "cryptographic_predicate": false,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4496fad78aba812ad021ab49ab2a89dc05089c2ece50ce82a5254db252c521da"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "983b7f1f21dd421c3d725d81976a2a30616f736514e16cd71aaea62e98a6b298",
+  "replicate_index": 0,
+  "runtime_import_use": {
+    "arm": "R2",
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/import_use_trace_v2/confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9",
+    "family": "ECDSA_Nonce_Reuse",
+    "kind": "primary",
+    "level": "L2",
+    "observed_loaded_import_bindings": [
+      [
+        "Tuple",
+        "typing",
+        "Tuple",
+        15,
+        "LOAD_NAME"
+      ]
+    ],
+    "returncode": 0,
+    "same_output_as_uninstrumented": true,
+    "scope": "actual LOAD opcode reached with imported-object identity; observation is not branch coverage proof",
+    "session_id": "confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9",
+    "source_sha256": "74f9e6ca91f4122411e9a90c569542d32cc9ed59a5cf92d99dd7d0c2cc871e9c"
+  },
+  "seed": 30014,
+  "session_id": "confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0696-ecd-L2-30014-R2-r0-f06b3ed9/candidate.py",
+  "source_sha256": "74f9e6ca91f4122411e9a90c569542d32cc9ed59a5cf92d99dd7d0c2cc871e9c",
+  "transform_eligibility": "eligible_full_import_statements_removed",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": true,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "imported_modules": [
+      "Tuple",
+      "base64",
+      "hashlib",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "hashlib",
+      "typing"
+    ],
+    "violations": []
+  }
+}

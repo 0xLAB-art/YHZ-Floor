@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "b499bbed5ddc4831447119e33269c6b84e01511fb245bede94107a4b98336cc7",
+  "output_text": "```python\nimport json\nimport sys\n\ndef xor_bytes(a, b):\n    return bytes(x ^ y for x, y in zip(a, b))\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nc1 = bytes.fromhex(data['ciphertext_1'])\nc2 = bytes.fromhex(data['ciphertext_2'])\np1 = bytes.fromhex(data['known_plaintext_1'])\n\n# ChaCha20 nonce reuse: c1 = p1 \u2295 keystream, c2 = p2 \u2295 keystream\n# Therefore: c1 \u2295 c2 = p1 \u2295 p2\n# So: p2 = p1 \u2295 c1 \u2295 c2\np2 = xor_bytes(xor_bytes(p1, c1), c2)\n\nprint(json.dumps({\"plaintext_2\": p2.hex()}))\n```",
+  "prompt_sha256": "fbeb81e723b17700a4334ea270ad681578d391fc758a1efdc174b3edcdad19ef",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341734.810371,
+  "response_bytes": 825,
+  "response_finished": 1792341740.806337,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:42:20 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2562543",
+    "x-apmix-request-id": "req_08135f3764594c10b4358da2",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "437457",
+    "x-apmix-weighted-tokens": "508",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "359a2d419057bb9d0ac7caf6520a7af9489fc6cdaf914abad12a2f55c9ded4a3",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 251,
+    "output_tokens": 257
+  }
+}

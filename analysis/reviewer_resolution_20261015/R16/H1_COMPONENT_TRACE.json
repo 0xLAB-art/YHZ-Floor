@@ -1,0 +1,111 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "detail": "/mnt/nvme5/ACTS-Attack/sp2027/agent-eval/h1_positive_control_20261014_v2/H1_POSITIVE_CONTROL_H1_CHECK.csv",
+      "name": "h1_check_csv_exists",
+      "ok": true
+    },
+    {
+      "detail": "['control_row', 'source', 'configuration', 'task', 'immutable_environment', 'execution', 'result', 'h1_verdict', 'run_id']",
+      "name": "h1_check_header_exact",
+      "ok": true
+    },
+    {
+      "detail": "rows=3",
+      "name": "h1_check_three_rows",
+      "ok": true
+    },
+    {
+      "detail": "['H1PC201', 'H1PC203', 'H1PC202']",
+      "name": "h1_check_control_rows",
+      "ok": true
+    },
+    {
+      "detail": "six fields per row",
+      "name": "h1_check_all_fields_pass",
+      "ok": true
+    },
+    {
+      "detail": "['H1', 'H1', 'H1']",
+      "name": "h1_check_verdict_h1",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "h1_check_run_ids",
+      "ok": true
+    },
+    {
+      "detail": "/mnt/nvme5/ACTS-Attack/sp2027/agent-eval/h1_positive_control_20261014_v2/H1_POSITIVE_CONTROL_MANIFEST.json",
+      "name": "manifest_exists",
+      "ok": true
+    },
+    {
+      "detail": "sha256:f8cddd76e34aed0e04ee3f41a958a213cf72f6658996beb41888418101a41040",
+      "name": "manifest_digest_pinned",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "manifest_base_digest",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_records_3_of_3",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_records_separation",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_tex_no_provider_call",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_tex_component_boundary",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_tex_implementation_demo",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "results_tex_negative_control_named",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "framework_tex_environment_bound",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "supplement_component_bounded",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "supplement_networked_reuse_bound",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "name": "supplement_population_separation",
+      "ok": true
+    },
+    {
+      "detail": "{\"sp2027/paper/split_rebuild_evidence_promotion/main_sections/05_results.tex\": \"1656a5af98d91487df7c377e5407d0f89a548e8032050613a151474289de4c72\", \"sp2027/paper/split_rebuild_evidence_promotion/main_sections/02_framework.tex\": \"9fe03ef95490166b25dcf6d03500dc7740e9923a4a338477098781bfc010a33d\", \"sp2027/paper/split_rebuild_evidence_promotion/supp_sections/S04c_h1_provenance_control.tex\": \"c043fff4d55623b5a87926dcb6f1cc31b9730b88cfff1bfa6d0c1790494b5c54\"}",
+      "name": "edited_file_hashes_recorded",
+      "ok": true
+    }
+  ],
+  "failures": []
+}

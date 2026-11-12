@@ -1,0 +1,28 @@
+{
+  "attempt_id": "e2a-H_OK_CH_02",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/runs/20261020T091958Z_v2/cases/H_OK_CH_02",
+  "case_id": "H_OK_CH_02",
+  "context": {
+    "attempt_id": "e2a-H_OK_CH_02",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_OK_CH_02",
+    "producer_id": "e2a-scripted-producer-v1",
+    "producer_kind": "scripted",
+    "producer_nonce": "60bae812cf0d1451f7fe36ae8950fb559ffed3f951af691a7228ff845d099ee9"
+  },
+  "program_source_text": "\"\"\"\nACTS-Attack E2A scripted producer program.\n\"\"\"\n\nimport json\nimport sys\n\n\ndef main():\n    with open(sys.argv[1], \"r\", encoding=\"utf-8\") as handle:\n        instance = json.load(handle)\n    c1 = bytes.fromhex(instance[\"ciphertext_1\"])\n    c2 = bytes.fromhex(instance[\"ciphertext_2\"])\n    p1 = bytes.fromhex(instance[\"known_plaintext_1\"])\n    p2 = bytes(a ^ b ^ c for a, b, c in zip(c1, c2, p1))\n\n    print(json.dumps({\"plaintext_2\": p2.hex()}, sort_keys=True))\n\n\nmain()\n",
+  "public_instance": {
+    "ciphertext_1": "1810505f8b6a91c854f3a0e71f5e93f4e1cfcc8909c9eff660828a7e639cb1f843f9bdcf98ba80f841826e856c42a696",
+    "ciphertext_2": "3e97ab6624f67513b38dd974ba07d625d0d1b3b04ff8934f8591262f0f154a1d3a4b9ce1ce01d820add6dd670e757cb1",
+    "encoding": "json-hex-v1",
+    "known_plaintext_1": "86ae6269cfb09c5cf9af49a5d4d84c88e31270492a5a8f67b55e7df190e5d6789fec4eb7787e6eba01e7c80b7242e367"
+  },
+  "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+}

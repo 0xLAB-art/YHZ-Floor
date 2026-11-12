@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "f1c482db0cf494b3f3931c197e566f3ea24b2cb4c2389d035107e974539e8b33",
+  "output_text": "```python\nimport sys\nimport json\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nprint(json.dumps({\n    \"status\": \"UNDERDETERMINED\",\n    \"reason\": \"ChaCha20 nonce reuse detection requires known plaintext, key material, or distinguishing oracle; ciphertexts alone are insufficient\"\n}))\n```",
+  "prompt_sha256": "172cb4a9b5cf0f9f3c9b9c069a39ad5ed8ff159fe081c4b093c4b5c5d8efdb71",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341938.6329184,
+  "response_bytes": 612,
+  "response_finished": 1792341943.2526302,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:45:43 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2549408",
+    "x-apmix-request-id": "req_9c93b88a3e8146ad9c0ffd85",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "450592",
+    "x-apmix-weighted-tokens": "336",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "f565661376a90aafb8a54903f3368e7e8a75efa921d7156de4d66aeac79383bc",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 244,
+    "output_tokens": 92
+  }
+}

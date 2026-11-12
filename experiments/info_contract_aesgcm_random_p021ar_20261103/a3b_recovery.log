@@ -1,0 +1,133 @@
+{
+ "amendment": "A3B",
+ "source_pass": "amendment_a3",
+ "basis": "pairs whose A3-pass row has status HTTP_ERROR (retryable transport)",
+ "pairs": [
+  [
+   302845600709497997,
+   "C2"
+  ],
+  [
+   620231313522468899,
+   "C2"
+  ],
+  [
+   1520766850644894012,
+   "C2"
+  ],
+  [
+   1834647212504960430,
+   "C2"
+  ],
+  [
+   2067529140659777298,
+   "C2"
+  ],
+  [
+   2199645560792692162,
+   "C2"
+  ],
+  [
+   2350881398197153970,
+   "C2"
+  ],
+  [
+   2625614960770379670,
+   "C2"
+  ],
+  [
+   2959271349689180594,
+   "C2"
+  ],
+  [
+   3319544269512995414,
+   "C2"
+  ],
+  [
+   3931438432150149866,
+   "C2"
+  ],
+  [
+   4395080619161278131,
+   "C2"
+  ],
+  [
+   6104428037686938069,
+   "C2"
+  ],
+  [
+   6632372836066312210,
+   "C2"
+  ],
+  [
+   6882154211307148073,
+   "C2"
+  ],
+  [
+   7437076425135041386,
+   "C2"
+  ],
+  [
+   7650551694612446740,
+   "C2"
+  ],
+  [
+   8254304695070130144,
+   "C2"
+  ]
+ ],
+ "sessions_planned": 18,
+ "note": "floor-exhaustion signatures in this pass are reported as FLOOR_EXHAUSTED, not retried"
+}
+parallel run: 17 sessions to run, 1 already recorded, 3 workers
+[1/17] C2 seed=6882154211307148073 HTTP_ERROR accepted_so_far=0 3438/h eta=0.0h
+[2/17] C2 seed=3319544269512995414 HTTP_ERROR accepted_so_far=0 5881/h eta=0.0h
+[3/17] C2 seed=6632372836066312210 HTTP_ERROR accepted_so_far=0 7362/h eta=0.0h
+[4/17] C2 seed=2199645560792692162 HTTP_ERROR accepted_so_far=0 6592/h eta=0.0h
+[5/17] C2 seed=1834647212504960430 HTTP_ERROR accepted_so_far=0 7223/h eta=0.0h
+[6/17] C2 seed=2625614960770379670 HTTP_ERROR accepted_so_far=0 8449/h eta=0.0h
+[7/17] C2 seed=620231313522468899 HTTP_ERROR accepted_so_far=0 6933/h eta=0.0h
+[8/17] C2 seed=1520766850644894012 HTTP_ERROR accepted_so_far=0 7145/h eta=0.0h
+[9/17] C2 seed=6104428037686938069 HTTP_ERROR accepted_so_far=0 7651/h eta=0.0h
+[10/17] C2 seed=2067529140659777298 HTTP_ERROR accepted_so_far=0 6814/h eta=0.0h
+[11/17] C2 seed=2350881398197153970 HTTP_ERROR accepted_so_far=0 6857/h eta=0.0h
+[12/17] C2 seed=4395080619161278131 HTTP_ERROR accepted_so_far=0 7435/h eta=0.0h
+[13/17] C2 seed=3931438432150149866 HTTP_ERROR accepted_so_far=0 6985/h eta=0.0h
+[14/17] C2 seed=8254304695070130144 HTTP_ERROR accepted_so_far=0 7463/h eta=0.0h
+[15/17] C2 seed=7650551694612446740 HTTP_ERROR accepted_so_far=0 7557/h eta=0.0h
+[16/17] C2 seed=2959271349689180594 HTTP_ERROR accepted_so_far=0 7549/h eta=0.0h
+[17/17] C2 seed=7437076425135041386 HTTP_ERROR accepted_so_far=0 7889/h eta=0.0h
+{
+  "confirmatory": false,
+  "execution": {
+    "driver_sha256": "0999f580f6c1c06184653def7a2f665a4a20621eeefa24847d5c949f4132a8e9",
+    "mode": "thread_pool",
+    "pairs_skipped_on_resume": 1,
+    "phase": "amendment_a3b",
+    "wall_seconds": 7.8,
+    "workers": 3
+  },
+  "finished": 1793728692.3838136,
+  "interpretation": "Scheduling-only change: sessions independent, each still two turns at most with harness feedback in between. No prompt, cell, floor, label, or oracle differs from the registered runner.",
+  "per_cell": {
+    "C2": {
+      "accepted": 0,
+      "sessions": 18,
+      "submissions": 0,
+      "turns": 0
+    }
+  },
+  "preregistered": true,
+  "protocol": "P021AR-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-RERUN-AGENTROUTER-v1-A3B-TRANSPORT-RECOVERY",
+  "provider_failures": 18,
+  "provider_responses": 0,
+  "sessions": 18
+}
+{
+ "C2": {
+  "sessions": 18,
+  "accepted": 0,
+  "submissions": 0,
+  "turns": 0
+ }
+}

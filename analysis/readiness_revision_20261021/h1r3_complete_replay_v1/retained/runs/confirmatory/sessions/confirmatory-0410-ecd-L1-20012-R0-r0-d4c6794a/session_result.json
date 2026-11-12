@@ -1,0 +1,131 @@
+{
+  "arm": "R0",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "CRYPTOGRAPHIC_PREDICATE",
+  "family": "ECDSA_Nonce_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "ECDSA_Nonce_Reuse-L1-seed920012",
+    "reference": {
+      "cryptographic_predicate": false,
+      "detail": {
+        "d_ok": false,
+        "k_ok": true,
+        "require_k": false
+      },
+      "verdict": "REJECTED"
+    },
+    "stage": "CRYPTOGRAPHIC_PREDICATE",
+    "success": 0
+  },
+  "http_status": 200,
+  "instance_id": "ECDSA_Nonce_Reuse-L1-seed20012",
+  "kind": "primary",
+  "latency_s": 10.29653286933899,
+  "legacy_would_reject": false,
+  "level": "L1",
+  "max_tokens": 2600,
+  "ordinal": 410,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 623,
+  "payload_sha256": "97f5663ac794bc7458c9b8a5116e942256f7fe927076582868eb4bf8ff94358a",
+  "phase": "confirmatory",
+  "prompt_chars": 1551,
+  "prompt_sha256": "b73b92bc74e7289eb15c821a74a1c03efe868264ad7f2d9859ed5e58937e1daf",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "d_ok": false,
+      "k_ok": true,
+      "require_k": false
+    },
+    "process": null,
+    "public_reconstruction": {
+      "pair": [
+        0,
+        1
+      ],
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 1472,
+  "response_sha256": "ee0ec946bed6615ee39d615f561081b7c960438a6fc0eb6ca8ec8934bd64a3f4",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 20012,
+  "session_id": "confirmatory-0410-ecd-L1-20012-R0-r0-d4c6794a",
+  "source_chars": 999,
+  "source_sha256": "6bb5901a5d55fd237e2840defc0edf7180c6c1e4de7add0c76779a928c0b203f",
+  "stderr_tail": "",
+  "template_sha256": "54d7bbb68987d71771098bc475196e01c23ee1d8328de2e563b58f5f51236c8f",
+  "terminal": "CRYPTOGRAPHIC_PREDICATE",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 447,
+    "output_tokens": 652
+  }
+}

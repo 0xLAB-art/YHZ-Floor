@@ -1,0 +1,113 @@
+{
+  "arms": [
+    "A_INTERACTIVE",
+    "B_ONESHOT"
+  ],
+  "endpoint": "https://api.apmix.ai",
+  "exec_timeout_s": 20,
+  "extends": "H2-CBC-AGENCY-20261023-v1",
+  "extends_namespace": "sp2027/research_execution/h2_cbc_agency_20261023",
+  "max_tokens": 3000,
+  "model": "claude-sonnet-4-6-free",
+  "oracle_budget": 4096,
+  "order": [
+    [
+      65,
+      "A_INTERACTIVE"
+    ],
+    [
+      65,
+      "B_ONESHOT"
+    ],
+    [
+      66,
+      "A_INTERACTIVE"
+    ],
+    [
+      66,
+      "B_ONESHOT"
+    ],
+    [
+      67,
+      "A_INTERACTIVE"
+    ],
+    [
+      67,
+      "B_ONESHOT"
+    ],
+    [
+      68,
+      "A_INTERACTIVE"
+    ],
+    [
+      68,
+      "B_ONESHOT"
+    ],
+    [
+      69,
+      "A_INTERACTIVE"
+    ],
+    [
+      69,
+      "B_ONESHOT"
+    ],
+    [
+      70,
+      "A_INTERACTIVE"
+    ],
+    [
+      70,
+      "B_ONESHOT"
+    ],
+    [
+      71,
+      "A_INTERACTIVE"
+    ],
+    [
+      71,
+      "B_ONESHOT"
+    ],
+    [
+      72,
+      "A_INTERACTIVE"
+    ],
+    [
+      72,
+      "B_ONESHOT"
+    ],
+    [
+      73,
+      "A_INTERACTIVE"
+    ],
+    [
+      73,
+      "B_ONESHOT"
+    ],
+    [
+      74,
+      "A_INTERACTIVE"
+    ],
+    [
+      74,
+      "B_ONESHOT"
+    ]
+  ],
+  "predicate": "exact match on plaintext hex (lowercased)",
+  "preregistered": true,
+  "protocol": "H2-CBC-PAIRS-EXT-20261024-v1",
+  "provider_timeout_s": 300,
+  "seeds": [
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+  ],
+  "started": 1792826376.8589306,
+  "temperature": "provider default (not set)"
+}

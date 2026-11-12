@@ -1,0 +1,335 @@
+{
+  "accepted_mutant_operators": {
+    "completion:claims_attribution_not_established": 8,
+    "completion:claims_attribution_proven": 10,
+    "output:claims_attribution_not_established": 11,
+    "output:claims_attribution_proven": 14
+  },
+  "accepted_mutants": 43,
+  "corpus_size": 1407,
+  "decision_census": {
+    "completion:ATTRIBUTED_SUCCESS": 18,
+    "completion:INCONCLUSIVE": 1091,
+    "completion:REJECT": 298,
+    "output:ATTRIBUTED_SUCCESS": 25,
+    "output:INCONCLUSIVE": 1091,
+    "output:REJECT": 291
+  },
+  "evaluations": 2814,
+  "genuine_baseline": [
+    {
+      "case_id": "H_BAD_CH_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_CH_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_CH_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_CH_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_EC_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_BAD_EC_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_FAIL_CH_01",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_FAIL_CH_01",
+      "decision": "REJECT",
+      "reason": "execution-not-completed",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_FAIL_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_FAIL_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_MALFORMED_EC_01",
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_MALFORMED_EC_01",
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_01",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_01",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_02",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_02",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_03",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_CH_03",
+      "decision": "ATTRIBUTED_SUCCESS",
+      "reason": "predicate-true-and-chain-complete",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_02",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_03",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_OK_EC_03",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_UNDET_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "H_UNDET_EC_01",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "M_MISSING_OBS",
+      "decision": "INCONCLUSIVE",
+      "reason": "evidence-record-missing",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "M_MISSING_OBS",
+      "decision": "INCONCLUSIVE",
+      "reason": "evidence-record-missing",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "M_MISSING_REF",
+      "decision": "INCONCLUSIVE",
+      "reason": "evidence-record-missing",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "M_MISSING_REF",
+      "decision": "INCONCLUSIVE",
+      "reason": "evidence-record-missing",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_CONTEXT_CONFLICT",
+      "decision": "INCONCLUSIVE",
+      "reason": "observation-context-binding",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_CONTEXT_CONFLICT",
+      "decision": "INCONCLUSIVE",
+      "reason": "observation-context-binding",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_IDENTITY",
+      "decision": "REJECT",
+      "reason": "executed-program-identity-mismatch",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_IDENTITY",
+      "decision": "REJECT",
+      "reason": "executed-program-identity-mismatch",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_OUTPUT_SWAP",
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_OUTPUT_SWAP",
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_REF_MISMATCH",
+      "decision": "REJECT",
+      "reason": "reference-does-not-adjudicate-this-observation",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_REF_MISMATCH",
+      "decision": "REJECT",
+      "reason": "reference-does-not-adjudicate-this-observation",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_REPLAY",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_REPLAY",
+      "decision": "REJECT",
+      "reason": "cryptographic-predicate-false",
+      "semantic": "completion",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_STALE_ATTEMPT",
+      "decision": "INCONCLUSIVE",
+      "reason": "observation-context-binding",
+      "semantic": "output",
+      "soundness_violations": []
+    },
+    {
+      "case_id": "X_STALE_ATTEMPT",
+      "decision": "INCONCLUSIVE",
+      "reason": "observation-context-binding",
+      "semantic": "completion",
+      "soundness_violations": []
+    }
+  ],
+  "genuine_cases": 22,
+  "genuine_violations": [],
+  "random_mutants": 1000,
+  "schema": "acts-heb2-soundness/1",
+  "seed": 20261020,
+  "soundness_violations": []
+}

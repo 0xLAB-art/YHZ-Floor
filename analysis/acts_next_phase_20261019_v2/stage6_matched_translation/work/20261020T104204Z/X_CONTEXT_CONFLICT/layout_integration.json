@@ -1,0 +1,70 @@
+{
+ "signatures": [
+  {
+   "keyid": "20e61696b99066dccf2acd92df7a1ab0c6f23223ab407a8c68c043b1d6351d22",
+   "sig": "f3f82fd535932a222c61f8742f62d741bee14ef69ea9cd2d656897459d54edef14eceabba9c9aca8f97f885c05c3ffee468062227dddf94b995dfe7786f7820a"
+  }
+ ],
+ "signed": {
+  "_type": "layout",
+  "expires": "2035-01-01T00:00:00Z",
+  "inspect": [
+   {
+    "_type": "inspection",
+    "expected_materials": [],
+    "expected_products": [],
+    "name": "adjudicate",
+    "run": [
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/.venv/bin/python",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/delegation_adapter.py",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/runs/20261020T091958Z_v2/cases/X_CONTEXT_CONFLICT/certificate.e2a.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/issuers_public.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/trust_policy.json"
+    ]
+   }
+  ],
+  "keys": {
+   "20e61696": {
+    "keyid": "20e61696b99066dccf2acd92df7a1ab0c6f23223ab407a8c68c043b1d6351d22",
+    "keytype": "ed25519",
+    "keyval": {
+     "public": "38a395dcc0a1b310a4aa6552bf84e740d5847f242ca7d994a7928ffbebf17284"
+    },
+    "scheme": "ed25519"
+   }
+  },
+  "readme": "matched translation of the ACTS attribution claim",
+  "steps": [
+   {
+    "_type": "step",
+    "expected_command": [
+     "/usr/bin/python3",
+     "-I",
+     "/proc/self/fd/3",
+     "public_instance.json"
+    ],
+    "expected_materials": [
+     [
+      "REQUIRE",
+      "program_source.py"
+     ],
+     [
+      "REQUIRE",
+      "public_instance.json"
+     ]
+    ],
+    "expected_products": [
+     [
+      "REQUIRE",
+      "candidate_output.json"
+     ]
+    ],
+    "name": "execute",
+    "pubkeys": [
+     "20e61696"
+    ],
+    "threshold": 1
+   }
+  ]
+ }
+}

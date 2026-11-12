@@ -1,0 +1,100 @@
+{
+  "certificate": {
+    "agent_artifact": {
+      "authorship_record": "deterministic-stage01",
+      "language": "python",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/candidate.py",
+      "sha256": "805d9934b708938c6e7e7639f016748b2be1689d0a0f41c52fe800a14a3d0435"
+    },
+    "attempt_id": "stage01-001",
+    "claims": {
+      "artifact_authorship": "PROVEN",
+      "attribution": "PROVEN",
+      "boundary_enforcement": "PROVEN",
+      "exclusive_acquisition": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE",
+      "execution_identity": "PROVEN",
+      "immutable_hosted_model_identity": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE",
+      "reference_oracle_acceptance": "ACCEPTED",
+      "target_effect": "OBSERVED"
+    },
+    "condition": {
+      "id": "C9",
+      "order_seed": 1,
+      "representation_hash": "a44e0705dc7fa9fb7a9716e995aa98b4be9f8886b49db236af0bcf7a49b62c23"
+    },
+    "contract": {
+      "allowed_interface": [
+        "instance_file"
+      ],
+      "ambiguity_counterexample_hash": null,
+      "contract_hash": "b89a6eae9ef6a36ec6976d0b839b9af305480023a361ce606ecacdec87c28c37",
+      "provision_hash": "8a13a68c4ef20d22b1ee3ac173f1ba3d0166b29b8491b2c7d75676630038f031",
+      "query_budget": {
+        "max_queries": 0
+      },
+      "recovery_witness_hash": "1db38772947cd4d2f6e9bbac8a87a2bf600b59696f42b91303b3d8112ee2735d",
+      "sufficiency_status": "constructively_sufficient"
+    },
+    "evidence": [
+      {
+        "kind": "agent_artifact",
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/agent_artifact.json",
+        "sha256": "bd7ce1c9e91ff1c05d0f9a1f0f07ddc3cc9578f5eefa5bd39960a779250b804d"
+      },
+      {
+        "kind": "execution_trace",
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/execution_trace.json",
+        "sha256": "ad48429d08212e7ae5ac7effad0bc49bb644158867be8027a817a544996ade8a"
+      },
+      {
+        "kind": "target_effect",
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/target_effect.json",
+        "sha256": "b7792f00c4c3c91f1f81f6d97d2d78906cfa085e9ac8dbd61e8ab277ffcd56d0"
+      },
+      {
+        "kind": "verifier_metadata",
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/verifier_metadata.json",
+        "sha256": "34fd9afea5c86424196b0bdab0ed865d7f03755220aaa714f24c55067675f808"
+      },
+      {
+        "kind": "boundary",
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/schema_cases/valid/boundary.json",
+        "sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca"
+      }
+    ],
+    "execution": {
+      "environment_hash": "e13b4778df4913f53bbdca5d747bcc08ca782d8cbbf78e95fda5a6d2c2e5942b",
+      "executor_hash": "b32509334c34462216034524607ecc49241689ffb690889d91b3b4a99d089eb7",
+      "parser_hash": "45eee3be2d4830a56fac6d1110e41fa4bb985a897621827b7012da0b588b21b0",
+      "session_id": "stage01-session-001",
+      "trace_hash": "ad48429d08212e7ae5ac7effad0bc49bb644158867be8027a817a544996ade8a"
+    },
+    "schema": "contract-sound-exploitation-artifact/1",
+    "target": {
+      "configuration_hash": "830ae852d6cddcaff7312f51201edaefcdee1370d0059523e2e841843550bc41",
+      "implementation_hash": "6c47864746f3cf229c9fa573960db787756970bb5ae018ff7a948e5a8348bcdb",
+      "secret_seed_commitment": "fbe47f6d82b435a89f6e6fca65ad16138195de06c5fc3ffb66826a76e64e479f"
+    },
+    "task": {
+      "base_instance_id": "base-001",
+      "primitive": "ECDSA_Nonce_Reuse",
+      "task_id": "stage01-task"
+    },
+    "verification": {
+      "raw_verdict": "ACCEPTED",
+      "reference_verdict": "ACCEPTED",
+      "target_effect": "OBSERVED",
+      "validation_overhead_ms": null,
+      "validator_verdict": "PENDING"
+    }
+  },
+  "result": {
+    "case": "invalid_identifier",
+    "expected_schema_valid": false,
+    "integrity_valid": true,
+    "schema_errors": [
+      "'C9' is not one of ['C0', 'C1', 'C2', 'C3']"
+    ],
+    "schema_valid": false
+  }
+}

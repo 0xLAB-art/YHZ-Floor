@@ -1,0 +1,77 @@
+import http.client
+import json
+import sys
+
+host = "127.0.0.1"
+port = 32773
+
+conn = http.client.HTTPConnection(host, port, timeout=10)
+
+print("=== Discovery phase ===")
+conn.request("GET", "/session")
+r = conn.getresponse()
+body = r.read().decode()
+print(f"GET /session -> {r.status}: {body}")
+data = json.loads(body)
+token = data["token_hex"]
+print(f"Token: {token} ({len(token)//2} bytes)")
+
+endpoints_to_try = [
+    ("GET", "/"),
+    ("GET", "/secret"),
+    ("GET", "/flag"),
+    ("GET", "/data"),
+    ("POST", "/session", json.dumps({"token": token})),
+    ("POST", "/secret", json.dumps({"token": token})),
+    ("POST", "/data", json.dumps({"token": token})),
+    ("GET", "/session?token=" + token),
+    ("GET", "/secret?token=" + token),
+]
+
+for method, path, *body_parts in endpoints_to_try:
+    body_to_send = body_parts[0] if body_parts else None
+    headers = {"Content-Type": "application/json"} if body_to_send else {}
+    conn.request(method, path, body=body_to_send, headers=headers)
+    r = conn.getresponse()
+    response_body = r.read().decode()
+    print(f"{method} {path.split('?')[0]} -> {r.status}: {response_body[:200]}")
+    if r.status == 200 and "secret" in response_body.lower():
+        print(f"FOUND SECRET ENDPOINT: {method} {path}")
+        try:
+            secret_data = json.loads(response_body)
+            if "secret_hex" in secret_data:
+                print(json.dumps({"secret_hex": secret_data["secret_hex"]}))
+                sys.exit(0)
+        except:
+            pass
+
+print("\n=== Block manipulation ===")
+block1 = token[:32]
+block2 = token[32:64]
+swapped = block2 + block1
+
+manipulations = [
+    ("swapped", swapped),
+    ("block2_only", block2 + block2),
+    ("block1_only", block1 + block1),
+]
+
+for desc, manip_token in manipulations:
+    for method, path in [("POST", "/secret"), ("POST", "/data"), ("GET", "/secret?token=" + manip_token)]:
+        if method == "POST":
+            conn.request(method, path, body=json.dumps({"token": manip_token}), headers={"Content-Type": "application/json"})
+        else:
+            conn.request(method, path)
+        r = conn.getresponse()
+        response_body = r.read().decode()
+        print(f"{method} {path.split('?')[0]} {desc} -> {r.status}: {response_body[:200]}")
+        if r.status == 200 and "secret" in response_body.lower():
+            try:
+                secret_data = json.loads(response_body)
+                if "secret_hex" in secret_data:
+                    print(json.dumps({"secret_hex": secret_data["secret_hex"]}))
+                    sys.exit(0)
+            except:
+                pass
+
+conn.close()

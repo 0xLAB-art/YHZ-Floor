@@ -1,0 +1,44 @@
+```python
+import http.client
+import json
+import base64
+
+HOST = "127.0.0.1"
+PORT = 32772
+
+conn = http.client.HTTPConnection(HOST, PORT)
+
+# Get session token
+conn.request("GET", "/session")
+resp = conn.getresponse()
+session_data = json.loads(resp.read().decode())
+token = session_data["token_hex"]
+print(f"Session token: {token}")
+
+# Try different endpoints to find the API
+endpoints_to_try = [
+    ("GET", "/", {}),
+    ("GET", "/secret", {}),
+    ("GET", "/flag", {}),
+    ("POST", "/session/data", {"token": token}),
+    ("GET", f"/session/{token}", {}),
+    ("GET", "/session/data", {}),
+    ("POST", "/data", {"token": token}),
+]
+
+for method, path, data in endpoints_to_try:
+    conn = http.client.HTTPConnection(HOST, PORT)
+    if method == "GET":
+        headers = {"X-Session-Token": token}
+        conn.request(method, path, headers=headers)
+    else:
+        headers = {"Content-Type": "application/json", "X-Session-Token": token}
+        conn.request(method, path, json.dumps(data), headers)
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    print(f"{method} {path} -> {resp.status}: {body}")
+    conn.close()
+    
+    if resp.status == 200:
+        break
+```

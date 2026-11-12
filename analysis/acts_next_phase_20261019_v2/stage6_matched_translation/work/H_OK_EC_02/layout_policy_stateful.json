@@ -1,0 +1,71 @@
+{
+ "signatures": [
+  {
+   "keyid": "a9fecf20b804700bcf69e9eba2c4da8016d1e486731c82c1a7c1375ce9ae130a",
+   "sig": "48e6c707ed5b4001df486ea4f981b9ba92800fd73560f7a5facf5ba2f8444ca1a7cdc18d07bcff7995d4ccce3843803bcc2ad582964b207fa75e61d0de5bb400"
+  }
+ ],
+ "signed": {
+  "_type": "layout",
+  "expires": "2035-01-01T00:00:00Z",
+  "inspect": [
+   {
+    "_type": "inspection",
+    "expected_materials": [],
+    "expected_products": [],
+    "name": "adjudicate",
+    "run": [
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/.venv/bin/python",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/independent_policy.py",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/runs/20261020T091958Z_v2/cases/H_OK_EC_02",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/issuers_public.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/trust_policy.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/work/shared_replay_ledger.jsonl"
+    ]
+   }
+  ],
+  "keys": {
+   "0b080494": {
+    "keyid": "a9fecf20b804700bcf69e9eba2c4da8016d1e486731c82c1a7c1375ce9ae130a",
+    "keytype": "ed25519",
+    "keyval": {
+     "public": "93f8d5dd9dd6de3903ba18478b734a9af3dda0f98be146ca15b7c003e30a2016"
+    },
+    "scheme": "ed25519"
+   }
+  },
+  "readme": "matched translation of the ACTS attribution claim",
+  "steps": [
+   {
+    "_type": "step",
+    "expected_command": [
+     "/usr/bin/python3",
+     "-I",
+     "/proc/self/fd/3",
+     "public_instance.json"
+    ],
+    "expected_materials": [
+     [
+      "REQUIRE",
+      "program_source.py"
+     ],
+     [
+      "REQUIRE",
+      "public_instance.json"
+     ]
+    ],
+    "expected_products": [
+     [
+      "REQUIRE",
+      "candidate_output.json"
+     ]
+    ],
+    "name": "execute",
+    "pubkeys": [
+     "0b080494"
+    ],
+    "threshold": 1
+   }
+  ]
+ }
+}

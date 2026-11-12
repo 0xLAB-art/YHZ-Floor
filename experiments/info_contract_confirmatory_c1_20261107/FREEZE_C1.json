@@ -1,0 +1,54 @@
+{
+ "schema": "info-contract-confirmatory-c1-freeze/1",
+ "status": "FROZEN \u2014 awaiting namespace-restricted commit; live mode refuses until FREEZE_COMMIT_C1.txt exists",
+ "protocol": "P010-INFO-CONTRACT-2X2-CHACHA20-CONFIRMATORY-C1-v1",
+ "registered_date": "2026-11-07",
+ "holm_family": {
+  "m": 3,
+  "alpha": 0.05,
+  "tests": [
+   "H1_paired (PRIMARY)",
+   "H2_premise",
+   "H3_naming"
+  ],
+  "correction": "Holm step-down",
+  "bar": "H1 clears Holm within the family AND one-directional"
+ },
+ "design": {
+  "grid": "1 label (gpt-5.6-sol) x ChaCha20 2x2 x seeds 425-440 = 64 sessions",
+  "floor": 8400,
+  "temperature": "route default (uniform)",
+  "oracle": "the P009 family oracle verbatim (plaintext2_hex)",
+  "transport": "agentrouter Anthropic-messages client (Amend-4 client, hash-registered)"
+ },
+ "disclosed_harness_delta": "the namespace-local run_code_feedback_exploration.py removes the dead h1_campaign/ECDSA import (ChaCha20-only cohort) and stubs the never-reached ECDSA branch",
+ "files": {
+  "PREREGISTRATION_C1_CONFIRMATORY.md": {
+   "sha256": "4cef04a77253800f0b1e868594e21fddb17ec0982b89d92c920196cded1a3ee3"
+  },
+  "run_confirmatory_c1_chacha20.py": {
+   "sha256": "7bb13fffd0edb081a6fe0b8170b22a7b84ac91f8c6c80f8c9364e66eb4f07359"
+  },
+  "agentrouter_client.py": {
+   "sha256": "45347562b3441a9869aa118f4d8daa78148f1cbc456893ce95fd9590caafc59b"
+  },
+  "c1_holm_analysis.py": {
+   "sha256": "1c03c5f1d88c60cb2f4c1d78ef122e9873dd03663aef8204748d003bec36a6c8"
+  },
+  "run_code_feedback_chacha20.py": {
+   "sha256": "33e51307c589929489219c3d83667ab911cdccc2f83603822ae28603f3d577dc"
+  },
+  "run_code_feedback_exploration.py": {
+   "sha256": "d3812803a455967cb568ebf0cb1f805149c45d72c6958107d7f0fb41840c8ca6"
+  },
+  "provider_adapter.py": {
+   "sha256": "070c6c40c0f211ec2f9cc8b921252d495c85c3dc77fd6c3bc1677e9a03d3e5e8"
+  },
+  "h1_campaign.py": {
+   "sha256": "738b2bd644dccd894b2bbc4e79bee3ac12950bb4c0e7a95003c1c3effd909340"
+  },
+  "durable_runner.py": {
+   "sha256": "71bcaf9f6ed22b67c37cd1be635fa10a09a357f99078bf6aedf1cd98676eddf1"
+  }
+ }
+}

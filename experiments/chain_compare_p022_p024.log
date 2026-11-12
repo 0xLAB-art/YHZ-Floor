@@ -1,0 +1,91 @@
+2026-11-03T10:27:29+02:00 comparison watcher start; waiting for both P024 analyses
+2026-11-03T12:09:29+02:00 P024 analyses present; writing comparison
+# P022 vs P024 — drop distribution across arms
+
+- **P022a** `P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A-v1` — gpt-6.1-sol, floor 4200, 96/96 sessions, seeds `4c3f863f366f…`
+- **P022b** `P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022B-v1` — gpt-5.6-sol, floor 4200, 96/96 sessions, seeds `4c3f863f366f…`
+- **P024a** `P024A-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1` — gpt-6.1-sol, floor 8400, 96/96 sessions, seeds `2dc0653f256e…`
+- **P024b** `P024B-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1` — gpt-5.6-sol, floor 8400, 96/96 sessions, seeds `2dc0653f256e…`
+
+## Descriptive — every arm, every cell
+
+| arm | cell | sessions | transport drops | model-level drops | evaluable | accepted | drop rate (95% Wilson) | accepted/evaluable |
+|---|---|---|---|---|---|---|---|---|
+| P022a | C1 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P022a | C2 | 24 | 2 | 11 | 11 | 0 | 54.2% [35.1, 72.1] | 0.0% |
+| P022a | C3 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P022a | C4 | 24 | 0 | 0 | 24 | 0 | 0.0% [0.0, 13.8] | 0.0% |
+| P022a | **total** | 96 | 2 | 11 | 83 | 48 | 13.5% [8.1, 21.8] | 57.8% |
+| P022b | C1 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P022b | C2 | 24 | 0 | 24 | 0 | 0 | 100.0% [86.2, 100.0] | — |
+| P022b | C3 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P022b | C4 | 24 | 0 | 24 | 0 | 0 | 100.0% [86.2, 100.0] | — |
+| P022b | **total** | 96 | 0 | 48 | 48 | 48 | 50.0% [40.2, 59.8] | 100.0% |
+| P024a | C1 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P024a | C2 | 24 | 0 | 0 | 24 | 0 | 0.0% [0.0, 13.8] | 0.0% |
+| P024a | C3 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P024a | C4 | 24 | 0 | 0 | 24 | 0 | 0.0% [0.0, 13.8] | 0.0% |
+| P024a | **total** | 96 | 0 | 0 | 96 | 48 | 0.0% [0.0, 3.8] | 50.0% |
+| P024b | C1 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P024b | C2 | 24 | 0 | 19 | 5 | 0 | 79.2% [59.5, 90.8] | 0.0% |
+| P024b | C3 | 24 | 0 | 0 | 24 | 24 | 0.0% [0.0, 13.8] | 100.0% |
+| P024b | C4 | 24 | 0 | 21 | 3 | 0 | 87.5% [69.0, 95.7] | 0.0% |
+| P024b | **total** | 96 | 0 | 40 | 56 | 48 | 41.7% [32.3, 51.7] | 85.7% |
+
+## Within-cohort arm comparison (same instances, McNemar exact)
+
+| cohort | cell | pairs | both accept | a only | b only | neither | McNemar p |
+|---|---|---|---|---|---|---|---|
+| P022 | C1 | 24 | 24 | 0 | 0 | 0 | — |
+| P022 | C2 | 24 | 0 | 0 | 0 | 24 | — |
+| P022 | C3 | 24 | 24 | 0 | 0 | 0 | — |
+| P022 | C4 | 24 | 0 | 0 | 0 | 24 | — |
+| P022 | total | 96 | 48 | 0 | 0 | 48 | — |
+| P024 | C1 | 24 | 24 | 0 | 0 | 0 | — |
+| P024 | C2 | 24 | 0 | 0 | 0 | 24 | — |
+| P024 | C3 | 24 | 24 | 0 | 0 | 0 | — |
+| P024 | C4 | 24 | 0 | 0 | 0 | 24 | — |
+| P024 | total | 96 | 48 | 0 | 0 | 48 | — |
+
+## Across cohorts, same arm (unpaired, different seed draws)
+
+| arm | cell | P022 drops/sessions | P024 drops/sessions | Δ drop rate (95% Newcombe) | Fisher p |
+|---|---|---|---|---|---|
+| a | C1 | 0/24 (0.0%) | 0/24 (0.0%) | 0.0% [-13.8, 13.8] | 1.0000 |
+| a | C2 | 13/24 (54.2%) | 0/24 (0.0%) | -54.2% [-72.1, -30.6] | 2.59e-05 |
+| a | C3 | 0/24 (0.0%) | 0/24 (0.0%) | 0.0% [-13.8, 13.8] | 1.0000 |
+| a | C4 | 0/24 (0.0%) | 0/24 (0.0%) | 0.0% [-13.8, 13.8] | 1.0000 |
+| a | total | 13/96 (13.5%) | 0/96 (0.0%) | -13.5% [-21.8, -6.9] | 1.58e-04 |
+| b | C1 | 0/24 (0.0%) | 0/24 (0.0%) | 0.0% [-13.8, 13.8] | 1.0000 |
+| b | C2 | 24/24 (100.0%) | 19/24 (79.2%) | -20.8% [-40.5, -2.8] | 0.0496 |
+| b | C3 | 0/24 (0.0%) | 0/24 (0.0%) | 0.0% [-13.8, 13.8] | 1.0000 |
+| b | C4 | 24/24 (100.0%) | 21/24 (87.5%) | -12.5% [-31.0, 3.5] | 0.2340 |
+| b | total | 48/96 (50.0%) | 40/96 (41.7%) | -8.3% [-21.9, 5.7] | 0.3106 |
+
+## Transport-only drops, arm by arm
+
+| arm | transport drops | sessions | rate | model-level drops | rate |
+|---|---|---|---|---|---|
+| P022a | 2 | 96 | 2.1% | 11 | 11.5% |
+| P022b | 0 | 96 | 0.0% | 48 | 50.0% |
+| P024a | 0 | 96 | 0.0% | 0 | 0.0% |
+| P024b | 0 | 96 | 0.0% | 40 | 41.7% |
+
+## Provider-failure attempts by category
+
+| category | P022a | P022b | P024a | P024b |
+|---|---|---|---|---|
+| EMPTY_RESPONSE | 11 | 48 | 0 | 0 |
+| HTTP_ERROR | 2 | 0 | 0 | 0 |
+| INCOMPLETE_RESPONSE | 0 | 0 | 0 | 40 |
+
+## Reading
+
+- P022a: 13/96 drops (13.5%), transport 2, model-level 11, evaluable 83.
+- P022b: 48/96 drops (50.0%), transport 0, model-level 48, evaluable 48.
+- P024a: 0/96 drops (0.0%), transport 0, model-level 0, evaluable 96.
+- P024b: 40/96 drops (41.7%), transport 0, model-level 40, evaluable 56.
+- P024b withheld cells: C2 evaluable 5, C4 evaluable 3 (P022b had 0 and 0).
+
+2026-11-03T12:09:30+02:00 comparison written
+2026-11-03T12:09:30+02:00 watcher finished

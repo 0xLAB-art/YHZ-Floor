@@ -1,0 +1,32 @@
+{
+  "case_id": "replay_cross_session-05",
+  "defect_family": "replay_cross_session",
+  "label_disagreement": true,
+  "primitive": "ECDSA_Nonce_Reuse",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "hash:execution_trace",
+      "execution-session-binding"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "public_key_matches": true,
+      "recovered_d_matches": true,
+      "recovered_k_matches": true,
+      "repeated_r": true,
+      "signatures_verify": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 130.65106299472973,
+  "split": "heldout",
+  "stored_label": "ACCEPTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "hash:execution_trace"
+  },
+  "validator_overhead_ms": 37.55807501147501
+}

@@ -1,0 +1,50 @@
+{
+  "adaptive_stopping": false,
+  "agent_calls_allowed": true,
+  "automatic_retries": 0,
+  "health": {
+    "checks": {
+      "decision_pass": true,
+      "endpoint": true,
+      "fallback_disabled": true,
+      "message_200": true,
+      "model": true,
+      "model_free": true,
+      "retries_zero": true,
+      "topup_zero": true,
+      "usage_free": true
+    },
+    "credential_file_present": true,
+    "health_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_provider_health_20261018/PROVIDER_HEALTH_CHECK.json",
+    "health_sha256": "eeb12406d4710a62b4ec6a8ca971b19f60ea7b99cab40552608a60183fc1b238",
+    "usage_snapshot": {
+      "allowance": 3000000,
+      "key": {
+        "name": "ACTS",
+        "remaining": null,
+        "usage_limit": null,
+        "used": 0
+      },
+      "limits": {
+        "daily": null,
+        "daily_used": 16542,
+        "weekly": null,
+        "weekly_used": 654815
+      },
+      "object": "usage",
+      "plan": "free",
+      "remaining": 2621405,
+      "resets_at": null,
+      "topup_remaining": 0,
+      "used": 378595
+    }
+  },
+  "paid_fallback_allowed": false,
+  "planned_sessions": 72,
+  "protocol_commit": "4743d186bb64b07f5f81d5448bce3f2ab0237563",
+  "provider_cost_ceiling_usd": 0.0,
+  "route": "claude-sonnet-4-6-free",
+  "seed_replacement": false,
+  "status": "RUNNING_APPROVED_REPLACEMENT_PILOT",
+  "study_expansion": false
+}

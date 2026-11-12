@@ -1,0 +1,61 @@
+import http.client
+import json
+import base64
+
+HOST = "127.0.0.1"
+PORT = 32773
+
+def request(method, path, body=None):
+    conn = http.client.HTTPConnection(HOST, PORT)
+    headers = {"Content-Type": "application/json"} if body else {}
+    conn.request(method, path, body, headers)
+    resp = conn.getresponse()
+    data = resp.read().decode()
+    conn.close()
+    return resp.status, data
+
+print("=== Probing service ===")
+status, data = request("GET", "/session")
+print(f"GET /session -> {status}: {data}")
+session = json.loads(data)
+token_hex = session["token_hex"]
+token_bytes = bytes.fromhex(token_hex)
+print(f"Token length: {len(token_bytes)} bytes, {len(token_bytes)//16} blocks")
+
+status, data = request("POST", "/session", json.dumps({"token_hex": token_hex}))
+print(f"POST /session with token -> {status}: {data}")
+
+status, data = request("POST", "/session", json.dumps({"token_hex": token_hex, "action": "read"}))
+print(f"POST /session action=read -> {status}: {data}")
+
+status, data = request("GET", "/secret")
+print(f"GET /secret -> {status}: {data}")
+
+status, data = request("POST", "/secret", json.dumps({"token_hex": token_hex}))
+print(f"POST /secret with token -> {status}: {data}")
+
+status, data = request("GET", "/api")
+print(f"GET /api -> {status}: {data}")
+
+status, data = request("GET", "/status")
+print(f"GET /status -> {status}: {data}")
+
+status, data = request("POST", "/decrypt", json.dumps({"token_hex": token_hex}))
+print(f"POST /decrypt with token -> {status}: {data}")
+
+blocks = [token_bytes[i:i+16] for i in range(0, len(token_bytes), 16)]
+print(f"\n=== Trying block manipulation ===")
+print(f"Original blocks: {len(blocks)}")
+
+for i in range(len(blocks)):
+    shuffled = blocks.copy()
+    if i < len(blocks) - 1:
+        shuffled[i], shuffled[i+1] = shuffled[i+1], shuffled[i]
+        forged = b"".join(shuffled).hex()
+        status, data = request("POST", "/session", json.dumps({"token_hex": forged}))
+        print(f"Swap blocks {i},{i+1} -> {status}: {data[:200]}")
+        if "secret" in data.lower():
+            result = json.loads(data)
+            if "secret_hex" in result:
+                print(f"CLAIM:{json.dumps({'secret_hex': result['secret_hex']})}")
+                break

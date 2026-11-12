@@ -1,0 +1,73 @@
+{
+  "a_plus_matches_historical_named_rc4_opening": true,
+  "cells": {
+    "C1": {
+      "naming_slot": "This is a qualified synthetic RC4 keystream-reuse instance. ",
+      "reference_slot": "Two 32-byte ciphertexts were made with the same key and nonce; c_ref encrypts a 32-byte all-zero reference. "
+    },
+    "C2": {
+      "naming_slot": "The public JSON contains a qualified synthetic cryptographic recovery instance, but the family and weakness label are intentionally withheld. Infer the construction from the public observations. ",
+      "reference_slot": "Two 32-byte ciphertexts were made with the same key and nonce; c_ref encrypts a 32-byte reference. "
+    },
+    "C3": {
+      "naming_slot": "The public JSON contains a qualified synthetic cryptographic recovery instance, but the family and weakness label are intentionally withheld. Infer the construction from the public observations. ",
+      "reference_slot": "Two 32-byte ciphertexts were made with the same key and nonce; c_ref encrypts a 32-byte all-zero reference. "
+    },
+    "C4": {
+      "naming_slot": "This is a qualified synthetic RC4 keystream-reuse instance. ",
+      "reference_slot": "Two 32-byte ciphertexts were made with the same key and nonce; c_ref encrypts a 32-byte reference. "
+    }
+  },
+  "historical_continuity_note": "Continuity assertion only: the historical RC4 run used a different known-plaintext fixture and different full prompt; byte-equality with it is neither expected nor required.",
+  "middle_block_sha256": "6ee3bbeebb0919b818f3ab17b6f24760abfc6dc3fc213b38fa0bed24a94e5e00",
+  "pairwise_diff_spans": {
+    "C1_C2": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 456,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C1_C3": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 554,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C1_C4": {
+      "common_prefix_len": 197,
+      "common_suffix_len": 456,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C2_C3": {
+      "common_prefix_len": 332,
+      "common_suffix_len": 456,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C2_C4": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 545,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C3_C4": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 456,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    }
+  },
+  "template_sha256": {
+    "C1": "1351616f196635802745cbd602d37f99e7807aa83a052d15c77b8e9c85eac625",
+    "C2": "fdc4a74d078e20852bb144bbac81d5a044e3fdd1f70f1e60f2f99f6f4cf933bf",
+    "C3": "84bc4ea952ec659effa5fdaa38d2d3d904459ef2f1c4b6faa6928ef31afb2c00",
+    "C4": "2201505deea877915b14d838efea65d35c8ecce6c80a308215161fe6b910319b"
+  }
+}

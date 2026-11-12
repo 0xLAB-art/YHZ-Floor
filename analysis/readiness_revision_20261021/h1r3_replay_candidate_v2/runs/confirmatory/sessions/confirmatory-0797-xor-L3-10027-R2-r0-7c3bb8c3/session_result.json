@@ -1,0 +1,138 @@
+{
+  "arm": "R2",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0797-xor-L3-10027-R2-r0-7c3bb8c3/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0797-xor-L3-10027-R2-r0-7c3bb8c3/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "base64",
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0797-xor-L3-10027-R2-r0-7c3bb8c3/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0797-xor-L3-10027-R2-r0-7c3bb8c3/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "XOR_Keystream_Reuse-L3-seed910027",
+    "reference": {
+      "cryptographic_predicate": true,
+      "detail": {
+        "candidate_len": 128,
+        "expected_len": 128
+      },
+      "verdict": "ACCEPTED"
+    },
+    "stage": "SUCCESS",
+    "success": 1
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L3-seed10027",
+  "kind": "primary",
+  "latency_s": 13.498308181762695,
+  "legacy_would_reject": false,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 797,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 4992,
+  "payload_sha256": "5b6cc37dc3738086cc060d9ee21bc726fbc643a3f32017e7977eecc7f1e995ef",
+  "phase": "confirmatory",
+  "prompt_chars": 5943,
+  "prompt_sha256": "69eed8864111d74b78ec466123f516253cbd1df56a96a10be95e95197ba18c80",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 128,
+      "expected_len": 128
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "plaintext": "5125bb030165b6186d7d866e5cbb28d353fe9a37f2dfca1664dbd2d22b2c37efc40e13e11ace1391d26d8aa62a007a2cb7a5be00577bc2cd3629380757abccb6b3d81ce38e69ba3248b7029573346884c3a28672908a5ae8680e2c5e201e3c646308baab33e3b95ecf14065c9ba0965c5d434e8b63048a2f4eea2fbb144ac5c3",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2544,
+  "response_sha256": "13543c4ec3c2b315346c832efdeff0bfbc4488fd24a5a7624d31a8dbc2b246ac",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 10027,
+  "session_id": "confirmatory-0797-xor-L3-10027-R2-r0-7c3bb8c3",
+  "source_chars": 2531,
+  "source_sha256": "c4efac845fe3247ae464655ec83781cbf6d9116d9866be00a0980271baa2b585",
+  "stderr_tail": "",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 1702,
+    "output_tokens": 773
+  }
+}

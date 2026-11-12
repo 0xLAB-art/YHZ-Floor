@@ -1,0 +1,28 @@
+{
+  "case_id": "invalid-04",
+  "defect_family": "none",
+  "label_disagreement": false,
+  "primitive": "ChaCha20_Nonce_Repeat",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "attribution"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "lengths_match": true,
+      "xor_recovery_matches": false
+    },
+    "cryptographic_predicate": false,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 40.52689499803819,
+  "split": "clean",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "attribution"
+  },
+  "validator_overhead_ms": 36.26937701483257
+}

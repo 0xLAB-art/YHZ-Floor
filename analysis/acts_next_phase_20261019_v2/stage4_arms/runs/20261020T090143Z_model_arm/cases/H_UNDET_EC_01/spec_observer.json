@@ -1,0 +1,38 @@
+{
+  "attempt_id": "e2a-H_UNDET_EC_01",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage4_arms/runs/20261020T090143Z_model_arm/cases/H_UNDET_EC_01",
+  "case_id": "H_UNDET_EC_01",
+  "context": {
+    "attempt_id": "e2a-H_UNDET_EC_01",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ECDSA_Nonce_Reuse-seed-01"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_UNDET_EC_01",
+    "producer_id": "e2a-model-producer-v1",
+    "producer_kind": "model",
+    "producer_nonce": "a308d4880d550dbb2fe17f6cf6a5d23f944ead8b9b84bf22906726e95224bd2a",
+    "provider_call_index": 14,
+    "provider_endpoint": "https://api.apmix.ai",
+    "provider_response_sha256": "ee057379321d656794fcf5454e26abbc1e9783830adf0765597b4d2bec5ef388",
+    "provider_route": "claude-sonnet-4-6-free"
+  },
+  "program_source_text": "import json\nimport sys\n\nwith open(sys.argv[1], 'r') as f:\n    data = json.load(f)\n\nif 'signature_2' not in data:\n    print(json.dumps({\"status\": \"UNDERDETERMINED\", \"reason\": \"second signature missing, cannot recover private key from single signature\"}))\nelse:\n    N = 0xFFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551\n    sig1 = data['signature_1']\n    sig2 = data['signature_2']\n    r = int(sig1['r'], 16)\n    s1 = int(sig1['s'], 16)\n    z1 = int(sig1['z'], 16)\n    s2 = int(sig2['s'], 16)\n    z2 = int(sig2['z'], 16)\n    \n    def modinv(a, m):\n        return pow(a, -1, m)\n    \n    k = ((z1 - z2) * modinv(s1 - s2, N)) % N\n    d = ((s1 * k - z1) * modinv(r, N)) % N\n    \n    print(json.dumps({\"k\": f\"{k:064x}\", \"d\": f\"{d:064x}\"}))\n",
+  "public_instance": {
+    "encoding": "json-hex-v1",
+    "public_key": [
+      "286a592fc9259c05137208d79725950ca3b591fcdc5ff482153ddefa1774a7eb",
+      "924636cff9e61ccd3be181df379a425ee366611f0339ae377c9be728538e8cea"
+    ],
+    "signature_1": {
+      "r": "367b2679871807d0a761e213a533d80d48ab7db5cc03cd2d4aedc90e0113bb3d",
+      "s": "2974c5f5bbe0d6637d2666f66d46aa4e68a6b40badfebe1f46484fe01c32b16c",
+      "z": "a5327cbd8fef280bddbe80766681b03694695bd6f6ae3b2205f7c8e190aea844"
+    }
+  },
+  "target_id": "ECDSA_Nonce_Reuse-seed-01"
+}

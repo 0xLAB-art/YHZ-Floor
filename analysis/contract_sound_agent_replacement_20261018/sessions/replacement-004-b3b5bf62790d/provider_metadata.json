@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "11eb4f0ea662feb5ebcebd8a4b4fc9d9478e11a2745117b6e0d56f60db1927bc",
+  "output_text": "```python\nimport sys\nimport json\nimport base64\n\ndef b64_to_int(s):\n    return int.from_bytes(base64.b64decode(s), 'big')\n\ndef main():\n    with open(sys.argv[1]) as f:\n        data = json.load(f)\n    \n    # Parse public key and signatures\n    r1 = b64_to_int(data['signature_1']['r'])\n    s1 = b64_to_int(data['signature_1']['s'])\n    z1 = b64_to_int(data['signature_1']['z'])\n    \n    r2 = b64_to_int(data['signature_2']['r'])\n    s2 = b64_to_int(data['signature_2']['s'])\n    z2 = b64_to_int(data['signature_2']['z'])\n    \n    # ECDSA curve order (secp256k1)\n    n = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141\n    \n    # Since r1 == r2, nonce k was reused\n    # ECDSA: s = k^-1 * (z + r*d) mod n\n    # s1 = k^-1 * (z1 + r*d) mod n\n    # s2 = k^-1 * (z2 + r*d) mod n\n    # s1 - s2 = k^-1 * (z1 - z2) mod n\n    # k = (z1 - z2) / (s1 - s2) mod n\n    \n    ds = (s1 - s2) % n\n    dz = (z1 - z2) % n\n    \n    # Compute modular inverse\n    ds_inv = pow(ds, -1, n)\n    k = (dz * ds_inv) % n\n    \n    # Recover private key d\n    # s1 = k^-1 * (z1 + r*d) mod n\n    # s1 * k = z1 + r*d mod n\n    # d = (s1*k - z1) / r mod n\n    \n    r_inv = pow(r1, -1, n)\n    d = ((s1 * k - z1) % n * r_inv) % n\n    \n    result = {\n        \"d\": f\"{d:064x}\",\n        \"k\": f\"{k:064x}\"\n    }\n    \n    print(json.dumps(result))\n\nif __name__ == \"__main__\":\n    main()\n```",
+  "prompt_sha256": "191deace263890bd133dfa53e82d0bbba8fb26106a2d20e04ac2414210407808",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341476.1260376,
+  "response_bytes": 1728,
+  "response_finished": 1792341487.0241404,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:38:06 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2582965",
+    "x-apmix-request-id": "req_d91b07e3dbe84f009c96c5f0",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "417035",
+    "x-apmix-weighted-tokens": "950",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "88b5ce167664580eb2a40af6c549630a370507204bcde0ffecd285062d2119f0",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 289,
+    "output_tokens": 661
+  }
+}

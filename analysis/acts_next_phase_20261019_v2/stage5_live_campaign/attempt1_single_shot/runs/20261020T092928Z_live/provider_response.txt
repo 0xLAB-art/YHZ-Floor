@@ -1,0 +1,39 @@
+```python
+import urllib.request
+import json
+import base64
+
+TARGET = "http://127.0.0.1:32769"
+
+def request(endpoint, data=None):
+    if data is not None:
+        data = json.dumps(data).encode()
+    req = urllib.request.Request(TARGET + endpoint, data=data, headers={"Content-Type": "application/json"} if data else {})
+    with urllib.request.urlopen(req) as resp:
+        return json.loads(resp.read().decode())
+
+session_resp = request("/session")
+session_token = session_resp["session_token"]
+
+original_blocks = [session_token[i:i+32] for i in range(0, len(session_token), 32)]
+
+for swap_idx in range(len(original_blocks)):
+    modified = original_blocks[:]
+    if swap_idx + 1 < len(original_blocks):
+        modified[swap_idx], modified[swap_idx + 1] = modified[swap_idx + 1], modified[swap_idx]
+    else:
+        modified[0], modified[swap_idx] = modified[swap_idx], modified[0]
+    
+    forged_token = "".join(modified)
+    
+    try:
+        result = request("/secret", {"session_token": forged_token})
+        if "secret" in result:
+            secret_hex = result["secret"].encode().hex()
+            print(json.dumps({"secret_hex": secret_hex}))
+            exit(0)
+    except:
+        pass
+
+print(json.dumps({"secret_hex": "00"}))
+```

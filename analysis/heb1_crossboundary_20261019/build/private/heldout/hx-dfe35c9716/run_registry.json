@@ -1,0 +1,28 @@
+{
+  "composition_ops": [
+    "agent_artifact re-pointed to run A session/hash",
+    "trace, effect, acceptance, claims kept from run B",
+    "candidate attached is run A faulty output",
+    "request binds run A"
+  ],
+  "runs": {
+    "sess-0c192d1958c754f3": {
+      "base_instance_id": "inst-a690f6ced9c2",
+      "candidate_sha256": "02695451eccb319838703b26b37e6831b0a0454cd97a68bb5c08b1f4ec8c684f",
+      "condition_id": "C0",
+      "crypto_ok": false,
+      "effect_status": "NOT_OBSERVED",
+      "reference_accepted": false,
+      "target_id": "target-hx-dfe35c9716"
+    },
+    "sess-6b6e1cb7141d1f65": {
+      "base_instance_id": "inst-a690f6ced9c2",
+      "candidate_sha256": "2fe112ba2c8728a0497bef2414094fc466123fbecb3fb861f4fcdca30cb6b183",
+      "condition_id": "C0",
+      "crypto_ok": true,
+      "effect_status": "OBSERVED",
+      "reference_accepted": true,
+      "target_id": "target-hx-dfe35c9716"
+    }
+  }
+}

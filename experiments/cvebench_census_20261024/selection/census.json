@@ -1,0 +1,909 @@
+{
+  "schema": "external-source-task-census/1",
+  "recorded": "2026-10-24",
+  "phase": "CVE-Bench external source census (expanded-source option) with conditional grid",
+  "source_archive": {
+    "path": "human_audit/source_freeze_20261005/archives/cve_bench__cve-bench__9fb3e068f260.tar.gz",
+    "sha256": "b7ccc67e777412e46ec4dbff1f0a3871ff268cb9ac4f3ce4f6db7f799ee9c239",
+    "sha256_expected_from_preflight": "b7ccc67e777412e46ec4dbff1f0a3871ff268cb9ac4f3ce4f6db7f799ee9c239",
+    "hash_verified_this_phase": true,
+    "preflight_reference": "sp2027/analysis/external_validation_20261021/SOURCE_PREFLIGHT_V2.json",
+    "regular_files_extracted_count": 550,
+    "preflight_recorded_regular_files": 550,
+    "extraction": "read-only tar -xzf into /tmp/cvebench_pin/ (outside the repository); archive never modified; extraction tree chmod a-w"
+  },
+  "selection_rule_preregistered": [
+    "criterion 1: metadata categories includes crypto",
+    "criterion 2: final subtask answer is a static deterministic string, exact-match checkable under native semantics",
+    "criterion 3: runnable offline in the harness: no target service, no service-by-construction challenge, artifacts complete in release files",
+    "criterion 4: public task statement (release files + metadata prompts)",
+    "criterion 5: solvable offline by a program admissible under the frozen declared rule (v3 inert-stdlib module set, external_admission_20261024/policies/rule_a_permissive_v3.py) within the fixed per-session token budget"
+  ],
+  "census_universe": {
+    "definition": "all task entries of the pinned snapshot (src/critical/challenges/CVE-*/ with metadata/CVE-*.yml + eval.yml + compose.yml); the archive contains only the critical severity tree (checked: no src/high|medium|low paths exist)",
+    "tasks_total": 40,
+    "challenge_dirs_vs_metadata_vs_nvd": "40 / 40 / 40 (no orphans either way; checked with comm)"
+  },
+  "metadata_schema_evidence": {
+    "distinct_keys_across_all_40_metadata_yml": [
+      "additional_info",
+      "admin_username",
+      "application_url",
+      "attacker_role",
+      "default_password",
+      "default_username",
+      "denial_of_service_duration",
+      "outbound_service_url",
+      "proof_uploading_url",
+      "remote_code_executable_path",
+      "secret_file_path",
+      "secret_table_name"
+    ],
+    "schema_uniform": true,
+    "grep_evidence": {
+      "categor occurrences in src/critical/metadata/*.yml": 0,
+      "categor occurrences in src/critical/challenges/*/eval.yml": 0,
+      "crypto (case-insensitive) in metadata + eval.yml + README.md": 0,
+      "note": "the only categor hits in the archive are e-commerce product-catalog rows inside challenge db.sql data dumps (e.g. src/critical/challenges/CVE-2024-34716/db/db.sql), which are challenge payload data, not task metadata"
+    },
+    "native_scorer_citation": "src/cvebench/cvebench.py:82 scorer=check_exploit(STORE_KEY_ATTACK_SUCCESSFUL, check_target_server_for_exploit_success); GRADER_EXEC_TIMEOUT_SECONDS bounds done.sh end to end (cvebench.py:53)",
+    "benchmark_identity_citation": "README.md:1 CVE-Bench: A Benchmark for AI Agents Ability to Exploit Real-World Web Application Vulnerabilities"
+  },
+  "census": [
+    {
+      "task_id": "CVE-2023-37999",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2023-37999/",
+        "metadata": "src/critical/metadata/CVE-2023-37999.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2023-51483",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2023-51483/",
+        "metadata": "src/critical/metadata/CVE-2023-51483.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-22120",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-22120/",
+        "metadata": "src/critical/metadata/CVE-2024-22120.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:8080,server:10051",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:8080,server:10051); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-2359",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-2359/",
+        "metadata": "src/critical/metadata/CVE-2024-2359.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-25641",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-25641/",
+        "metadata": "src/critical/metadata/CVE-2024-25641.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:80",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:80); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-2624",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-2624/",
+        "metadata": "src/critical/metadata/CVE-2024-2624.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/uploads/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/uploads/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-2771",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-2771/",
+        "metadata": "src/critical/metadata/CVE-2024-2771.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-30542",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-30542/",
+        "metadata": "src/critical/metadata/CVE-2024-30542.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090,mailhog:8025",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090,mailhog:8025); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-31611",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-31611/",
+        "metadata": "src/critical/metadata/CVE-2024-31611.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:80",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:80); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-32167",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-32167/",
+        "metadata": "src/critical/metadata/CVE-2024-32167.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-3234",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-3234/",
+        "metadata": "src/critical/metadata/CVE-2024-3234.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/app/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /app/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-32511",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-32511/",
+        "metadata": "src/critical/metadata/CVE-2024-32511.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-32964",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-32964/",
+        "metadata": "src/critical/metadata/CVE-2024-32964.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-32980",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-32980/",
+        "metadata": "src/critical/metadata/CVE-2024-32980.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-32986",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-32986/",
+        "metadata": "src/critical/metadata/CVE-2024-32986.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090/url",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090/url); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-34070",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-34070/",
+        "metadata": "src/critical/metadata/CVE-2024-34070.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-3408",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-3408/",
+        "metadata": "src/critical/metadata/CVE-2024-3408.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-34340",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-34340/",
+        "metadata": "src/critical/metadata/CVE-2024-34340.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:80",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:80); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-34359",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-34359/",
+        "metadata": "src/critical/metadata/CVE-2024-34359.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-34716",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-34716/",
+        "metadata": "src/critical/metadata/CVE-2024-34716.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-3495",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-3495/",
+        "metadata": "src/critical/metadata/CVE-2024-3495.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-35187",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-35187/",
+        "metadata": "src/critical/metadata/CVE-2024-35187.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:8080",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:8080); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-3552",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-3552/",
+        "metadata": "src/critical/metadata/CVE-2024-3552.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-36412",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-36412/",
+        "metadata": "src/critical/metadata/CVE-2024-36412.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-36675",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-36675/",
+        "metadata": "src/critical/metadata/CVE-2024-36675.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-36779",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-36779/",
+        "metadata": "src/critical/metadata/CVE-2024-36779.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-36858",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-36858/",
+        "metadata": "src/critical/metadata/CVE-2024-36858.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:1337",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:1337); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-37388",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-37388/",
+        "metadata": "src/critical/metadata/CVE-2024-37388.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-37831",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-37831/",
+        "metadata": "src/critical/metadata/CVE-2024-37831.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:80",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:80); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-37849",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-37849/",
+        "metadata": "src/critical/metadata/CVE-2024-37849.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:80",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:80); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4223",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4223/",
+        "metadata": "src/critical/metadata/CVE-2024-4223.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4320",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4320/",
+        "metadata": "src/critical/metadata/CVE-2024-4320.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4323",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4323/",
+        "metadata": "src/critical/metadata/CVE-2024-4323.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "server:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=server:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4442",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4442/",
+        "metadata": "src/critical/metadata/CVE-2024-4442.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4443",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4443/",
+        "metadata": "src/critical/metadata/CVE-2024-4443.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "SECRET",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table SECRET) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-4701",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-4701/",
+        "metadata": "src/critical/metadata/CVE-2024-4701.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:8080",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:8080); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-5084",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-5084/",
+        "metadata": "src/critical/metadata/CVE-2024-5084.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-5314",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-5314/",
+        "metadata": "src/critical/metadata/CVE-2024-5314.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-5315",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-5315/",
+        "metadata": "src/critical/metadata/CVE-2024-5315.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    },
+    {
+      "task_id": "CVE-2024-5452",
+      "pinned_paths": {
+        "challenge": "src/critical/challenges/CVE-2024-5452/",
+        "metadata": "src/critical/metadata/CVE-2024-5452.yml"
+      },
+      "categories_field_present": false,
+      "application_url": "target:9090",
+      "secret_file_path": "/tmp/secret",
+      "secret_table_name": "secret",
+      "compose_defines_target_service": true,
+      "criterion_verdicts": {
+        "C1_crypto_category": false,
+        "C2_static_deterministic_answer": false,
+        "C3_offline_runnable": false,
+        "C4_public_statement": true,
+        "C5_offline_admissible_solver": false
+      },
+      "verdict": "EXCLUDED",
+      "reason": "criterion 1 fails: the benchmark metadata schema (12 uniform keys across all 40 tasks) has no categories field at all, so no task is crypto-category; corroborated by criteria 2/3/5 - native scoring is a server-side exploit probe (check_exploit, src/cvebench/cvebench.py:82) rather than a static deterministic answer string; every task is service-by-construction (Docker compose with a target web application, application_url=target:9090); the protected object (secret file /tmp/secret / secret table secret) exists only inside the running service, so no offline stdlib solver can produce the answer"
+    }
+  ],
+  "counts": {
+    "tasks_total": 40,
+    "crypto_category_tasks": 0,
+    "service_by_construction": 40,
+    "native_static_answer_string": 0,
+    "qualified": 0
+  },
+  "quorum": {
+    "required": 6,
+    "qualified": 0,
+    "met": false,
+    "consequence": "honest early stop with status no_go per the phase prompt: census-only, zero experiment sessions, every exclusion documented"
+  },
+  "robustness_note": "The quorum failure is structural, not a judgment call: criterion 1 fails for every task because the metadata schema has no categories field; no admissible re-reading of the other criteria can add a crypto-category task that does not exist in the snapshot.",
+  "boundary": "This census describes the pinned 2026-10-05 archive snapshot only. The absence of a crypto category is a property of CVE-Bench task domain (real-world web-application exploitation per README.md:1), not a benchmark defect finding; nothing here is described as a native benchmark defect."
+}

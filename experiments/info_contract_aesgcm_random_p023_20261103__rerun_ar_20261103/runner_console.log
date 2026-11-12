@@ -1,0 +1,597 @@
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcm",
+  "fixture_name": "AES-GCM",
+  "keystream_exposed": true,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103",
+  "protocol": "P023-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v2-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+  "seed_receipt": "seeds_random_20261103T080050Z.json",
+  "seeds": [
+    6238476945124757383,
+    3601881115495891871,
+    8048557725793283746,
+    7924034223567703620,
+    3742769490401507755,
+    1585095746085177179,
+    1831310527132130790,
+    6728127727466429280,
+    7554909901743100741,
+    764234300235100996,
+    3675169037867121862,
+    1298103033926182985,
+    1492976177175509686,
+    8646618385589199502,
+    5617674659705493415,
+    322268012544499066,
+    3337836927333043090,
+    6192329578851299924,
+    9021043828481377472,
+    2153252603947154303,
+    4317863763958137178,
+    7039298900975471090,
+    6558547484437866914,
+    6078840379203760928,
+    7683518956631461303,
+    4691011444170785140,
+    3291606565558711307,
+    7621042267030881084,
+    3693056069086673335,
+    6864836979952542335,
+    526082495394855105,
+    8867731259025018507,
+    4643356234177170782,
+    1396276842949247769,
+    2280029040495700177,
+    8309215276077284482,
+    9063855556675434429,
+    4505333851535714659,
+    2349802557113952366,
+    6464446431447968285,
+    351787936014616182,
+    8112735869602570387,
+    9147644902911830079,
+    6463246207947684418,
+    5977834348564333437,
+    4028124431681024537,
+    3867165492354754491,
+    6096112367654359866,
+    3217240104117822816,
+    5890912690139513980,
+    868042507115915559,
+    1602387209621728615,
+    1264376338402901921,
+    954362677299453171,
+    4956438725822084824,
+    3762639101329320857,
+    973051296467640801,
+    8583105168549323419,
+    5732395010467991638,
+    4133913043183831847,
+    4894932621695826918,
+    8802768443247175250,
+    2853374169475916944,
+    1965309402190747334,
+    5028022026399093068,
+    8090642077162703663,
+    6596988289136779105,
+    2214325250899153621,
+    2884501789661599337,
+    8700220779781238033,
+    706108364863219374,
+    5474644495180438486,
+    8038738840296419533,
+    2666624668073057069,
+    7906728743163428268,
+    4869191216096763816,
+    1828359750492843314,
+    3851546779205813227,
+    692594502395781071,
+    2848459994138897671,
+    6226082358267250940,
+    7409342989126851590,
+    5733688623763834934,
+    1073345739092420893,
+    7971469677181315464,
+    669105431932799640,
+    2297387042443321191,
+    571409064348308598,
+    3300748989585364966,
+    3043849619707581455,
+    7379658074873348047,
+    6640011216155793808,
+    5293870392145176013,
+    3447098848517927456,
+    7496639115989803554,
+    320368908172148033
+  ],
+  "seeds_registered_sha256": "056aa34e8e53698220ee81288763db7ca6064c9069fd5b7197caddc13653d8ae",
+  "sessions_registered": 384,
+  "started": 1793727047.820809,
+  "supersedes_design_of": "P021-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1",
+  "token_floor": 4200,
+  "token_floor_basis": {
+    "applied_to": "uniformly across C1/C2/C3/C4",
+    "previous_floor": 2800,
+    "previous_headroom_tokens": 53,
+    "rule": "round_up(1.5 * max_observed, 400)",
+    "source_cohort": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+    "source_max_observed_output_tokens": 2747
+  },
+  "transport_policy": {
+    "backoff_seconds": [
+      2,
+      5,
+      12
+    ],
+    "jitter": false,
+    "max_attempts_per_call": 4,
+    "never_retried": [
+      "EMPTY_RESPONSE",
+      "INCOMPLETE_RESPONSE",
+      "HTTP_ERROR outside retry_status",
+      "CREDENTIAL_MISSING",
+      "CREDENTIAL_EMPTY"
+    ],
+    "retried_classes": [
+      "TIMEOUT",
+      "PROVIDER_UNAVAILABLE",
+      "MALFORMED_PROVIDER_JSON",
+      "HTTP_ERROR with retry_status",
+      "HTTP 400 carrying a retry_body_marker"
+    ],
+    "retry_body_markers": [
+      "stream_options"
+    ],
+    "retry_status": [
+      408,
+      409,
+      425,
+      429,
+      500,
+      501,
+      502,
+      503,
+      504,
+      520,
+      521,
+      522,
+      523,
+      524,
+      529
+    ]
+  },
+  "user_agent": "claude-cli/2.0.0 (external, cli)"
+}
+parallel run: 384 sessions to run, 0 already recorded, 8 workers
+[1/384] C3 seed=6238476945124757383 SUCCESS accepted_so_far=1 233/h eta=1.6h
+[2/384] C1 seed=6238476945124757383 SUCCESS accepted_so_far=2 446/h eta=0.9h
+[3/384] C1 seed=3601881115495891871 SUCCESS accepted_so_far=3 647/h eta=0.6h
+[4/384] C3 seed=3601881115495891871 SUCCESS accepted_so_far=4 591/h eta=0.6h
+[5/384] C1 seed=8048557725793283746 SUCCESS accepted_so_far=5 517/h eta=0.7h
+[6/384] C3 seed=8048557725793283746 SUCCESS accepted_so_far=6 586/h eta=0.6h
+[7/384] C1 seed=7924034223567703620 SUCCESS accepted_so_far=7 427/h eta=0.9h
+[8/384] C4 seed=6238476945124757383 ORACLE_FAIL accepted_so_far=7 282/h eta=1.3h
+[9/384] C3 seed=7924034223567703620 SUCCESS accepted_so_far=8 268/h eta=1.4h
+[10/384] C4 seed=3601881115495891871 ORACLE_FAIL accepted_so_far=8 285/h eta=1.3h
+[11/384] C4 seed=8048557725793283746 ORACLE_FAIL accepted_so_far=8 299/h eta=1.2h
+[12/384] C2 seed=8048557725793283746 EMPTY_RESPONSE accepted_so_far=8 325/h eta=1.1h
+[13/384] C1 seed=3742769490401507755 SUCCESS accepted_so_far=9 337/h eta=1.1h
+[14/384] C3 seed=3742769490401507755 SUCCESS accepted_so_far=10 324/h eta=1.1h
+[15/384] C2 seed=6238476945124757383 ORACLE_FAIL accepted_so_far=10 316/h eta=1.2h
+[16/384] C3 seed=1585095746085177179 SUCCESS accepted_so_far=11 323/h eta=1.1h
+[17/384] C4 seed=7924034223567703620 ORACLE_FAIL accepted_so_far=11 312/h eta=1.2h
+[18/384] C1 seed=1585095746085177179 SUCCESS accepted_so_far=12 323/h eta=1.1h
+[19/384] C3 seed=1831310527132130790 SUCCESS accepted_so_far=13 311/h eta=1.2h
+[20/384] C2 seed=3601881115495891871 ORACLE_FAIL accepted_so_far=13 327/h eta=1.1h
+[21/384] C2 seed=3742769490401507755 EMPTY_RESPONSE accepted_so_far=13 323/h eta=1.1h
+[22/384] C4 seed=3742769490401507755 ORACLE_FAIL accepted_so_far=13 337/h eta=1.1h
+[23/384] C1 seed=1831310527132130790 SUCCESS accepted_so_far=14 347/h eta=1.0h
+[24/384] C1 seed=6728127727466429280 SUCCESS accepted_so_far=15 338/h eta=1.1h
+[25/384] C2 seed=7924034223567703620 ORACLE_FAIL accepted_so_far=15 347/h eta=1.0h
+[26/384] C3 seed=6728127727466429280 SUCCESS accepted_so_far=16 335/h eta=1.1h
+[27/384] C1 seed=7554909901743100741 SUCCESS accepted_so_far=17 339/h eta=1.1h
+[28/384] C4 seed=1585095746085177179 ORACLE_FAIL accepted_so_far=17 348/h eta=1.0h
+[29/384] C3 seed=7554909901743100741 SUCCESS accepted_so_far=18 337/h eta=1.1h
+[30/384] C2 seed=1585095746085177179 ORACLE_FAIL accepted_so_far=18 332/h eta=1.1h
+[31/384] C4 seed=6728127727466429280 ORACLE_FAIL accepted_so_far=18 343/h eta=1.0h
+[32/384] C2 seed=1831310527132130790 EMPTY_RESPONSE accepted_so_far=18 345/h eta=1.0h
+[33/384] C4 seed=1831310527132130790 ORACLE_FAIL accepted_so_far=18 350/h eta=1.0h
+[34/384] C2 seed=6728127727466429280 EMPTY_RESPONSE accepted_so_far=18 358/h eta=1.0h
+[35/384] C1 seed=764234300235100996 SUCCESS accepted_so_far=19 358/h eta=1.0h
+[36/384] C3 seed=764234300235100996 SUCCESS accepted_so_far=20 363/h eta=1.0h
+[37/384] C3 seed=3675169037867121862 SUCCESS accepted_so_far=21 370/h eta=0.9h
+[38/384] C1 seed=3675169037867121862 SUCCESS accepted_so_far=22 371/h eta=0.9h
+[39/384] C1 seed=1298103033926182985 SUCCESS accepted_so_far=23 365/h eta=0.9h
+[40/384] C2 seed=7554909901743100741 EMPTY_RESPONSE accepted_so_far=23 369/h eta=0.9h
+[41/384] C3 seed=1298103033926182985 SUCCESS accepted_so_far=24 357/h eta=1.0h
+[42/384] C2 seed=764234300235100996 EMPTY_RESPONSE accepted_so_far=24 364/h eta=0.9h
+[43/384] C4 seed=7554909901743100741 ORACLE_FAIL accepted_so_far=24 373/h eta=0.9h
+[44/384] C1 seed=1492976177175509686 SUCCESS accepted_so_far=25 369/h eta=0.9h
+[45/384] C3 seed=1492976177175509686 SUCCESS accepted_so_far=26 376/h eta=0.9h
+[46/384] C4 seed=764234300235100996 ORACLE_FAIL accepted_so_far=26 380/h eta=0.9h
+[47/384] C4 seed=3675169037867121862 ORACLE_FAIL accepted_so_far=26 373/h eta=0.9h
+[48/384] C3 seed=8646618385589199502 SUCCESS accepted_so_far=27 376/h eta=0.9h
+[49/384] C1 seed=8646618385589199502 SUCCESS accepted_so_far=28 368/h eta=0.9h
+[50/384] C4 seed=1298103033926182985 ORACLE_FAIL accepted_so_far=28 367/h eta=0.9h
+[51/384] C3 seed=5617674659705493415 SUCCESS accepted_so_far=29 367/h eta=0.9h
+[52/384] C2 seed=1298103033926182985 ORACLE_FAIL accepted_so_far=29 365/h eta=0.9h
+[53/384] C1 seed=5617674659705493415 SUCCESS accepted_so_far=30 369/h eta=0.9h
+[54/384] C4 seed=1492976177175509686 ORACLE_FAIL accepted_so_far=30 364/h eta=0.9h
+[55/384] C2 seed=3675169037867121862 ORACLE_FAIL accepted_so_far=30 363/h eta=0.9h
+[56/384] C2 seed=1492976177175509686 ORACLE_FAIL accepted_so_far=30 362/h eta=0.9h
+[57/384] C4 seed=8646618385589199502 ORACLE_FAIL accepted_so_far=30 366/h eta=0.9h
+[58/384] C2 seed=8646618385589199502 ORACLE_FAIL accepted_so_far=30 371/h eta=0.9h
+[59/384] C1 seed=322268012544499066 SUCCESS accepted_so_far=31 370/h eta=0.9h
+[60/384] C3 seed=322268012544499066 SUCCESS accepted_so_far=32 373/h eta=0.9h
+[61/384] C1 seed=3337836927333043090 SUCCESS accepted_so_far=33 376/h eta=0.9h
+[62/384] C3 seed=3337836927333043090 SUCCESS accepted_so_far=34 374/h eta=0.9h
+[63/384] C4 seed=5617674659705493415 ORACLE_FAIL accepted_so_far=34 375/h eta=0.9h
+[64/384] C3 seed=6192329578851299924 SUCCESS accepted_so_far=35 375/h eta=0.9h
+[65/384] C2 seed=5617674659705493415 EMPTY_RESPONSE accepted_so_far=35 371/h eta=0.9h
+[66/384] C1 seed=6192329578851299924 SUCCESS accepted_so_far=36 375/h eta=0.8h
+[67/384] C4 seed=322268012544499066 ORACLE_FAIL accepted_so_far=36 378/h eta=0.8h
+[68/384] C3 seed=9021043828481377472 SUCCESS accepted_so_far=37 377/h eta=0.8h
+[69/384] C2 seed=3337836927333043090 EMPTY_RESPONSE accepted_so_far=37 379/h eta=0.8h
+[70/384] C1 seed=9021043828481377472 SUCCESS accepted_so_far=38 384/h eta=0.8h
+[71/384] C2 seed=322268012544499066 EMPTY_RESPONSE accepted_so_far=38 388/h eta=0.8h
+[72/384] C4 seed=3337836927333043090 ORACLE_FAIL accepted_so_far=38 389/h eta=0.8h
+[73/384] C1 seed=2153252603947154303 SUCCESS accepted_so_far=39 392/h eta=0.8h
+[74/384] C1 seed=4317863763958137178 SUCCESS accepted_so_far=40 388/h eta=0.8h
+[75/384] C3 seed=2153252603947154303 SUCCESS accepted_so_far=41 392/h eta=0.8h
+[76/384] C2 seed=6192329578851299924 EMPTY_RESPONSE accepted_so_far=41 392/h eta=0.8h
+[77/384] C3 seed=4317863763958137178 SUCCESS accepted_so_far=42 389/h eta=0.8h
+[78/384] C4 seed=6192329578851299924 ORACLE_FAIL accepted_so_far=42 385/h eta=0.8h
+[79/384] C3 seed=7039298900975471090 SUCCESS accepted_so_far=43 378/h eta=0.8h
+[80/384] C4 seed=9021043828481377472 ORACLE_FAIL accepted_so_far=43 381/h eta=0.8h
+[81/384] C4 seed=2153252603947154303 ORACLE_FAIL accepted_so_far=43 385/h eta=0.8h
+[82/384] C2 seed=9021043828481377472 EMPTY_RESPONSE accepted_so_far=43 387/h eta=0.8h
+[83/384] C1 seed=7039298900975471090 SUCCESS accepted_so_far=44 387/h eta=0.8h
+[84/384] C3 seed=6558547484437866914 SUCCESS accepted_so_far=45 388/h eta=0.8h
+[85/384] C1 seed=6558547484437866914 SUCCESS accepted_so_far=46 386/h eta=0.8h
+[86/384] C2 seed=2153252603947154303 ORACLE_FAIL accepted_so_far=46 389/h eta=0.8h
+[87/384] C2 seed=4317863763958137178 EMPTY_RESPONSE accepted_so_far=46 392/h eta=0.8h
+[88/384] C4 seed=4317863763958137178 ORACLE_FAIL accepted_so_far=46 394/h eta=0.8h
+[89/384] C1 seed=6078840379203760928 SUCCESS accepted_so_far=47 393/h eta=0.8h
+[90/384] C2 seed=7039298900975471090 EMPTY_RESPONSE accepted_so_far=47 392/h eta=0.8h
+[91/384] C3 seed=6078840379203760928 SUCCESS accepted_so_far=48 396/h eta=0.7h
+[92/384] C1 seed=7683518956631461303 SUCCESS accepted_so_far=49 397/h eta=0.7h
+[93/384] C4 seed=7039298900975471090 ORACLE_FAIL accepted_so_far=49 392/h eta=0.7h
+[94/384] C3 seed=7683518956631461303 SUCCESS accepted_so_far=50 393/h eta=0.7h
+[95/384] C3 seed=4691011444170785140 SUCCESS accepted_so_far=51 389/h eta=0.7h
+[96/384] C4 seed=6558547484437866914 ORACLE_FAIL accepted_so_far=51 393/h eta=0.7h
+[97/384] C4 seed=6078840379203760928 EMPTY_RESPONSE accepted_so_far=51 396/h eta=0.7h
+[98/384] C2 seed=6558547484437866914 EMPTY_RESPONSE accepted_so_far=51 397/h eta=0.7h
+[99/384] C1 seed=4691011444170785140 SUCCESS accepted_so_far=52 396/h eta=0.7h
+[100/384] C3 seed=3291606565558711307 SUCCESS accepted_so_far=53 398/h eta=0.7h
+[101/384] C1 seed=3291606565558711307 SUCCESS accepted_so_far=54 398/h eta=0.7h
+[102/384] C2 seed=7683518956631461303 EMPTY_RESPONSE accepted_so_far=54 393/h eta=0.7h
+[103/384] C4 seed=7683518956631461303 ORACLE_FAIL accepted_so_far=54 395/h eta=0.7h
+[104/384] C1 seed=7621042267030881084 SUCCESS accepted_so_far=55 392/h eta=0.7h
+[105/384] C2 seed=6078840379203760928 ORACLE_FAIL accepted_so_far=55 391/h eta=0.7h
+[106/384] C3 seed=7621042267030881084 SUCCESS accepted_so_far=56 393/h eta=0.7h
+[107/384] C2 seed=4691011444170785140 EMPTY_RESPONSE accepted_so_far=56 395/h eta=0.7h
+[108/384] C1 seed=3693056069086673335 SUCCESS accepted_so_far=57 395/h eta=0.7h
+[109/384] C4 seed=4691011444170785140 ORACLE_FAIL accepted_so_far=57 393/h eta=0.7h
+[110/384] C3 seed=3693056069086673335 SUCCESS accepted_so_far=58 395/h eta=0.7h
+[111/384] C4 seed=3291606565558711307 ORACLE_FAIL accepted_so_far=58 397/h eta=0.7h
+[112/384] C2 seed=3291606565558711307 EMPTY_RESPONSE accepted_so_far=58 398/h eta=0.7h
+[113/384] C3 seed=6864836979952542335 SUCCESS accepted_so_far=59 399/h eta=0.7h
+[114/384] C1 seed=6864836979952542335 SUCCESS accepted_so_far=60 399/h eta=0.7h
+[115/384] C3 seed=526082495394855105 SUCCESS accepted_so_far=61 399/h eta=0.7h
+[116/384] C4 seed=7621042267030881084 ORACLE_FAIL accepted_so_far=61 398/h eta=0.7h
+[117/384] C1 seed=526082495394855105 SUCCESS accepted_so_far=62 396/h eta=0.7h
+[118/384] C2 seed=7621042267030881084 ORACLE_FAIL accepted_so_far=62 393/h eta=0.7h
+[119/384] C1 seed=8867731259025018507 SUCCESS accepted_so_far=63 390/h eta=0.7h
+[120/384] C4 seed=3693056069086673335 ORACLE_FAIL accepted_so_far=63 394/h eta=0.7h
+[121/384] C3 seed=8867731259025018507 SUCCESS accepted_so_far=64 390/h eta=0.7h
+[122/384] C4 seed=526082495394855105 ORACLE_FAIL accepted_so_far=64 388/h eta=0.7h
+[123/384] C1 seed=4643356234177170782 SUCCESS accepted_so_far=65 390/h eta=0.7h
+[124/384] C2 seed=3693056069086673335 EMPTY_RESPONSE accepted_so_far=65 391/h eta=0.7h
+[125/384] C4 seed=6864836979952542335 ORACLE_FAIL accepted_so_far=65 392/h eta=0.7h
+[126/384] C3 seed=4643356234177170782 SUCCESS accepted_so_far=66 393/h eta=0.7h
+[127/384] C4 seed=8867731259025018507 ORACLE_FAIL accepted_so_far=66 396/h eta=0.6h
+[128/384] C2 seed=6864836979952542335 EMPTY_RESPONSE accepted_so_far=66 397/h eta=0.6h
+[129/384] C3 seed=1396276842949247769 SUCCESS accepted_so_far=67 396/h eta=0.6h
+[130/384] C1 seed=1396276842949247769 SUCCESS accepted_so_far=68 398/h eta=0.6h
+[131/384] C2 seed=526082495394855105 ORACLE_FAIL accepted_so_far=68 399/h eta=0.6h
+[132/384] C3 seed=2280029040495700177 SUCCESS accepted_so_far=69 399/h eta=0.6h
+[133/384] C1 seed=2280029040495700177 SUCCESS accepted_so_far=70 400/h eta=0.6h
+[134/384] C2 seed=8867731259025018507 EMPTY_RESPONSE accepted_so_far=70 399/h eta=0.6h
+[135/384] C1 seed=8309215276077284482 SUCCESS accepted_so_far=71 391/h eta=0.6h
+[136/384] C4 seed=1396276842949247769 ORACLE_FAIL accepted_so_far=71 387/h eta=0.6h
+[137/384] C4 seed=4643356234177170782 ORACLE_FAIL accepted_so_far=71 386/h eta=0.6h
+[138/384] C3 seed=8309215276077284482 SUCCESS accepted_so_far=72 387/h eta=0.6h
+[139/384] C2 seed=4643356234177170782 ORACLE_FAIL accepted_so_far=72 388/h eta=0.6h
+[140/384] C1 seed=9063855556675434429 SUCCESS accepted_so_far=73 390/h eta=0.6h
+[141/384] C3 seed=9063855556675434429 SUCCESS accepted_so_far=74 388/h eta=0.6h
+[142/384] C4 seed=2280029040495700177 ORACLE_FAIL accepted_so_far=74 389/h eta=0.6h
+[143/384] C2 seed=1396276842949247769 ORACLE_FAIL accepted_so_far=74 392/h eta=0.6h
+[144/384] C4 seed=8309215276077284482 ORACLE_FAIL accepted_so_far=74 389/h eta=0.6h
+[145/384] C3 seed=4505333851535714659 SUCCESS accepted_so_far=75 391/h eta=0.6h
+[146/384] C1 seed=4505333851535714659 SUCCESS accepted_so_far=76 389/h eta=0.6h
+[147/384] C3 seed=2349802557113952366 SUCCESS accepted_so_far=77 390/h eta=0.6h
+[148/384] C2 seed=2280029040495700177 EMPTY_RESPONSE accepted_so_far=77 388/h eta=0.6h
+[149/384] C2 seed=2349802557113952366 HTTP_ERROR accepted_so_far=77 390/h eta=0.6h
+[150/384] C4 seed=6464446431447968285 HTTP_ERROR accepted_so_far=77 393/h eta=0.6h
+[151/384] C1 seed=6464446431447968285 HTTP_ERROR accepted_so_far=77 395/h eta=0.6h
+[152/384] C1 seed=2349802557113952366 SUCCESS accepted_so_far=78 397/h eta=0.6h
+[153/384] C2 seed=6464446431447968285 HTTP_ERROR accepted_so_far=78 400/h eta=0.6h
+[154/384] C3 seed=6464446431447968285 HTTP_ERROR accepted_so_far=78 402/h eta=0.6h
+[155/384] C1 seed=351787936014616182 HTTP_ERROR accepted_so_far=78 405/h eta=0.6h
+[156/384] C2 seed=351787936014616182 HTTP_ERROR accepted_so_far=78 407/h eta=0.6h
+[157/384] C3 seed=351787936014616182 HTTP_ERROR accepted_so_far=78 410/h eta=0.6h
+[158/384] C4 seed=351787936014616182 HTTP_ERROR accepted_so_far=78 412/h eta=0.5h
+[159/384] C3 seed=8112735869602570387 HTTP_ERROR accepted_so_far=78 414/h eta=0.5h
+[160/384] C2 seed=8112735869602570387 HTTP_ERROR accepted_so_far=78 417/h eta=0.5h
+[161/384] C4 seed=8112735869602570387 HTTP_ERROR accepted_so_far=78 419/h eta=0.5h
+[162/384] C1 seed=8112735869602570387 HTTP_ERROR accepted_so_far=78 422/h eta=0.5h
+[163/384] C3 seed=9147644902911830079 HTTP_ERROR accepted_so_far=78 424/h eta=0.5h
+[164/384] C4 seed=9147644902911830079 HTTP_ERROR accepted_so_far=78 426/h eta=0.5h
+[165/384] C1 seed=9147644902911830079 HTTP_ERROR accepted_so_far=78 429/h eta=0.5h
+[166/384] C2 seed=9147644902911830079 HTTP_ERROR accepted_so_far=78 431/h eta=0.5h
+[167/384] C2 seed=9063855556675434429 EMPTY_RESPONSE accepted_so_far=78 434/h eta=0.5h
+[168/384] C4 seed=6463246207947684418 HTTP_ERROR accepted_so_far=78 436/h eta=0.5h
+[169/384] C1 seed=6463246207947684418 HTTP_ERROR accepted_so_far=78 439/h eta=0.5h
+[170/384] C2 seed=6463246207947684418 HTTP_ERROR accepted_so_far=78 441/h eta=0.5h
+[171/384] C2 seed=8309215276077284482 ORACLE_FAIL accepted_so_far=78 444/h eta=0.5h
+[172/384] C3 seed=6463246207947684418 HTTP_ERROR accepted_so_far=78 446/h eta=0.5h
+[173/384] C1 seed=5977834348564333437 HTTP_ERROR accepted_so_far=78 449/h eta=0.5h
+[174/384] C3 seed=5977834348564333437 HTTP_ERROR accepted_so_far=78 451/h eta=0.5h
+[175/384] C2 seed=5977834348564333437 HTTP_ERROR accepted_so_far=78 454/h eta=0.5h
+[176/384] C4 seed=5977834348564333437 HTTP_ERROR accepted_so_far=78 456/h eta=0.5h
+[177/384] C2 seed=4028124431681024537 HTTP_ERROR accepted_so_far=78 459/h eta=0.5h
+[178/384] C3 seed=4028124431681024537 HTTP_ERROR accepted_so_far=78 461/h eta=0.4h
+[179/384] C4 seed=4028124431681024537 HTTP_ERROR accepted_so_far=78 464/h eta=0.4h
+[180/384] C1 seed=4028124431681024537 HTTP_ERROR accepted_so_far=78 466/h eta=0.4h
+[181/384] C4 seed=3867165492354754491 HTTP_ERROR accepted_so_far=78 469/h eta=0.4h
+[182/384] C1 seed=3867165492354754491 HTTP_ERROR accepted_so_far=78 471/h eta=0.4h
+[183/384] C3 seed=3867165492354754491 HTTP_ERROR accepted_so_far=78 474/h eta=0.4h
+[184/384] C2 seed=3867165492354754491 HTTP_ERROR accepted_so_far=78 476/h eta=0.4h
+[185/384] C1 seed=6096112367654359866 HTTP_ERROR accepted_so_far=78 479/h eta=0.4h
+[186/384] C4 seed=6096112367654359866 HTTP_ERROR accepted_so_far=78 481/h eta=0.4h
+[187/384] C3 seed=6096112367654359866 HTTP_ERROR accepted_so_far=78 484/h eta=0.4h
+[188/384] C1 seed=3217240104117822816 HTTP_ERROR accepted_so_far=78 486/h eta=0.4h
+[189/384] C2 seed=3217240104117822816 HTTP_ERROR accepted_so_far=78 489/h eta=0.4h
+[190/384] C2 seed=6096112367654359866 HTTP_ERROR accepted_so_far=78 491/h eta=0.4h
+[191/384] C3 seed=3217240104117822816 HTTP_ERROR accepted_so_far=78 494/h eta=0.4h
+[192/384] C4 seed=3217240104117822816 HTTP_ERROR accepted_so_far=78 496/h eta=0.4h
+[193/384] C3 seed=5890912690139513980 HTTP_ERROR accepted_so_far=78 499/h eta=0.4h
+[194/384] C2 seed=5890912690139513980 HTTP_ERROR accepted_so_far=78 501/h eta=0.4h
+[195/384] C4 seed=5890912690139513980 HTTP_ERROR accepted_so_far=78 504/h eta=0.4h
+[196/384] C1 seed=5890912690139513980 HTTP_ERROR accepted_so_far=78 506/h eta=0.4h
+[197/384] C3 seed=868042507115915559 HTTP_ERROR accepted_so_far=78 509/h eta=0.4h
+[198/384] C4 seed=868042507115915559 HTTP_ERROR accepted_so_far=78 511/h eta=0.4h
+[199/384] C1 seed=868042507115915559 HTTP_ERROR accepted_so_far=78 514/h eta=0.4h
+[200/384] C4 seed=1602387209621728615 HTTP_ERROR accepted_so_far=78 516/h eta=0.4h
+[201/384] C1 seed=1602387209621728615 HTTP_ERROR accepted_so_far=78 519/h eta=0.4h
+[202/384] C2 seed=868042507115915559 HTTP_ERROR accepted_so_far=78 521/h eta=0.3h
+[203/384] C2 seed=1602387209621728615 HTTP_ERROR accepted_so_far=78 524/h eta=0.3h
+[204/384] C1 seed=1264376338402901921 HTTP_ERROR accepted_so_far=78 526/h eta=0.3h
+[205/384] C3 seed=1602387209621728615 HTTP_ERROR accepted_so_far=78 529/h eta=0.3h
+[206/384] C2 seed=1264376338402901921 HTTP_ERROR accepted_so_far=78 531/h eta=0.3h
+[207/384] C3 seed=1264376338402901921 HTTP_ERROR accepted_so_far=78 533/h eta=0.3h
+[208/384] C2 seed=954362677299453171 HTTP_ERROR accepted_so_far=78 536/h eta=0.3h
+[209/384] C3 seed=954362677299453171 HTTP_ERROR accepted_so_far=78 538/h eta=0.3h
+[210/384] C4 seed=1264376338402901921 HTTP_ERROR accepted_so_far=78 541/h eta=0.3h
+[211/384] C4 seed=954362677299453171 HTTP_ERROR accepted_so_far=78 543/h eta=0.3h
+[212/384] C2 seed=4505333851535714659 HTTP_ERROR accepted_so_far=78 546/h eta=0.3h
+[213/384] C1 seed=954362677299453171 HTTP_ERROR accepted_so_far=78 548/h eta=0.3h
+[214/384] C3 seed=4956438725822084824 HTTP_ERROR accepted_so_far=78 551/h eta=0.3h
+[215/384] C4 seed=4956438725822084824 HTTP_ERROR accepted_so_far=78 553/h eta=0.3h
+[216/384] C1 seed=4956438725822084824 HTTP_ERROR accepted_so_far=78 556/h eta=0.3h
+[217/384] C2 seed=4956438725822084824 HTTP_ERROR accepted_so_far=78 558/h eta=0.3h
+[218/384] C4 seed=3762639101329320857 HTTP_ERROR accepted_so_far=78 561/h eta=0.3h
+[219/384] C1 seed=3762639101329320857 HTTP_ERROR accepted_so_far=78 563/h eta=0.3h
+[220/384] C2 seed=3762639101329320857 HTTP_ERROR accepted_so_far=78 566/h eta=0.3h
+[221/384] C3 seed=3762639101329320857 HTTP_ERROR accepted_so_far=78 568/h eta=0.3h
+[222/384] C1 seed=973051296467640801 HTTP_ERROR accepted_so_far=78 571/h eta=0.3h
+[223/384] C2 seed=973051296467640801 HTTP_ERROR accepted_so_far=78 573/h eta=0.3h
+[224/384] C2 seed=8583105168549323419 HTTP_ERROR accepted_so_far=78 576/h eta=0.3h
+[225/384] C3 seed=973051296467640801 HTTP_ERROR accepted_so_far=78 578/h eta=0.3h
+[226/384] C4 seed=973051296467640801 HTTP_ERROR accepted_so_far=78 580/h eta=0.3h
+[227/384] C3 seed=8583105168549323419 HTTP_ERROR accepted_so_far=78 583/h eta=0.3h
+[228/384] C4 seed=8583105168549323419 HTTP_ERROR accepted_so_far=78 585/h eta=0.3h
+[229/384] C1 seed=8583105168549323419 HTTP_ERROR accepted_so_far=78 588/h eta=0.3h
+[230/384] C3 seed=5732395010467991638 HTTP_ERROR accepted_so_far=78 590/h eta=0.3h
+[231/384] C1 seed=5732395010467991638 HTTP_ERROR accepted_so_far=78 593/h eta=0.3h
+[232/384] C4 seed=5732395010467991638 HTTP_ERROR accepted_so_far=78 595/h eta=0.3h
+[233/384] C2 seed=5732395010467991638 HTTP_ERROR accepted_so_far=78 598/h eta=0.3h
+[234/384] C4 seed=4133913043183831847 HTTP_ERROR accepted_so_far=78 600/h eta=0.2h
+[235/384] C1 seed=4133913043183831847 HTTP_ERROR accepted_so_far=78 603/h eta=0.2h
+[236/384] C2 seed=4133913043183831847 HTTP_ERROR accepted_so_far=78 605/h eta=0.2h
+[237/384] C3 seed=4133913043183831847 HTTP_ERROR accepted_so_far=78 608/h eta=0.2h
+[238/384] C2 seed=4894932621695826918 HTTP_ERROR accepted_so_far=78 610/h eta=0.2h
+[239/384] C1 seed=4894932621695826918 HTTP_ERROR accepted_so_far=78 613/h eta=0.2h
+[240/384] C2 seed=8802768443247175250 HTTP_ERROR accepted_so_far=78 615/h eta=0.2h
+[241/384] C4 seed=4894932621695826918 HTTP_ERROR accepted_so_far=78 618/h eta=0.2h
+[242/384] C3 seed=4894932621695826918 HTTP_ERROR accepted_so_far=78 620/h eta=0.2h
+[243/384] C3 seed=8802768443247175250 HTTP_ERROR accepted_so_far=78 622/h eta=0.2h
+[244/384] C4 seed=8802768443247175250 HTTP_ERROR accepted_so_far=78 625/h eta=0.2h
+[245/384] C1 seed=8802768443247175250 HTTP_ERROR accepted_so_far=78 627/h eta=0.2h
+[246/384] C3 seed=2853374169475916944 HTTP_ERROR accepted_so_far=78 630/h eta=0.2h
+[247/384] C4 seed=2853374169475916944 HTTP_ERROR accepted_so_far=78 632/h eta=0.2h
+[248/384] C1 seed=2853374169475916944 HTTP_ERROR accepted_so_far=78 635/h eta=0.2h
+[249/384] C2 seed=2853374169475916944 HTTP_ERROR accepted_so_far=78 637/h eta=0.2h
+[250/384] C1 seed=1965309402190747334 HTTP_ERROR accepted_so_far=78 640/h eta=0.2h
+[251/384] C4 seed=1965309402190747334 HTTP_ERROR accepted_so_far=78 642/h eta=0.2h
+[252/384] C2 seed=1965309402190747334 HTTP_ERROR accepted_so_far=78 645/h eta=0.2h
+[253/384] C1 seed=5028022026399093068 HTTP_ERROR accepted_so_far=78 647/h eta=0.2h
+[254/384] C3 seed=1965309402190747334 HTTP_ERROR accepted_so_far=78 649/h eta=0.2h
+[255/384] C3 seed=5028022026399093068 HTTP_ERROR accepted_so_far=78 652/h eta=0.2h
+[256/384] C2 seed=5028022026399093068 HTTP_ERROR accepted_so_far=78 655/h eta=0.2h
+[257/384] C4 seed=5028022026399093068 HTTP_ERROR accepted_so_far=78 657/h eta=0.2h
+[258/384] C2 seed=8090642077162703663 HTTP_ERROR accepted_so_far=78 659/h eta=0.2h
+[259/384] C4 seed=8090642077162703663 HTTP_ERROR accepted_so_far=78 662/h eta=0.2h
+[260/384] C3 seed=8090642077162703663 HTTP_ERROR accepted_so_far=78 664/h eta=0.2h
+[261/384] C1 seed=8090642077162703663 HTTP_ERROR accepted_so_far=78 667/h eta=0.2h
+[262/384] C3 seed=6596988289136779105 HTTP_ERROR accepted_so_far=78 669/h eta=0.2h
+[263/384] C1 seed=6596988289136779105 HTTP_ERROR accepted_so_far=78 672/h eta=0.2h
+[264/384] C2 seed=6596988289136779105 HTTP_ERROR accepted_so_far=78 674/h eta=0.2h
+[265/384] C4 seed=6596988289136779105 HTTP_ERROR accepted_so_far=78 677/h eta=0.2h
+[266/384] C4 seed=2214325250899153621 HTTP_ERROR accepted_so_far=78 679/h eta=0.2h
+[267/384] C1 seed=2214325250899153621 HTTP_ERROR accepted_so_far=78 681/h eta=0.2h
+[268/384] C2 seed=2214325250899153621 HTTP_ERROR accepted_so_far=78 684/h eta=0.2h
+[269/384] C3 seed=2214325250899153621 HTTP_ERROR accepted_so_far=78 686/h eta=0.2h
+[270/384] C1 seed=2884501789661599337 HTTP_ERROR accepted_so_far=78 689/h eta=0.2h
+[271/384] C2 seed=2884501789661599337 HTTP_ERROR accepted_so_far=78 691/h eta=0.2h
+[272/384] C4 seed=2884501789661599337 HTTP_ERROR accepted_so_far=78 693/h eta=0.2h
+[273/384] C3 seed=2884501789661599337 HTTP_ERROR accepted_so_far=78 696/h eta=0.2h
+[274/384] C3 seed=8700220779781238033 HTTP_ERROR accepted_so_far=78 698/h eta=0.2h
+[275/384] C2 seed=8700220779781238033 HTTP_ERROR accepted_so_far=78 701/h eta=0.2h
+[276/384] C4 seed=8700220779781238033 HTTP_ERROR accepted_so_far=78 703/h eta=0.2h
+[277/384] C1 seed=8700220779781238033 HTTP_ERROR accepted_so_far=78 706/h eta=0.2h
+[278/384] C4 seed=706108364863219374 HTTP_ERROR accepted_so_far=78 708/h eta=0.1h
+[279/384] C1 seed=706108364863219374 HTTP_ERROR accepted_so_far=78 711/h eta=0.1h
+[280/384] C2 seed=706108364863219374 HTTP_ERROR accepted_so_far=78 713/h eta=0.1h
+[281/384] C3 seed=706108364863219374 HTTP_ERROR accepted_so_far=78 716/h eta=0.1h
+[282/384] C4 seed=9063855556675434429 ORACLE_FAIL accepted_so_far=78 718/h eta=0.1h
+[283/384] C4 seed=5474644495180438486 HTTP_ERROR accepted_so_far=78 720/h eta=0.1h
+[284/384] C2 seed=5474644495180438486 HTTP_ERROR accepted_so_far=78 723/h eta=0.1h
+[285/384] C3 seed=5474644495180438486 HTTP_ERROR accepted_so_far=78 725/h eta=0.1h
+[286/384] C2 seed=8038738840296419533 HTTP_ERROR accepted_so_far=78 728/h eta=0.1h
+[287/384] C1 seed=8038738840296419533 HTTP_ERROR accepted_so_far=78 730/h eta=0.1h
+[288/384] C3 seed=8038738840296419533 HTTP_ERROR accepted_so_far=78 733/h eta=0.1h
+[289/384] C1 seed=5474644495180438486 HTTP_ERROR accepted_so_far=78 735/h eta=0.1h
+[290/384] C4 seed=2349802557113952366 HTTP_ERROR accepted_so_far=78 738/h eta=0.1h
+[291/384] C4 seed=8038738840296419533 HTTP_ERROR accepted_so_far=78 740/h eta=0.1h
+[292/384] C2 seed=2666624668073057069 HTTP_ERROR accepted_so_far=78 743/h eta=0.1h
+[293/384] C3 seed=7906728743163428268 HTTP_ERROR accepted_so_far=78 745/h eta=0.1h
+[294/384] C4 seed=2666624668073057069 HTTP_ERROR accepted_so_far=78 747/h eta=0.1h
+[295/384] C3 seed=2666624668073057069 HTTP_ERROR accepted_so_far=78 750/h eta=0.1h
+[296/384] C1 seed=2666624668073057069 HTTP_ERROR accepted_so_far=78 752/h eta=0.1h
+[297/384] C1 seed=7906728743163428268 HTTP_ERROR accepted_so_far=78 755/h eta=0.1h
+[298/384] C4 seed=7906728743163428268 HTTP_ERROR accepted_so_far=78 757/h eta=0.1h
+[299/384] C2 seed=7906728743163428268 HTTP_ERROR accepted_so_far=78 760/h eta=0.1h
+[300/384] C4 seed=4869191216096763816 HTTP_ERROR accepted_so_far=78 762/h eta=0.1h
+[301/384] C1 seed=4869191216096763816 HTTP_ERROR accepted_so_far=78 765/h eta=0.1h
+[302/384] C3 seed=4869191216096763816 HTTP_ERROR accepted_so_far=78 767/h eta=0.1h
+[303/384] C1 seed=1828359750492843314 HTTP_ERROR accepted_so_far=78 770/h eta=0.1h
+[304/384] C2 seed=1828359750492843314 HTTP_ERROR accepted_so_far=78 772/h eta=0.1h
+[305/384] C2 seed=4869191216096763816 HTTP_ERROR accepted_so_far=78 775/h eta=0.1h
+[306/384] C3 seed=1828359750492843314 HTTP_ERROR accepted_so_far=78 777/h eta=0.1h
+[307/384] C4 seed=1828359750492843314 HTTP_ERROR accepted_so_far=78 779/h eta=0.1h
+[308/384] C2 seed=3851546779205813227 HTTP_ERROR accepted_so_far=78 782/h eta=0.1h
+[309/384] C4 seed=3851546779205813227 HTTP_ERROR accepted_so_far=78 784/h eta=0.1h
+[310/384] C3 seed=3851546779205813227 HTTP_ERROR accepted_so_far=78 787/h eta=0.1h
+[311/384] C1 seed=3851546779205813227 HTTP_ERROR accepted_so_far=78 789/h eta=0.1h
+[312/384] C3 seed=692594502395781071 HTTP_ERROR accepted_so_far=78 792/h eta=0.1h
+[313/384] C2 seed=692594502395781071 HTTP_ERROR accepted_so_far=78 794/h eta=0.1h
+[314/384] C4 seed=2848459994138897671 HTTP_ERROR accepted_so_far=78 796/h eta=0.1h
+[315/384] C1 seed=2848459994138897671 HTTP_ERROR accepted_so_far=78 799/h eta=0.1h
+[316/384] C3 seed=2848459994138897671 HTTP_ERROR accepted_so_far=78 801/h eta=0.1h
+[317/384] C2 seed=2848459994138897671 HTTP_ERROR accepted_so_far=78 804/h eta=0.1h
+[318/384] C1 seed=6226082358267250940 HTTP_ERROR accepted_so_far=78 806/h eta=0.1h
+[319/384] C1 seed=692594502395781071 HTTP_ERROR accepted_so_far=78 809/h eta=0.1h
+[320/384] C2 seed=6226082358267250940 HTTP_ERROR accepted_so_far=78 811/h eta=0.1h
+[321/384] C3 seed=6226082358267250940 HTTP_ERROR accepted_so_far=78 813/h eta=0.1h
+[322/384] C2 seed=7409342989126851590 HTTP_ERROR accepted_so_far=78 816/h eta=0.1h
+[323/384] C3 seed=7409342989126851590 HTTP_ERROR accepted_so_far=78 818/h eta=0.1h
+[324/384] C4 seed=6226082358267250940 HTTP_ERROR accepted_so_far=78 821/h eta=0.1h
+[325/384] C4 seed=7409342989126851590 HTTP_ERROR accepted_so_far=78 823/h eta=0.1h
+[326/384] C3 seed=5733688623763834934 HTTP_ERROR accepted_so_far=78 826/h eta=0.1h
+[327/384] C1 seed=7409342989126851590 HTTP_ERROR accepted_so_far=78 828/h eta=0.1h
+[328/384] C4 seed=5733688623763834934 HTTP_ERROR accepted_so_far=78 830/h eta=0.1h
+[329/384] C1 seed=5733688623763834934 HTTP_ERROR accepted_so_far=78 833/h eta=0.1h
+[330/384] C1 seed=1073345739092420893 HTTP_ERROR accepted_so_far=78 835/h eta=0.1h
+[331/384] C4 seed=692594502395781071 HTTP_ERROR accepted_so_far=78 838/h eta=0.1h
+[332/384] C2 seed=5733688623763834934 HTTP_ERROR accepted_so_far=78 840/h eta=0.1h
+[333/384] C4 seed=1073345739092420893 HTTP_ERROR accepted_so_far=78 842/h eta=0.1h
+[334/384] C3 seed=1073345739092420893 HTTP_ERROR accepted_so_far=78 845/h eta=0.1h
+[335/384] C1 seed=7971469677181315464 HTTP_ERROR accepted_so_far=78 847/h eta=0.1h
+[336/384] C3 seed=7971469677181315464 HTTP_ERROR accepted_so_far=78 850/h eta=0.1h
+[337/384] C2 seed=7971469677181315464 HTTP_ERROR accepted_so_far=78 852/h eta=0.1h
+[338/384] C2 seed=1073345739092420893 HTTP_ERROR accepted_so_far=78 854/h eta=0.1h
+[339/384] C4 seed=7971469677181315464 HTTP_ERROR accepted_so_far=78 857/h eta=0.1h
+[340/384] C2 seed=669105431932799640 HTTP_ERROR accepted_so_far=78 860/h eta=0.1h
+[341/384] C1 seed=669105431932799640 HTTP_ERROR accepted_so_far=78 862/h eta=0.0h
+[342/384] C4 seed=669105431932799640 HTTP_ERROR accepted_so_far=78 864/h eta=0.0h
+[343/384] C3 seed=669105431932799640 HTTP_ERROR accepted_so_far=78 867/h eta=0.0h
+[344/384] C4 seed=4505333851535714659 ORACLE_FAIL accepted_so_far=78 869/h eta=0.0h
+[345/384] C3 seed=2297387042443321191 HTTP_ERROR accepted_so_far=78 872/h eta=0.0h
+[346/384] C4 seed=2297387042443321191 HTTP_ERROR accepted_so_far=78 874/h eta=0.0h
+[347/384] C1 seed=2297387042443321191 HTTP_ERROR accepted_so_far=78 877/h eta=0.0h
+[348/384] C2 seed=2297387042443321191 HTTP_ERROR accepted_so_far=78 879/h eta=0.0h
+[349/384] C4 seed=571409064348308598 HTTP_ERROR accepted_so_far=78 881/h eta=0.0h
+[350/384] C1 seed=571409064348308598 HTTP_ERROR accepted_so_far=78 884/h eta=0.0h
+[351/384] C1 seed=3300748989585364966 HTTP_ERROR accepted_so_far=78 886/h eta=0.0h
+[352/384] C2 seed=3300748989585364966 HTTP_ERROR accepted_so_far=78 889/h eta=0.0h
+[353/384] C3 seed=571409064348308598 HTTP_ERROR accepted_so_far=78 891/h eta=0.0h
+[354/384] C2 seed=571409064348308598 HTTP_ERROR accepted_so_far=78 894/h eta=0.0h
+[355/384] C3 seed=3300748989585364966 HTTP_ERROR accepted_so_far=78 896/h eta=0.0h
+[356/384] C4 seed=3300748989585364966 HTTP_ERROR accepted_so_far=78 898/h eta=0.0h
+[357/384] C3 seed=3043849619707581455 HTTP_ERROR accepted_so_far=78 901/h eta=0.0h
+[358/384] C2 seed=3043849619707581455 HTTP_ERROR accepted_so_far=78 903/h eta=0.0h
+[359/384] C1 seed=3043849619707581455 HTTP_ERROR accepted_so_far=78 906/h eta=0.0h
+[360/384] C4 seed=3043849619707581455 HTTP_ERROR accepted_so_far=78 908/h eta=0.0h
+[361/384] C4 seed=7379658074873348047 HTTP_ERROR accepted_so_far=78 911/h eta=0.0h
+[362/384] C3 seed=7379658074873348047 HTTP_ERROR accepted_so_far=78 913/h eta=0.0h
+[363/384] C2 seed=7379658074873348047 HTTP_ERROR accepted_so_far=78 915/h eta=0.0h
+[364/384] C1 seed=7379658074873348047 HTTP_ERROR accepted_so_far=78 918/h eta=0.0h
+[365/384] C4 seed=6640011216155793808 HTTP_ERROR accepted_so_far=78 920/h eta=0.0h
+[366/384] C1 seed=6640011216155793808 HTTP_ERROR accepted_so_far=78 923/h eta=0.0h
+[367/384] C3 seed=6640011216155793808 HTTP_ERROR accepted_so_far=78 925/h eta=0.0h
+[368/384] C2 seed=5293870392145176013 HTTP_ERROR accepted_so_far=78 928/h eta=0.0h
+[369/384] C2 seed=6640011216155793808 HTTP_ERROR accepted_so_far=78 930/h eta=0.0h
+[370/384] C1 seed=5293870392145176013 HTTP_ERROR accepted_so_far=78 933/h eta=0.0h
+[371/384] C3 seed=5293870392145176013 HTTP_ERROR accepted_so_far=78 935/h eta=0.0h
+[372/384] C4 seed=3447098848517927456 HTTP_ERROR accepted_so_far=78 937/h eta=0.0h
+[373/384] C1 seed=3447098848517927456 HTTP_ERROR accepted_so_far=78 940/h eta=0.0h
+[374/384] C3 seed=7496639115989803554 HTTP_ERROR accepted_so_far=78 942/h eta=0.0h
+[375/384] C2 seed=3447098848517927456 HTTP_ERROR accepted_so_far=78 945/h eta=0.0h
+[376/384] C3 seed=3447098848517927456 HTTP_ERROR accepted_so_far=78 947/h eta=0.0h
+[377/384] C4 seed=5293870392145176013 HTTP_ERROR accepted_so_far=78 949/h eta=0.0h
+[378/384] C4 seed=7496639115989803554 HTTP_ERROR accepted_so_far=78 952/h eta=0.0h
+[379/384] C4 seed=320368908172148033 HTTP_ERROR accepted_so_far=78 954/h eta=0.0h
+[380/384] C1 seed=7496639115989803554 HTTP_ERROR accepted_so_far=78 957/h eta=0.0h
+[381/384] C3 seed=320368908172148033 HTTP_ERROR accepted_so_far=78 959/h eta=0.0h
+[382/384] C2 seed=7496639115989803554 HTTP_ERROR accepted_so_far=78 962/h eta=0.0h
+[383/384] C1 seed=320368908172148033 HTTP_ERROR accepted_so_far=78 964/h eta=0.0h
+[384/384] C2 seed=320368908172148033 HTTP_ERROR accepted_so_far=78 966/h eta=0.0h
+{
+  "confirmatory": false,
+  "execution": {
+    "driver_sha256": "0999f580f6c1c06184653def7a2f665a4a20621eeefa24847d5c949f4132a8e9",
+    "mode": "thread_pool",
+    "pairs_skipped_on_resume": 0,
+    "phase": "parallel",
+    "wall_seconds": 1430.5,
+    "workers": 8
+  },
+  "finished": 1793728478.3332164,
+  "interpretation": "Scheduling-only change: sessions independent, each still two turns at most with harness feedback in between. No prompt, cell, floor, label, or oracle differs from the registered runner.",
+  "per_cell": {
+    "C1": {
+      "accepted": 39,
+      "sessions": 96,
+      "submissions": 39,
+      "turns": 39
+    },
+    "C2": {
+      "accepted": 0,
+      "sessions": 96,
+      "submissions": 34,
+      "turns": 34
+    },
+    "C3": {
+      "accepted": 39,
+      "sessions": 96,
+      "submissions": 39,
+      "turns": 39
+    },
+    "C4": {
+      "accepted": 0,
+      "sessions": 96,
+      "submissions": 75,
+      "turns": 75
+    }
+  },
+  "preregistered": true,
+  "protocol": "P023-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v2-RERUN-AR-v1",
+  "provider_failures": 254,
+  "provider_responses": 187,
+  "sessions": 384
+}

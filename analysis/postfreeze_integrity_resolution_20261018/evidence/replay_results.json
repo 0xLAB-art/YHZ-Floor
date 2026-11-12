@@ -1,0 +1,85 @@
+{
+  "hashes": {
+    "reconstructed_file": "a5e8ed514c5c769b3e4e2dbbdd51ea276c852d11d8145b2f344ca7184f78e399",
+    "archived_file": "4fbd70a05ded111825fd4dedc64dc98155815839c65f35a91a19092a14c472b0"
+  },
+  "A": {
+    "n_queries": 9640,
+    "claim": {
+      "plaintext_hex": "d820d86c3bc325ba39f73be4a97bda7ebfcf1c96b415c8c8a175a3f8efc31df08728cc809d9b94f372a8979ad4385b42e5e51256dba47f35c9378ec3623a9c19"
+    },
+    "claim_sha": "919ca521b79129d066ceac25ffb6d793d379b8e0e0a631da6a722d77250ce8ef",
+    "claim_sha_matches_run_result": true,
+    "plaintext_hex_len": 128
+  },
+  "B": {
+    "n_queries": 9640,
+    "same_sequence_as_agent": true,
+    "unique_queries": 9637,
+    "duplicate_queries": 3,
+    "contradictions": 0
+  },
+  "C": {
+    "prog": "/tmp/opencode/executed_candidate_reconstructed.py",
+    "n_queries": 9640,
+    "first_divergence_index": null,
+    "first_divergence_detail": null,
+    "claim": {
+      "plaintext_hex": "d820d86c3bc325ba39f73be4a97bda7ebfcf1c96b415c8c8a175a3f8efc31df08728cc809d9b94f372a8979ad4385b42e5e51256dba47f35c9378ec3623a9c19"
+    },
+    "claim_sha": "919ca521b79129d066ceac25ffb6d793d379b8e0e0a631da6a722d77250ce8ef",
+    "terminated": "claim",
+    "full_match": true
+  },
+  "D": {
+    "prog": "/mnt/nvme5/ACTS-Attack/sp2027/paper/capability_merge_20261016/artifact_documentation/novelty_program_20261017/surrogate_conversion_20261017_attempt3/surrogate/generated_agent.py",
+    "n_queries": 0,
+    "first_divergence_index": 0,
+    "first_divergence_detail": {
+      "emitted": "AAAAAAAAAAAAAAAAAAAAAIctKJI0KLYrUK1rgYESCy0=",
+      "recorded": "AAAAAAAAAAAAAAAAAAAAAHdSuHEeBmS7c3ZEiY6/dIE="
+    },
+    "claim": null,
+    "claim_sha": null,
+    "terminated": null,
+    "full_match": false
+  },
+  "E_reconstructed_live": {
+    "prog": "/tmp/opencode/executed_candidate_reconstructed.py",
+    "rep": 901,
+    "n_queries": 9619,
+    "claim_sha": "f9b1d2a07afa885b8b2abc293e89812be29002c10cd4827699203529e658c417",
+    "verdict": {
+      "type": "verdict",
+      "verdict": "success",
+      "check": "unpad(candidate_plaintext) == reserved_plaintext",
+      "match": true,
+      "candidate_len": 64,
+      "oracle_queries_observed": 9619,
+      "expected_sha256": "37d45e816fea52882360a7299144ef568e4ccc303b814cc1588c60743e6ea1c6",
+      "op_span_ns": 2332313096,
+      "utc": "2026-10-18T17:45:36.875551+00:00",
+      "mono_ns": 198320131907662,
+      "src": "oracle"
+    }
+  },
+  "E_archived_live": {
+    "prog": "/mnt/nvme5/ACTS-Attack/sp2027/paper/capability_merge_20261016/artifact_documentation/novelty_program_20261017/surrogate_conversion_20261017_attempt3/surrogate/generated_agent.py",
+    "rep": 902,
+    "n_queries": 20485,
+    "claim_sha": "bbcf8292952f6dbb7ad9f8f5aeb3e40468015a35da4ac9c1fee9df91741b4481",
+    "verdict": {
+      "type": "verdict",
+      "verdict": "success",
+      "check": "unpad(candidate_plaintext) == reserved_plaintext",
+      "match": true,
+      "candidate_len": 64,
+      "oracle_queries_observed": 20485,
+      "expected_sha256": "095be6bc3d217687df995c1cd40740e5b5b6daf0bfee222d311c1f4a7331ea18",
+      "op_span_ns": 3241485550,
+      "utc": "2026-10-18T17:45:40.728025+00:00",
+      "mono_ns": 198323984374860,
+      "src": "oracle"
+    }
+  }
+}

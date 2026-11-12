@@ -1,0 +1,42 @@
+{
+  "checks": 6,
+  "all_pass": true,
+  "failures": [],
+  "check_details": [
+    {
+      "check": "three_refs_lists_consistent",
+      "pass": true,
+      "detail": "main_references.tex, submission_references.tex, supplement_references.tex consistent with each other"
+    },
+    {
+      "check": "no_duplicate_entries",
+      "pass": true,
+      "detail": "no duplicate entries across any reference list"
+    },
+    {
+      "check": "no_undefined_citations",
+      "pass": true,
+      "detail": "no undefined citations; all cited works resolvable to real publication metadata"
+    },
+    {
+      "check": "acts_third_person_metadata",
+      "pass": true,
+      "detail": "ACTS cited in third person with real ESWA publication metadata (authors, title, venue, year); not listed as Anonymous authors"
+    },
+    {
+      "check": "doi_gap_not_fabrication",
+      "pass": true,
+      "detail": "unresolved ACTS DOI treated as verification gap only, not fabrication evidence; no reference removed or altered on that basis"
+    },
+    {
+      "check": "no_fabricated_metadata",
+      "pass": true,
+      "detail": "no fabricated metadata introduced; real ESWA ACTS metadata used; primary NYU and AgentSuite records support listed first author and venue"
+    }
+  ],
+  "files": {
+    "sp2027/paper/capability_merge_20261016/main_references.tex": "main reference list",
+    "sp2027/paper/capability_merge_20261016/submission_references.tex": "submission reference list",
+    "sp2027/paper/capability_merge_20261016/supplement_references.tex": "supplement reference list"
+  }
+}

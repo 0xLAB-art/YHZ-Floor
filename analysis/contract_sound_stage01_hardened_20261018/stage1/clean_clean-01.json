@@ -1,0 +1,29 @@
+{
+  "case_id": "clean-01",
+  "defect_family": "none",
+  "label_disagreement": true,
+  "primitive": "ECDSA_Nonce_Reuse",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "crypto_details": {
+      "public_key_matches": true,
+      "recovered_d_matches": true,
+      "recovered_k_matches": true,
+      "repeated_r": true,
+      "signatures_verify": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "ACCEPTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 207.77498499955982,
+  "split": "clean",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "ACCEPT",
+    "reason": "public-evidence-consistent"
+  },
+  "validator_overhead_ms": 59.09867200534791
+}

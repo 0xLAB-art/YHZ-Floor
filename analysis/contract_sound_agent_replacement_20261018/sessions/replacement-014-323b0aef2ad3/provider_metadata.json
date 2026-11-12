@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "bd7f4d387d8cc154bdd4c47a42c1e7d1a7272059bfdcb5a2a4ed5ff7faba4a71",
+  "output_text": "```python\n#!/usr/bin/env python3\nimport json\nimport sys\n\ndef modinv(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return b, 0, 1\n        gcd, x1, y1 = egcd(b % a, a)\n        x = y1 - (b // a) * x1\n        y = x1\n        return gcd, x, y\n    \n    gcd, x, _ = egcd(a % m, m)\n    if gcd != 1:\n        raise Exception('Modular inverse does not exist')\n    return (x % m + m) % m\n\ndef solve_ecdsa_nonce_reuse(data):\n    n = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141\n    \n    r1 = int(data['signature_1']['r'], 16)\n    s1 = int(data['signature_1']['s'], 16)\n    z1 = int(data['signature_1']['z'], 16)\n    \n    r2 = int(data['signature_2']['r'], 16)\n    s2 = int(data['signature_2']['s'], 16)\n    z2 = int(data['signature_2']['z'], 16)\n    \n    # k = (z1 - z2) / (s1 - s2) mod n\n    k = ((z1 - z2) * modinv(s1 - s2, n)) % n\n    \n    # d = (s1 * k - z1) / r1 mod n\n    d = ((s1 * k - z1) * modinv(r1, n)) % n\n    \n    return {\n        \"d\": format(d, '064x'),\n        \"k\": format(k, '064x')\n    }\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nresult = solve_ecdsa_nonce_reuse(data)\nprint(json.dumps(result))\n```",
+  "prompt_sha256": "078d08f59d6ed7e7976cf2e7577749961954c8820046a22e6205632be7b82f02",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341568.187639,
+  "response_bytes": 1497,
+  "response_finished": 1792341576.9320116,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:39:36 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2575373",
+    "x-apmix-request-id": "req_c01be7693fd7439aa470becc",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "424627",
+    "x-apmix-weighted-tokens": "847",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "5bc141410b53e2ca8e20f40054c775063553c252ac576dcb74ec8efebd717ba0",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 333,
+    "output_tokens": 514
+  }
+}

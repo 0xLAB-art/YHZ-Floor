@@ -1,0 +1,95 @@
+{
+  "arm": "R0",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "runs/calibration/sessions/calibration-0014-ecd-L1-5002-R0-r0-89614968/candidate.py",
+    "returncode": 1,
+    "status": "EXECUTION_FAILED",
+    "stderr_path": "runs/calibration/sessions/calibration-0014-ecd-L1-5002-R0-r0-89614968/executor_stderr.txt",
+    "stdout_path": "runs/calibration/sessions/calibration-0014-ecd-L1-5002-R0-r0-89614968/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTION_FAILED",
+  "failure_stage": "EXECUTION",
+  "family": "ECDSA_Nonce_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "instance_id": "ECDSA_Nonce_Reuse-L1-seed5002",
+  "kind": "primary",
+  "latency_s": 15.033965349197388,
+  "legacy_would_reject": false,
+  "level": "L1",
+  "max_tokens": 2600,
+  "ordinal": 14,
+  "output_schema_errors": [
+    "not-executed"
+  ],
+  "output_schema_ok": false,
+  "payload_chars": 623,
+  "payload_sha256": "cf5d5a51846de237495ec4c681546a7950d3ae6b6da517bce6e6edf978300a08",
+  "phase": "calibration",
+  "prompt_chars": 1413,
+  "prompt_sha256": "586889ba38b4bd8c60264e3c7854c0eba99d9285219d6e4fcdbd825c37490c84",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": null,
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "d_ok": false,
+      "k_ok": true,
+      "require_k": false
+    },
+    "process": null,
+    "public_reconstruction": {
+      "pair": [
+        0,
+        1
+      ],
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2383,
+  "response_sha256": "23cbc594e5f47976e0990622cb8a02d8fef2d6aebf3fcc4393d519e3f7f7f7c5",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 5002,
+  "session_id": "calibration-0014-ecd-L1-5002-R0-r0-89614968",
+  "source_chars": 2370,
+  "source_sha256": "741de074d81b04bfa8f6ebed17b3134e5ed0c48ad4208bd2f03a05b138ca9fcd",
+  "stderr_tail": "bwrap: Can't find source path runs/calibration/sessions/calibration-0014-ecd-L1-5002-R0-r0-89614968: No such file or directory\n",
+  "template_sha256": "bdd02fb82928498a7530e457f3a105a8c1caed7b0edf10d912020d5612629c91",
+  "terminal": "EXECUTION",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 408,
+    "output_tokens": 1001
+  }
+}

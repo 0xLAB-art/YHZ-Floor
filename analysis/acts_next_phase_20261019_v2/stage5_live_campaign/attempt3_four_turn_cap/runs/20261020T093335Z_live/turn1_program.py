@@ -1,0 +1,58 @@
+import http.client
+import json
+import base64
+
+# Probe the service to understand its API
+conn = http.client.HTTPConnection("127.0.0.1", 32771)
+
+# Try to discover endpoints
+print("=== Probing / ===")
+conn.request("GET", "/")
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+# Try /encrypt
+print("=== Probing /encrypt ===")
+conn.request("POST", "/encrypt", json.dumps({"plaintext": "test"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+# Try /decrypt
+print("=== Probing /decrypt ===")
+conn.request("POST", "/decrypt", json.dumps({"ciphertext": "test"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+# Try /session or similar
+print("=== Probing /session ===")
+conn.request("GET", "/session")
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+# Try to get a session token
+print("=== Probing /login or /auth ===")
+conn.request("POST", "/login", json.dumps({"username": "test"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+# Check if there's a cookie or session mechanism
+print("=== Attempting to create session ===")
+conn.request("POST", "/", json.dumps({"action": "create"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+print(f"Status: {resp.status} {resp.reason}")
+headers = resp.getheaders()
+print(f"Headers: {headers}")
+body = resp.read().decode()
+print(f"Body: {body}\n")
+
+conn.close()

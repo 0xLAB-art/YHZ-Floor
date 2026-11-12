@@ -1,0 +1,2088 @@
+{
+ "generated": "2026-11-03",
+ "supersedes_note": "reclassification layer for CENSUS_P_PROVIDER_20261103: EMPTY_RESPONSE events are model-side floor exhaustion (see EMPTY_RESPONSE_CAUSAL_ANALYSIS_20261103.md), not provider failure",
+ "signature_check": {
+  "empty_bodies_checked": 128,
+  "output_tokens_eq_floor_and_stop_length": 128
+ },
+ "totals": {
+  "damaged_runs": 26,
+  "sessions_to_recover": 580,
+  "lost_floor_exhausted": 314,
+  "lost_transport": 246
+ },
+ "damaged": [
+  {
+   "run": "info_contract_aesgcm_random_p021_20261102",
+   "protocol": "P021-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 96,
+     "judged": 53,
+     "lost": 43,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 43,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 43,
+     "seeds_missing": [
+      "172904571885381593",
+      "198882200642611995",
+      "302845600709497997",
+      "343718899735628692",
+      "620231313522468899",
+      "994849061417959738",
+      "1317848266575579555",
+      "1520766850644894012",
+      "1730327012702418060",
+      "1834647212504960430",
+      "2067529140659777298",
+      "2322619189653576120",
+      "2350881398197153970",
+      "2625614960770379670",
+      "2759928771104119193",
+      "2912749395643754944",
+      "2968090732396341361",
+      "3332053416527313326",
+      "3472171690611606918",
+      "4127434296006863199",
+      "4519575699059483540",
+      "4629933786682788364",
+      "4691650167613907948",
+      "4821983803586843330",
+      "4857534414719986814",
+      "4885610450031803403",
+      "5366487138368369684",
+      "5414261265238272436",
+      "5434183162525103062",
+      "5687612179762202009",
+      "5753908311568405574",
+      "6470026854721302554",
+      "6603423294996300297",
+      "6882154211307148073",
+      "6900946503262969879",
+      "7443454743093850114",
+      "7650551694612446740",
+      "8067681351862209100",
+      "8448714758333459702",
+      "8592063721497998535",
+      "8754117771804225574",
+      "9019750642416281879",
+      "9131998880486052341"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 96,
+     "judged": 27,
+     "lost": 69,
+     "lost_floor_exhausted": 33,
+     "lost_transport": 36,
+     "pf_events_floor_exhausted": 35,
+     "pf_events_transport": 46,
+     "seeds_missing": [
+      "172904571885381593",
+      "198882200642611995",
+      "302845600709497997",
+      "343718899735628692",
+      "620231313522468899",
+      "994849061417959738",
+      "1127615024047797383",
+      "1204129079526320418",
+      "1730327012702418060",
+      "1834647212504960430",
+      "2000037269699064426",
+      "2199645560792692162",
+      "2322619189653576120",
+      "2348044133535976979",
+      "2350881398197153970",
+      "2510809874215977019",
+      "2728841733660031672",
+      "2741819122686579594",
+      "2759928771104119193",
+      "2959271349689180594",
+      "2968090732396341361",
+      "3319544269512995414",
+      "3332053416527313326",
+      "3472171690611606918",
+      "3473310052928217414",
+      "3474480877873073011",
+      "3827227303048011440",
+      "3931438432150149866",
+      "4065138588678140780",
+      "4127434296006863199",
+      "4204083393849060968",
+      "4395080619161278131",
+      "4413922883497004412",
+      "4515448170609577394",
+      "4629933786682788364",
+      "4691650167613907948",
+      "4821983803586843330",
+      "4826570160520858725",
+      "4885610450031803403",
+      "5326662180973829787",
+      "5366487138368369684",
+      "5414261265238272436",
+      "5422400040672313403",
+      "5585361028098844620",
+      "5687612179762202009",
+      "6104428037686938069",
+      "6470026854721302554",
+      "6522502421204877471",
+      "6632372836066312210",
+      "6882154211307148073",
+      "6900946503262969879",
+      "7339381365145036939",
+      "7358033349812481603",
+      "7437076425135041386",
+      "7443454743093850114",
+      "7508101218900141604",
+      "7606962919699903820",
+      "7924421654450735880",
+      "7978403074785245310",
+      "8067681351862209100",
+      "8448714758333459702",
+      "8562830165814646324",
+      "8592063721497998535",
+      "8634494007947897132",
+      "8754117771804225574",
+      "8760350850660951244",
+      "9019750642416281879",
+      "9069172963309734977",
+      "9131998880486052341"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 96,
+     "judged": 53,
+     "lost": 43,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 43,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 43,
+     "seeds_missing": [
+      "302845600709497997",
+      "620231313522468899",
+      "1127615024047797383",
+      "1317848266575579555",
+      "1520766850644894012",
+      "1730327012702418060",
+      "2322619189653576120",
+      "2350881398197153970",
+      "2582472062208147225",
+      "2624456114989847342",
+      "2625614960770379670",
+      "2759928771104119193",
+      "2912749395643754944",
+      "2968090732396341361",
+      "3319544269512995414",
+      "3404289400218955506",
+      "3472171690611606918",
+      "3473310052928217414",
+      "3474480877873073011",
+      "4127434296006863199",
+      "4140836951224162353",
+      "4204083393849060968",
+      "4413922883497004412",
+      "4515448170609577394",
+      "4519575699059483540",
+      "4629933786682788364",
+      "4691650167613907948",
+      "4826570160520858725",
+      "4857534414719986814",
+      "5326662180973829787",
+      "5366487138368369684",
+      "5414261265238272436",
+      "5422400040672313403",
+      "6470026854721302554",
+      "6603423294996300297",
+      "6882154211307148073",
+      "7047709331519613599",
+      "7443454743093850114",
+      "7924421654450735880",
+      "8592063721497998535",
+      "8634494007947897132",
+      "8760350850660951244",
+      "9019750642416281879"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 96,
+     "judged": 62,
+     "lost": 34,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 34,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 59,
+     "seeds_missing": [
+      "198882200642611995",
+      "302845600709497997",
+      "591925817359160207",
+      "994849061417959738",
+      "1204129079526320418",
+      "1317848266575579555",
+      "2322619189653576120",
+      "2741819122686579594",
+      "2959271349689180594",
+      "3319544269512995414",
+      "3931438432150149866",
+      "4065138588678140780",
+      "4127434296006863199",
+      "4519575699059483540",
+      "4691650167613907948",
+      "4821983803586843330",
+      "4826570160520858725",
+      "4857534414719986814",
+      "5326662180973829787",
+      "5366487138368369684",
+      "5585361028098844620",
+      "5766659430993534744",
+      "6470026854721302554",
+      "6522502421204877471",
+      "6900946503262969879",
+      "7358033349812481603",
+      "7437076425135041386",
+      "7443454743093850114",
+      "7508101218900141604",
+      "7606962919699903820",
+      "8067681351862209100",
+      "8562830165814646324",
+      "8754117771804225574",
+      "9131998880486052341"
+     ]
+    }
+   ],
+   "sessions_to_recover": 189,
+   "lost_floor_exhausted": 33,
+   "lost_transport": 156,
+   "bearing_lost": 86
+  },
+  {
+   "run": "info_contract_label3_n32_20261101",
+   "protocol": "",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 32,
+     "judged": 27,
+     "lost": 5,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 5,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 6,
+     "seeds_missing": [
+      "306",
+      "322",
+      "323",
+      "326",
+      "327"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 32,
+     "judged": 23,
+     "lost": 9,
+     "lost_floor_exhausted": 3,
+     "lost_transport": 6,
+     "pf_events_floor_exhausted": 3,
+     "pf_events_transport": 13,
+     "seeds_missing": [
+      "302",
+      "310",
+      "311",
+      "314",
+      "320",
+      "321",
+      "322",
+      "329",
+      "332"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 32,
+     "judged": 30,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "321",
+      "330"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 32,
+     "judged": 25,
+     "lost": 7,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 7,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 12,
+     "seeds_missing": [
+      "302",
+      "304",
+      "307",
+      "319",
+      "320",
+      "324",
+      "331"
+     ]
+    }
+   ],
+   "sessions_to_recover": 23,
+   "lost_floor_exhausted": 3,
+   "lost_transport": 20,
+   "bearing_lost": 7
+  },
+  {
+   "run": "info_contract_aesgcm_random_p021ar_20261103/amendment_a3",
+   "protocol": "",
+   "cells": [
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 51,
+     "judged": 20,
+     "lost": 31,
+     "lost_floor_exhausted": 14,
+     "lost_transport": 17,
+     "pf_events_floor_exhausted": 17,
+     "pf_events_transport": 18,
+     "seeds_missing": [
+      "198882200642611995",
+      "302845600709497997",
+      "343718899735628692",
+      "591925817359160207",
+      "620231313522468899",
+      "1520766850644894012",
+      "1834647212504960430",
+      "2000037269699064426",
+      "2067529140659777298",
+      "2199645560792692162",
+      "2350881398197153970",
+      "2625614960770379670",
+      "2959271349689180594",
+      "2968090732396341361",
+      "3319544269512995414",
+      "3931438432150149866",
+      "4204083393849060968",
+      "4395080619161278131",
+      "5434183162525103062",
+      "6104428037686938069",
+      "6470026854721302554",
+      "6632372836066312210",
+      "6900946503262969879",
+      "7047709331519613599",
+      "7339381365145036939",
+      "7437076425135041386",
+      "7650551694612446740",
+      "7948256073518061078",
+      "8254304695070130144",
+      "8754117771804225574",
+      "8969508380227249873"
+     ]
+    }
+   ],
+   "sessions_to_recover": 31,
+   "lost_floor_exhausted": 14,
+   "lost_transport": 17,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_p024b_20261103",
+   "protocol": "P024B-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 24,
+     "judged": 19,
+     "lost": 5,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 5,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 19,
+     "seeds_missing": [
+      "1085919367790942384",
+      "3613370146640568885",
+      "5917691052662730068",
+      "6371583657490919742",
+      "8393952239108227573"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 24,
+     "judged": 15,
+     "lost": 9,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 9,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 21,
+     "seeds_missing": [
+      "575165618341891725",
+      "2210489604031318807",
+      "3613370146640568885",
+      "4642169946606242158",
+      "5665272107773633994",
+      "6053757933470368991",
+      "6952609208550192760",
+      "7242823496162646513",
+      "8393952239108227573"
+     ]
+    }
+   ],
+   "sessions_to_recover": 14,
+   "lost_floor_exhausted": 0,
+   "lost_transport": 14,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_chachapoly_random_20261102",
+   "protocol": "P019-INFO-CONTRACT-2X2-CHACHAPOLY-CSPRNG-SEEDS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 24,
+     "judged": 20,
+     "lost": 4,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 4,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 4,
+     "seeds_missing": [
+      "2119929645691066608",
+      "2165827061917945254",
+      "2901575235256603190",
+      "4399434046687222485"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 24,
+     "judged": 12,
+     "lost": 12,
+     "lost_floor_exhausted": 8,
+     "lost_transport": 4,
+     "pf_events_floor_exhausted": 10,
+     "pf_events_transport": 7,
+     "seeds_missing": [
+      "950188895833009486",
+      "1530857330506647963",
+      "1547468339942973690",
+      "1958967216947863349",
+      "2120018187682866111",
+      "2901575235256603190",
+      "3986733577368659941",
+      "4556135918160591360",
+      "4999848952400302682",
+      "6729194426803581021",
+      "7025332960081045666",
+      "8606927442041279394"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 24,
+     "judged": 22,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "3277311931956091276",
+      "8606927442041279394"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 18,
+   "lost_floor_exhausted": 8,
+   "lost_transport": 10,
+   "bearing_lost": 6
+  },
+  {
+   "run": "info_contract_aesgcm_labels_20261102/gpt_6_1_sol",
+   "protocol": "P016-INFO-CONTRACT-2X2-AESGCM-WITHIN-ROUTE-LABELS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 16,
+     "judged": 13,
+     "lost": 3,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 3,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 3,
+     "seeds_missing": [
+      "602",
+      "612",
+      "616"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 16,
+     "judged": 1,
+     "lost": 15,
+     "lost_floor_exhausted": 14,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 14,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "601",
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607",
+      "608",
+      "609",
+      "610",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 16,
+     "judged": 15,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "613"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 16,
+     "judged": 10,
+     "lost": 6,
+     "lost_floor_exhausted": 3,
+     "lost_transport": 3,
+     "pf_events_floor_exhausted": 3,
+     "pf_events_transport": 3,
+     "seeds_missing": [
+      "604",
+      "606",
+      "607",
+      "609",
+      "610",
+      "612"
+     ]
+    }
+   ],
+   "sessions_to_recover": 25,
+   "lost_floor_exhausted": 17,
+   "lost_transport": 8,
+   "bearing_lost": 4
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 8,
+     "judged": 4,
+     "lost": 4,
+     "lost_floor_exhausted": 3,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 3,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "411940919485712370",
+      "1047792615613731969",
+      "4557560747022903031",
+      "8318222496953004377"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 8,
+     "judged": 2,
+     "lost": 6,
+     "lost_floor_exhausted": 5,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 5,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "411940919485712370",
+      "1047792615613731969",
+      "3475759585745935795",
+      "5197379716332103652",
+      "5668959420676185108",
+      "8318222496953004377"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 8,
+     "judged": 6,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 3,
+     "seeds_missing": [
+      "8318222496953004377",
+      "9061909019000159649"
+     ]
+    }
+   ],
+   "sessions_to_recover": 12,
+   "lost_floor_exhausted": 8,
+   "lost_transport": 4,
+   "bearing_lost": 10
+  },
+  {
+   "run": "info_contract_aesgcm_random_20261102",
+   "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 24,
+     "judged": 22,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "5860371846351031738",
+      "8691536372558532513"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 24,
+     "judged": 15,
+     "lost": 9,
+     "lost_floor_exhausted": 7,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 9,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "992142491735793747",
+      "1836670359943586176",
+      "1981783119675249472",
+      "2086593926320372253",
+      "4354334167774334418",
+      "5860371846351031738",
+      "7014918998516996865",
+      "8691536372558532513",
+      "8894167450342848201"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 11,
+   "lost_floor_exhausted": 7,
+   "lost_transport": 4,
+   "bearing_lost": 2
+  },
+  {
+   "run": "info_contract_label5_20261030",
+   "protocol": "P010L5-INFO-CONTRACT-2X2-CHACHA20-LABEL5-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 8,
+     "judged": 6,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "226",
+      "227"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 8,
+     "judged": 7,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "227"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 8,
+     "judged": 7,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "227"
+     ]
+    }
+   ],
+   "sessions_to_recover": 4,
+   "lost_floor_exhausted": 0,
+   "lost_transport": 4,
+   "bearing_lost": 3
+  },
+  {
+   "run": "info_contract_label5r_20261030",
+   "protocol": "",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 8,
+     "judged": 7,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "236"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 8,
+     "judged": 7,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "236"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 8,
+     "judged": 6,
+     "lost": 2,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "235",
+      "236"
+     ]
+    }
+   ],
+   "sessions_to_recover": 4,
+   "lost_floor_exhausted": 0,
+   "lost_transport": 4,
+   "bearing_lost": 1
+  },
+  {
+   "run": "info_contract_aesgcm_random_p021r_20261103",
+   "protocol": "P021R-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-RERUN-APINEX-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 20,
+     "judged": 17,
+     "lost": 3,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "2912749395643754944",
+      "3827227303048011440",
+      "6997760829077771257"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 20,
+     "judged": 15,
+     "lost": 5,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "2741819122686579594",
+      "2912749395643754944",
+      "3472171690611606918",
+      "3827227303048011440",
+      "8562830165814646324"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 19,
+     "judged": 15,
+     "lost": 4,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "3472171690611606918",
+      "3827227303048011440",
+      "8379700575302290099",
+      "8562830165814646324"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 20,
+     "judged": 14,
+     "lost": 6,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 4,
+     "seeds_missing": [
+      "2741819122686579594",
+      "3472171690611606918",
+      "5434183162525103062",
+      "7978403074785245310",
+      "8760350850660951244",
+      "8969508380227249873"
+     ]
+    }
+   ],
+   "sessions_to_recover": 18,
+   "lost_floor_exhausted": 0,
+   "lost_transport": 2,
+   "bearing_lost": 7
+  },
+  {
+   "run": "info_contract_aesgcm_p022a_20261102",
+   "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 24,
+     "judged": 14,
+     "lost": 10,
+     "lost_floor_exhausted": 8,
+     "lost_transport": 2,
+     "pf_events_floor_exhausted": 11,
+     "pf_events_transport": 2,
+     "seeds_missing": [
+      "1290785066155433429",
+      "2355624695296600144",
+      "2612354140245307989",
+      "2984588382247702924",
+      "3769669869940314033",
+      "4056512863242200783",
+      "4244936706120645790",
+      "4701885329669827374",
+      "6989315948663911021",
+      "7970393089860827483"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 10,
+   "lost_floor_exhausted": 8,
+   "lost_transport": 2,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_random_p023_20261103",
+   "protocol": "P023-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v2",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 96,
+     "judged": 95,
+     "lost": 1,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 1,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 1,
+     "seeds_missing": [
+      "1831310527132130790"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 96,
+     "judged": 53,
+     "lost": 43,
+     "lost_floor_exhausted": 43,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 51,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "351787936014616182",
+      "526082495394855105",
+      "571409064348308598",
+      "706108364863219374",
+      "764234300235100996",
+      "973051296467640801",
+      "1073345739092420893",
+      "1298103033926182985",
+      "1396276842949247769",
+      "1585095746085177179",
+      "1965309402190747334",
+      "2153252603947154303",
+      "2280029040495700177",
+      "2297387042443321191",
+      "2349802557113952366",
+      "2666624668073057069",
+      "2853374169475916944",
+      "3300748989585364966",
+      "3337836927333043090",
+      "3447098848517927456",
+      "3601881115495891871",
+      "3693056069086673335",
+      "3742769490401507755",
+      "4028124431681024537",
+      "4133913043183831847",
+      "4317863763958137178",
+      "4869191216096763816",
+      "4894932621695826918",
+      "5028022026399093068",
+      "5474644495180438486",
+      "5732395010467991638",
+      "5733688623763834934",
+      "5890912690139513980",
+      "6078840379203760928",
+      "6226082358267250940",
+      "6558547484437866914",
+      "6640011216155793808",
+      "6864836979952542335",
+      "7379658074873348047",
+      "7906728743163428268",
+      "7971469677181315464",
+      "8309215276077284482",
+      "8583105168549323419"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 96,
+     "judged": 96,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 96,
+     "judged": 96,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 44,
+   "lost_floor_exhausted": 43,
+   "lost_transport": 1,
+   "bearing_lost": 1
+  },
+  {
+   "run": "info_contract_aesgcm_p022b_20261102",
+   "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022B-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 24,
+     "judged": 0,
+     "lost": 24,
+     "lost_floor_exhausted": 24,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 24,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "427867426869415814",
+      "1209531023828816636",
+      "1267109517121949936",
+      "1290785066155433429",
+      "1749650009589181305",
+      "2355624695296600144",
+      "2612354140245307989",
+      "2984588382247702924",
+      "3769669869940314033",
+      "4056512863242200783",
+      "4244936706120645790",
+      "4320778129598402266",
+      "4701885329669827374",
+      "4880052499569360314",
+      "5999090958330857419",
+      "6077076155366862441",
+      "6259174544355439484",
+      "6349250927050090397",
+      "6413979494616509432",
+      "6724306853478449109",
+      "6828115294609372402",
+      "6989315948663911021",
+      "7970393089860827483",
+      "8737563916646659647"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 24,
+     "judged": 24,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 24,
+     "judged": 0,
+     "lost": 24,
+     "lost_floor_exhausted": 24,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 24,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "427867426869415814",
+      "1209531023828816636",
+      "1267109517121949936",
+      "1290785066155433429",
+      "1749650009589181305",
+      "2355624695296600144",
+      "2612354140245307989",
+      "2984588382247702924",
+      "3769669869940314033",
+      "4056512863242200783",
+      "4244936706120645790",
+      "4320778129598402266",
+      "4701885329669827374",
+      "4880052499569360314",
+      "5999090958330857419",
+      "6077076155366862441",
+      "6259174544355439484",
+      "6349250927050090397",
+      "6413979494616509432",
+      "6724306853478449109",
+      "6828115294609372402",
+      "6989315948663911021",
+      "7970393089860827483",
+      "8737563916646659647"
+     ]
+    }
+   ],
+   "sessions_to_recover": 48,
+   "lost_floor_exhausted": 48,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_random_p021ar_20261103",
+   "protocol": "P021AR-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-RERUN-AGENTROUTER-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 96,
+     "judged": 96,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 96,
+     "judged": 51,
+     "lost": 45,
+     "lost_floor_exhausted": 45,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 51,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "198882200642611995",
+      "302845600709497997",
+      "343718899735628692",
+      "620231313522468899",
+      "1127615024047797383",
+      "1204129079526320418",
+      "1317848266575579555",
+      "1834647212504960430",
+      "2000037269699064426",
+      "2067529140659777298",
+      "2199645560792692162",
+      "2350881398197153970",
+      "2510809874215977019",
+      "2582472062208147225",
+      "2625614960770379670",
+      "2968090732396341361",
+      "3319544269512995414",
+      "3472171690611606918",
+      "3931438432150149866",
+      "4127434296006863199",
+      "4140836951224162353",
+      "4204083393849060968",
+      "4395080619161278131",
+      "4691650167613907948",
+      "5434183162525103062",
+      "5766659430993534744",
+      "6104428037686938069",
+      "6470026854721302554",
+      "6632372836066312210",
+      "6882154211307148073",
+      "6900946503262969879",
+      "6997760829077771257",
+      "7047709331519613599",
+      "7339381365145036939",
+      "7437076425135041386",
+      "7508101218900141604",
+      "7650551694612446740",
+      "7948256073518061078",
+      "8254304695070130144",
+      "8379700575302290099",
+      "8562830165814646324",
+      "8754117771804225574",
+      "8760350850660951244",
+      "8969508380227249873",
+      "9057523449355627621"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 96,
+     "judged": 96,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 96,
+     "judged": 96,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 45,
+   "lost_floor_exhausted": 45,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_labels_20261102/gpt_5_6_sol",
+   "protocol": "P016-INFO-CONTRACT-2X2-AESGCM-WITHIN-ROUTE-LABELS-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 16,
+     "judged": 0,
+     "lost": 16,
+     "lost_floor_exhausted": 16,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 16,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "601",
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607",
+      "608",
+      "609",
+      "610",
+      "611",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 16,
+     "judged": 0,
+     "lost": 16,
+     "lost_floor_exhausted": 16,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 16,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "601",
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607",
+      "608",
+      "609",
+      "610",
+      "611",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616"
+     ]
+    }
+   ],
+   "sessions_to_recover": 32,
+   "lost_floor_exhausted": 32,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_20261102",
+   "protocol": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 16,
+     "judged": 5,
+     "lost": 11,
+     "lost_floor_exhausted": 11,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 14,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "403",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410",
+      "411",
+      "412",
+      "413",
+      "414",
+      "416"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 16,
+     "judged": 12,
+     "lost": 4,
+     "lost_floor_exhausted": 4,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 5,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "402",
+      "406",
+      "407",
+      "414"
+     ]
+    }
+   ],
+   "sessions_to_recover": 15,
+   "lost_floor_exhausted": 15,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_label4_20261030",
+   "protocol": "P010L4-INFO-CONTRACT-2X2-CHACHA20-LABEL4-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 8,
+     "judged": 2,
+     "lost": 6,
+     "lost_floor_exhausted": 6,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 6,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "218"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 8,
+     "judged": 0,
+     "lost": 8,
+     "lost_floor_exhausted": 8,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 8,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218"
+     ]
+    }
+   ],
+   "sessions_to_recover": 14,
+   "lost_floor_exhausted": 14,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_aesgcm_p017_20261102",
+   "protocol": "P017-INFO-CONTRACT-2X2-AESGCM-FLOOR4200-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 16,
+     "judged": 7,
+     "lost": 9,
+     "lost_floor_exhausted": 9,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 9,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "702",
+      "703",
+      "704",
+      "706",
+      "707",
+      "708",
+      "711",
+      "712",
+      "713"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 16,
+     "judged": 16,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 9,
+   "lost_floor_exhausted": 9,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "exploratory_output_contract_20261017",
+   "protocol": "",
+   "cells": [
+    {
+     "cell": null,
+     "bearing": false,
+     "planned": 3,
+     "judged": 0,
+     "lost": 3,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "1",
+      "2",
+      "3"
+     ]
+    }
+   ],
+   "sessions_to_recover": 3,
+   "lost_floor_exhausted": 0,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_00",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 2,
+     "judged": 0,
+     "lost": 2,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "1047792615613731969",
+      "8318222496953004377"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "1047792615613731969"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 3,
+   "lost_floor_exhausted": 2,
+   "lost_transport": 0,
+   "bearing_lost": 1
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_01",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "5197379716332103652"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 2,
+     "judged": 2,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "5197379716332103652"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 2,
+   "lost_floor_exhausted": 2,
+   "lost_transport": 0,
+   "bearing_lost": 2
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_05",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "9061909019000159649"
+     ]
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "9061909019000159649"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 2,
+   "lost_floor_exhausted": 2,
+   "lost_transport": 0,
+   "bearing_lost": 2
+  },
+  {
+   "run": "info_contract_label2_20261025",
+   "protocol": "",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 8,
+     "judged": 6,
+     "lost": 2,
+     "lost_floor_exhausted": 2,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 2,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "112",
+      "116"
+     ]
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 8,
+     "judged": 8,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 2,
+   "lost_floor_exhausted": 2,
+   "lost_transport": 0,
+   "bearing_lost": 0
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_02",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "411940919485712370"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 1,
+   "lost_floor_exhausted": 1,
+   "lost_transport": 0,
+   "bearing_lost": 1
+  },
+  {
+   "run": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103/shard_03",
+   "protocol": "P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+   "cells": [
+    {
+     "cell": "C1",
+     "bearing": true,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C2",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    },
+    {
+     "cell": "C3",
+     "bearing": true,
+     "planned": 1,
+     "judged": 0,
+     "lost": 1,
+     "lost_floor_exhausted": 1,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 1,
+     "pf_events_transport": 0,
+     "seeds_missing": [
+      "5668959420676185108"
+     ]
+    },
+    {
+     "cell": "C4",
+     "bearing": false,
+     "planned": 1,
+     "judged": 1,
+     "lost": 0,
+     "lost_floor_exhausted": 0,
+     "lost_transport": 0,
+     "pf_events_floor_exhausted": 0,
+     "pf_events_transport": 0,
+     "seeds_missing": []
+    }
+   ],
+   "sessions_to_recover": 1,
+   "lost_floor_exhausted": 1,
+   "lost_transport": 0,
+   "bearing_lost": 1
+  }
+ ]
+}

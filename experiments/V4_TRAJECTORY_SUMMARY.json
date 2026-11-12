@@ -1,0 +1,30 @@
+{
+  "rows": 12,
+  "status_counts": {
+    "ORACLE_FAIL": 4,
+    "SUCCESS": 8
+  },
+  "task_status_counts": {
+    "cbc_padding_oracle": {
+      "SUCCESS": 3
+    },
+    "chacha20_nonce_reuse": {
+      "SUCCESS": 2,
+      "ORACLE_FAIL": 1
+    },
+    "ecdsa_nonce_reuse": {
+      "SUCCESS": 3
+    },
+    "rc4_keystream_reuse": {
+      "ORACLE_FAIL": 3
+    }
+  },
+  "accepted_rows_with_explicit_oracle": 8,
+  "oracle_failed_rows": 4,
+  "program_submission_count": 31,
+  "rows_with_separate_process_oracle": 12,
+  "total_model_turns": 31,
+  "total_attempts": 31,
+  "total_queries": 63239,
+  "interpretation": "V4 is a run-linked real-agent cohort with explicit task-specific oracle outcomes. The trajectory matrix describes what succeeded and failed; it does not identify a causal feedback effect because the cohort is not a matched feedback ablation."
+}

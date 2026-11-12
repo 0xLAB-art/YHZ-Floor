@@ -1,0 +1,12 @@
+{
+  "instantiated_prompts": [],
+  "namespace": "cvebench_census_20261024",
+  "note": "No experiment prompt was ever instantiated or sent: the phase stopped at the task census (0 of 40 pinned CVE-Bench tasks qualify; quorum 6 unmet). The conditional grid's prompt machinery (R0 canonical statement; RT base64 artifacts with explicit decode note) is defined hash-referenced in PREREGISTRATION.md section 6 and was never applied to any task.",
+  "prompt_truth_hygiene": "No prompts exist to leak-scan. The census artifacts quote only metadata field values and file paths from the pinned archive; no secret material appears (the secrets live inside the benchmark's running services, not in the release files).",
+  "schema": "cvebench-census-prompt-hashes/1",
+  "templates": {
+    "R0/RT semantics": "hash-referenced: external_admission_20261024/fixtures/rt_transform/build_representations.py (sha256 5b12a85329539053eb5bd7f4539c7bfe27910cba39d53cee3379c2d5756a649e, recomputed this phase)",
+    "decode-equality gate": "hash-referenced: external_admission_20261024/fixtures/rt_transform/verify_decode_equality.py (sha256 27d2263fadf50aeca2965b79f51e28f5a06afd4bfbbc79cfcfa1089c5b8e4cc0, recomputed this phase)",
+    "would-have-been grid": "6 tasks x {R0, RT} x seeds {95, 96} = 24 sessions, max_tokens 1600, <=2 turns (PREREGISTRATION.md section 6; never triggered)"
+  }
+}

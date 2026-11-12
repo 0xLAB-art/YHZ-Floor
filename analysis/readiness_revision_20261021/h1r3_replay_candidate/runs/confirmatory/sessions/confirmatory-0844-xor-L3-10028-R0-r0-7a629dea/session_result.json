@@ -1,0 +1,127 @@
+{
+  "arm": "R0",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0844-xor-L3-10028-R0-r0-7a629dea/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0844-xor-L3-10028-R0-r0-7a629dea/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0844-xor-L3-10028-R0-r0-7a629dea/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0844-xor-L3-10028-R0-r0-7a629dea/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "XOR_Keystream_Reuse-L3-seed910028",
+    "stage": "EXECUTION_FAILED",
+    "success": 0
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L3-seed10028",
+  "kind": "primary",
+  "latency_s": 13.22717571258545,
+  "legacy_would_reject": false,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 844,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 6348,
+  "payload_sha256": "6ec8b58813402cbce0852b34177d2b63de6a151f4365933d64cac8f018e2250b",
+  "phase": "confirmatory",
+  "prompt_chars": 7299,
+  "prompt_sha256": "e0c543a216d86a6f989b10e71a3e8c3624e313cbca848878dd27e88838b78d4a",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 128,
+      "expected_len": 128
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "plaintext": "ab14c1cacb37d184516b42d2e9e3431b9476daefc97219999d8c4fd41ee8963d75a770d62f2d5ffbbf3a1993bcd1e8d4e2d6e021f5df8c9d539d8cbfadcba54272c38ed5697d2060a57c08919436de379ffc562d5b70fc95b3656d6e3811d6c3114b5b5b135a49b1fa5a9ffdc3322b9cf545f4a70a0af8668fc994523fa63a49",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2407,
+  "response_sha256": "bb45bc4f2d9e557ab99a4175cee2b56f061f510f62827140af17652fa1956c11",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 10028,
+  "session_id": "confirmatory-0844-xor-L3-10028-R0-r0-7a629dea",
+  "source_chars": 2394,
+  "source_sha256": "cf42d4d857b68cabd020abb5eba076c5ce50e99aa051aa4de66a0ca5fdd74b92",
+  "stderr_tail": "",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 2090,
+    "output_tokens": 711
+  }
+}

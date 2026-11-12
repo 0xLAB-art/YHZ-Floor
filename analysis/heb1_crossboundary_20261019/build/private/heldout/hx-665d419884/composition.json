@@ -1,0 +1,24 @@
+{
+  "family": "B5",
+  "intended": {
+    "claim_mismatches": [
+      "attribution"
+    ],
+    "crypto_cert": true,
+    "crypto_requested": true,
+    "joins_failed": [
+      "J2"
+    ],
+    "level": 1,
+    "malformed": false,
+    "missing_kinds": [],
+    "truth_strong": false
+  },
+  "mechanism": "split-half session composition: trace from failed run X; effect/acceptance/artifact binding from successful run Y; hash chain intact; detection J2 only",
+  "ops": [
+    "execution trace replaced with failed run X's session record",
+    "effect, acceptance, agent artifact, and certificate execution session remain successful run Y's",
+    "candidate bytes identical in both runs; all hashes self-consistent",
+    "no registry notes; the only signal is the session-split join J2"
+  ]
+}

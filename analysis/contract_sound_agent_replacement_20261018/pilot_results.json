@@ -1,0 +1,3219 @@
+{
+  "health_gate": {
+    "checks": {
+      "decision_pass": true,
+      "endpoint": true,
+      "fallback_disabled": true,
+      "message_200": true,
+      "model": true,
+      "model_free": true,
+      "retries_zero": true,
+      "topup_zero": true,
+      "usage_free": true
+    },
+    "credential_file_present": true,
+    "health_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_provider_health_20261018/PROVIDER_HEALTH_CHECK.json",
+    "health_sha256": "eeb12406d4710a62b4ec6a8ca971b19f60ea7b99cab40552608a60183fc1b238",
+    "usage_snapshot": {
+      "allowance": 3000000,
+      "key": {
+        "name": "ACTS",
+        "remaining": null,
+        "usage_limit": null,
+        "used": 0
+      },
+      "limits": {
+        "daily": null,
+        "daily_used": 16542,
+        "weekly": null,
+        "weekly_used": 654815
+      },
+      "object": "usage",
+      "plan": "free",
+      "remaining": 2621405,
+      "resets_at": null,
+      "topup_remaining": 0,
+      "used": 378595
+    }
+  },
+  "no_fallback": true,
+  "no_retries": true,
+  "provider_charge_usd": 0.0,
+  "provider_route": "claude-sonnet-4-6-free",
+  "rows": [
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-001-edae641b900f/candidate.py",
+        "output": {
+          "d": "244be185583d746b684ce71d2655e56f8febe9929f0d0b03f1a22210c8cb7147",
+          "k": "ab3e1aa9d73ea5d3186c8ae3ca834c22f73183ec927a4c53c6635b7a13bd6664"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-001-edae641b900f/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-001-edae641b900f/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-001-edae641b900f/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 51.04808068275452,
+      "ordinal": 1,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-001-edae641b900f",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 274
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-002-d2e0d625e447/candidate.py",
+        "output": {
+          "d": "244be185583d746b684ce71d2655e56f8febe9929f0d0b03f1a22210c8cb7147",
+          "k": "ab3e1aa9d73ea5d3186c8ae3ca834c22f73183ec927a4c53c6635b7a13bd6664"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-002-d2e0d625e447/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-002-d2e0d625e447/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-002-d2e0d625e447/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 19.648249864578247,
+      "ordinal": 2,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-002-d2e0d625e447",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 541
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-003-edf28353a3e9/candidate.py",
+        "output": {
+          "d": "6acdae97b6bab741126aa34f84cd55bb61d015e104a618212296d2a8ab2a6fb0",
+          "k": "a63866c0ff32c0e314b2f99aa6a10b5c2b266247f0a85c2399bd966808542eab"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-003-edf28353a3e9/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-003-edf28353a3e9/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-003-edf28353a3e9/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 10.474406719207764,
+      "ordinal": 3,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-003-edf28353a3e9",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 348
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-004-b3b5bf62790d/candidate.py",
+        "output": {
+          "d": "6acdae97b6bab741126aa34f84cd55bb61d015e104a618212296d2a8ab2a6fb0",
+          "k": "a63866c0ff32c0e314b2f99aa6a10b5c2b266247f0a85c2399bd966808542eab"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-004-b3b5bf62790d/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-004-b3b5bf62790d/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-004-b3b5bf62790d/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 11.33219027519226,
+      "ordinal": 4,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-004-b3b5bf62790d",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 661
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-005-8163a4307df9/candidate.py",
+        "qualification": [
+          {
+            "line": 3,
+            "rule": "disallowed-import-from",
+            "value": "hashlib"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-005-8163a4307df9/executor_stderr.txt"
+      },
+      "kind": "primary",
+      "latency_s": 11.857758522033691,
+      "ordinal": 5,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "reason": "candidate-output-missing",
+        "reference_process": "NOT_RUN"
+      },
+      "seed": 3,
+      "session_id": "replacement-005-8163a4307df9",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 661
+      },
+      "validator": {
+        "reason": "reference-input-missing",
+        "validator_process": "NOT_RUN"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-006-7ffd407d7dfc/candidate.py",
+        "output": {
+          "d": "c0de603fb5495244e79b1d213b3c669a44e42040ade8a541249ecc8a6331d05d",
+          "k": "662229cd325f7a314e8ed7924154e522893966af8123652cff3b106c83c918b8"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-006-7ffd407d7dfc/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-006-7ffd407d7dfc/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-006-7ffd407d7dfc/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.9554762840271,
+      "ordinal": 6,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 3,
+      "session_id": "replacement-006-7ffd407d7dfc",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 384
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-007-9516fcd3c19a/candidate.py",
+        "output": {
+          "d": "076bee24855273e10bab848e14060c941fce4c263ad3858c265447ba6f04445d",
+          "k": "3c0804fad7860f1809152a9d5a68284abfd6c324fbd7e77a9058a41b7b2c1108"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-007-9516fcd3c19a/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-007-9516fcd3c19a/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-007-9516fcd3c19a/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 10.229337215423584,
+      "ordinal": 7,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-007-9516fcd3c19a",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 507
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-008-2977cbc41b22/candidate.py",
+        "output": {
+          "d": "076bee24855273e10bab848e14060c941fce4c263ad3858c265447ba6f04445d",
+          "k": "3c0804fad7860f1809152a9d5a68284abfd6c324fbd7e77a9058a41b7b2c1108"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-008-2977cbc41b22/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-008-2977cbc41b22/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-008-2977cbc41b22/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.935503721237183,
+      "ordinal": 8,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-008-2977cbc41b22",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 294
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-009-7e5009cfe489/candidate.py",
+        "output": {
+          "d": "e255f337c87027553a65f4f6b42ce03084cfa2974e58bffa28ef5025346eb237",
+          "k": "49c6b19fcf1c9e17d9f4b9680008f03dee72ead31a64f3ff98026f0855923bd1"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-009-7e5009cfe489/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-009-7e5009cfe489/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-009-7e5009cfe489/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.119086027145386,
+      "ordinal": 9,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-009-7e5009cfe489",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 274
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-010-203f43af7456/candidate.py",
+        "output": {
+          "d": "e255f337c87027553a65f4f6b42ce03084cfa2974e58bffa28ef5025346eb237",
+          "k": "49c6b19fcf1c9e17d9f4b9680008f03dee72ead31a64f3ff98026f0855923bd1"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-010-203f43af7456/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-010-203f43af7456/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-010-203f43af7456/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.95671534538269,
+      "ordinal": 10,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-010-203f43af7456",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 366
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-011-1798069c5b20/candidate.py",
+        "output": {
+          "d": "a0692378be0a031f30ff3bc25f6266a30650f3c26b304631f7edc9c2f2be5fa5",
+          "k": "deb91d37c17e8ab32a7bad68601e1a7b7870ef2a2aad894051f60615e6f97b84"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-011-1798069c5b20/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-011-1798069c5b20/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-011-1798069c5b20/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.862518310546875,
+      "ordinal": 11,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-011-1798069c5b20",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 466
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-012-ceb4f5a4c620/candidate.py",
+        "output": {
+          "d": "a0692378be0a031f30ff3bc25f6266a30650f3c26b304631f7edc9c2f2be5fa5",
+          "k": "deb91d37c17e8ab32a7bad68601e1a7b7870ef2a2aad894051f60615e6f97b84"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-012-ceb4f5a4c620/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-012-ceb4f5a4c620/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-012-ceb4f5a4c620/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.952476978302002,
+      "ordinal": 12,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-012-ceb4f5a4c620",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 393
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-013-d23672d9f3fe/candidate.py",
+        "qualification": [
+          {
+            "line": 3,
+            "rule": "disallowed-import-from",
+            "value": "hashlib"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-013-d23672d9f3fe/executor_stderr.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.6720130443573,
+      "ordinal": 13,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "reason": "candidate-output-missing",
+        "reference_process": "NOT_RUN"
+      },
+      "seed": 7,
+      "session_id": "replacement-013-d23672d9f3fe",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 520
+      },
+      "validator": {
+        "reason": "reference-input-missing",
+        "validator_process": "NOT_RUN"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-014-323b0aef2ad3/candidate.py",
+        "output": {
+          "d": "d3a3c601c900ff19f35de8b3aa94729a1f73e9d58e7b4dbf7933693367bf953f",
+          "k": "7d5d917c23b131d095a2e0b594450401087eb88402f4a76814319e4a57e62819"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-014-323b0aef2ad3/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-014-323b0aef2ad3/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-014-323b0aef2ad3/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 9.044697523117065,
+      "ordinal": 14,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 7,
+      "session_id": "replacement-014-323b0aef2ad3",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 514
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-015-ea4ed3441e88/candidate.py",
+        "output": {
+          "d": "8dadc2fa89ee40b47549748cf721b9c8c579df07f67251b999e49131ec030172",
+          "k": "c42b2a788f821f55c2a9cca8e98e723377315182e8475972e72d9e9d9feb8444"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-015-ea4ed3441e88/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-015-ea4ed3441e88/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-015-ea4ed3441e88/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 10.68173336982727,
+      "ordinal": 15,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-015-ea4ed3441e88",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 378
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-016-6dd3d0d38e88/candidate.py",
+        "output": {
+          "d": "8dadc2fa89ee40b47549748cf721b9c8c579df07f67251b999e49131ec030172",
+          "k": "c42b2a788f821f55c2a9cca8e98e723377315182e8475972e72d9e9d9feb8444"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-016-6dd3d0d38e88/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-016-6dd3d0d38e88/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-016-6dd3d0d38e88/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.19673752784729,
+      "ordinal": 16,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-016-6dd3d0d38e88",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 291
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-017-3b1d68b99c13/candidate.py",
+        "output": {
+          "d": "458513291d92356484c322faead36e3236c9af9446d7d88466c1ebc581a48400",
+          "k": "b3fbe2a1c32ac282a1c3c72cbcb34f1bf6a6838aa9dc899537d5ef1cfe5af7ff"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-017-3b1d68b99c13/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-017-3b1d68b99c13/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-017-3b1d68b99c13/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 9.442046403884888,
+      "ordinal": 17,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-017-3b1d68b99c13",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 393
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-018-8e7282eff986/candidate.py",
+        "output": {
+          "d": "458513291d92356484c322faead36e3236c9af9446d7d88466c1ebc581a48400",
+          "k": "b3fbe2a1c32ac282a1c3c72cbcb34f1bf6a6838aa9dc899537d5ef1cfe5af7ff"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-018-8e7282eff986/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-018-8e7282eff986/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-018-8e7282eff986/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.528701305389404,
+      "ordinal": 18,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-018-8e7282eff986",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 408
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-019-ad69bcee07a5/candidate.py",
+        "output": {
+          "d": "3a0442fb67082fc9386c8b4cacfc073363f0123ed063dec42d4462b8add1b123",
+          "k": "81adfc265a044cadf9c4a800ccdd36a9ec9bdb9a10ccd176e19dc5b67f5b243f"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-019-ad69bcee07a5/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-019-ad69bcee07a5/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-019-ad69bcee07a5/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.13547420501709,
+      "ordinal": 19,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-019-ad69bcee07a5",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 329
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-020-e4e18f3ddb02/candidate.py",
+        "output": {
+          "d": "3a0442fb67082fc9386c8b4cacfc073363f0123ed063dec42d4462b8add1b123",
+          "k": "81adfc265a044cadf9c4a800ccdd36a9ec9bdb9a10ccd176e19dc5b67f5b243f"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-020-e4e18f3ddb02/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-020-e4e18f3ddb02/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-020-e4e18f3ddb02/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.888160705566406,
+      "ordinal": 20,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-020-e4e18f3ddb02",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 386
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-021-5820d905c44a/candidate.py",
+        "output": {
+          "d": "48e0391d421a40818253727a4d91e387dfd5d64c82b8d89e6511240ff822465b",
+          "k": "11df4cb1a3d757283735cfd04e8a77de0ef3f094b0803f7d09a703759960de84"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-021-5820d905c44a/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-021-5820d905c44a/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-021-5820d905c44a/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 11.85438084602356,
+      "ordinal": 21,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-021-5820d905c44a",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 522
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-022-3deee09a9f05/candidate.py",
+        "output": {
+          "d": "48e0391d421a40818253727a4d91e387dfd5d64c82b8d89e6511240ff822465b",
+          "k": "11df4cb1a3d757283735cfd04e8a77de0ef3f094b0803f7d09a703759960de84"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-022-3deee09a9f05/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-022-3deee09a9f05/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-022-3deee09a9f05/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 8.509840726852417,
+      "ordinal": 22,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-022-3deee09a9f05",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 439
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-023-c11942ab7d40/candidate.py",
+        "output": {
+          "d": "429deef4d94ae277dc6d7ec40cfb19bcb59128f9fbf78dd305d6941ddd81fd29",
+          "k": "953ab78ec4a9572c7e94c9e55744a3b7b392f6752e8f3e7b7d747b8c6418c330"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-023-c11942ab7d40/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-023-c11942ab7d40/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-023-c11942ab7d40/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 9.135901689529419,
+      "ordinal": 23,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-023-c11942ab7d40",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 289,
+        "output_tokens": 379
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-024-8a20a8fd9739/candidate.py",
+        "output": {
+          "d": "429deef4d94ae277dc6d7ec40cfb19bcb59128f9fbf78dd305d6941ddd81fd29",
+          "k": "953ab78ec4a9572c7e94c9e55744a3b7b392f6752e8f3e7b7d747b8c6418c330"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-024-8a20a8fd9739/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-024-8a20a8fd9739/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-024-8a20a8fd9739/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.41005802154541,
+      "ordinal": 24,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-024-8a20a8fd9739",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 333,
+        "output_tokens": 281
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-025-fdc5ca3d8df1/candidate.py",
+        "output": {
+          "plaintext_2": "98cfa2805f10528cedcfcc71bef799258b4b0fb5aa5fc25c396939279a43b6f53f8cf2f9e1a172322a4336232e0b1f6a"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-025-fdc5ca3d8df1/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-025-fdc5ca3d8df1/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-025-fdc5ca3d8df1/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.303200006484985,
+      "ordinal": 25,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-025-fdc5ca3d8df1",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 213
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-026-1036d3b8eb30/candidate.py",
+        "output": {
+          "plaintext_2": "98cfa2805f10528cedcfcc71bef799258b4b0fb5aa5fc25c396939279a43b6f53f8cf2f9e1a172322a4336232e0b1f6a"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-026-1036d3b8eb30/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-026-1036d3b8eb30/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-026-1036d3b8eb30/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.904468059539795,
+      "ordinal": 26,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-026-1036d3b8eb30",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 256
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-027-462f5c384261/candidate.py",
+        "output": {
+          "plaintext_2": "a0299950602c78871ed1303671810959d20c0f706c6bf3de504dd1a0fc6c2d9de65e6f992ec53662edb37be910753940"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-027-462f5c384261/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-027-462f5c384261/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-027-462f5c384261/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.259345054626465,
+      "ordinal": 27,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-027-462f5c384261",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 170
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-028-e64f1a51342a/candidate.py",
+        "output": {
+          "plaintext_2": "a0299950602c78871ed1303671810959d20c0f706c6bf3de504dd1a0fc6c2d9de65e6f992ec53662edb37be910753940"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-028-e64f1a51342a/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-028-e64f1a51342a/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-028-e64f1a51342a/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.991517543792725,
+      "ordinal": 28,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-028-e64f1a51342a",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 257
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-029-30753e2a65ed/candidate.py",
+        "output": {
+          "plaintext_2": "63ac228b26ac2451d6da8efc6806bc910e6eba6d43550ce61de66d2983d3bd8ea74667d051f87b4f8dc4a3194087e488"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-029-30753e2a65ed/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-029-30753e2a65ed/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-029-30753e2a65ed/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.902829647064209,
+      "ordinal": 29,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 3,
+      "session_id": "replacement-029-30753e2a65ed",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 267
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-030-2fe08b622795/candidate.py",
+        "output": {
+          "plaintext_2": "63ac228b26ac2451d6da8efc6806bc910e6eba6d43550ce61de66d2983d3bd8ea74667d051f87b4f8dc4a3194087e488"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-030-2fe08b622795/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-030-2fe08b622795/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-030-2fe08b622795/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.070229530334473,
+      "ordinal": 30,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 3,
+      "session_id": "replacement-030-2fe08b622795",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 268
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-031-7504951925e9/candidate.py",
+        "output": {
+          "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-031-7504951925e9/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-031-7504951925e9/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-031-7504951925e9/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.47507905960083,
+      "ordinal": 31,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-031-7504951925e9",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 202
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-032-6f0fca092a68/candidate.py",
+        "output": {
+          "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-032-6f0fca092a68/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-032-6f0fca092a68/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-032-6f0fca092a68/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.674612045288086,
+      "ordinal": 32,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-032-6f0fca092a68",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 239
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-033-bca8c1b082f3/candidate.py",
+        "output": {
+          "plaintext_2": "da48c2f7c0d25c05aa45050cf52998f8848dad6e0277c5b2bb8e41408c2e4cd92d51b6baf5f1e97e1d1a3b2dfd5153b2"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-033-bca8c1b082f3/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-033-bca8c1b082f3/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-033-bca8c1b082f3/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.074353456497192,
+      "ordinal": 33,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-033-bca8c1b082f3",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 170
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-034-28dfeb0c30dd/candidate.py",
+        "output": {
+          "plaintext_2": "da48c2f7c0d25c05aa45050cf52998f8848dad6e0277c5b2bb8e41408c2e4cd92d51b6baf5f1e97e1d1a3b2dfd5153b2"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-034-28dfeb0c30dd/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-034-28dfeb0c30dd/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-034-28dfeb0c30dd/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.872718095779419,
+      "ordinal": 34,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-034-28dfeb0c30dd",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 257
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-035-f2c8cfdfec32/candidate.py",
+        "output": {
+          "plaintext_2": "bbcf9c3c025576ed092056c35576677d460eb38cfa0377a070ca30b87ddcd6f57b5aa6663b08913e0bb11344954d65ec"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-035-f2c8cfdfec32/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-035-f2c8cfdfec32/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-035-f2c8cfdfec32/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.271046161651611,
+      "ordinal": 35,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-035-f2c8cfdfec32",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 163
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-036-b4663d638c46/candidate.py",
+        "output": {
+          "plaintext_2": "bbcf9c3c025576ed092056c35576677d460eb38cfa0377a070ca30b87ddcd6f57b5aa6663b08913e0bb11344954d65ec"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-036-b4663d638c46/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-036-b4663d638c46/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-036-b4663d638c46/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.172606945037842,
+      "ordinal": 36,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-036-b4663d638c46",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 257
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-037-cbb106c7fcd0/candidate.py",
+        "output": {
+          "plaintext_2": "5afb34a2ed12b7e8764c76ed95d59a622906f1332b15ceda39ac3a179ec530fb4f7f63abc82ecf989f15edaa379881d8"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-037-cbb106c7fcd0/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-037-cbb106c7fcd0/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-037-cbb106c7fcd0/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.574717998504639,
+      "ordinal": 37,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 7,
+      "session_id": "replacement-037-cbb106c7fcd0",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 170
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-038-bdd10adc8bf8/candidate.py",
+        "output": {
+          "plaintext_2": "5afb34a2ed12b7e8764c76ed95d59a622906f1332b15ceda39ac3a179ec530fb4f7f63abc82ecf989f15edaa379881d8"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-038-bdd10adc8bf8/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-038-bdd10adc8bf8/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-038-bdd10adc8bf8/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.784679889678955,
+      "ordinal": 38,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 7,
+      "session_id": "replacement-038-bdd10adc8bf8",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 261
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-039-c3bfb56df504/candidate.py",
+        "output": {
+          "plaintext_2": "7bff08211380bb949715aca20be1b94034c02c99d9826d11d600ee5f27c6f88ef1f4c2687f4242297e8b189ef98bff74"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-039-c3bfb56df504/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-039-c3bfb56df504/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-039-c3bfb56df504/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.628310441970825,
+      "ordinal": 39,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-039-c3bfb56df504",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 246
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-040-2100aabca0ee/candidate.py",
+        "output": {
+          "plaintext_2": "7bff08211380bb949715aca20be1b94034c02c99d9826d11d600ee5f27c6f88ef1f4c2687f4242297e8b189ef98bff74"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-040-2100aabca0ee/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-040-2100aabca0ee/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-040-2100aabca0ee/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.817786693572998,
+      "ordinal": 40,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-040-2100aabca0ee",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 267
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-041-0865b9c1a31d/candidate.py",
+        "output": {
+          "plaintext_2": "0705110db7b9b48a6d2b241bfa82340db0f5026a5be56aab4389324967b19df2b60d88b2cc5ae7d6822c111ca58ee716"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-041-0865b9c1a31d/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-041-0865b9c1a31d/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-041-0865b9c1a31d/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.4203033447265625,
+      "ordinal": 41,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-041-0865b9c1a31d",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 233
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-042-6466100039ce/candidate.py",
+        "output": {
+          "plaintext_2": "0705110db7b9b48a6d2b241bfa82340db0f5026a5be56aab4389324967b19df2b60d88b2cc5ae7d6822c111ca58ee716"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-042-6466100039ce/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-042-6466100039ce/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-042-6466100039ce/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 7.580209732055664,
+      "ordinal": 42,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-042-6466100039ce",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 268
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-043-8e7ae6a865e0/candidate.py",
+        "output": {
+          "plaintext_2": "45e809bc73814f40ea12d55dfcbf45a168abe8b040441d83c40ff808d6e1fd279aed7c6389548d86e46c3cb93b5b446e"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-043-8e7ae6a865e0/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-043-8e7ae6a865e0/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-043-8e7ae6a865e0/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.988901853561401,
+      "ordinal": 43,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-043-8e7ae6a865e0",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 242
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-044-1cacceb1d454/candidate.py",
+        "output": {
+          "plaintext_2": "45e809bc73814f40ea12d55dfcbf45a168abe8b040441d83c40ff808d6e1fd279aed7c6389548d86e46c3cb93b5b446e"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-044-1cacceb1d454/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-044-1cacceb1d454/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-044-1cacceb1d454/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.806058168411255,
+      "ordinal": 44,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-044-1cacceb1d454",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 233
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-045-0ef983ef7b95/candidate.py",
+        "output": {
+          "plaintext_2": "b52868b0f2923d0a6ddacda3c4ab7e7538a79b36e70417cc2a5f48a53c1542a3599a108aefe5667c58fb86a0cfd35eb5"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-045-0ef983ef7b95/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-045-0ef983ef7b95/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-045-0ef983ef7b95/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.403742790222168,
+      "ordinal": 45,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-045-0ef983ef7b95",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 259
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-046-313a3aac78ff/candidate.py",
+        "output": {
+          "plaintext_2": "b52868b0f2923d0a6ddacda3c4ab7e7538a79b36e70417cc2a5f48a53c1542a3599a108aefe5667c58fb86a0cfd35eb5"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-046-313a3aac78ff/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-046-313a3aac78ff/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-046-313a3aac78ff/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 5.428154945373535,
+      "ordinal": 46,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-046-313a3aac78ff",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 171
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C2",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-047-9f6a16326494/candidate.py",
+        "output": {
+          "plaintext_2": "a431ec70abc6bc3dd691fd30cfea007c680895e2241e2851f207a1edb1850b3f2bc1b43a817a02d38c0ceb5730f349aa"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-047-9f6a16326494/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-047-9f6a16326494/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-047-9f6a16326494/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.60416054725647,
+      "ordinal": 47,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-047-9f6a16326494",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 225,
+        "output_tokens": 170
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C1",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-048-7d0f2458d0e9/candidate.py",
+        "output": {
+          "plaintext_2": "a431ec70abc6bc3dd691fd30cfea007c680895e2241e2851f207a1edb1850b3f2bc1b43a817a02d38c0ceb5730f349aa"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-048-7d0f2458d0e9/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-048-7d0f2458d0e9/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-048-7d0f2458d0e9/executor_stdout.txt"
+      },
+      "kind": "primary",
+      "latency_s": 6.601085424423218,
+      "ordinal": 48,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-048-7d0f2458d0e9",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 251,
+        "output_tokens": 233
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-049-05eb46958145/candidate.py",
+        "output": {
+          "reason": "Only one signature provided; ECDSA nonce reuse requires at least two signatures to detect reuse or recover the private key",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-049-05eb46958145/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-049-05eb46958145/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-049-05eb46958145/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 6.042313098907471,
+      "ordinal": 49,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-049-05eb46958145",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 88
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-050-52ff0e2b6613/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures sharing the same nonce; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-050-52ff0e2b6613/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-050-52ff0e2b6613/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-050-52ff0e2b6613/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 8.062171697616577,
+      "ordinal": 50,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-050-52ff0e2b6613",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 82
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-051-9e9911f92f18/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures with the same nonce to recover the private key; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-051-9e9911f92f18/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-051-9e9911f92f18/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-051-9e9911f92f18/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 6.199975967407227,
+      "ordinal": 51,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 3,
+      "session_id": "replacement-051-9e9911f92f18",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 87
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-052-b7bb27294422/candidate.py",
+        "output": {
+          "reason": "Only one signature provided; nonce reuse requires at least two signatures to compare nonces and potentially recover the private key",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-052-b7bb27294422/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-052-b7bb27294422/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-052-b7bb27294422/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.460473537445068,
+      "ordinal": 52,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-052-b7bb27294422",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 85
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-053-740146eb19b4/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures sharing the same nonce; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-053-740146eb19b4/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-053-740146eb19b4/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-053-740146eb19b4/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.730999231338501,
+      "ordinal": 53,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-053-740146eb19b4",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 82
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-054-0efcae25be90/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures with the same nonce; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-054-0efcae25be90/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-054-0efcae25be90/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-054-0efcae25be90/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 8.845008134841919,
+      "ordinal": 54,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-054-0efcae25be90",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 82
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-055-60ec0a8bc4a1/candidate.py",
+        "output": {
+          "reason": "Only one signature provided; nonce reuse requires at least two signatures to detect or exploit",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-055-60ec0a8bc4a1/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-055-60ec0a8bc4a1/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-055-60ec0a8bc4a1/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.565144300460815,
+      "ordinal": 55,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 7,
+      "session_id": "replacement-055-60ec0a8bc4a1",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 79
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-056-8b5cc45c440f/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-056-8b5cc45c440f/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-056-8b5cc45c440f/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-056-8b5cc45c440f/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.810455322265625,
+      "ordinal": 56,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-056-8b5cc45c440f",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 77
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-057-e27d336e00cf/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures sharing the same nonce; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-057-e27d336e00cf/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-057-e27d336e00cf/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-057-e27d336e00cf/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 4.920019865036011,
+      "ordinal": 57,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-057-e27d336e00cf",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 82
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-058-0f9809a922f0/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires two signatures with the same k; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-058-0f9809a922f0/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-058-0f9809a922f0/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-058-0f9809a922f0/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.523709774017334,
+      "ordinal": 58,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-058-0f9809a922f0",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 90
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-059-d7e5bb26abc2/candidate.py",
+        "output": {
+          "reason": "Only one signature provided; nonce reuse requires at least two signatures to detect shared k values",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-059-d7e5bb26abc2/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-059-d7e5bb26abc2/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-059-d7e5bb26abc2/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 7.17749810218811,
+      "ordinal": 59,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-059-d7e5bb26abc2",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 80
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-060-3ce70952254b/candidate.py",
+        "output": {
+          "reason": "ECDSA nonce reuse requires at least two signatures with the same nonce to recover the private key; only one signature provided",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-060-3ce70952254b/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-060-3ce70952254b/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-060-3ce70952254b/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.107945442199707,
+      "ordinal": 60,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-060-3ce70952254b",
+      "task": "ECDSA_Nonce_Reuse",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 288,
+        "output_tokens": 94
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-061-78fc58d924ea/candidate.py",
+        "output": {
+          "reason": "ChaCha20 nonce reuse detection requires plaintext, key, or distinguishing oracle; ciphertexts alone are pseudorandom",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-061-78fc58d924ea/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-061-78fc58d924ea/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-061-78fc58d924ea/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.8078858852386475,
+      "ordinal": 61,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 1,
+      "session_id": "replacement-061-78fc58d924ea",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 92
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-062-e92efdb22680/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires observing keystream collision or possessing plaintext; ciphertexts alone are insufficient.",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-062-e92efdb22680/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-062-e92efdb22680/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-062-e92efdb22680/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 7.366550445556641,
+      "ordinal": 62,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 2,
+      "session_id": "replacement-062-e92efdb22680",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 122
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-063-c2309c4d1e9e/candidate.py",
+        "output": {
+          "reason": "Nonce reuse in ChaCha20 cannot be confirmed without access to the key, nonce, or a known plaintext oracle. The ciphertexts alone do not reveal whether the same nonce was used.",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-063-c2309c4d1e9e/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-063-c2309c4d1e9e/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-063-c2309c4d1e9e/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.275091171264648,
+      "ordinal": 63,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 3,
+      "session_id": "replacement-063-c2309c4d1e9e",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 143
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-064-086f21c4b9cd/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires plaintext, key, nonce, or keystream distinguisher; ciphertexts alone are insufficient",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-064-086f21c4b9cd/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-064-086f21c4b9cd/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-064-086f21c4b9cd/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 7.972902536392212,
+      "ordinal": 64,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 4,
+      "session_id": "replacement-064-086f21c4b9cd",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 125
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/candidate.py",
+        "output": {
+          "reason": "Nonce reuse in ChaCha20 enables keystream recovery from two ciphertexts, but without a known plaintext, crib, or distinguishing oracle, we cannot definitively confirm the nonce was reused or recover actionable plaintext.",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-065-1dc85dbeb9b7/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.640054941177368,
+      "ordinal": 65,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 5,
+      "session_id": "replacement-065-1dc85dbeb9b7",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 116
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-066-95db64a0412e/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires either the nonce values, plaintexts, or additional ciphertexts encrypted under the same key-nonce pair to perform cryptanalysis such as XOR differential analysis",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-066-95db64a0412e/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-066-95db64a0412e/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-066-95db64a0412e/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.271255016326904,
+      "ordinal": 66,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 6,
+      "session_id": "replacement-066-95db64a0412e",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 140
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-067-1615b4a2f2ee/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires known or chosen plaintext, a decryption oracle, or distinguishing access; ciphertexts alone are indistinguishable from random without the key or additional side-channel information.",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-067-1615b4a2f2ee/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-067-1615b4a2f2ee/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-067-1615b4a2f2ee/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.880098581314087,
+      "ordinal": 67,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 7,
+      "session_id": "replacement-067-1615b4a2f2ee",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 108
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/candidate.py",
+        "output": {
+          "reason": "ChaCha20 nonce reuse detection requires known plaintext, key material, or distinguishing oracle; ciphertexts alone are insufficient",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 4.79535436630249,
+      "ordinal": 68,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 8,
+      "session_id": "replacement-068-481a8eda019c",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 92
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-069-7c44215b008e/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires plaintext, key, nonce, or distinguishing oracle; ciphertexts alone are insufficient under C0",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-069-7c44215b008e/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-069-7c44215b008e/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-069-7c44215b008e/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.855754137039185,
+      "ordinal": 69,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 9,
+      "session_id": "replacement-069-7c44215b008e",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 127
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-070-15d69072eae4/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires known plaintext, the key, or multiple ciphertext pairs with structural correlation; none are provided in this instance",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-070-15d69072eae4/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-070-15d69072eae4/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-070-15d69072eae4/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 6.3019983768463135,
+      "ordinal": 70,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 10,
+      "session_id": "replacement-070-15d69072eae4",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 122
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-071-fccdb15c6014/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detection requires additional information not present in the public instance, such as knowledge of plaintext, key material, or a distinguishing oracle",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-071-fccdb15c6014/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-071-fccdb15c6014/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-071-fccdb15c6014/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 5.57067608833313,
+      "ordinal": 71,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 11,
+      "session_id": "replacement-071-fccdb15c6014",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 127
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "condition": "C0",
+      "execution": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-072-737baabb51e7/candidate.py",
+        "output": {
+          "reason": "Nonce reuse detected but without plaintext, key, or additional oracle access, cannot determine which specific messages were encrypted or recover the keystream definitively.",
+          "status": "UNDERDETERMINED"
+        },
+        "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-072-737baabb51e7/candidate_output.json",
+        "returncode": 0,
+        "status": "EXECUTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-072-737baabb51e7/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-072-737baabb51e7/executor_stdout.txt"
+      },
+      "kind": "control",
+      "latency_s": 9.060024499893188,
+      "ordinal": 72,
+      "provider_charge_usd": 0.0,
+      "provider_status": "SUCCESS",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "parse_or_math_error": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "seed": 12,
+      "session_id": "replacement-072-737baabb51e7",
+      "task": "ChaCha20_Nonce_Repeat",
+      "token_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 244,
+        "output_tokens": 128
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    }
+  ],
+  "rows_recorded": 72,
+  "sessions_planned": 72
+}

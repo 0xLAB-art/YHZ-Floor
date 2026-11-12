@@ -1,0 +1,293 @@
+{
+  "amendment_note": "amendment A1 recorded AFTER outcomes (post-hoc defect correction to a derived statistic); all other frozen files unchanged \u2014 their hashes above remain the freeze-commit values, re-verified at report time",
+  "amendments": [
+    {
+      "cause": "the Fisher exact implementation in this namespace's runner inherited the frozen cohort runner's denominator comb(2n, n); Fisher's exact test conditions on the successes margin, so the correct denominator is comb(2n, total_successes). Discovered during report verification by an independent fraction-arithmetic cross-check against scipy.stats.fisher_exact: the defective formula's two-sided value equals the correct one scaled by comb(2n,T)/comb(2n,n) (numerator selection was already correct); the one-sided values disagree likewise.",
+      "corrected_values": {
+        "combined_14v14_descriptive": {
+          "a": "9/14",
+          "b": "9/14",
+          "fisher_one_sided_A_gt_B": 0.6527078565980168,
+          "fisher_two_sided": 1.0,
+          "scipy_cross_check": "exact match to machine precision"
+        },
+        "extension_10v10": {
+          "a": "5/10",
+          "b": "7/10",
+          "fisher_one_sided_A_gt_B": 0.9150988330554894,
+          "fisher_two_sided": 0.6499166468206716,
+          "scipy_cross_check": "exact match to machine precision (greater / two-sided)"
+        },
+        "frozen_4v4_corrected_for_reference": {
+          "corrected_one_sided": 0.21428571428571427,
+          "published_defective": 0.08571428571428572
+        }
+      },
+      "fixes": [
+        "fisher_one_sided / fisher_two_sided / _pmf denominators: comb(2n, total_successes)",
+        "aggregation extracted from main() into aggregate() so summary.json can be regenerated without touching run_info.json, recorded sessions, or the ledger"
+      ],
+      "id": "A1",
+      "impact": "none on session outcomes, terminal states, acceptance counts, error classes, query counts, tokens, cost, or gate results \u2014 only the summary-level test statistics changed. Falsifier verdicts are UNCHANGED: F-primary rule = (two-sided p >= 0.05 AND arm A turn-2 submissions = 0); corrected two-sided p = 0.6499 >= 0.05 but turn-2 submissions = 3, so F-primary remains FALSE. F-secondary and F3 unaffected (no test statistic).",
+      "lineage_disclosure": "the SAME defect is present in the frozen cohort H2-CBC-AGENCY-20261023-v1: its REPORT.md section 3 publishes the one-sided 4v4 p-value as 6/70 = 0.0857; the correct Fisher exact one-sided (A>B) value for [[4,0],[2,2]] is 6/28 = 0.214286 (scipy-verified). The frozen namespace is read-only and was NOT modified; its record stands as published with this correction noted here and in this namespace's REPORT.md.",
+      "recorded_utc": "2026-10-24T07:35:58Z",
+      "recorded_when": "AFTER all 20 sessions were terminal and outcomes existed \u2014 this is a post-hoc defect correction to a derived summary statistic, disclosed as such; it is NOT a design change",
+      "runner_sha256": {
+        "after": "d702512a5e79e3846e8bf76b33954ac0e5a71789640e01313157e1c0c0bcebc6",
+        "before": "ac16e49841d85fe4a92247f5b2fcc3582a1a3e67ff14bae8fbae291d3e0f50f6"
+      }
+    }
+  ],
+  "auth_smoke": {
+    "classification": "AUTH_SMOKE, non-evidence",
+    "code_path": "exact session ProviderClient.call path",
+    "file": "provider_health/AUTH_SMOKE.json",
+    "result": "ok"
+  },
+  "design": {
+    "arm_axis_only_differs": true,
+    "arms": [
+      "A_INTERACTIVE",
+      "B_ONESHOT"
+    ],
+    "exec_timeout_s": 20,
+    "extension_local_changes": [
+      "seeds 65-74, 20 sessions",
+      "fixture/oracle generation imported from the frozen namespace (bit-identical file)",
+      "model-invisible hardening guards: pinned https host + public-IP resolution check + allow_redirects=False; constant-argument shell=False sandboxed execution",
+      "aggregation: Fisher one- and two-sided 10v10, turn-2 pathway, per-arm tokens/cost, descriptive cross-cohort side-by-side + combined Fisher"
+    ],
+    "max_tokens": 3000,
+    "oracle_budget_queries": 4096,
+    "predicate": "exact match on plaintext hex (lowercased)",
+    "protocol_reuse": "arms/prompts/budget/parser/oracle identical to frozen cohort H2-CBC-AGENCY-20261023-v1",
+    "provider_timeout_s": 300,
+    "seeds": [
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "session_order": [
+      [
+        65,
+        "A_INTERACTIVE"
+      ],
+      [
+        65,
+        "B_ONESHOT"
+      ],
+      [
+        66,
+        "A_INTERACTIVE"
+      ],
+      [
+        66,
+        "B_ONESHOT"
+      ],
+      [
+        67,
+        "A_INTERACTIVE"
+      ],
+      [
+        67,
+        "B_ONESHOT"
+      ],
+      [
+        68,
+        "A_INTERACTIVE"
+      ],
+      [
+        68,
+        "B_ONESHOT"
+      ],
+      [
+        69,
+        "A_INTERACTIVE"
+      ],
+      [
+        69,
+        "B_ONESHOT"
+      ],
+      [
+        70,
+        "A_INTERACTIVE"
+      ],
+      [
+        70,
+        "B_ONESHOT"
+      ],
+      [
+        71,
+        "A_INTERACTIVE"
+      ],
+      [
+        71,
+        "B_ONESHOT"
+      ],
+      [
+        72,
+        "A_INTERACTIVE"
+      ],
+      [
+        72,
+        "B_ONESHOT"
+      ],
+      [
+        73,
+        "A_INTERACTIVE"
+      ],
+      [
+        73,
+        "B_ONESHOT"
+      ],
+      [
+        74,
+        "A_INTERACTIVE"
+      ],
+      [
+        74,
+        "B_ONESHOT"
+      ]
+    ],
+    "sessions": 20,
+    "temperature": "provider default (not set)",
+    "turn_limit": {
+      "A_INTERACTIVE": 2,
+      "B_ONESHOT": 1
+    }
+  },
+  "freeze_date": "2026-10-24",
+  "freeze_type": "PREREGISTRATION_FREEZE",
+  "frozen_before_first_experiment_model_call": true,
+  "frozen_files_sha256": {
+    "PREREGISTRATION.md": "ce0eb577da72eed2075d9ac21cce221e9b2728c9bc371aba25dd8d098fa563ff",
+    "preflight/gate_output_ext.json": "e986c602548693113272a7bb54ea12fab7cebd2ee9d70b5f5884b03a8d3b8cac",
+    "preflight/run_gate_ext.py": "1685e04118cf3bd3602c47ce0f5fbe83eef49efc4fd19acf0cd76844e4c76da4",
+    "provider_health/AUTH_SMOKE.json": "850efed61597e54934eda565b60f3c63b07d233edd4eda51f5ddfdf1a4a43027",
+    "provider_health/auth_smoke_probe_ext.py": "32e492f24230ee8669c18d41053ed3350e6f3f042474fde6cb367643ea499ff1",
+    "run_h2_pairs_extension.py": "d702512a5e79e3846e8bf76b33954ac0e5a71789640e01313157e1c0c0bcebc6"
+  },
+  "gate": {
+    "attack_solver_sha256": "d4e24d84af87096cfd2de6cd5c76d034488059d328ff087acd2800835cbf52c1",
+    "invocation": "frozen gate_solver.run_attack_mode in-process (stdout captured) with per-seed oracle-module cache purge, cwd = per-seed temp execution dir",
+    "output_sha256": "e986c602548693113272a7bb54ea12fab7cebd2ee9d70b5f5884b03a8d3b8cac",
+    "per_seed_queries": {
+      "65": 2679,
+      "66": 1933,
+      "67": 2016,
+      "68": 2058,
+      "69": 1912,
+      "70": 2473,
+      "71": 1633,
+      "72": 2322,
+      "73": 2079,
+      "74": 1731
+    },
+    "result": "PASS"
+  },
+  "per_seed_frozen_turn1_prompt": {
+    "65": {
+      "identical_across_arms": true,
+      "public_input_sha256": "05649a90f7bc0062e3aeda86b9003d851881a14e59068974837769290a69a601",
+      "turn1_prompt_sha256": "41ddf18636a8939bcf76c8dcad9f366050210fca6437833c826500d3da09d828"
+    },
+    "66": {
+      "identical_across_arms": true,
+      "public_input_sha256": "71f2b8de2e66402f2885f6be3892ee013024f721bb6001418db292ca20f1a321",
+      "turn1_prompt_sha256": "6dbe7015730895ea64b7df0bf7077ee1568c7be53688e95d77484895b014e677"
+    },
+    "67": {
+      "identical_across_arms": true,
+      "public_input_sha256": "b91444a8dd371a73546df716345c1ee2033254f678a413de50abe012645e3d38",
+      "turn1_prompt_sha256": "57c646dfdb5458b5c1b34b16438074774eb88fd1243ff9b37b8dbad7880ea2ed"
+    },
+    "68": {
+      "identical_across_arms": true,
+      "public_input_sha256": "3c9ed4067d13e1ab45d2b11397644103bbf331cb6638048deb2aba0dae605808",
+      "turn1_prompt_sha256": "cfbb9630607190034f92ed7d109902ea4466dee73e2ef883aa567fe34cccf419"
+    },
+    "69": {
+      "identical_across_arms": true,
+      "public_input_sha256": "9d5c17029899e1c30d465ac1ab60cd31bff95d9d3548cddb837cbcbe2f5b9f68",
+      "turn1_prompt_sha256": "a3df8b629758b0e6b68670381230be29f963b0a64f33fdb5727e8defb4ca06f3"
+    },
+    "70": {
+      "identical_across_arms": true,
+      "public_input_sha256": "ea7e853d0715eb605930e773a827d9eb6ab40f480282d51b6350cdd4353b5e06",
+      "turn1_prompt_sha256": "0b31359d719c12d3bd34746c56b451cb4428087daae3176fcd409cc346d94b01"
+    },
+    "71": {
+      "identical_across_arms": true,
+      "public_input_sha256": "d4016299ee186c9808277bb283636b7ec7b6e3b1b1c6bbdbedf4f7f85e24d30d",
+      "turn1_prompt_sha256": "16276de50c57382f5acd6dddaa4d427c3ad376e92ea72b3e9a777f9ec8b4bf04"
+    },
+    "72": {
+      "identical_across_arms": true,
+      "public_input_sha256": "bd1a0d833be2209af9d5d0fb03c42a5c87b8ee3329fbe24614175a5386fb1e39",
+      "turn1_prompt_sha256": "4b0439b0888574e21c46eac8f7b916058f43b84c000d107ae6b9ca0fed562d93"
+    },
+    "73": {
+      "identical_across_arms": true,
+      "public_input_sha256": "02dd9316c574722610729380b96a03dba850a5d72789a71e134f562148f8424f",
+      "turn1_prompt_sha256": "0454b726ba431c8c2dcb394c5b09690bfee1f7f75b0bc8b223959185007e958c"
+    },
+    "74": {
+      "identical_across_arms": true,
+      "public_input_sha256": "2a0ea1e2b4996bad18490a8b7741e51f3f8647b6b600968ca7726a9d3bcebc53",
+      "turn1_prompt_sha256": "caffa9ea07783c657c2f446e787fbb9980f3887f0ce747f31e3e16ce7576f43d"
+    }
+  },
+  "phase": "H2 extension (n>=10-pairs falsifier + turn-2 pathway) extending H2-CBC-AGENCY-20261023-v1; assigned by the H2-extension phase assignment",
+  "prompt_frozen_sha256": {
+    "feedback_exec_oracle": "3dd3c3017cfb42d228564d7b4c914774dd4f54adbe0dc5a6374079060a972a68",
+    "feedback_parse": "ae6c7c71b0aac25c1e3f5b6e29f8ec0e97ec96968dd3fb6d55abe9b1a07700ef",
+    "feedback_policy_template": "1e1d0b6568100b83694e06c1d36bf1b8805c739bb9978afbdec600098fb14de9",
+    "note": "byte-identical to the frozen cohort H2-CBC-AGENCY-20261023-v1 FREEZE.json prompt_frozen_sha256 block; verified equal before this freeze",
+    "prompt_template": "f1822fbda92b0dceaa7962f5e6141a140c410e93d57b0e4f7d824618b7c1944f"
+  },
+  "protocol": "H2-CBC-PAIRS-EXT-20261024-v1",
+  "recorded_utc": "2026-10-24T07:17:32Z",
+  "referenced_frozen_cohort_files_sha256": {
+    "../h2_cbc_agency_20261023/preflight/fixture_cbc.py": {
+      "equals_frozen_freeze": true,
+      "sha256": "f4a69e2dd0baec66da8374761ddc645fe4b81ea4655ef287e68b18424dacd60b"
+    },
+    "../h2_cbc_agency_20261023/preflight/gate_solver.py": {
+      "equals_frozen_freeze": true,
+      "sha256": "d4e24d84af87096cfd2de6cd5c76d034488059d328ff087acd2800835cbf52c1"
+    },
+    "../h2_cbc_agency_20261023/preflight/oracle_template.py": {
+      "equals_frozen_freeze": true,
+      "sha256": "d0acf1afdfdafa7e48bd3413a57841c318a0116803e75d0796f43bab123116e5"
+    },
+    "../h2_cbc_agency_20261023/run_h2_cbc_agency.py": {
+      "equals_frozen_freeze": true,
+      "sha256": "ff0571c1b90cb4a8266b33f39900ef27c0482304b231d0b7d80074314ed526f8"
+    }
+  },
+  "seed_provenance": {
+    "instance_confirmation": "deterministic gate generates all ten CBC instances from seeds 65-74 locally BEFORE any model call; all ten fresh (frozen formulas, no prior cohort instantiated them)",
+    "ruling": "run-owner escalation ruling 2026-10-24: proceed with 65-74; registered continuation external_admission_amend1_20261024 attested to use seeds 91-94 (namespace present on disk 10:03 UTC with no frozen seed range at check time; attestation recorded, not locally verifiable)",
+    "seeds": [
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "seeds_65_70": "unused anywhere under sp2027/ (recursive *.md/*.json/*.jsonl search + every results.jsonl seed-set extraction)",
+    "seeds_71_72_disclosure": "also appear in external_admission_20261024/PREREGISTRATION.md (lines 50,54) \u2014 a DEAD reservation: that namespace closed NO_GO with zero experiment sessions and zero experiment provider calls (REPORT.md section 2, sessions/EMPTY_STATE.md, empty results.jsonl, freeze commit 08d9fb5, outcomes commit ae1b549b); its seeds carry no per-seed randomness on a different fixture (Cybench tasks), so no instance or session ever consumed them"
+  }
+}

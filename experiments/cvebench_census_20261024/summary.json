@@ -1,0 +1,47 @@
+{
+  "protocol": "CVEBENCH-CENSUS-v1",
+  "namespace": "cvebench_census_20261024",
+  "phase": "CVE-Bench external source census (expanded-source option) with conditional grid",
+  "status": "NO_GO",
+  "status_reason": "0 of required 6 crypto tasks qualify from the pinned CVE-Bench archive under the five selection criteria mirrored exactly from external_admission_20261024/TASK_SELECTION.md; honest early stop executed as prescribed by the phase prompt (census-only, zero sessions, every exclusion documented)",
+  "preregistration": "PREREGISTRATION.md (freeze commit 0495fcf3, before any experiment model call)",
+  "task_selection": {
+    "archive": "human_audit/source_freeze_20261005/archives/cve_bench__cve-bench__9fb3e068f260.tar.gz",
+    "archive_sha256": "b7ccc67e777412e46ec4dbff1f0a3871ff268cb9ac4f3ce4f6db7f799ee9c239",
+    "hash_matches_preflight": true,
+    "regular_files": 550,
+    "extraction": "read-only tar -xzf into /tmp/cvebench_pin (archive never modified); ARCHIVE_VERIFICATION.json",
+    "tasks_total": 40,
+    "crypto_category_tasks": 0,
+    "qualified": 0,
+    "required": 6,
+    "details": "TASK_SELECTION.md + selection/census.json (per-task criterion verdicts C1-C5 for all 40)",
+    "qualified_tasks": [],
+    "verification": "no reference solvers exist: the qualifying set is empty and no static answer string exists to reproduce (selection/REFERENCE_SOLVE_EMPTY_STATE.md)"
+  },
+  "census_grounds": {
+    "criterion_1_no_categories_field": "metadata schema is uniform across all 40 tasks with 12 keys (additional_info, admin_username, application_url, attacker_role, default_password, default_username, denial_of_service_duration, outbound_service_url, proof_uploading_url, remote_code_executable_path, secret_file_path, secret_table_name); zero 'categor'/'crypto' occurrences in metadata, eval.yml, README",
+    "criterion_2_native_scorer": "src/cvebench/cvebench.py:82 scorer=check_exploit(STORE_KEY_ATTACK_SUCCESSFUL, check_target_server_for_exploit_success) - server-side exploit probe, not a static answer string (same at :109; exec timeout bounded at :53)",
+    "criterion_3_service_by_construction": "all 40 compose.yml define a Docker 'target' web service; all 40 application_url values point at live in-network hosts (target:9090 x30, target:80 x5, target:8080 x3, target:1337, server:9090, target:9090/url)",
+    "criterion_4_public_statement": "passes: eval.yml prompts ship in the release files",
+    "criterion_5_no_offline_answer": "protected object lives inside the running service: secret file /tmp/secret (38), /tmp/uploads/secret (1), /app/secret (1); secret table 'secret' (39) / 'SECRET' (1)"
+  },
+  "provider_health": {
+    "auth_smoke": "HEALTH.json — non-evidence",
+    "attempts": 1,
+    "detail": "OK msg_5b7f43c1eb77e7f6027b4e78, 11 input / 4 output tokens, through the exact session code path (ApmixClient.call with pinned-egress guard)"
+  },
+  "sessions": {"total": 0, "by_terminal_state": {}, "note": "grid never instantiated (quorum unmet); no model call made"},
+  "decode_equality_gate": {"status": "NOT_INSTANTIATED", "tasks": 0, "log": "fixtures/EMPTY_STATE.md", "scope": "no representation pair was ever constructed; semantics hash-referenced from external_admission_20261024"},
+  "regrade_triple": {"status": "NOT_RUN", "reason": "no retained programs", "snapshots_hash_referenced": ["external_admission_20261024/policies/rule_a_permissive_v3.py (372bab44...)", "external_admission_20261024/policies/rule_b_stress_legacy.py (257b7805...)", "external_admission_20261024/policies/rule_c_cleanup.py (7419e861...)"]},
+  "falsifier_verdicts": {"F1": "NOT_EVALUABLE (no sessions)", "F2": "NOT_EVALUABLE (no sessions)", "F3": "NOT_EVALUABLE (no programs)"},
+  "budget": {
+    "estimated_cost_usd": 9.3e-05,
+    "phase_ceiling_usd": 5.0,
+    "ledger_lines_namespace": 1,
+    "ledger": "sp2027/research_execution/BUDGET_LEDGER.jsonl"
+  },
+  "commits": {"freeze": "0495fcf3", "outcomes": "see git log for this namespace"},
+  "conclusion_boundary": "No portability, mechanism, or evaluator-sensitivity conclusion was produced. No benchmark-quality claim of any kind is made. The absence of a crypto category is a property of CVE-Bench's task domain (real-world web-application exploitation, README.md:1), not a defect finding. The census describes the pinned 2026-10-05 snapshot only.",
+  "interpretation": "The expanded-source option does not change the Phase 2 quorum situation: the pinned CVE-Bench snapshot contains zero crypto-category tasks, so no qualifying pool can be drawn from it under the frozen criteria. Admitting non-crypto or service-bound tasks would have been an unregistered design change and was deliberately not made. Seeds 95-96 remain unused (0 prior and 0 current consumption)."
+}

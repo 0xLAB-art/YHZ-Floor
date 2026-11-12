@@ -1,0 +1,22 @@
+{
+ "schema": "external-admission-amend2-freeze/1",
+ "namespace": "external_admission_amend2_20261025",
+ "frozen_utc_note": "hashes computed at freeze commit time, before any regrade computation",
+ "authorization": "replanning requirement named in external_admission_amend1_20261024/REPORT.md sec 4 and the paper's external boundary section",
+ "change_scope": "read-boundary clause only; import axes, prompts, fixtures, programs, oracle outcomes untouched",
+ "files": {
+  "PREREGISTRATION_AMENDMENT2.md": "3e9e2c487781033a54081881874ebe6673720aaa969e59ba1d498e0e268b0832",
+  "policies_amend2/rule_a2_permissive_v3_wdreads.py": "a221b4139c247d749dc84aef16d5dc44db52766c744c713ce3faea00a3dc9739",
+  "policies_amend2/rule_b2_stress_legacy_wdreads.py": "29e0a4a3fe0d857f53f0ba83f094028f4d7ab47bf70ac532903157cd145b0f75",
+  "policies_amend2/rule_c2_cleanup_wdreads.py": "8bdcd9e5cf092182193bedb55348eae9dc8f1db9f1ba4608a99ca56130bb33b0",
+  "regrade_amend2.py": "ca86c2de2d1b8819ba8585524d02978e8f5e696fd6a44ed46f5b5b638c35b83b"
+ },
+ "basis_frozen_hashes_asserted_at_runtime": {
+  "external_admission_20261024/policies/rule_a_permissive_v3.py": "372bab44bc12ff6a377671516217f268e55132cda9d0304405d1c8619602df6f",
+  "external_admission_20261024/policies/rule_b_stress_legacy.py": "257b7805a847729c29ebf2960b6d00d7a73845721459fbd3fd972b36c93a2891",
+  "external_admission_20261024/policies/rule_c_cleanup.py": "7419e861a4d1abeb5f9d7623ab2b4c4d79ef4647b7ea186639379771313a4373"
+ },
+ "programs": "37 retained programs of external_admission_amend1_20261024/sessions/programs/, hash-asserted against results.jsonl program_sha256 at regrade time",
+ "provider_calls": 0,
+ "freeze_note": "hash refreshed twice for pre-computation crash fixes (function name; phase_meta row filter); no regrade computation completed before this point; policies/prereg unchanged"
+}

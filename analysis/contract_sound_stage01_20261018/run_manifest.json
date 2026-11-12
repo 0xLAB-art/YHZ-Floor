@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-18T14:54:49.409053+00:00",
+  "model_calls": 0,
+  "network_calls": 0,
+  "output_directory": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018",
+  "protected_baseline_hashes": {
+    "sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+    "sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+    "sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+    "sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+  },
+  "protocol_commit": "4743d186bb64b07f5f81d5448bce3f2ab0237563",
+  "provider_calls": 0,
+  "stage": "0/1",
+  "stage0_summary": {
+    "allowed_queries_checked": true,
+    "c0_ambiguity_counterexamples": true,
+    "c1_c2_constructive_witnesses": true,
+    "c1_c2_interface_equivalence": true,
+    "c1_c2_semantic_equivalence": true,
+    "feedback_and_budget_checked": true,
+    "task_counts": {
+      "ChaCha20_Nonce_Repeat": 12,
+      "ECDSA_Nonce_Reuse": 12
+    },
+    "total_instances": 24
+  },
+  "stage1_metrics": {
+    "clean_invalid": {
+      "false_acceptance": 0,
+      "rejected": 10
+    },
+    "clean_invalid_count": 10,
+    "clean_valid": {
+      "accepted": 10,
+      "false_rejection": 0
+    },
+    "clean_valid_count": 10,
+    "defect_count": 40,
+    "defect_detection": {
+      "false_negative_accept": 0,
+      "true_positive_reject": 40
+    },
+    "heldout": {
+      "detected": 20,
+      "total": 20
+    },
+    "heldout_defect_count": 20,
+    "reference_verifier_disagreements": 0
+  }
+}

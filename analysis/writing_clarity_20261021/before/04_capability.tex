@@ -1,0 +1,209 @@
+\section{Separating Construction from Admission}\label{sec:capability}
+RQ1 requires two comparisons. H1-R3 changes the representation while holding
+the recovery task and evaluator fixed. Counterfactual regrading then holds
+the generated programs fixed while changing admission. This separates a
+representation contrast from an evaluator-induced contrast; import cleanup
+tests the mechanism behind the latter. RQ2 then examines what recovery and
+target-effect claims require once the checked event is specified.
+
+\subsection{Matched Construction Study (H1-R3)}\label{sec:h1r3}
+A pre-specified, hash-frozen matched cohort isolates representation by fixing the task,
+target, route, parser, tools, feedback, budget, executor, and reference oracle.
+It compares a neutral representation (R0) with two alternatives on XOR
+keystream-reuse and ECDSA nonce-reuse tasks at three observation-complexity
+levels. L1--L3 increase observation processing, not cryptanalytic depth:
+XOR uses 2/4/8 ciphertexts with 0/1/3 decoy cribs; ECDSA uses 2/6/16
+signatures with one repeated-nonce pair. L3 additionally requires the nonce
+and scalar in ECDSA and a 128-byte XOR target. R0 uses compact JSON and
+hexadecimal observations; R1 changes key order and whitespace; R2 uses base64.
+The 852 scheduled sessions comprise 768 representation trials, 64 additional
+repeat-prompt controls (R4, called noise controls in the run registry), and
+20 abstention controls. The controls retain
+separate predicates and do not enlarge the primary paired comparison.
+
+At the powered L3 level, R0, R1, and R2 succeed in 125/128, 126/128, and
+124/128 sessions; the paired effects are $0.008$ and $-0.008$, with 95\%
+intervals $[-0.023,0.039]$ and $[-0.047,0.031]$ and Holm-adjusted exact
+McNemar $p=1.000$ for both, within the predeclared $\pm0.10$ margin. This
+bounds a large pooled representation effect under this contract but does not
+prove representation irrelevance. The baseline is near ceiling, limiting
+headroom for improvement but not bounding a negative effect. The lower-level
+$R2$ contrasts cross the margin and are recorded as inconclusive
+(Section~\ref{sec:limits}). Figure~\ref{fig:primary-effects} shows
+the six pre-specified pooled contrasts against the margin. The conclusion follows from the intervals relative
+to the margin, rather than from a non-significant test alone.
+
+\begin{figure}[t]
+\centering
+\input{figures/fig_primary_effects}
+\caption{Both primary representation contrasts lie inside the pre-specified $\pm10$ percentage point margin. Filled circles show primary L3 contrasts ($n=128$ pairs); open squares show secondary L1/L2 contrasts ($n=64$), pooled over two task families, with 95\% bootstrap intervals. L1 $R1-R0$, L1 $R2-R0$ and L2 $R2-R0$ cross a margin boundary and remain inconclusive; the collapsed zero-discordance interval does not remove uncertainty, and companion bounds are in the supplement.}\label{fig:primary-effects}
+\end{figure}
+
+For repeated-nonce ECDSA signatures $(r,s_1)$ and $(r,s_2)$ on digests
+$z_1,z_2$, recovery uses $k=(z_1-z_2)(s_1-s_2)^{-1}$ and
+$d=(s_1k-z_1)r^{-1}$, with arithmetic modulo the group order $n$.
+Thus, using the correct relation also requires the correct domain parameter.
+
+\begin{samepage}
+Lower-level R2--ECDSA failures are secondary:
+the recurring observable is a wrong recovered scalar, spread over 22 distinct
+program texts rather than one repeated formula. A post-hoc diagnostic over the
+retained programs localizes 20 of the 26 ECDSA failures to one wrong
+group-order constant, carried by 18 of the 19 R2 failures against 2 of the 7
+in the other arms and by no successful program; the instances are identical
+across arms once decoded, so the representation withheld no information, and
+why the arm is associated with the choice is not established. Cell counts,
+terminal accounting, and the zero-discordance companion bounds are retained in
+the H1-R3 evidence package and the supplement.
+\end{samepage}
+
+\subsection{Same-Program Admission Counterfactual}\label{sec:policy-counterfactual}
+The prior import policy would
+reject 6.2\%--47.7\% of the same generated programs across arms. Because
+this comparison holds the source programs fixed, it exposes a measurement
+dependence on the evaluator's qualification rule. It is distinct from the
+primary representation contrast, which uses the frozen common executor and
+reference oracle. The rejection is a source-qualification decision taken
+before a program is admitted to execution, so it is not an agent
+cryptographic failure; the two classes stay separate in the matched cohort,
+which records 801 verified-exploit successes, 20 correct abstentions,
+28 cryptographic-predicate failures, 2 execution failures and
+1 source-qualification failure: $801+20+28+2+1=852$ sessions.
+Correct abstentions are not exploit recoveries.
+
+For instance $i$ and arm $r$, let $K_{ir}$ be reference-checked success of
+the retained program and $A_p(a_{ir})$ its admission under rule $p$.
+The scored contrast on the fixed set of $n=128$ L3 pairs is
+\[
+\widehat\tau_p=\frac{1}{n}\sum_i
+\bigl[A_p(a_{i,R2})K_{i,R2}-A_p(a_{i,R0})K_{i,R0}\bigr].
+\]
+The program bytes and $K$ remain fixed. Changing only $A_p$ moves this
+contrast from $-0.8$ to $-32.8$ percentage points: 50 instances shift against
+R2, 9 for it, and 69 do not change. This exploratory, finite-cohort regrading
+leaves the pre-specified L3 verdict unchanged. An exploratory paired bootstrap
+(50{,}000 draws, seed 20261021), stratified by family, gives an unadjusted
+95\% interval of $[-42.2,-21.9]$ points for the
+$-32.0$ point change. Family-specific changes are $-21.9$ for XOR and $-42.2$
+for ECDSA; the pooled estimate weights them equally. The rule actually in force
+admits exactly the seventeen modules the prompt declares and denies only
+capability-bearing ones, so it rejects none of the 768 representation
+programs and leaves that contrast at $-0.8$; the 32 points therefore measure
+an admission artefact of a rule narrower than the task contract, not a
+difference in capability. The earlier three-module filter was not declared in the prompt; a retained
+2026-10-18 lane also explicitly permitted two modules that it rejected.
+The policy snapshots and prompt digests are retained in the provenance record.
+
+The movement is traceable to one module. Of the 852 sessions, 205 import a
+module the earlier rule denies---183 of the 768 representation trials and 22
+of the 84 control sessions---and all 205 concern modules the prompt
+permitted. The per-arm rates differ because the generated code differs in
+style: an unused \texttt{hashlib} import appears with the base64 representation in 88
+of 256 programs, against 8 of 256 in the neutral representation, and the
+type-hint import appears in 42, 26 and 4 of the R2, R0 and R1 programs.
+Denying \texttt{hashlib} alone accounts for $-28.9$ of the $-32.0$ points;
+every single-module narrowing of the other sixteen moves the contrast by at
+most $3.1$ points, and denying the base64 module itself is degenerate
+because it is the representation. Conservative unused-import removal
+eliminates the large negative gap: all 128 cleaned derivatives reproduce
+their original output, and 104 then qualify. The filtered L3 contrast changes
+from $-32.8$ to $+3.9$ points, compared with $-0.8$ under the original declared
+contract. Residual import rejections remain, but the large negative contrast
+does not. Of the 101 programs with retained import references, 24 belong to
+the matched L3 instances and 77 occur elsewhere.
+
+\begin{figure}[t]
+\centering
+\input{figures/fig_policy_effects}
+\caption{An earlier three-module source filter, narrower than the task's own prompt, rejects unchanged programs that succeed under the frozen executor. Import rejections are 45/256 R0, 16/256 R1 and 122/256 R2 (17.6\%, 6.2\%, 47.7\%), 183 of the 768 representation programs; the dark segments label the 43, 16 and 109 accepted completions within those rejections, and gray segments contain the remaining 2, 0 and 13. One further R0 program was rejected at source parse and is excluded here. The rule in force, which admits the seventeen modules the prompt declares, rejects none of them, and the program bytes are fixed between policy evaluations. On the 128 matched L3 instances, the earlier filter moves the apparent R2--R0 contrast from $-0.8$ to $-32.8$ points; the rule in force leaves it at $-0.8$.}\label{fig:policy-effect}
+\end{figure}
+
+\section{From Recovery Programs to Security Consequences}\label{sec:recovery-requirements}
+RQ1 identifies an admission artifact; RQ2 asks what a consistent evaluator
+still requires from the agent and target. The following studies distinguish
+operation feasibility, interactive construction, and observation sufficiency.
+They diagnose requirements under separate contracts rather than compare
+success rates as if only one factor changed.
+
+\subsection{Fixed-Executor Floor}\label{sec:floor}
+A fixed executor with fresh secrets and three repetitions completes 12/12
+supplied operations (V tier). Executor/oracle medians are, respectively: RC4
+0.214/0.234\,ms, ChaCha20 0.132/0.155\,ms, CBC 1{,}981.6\,ms at 20{,}480
+queries per repetition, ECDSA 6.96/6.89\,ms. This establishes that the
+cryptographic primitives and the verifier are computationally reachable; it
+says nothing about agentic construction.
+
+\subsection{Prospective V4 Cohort}\label{sec:v4}
+The frozen prospective cohort (EXP-034) runs 12 cells once with no
+replacement (claude-sonnet-4-6-free, temperature 0.2, 4096-token budget).
+Eight sessions reach an accepted first-submission or post-feedback result;
+four end in oracle failure, and none in provider unavailability. The outcome
+is 8/12, or 66.7\% (Wilson CI [39.1, 86.2]). Of the eight accepted sessions,
+four succeed on the first submission and four after feedback. The 12 sessions
+contain 31 submitted programs (Table~\ref{tab:v4-overview}).
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Prospective V4 construction outcomes. Program counts list the three
+sessions in order (rep 1, 2, 3); CBC query counts are per session.}
+\label{tab:v4-overview}
+\begin{tabularx}{\columnwidth}{@{}l c c Y@{}}
+\toprule
+\tablehead Task & Accepted & Programs & Oracle queries \\
+\midrule
+RC4 & 0/3 & 4, 4, 4 & --- \\
+ChaCha20 & 2/3 & 1, 2, 4 & --- \\
+CBC & 3/3 & 3, 2, 4 & 20{,}994; 20{,}737; 21{,}508 \\
+ECDSA & 3/3 & 1, 1, 1 & --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The failures illustrate the importance of the supplied observations. The RC4
+brief omits the all-zero second message that makes the XOR relation usable;
+its three sessions submit 12 rejected candidates. ChaCha20 requires a
+reference-encryption observation that the brief does not supply. CBC instead
+shows a successful revision path: rep2 moves from 257 queries and failure to
+feedback, 20{,}737 queries, and a digest match. ECDSA accepts the first
+submission in all three sessions.
+
+\subsection{Explicit-Observation Code Cohorts}\label{sec:code}
+Three code-generation cohorts test exploit construction with explicit
+observations: RC4 aligned
+known-plaintext+ciphertext+target; ChaCha20 a reference encryption of zeros;
+ECDSA repeated-nonce signatures. Each family runs an initial 2/2, a
+replication 2/2, and an extension 2/2---6/6 first-submission per family,
+18 cells total. The initial ECDSA cohort contained a nested
+\texttt{public\_input} interface defect (4 \texttt{KeyError} executions);
+those are interface-contract failures, not cryptanalytic failures, and are
+excluded from the 6/6 count. Recent ECDSA uses secp256k1 with DER-encoded
+signatures and checks the public key from the scalar; RC4 and ChaCha20
+recover plaintexts, not keys. These runs provide bounded reproduction under
+explicit observations. The positive results rule out
+universal incapacity but do not establish a causal effect of observations:
+token allowance, program-vs-answer format, instructions, parser, feedback,
+and observations all change together relative to the V4 cohort.
+
+\subsection{Reduced-Information Variant}\label{sec:reduced}
+A blind-opportunity variant (containers 0032--0034) removes statement-level
+references that make the opportunity exploitable. ECDSA completes 2/2 and RC4
+2/2 on first submission; ChaCha20 completes 0/2 with 3 candidates over 4
+responses. The asymmetry is
+informative: the reduced ChaCha20 prompt still exposes the algorithm name and
+a nonce-reuse flag in the public JSON, but removes the statement that the
+reference encrypts zeros; a local solver using that zero-reference recovers
+both secrets, confirming the opportunity is real and the failure is
+informational. The reduced prompt does not provide the premise; the disclosed
+stream relation gives a two-plaintext XOR leaving the target unspecified. RC4
+retains known-plaintext fields and ECDSA retains curve/signature observations,
+so their information loss is asymmetric. This is an information-contract
+diagnostic, not a family ranking.
+
+\paragraph{Answer to the recovery part of RQ2}\label{sec:joint}
+The fixed executor establishes operation feasibility (12/12), the prospective
+cohort completes 8/12 with the weakness class disclosed, and the
+explicit-observation cohorts complete 6/6 per family under different contracts.
+These populations locate three requirements: a usable cryptographic relation,
+a program that implements it, and evidence that binds its candidate to the
+verdict. Their contrasts do not estimate the effect of changing any one
+requirement.

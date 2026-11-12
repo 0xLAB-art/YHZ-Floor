@@ -1,0 +1,31 @@
+{
+  "schema": "policy-mechanism-prompt-modules/1",
+  "note": "The prompt's permitted module set is identical for all 852 sessions. The legacy source-admission policy disallowed a subset of it. Every legacy import reject in the cohort concerns a module from this permitted set.",
+  "prompt_permitted_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "legacy_disallowed_across_cohort": [
+    "binascii",
+    "collections",
+    "hashlib",
+    "itertools",
+    "math",
+    "typing"
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "contrasts": {
+    "R1": {
+      "n": 128,
+      "ref_rate": 0.9765625,
+      "treat_rate": 0.984375,
+      "estimate": 0.0078125,
+      "ci_low": -0.0234375,
+      "ci_high": 0.0390625,
+      "discordant_ref_only": 2,
+      "discordant_treat_only": 3,
+      "concordant_both_success": 123,
+      "concordant_both_failure": 0,
+      "mcnemar": {
+        "b": 2,
+        "c": 3,
+        "discordant": 5,
+        "p_value": 1.0
+      },
+      "interval_method": "paired percentile bootstrap over instances",
+      "equivalence": {
+        "status": "EQUIVALENT_WITHIN_MARGIN",
+        "margin": 0.1,
+        "estimate": 0.0078125,
+        "ci": [
+          -0.0234375,
+          0.0390625
+        ],
+        "distance_to_margin": {
+          "lower": 0.0765625,
+          "upper": 0.060937500000000006
+        }
+      },
+      "dropped": [],
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10001",
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_schema_errors": [],
+            "treatment_qualification": [],
+            "treatment_stderr": "",
+            "generalization_success": 0
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10029",
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_schema_errors": [],
+            "treatment_qualification": [],
+            "treatment_stderr": "",
+            "generalization_success": 0
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 2
+      }
+    },
+    "R2": {
+      "n": 128,
+      "ref_rate": 0.9765625,
+      "treat_rate": 0.96875,
+      "estimate": -0.0078125,
+      "ci_low": -0.046875,
+      "ci_high": 0.03125,
+      "discordant_ref_only": 4,
+      "discordant_treat_only": 3,
+      "concordant_both_success": 121,
+      "concordant_both_failure": 0,
+      "mcnemar": {
+        "b": 4,
+        "c": 3,
+        "discordant": 7,
+        "p_value": 1.0
+      },
+      "interval_method": "paired percentile bootstrap over instances",
+      "equivalence": {
+        "status": "EQUIVALENT_WITHIN_MARGIN",
+        "margin": 0.1,
+        "estimate": -0.0078125,
+        "ci": [
+          -0.046875,
+          0.03125
+        ],
+        "distance_to_margin": {
+          "lower": 0.053125000000000006,
+          "upper": 0.06875
+        }
+      },
+      "dropped": [],
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10023",
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_schema_errors": [],
+            "treatment_qualification": [],
+            "treatment_stderr": "",
+            "generalization_success": 0
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10035",
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_schema_errors": [],
+            "treatment_qualification": [],
+            "treatment_stderr": "",
+            "generalization_success": 0
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10044",
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_schema_errors": [],
+            "treatment_qualification": [],
+            "treatment_stderr": "",
+            "generalization_success": 0
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10050",
+            "treatment_stage": "EXECUTION",
+            "treatment_schema_errors": [
+              "not-executed"
+            ],
+            "treatment_qualification": null,
+            "treatment_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 88, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 59, in main\n    keystream[pos]",
+            "generalization_success": null
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 3,
+        "EXECUTION": 1
+      }
+    }
+  },
+  "holm": [
+    {
+      "label": "R1",
+      "p": 1.0,
+      "p_holm": 1.0,
+      "rank": 1,
+      "m": 2
+    },
+    {
+      "label": "R2",
+      "p": 1.0,
+      "p_holm": 1.0,
+      "rank": 2,
+      "m": 2
+    }
+  ],
+  "note": "Original 20000 resamples/20261019 and decision code, unchanged."
+}

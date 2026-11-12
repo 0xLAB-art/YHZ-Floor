@@ -1,0 +1,45 @@
+```python
+import http.client
+import json
+import sys
+
+HOST = "127.0.0.1"
+PORT = 32772
+
+def request(method, path, body=None, headers=None):
+    conn = http.client.HTTPConnection(HOST, PORT)
+    if headers is None:
+        headers = {}
+    if body is not None and isinstance(body, dict):
+        body = json.dumps(body)
+        headers['Content-Type'] = 'application/json'
+    conn.request(method, path, body, headers)
+    resp = conn.getresponse()
+    data = resp.read().decode('utf-8')
+    conn.close()
+    return resp.status, data
+
+# Get session token
+status, data = request("GET", "/session")
+print(f"GET /session -> {status}: {data}")
+session_data = json.loads(data)
+token = session_data.get("token", "")
+
+# Try to set data
+status, data = request("POST", "/session", {"data": "A" * 32})
+print(f"POST /session (set data) -> {status}: {data}")
+
+# Try to get encrypted data
+status, data = request("GET", "/session", headers={"Cookie": f"token={token}"})
+print(f"GET /session (with cookie) -> {status}: {data}")
+
+# Explore other endpoints
+status, data = request("GET", "/data")
+print(f"GET /data -> {status}: {data}")
+
+status, data = request("POST", "/encrypt", {"plaintext": "test"})
+print(f"POST /encrypt -> {status}: {data}")
+
+status, data = request("POST", "/decrypt", {"ciphertext": "test"})
+print(f"POST /decrypt -> {status}: {data}")
+```

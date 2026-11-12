@@ -1,0 +1,32 @@
+{
+  "attempt_id": "e2a-H_OK_CH_02",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage4_arms/runs/20261020T082440Z_model_arm/cases/H_OK_CH_02",
+  "case_id": "H_OK_CH_02",
+  "context": {
+    "attempt_id": "e2a-H_OK_CH_02",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_OK_CH_02",
+    "producer_id": "e2a-model-producer-v1",
+    "producer_kind": "model",
+    "producer_nonce": "6c7c1f2d64ef3faef3f453ac46ef7271a705a170708a01c33124d1dc5fed1106",
+    "provider_call_index": 5,
+    "provider_endpoint": "https://api.apmix.ai",
+    "provider_response_sha256": "dc946c7c7766ff0f1440d160dc43d9d1e77caa177b16f4fb18ee23f58598bb3d",
+    "provider_route": "claude-sonnet-4-6-free"
+  },
+  "program_source_text": "import sys\nimport json\n\nwith open(sys.argv[1]) as f:\n    instance = json.load(f)\n\nc1 = bytes.fromhex(instance['ciphertext_1'])\nc2 = bytes.fromhex(instance['ciphertext_2'])\np1 = bytes.fromhex(instance['known_plaintext_1'])\n\np2 = bytes(c1[i] ^ c2[i] ^ p1[i] for i in range(len(c1)))\n\nprint(json.dumps({'plaintext_2': p2.hex()}))\n",
+  "public_instance": {
+    "ciphertext_1": "1810505f8b6a91c854f3a0e71f5e93f4e1cfcc8909c9eff660828a7e639cb1f843f9bdcf98ba80f841826e856c42a696",
+    "ciphertext_2": "3e97ab6624f67513b38dd974ba07d625d0d1b3b04ff8934f8591262f0f154a1d3a4b9ce1ce01d820add6dd670e757cb1",
+    "encoding": "json-hex-v1",
+    "known_plaintext_1": "86ae6269cfb09c5cf9af49a5d4d84c88e31270492a5a8f67b55e7df190e5d6789fec4eb7787e6eba01e7c80b7242e367"
+  },
+  "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+}

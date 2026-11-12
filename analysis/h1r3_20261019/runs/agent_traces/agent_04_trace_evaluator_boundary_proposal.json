@@ -1,0 +1,98 @@
+{
+  "agent": "trace_agent_04_evaluator_boundary_proposal",
+  "scope": "HEB-1 cross-boundary verdict promotion proposal/design",
+  "provider_calls": false,
+  "started_utc": "\"2026-10-19T15:22:52.100333+00:00\"",
+  "proposal_exists": true,
+  "proposal_bytes": 13767,
+  "headings_found": [
+    "# ACTS-Attack Evaluator-Boundary Novelty Proposal",
+    "## 1. Motivation and boundary",
+    "## 2. One primary falsifiable hypothesis",
+    "### HEB-1 \u2014 Cross-boundary verdict promotion",
+    "## 3. Security property and claim separation",
+    "## 4. Matched experimental design",
+    "### Fixed elements",
+    "### Evaluation conditions",
+    "### Validator arms",
+    "## 5. Controls and held-out evaluation",
+    "### Clean controls",
+    "### Historical motivating cases",
+    "### Held-out generation",
+    "## 6. Independent ground truth and endpoints",
+    "## 7. Evidence certificate requirements",
+    "## 8. Prior-art differentiation test",
+    "## 9. Risks and anti-overclaim rules",
+    "## 10. Resource estimate and approval gates",
+    "## 11. Current recommendation"
+  ],
+  "status_from_review_response": "HEB-1 is a proposal; no implementation campaign, no provider calls, no result",
+  "gates_and_requirements_traced": [
+    {
+      "type": "novelty_must_be_narrower_than_oracle_integrity",
+      "issue": "The proposal must differentiate from generic oracle-integrity/evidence-binding defects",
+      "note": "Prior-art matrix handles existential overlap"
+    },
+    {
+      "type": "verdict_and_attribution_must_be_separate",
+      "issue": "Cryptographic reference verdict and exploitation-attribution claim must be evaluated separately",
+      "note": "Certificate must carry per-class status and explicit non-claims"
+    },
+    {
+      "type": "false_attribution_promotion_is_the_hypothesis",
+      "issue": "Primary endpoint is the false attribution-promotion rate under bad cross-run/artifact joins",
+      "note": "Falsification condition exists"
+    },
+    {
+      "type": "fair_validator_comparison_required",
+      "issue": "Schema-only, hash-based, and claim-specific validators must be compared fairly with equivalent evidence inputs",
+      "note": "Blind trust model must be stated"
+    },
+    {
+      "type": "ground_truth_must_be_recomputed",
+      "issue": "Independent adjudicator must recompute predicate from immutable target + candidate, not copy stored labels",
+      "note": "Mislabeled fixtures should be overruled"
+    },
+    {
+      "type": "held_out_variation_required",
+      "issue": "Held-out set must include at least one composition pattern not used during validator development",
+      "note": "Current held-out limitation recorded"
+    },
+    {
+      "type": "no_all_reject_validator",
+      "issue": "Validator must preserve legitimate successful cases",
+      "note": "Secondary endpoints include false rejection"
+    },
+    {
+      "type": "no_perfect_synthetic_only_novelty_claim",
+      "issue": "Perfect detection on self-generated faults alone is not sufficient for novelty",
+      "note": "Requires closest-prior-art review + independent reproduction"
+    }
+  ],
+  "current_status_summary": {
+    "implementation": "none",
+    "provider_calls": "none",
+    "completed_experiment": "none",
+    "novelty_result": "none",
+    "recommended_next_action_from_review": "offline prior-art verification + protocol freeze, then implementation against gates; no provider calls until gates approved"
+  },
+  "critical_issues_traced": [
+    {
+      "type": "proposal_not_yet_validated",
+      "issue": "HEB-1 remains design-stage; it is not a validated security finding yet",
+      "status": "tracked as blocked pending offline gates"
+    },
+    {
+      "type": "novelty_requires_beyond_generic_warning",
+      "issue": "Any future claim must demonstrate a security-specific consequence beyond a generic evaluator warning",
+      "status": "open requirement"
+    },
+    {
+      "type": "prior_art_overlap_must_be_ruled_out",
+      "issue": "Multiple relevant evaluator/benchmark works already exist",
+      "status": "open requirement before novelty framing"
+    }
+  ],
+  "stop_rule_applied": "No provider calls; trace-only from proposal/design records and review-response artifacts.",
+  "completed_utc": "\"2026-10-19T15:22:52.109358+00:00\""
+}

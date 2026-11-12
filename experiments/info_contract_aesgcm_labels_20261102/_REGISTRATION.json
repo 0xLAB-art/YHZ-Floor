@@ -1,0 +1,38 @@
+{
+  "adapter": "provider_adapter_agentrouter.py",
+  "adapter_sha256": "d26dd920d8c2dda1d4ef919daa07d3e82dcd8109f14175e335f2da428aaaa3dc",
+  "excluded_label": {
+    "gpt-6-astra": "already running as the P014 cohort; not re-run here"
+  },
+  "labels": [
+    "gpt-6.1-sol",
+    "gpt-5.6-sol"
+  ],
+  "protocol": "P016-INFO-CONTRACT-2X2-AESGCM-WITHIN-ROUTE-LABELS-v1",
+  "registered": "2026-11-02",
+  "route": "agentrouter",
+  "runner": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+  "runner_path": "run_info_contract_2x2_aesgcm.py",
+  "scheduling": "sequential; starts only after the P014 process exits",
+  "scope_note": "within-route cross-label replication; NOT provider generalization (P015 cancelled, zero sessions)",
+  "seeds": [
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616
+  ],
+  "sessions_per_label": 64,
+  "sessions_registered": 128
+}

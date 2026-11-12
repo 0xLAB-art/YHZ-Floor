@@ -1,0 +1,136 @@
+{
+  "campaign": {
+    "automatic_retries": 0,
+    "paid_fallback": false,
+    "planned": 72,
+    "provider_charge_usd": 0.0,
+    "provider_route": "claude-sonnet-4-6-free",
+    "recorded": 72,
+    "seed_replacement": false
+  },
+  "condition_table": {
+    "ChaCha20_Nonce_Repeat:C0": {
+      "execution": {
+        "EXECUTED": 12
+      },
+      "primary_rate": 0.0,
+      "primary_successes": 0,
+      "reference": {
+        "REJECTED": 12
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 12
+      }
+    },
+    "ChaCha20_Nonce_Repeat:C1": {
+      "execution": {
+        "EXECUTED": 12
+      },
+      "primary_rate": 1.0,
+      "primary_successes": 12,
+      "reference": {
+        "ACCEPTED": 12
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 12
+      }
+    },
+    "ChaCha20_Nonce_Repeat:C2": {
+      "execution": {
+        "EXECUTED": 12
+      },
+      "primary_rate": 1.0,
+      "primary_successes": 12,
+      "reference": {
+        "ACCEPTED": 12
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 12
+      }
+    },
+    "ECDSA_Nonce_Reuse:C0": {
+      "execution": {
+        "EXECUTED": 12
+      },
+      "primary_rate": 0.0,
+      "primary_successes": 0,
+      "reference": {
+        "REJECTED": 12
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 12
+      }
+    },
+    "ECDSA_Nonce_Reuse:C1": {
+      "execution": {
+        "EXECUTED": 12
+      },
+      "primary_rate": 1.0,
+      "primary_successes": 12,
+      "reference": {
+        "ACCEPTED": 12
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 12
+      }
+    },
+    "ECDSA_Nonce_Reuse:C2": {
+      "execution": {
+        "EXECUTED": 10,
+        "SANDBOX_REJECTED": 2
+      },
+      "primary_rate": 0.8333333333333334,
+      "primary_successes": 10,
+      "reference": {
+        "ACCEPTED": 10,
+        "NOT_RUN": 2
+      },
+      "scheduled": 12,
+      "validator": {
+        "ACCEPT": 10,
+        "NOT_RUN": 2
+      }
+    }
+  },
+  "diagnostic_note": "These are the first prospective replacement-pilot outcomes; prior 72-session campaign and forensic replay remain excluded.",
+  "evidence_counts": {
+    "certificates": 72,
+    "provider_raw": 72,
+    "reference_inputs": 72,
+    "schema_errors": [],
+    "verifier_metadata": 72
+  },
+  "http_status": {
+    "200": 72
+  },
+  "paired_primary_analysis": {
+    "absolute_difference_c2_minus_c1": -0.08333333333333333,
+    "bootstrap_95_percentile_ci": [
+      -0.20833333333333334,
+      0.0
+    ],
+    "bootstrap_resamples": 100000,
+    "bootstrap_seed": 20261018,
+    "c1_rate": 1.0,
+    "c1_successes": 24,
+    "c2_rate": 0.9166666666666666,
+    "c2_successes": 22,
+    "discordant_c1_only": 2,
+    "discordant_c2_only": 0,
+    "mcnemar_exact_two_sided_p": 0.5,
+    "pairs": 24,
+    "threshold": 0.25,
+    "threshold_met": false
+  },
+  "provider_models": {
+    "claude-sonnet-4-6-free": 72
+  },
+  "status_counts": {
+    "SUCCESS": 72
+  }
+}

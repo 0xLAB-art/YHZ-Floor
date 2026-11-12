@@ -1,0 +1,305 @@
+{
+  "arm": "R0",
+  "current_outcome_correct": true,
+  "derivative_legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "collections",
+      "defaultdict",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "collections",
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      },
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "collections"
+      }
+    ]
+  },
+  "derivative_legacy_admitted": false,
+  "edits": [],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": null,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "defaultdict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "collections",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "collections",
+      "defaultdict",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "collections",
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      },
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "collections"
+      }
+    ]
+  },
+  "legacy_class": "referenced_import_present",
+  "legacy_disallowed_but_prompt_allowed": [
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 3,
+      "module": "typing",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "defaultdict",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "collections",
+      "reasons": [
+        "name-reference-any-scope"
+      ]
+    }
+  ],
+  "legacy_rejected_correct": true,
+  "level": "L3",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb/original",
+    "candidate": {
+      "d": "bf93e07115907c1f4840c9c528ad39a7f2621820427de8bebea1b2bdc1eaff5d",
+      "k": "2a54a05ef20a0e39e861b6c7896a8035b4effff7fbf61080739ea7ff27a9073b"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "bf56cb5f7166eee381c8eb74c5d1b0c8145aa1c2a0edef3db6d3c0bd4e04bf5a"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "86f63bba0a3b1e42efbbcd61b3ce1cb9745662265bdca3058144ddd9464abdfe",
+  "replicate_index": 0,
+  "runtime_import_use": {
+    "arm": "R0",
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/import_use_trace_v2/confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb",
+    "family": "ECDSA_Nonce_Reuse",
+    "kind": "primary",
+    "level": "L3",
+    "observed_loaded_import_bindings": [
+      [
+        "Dict",
+        "typing",
+        "Dict",
+        24,
+        "LOAD_NAME"
+      ],
+      [
+        "List",
+        "typing",
+        "List",
+        24,
+        "LOAD_NAME"
+      ],
+      [
+        "Tuple",
+        "typing",
+        "Tuple",
+        11,
+        "LOAD_GLOBAL"
+      ],
+      [
+        "defaultdict",
+        "collections",
+        "defaultdict",
+        30,
+        "LOAD_GLOBAL"
+      ]
+    ],
+    "returncode": 0,
+    "same_output_as_uninstrumented": true,
+    "scope": "actual LOAD opcode reached with imported-object identity; observation is not branch coverage proof",
+    "session_id": "confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb",
+    "source_sha256": "b0b95d49f25c03467ede0253c675b86795137d354d5cbafdf4ab3726d5b6f082"
+  },
+  "seed": 10047,
+  "session_id": "confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0168-ecd-L3-10047-R0-r0-b4ec5abb/candidate.py",
+  "source_sha256": "b0b95d49f25c03467ede0253c675b86795137d354d5cbafdf4ab3726d5b6f082",
+  "transform_eligibility": "no_eligible_full_import_statement",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": false,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "collections",
+      "defaultdict",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "collections",
+      "typing"
+    ],
+    "violations": []
+  }
+}

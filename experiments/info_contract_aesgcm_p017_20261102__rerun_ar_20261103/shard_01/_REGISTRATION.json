@@ -1,0 +1,46 @@
+{
+ "adapter": "provider_adapter_agentrouter_p023.py",
+ "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+ "attribution_rule": {
+  "3-7": "PARTIAL_BUDGET",
+  "<=2": "BUDGET_EXPLAINS",
+  ">=8": "BUDGET_HYPOTHESIS_FAILS"
+ },
+ "change_vs_P014": {
+  "token_floor": {
+   "from": 2800,
+   "to": 4200
+  }
+ },
+ "fixture": "aesgcm",
+ "label": "gpt-6-astra",
+ "launcher_patched": {
+  "run_p017_aesgcm.py": []
+ },
+ "protocol": "P017-INFO-CONTRACT-2X2-AESGCM-FLOOR4200-v1-RERUN-AR-v1",
+ "purpose": "withheld-arm dropout attribution at a data-derived token floor",
+ "registered": "2026-11-03",
+ "rerun_of": "info_contract_aesgcm_p017_20261102",
+ "rerun_reason": "transport-damaged cohort re-run; same label, seeds, fixture, prompts, oracle and registered token floor; only the transport/adapter generation differs",
+ "route": "agentrouter",
+ "runner": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+ "runner_path": "run_info_contract_2x2_aesgcm.py",
+ "scheduling": "sequential; starts only after P016 has fully finished",
+ "seeds": [
+  702,
+  705,
+  708,
+  711,
+  714
+ ],
+ "sessions_registered": 64,
+ "shard": {
+  "index": 1,
+  "of": 3,
+  "parent": "info_contract_aesgcm_p017_20261102__rerun_ar_20261103"
+ },
+ "token_floor": 4200,
+ "token_floor_effective": 4200,
+ "token_floor_rule": "round_up(1.5 * max_observed_P014_output_tokens(2747), 400)",
+ "workers": 8
+}

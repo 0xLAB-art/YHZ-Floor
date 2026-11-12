@@ -1,0 +1,41 @@
+{
+ "role": "probe, NOT evidence",
+ "date": "2026-10-30T17:42:36Z",
+ "endpoint": "https://api.apinex.bond/v1/chat/completions",
+ "attempts": [
+  {
+   "model": "free/kimi-k3",
+   "ok": true,
+   "echo_model": "free/kimi-k3",
+   "content_head": "ok",
+   "latency_s": 2.5
+  },
+  {
+   "model": "free/qwen-3.8-max",
+   "ok": true,
+   "echo_model": "free/qwen-3.8-max",
+   "content_head": "ok",
+   "latency_s": 3.6
+  },
+  {
+   "model": "free/gemini-3.8-flash",
+   "ok": true,
+   "echo_model": "free/gemini-3.8-flash",
+   "content_head": "ok",
+   "latency_s": 2.4
+  },
+  {
+   "model": "free/deepseek-v4.1-flash",
+   "ok": true,
+   "echo_model": "free/deepseek-v4.1-flash",
+   "content_head": "ok",
+   "latency_s": 2.1
+  }
+ ],
+ "working_models": [
+  "free/kimi-k3",
+  "free/qwen-3.8-max",
+  "free/gemini-3.8-flash",
+  "free/deepseek-v4.1-flash"
+ ]
+}

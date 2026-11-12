@@ -1,0 +1,68 @@
+{
+  "instantiated_prompts": [
+    {
+      "bytes": 1800,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Dynastic/prompt_R0.txt",
+      "representation": "R0",
+      "sha256": "c33a04559007b9857a26983c8c65f10316666fe161e387ffff0d7c22e3492c4b",
+      "task_id": "htb_cyber_apocalypse_2024__Dynastic"
+    },
+    {
+      "bytes": 2515,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Dynastic/prompt_RT.txt",
+      "representation": "RT",
+      "sha256": "f42515d55d6ed3d79083699ec349fbe001ac0a981bebb92bcd8c79799462bda7",
+      "task_id": "htb_cyber_apocalypse_2024__Dynastic"
+    },
+    {
+      "bytes": 1171,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Makeshift/prompt_R0.txt",
+      "representation": "R0",
+      "sha256": "ca429fa7ed4cb73e3360fe430cae69667ad9f5b6ba6a8b757f894e0f5602b080",
+      "task_id": "htb_cyber_apocalypse_2024__Makeshift"
+    },
+    {
+      "bytes": 1668,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Makeshift/prompt_RT.txt",
+      "representation": "RT",
+      "sha256": "65276988c799a32770806957288435ae98ea0e01b769ce2a3616246e94327722",
+      "task_id": "htb_cyber_apocalypse_2024__Makeshift"
+    },
+    {
+      "bytes": 2655,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Partial_Tenacity/prompt_R0.txt",
+      "representation": "R0",
+      "sha256": "f133dfb5c4370d1beadbf72387cdb749755d04e4b329c7e01de56d9737a88e5e",
+      "task_id": "htb_cyber_apocalypse_2024__Partial_Tenacity"
+    },
+    {
+      "bytes": 3551,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Partial_Tenacity/prompt_RT.txt",
+      "representation": "RT",
+      "sha256": "fbe35c775a84fd6cd3d6e5f3374f40a3aa46269fda116566f43c717e5c879d5f",
+      "task_id": "htb_cyber_apocalypse_2024__Partial_Tenacity"
+    },
+    {
+      "bytes": 1887,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Primary_Knowledge/prompt_R0.txt",
+      "representation": "R0",
+      "sha256": "56926bf9ef2526b9d4a8ff565882a0ebadbaa395319fbfedc1395cff28f4a8dc",
+      "task_id": "htb_cyber_apocalypse_2024__Primary_Knowledge"
+    },
+    {
+      "bytes": 2637,
+      "path": "fixtures/rt_transform/htb_cyber_apocalypse_2024__Primary_Knowledge/prompt_RT.txt",
+      "representation": "RT",
+      "sha256": "fbcc43e4a469b8f4d26e9d26604e9a28853b8b041de9a20cba8e0e411ac3c9ad",
+      "task_id": "htb_cyber_apocalypse_2024__Primary_Knowledge"
+    }
+  ],
+  "namespace": "external_admission_20261024",
+  "note": "No prompt was ever sent to a provider: the phase stopped at task selection. Hashes document the exact prompts that the frozen design would have used.",
+  "prompt_truth_hygiene": "Prompts contain only release artifacts (source.py, output.txt) and the metadata hard_prompt. Oracle answers live in oracle/answers.json and are never prompt material (LEAK_SCAN-equivalent statement; no transcripts exist to scan).",
+  "schema": "external-admission-prompt-hashes/1",
+  "templates": {
+    "R0/RT template constants": "fixtures/rt_transform/build_representations.py (frozen in FREEZE.json)",
+    "statement_source": "metadata hard_prompt (verbatim) of the frozen fixture tasks"
+  }
+}

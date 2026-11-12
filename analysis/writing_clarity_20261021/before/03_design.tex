@@ -1,0 +1,194 @@
+\section{Evaluation Framework and Experimental Design}\label{sec:design}
+Table~\ref{tab:chain-object} maps RQ1--RQ3 to their experimental populations;
+Table~\ref{tab:glossary} defines the checked objects.
+The design combines controlled contrasts with separate construction and
+attribution studies. Each tests a named claim requirement; their union does
+not form a common success denominator or a single end-to-end experiment.
+\begin{table}[t]
+\centering\footnotesize
+\caption{Core terms. Correctness, admission, and attribution answer different questions.}
+\label{tab:glossary}
+\begin{tabularx}{\columnwidth}{@{}P{2.05cm}Y@{}}
+\toprule
+\tablehead Term & Meaning in this paper \\
+\midrule
+Task contract & Declared observations, interface, budget, and success condition. \\
+Attack program & Agent-generated executable code; not itself a verified outcome. \\
+Candidate & Value or artifact submitted for the task-specific check. \\
+Admission policy & Source/runtime rules governing whether a program may execute. \\
+Oracle / predicate & Trusted checking component / relation the candidate must satisfy. \\
+Verified outcome & Candidate accepted under the declared oracle and predicate. \\
+Attribution & Evidence binding that outcome to the claimed execution and identities. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Operational Setting and Contract Model}\label{sec:contract}
+Interactive tasks supply a local target, specified weakness, and checkable
+success condition to study construction. Response-only tasks expose public
+observations. Replay, policy, and provenance controls test evaluation
+requirements; access and execution authority remain population-specific.
+
+We describe an evaluation using six objects: opportunity $O$, recovery
+transformation $T$, generated attack code $A$, interface and information
+boundary $B$, independent verifier $V$, and success predicate $P$.
+The contract fixes observations, imports, authority, budget, and predicate
+before generating $A$. This descriptive decomposition does not establish
+attribution: acquisition, isolation, and provenance require separate evidence.
+
+Retain code/run identity, target predicates, clock endpoints, and execution
+bindings for their respective claims. V4's 31 programs belong to 12 sessions.
+
+\subsubsection{The Attack--Evaluation Oracle Boundary}\label{sec:boundary}
+Terms $B$ and $V$ define the \emph{Attack--Evaluation Oracle Boundary} between
+attacker observations (ciphertexts, padding validity, timing, negotiated
+groups, cache footprints) and evaluator truth (reserved secrets, hashes,
+verifier identity). We check observation/truth separation, identity of the
+grading verifier, and execution authority. E5 R30's committed candidate match
+coexists with unresolved acquisition and host isolation: a declared interface
+does not establish exclusion of every path to truth.
+
+\subsection{Success, Cost, and Provenance}\label{sec:axes}
+We report three separate quantities:
+\begin{enumerate}
+\item \textbf{Attack success}: candidate satisfaction of $P$ under $V$, with
+ASR per task and population, never pooled into one rate across families. A
+pre-specified paired contrast over a fixed matched instance set is a
+different estimand and is reported separately
+(Section~\ref{sec:h1r3}), with its family split retained.
+\item \textbf{Execution cost}: work within a named clock interval; operation,
+agent-session, and non-execution estimates remain separate.
+\item \textbf{Execution provenance}: the strict H1 criterion links source,
+configuration, task, immutable image digest, execution identity, and result.
+\end{enumerate}
+Candidate correctness establishes neither cost nor provenance. The strict
+provenance criterion H1 is 0/12 for EXP-034 (hosted model, no immutable image
+digest) and 3/3 for EXP-035 (deterministic local OCI). Real hosted-agent
+execution with immutable provenance remains unobserved.
+
+\subsubsection{Timing Definitions}\label{sec:clocks}
+$T_{op}$ measures only the already-written attack program's operation span
+(fixed executor, no model loop). $T_M$ (clean) measures the agent loop from
+post-provision to terminal handling, captured with
+\texttt{time.monotonic\_ns()} before cleanup. $T_M$ (legacy) measures the
+historical agent session under old conditions with different instrumentation.
+Successful V4 agent medians: ChaCha20 18.37\,s ($n{=}2$, range 17.50--19.24),
+CBC 50.06\,s ($n{=}3$, 39.44--71.13), ECDSA 15.29\,s ($n{=}3$, 14.47--16.64);
+RC4 has no successful clean median (0/3). The fixed-executor and legacy
+$T_{op}$/$T_M$ medians are reported with the studies that measure them
+(Sections~\ref{sec:floor} and~\ref{sec:legacy}). These intervals concern
+separate populations; no cross-cohort efficiency
+ratio or pooled capability estimate follows. $T_{op}$ for stream ciphers is
+sub-millisecond while agent $T_M$ is measured in seconds. Clock identity is
+therefore part of the claim, not a choice of interchangeable units.
+
+The V4 acceptance verdicts and its timing records have different evidence
+status. The eight accepted sessions retain submission-to-verdict traces, but
+none of the eight successful V4 durations has a retained raw monotonic endpoint
+pair; the displayed medians are reported elapsed values, not independently
+recomputable timing measurements. The historical time-to-exploit analysis partitions records into four non-interchangeable
+estimands: $T_{agent}$, $T_{op}$, $T_{estimate}$, and $T_{probe}$. Its 21
+operation rows (nine TLS templates and twelve RC4/CBC/ECDSA/ChaCha20 rows)
+strengthen the construction-time edge without enlarging the autonomous-success
+denominator. TLS policy, syntax-only edits, A1 timing, D1 recovery, and B1
+refusal remain layer-specific observations, not cross-family speed or
+primitive-security claims.
+
+\subsubsection{Oracle Authority Hierarchy}\label{sec:authority}
+Three evidence forms answer different questions. A \textbf{status classifier}
+provides a terminal label. A \textbf{submission$\to$verdict trace} retains
+the candidate and its verdict within one run, supporting reconstruction.
+An \textbf{independent oracle with a pre-session commitment} additionally
+fixes the checked truth before submission. None alone authenticates the
+complete execution history. EXP-034 retains traces for 8/8 accepted and 4/4
+rejected sessions; E5 R30 retains a committed candidate match while leaving
+acquisition and host isolation open. Historical and legacy records rely on
+status labels plus conditional digest checks, so retain R-tier status.
+
+\subsection{Weakness Taxonomy and Target Set}\label{sec:targets}
+Weaknesses are stratified into four classes: \textbf{C1} cryptanalytic
+(exhaustive search, factorization), \textbf{C2} implementation (weak keys,
+nonce reuse, padding oracles), \textbf{C3} protocol (birthday collision,
+downgrade), and \textbf{C4} deployment (misconfiguration, fallback).
+The eleven targets comprise seven from the initial campaign (DES weak-key
+dictionary C2/C3, DES brute-force estimate C1, 3DES/Sweet32 collision C3,
+AES-128 timing probe C2, RSA-1024 factorization C2, ML-KEM-768 hybrid-TLS
+downgrade C4, win64\_remote.exe fallback C4) and four extended targets that
+carry the full V4 cohort (RC4 known-plaintext C2, CBC padding oracle C2,
+ECDSA nonce reuse C2, ChaCha20 two-plaintext XOR C2). Primary recorded
+results and tiers appear in the campaign and cohort sections below.
+
+\subsubsection{Agents, Environments, and Metrics}\label{sec:envs}
+Agents include Qwen3.6-plus, Gemma4-31b, Claw Code, and an Aligned Gemma
+safety configuration. V4 uses claude-sonnet-4-6-free at temperature 0.2 with
+4096 tokens; H1-R3 uses the same recorded route with 2600 tokens and no
+temperature parameter sent. Environments span WSL2 (i7-9850H, OpenSSL 1.0.1e),
+VMware Kali 2025.4 (OpenSSL 1.0.2u), bare-metal Ubuntu 20.04 (i7-6820HQ
+Skylake), and Ubuntu 24.04.4 with OpenSSL 3.0.13+liboqs. Metrics are attack
+success rate (ASR), lines of code (LoC), and silent-refusal rate (SRR).
+Historical safety records also contain a withdrawn composite, safety cost
+transfer SCT $=(1-\mathrm{SRR})/(1+\log_{10}(\mathrm{TTE}_M+1))$;
+it is not used to establish capability or risk.
+
+\begin{figure*}[t]\centering
+\input{figures/fig_harness_readable}
+\caption{Acceptance authority remains separate from attack construction. The controller freezes inputs and reserves run identity; the agent constructs code and interacts with the target; the independent verifier checks the candidate against reserved truth. Dotted arrows feed the harness-owned capture-first writer; the dashed E5 escrow path is optional. Regions show component responsibility under trusted-host assumptions, not proven host isolation.}\label{fig:arch}
+\end{figure*}
+
+\subsubsection{Execution Populations}\label{sec:pops}
+Each population retains its own denominator. PU
+(provider-unavailable) records are retained but never counted as failures.
+Recorded-tier (R): initial 19; extended 12; ablation 9; toolchain 3; historical 74; legacy 54; safety 20$\times$4; explicit-observation 18. Audit-tier (A): six-release audit 54. Verified-tier (V): V4 12; fixed-executor 12; hybrid-policy 45; escrow 29 records (14 graded, 15 provider interruptions); micro-timing 32{,}000; adaptive/composition/transfer 8.
+\subsubsection{Evidence Tiers}\label{sec:tiers}
+Execution quantitative claims carry three labels. \textbf{V (Verified
+candidate/contrast)}: the specified candidate or contrast is independently
+verified with retained identity and trace; an associated clock is V only when
+its endpoints and interval are independently reconstructable.
+\textbf{R (Recorded)}: records and verdicts are retained but at least one
+reconstruction window is missing. \textbf{E (Estimated)}: derived or estimated,
+not executed. V-tier families: fixed executor, prospective V4, C2b policy,
+C2-T1 (partial), E3 micro-timing, escrow R30, provenance
+controls, A1 statistics. R-tier: initial campaign, D1, historical census,
+legacy loop, safety, extended targets, ablation/toolchain, H1 provenance
+conjunction. E-tier: DES brute-force estimate, 59.5$\times$ $z$ improvement,
+V4 HTTP attempt planning bound. The six-release external audit is A (audit
+evidence): source-linked classification of public records, not an executable
+oracle result.
+
+These components are not independent replications. The historical census
+counts 35 migrated and 39 raw-only sessions once. Provider unavailability,
+harness invalidity, tool failure, timeout, give-up, refusal and oracle rejection
+remain distinct. The 51 legacy clock pairs qualify endpoints; E6 measures
+codebook agreement, not ground truth.
+
+\subsection{Capture-First Harness and Control Suites}\label{sec:harness}
+Figure~\ref{fig:arch} separates control, agent--target execution, independent
+verification and the harness-owned evidence path. The
+controller makes task-session reservation atomic; the task card digest is
+frozen before the first model call. The agent owns attack code; the harness
+owns identity, clock, and terminal state; the oracle owns the verdict; in E5, the verifier forwards candidates to escrow for comparison without
+pre-verification reveal. Nine control
+suites exercise the harness and its acceptance rules: contract
+qualification 4/4 (CBC 10{,}775 queries); stable-backend 6/6; fixed-executor
+12/12; protected-grader 20 cases (18 rejects + 2 accepts);
+regression 8 checks; provider-fault canary 180/180; provenance control 3/3
+(digest-pinned OCI); offline replay 52/52; eligibility-gate canary 180 cases
+zero misclassification. The validator does not test every endpoint; retries
+are unretained; digests identify an image, not a host; escrow is stated, not
+enforced; 4 legacy drift rows are excluded.
+
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Experimental argument. Each question has a distinct evidence source
+and inference; the studies are not one end-to-end execution or a pooled sample.}
+\label{tab:chain-object}
+\begin{tabularx}{\textwidth}{@{}p{1.45cm}p{5.1cm}Y@{}}
+\toprule
+\tablehead Question & Experimental role & Supported inference and boundary \\
+\midrule
+RQ1 & H1-R3 fixes recovery instances across representations; regrading fixes program bytes; cleanup tests the import mechanism. & The primary L3 contrast is bounded under the declared contract. A mismatched filter creates a large apparent deficit that cleanup removes; lower-level contrasts remain inconclusive. \\
+RQ2 & Fixed operations test feasibility; V4 tests construction; observation variants locate missing premises; composition and target controls test consequences. & Accepted recovery and payload release occur under specific contracts. Unmatched cohorts do not estimate an information or feedback effect; wire-valid edits do not prove handshake completion. \\
+RQ3 & E5 tests the interpretation of correctness; the release audit examines reconstruction; constructed defects and mutations exercise attribution decisions. & Authenticity and cross-record consistency are complementary. The policy is tested under stated trust assumptions; exclusive acquisition and immutable hosted-model identity remain open. \\
+\bottomrule
+\end{tabularx}
+\end{table*}

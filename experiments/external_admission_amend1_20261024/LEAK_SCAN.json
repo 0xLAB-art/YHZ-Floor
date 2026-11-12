@@ -1,0 +1,42 @@
+{
+  "api_key_material_in_namespace": [],
+  "namespace": "external_admission_amend1_20261024",
+  "policy": "oracle answers must never appear in prompt material; they may appear only in artifacts of ACCEPTED sessions (expected recovered output) \u2014 programs, transcripts, results stdout_tails",
+  "program_scan": {
+    "files_scanned": 37,
+    "hits": [],
+    "hits_outside_accepted_sessions": [],
+    "surface": "retained programs"
+  },
+  "prompt_scan": {
+    "files_scanned": 45,
+    "surface": "session prompts (all turns)",
+    "verbatim_answer_hits": []
+  },
+  "results_scan": {
+    "files_scanned": 1,
+    "surface": "results.jsonl",
+    "verbatim_answer_hits": [
+      {
+        "path": "results.jsonl",
+        "task_answer": "htb_cyber_apocalypse_2024__Makeshift"
+      },
+      {
+        "path": "results.jsonl",
+        "task_answer": "htb_cyber_apocalypse_2024__Dynastic"
+      },
+      {
+        "path": "results.jsonl",
+        "task_answer": "htb_cyber_apocalypse_2024__Primary_Knowledge"
+      }
+    ]
+  },
+  "schema": "external-admission-amend1-leak-scan/1",
+  "transcript_scan": {
+    "files_scanned": 45,
+    "hits": [],
+    "hits_outside_accepted_sessions": [],
+    "surface": "raw provider responses"
+  },
+  "verdict": "PASS"
+}

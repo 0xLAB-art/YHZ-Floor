@@ -1,0 +1,35 @@
+\begin{document}
+\title{ACTS-Attack: Measuring Cryptographic Attack\\Construction, Admission, and Attribution}
+\author{}
+\maketitle
+
+\begin{abstract}
+Security-agent evaluations report attack success, but construction, evaluator
+admission, and execution attribution require different evidence. ACTS-Attack
+studies these requirements through cryptographic recovery programs,
+target-effect controls, and adversarial evidence bundles. A matched study
+contains 768 representation trials and 84 controls. On 128 instances at the
+primary observation-complexity level (L3), the
+base64--hexadecimal success contrast is $-0.8$ percentage points under the
+declared contract, within the pre-specified $\pm10$ point margin for two
+families and one route. Applying a contract-mismatched source filter to
+unchanged programs moves it to $-32.8$ points; output-preserving unused-import
+removal changes the filtered contrast to $+3.9$ points. Separate construction
+studies distinguish 12/12 supplied operations from 8/12 accepted prospective
+sessions, locate observation and implementation failures, and demonstrate
+protected-payload release through a supplied AES-CTR chain. Constructed
+attribution tests show that candidate correctness, record integrity, and
+signatures alone can leave execution claims unsupported. A claim-specific
+policy undergoes 11{,}256 bounded mutation evaluations without an observed
+soundness violation; configured in-toto agreement tests its implementation.
+Together, these studies provide program-level measurements and concrete
+failure mechanisms for interpreting cryptographic attack claims. Their
+cohorts retain separate denominators: construction spans distinct local
+interfaces, admission sensitivity remains local to H1-R3, and attribution
+depends on the stated trust model. Retaining decision stages and execution
+bindings makes these distinct claims auditable.
+\end{abstract}
+\begin{IEEEkeywords}
+AI agents, cryptographic attacks, exploit construction, evaluation validity,
+verification, provenance
+\end{IEEEkeywords}

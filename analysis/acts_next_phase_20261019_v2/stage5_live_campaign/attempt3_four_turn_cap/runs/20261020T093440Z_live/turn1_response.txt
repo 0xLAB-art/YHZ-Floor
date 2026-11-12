@@ -1,0 +1,48 @@
+```python
+import http.client
+import json
+import base64
+
+HOST = "127.0.0.1"
+PORT = 32772
+
+def request(method, path, body=None):
+    conn = http.client.HTTPConnection(HOST, PORT)
+    headers = {"Content-Type": "application/json"} if body else {}
+    conn.request(method, path, body, headers)
+    resp = conn.getresponse()
+    data = resp.read()
+    conn.close()
+    return resp.status, data
+
+# Probe the service
+print("=== Probing service ===")
+status, data = request("GET", "/")
+print(f"GET / -> {status}: {data.decode()}")
+
+status, data = request("GET", "/api")
+print(f"GET /api -> {status}: {data.decode()}")
+
+# Try to find session/encrypt endpoint
+status, data = request("POST", "/session", json.dumps({}).encode())
+print(f"POST /session -> {status}: {data.decode()}")
+
+status, data = request("POST", "/encrypt", json.dumps({"data": "test"}).encode())
+print(f"POST /encrypt -> {status}: {data.decode()}")
+
+# Try to get session token
+status, data = request("GET", "/session")
+print(f"GET /session -> {status}: {data.decode()}")
+
+# Try common endpoints
+for endpoint in ["/login", "/auth", "/token", "/create", "/new"]:
+    status, data = request("POST", endpoint, json.dumps({}).encode())
+    print(f"POST {endpoint} -> {status}: {data.decode()}")
+
+# Try to read secret directly
+status, data = request("GET", "/secret")
+print(f"GET /secret -> {status}: {data.decode()}")
+
+status, data = request("GET", "/flag")
+print(f"GET /flag -> {status}: {data.decode()}")
+```

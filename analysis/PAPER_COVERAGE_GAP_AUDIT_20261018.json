@@ -1,0 +1,510 @@
+{
+  "schema": "paper-coverage-gap-audit-v1",
+  "generated_utc": "2026-10-18",
+  "source_ledger": "sp2027/analysis/nested_primary_experiment_discovery/03_PRIMARY_RESULT_EVIDENCE_LEDGER.csv",
+  "active_source_root": "sp2027/paper/capability_merge_20261016",
+  "v4_raw_census": "sp2027/analysis/V4_RAW_COHORT_CENSUS_20261018.json",
+  "e5_raw_census": "sp2027/analysis/E5_RAW_RUN_CENSUS_20261018.json",
+  "rows": [
+    {
+      "result_id": "R01",
+      "experiment_id": "N02",
+      "bounded_result": "Server group policy determines whether classical-only client completes locally",
+      "grade": "PRIMARY_VERIFIED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "C2b 45-handshake policy control is in main targets/conclusion and supplement.",
+      "boundary": "Local policy contrast; not ML-KEM or deployment prevalence.",
+      "evidence": "data/c2b_hybrid_required_control.json; harness/results_c2b_pq/"
+    },
+    {
+      "result_id": "R02",
+      "experiment_id": "N01",
+      "bounded_result": "Four available hybrid groups accepted the recorded downgrade manipulation",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "C2 4/4 local hybrid configurations and bounded mean TTE appear in target section/supplement.",
+      "boundary": "Four named targets only.",
+      "evidence": "data/C2_pqc_generality.json"
+    },
+    {
+      "result_id": "R03",
+      "experiment_id": "N04",
+      "bounded_result": "Open-source pipeline produced valid C2-T1 wire edits",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "C2-T1 3/3 wire-valid edits, 9--32 microseconds, and r2_verified=false are explicit.",
+      "boundary": "Syntax/wire edit, not completed handshake or AI necessity.",
+      "evidence": "data/c2t1_open_source_reproduction.json"
+    },
+    {
+      "result_id": "R04",
+      "experiment_id": "N06",
+      "bounded_result": "A timing contrast was observed in one VMware configuration",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "A1 VMware signal is reported with cross-condition limits.",
+      "boundary": "No causal environment comparison.",
+      "evidence": "data/A1_vmware_timing.json"
+    },
+    {
+      "result_id": "R05",
+      "experiment_id": "N05",
+      "bounded_result": "WSL2 configuration did not pass declared 3-sigma test",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "A1 WSL2 non-confirming result is reported with its threshold.",
+      "boundary": "Not evidence of no side channel.",
+      "evidence": "data/A1_openssl_timing.json"
+    },
+    {
+      "result_id": "R06",
+      "experiment_id": "N07",
+      "bounded_result": "Models showed heterogeneous retained L1-L5 response behavior",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "B1/SCT safety observations are in the safety supplement and bounded main discussion.",
+      "boundary": "Not cryptographic capability or safety prevalence.",
+      "evidence": "data/B1_revised.json"
+    },
+    {
+      "result_id": "R07",
+      "experiment_id": "N09",
+      "bounded_result": "Spread-Table record reports exact recovery against a known key",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "D1 Spread-Table 16/16 result is in main leakage section and supplement.",
+      "boundary": "Fixture/host-gated; raw samples absent.",
+      "evidence": "data/cv7_spread_result.json; harness/cache_timing_attack_report.md"
+    },
+    {
+      "result_id": "R08",
+      "experiment_id": "N08",
+      "bounded_result": "Bernstein-style attempt recovered only 2/16 bytes",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "D1 ordinary-table 2/16 partial result is in main leakage section and supplement.",
+      "boundary": "Not full-key recovery.",
+      "evidence": "data/full_key_recovery.json"
+    },
+    {
+      "result_id": "R09",
+      "experiment_id": "N11",
+      "bounded_result": "Fixed cryptographic operation paths reached accepted oracle outputs",
+      "grade": "PRIMARY_VERIFIED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "Fixed-executor 12/12 and operation medians are in main and S07.",
+      "boundary": "Reachability control, not agent capability.",
+      "evidence": "results_rerun/operation_records.jsonl; operation_verdicts.json"
+    },
+    {
+      "result_id": "R10",
+      "experiment_id": "N12-N13",
+      "bounded_result": "Historical nested session tree retains mixed outcomes and failures",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "74-session deduplicated historical census is in main and S16.",
+      "boundary": "Not pooled with V4/E2.",
+      "evidence": "harness/v2/results/e2/_loop_out/; harness/v3/results/e2/_loop_out/"
+    },
+    {
+      "result_id": "R11",
+      "experiment_id": "N14",
+      "bounded_result": "Agent rerun retains accepted and rejected task claims",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "PARTIAL_RECONCILED",
+      "coverage_note": "Main reports the 54-row legacy loop and normalized terminal counts, but not every raw status field from the ledger.",
+      "boundary": "Needs a source-linked status crosswalk if retained as a headline result.",
+      "evidence": "harness/rerun/results_rerun/agent/agent_records.jsonl"
+    },
+    {
+      "result_id": "R12",
+      "experiment_id": "N10",
+      "bounded_result": "Aggregate file records historical 21/21 successful summaries",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "21/21 script-emitted historical aggregate is disclosed as provenance-only in S20.",
+      "boundary": "No independent oracle denominator.",
+      "evidence": "results/ACTS_RESULTS_FINAL.json"
+    },
+    {
+      "result_id": "R13",
+      "experiment_id": "N17",
+      "bounded_result": "C2b smoke matrix retained a one-repetition trace-backed control",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "OMITTED_ARTIFACT_CONTROL",
+      "coverage_note": "C2b smoke one-repetition control is not separately surfaced.",
+      "boundary": "Keep artifact/supplement unless needed to explain policy-control lineage.",
+      "evidence": "harness/results_c2b_smoke/c2b_records.jsonl; c2b_verdicts.json; traces/"
+    },
+    {
+      "result_id": "R14",
+      "experiment_id": "N18",
+      "bounded_result": "Full-tree result surface is now enumerated rather than inferred from named experiment files",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_AS_AUDIT_ARTIFACT",
+      "coverage_note": "Inventory closure is represented as audit/coverage material, not an experiment.",
+      "boundary": "Never use as an observation denominator.",
+      "evidence": "02_COMPLETE_RAW_EXPERIMENT_INVENTORY.csv"
+    },
+    {
+      "result_id": "R15",
+      "experiment_id": "N19",
+      "bounded_result": "Non-Git retained data and result files are first-class evidence surfaces",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_AS_AUDIT_ARTIFACT",
+      "coverage_note": "Git-state and retained-file lineage are discussed in artifact coverage.",
+      "boundary": "Provenance context only.",
+      "evidence": "02_COMPLETE_RAW_EXPERIMENT_INVENTORY.csv; 01_NESTED_REPOSITORY_ACCESS_PROOF.md"
+    },
+    {
+      "result_id": "R16",
+      "experiment_id": "N20",
+      "bounded_result": "Outer-workspace E5 AES key-recovery campaign contains one oracle-accepted retained session",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "E5 R30 and the corrected 29=14+15 partition are active.",
+      "boundary": "1/14 graded; 1/10 extension; PU separate.",
+      "evidence": "sp2027/agent-eval/runs_e5/session_r30/runs/e5_R30__e5_aes_key_recovery__T1_known__rep1.json; transcript.jsonl"
+    },
+    {
+      "result_id": "R17",
+      "experiment_id": "N21",
+      "bounded_result": "Outer ACTS-Attack project contains materially larger E2 and evidence-capsule populations than nested checkout",
+      "grade": "UNRESOLVED",
+      "coverage_status": "OMITTED_NONSCIENTIFIC_SCOPE",
+      "coverage_note": "Outer project scale is not a capability result.",
+      "boundary": "Do not add counts without deduplication/claim linkage.",
+      "evidence": "12_OUTER_PROJECT_EVIDENCE_DISCOVERY.md"
+    },
+    {
+      "result_id": "R18",
+      "experiment_id": "N22",
+      "bounded_result": "Outer source-freeze archives contain recursively nested benchmark/data and result-like surfaces",
+      "grade": "ARTIFACT_ONLY",
+      "coverage_status": "OMITTED_NONSCIENTIFIC_SCOPE",
+      "coverage_note": "Archive member census is not an ACTS observation population.",
+      "boundary": "Artifact provenance only.",
+      "evidence": "14_ARCHIVE_CONTAINED_DATA_AND_RESULTS_CRAWL.md"
+    },
+    {
+      "result_id": "R19",
+      "experiment_id": "N23",
+      "bounded_result": "Retained historical Incalmo example execution result",
+      "grade": "HISTORICAL_RECONSTRUCTABLE",
+      "coverage_status": "OMITTED_OUT_OF_SCOPE",
+      "coverage_note": "Historical Incalmo execution is not an ACTS cryptographic run.",
+      "boundary": "Do not promote to the main attack narrative.",
+      "evidence": "human_audit/source_freeze_20261005/archives/incalmo__Incalmo__932c5fcd_head.tar.gz::output/example_output/results.json; ::output/example_output/action_log.jsonl"
+    },
+    {
+      "result_id": "R20",
+      "experiment_id": "N24",
+      "bounded_result": "CyBench agent completion outputs are represented by Git-LFS pointers but payloads are absent",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "OMITTED_UNRESOLVED",
+      "coverage_note": "CyBench LFS payloads are absent.",
+      "boundary": "Must remain unresolved, never failure or success.",
+      "evidence": "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz::agent/outputs/"
+    },
+    {
+      "result_id": "R21",
+      "experiment_id": "N25",
+      "bounded_result": "Historical outer-Git DEPOSIT tree contains additional experiment data absent from the live checkout",
+      "grade": "HISTORICAL_RECONSTRUCTABLE",
+      "coverage_status": "OMITTED_HISTORICAL_LINEAGE",
+      "coverage_note": "Outer Git DEPOSIT lineage is not independently analyzed as a current result.",
+      "boundary": "Use only for provenance if a claim needs it.",
+      "evidence": "15_HISTORICAL_GIT_TREE_RECONSTRUCTION.md"
+    },
+    {
+      "result_id": "R22",
+      "experiment_id": "N26",
+      "bounded_result": "Historical A1 environment contrast",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R04_R05",
+      "coverage_note": "Historical A1 copies are represented by the qualified A1 result.",
+      "boundary": "Do not count as a second environment replication.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/A1_openssl_timing.json; DEPOSIT_V1.1_STAGING/data/A1_vmware_timing.json; blobs 1f7ec23a... and 8ec24583..."
+    },
+    {
+      "result_id": "R23",
+      "experiment_id": "N27",
+      "bounded_result": "Historical C2 hybrid-PQC generality set",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R02",
+      "coverage_note": "Historical C2 copy is represented by C2.",
+      "boundary": "No added repetition.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/C2_pqc_generality.json; blob 5b44b825..."
+    },
+    {
+      "result_id": "R24",
+      "experiment_id": "N28",
+      "bounded_result": "Historical C2b causal server-policy control",
+      "grade": "PRIMARY_VERIFIED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R01",
+      "coverage_note": "Historical C2b copy is represented by the 45-handshake control.",
+      "boundary": "No added repetition.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/c2b_hybrid_required_control.json; blob 10ccca3b..."
+    },
+    {
+      "result_id": "R25",
+      "experiment_id": "N29",
+      "bounded_result": "Historical C2-T1 open-source reproduction",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R03",
+      "coverage_note": "Historical C2-T1 copy is represented by the wire-edit result.",
+      "boundary": "No added repetition.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/c2t1_open_source_reproduction.json; blob fce9c918..."
+    },
+    {
+      "result_id": "R26",
+      "experiment_id": "N30",
+      "bounded_result": "Historical CV7/D1 spread-table recovery record",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R07",
+      "coverage_note": "Historical D1 exact result is represented by Spread-Table.",
+      "boundary": "No added repetition.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/cv7_spread_result.json; blob 495c7e5b..."
+    },
+    {
+      "result_id": "R27",
+      "experiment_id": "N31",
+      "bounded_result": "Historical full AES key-recovery attempt",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R08",
+      "coverage_note": "Historical D1 partial result is represented by ordinary-table sibling.",
+      "boundary": "No added repetition.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/full_key_recovery.json; blob 77e7f437..."
+    },
+    {
+      "result_id": "R28",
+      "experiment_id": "N32",
+      "bounded_result": "Historical B1 model-response safety evaluation",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "B1 response observations are retained in S24 and bounded in the safety discussion.",
+      "boundary": "No safety ground truth.",
+      "evidence": "DEPOSIT_V1.1_STAGING/data/B1_revised.json; blob 49fc9589..."
+    },
+    {
+      "result_id": "R29",
+      "experiment_id": "N33",
+      "bounded_result": "Historical E5 R1-R31 execution lineage",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "PARTIAL_RECONCILED",
+      "coverage_note": "E5 historical lineage is represented through the active E5 census and artifact map.",
+      "boundary": "Do not call historical copies independent.",
+      "evidence": "DEPOSIT_V1.1_STAGING/ results, results_rerun, and historical E5 session paths; 15_HISTORICAL_GIT_TREE_RECONSTRUCTION.md"
+    },
+    {
+      "result_id": "R30",
+      "experiment_id": "N34",
+      "bounded_result": "Untracked vendor CAS contains unique retained ACTS support/results material",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "OMITTED_PROVENANCE_ONLY",
+      "coverage_note": "Vendor CAS content identity is not a scientific outcome.",
+      "boundary": "Retain in artifact lineage, not attack results.",
+      "evidence": "vendor/acts-attack/; 15_HISTORICAL_GIT_TREE_RECONSTRUCTION.md"
+    },
+    {
+      "result_id": "R31",
+      "experiment_id": "N35",
+      "bounded_result": "Historical ACTS_RESULTS_FINAL benchmark aggregate",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R12",
+      "coverage_note": "Historical ACTS_RESULTS_FINAL aggregate is disclosed as provenance-only.",
+      "boundary": "No benchmark-wide 21/21 rate.",
+      "evidence": "DEPOSIT_V1.1_STAGING/results/ACTS_RESULTS_FINAL.json; blob d0eb6ad991be8d404e567d02c2d80edc39356efe"
+    },
+    {
+      "result_id": "R32",
+      "experiment_id": "N36",
+      "bounded_result": "Complete outer-root recursive file and content-hash closure",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_AS_AUDIT_ARTIFACT",
+      "coverage_note": "Recursive closure is an inventory control.",
+      "boundary": "Not an experiment denominator.",
+      "evidence": "17_MAXIMUM_ROOT_RECURSIVE_CRAWL.md"
+    },
+    {
+      "result_id": "R33",
+      "experiment_id": "N37",
+      "bounded_result": "Outer structured experiment inventory contains 33,746 indexed records across 17 families",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_SUPP_AS_INVENTORY",
+      "coverage_note": "Inventory/family counts appear in unified coverage.",
+      "boundary": "Not pooled observations.",
+      "evidence": "artifacts/experiment_inventory.json; 17_MAXIMUM_ROOT_RECURSIVE_CRAWL.md"
+    },
+    {
+      "result_id": "R34",
+      "experiment_id": "N38",
+      "bounded_result": "E3 bare-metal factorial timing experiment",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "E3 32,000 observations and one-host timing contrast are represented.",
+      "boundary": "No cross-host or causal SMT inference.",
+      "evidence": "sp2027/analysis/e3_rig/samples_full.jsonl; e3_analyze_results.json; e3_bootstrap_correction_v1.json; e3_rig_env.json"
+    },
+    {
+      "result_id": "R35",
+      "experiment_id": "N39",
+      "bounded_result": "E3 negative-control shakedown",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "PARTIAL_SUPP_OR_OMITTED",
+      "coverage_note": "E3 shakedown is not clearly surfaced as a separate 800-observation control.",
+      "boundary": "Add one sentence or supplement row if it affects interpretation; never pool with full run.",
+      "evidence": "sp2027/analysis/e3_rig/samples_shakedown.jsonl; e3_rig_results_shakedown.json"
+    },
+    {
+      "result_id": "R36",
+      "experiment_id": "N40",
+      "bounded_result": "Outer E2/replay and benign-control families not represented by the nested 35-arm surface",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "PARTIAL_SUPP_ONLY",
+      "coverage_note": "Continuation/fault/qualification populations are summarized, but not every family/status is mapped to a run ID.",
+      "boundary": "Add a compact lineage/status table, not a pooled rate.",
+      "evidence": "artifacts/experiment_inventory.json; 17_MAXIMUM_ROOT_RECURSIVE_CRAWL.md"
+    },
+    {
+      "result_id": "R37",
+      "experiment_id": "N41",
+      "bounded_result": "Live nested Git state contains a deduplicated unregistered 74-session agent population",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "DUPLICATE_COVERED_BY_R10",
+      "coverage_note": "Nested 74-session population is represented by SP2-05.",
+      "boundary": "Not 148 runs.",
+      "evidence": "harness/v2/results/e2/_loop_out/; harness/v3/results/e2/_loop_out/; 18_COMMITTED_UNCOMMITTED_WORKTREE_RECONCILIATION.md"
+    },
+    {
+      "result_id": "R38",
+      "experiment_id": "N42",
+      "bounded_result": "V2 and V3 are distinct retained Git-state lineages but not distinct physical repetitions",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "V2/V3 byte-identical lineage is stated in SP2-05.",
+      "boundary": "Lineage, not replication.",
+      "evidence": "harness/v2/results/e2/_loop_out/; harness/v3/results/e2/_loop_out/; 18_COMMITTED_UNCOMMITTED_WORKTREE_RECONCILIATION.md"
+    },
+    {
+      "result_id": "R39",
+      "experiment_id": "N43",
+      "bounded_result": "Untracked V4 surface is a wrapper/configuration lineage with no completed results",
+      "grade": "ARTIFACT_ONLY",
+      "coverage_status": "OMITTED_NONRESULT",
+      "coverage_note": "Untracked V4 wrapper has no completed result.",
+      "boundary": "Keep in non-results ledger only.",
+      "evidence": "harness/v4/acts_audit_v4.py; harness/v4/record_builder.py; harness/v4/run_agent_operations_v4.py"
+    },
+    {
+      "result_id": "R40",
+      "experiment_id": "N44",
+      "bounded_result": "Ignored campaign logs retain historical summary outcomes outside the raw session tree",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "OMITTED_NONRESULT",
+      "coverage_note": "Ignored campaign logs are not raw oracle records and conflict with canonical trees.",
+      "boundary": "Do not add to denominators.",
+      "evidence": "harness/rerun/agent_campaign*.log; 18_COMMITTED_UNCOMMITTED_WORKTREE_RECONCILIATION.md"
+    },
+    {
+      "result_id": "R41",
+      "experiment_id": "N45",
+      "bounded_result": "Contract-v3 deterministic qualification passed four cryptographic interface conditions",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "Contract-v3 4/4 interface qualification and CBC query count are reported.",
+      "boundary": "Control, not model capability.",
+      "evidence": "sp2027/agent-eval/contract_qualification_v3_20261014_04/RESULTS.json"
+    },
+    {
+      "result_id": "R42",
+      "experiment_id": "N46",
+      "bounded_result": "Contract-v3 regression checks reject stale or malformed execution paths",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "Regression/freshness and rejection controls are reported.",
+      "boundary": "Implementation validation only.",
+      "evidence": "sp2027/agent-eval/contract_regression_v3_20261014_01/RESULTS.json; malformed.json"
+    },
+    {
+      "result_id": "R43",
+      "experiment_id": "N47",
+      "bounded_result": "Stable gpt-oss capture retained four accepted operation sessions",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "Stable gpt-oss 8-row incomplete capture is disclosed separately.",
+      "boundary": "Descriptive, not balanced capability rate.",
+      "evidence": "sp2027/agent-eval/runs_e2_stable_capture_20261014_01/"
+    },
+    {
+      "result_id": "R44",
+      "experiment_id": "N48",
+      "bounded_result": "Claude 4.6 V3 clean-capture campaign retained a completed partial grid",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "Partial Claude V3 capture is disclosed as incomplete.",
+      "boundary": "Keep 6/9 (or exact retained partition) separate from V4.",
+      "evidence": "sp2027/agent-eval/runs_r1_clean_capture_first_claude46_20261014_03/; R1_CLAUDE46_V3_RESULTS.md"
+    },
+    {
+      "result_id": "R45",
+      "experiment_id": "N49",
+      "bounded_result": "Claude 4.6 V4 clean-capture attempt retained mostly harness-failure rows",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "Invalid V4-01 harness-failure cohort is disclosed as non-result.",
+      "boundary": "Do not use as capability denominator.",
+      "evidence": "sp2027/agent-eval/runs_r1_clean_capture_first_v4_claude46_20261014_01/"
+    },
+    {
+      "result_id": "R46",
+      "experiment_id": "N50",
+      "bounded_result": "Claude 4.6 V4 clean-capture cohort completed its 12 scheduled rows",
+      "grade": "PRIMARY_BOUNDED",
+      "coverage_status": "COVERED_MAIN_AND_SUPP_CORRECTED",
+      "coverage_note": "Raw V4 files support 8/12 with RC4 0/3, ChaCha20 2/3, CBC 3/3, ECDSA 3/3; the old ledger breakdown is wrong.",
+      "boundary": "Use V4_RAW_COHORT_CENSUS_20261018.json as the correction authority.",
+      "evidence": "sp2027/agent-eval/runs_r1_clean_capture_first_v4_claude46_20261014_02/"
+    },
+    {
+      "result_id": "R47",
+      "experiment_id": "N51",
+      "bounded_result": "E2 contract-v3 campaign completed its schedule as provider-unavailable",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "Provider-unavailable contract-v3 schedule is disclosed separately.",
+      "boundary": "Not model failure.",
+      "evidence": "sp2027/agent-eval/runs_e2_contract_v3_20261014_01/; V3_COHORT_FINAL_RESULTS.md"
+    },
+    {
+      "result_id": "R48",
+      "experiment_id": "N52",
+      "bounded_result": "H1 V2 provenance positive control passed three deterministic repetitions",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_MAIN_AND_SUPP",
+      "coverage_note": "H1 V2 provenance positive control 3/3 is in audit/appendix material.",
+      "boundary": "Not cryptographic capability.",
+      "evidence": "sp2027/agent-eval/h1_positive_control_20261014_v2/"
+    },
+    {
+      "result_id": "R49",
+      "experiment_id": "N53",
+      "bounded_result": "Two additional V3 deterministic qualification records passed RC4 and ChaCha20",
+      "grade": "REPRODUCIBLE_CONTROL",
+      "coverage_status": "COVERED_SUPP_ONLY",
+      "coverage_note": "Additional deterministic qualification 2/2 branches are represented in S20.",
+      "boundary": "Not independent model runs.",
+      "evidence": "sp2027/agent-eval/contract_qualification_v3_20261014_02/; contract_qualification_v3_20261014_03/"
+    },
+    {
+      "result_id": "R50",
+      "experiment_id": "N54",
+      "bounded_result": "Additional current outer agent-evaluation branches are retained but incomplete or infrastructure-bound",
+      "grade": "HISTORICAL_LIMITED",
+      "coverage_status": "PARTIAL_SUPP_ONLY",
+      "coverage_note": "Additional outer branches are acknowledged but not fully run-level mapped in the paper.",
+      "boundary": "Keep incomplete/provider-bound branches as non-results with paths.",
+      "evidence": "sp2027/agent-eval/runs_e2_clean_primary_20261006_01/; runs_e2_backend_qual_20261006_02/; runs_w2_pilot/; h1_positive_control_20261014/"
+    }
+  ]
+}

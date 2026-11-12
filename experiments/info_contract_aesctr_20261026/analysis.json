@@ -1,0 +1,122 @@
+{
+ "cmh_premise_stratified_by_seed": {
+  "chi2_cc": 45.0469,
+  "p_two_sided": 0.0,
+  "sum_a": 32.0,
+  "sum_expected": 16.0,
+  "sum_var": 5.3333
+ },
+ "cross_fixture_descriptive": {
+  "AES-CTR (hidden premise, claude label) P013 n=16": {
+   "C1": "16/16",
+   "C2": "0/16",
+   "C3": "16/16",
+   "C4": "0/16"
+  },
+  "ChaCha20 (hidden premise, claude label)": {
+   "P010 n=4": {
+    "C1": "4/4",
+    "C2": "4/4",
+    "C3": "4/4",
+    "C4": "0/4"
+   },
+   "P010L2 n=8": {
+    "C1": "8/8",
+    "C2": "0/8",
+    "C3": "8/8",
+    "C4": "0/8"
+   },
+   "P010N16 n=16": {
+    "C1": "16/16",
+    "C2": "3/16",
+    "C3": "16/16",
+    "C4": "6/16"
+   },
+   "P010P n=8": {
+    "C1": "8/8",
+    "C2": "0/8",
+    "C3": "8/8",
+    "C4": "3/8"
+   }
+  },
+  "ChaCha20 (hidden premise, gpt-oss vendor) P010X1 n=16": {
+   "C1": "16/16",
+   "C2": "6/16",
+   "C3": "16/16",
+   "C4": "6/16"
+  },
+  "ECDSA (observable premise) P012 n=16": {
+   "C1": "16/16",
+   "C2": "16/16",
+   "C3": "16/16",
+   "C4": "16/16"
+  },
+  "RC4 (saturated ceiling, honest null)": {
+   "C1": "4/4",
+   "C2": "4/4",
+   "C3": "4/4",
+   "C4": "4/4"
+  },
+  "note": "descriptive only \u2014 never pooled as a rate; premise-observability axis"
+ },
+ "falsifiers": {
+  "F1_stated_arm_ceiling": "FALSE (C1 at stated-arm ceiling; the fixture reproduces stated-arm determinism)",
+  "F2_naming_gates": "FALSE (C3 == C1; naming never gates when the premise is stated)",
+  "F3_derive_frame": "FALSE (C2 far below C1: the derive-from-observations frame does not sustain success \u2014 0/16; the hidden premise is not recoverable from the public observations)"
+ },
+ "instrument_duplicates": [],
+ "leak_scan_verdict": "PASS",
+ "naming_marginal": {
+  "A+ (C1+C4)": "16/32",
+  "A- (C2+C3)": "16/32",
+  "fisher_two_sided_p": 1.0
+ },
+ "per_cell": {
+  "C1": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 16
+  },
+  "C2": {
+   "accepted": 0,
+   "sessions": 16,
+   "submissions": 31,
+   "turns": 32
+  },
+  "C3": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 16
+  },
+  "C4": {
+   "accepted": 0,
+   "sessions": 16,
+   "submissions": 27,
+   "turns": 32
+  }
+ },
+ "premise_marginal": {
+  "B+ (C1+C3)": "32/32",
+  "B- (C2+C4)": "0/32",
+  "fisher_two_sided_p": 1.09133e-18
+ },
+ "primary_paired_C1_vs_C4": {
+  "c1_wins": 16,
+  "c4_wins": 0,
+  "discordant": 16,
+  "exact_binomial_two_sided_p": 3.052e-05,
+  "ties": 0
+ },
+ "protocol": "P013-INFO-CONTRACT-2X2-AESCTR-KEYSTREAM-REUSE-v1",
+ "reading": "Second hidden-premise family, preregistered: the premise is PERFECTLY load-bearing here. Withholding the premise sentence drops both withheld arms to 0/16 even when the family is named (C4) \u2014 unlike ChaCha20, where the derive frame recovers the all-zero reference on a minority of seeds. The premise alone suffices regardless of naming (C3 = 16/16). Combined with P012 (observable premise: null by construction) this locates the contract effect on the observability axis: it appears exactly when the load-bearing premise is a fact about secret content that semantic security makes unobservable.",
+ "schema": "infoc-p013-analysis/1",
+ "unique_sessions": 64,
+ "usage": {
+  "calls": 96,
+  "estimated_accounting_cost_usd": 0.411255,
+  "input_tokens": 33725,
+  "output_tokens": 20672
+ }
+}

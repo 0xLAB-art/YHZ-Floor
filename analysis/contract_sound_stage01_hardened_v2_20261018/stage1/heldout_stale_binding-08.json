@@ -1,0 +1,29 @@
+{
+  "case_id": "stale_binding-08",
+  "defect_family": "stale_binding",
+  "label_disagreement": false,
+  "primitive": "ChaCha20_Nonce_Repeat",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "hash:execution_trace",
+      "task-session-binding"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "lengths_match": true,
+      "xor_recovery_matches": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 43.135557003552094,
+  "split": "heldout",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "hash:execution_trace"
+  },
+  "validator_overhead_ms": 35.46900398214348
+}

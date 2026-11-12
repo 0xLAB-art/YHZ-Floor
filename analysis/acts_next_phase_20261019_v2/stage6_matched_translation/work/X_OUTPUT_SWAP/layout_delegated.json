@@ -1,0 +1,56 @@
+{
+ "signatures": [
+  {
+   "keyid": "0b08049444925fa5d4e6b891be75fc513cd999595be8d0125d1a3ce52f76c962",
+   "sig": "40831f5491010f8a8131f5a267f0d75bf9cbe736bf794f074bbdd293ac96671bad1a7cbf403a6545b427493c28150dfc86ed1e68052fd23021aa906044816500"
+  }
+ ],
+ "signed": {
+  "_type": "layout",
+  "expires": "2035-01-01T00:00:00Z",
+  "inspect": [
+   {
+    "_type": "inspection",
+    "expected_materials": [],
+    "expected_products": [],
+    "name": "adjudicate",
+    "run": [
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/.venv/bin/python",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/delegation_adapter.py",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/runs/20261020T091958Z_v2/cases/X_OUTPUT_SWAP/certificate.e2a.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/issuers_public.json",
+     "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/trust/trust_policy.json"
+    ]
+   }
+  ],
+  "keys": {
+   "0b080494": {
+    "keyid": "0b08049444925fa5d4e6b891be75fc513cd999595be8d0125d1a3ce52f76c962",
+    "keytype": "ed25519",
+    "keyval": {
+     "public": "5822fe505a0131c90136ec3d9e50de165ecfcdd90b2cc8c7509ed0bfade22b09"
+    },
+    "scheme": "ed25519"
+   }
+  },
+  "readme": "matched translation of the ACTS attribution claim",
+  "steps": [
+   {
+    "_type": "step",
+    "expected_command": [
+     "/usr/bin/python3",
+     "-I",
+     "/proc/self/fd/3",
+     "public_instance.json"
+    ],
+    "expected_materials": [],
+    "expected_products": [],
+    "name": "execute",
+    "pubkeys": [
+     "0b080494"
+    ],
+    "threshold": 1
+   }
+  ]
+ }
+}

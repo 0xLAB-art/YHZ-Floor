@@ -1,0 +1,29 @@
+{
+  "case_id": "replay_cross_session-04",
+  "defect_family": "replay_cross_session",
+  "label_disagreement": false,
+  "primitive": "ChaCha20_Nonce_Repeat",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "hash:execution_trace",
+      "execution-session-binding"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "lengths_match": true,
+      "xor_recovery_matches": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 42.37201699288562,
+  "split": "dev",
+  "stored_label": "REJECTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "hash:execution_trace"
+  },
+  "validator_overhead_ms": 39.26581802079454
+}

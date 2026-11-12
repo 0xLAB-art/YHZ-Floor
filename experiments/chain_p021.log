@@ -1,0 +1,23 @@
+2026-11-02T20:33:14+02:00 watcher start; waiting for run_p021_aesgcm.py to exit
+2026-11-03T01:27:18+02:00 runner exited
+2026-11-03T01:27:19+02:00 analysis written
+appended 248 rows for info_contract_aesgcm_random_p021_20261102 | cost this run $7.512657
+# P021-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1
+# fixture: AES-GCM (keystream-exposing), floor 4200, label gpt-6-astra
+# instances: 96 drawn from seeds_random_p021_20261102T182345Z.json (seeds_sha256 07a9e4422a0c7b7f72453a8dadc3104aba7454e5b1f605ac39661b24b820f867)
+
+cell  accepted/evaluable  wilson95            drops
+C1    53/53             (0.9324, 1.0)        43
+C2     0/15             (0.0, 0.2039)        81
+C3    53/53             (0.9324, 1.0)        43
+C4     0/37             (0.0, 0.0941)        59
+
+paired C1-vs-C4: 26/0 over 26 evaluable instance pairs, exact binomial two-sided p=2.9802322387695312e-08
+premise marginal: 106/106 vs 0/52, Fisher two-sided p=4.988847023832461e-43
+
+classification: direction replicated
+  rule (frozen): b10 > b01 and exact two-sided p < 0.05 on evaluable instance pairs
+instrument-duplicate rows (flagged): 1
+
+No rate is pooled across cohorts; instances are the unit of analysis.
+2026-11-03T01:27:19+02:00 watcher finished

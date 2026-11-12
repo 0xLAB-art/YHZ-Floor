@@ -1,0 +1,68 @@
+\section{From Correctness to Execution Evidence}
+\label{sec:information}
+RQ2 distinguishes recovery from target effect. RQ3 asks what the accepted
+result establishes about its execution history. Two diagnostics motivate the
+attribution tests: H1 V2 checks whether the scorer grades the requested
+object; E5 checks whether a committed candidate match establishes its claimed
+acquisition path. These are separate contracts, not interventions on V4.
+
+\subsection{Response-Only Information Contract (H1 V2)}\label{sec:h1}
+The H1 V2 arm evaluates response-only outputs on three sufficient-condition tasks (RC4 known-plaintext, ECDSA
+nonce-reuse, XOR mask). Ninety provider responses are all delivered with a
+recorded \texttt{end\_turn}; the parser accepts 81/90, and 51/60
+sufficient-condition responses are candidate-bearing. Every parser-valid
+sufficient-condition response contains the requested field; the remaining 9
+fail the parser.
+
+\begin{table}[t]\centering\footnotesize
+\caption{H1 V2 response-only results. ``Fields'' counts replies containing the
+requested candidate field; ``Recoveries'' reports sufficient-condition
+recovery under corrected scoring.}\label{tab:h1}
+\begin{tabular}{@{}l c c c c@{}}
+\toprule
+\tablehead Task & Replies & Fields & Recoveries & Abstentions \\
+\midrule
+RC4 (plaintext) & 20 & 20 & 0 & --- \\
+ECDSA (scalar) & 20 & 15 & 0 & --- \\
+XOR (mask) & 20 & 16 & 0 & --- \\
+Instructed abstention & 30 & --- & --- & 30/30 \\
+\bottomrule
+\end{tabular}
+\fignote{The XOR prompt requests \texttt{mask\_hex} but the runner passes the
+protected target plaintext as truth to an equality scorer---an endpoint
+mismatch. Deterministic controls test the scoring contract, not capability:
+10 seeds show that XORing the sample input/output recovers the correct mask
+but the original scorer rejects it, and placing the target plaintext in the
+mask field passes. Retrospective rescoring yields 0/20 exact masks. The RC4 and
+ECDSA arms have 40 attempted replies but 35 candidate-bearing replies, so their
+recovery total is 0/35. The 30/30 instructed abstentions
+(\texttt{ABSTAIN\_UNDERDETERMINED}) are instruction compliance, not
+independent recognition of insufficiency.}
+\end{table}
+
+\subsection{Escrow Acquisition Authority (E5)}\label{sec:escrow}
+The E5 sealed-escrow probe tests whether a candidate can be acquired through
+an intended leakage channel under pre-session commitment. Of 14 graded
+records, 1 candidate match is retained (R30, V* candidate-verdict tier): the candidate SHA-256 matches the
+pre-session commitment with no pre-verification reveal; the session runs
+3 turns and 2{,}000 oracle requests; T$_M$ is 222.6975\,s and the oracle span
+agrees within 65\,$\mu$s (drift 65{,}177\,ns). The reconstructed workload is
+8{,}714 relayed calls $=$ a 2{,}000-request tail $+$ 6{,}714 eviction events.
+R1--R8 grade 0/4; R9--R31 grade 10 with 13 PU. The canonical E5 population is
+29 records (14 graded $+$ 15 provider interruptions); the initial graded arm
+is 0/4 and the extension 1/10, never matched before/after with the historical
+unblinded 16/16.
+
+The boundaries are structural: the launch path executes generated code on the
+host; escrow handlers do not authenticate caller roles; the victim container
+does not sandbox generated code; and the recorded verifier identity hashes an
+older four-task verifier, not the selected E5-capable launcher. R30 therefore
+demonstrates candidate correctness under commitment, not exclusive
+acquisition and not a verified enforcement boundary.
+
+\subsection{Consequences of Evaluator-Boundary Defects}\label{sec:evalclass}
+The H1 V2 scorer mismatch, the E5 verifier-identity mismatch, the Cybench
+conditional answer-flow, and the post-freeze leak gates are related
+verification-authority risks: evaluator-held truth can reach the agent or bind
+to an unintended verifier. They are not asserted to share one root cause, and
+verification architecture is part of what a capability number means.

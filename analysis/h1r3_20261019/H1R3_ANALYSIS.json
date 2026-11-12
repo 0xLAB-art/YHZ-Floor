@@ -1,0 +1,2168 @@
+{
+  "alpha": 0.05,
+  "by_kind": {
+    "c0": {
+      "SUCCESS": 20
+    },
+    "noise": {
+      "CRYPTOGRAPHIC_PREDICATE": 1,
+      "SUCCESS": 63
+    },
+    "primary": {
+      "CRYPTOGRAPHIC_PREDICATE": 27,
+      "EXECUTION": 2,
+      "SOURCE_SYNTAX": 1,
+      "SUCCESS": 738
+    }
+  },
+  "c0": {
+    "correct_abstention": 20,
+    "note": "different predicate; never pooled with the representation contrast",
+    "scheduled": 20,
+    "terminal_counts": {
+      "SUCCESS": 20
+    }
+  },
+  "complexity_interaction": {
+    "R1": {
+      "arm": "R1",
+      "coefficients": {
+        "b0": 3.012261575505202,
+        "b1": 22.926600640829275,
+        "b2": 22.926600591271686,
+        "b3": 0.7174398731289876,
+        "b4": -22.926600640829264,
+        "b5": -22.51316736307193
+      },
+      "interaction_terms": [
+        {
+          "ci_hi": -21.76199566229639,
+          "ci_lo": -24.09120561936214,
+          "coef": -22.926600640829264,
+          "level_contrast": "L2",
+          "se_cluster_robust": 0.59137700084637,
+          "z": -38.76816414574299
+        },
+        {
+          "ci_hi": -20.342230828089857,
+          "ci_lo": -24.684103898054,
+          "coef": -22.51316736307193,
+          "level_contrast": "L3",
+          "se_cluster_robust": 1.1023840364334043,
+          "z": -20.422254512964333
+        }
+      ],
+      "levels": [
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "n_clusters": 256,
+      "note": "cluster-robust descriptive model; not a confirmatory test",
+      "status": "ESTIMATED"
+    },
+    "R2": {
+      "arm": "R2",
+      "coefficients": {
+        "b0": 3.012261575505199,
+        "b1": -1.2021529676089475,
+        "b2": 22.92660097339971,
+        "b3": 0.7174398731289886,
+        "b4": -22.926600973399708,
+        "b5": 0.9064387234599058
+      },
+      "interaction_terms": [
+        {
+          "ci_hi": -21.26673322189929,
+          "ci_lo": -24.586468724900126,
+          "coef": -22.926600973399708,
+          "level_contrast": "L2",
+          "se_cluster_robust": 0.8428674364079374,
+          "z": -27.200719808451016
+        },
+        {
+          "ci_hi": 3.002700861677432,
+          "ci_lo": -1.1898234147576203,
+          "coef": 0.9064387234599058,
+          "level_contrast": "L3",
+          "se_cluster_robust": 1.0644649809488043,
+          "z": 0.8515439584043031
+        }
+      ],
+      "levels": [
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "n_clusters": 256,
+      "note": "cluster-robust descriptive model; not a confirmatory test",
+      "status": "ESTIMATED"
+    }
+  },
+  "contrasts": {
+    "L1|R1_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": 0.21875,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 29,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20005",
+            "reference_stage": "SOURCE_SYNTAX",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20012",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20015",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.21875
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": -0.11875
+        },
+        "estimate": 0.09375,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": 0.09375,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 3,
+        "discordant": 3,
+        "p_value": 0.25
+      },
+      "n": 32,
+      "ref_rate": 0.90625,
+      "stage_attribution": {},
+      "treat_rate": 1.0
+    },
+    "L1|R1_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 32,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": []
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.1
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "discordant": 0,
+        "note": "no discordant pairs; test is uninformative",
+        "p_value": 1.0
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {},
+      "treat_rate": 1.0,
+      "zero_discordance_bound": {
+        "n": 32,
+        "note": "zero discordant pairs; bootstrap interval is degenerate, use this exact bound",
+        "one_sided_95_upper_bound_on_abs_tau": 0.1089
+      }
+    },
+    "L1|R1_vs_R0|pooled": {
+      "ci_high": 0.109375,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 61,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20005",
+            "reference_stage": "SOURCE_SYNTAX",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20012",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20015",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.109375
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": -0.009374999999999994
+        },
+        "estimate": 0.046875,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": 0.046875,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 3,
+        "discordant": 3,
+        "p_value": 0.25
+      },
+      "n": 64,
+      "ref_rate": 0.953125,
+      "stage_attribution": {},
+      "treat_rate": 1.0
+    },
+    "L1|R2_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": 0.0007812499999317879,
+      "ci_low": -0.375,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 20,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20001",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20004",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20006",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20008",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20013",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20017",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20020",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20027",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20028",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20005",
+            "reference_stage": "SOURCE_SYNTAX",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20012",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20015",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 9,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.375,
+          0.0007812499999317879
+        ],
+        "distance_to_margin": {
+          "lower": -0.275,
+          "upper": 0.09921875000006822
+        },
+        "estimate": -0.1875,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": -0.1875,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 9,
+        "c": 3,
+        "discordant": 12,
+        "p_value": 0.14599609375
+      },
+      "n": 32,
+      "ref_rate": 0.90625,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 9
+      },
+      "treat_rate": 0.71875
+    },
+    "L1|R2_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 32,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": []
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.1
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "discordant": 0,
+        "note": "no discordant pairs; test is uninformative",
+        "p_value": 1.0
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {},
+      "treat_rate": 1.0,
+      "zero_discordance_bound": {
+        "n": 32,
+        "note": "zero discordant pairs; bootstrap interval is degenerate, use this exact bound",
+        "one_sided_95_upper_bound_on_abs_tau": 0.1089
+      }
+    },
+    "L1|R2_vs_R0|pooled": {
+      "ci_high": 0.0,
+      "ci_low": -0.203125,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 52,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20001",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20004",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20006",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20008",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20013",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20017",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20020",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20027",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20028",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20005",
+            "reference_stage": "SOURCE_SYNTAX",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20012",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L1-seed20015",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 9,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.203125,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": -0.103125,
+          "upper": 0.1
+        },
+        "estimate": -0.09375,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": -0.09375,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 9,
+        "c": 3,
+        "discordant": 12,
+        "p_value": 0.14599609375
+      },
+      "n": 64,
+      "ref_rate": 0.953125,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 9
+      },
+      "treat_rate": 0.859375
+    },
+    "L2|R1_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 32,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": []
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.1
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "discordant": 0,
+        "note": "no discordant pairs; test is uninformative",
+        "p_value": 1.0
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {},
+      "treat_rate": 1.0,
+      "zero_discordance_bound": {
+        "n": 32,
+        "note": "zero discordant pairs; bootstrap interval is degenerate, use this exact bound",
+        "one_sided_95_upper_bound_on_abs_tau": 0.1089
+      }
+    },
+    "L2|R1_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 32,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": []
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.1
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "discordant": 0,
+        "note": "no discordant pairs; test is uninformative",
+        "p_value": 1.0
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {},
+      "treat_rate": 1.0,
+      "zero_discordance_bound": {
+        "n": 32,
+        "note": "zero discordant pairs; bootstrap interval is degenerate, use this exact bound",
+        "one_sided_95_upper_bound_on_abs_tau": 0.1089
+      }
+    },
+    "L2|R1_vs_R0|pooled": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 64,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": []
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.1
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "discordant": 0,
+        "note": "no discordant pairs; test is uninformative",
+        "p_value": 1.0
+      },
+      "n": 64,
+      "ref_rate": 1.0,
+      "stage_attribution": {},
+      "treat_rate": 1.0,
+      "zero_discordance_bound": {
+        "n": 64,
+        "note": "zero discordant pairs; bootstrap interval is degenerate, use this exact bound",
+        "one_sided_95_upper_bound_on_abs_tau": 0.056
+      }
+    },
+    "L2|R2_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": -0.09375,
+      "ci_low": -0.375,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 25,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30003",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30006",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30008",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30014",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30019",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30024",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30026",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": []
+      },
+      "discordant_ref_only": 7,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.375,
+          -0.09375
+        ],
+        "distance_to_margin": {
+          "lower": -0.275,
+          "upper": 0.19375
+        },
+        "estimate": -0.21875,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": -0.21875,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 7,
+        "c": 0,
+        "discordant": 7,
+        "p_value": 0.015625
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 7
+      },
+      "treat_rate": 0.78125
+    },
+    "L2|R2_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.0,
+      "ci_low": -0.15625,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 30,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": 0,
+            "instance": "XOR_Keystream_Reuse-L2-seed30005",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": 0,
+            "instance": "XOR_Keystream_Reuse-L2-seed30026",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": []
+      },
+      "discordant_ref_only": 2,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.15625,
+          0.0
+        ],
+        "distance_to_margin": {
+          "lower": -0.056249999999999994,
+          "upper": 0.1
+        },
+        "estimate": -0.0625,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": -0.0625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 2,
+        "c": 0,
+        "discordant": 2,
+        "p_value": 0.5
+      },
+      "n": 32,
+      "ref_rate": 1.0,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 2
+      },
+      "treat_rate": 0.9375
+    },
+    "L2|R2_vs_R0|pooled": {
+      "ci_high": -0.0625,
+      "ci_low": -0.234375,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 55,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30003",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30006",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30008",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30014",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30019",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30024",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L2-seed30026",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": 0,
+            "instance": "XOR_Keystream_Reuse-L2-seed30005",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": 0,
+            "instance": "XOR_Keystream_Reuse-L2-seed30026",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": []
+      },
+      "discordant_ref_only": 9,
+      "discordant_treat_only": 0,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.234375,
+          -0.0625
+        ],
+        "distance_to_margin": {
+          "lower": -0.134375,
+          "upper": 0.1625
+        },
+        "estimate": -0.140625,
+        "margin": 0.1,
+        "status": "INCONCLUSIVE"
+      },
+      "estimate": -0.140625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 9,
+        "c": 0,
+        "discordant": 9,
+        "p_value": 0.00390625
+      },
+      "n": 64,
+      "ref_rate": 1.0,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 9
+      },
+      "treat_rate": 0.859375
+    },
+    "L3|R1_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": 0.0625,
+      "ci_low": -0.0625,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 60,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10001",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10029",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 2,
+      "discordant_treat_only": 2,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.0625,
+          0.0625
+        ],
+        "distance_to_margin": {
+          "lower": 0.037500000000000006,
+          "upper": 0.037500000000000006
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 2,
+        "c": 2,
+        "discordant": 4,
+        "p_value": 1.0
+      },
+      "n": 64,
+      "ref_rate": 0.96875,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 2
+      },
+      "treat_rate": 0.96875
+    },
+    "L3|R1_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.046875,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 63,
+      "discordant_detail": {
+        "ref_only": [],
+        "treat_only": [
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 1,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          0.0,
+          0.046875
+        ],
+        "distance_to_margin": {
+          "lower": 0.1,
+          "upper": 0.053125000000000006
+        },
+        "estimate": 0.015625,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.015625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 1,
+        "discordant": 1,
+        "p_value": 1.0
+      },
+      "n": 64,
+      "ref_rate": 0.984375,
+      "stage_attribution": {},
+      "treat_rate": 1.0
+    },
+    "L3|R1_vs_R0|pooled": {
+      "ci_high": 0.0390625,
+      "ci_low": -0.0234375,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 123,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10001",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10029",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "discordant_ref_only": 2,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.0234375,
+          0.0390625
+        ],
+        "distance_to_margin": {
+          "lower": 0.0765625,
+          "upper": 0.060937500000000006
+        },
+        "estimate": 0.0078125,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0078125,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 2,
+        "c": 3,
+        "discordant": 5,
+        "p_value": 1.0
+      },
+      "n": 128,
+      "ref_rate": 0.9765625,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 2
+      },
+      "treat_rate": 0.984375
+    },
+    "L3|R2_vs_R0|ECDSA_Nonce_Reuse": {
+      "ci_high": 0.046875,
+      "ci_low": -0.078125,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 59,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10023",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10035",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10044",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          }
+        ]
+      },
+      "discordant_ref_only": 3,
+      "discordant_treat_only": 2,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.078125,
+          0.046875
+        ],
+        "distance_to_margin": {
+          "lower": 0.021875000000000006,
+          "upper": 0.053125000000000006
+        },
+        "estimate": -0.015625,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": -0.015625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 3,
+        "c": 2,
+        "discordant": 5,
+        "p_value": 1.0
+      },
+      "n": 64,
+      "ref_rate": 0.96875,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 3
+      },
+      "treat_rate": 0.953125
+    },
+    "L3|R2_vs_R0|XOR_Keystream_Reuse": {
+      "ci_high": 0.046875,
+      "ci_low": -0.046875,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 62,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": null,
+            "instance": "XOR_Keystream_Reuse-L3-seed10050",
+            "treatment_qualification": null,
+            "treatment_schema_errors": [
+              "not-executed"
+            ],
+            "treatment_stage": "EXECUTION",
+            "treatment_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 88, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 59, in main\n    keystream[pos]"
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "discordant_ref_only": 1,
+      "discordant_treat_only": 1,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.046875,
+          0.046875
+        ],
+        "distance_to_margin": {
+          "lower": 0.053125000000000006,
+          "upper": 0.053125000000000006
+        },
+        "estimate": 0.0,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": 0.0,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 1,
+        "c": 1,
+        "discordant": 2,
+        "p_value": 1.0
+      },
+      "n": 64,
+      "ref_rate": 0.984375,
+      "stage_attribution": {
+        "EXECUTION": 1
+      },
+      "treat_rate": 0.984375
+    },
+    "L3|R2_vs_R0|pooled": {
+      "ci_high": 0.03125,
+      "ci_low": -0.046875,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 121,
+      "discordant_detail": {
+        "ref_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10023",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10035",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "generalization_success": 0,
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10044",
+            "treatment_qualification": [],
+            "treatment_schema_errors": [],
+            "treatment_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "treatment_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "generalization_success": null,
+            "instance": "XOR_Keystream_Reuse-L3-seed10050",
+            "treatment_qualification": null,
+            "treatment_schema_errors": [
+              "not-executed"
+            ],
+            "treatment_stage": "EXECUTION",
+            "treatment_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 88, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 59, in main\n    keystream[pos]"
+          }
+        ],
+        "treat_only": [
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10033",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "ECDSA_Nonce_Reuse",
+            "instance": "ECDSA_Nonce_Reuse-L3-seed10052",
+            "reference_stage": "CRYPTOGRAPHIC_PREDICATE",
+            "reference_stderr": ""
+          },
+          {
+            "family": "XOR_Keystream_Reuse",
+            "instance": "XOR_Keystream_Reuse-L3-seed10062",
+            "reference_stage": "EXECUTION",
+            "reference_stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 87, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0316-xor-L3-10062-R0-r0-2d29f6b0/candidate.py\", line 23, in main\n    keystreams = ["
+          }
+        ]
+      },
+      "discordant_ref_only": 4,
+      "discordant_treat_only": 3,
+      "dropped": [],
+      "equivalence": {
+        "ci": [
+          -0.046875,
+          0.03125
+        ],
+        "distance_to_margin": {
+          "lower": 0.053125000000000006,
+          "upper": 0.06875
+        },
+        "estimate": -0.0078125,
+        "margin": 0.1,
+        "status": "EQUIVALENT_WITHIN_MARGIN"
+      },
+      "estimate": -0.0078125,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 4,
+        "c": 3,
+        "discordant": 7,
+        "p_value": 1.0
+      },
+      "n": 128,
+      "ref_rate": 0.9765625,
+      "stage_attribution": {
+        "CRYPTOGRAPHIC_PREDICATE": 3,
+        "EXECUTION": 1
+      },
+      "treat_rate": 0.96875
+    }
+  },
+  "generalization": {
+    "R0": {
+      "attempted": 254,
+      "rate": 0.9724,
+      "succeeded": 247
+    },
+    "R1": {
+      "attempted": 256,
+      "rate": 0.9844,
+      "succeeded": 252
+    },
+    "R2": {
+      "attempted": 255,
+      "rate": 0.9137,
+      "succeeded": 233
+    }
+  },
+  "legacy_counterfactual_contrasts": {
+    "L1|R1_vs_R0|pooled": {
+      "ci_high": 0.109375,
+      "ci_low": 0.0,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 61,
+      "discordant_ref_only": 0,
+      "discordant_treat_only": 3,
+      "estimate": 0.046875,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 0,
+        "c": 3,
+        "discordant": 3,
+        "p_value": 0.25
+      },
+      "n": 64,
+      "ref_rate": 0.953125,
+      "treat_rate": 1.0
+    },
+    "L1|R2_vs_R0|pooled": {
+      "ci_high": -0.25,
+      "ci_low": -0.53125,
+      "concordant_both_failure": 1,
+      "concordant_both_success": 34,
+      "discordant_ref_only": 27,
+      "discordant_treat_only": 2,
+      "estimate": -0.390625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 27,
+        "c": 2,
+        "discordant": 29,
+        "p_value": 1.6242265701293945e-06
+      },
+      "n": 64,
+      "ref_rate": 0.953125,
+      "treat_rate": 0.5625
+    },
+    "L2|R1_vs_R0|pooled": {
+      "ci_high": 0.390625,
+      "ci_low": 0.15625,
+      "concordant_both_failure": 0,
+      "concordant_both_success": 45,
+      "discordant_ref_only": 1,
+      "discordant_treat_only": 18,
+      "estimate": 0.265625,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 1,
+        "c": 18,
+        "discordant": 19,
+        "p_value": 7.62939453125e-05
+      },
+      "n": 64,
+      "ref_rate": 0.71875,
+      "treat_rate": 0.984375
+    },
+    "L2|R2_vs_R0|pooled": {
+      "ci_high": -0.140625,
+      "ci_low": -0.34375,
+      "concordant_both_failure": 18,
+      "concordant_both_success": 31,
+      "discordant_ref_only": 15,
+      "discordant_treat_only": 0,
+      "estimate": -0.234375,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 15,
+        "c": 0,
+        "discordant": 15,
+        "p_value": 6.103515625e-05
+      },
+      "n": 64,
+      "ref_rate": 0.71875,
+      "treat_rate": 0.484375
+    },
+    "L3|R1_vs_R0|pooled": {
+      "ci_high": 0.1640625,
+      "ci_low": 0.0078125,
+      "concordant_both_failure": 8,
+      "concordant_both_success": 91,
+      "discordant_ref_only": 9,
+      "discordant_treat_only": 20,
+      "estimate": 0.0859375,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 9,
+        "c": 20,
+        "discordant": 29,
+        "p_value": 0.06142834573984146
+      },
+      "n": 128,
+      "ref_rate": 0.78125,
+      "treat_rate": 0.8671875
+    },
+    "L3|R2_vs_R0|pooled": {
+      "ci_high": -0.2265625,
+      "ci_low": -0.421875,
+      "concordant_both_failure": 22,
+      "concordant_both_success": 52,
+      "discordant_ref_only": 48,
+      "discordant_treat_only": 6,
+      "estimate": -0.328125,
+      "interval_method": "paired percentile bootstrap over instances",
+      "mcnemar": {
+        "b": 48,
+        "c": 6,
+        "discordant": 54,
+        "p_value": 3.2565301566478407e-09
+      },
+      "n": 128,
+      "ref_rate": 0.78125,
+      "treat_rate": 0.453125
+    }
+  },
+  "legacy_policy": {
+    "R0": {
+      "legacy_reject_but_v3_success": 43,
+      "legacy_reject_rate": 0.1797,
+      "legacy_would_reject": 46,
+      "n": 256
+    },
+    "R1": {
+      "legacy_reject_but_v3_success": 16,
+      "legacy_reject_rate": 0.0625,
+      "legacy_would_reject": 16,
+      "n": 256
+    },
+    "R2": {
+      "legacy_reject_but_v3_success": 109,
+      "legacy_reject_rate": 0.4766,
+      "legacy_would_reject": 122,
+      "n": 256
+    }
+  },
+  "margin": 0.1,
+  "primary_holm": [
+    {
+      "label": "L3|R1_vs_R0|pooled",
+      "m": 2,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "rank": 1
+    },
+    {
+      "label": "L3|R2_vs_R0|pooled",
+      "m": 2,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "rank": 2
+    }
+  ],
+  "provider": {
+    "cache_read_tokens": 0,
+    "distinct_prompts": 788,
+    "distinct_source_hashes": 852,
+    "finish_reasons": {
+      "end_turn": 852
+    },
+    "http_status": {
+      "200": 852
+    },
+    "models": {
+      "claude-sonnet-4-6-free": 852
+    },
+    "total_input_tokens": 1036596,
+    "total_output_tokens": 777525
+  },
+  "replicate_noise": {
+    "cells": 32,
+    "cells_with_identical_source": 0,
+    "cells_with_unanimous_outcome": 31,
+    "detail": [
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10002",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10015",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10008",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": false,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10005",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10008",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10003",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10001",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10007",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10014",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10004",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10007",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10004",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10010",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10013",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10016",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10012",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10002",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10009",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10006",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10011",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10009",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10006",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10003",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10012",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10013",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10001",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10011",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10015",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10005",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10016",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "ECDSA_Nonce_Reuse",
+        "instance": "ECDSA_Nonce_Reuse-L3-seed10010",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "all_same_outcome": true,
+        "distinct_sources": 3,
+        "family": "XOR_Keystream_Reuse",
+        "instance": "XOR_Keystream_Reuse-L3-seed10014",
+        "k": 3,
+        "level": "L3",
+        "successes": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "mean_distinct_sources_per_cell": 3.0,
+    "outcome_agreement_rate": 0.9688,
+    "pairwise_outcome_kappa": -0.015873015873015872,
+    "sessions_in_cells": 96,
+    "source_level_identical_fraction": 0.0
+  },
+  "run_dir": "runs/confirmatory",
+  "sessions_total": 852,
+  "stage_by_arm": {
+    "R0": {
+      "CRYPTOGRAPHIC_PREDICATE": 4,
+      "EXECUTION": 1,
+      "SOURCE_SYNTAX": 1,
+      "SUCCESS": 250
+    },
+    "R1": {
+      "CRYPTOGRAPHIC_PREDICATE": 2,
+      "SUCCESS": 254
+    },
+    "R2": {
+      "CRYPTOGRAPHIC_PREDICATE": 21,
+      "EXECUTION": 1,
+      "SUCCESS": 234
+    }
+  },
+  "stage_by_arm_L3": {
+    "R0": {
+      "CRYPTOGRAPHIC_PREDICATE": 2,
+      "EXECUTION": 1,
+      "SUCCESS": 125
+    },
+    "R1": {
+      "CRYPTOGRAPHIC_PREDICATE": 2,
+      "SUCCESS": 126
+    },
+    "R2": {
+      "CRYPTOGRAPHIC_PREDICATE": 3,
+      "EXECUTION": 1,
+      "SUCCESS": 124
+    }
+  },
+  "terminal_counts": {
+    "CRYPTOGRAPHIC_PREDICATE": 28,
+    "EXECUTION": 2,
+    "SOURCE_SYNTAX": 1,
+    "SUCCESS": 821
+  },
+  "terminal_success_by_cell": {
+    "L1|ECDSA_Nonce_Reuse|R0": {
+      "n": 32,
+      "success": 29
+    },
+    "L1|ECDSA_Nonce_Reuse|R1": {
+      "n": 32,
+      "success": 32
+    },
+    "L1|ECDSA_Nonce_Reuse|R2": {
+      "n": 32,
+      "success": 23
+    },
+    "L1|XOR_Keystream_Reuse|R0": {
+      "n": 32,
+      "success": 32
+    },
+    "L1|XOR_Keystream_Reuse|R1": {
+      "n": 32,
+      "success": 32
+    },
+    "L1|XOR_Keystream_Reuse|R2": {
+      "n": 32,
+      "success": 32
+    },
+    "L2|ECDSA_Nonce_Reuse|R0": {
+      "n": 32,
+      "success": 32
+    },
+    "L2|ECDSA_Nonce_Reuse|R1": {
+      "n": 32,
+      "success": 32
+    },
+    "L2|ECDSA_Nonce_Reuse|R2": {
+      "n": 32,
+      "success": 25
+    },
+    "L2|XOR_Keystream_Reuse|R0": {
+      "n": 32,
+      "success": 32
+    },
+    "L2|XOR_Keystream_Reuse|R1": {
+      "n": 32,
+      "success": 32
+    },
+    "L2|XOR_Keystream_Reuse|R2": {
+      "n": 32,
+      "success": 30
+    },
+    "L3|ECDSA_Nonce_Reuse|R0": {
+      "n": 64,
+      "success": 62
+    },
+    "L3|ECDSA_Nonce_Reuse|R1": {
+      "n": 64,
+      "success": 62
+    },
+    "L3|ECDSA_Nonce_Reuse|R2": {
+      "n": 64,
+      "success": 61
+    },
+    "L3|XOR_Keystream_Reuse|R0": {
+      "n": 64,
+      "success": 63
+    },
+    "L3|XOR_Keystream_Reuse|R1": {
+      "n": 64,
+      "success": 64
+    },
+    "L3|XOR_Keystream_Reuse|R2": {
+      "n": 64,
+      "success": 63
+    }
+  }
+}

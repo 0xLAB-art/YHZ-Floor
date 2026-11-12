@@ -1,0 +1,197 @@
+{
+  "cases": [
+    {
+      "integers": [
+        -8,
+        -24,
+        8,
+        20
+      ],
+      "ordinal": 0,
+      "run_id": "9b058780-dc64-5012-bb08-434f281e5188",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        5,
+        36,
+        -6,
+        60
+      ],
+      "ordinal": 1,
+      "run_id": "0f41fe7f-ccf7-5ee7-9bc2-67d4f2937804",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        55,
+        -14,
+        30,
+        -12
+      ],
+      "ordinal": 2,
+      "run_id": "ddbc4d38-6016-57d6-89ca-41e5f7defae6",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        20,
+        46,
+        16,
+        -4
+      ],
+      "ordinal": 3,
+      "run_id": "1cf97d91-ebdb-5510-b2b5-23458595467e",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        -3,
+        -18,
+        1,
+        -8
+      ],
+      "ordinal": 4,
+      "run_id": "cd8ce73f-8165-5bfe-a0f5-fb2ca42bd4da",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        4,
+        20,
+        3,
+        -6
+      ],
+      "ordinal": 5,
+      "run_id": "8a16e60a-88da-5d7c-aef1-2735307b4ff7",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        -11,
+        52,
+        1,
+        -21
+      ],
+      "ordinal": 6,
+      "run_id": "dd081a6f-4da2-5026-9075-c28288e4de51",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        -12,
+        23,
+        24,
+        -2
+      ],
+      "ordinal": 7,
+      "run_id": "8b08833b-5302-5124-b2d7-382fb9bb2a71",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        17,
+        -23,
+        -1,
+        5
+      ],
+      "ordinal": 8,
+      "run_id": "5a8e0213-bc7d-5b43-8be4-9fb0c4fb5105",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        19,
+        58,
+        17,
+        2
+      ],
+      "ordinal": 9,
+      "run_id": "15cb609d-04a5-5051-ab28-f49c0638842e",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        5,
+        46,
+        11,
+        56
+      ],
+      "ordinal": 10,
+      "run_id": "fad194f1-72ba-5fc1-9338-16024db096c7",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    },
+    {
+      "integers": [
+        -28,
+        -28,
+        48,
+        12
+      ],
+      "ordinal": 11,
+      "run_id": "de1ddc64-83ed-5dcb-bd0c-807d99cf02d9",
+      "task": "integer_sum",
+      "track": "benign_no_tools"
+    }
+  ],
+  "created_utc": "2026-10-04T17:20:55.725054+00:00",
+  "environment": {
+    "container_digest": null,
+    "execution": "native_not_containerized",
+    "machine": "x86_64",
+    "python": "3.12.3",
+    "release": "7.0.0-38-generic",
+    "system": "Linux"
+  },
+  "exclusions": "retain every scheduled case and failure; no selective dropping",
+  "fault_backoff_seconds": 0.002,
+  "grade": "strict integer-only response equals Python sum; no retries for local",
+  "mode": "local",
+  "model_snapshot": {
+    "details": {
+      "families": [
+        "gemma4"
+      ],
+      "family": "gemma4",
+      "format": "gguf",
+      "parameter_size": "7.5B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "37709e679eb9da5d69501b3cd417af714b8a91ceb23b14dce849e4503e5dd225",
+    "name": "gemma4local:latest",
+    "size": 5335290098
+  },
+  "namespace": "b7ce684d-217a-42a1-b2f2-7a2c90f43e9e",
+  "options": {
+    "num_ctx": 2048,
+    "num_predict": 32,
+    "seed": 20261004,
+    "temperature": 0
+  },
+  "prompt_template": "Return only the integer sum, no explanation: {integers}",
+  "request": {
+    "keep_alive": "5m",
+    "stream": false,
+    "think": false
+  },
+  "runner_sha256": "c5cee7ab45c5799555cff5d5f9c504067a0903bf3941a604e709e17692c5cc6d",
+  "runtime": {
+    "version": "0.20.5"
+  },
+  "schema": "benign-control-v1",
+  "scope": "benign instrument control, NOT a security-agent campaign or human validation",
+  "seed": 20261004,
+  "timeout_seconds": 40
+}

@@ -1,0 +1,47 @@
+# checkpoint007 status
+checkpoint007_all_stages_complete: false
+
+checkpoint007_campaign_status: PARTIAL_EXECUTION
+
+completed_local_and_control_arms:
+  - B_CBC_FIXED
+  - E_EXEC_CONTRACT
+  - E_GRADER_MAP
+  - E_TRANSCRIPT_SCAN
+  - F_CLOCK_CALIB
+  - F_FAULT_INJECT
+
+blocked_cbc_confirmatory_model_arms:
+  - B_CBC_INTERACTIVE
+  - B_CBC_ONESHOT
+  - C_CBC_BINARY
+  - C_CBC_ENRICHED
+
+deferred:
+  - D_DEFERRED
+
+unqualified_or_not_yet_executed_model_arms:
+  - A_RC4_NAMED
+  - A_RC4_UNNAMED
+  - A_RC4_UNDET
+  - A_ECDSA_NAMED
+  - A_ECDSA_UNNAMED
+  - A_ECDSA_UNDET
+  - A_XOR_NAMED
+  - A_XOR_UNNAMED
+  - A_XOR_UNDET
+  - E_ANNOTATION
+
+cbc_deterministic_control_executed: true
+cbc_deterministic_control_met_predicate: false
+cbc_deterministic_control_queries_used: 400
+cbc_deterministic_control_budget: 400
+
+model_calls_executed_in_this_campaign: 0
+cbc_confirmatory_model_arms_executed: 0
+
+runner_implemented_and_tested: true
+persisted_execution_records_exist: true
+manifest_and_log_integrity_repaired: true
+
+CONFIRMATORY_EXPERIMENTS_COMPLETE: false

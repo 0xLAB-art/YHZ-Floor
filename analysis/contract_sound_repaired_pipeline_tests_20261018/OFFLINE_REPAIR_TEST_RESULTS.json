@@ -1,0 +1,184 @@
+{
+  "cases": [
+    {
+      "candidate_output_present": true,
+      "execution_status": "EXECUTED",
+      "name": "ecdsa_valid",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "candidate_output_present": true,
+      "execution_status": "EXECUTED",
+      "name": "ecdsa_invalid",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "candidate_output_present": true,
+      "execution_status": "EXECUTED",
+      "name": "chacha_valid",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    },
+    {
+      "candidate_output_present": true,
+      "execution_status": "EXECUTED",
+      "name": "chacha_invalid",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": false,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      }
+    }
+  ],
+  "invalid_reference_rejects": 2,
+  "offline_network_calls": 0,
+  "offline_provider_calls": 0,
+  "path_serialization_check": {
+    "reference_process": "FAILED",
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py\", line 136, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py\", line 121, in main\n    cert = json.loads(Path(bundle[\"certificate_path\"]).read_text())\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/serialization/missing-cert.json'\n",
+    "stdout": ""
+  },
+  "rejection_controls": [
+    {
+      "name": "prohibited_import",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/prohibited_import/candidate.py",
+        "qualification": [
+          {
+            "line": 1,
+            "rule": "disallowed-import",
+            "value": "hashlib"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/prohibited_import/executor_stderr.txt"
+      }
+    },
+    {
+      "name": "prohibited_boundary",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/prohibited_boundary/candidate.py",
+        "qualification": [
+          {
+            "line": 3,
+            "rule": "disallowed-boundary",
+            "value": "open:not-readonly-argv1"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/prohibited_boundary/executor_stderr.txt"
+      }
+    },
+    {
+      "name": "malformed_output",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/malformed_output/candidate.py",
+        "error": "Expecting value: line 1 column 1 (char 0)",
+        "reason": "malformed-json",
+        "status": "CANDIDATE_OUTPUT_INVALID",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/malformed_output/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/malformed_output/executor_stdout.txt"
+      }
+    },
+    {
+      "name": "unauthorized_read",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/unauthorized_read/candidate.py",
+        "qualification": [
+          {
+            "line": 2,
+            "rule": "disallowed-boundary",
+            "value": "open:not-readonly-argv1"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/unauthorized_read/executor_stderr.txt"
+      }
+    },
+    {
+      "name": "network_boundary",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/network_boundary/candidate.py",
+        "qualification": [
+          {
+            "line": 1,
+            "rule": "disallowed-import",
+            "value": "socket"
+          }
+        ],
+        "status": "SANDBOX_REJECTED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/network_boundary/executor_stderr.txt"
+      }
+    },
+    {
+      "name": "resource_bound",
+      "result": {
+        "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/resource_bound/candidate.py",
+        "returncode": 137,
+        "status": "EXECUTION_FAILED",
+        "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/resource_bound/executor_stderr.txt",
+        "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_repaired_pipeline_tests_20261018/resource_bound/executor_stdout.txt"
+      }
+    }
+  ],
+  "valid_reference_accepts": 2,
+  "validator_outputs": 4
+}

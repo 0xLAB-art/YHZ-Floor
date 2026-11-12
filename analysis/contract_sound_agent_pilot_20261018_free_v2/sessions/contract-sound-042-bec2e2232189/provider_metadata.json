@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "ae3e0ad44e3c6244ff5f075a6bfbed3656397a71cd9eebf954c30d927b9a961d",
+  "output_text": "```python\nimport sys\nimport json\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nc1 = bytes.fromhex(data['ciphertext_1'])\nc2 = bytes.fromhex(data['ciphertext_2'])\np1 = bytes.fromhex(data['known_plaintext_1'])\n\np2 = bytes(a ^ b ^ c for a, b, c in zip(c2, c1, p1))\n\nprint(json.dumps({\"plaintext_2\": p2.hex()}))\n```",
+  "prompt_sha256": "8e169c3f6c53a52597f6ff0259b4c355c465e21417323e3dca06748ec518a7ac",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792339104.4751194,
+  "response_bytes": 634,
+  "response_finished": 1792339109.1760952,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 15:58:29 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2596932",
+    "x-apmix-request-id": "req_19be773538eb4b618f61ccf8",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "403068",
+    "x-apmix-weighted-tokens": "391",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "4ab9fcf5664dd5d67309607c09527f32a838e373d8c5f8737739cfe89bb35e32",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 251,
+    "output_tokens": 140
+  }
+}

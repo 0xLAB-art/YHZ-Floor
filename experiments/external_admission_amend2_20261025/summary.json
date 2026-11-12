@@ -1,0 +1,48 @@
+{
+ "protocol": "PHASE2-EXTERNAL-ADMISSION-AMEND2-v1",
+ "namespace": "external_admission_amend2_20261025",
+ "status": "COMPLETED",
+ "status_reason": "read-boundary repair resolved the degeneracy (37/37 pass read clause; import axis binds, 17/37 stress-rejections); falsifiers evaluated on the same 37 hash-asserted programs",
+ "provider_calls": 0,
+ "sessions": {
+  "total": 0,
+  "note": "offline regrade of amendment-1 retained programs; no new sessions"
+ },
+ "regrade": {
+  "baseline_reproduction_old_rules": {
+   "a": 0,
+   "b": 0
+  },
+  "amend2_qualified": {
+   "a2": 31,
+   "b2": 20
+  },
+  "movements_b2_minus_a2_pp": [
+   0.0,
+   0.0,
+   0.0,
+   -25.0
+  ],
+  "falsifier_verdicts": {
+   "F1_mechanism_ports": "FALSE",
+   "F2_honest_null": "TRUE",
+   "F3_cleanup_preservation": "PASSED_preservation"
+  },
+  "sign_test": {
+   "positive": 0,
+   "negative": 1,
+   "ties": 3,
+   "two_sided_p_descriptive": 1.0
+  }
+ },
+ "key_finding": "Primary Knowledge: stress rule rejects all 7 oracle-passing programs (imports non-legacy modules), collapsing a +25pp oracle-level representation contrast to 0 \u2014 one directional admission-artifact instance, below the preregistered >=2-task F1 threshold",
+ "labeling": "portability + evaluator sensitivity under OUR stress rule; never a benchmark-defect claim; pinned 2026-10-05 snapshot only; no pooling; descriptive",
+ "commits": {
+  "freeze": "500fe600",
+  "hash_refreshes": [
+   "39b0fe20",
+   "5bab23db"
+  ],
+  "outcomes": "this commit"
+ }
+}

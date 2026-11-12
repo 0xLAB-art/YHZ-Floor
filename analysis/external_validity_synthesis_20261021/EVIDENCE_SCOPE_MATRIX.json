@@ -1,0 +1,326 @@
+{
+  "schema": "acts-existing-evidence-scope/1",
+  "experiments_executed": false,
+  "evidence_rescored": false,
+  "inventory_rows": 13222,
+  "linked_inventory_rows": 3033,
+  "unassigned_inventory_rows": 10189,
+  "warning": "Namespace links are not per-program score joins. Zero matches do not imply absent evidence. Scope hash counts are not trials.",
+  "inventory_sha256": "084c86843726dfe3075a404ab8b847dda2a79357596492bf9855cdf3eb4a9103",
+  "scopes": [
+    {
+      "scope_id": "H1R3",
+      "prefixes": [
+        "sp2027/analysis/h1r3_20261019/"
+      ],
+      "authorities": [
+        "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex",
+        "sp2027/analysis/h1r3_20261019/ADMISSION_RULE_PROVENANCE.json"
+      ],
+      "recorded_result": "852 scheduled sessions; primary L3 contrasts bounded by declared margin",
+      "coverage": "Representation variation within two local task families",
+      "boundary": "One route; namespace also contains calibration and aborted attempts; only confirmatory cohort supports primary inference",
+      "inventory_occurrences": 2704,
+      "inventory_unique_hashes": 1868,
+      "authority_files": [
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex",
+          "sha256": "85570d7b3fba9343ced296733cd8453447f6b33f77127a5d4802ac7f5e994737"
+        },
+        {
+          "path": "sp2027/analysis/h1r3_20261019/ADMISSION_RULE_PROVENANCE.json",
+          "sha256": "91cfb0c6100a0f445813671aa060261e5b2e0f8d0d76cf4ef156513301643c51"
+        }
+      ]
+    },
+    {
+      "scope_id": "ADMISSION_MECHANISM",
+      "prefixes": [
+        "sp2027/analysis/policy_mechanism_20261021/"
+      ],
+      "authorities": [
+        "sp2027/analysis/policy_mechanism_20261021/DERIVED.json",
+        "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex"
+      ],
+      "recorded_result": "Fixed-program contrast -0.8 to -32.8 pp; cleanup contrast +3.9 pp",
+      "coverage": "Source-level explanation and output-preserving cleanup",
+      "boundary": "Counterfactual on H1R3 programs; not a second population or external benchmark",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/analysis/policy_mechanism_20261021/DERIVED.json",
+          "sha256": "f92633a1dd9ef2be4f035e3ad737ca3c1529c59aecc547161ae8c099bdd52308"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex",
+          "sha256": "85570d7b3fba9343ced296733cd8453447f6b33f77127a5d4802ac7f5e994737"
+        }
+      ]
+    },
+    {
+      "scope_id": "V4",
+      "prefixes": [
+        "sp2027/agent-eval/runs_r1_clean_capture_first_v4_claude46_20261014_02/"
+      ],
+      "authorities": [
+        "sp2027/agent-eval/R1_CLEAN_COHORT_V4_RESULTS.md"
+      ],
+      "recorded_result": "8 accepted / 12 sessions; 31 submitted programs",
+      "coverage": "Capture-first interactive construction across four local tasks",
+      "boundary": "One recorded hosted route; n=3 per task; no matched comparison with CLI cohorts",
+      "inventory_occurrences": 174,
+      "inventory_unique_hashes": 31,
+      "authority_files": [
+        {
+          "path": "sp2027/agent-eval/R1_CLEAN_COHORT_V4_RESULTS.md",
+          "sha256": "40b13bda10587c83c46d0d0ad57eaaa6f4138695476d50bfa042f494c180b20e"
+        }
+      ]
+    },
+    {
+      "scope_id": "EXPLICIT_CODE",
+      "prefixes": [
+        "sp2027/research_execution/exploratory_code_feedback_20261017_v2/",
+        "sp2027/research_execution/exploratory_code_feedback_chacha20_20261018/",
+        "sp2027/research_execution/exploratory_code_feedback_rc4_20261018/",
+        "sp2027/research_execution/exploratory_code_feedback_ecdsa_replication_20261018/",
+        "sp2027/research_execution/exploratory_code_feedback_chacha20_replication_20261018/",
+        "sp2027/research_execution/exploratory_code_feedback_rc4_replication_20261018/",
+        "sp2027/research_execution/exploratory_code_feedback_ecdsa_replication_20261018_seeds56/",
+        "sp2027/research_execution/exploratory_code_feedback_chacha20_replication_20261018_seeds56/",
+        "sp2027/research_execution/exploratory_code_feedback_rc4_replication_20261018_seeds56/"
+      ],
+      "authorities": [
+        "sp2027/research_execution/ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md",
+        "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex"
+      ],
+      "recorded_result": "6/6 first submissions per family, retained as separate 2+2+2 cohorts",
+      "coverage": "Additional seeds and explicit observations in RC4, ChaCha20 and ECDSA",
+      "boundary": "Same local fixture families; not independent benchmark replication; defective ECDSA v1 excluded",
+      "inventory_occurrences": 108,
+      "inventory_unique_hashes": 17,
+      "authority_files": [
+        {
+          "path": "sp2027/research_execution/ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md",
+          "sha256": "28a05c5d0fe7b2a1323129e0d3bc29024e70911ba58fa31af8e92d1c28bb9de0"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/04_capability.tex",
+          "sha256": "85570d7b3fba9343ced296733cd8453447f6b33f77127a5d4802ac7f5e994737"
+        }
+      ]
+    },
+    {
+      "scope_id": "REDUCED_OBSERVATIONS",
+      "prefixes": [
+        "sp2027/research_execution/blind_opportunity_ecdsa_20261018/",
+        "sp2027/research_execution/blind_opportunity_rc4_20261018/",
+        "sp2027/research_execution/blind_opportunity_chacha20_20261018/"
+      ],
+      "authorities": [
+        "sp2027/research_execution/ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md"
+      ],
+      "recorded_result": "ECDSA 2/2; RC4 2/2; ChaCha20 0/2",
+      "coverage": "Observation-contract diagnostic",
+      "boundary": "Information removed asymmetrically; not label blinding or a causal information effect",
+      "inventory_occurrences": 42,
+      "inventory_unique_hashes": 7,
+      "authority_files": [
+        {
+          "path": "sp2027/research_execution/ACTS_ATTACK_FINAL_SCIENTIFIC_SYNTHESIS.md",
+          "sha256": "28a05c5d0fe7b2a1323129e0d3bc29024e70911ba58fa31af8e92d1c28bb9de0"
+        }
+      ]
+    },
+    {
+      "scope_id": "CLI_COMPOSITION",
+      "prefixes": [
+        "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/compositional_20261017_attempt2/"
+      ],
+      "authorities": [
+        "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/compositional_20261017_attempt2/oracle_verdict.json",
+        "sp2027/paper/capability_revision_20261020/main_sections/05_adaptive.tex"
+      ],
+      "recorded_result": "One accepted supplied AES-CTR capability-to-payload chain",
+      "coverage": "OpenCode CLI / recorded GLM label; HTTP target consequence",
+      "boundary": "Purpose-built local fixture; supplied chain; not autonomous discovery or replication of admission effect",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/compositional_20261017_attempt2/oracle_verdict.json",
+          "sha256": "fea58808732e6e7be90070d0dc3ac1cb382686f52544dbaaf69daffb8ce5d0f2"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/05_adaptive.tex",
+          "sha256": "4bb16b301b621976e8839a03383a1dff1e8d5b8e5de9b4c66de4af75b90d3f78"
+        }
+      ]
+    },
+    {
+      "scope_id": "CLI_HELDOUT",
+      "prefixes": [
+        "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/heldout_generalization_20261017_attempt4/"
+      ],
+      "authorities": [
+        "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/heldout_generalization_20261017_attempt4/manifest.json",
+        "sp2027/paper/capability_revision_20261020/main_sections/05_adaptive.tex"
+      ],
+      "recorded_result": "Development 2/2 and held-out 2/2, on two shared secrets",
+      "coverage": "Within-family alphabet transfer",
+      "boundary": "Rule supplied to both arms; earlier integrity-failed attempts excluded; not independent weakness families",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/paper/capability_revision_20261020/artifact_documentation/novelty_program_20261017/heldout_generalization_20261017_attempt4/manifest.json",
+          "sha256": "1f1f811a62f16d9de5fe3230e6dbd60424f877902051dc3823e8e90dc07dede8"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/05_adaptive.tex",
+          "sha256": "4bb16b301b621976e8839a03383a1dff1e8d5b8e5de9b4c66de4af75b90d3f78"
+        }
+      ]
+    },
+    {
+      "scope_id": "HEB1",
+      "prefixes": [
+        "sp2027/analysis/heb1_crossboundary_20261019/"
+      ],
+      "authorities": [
+        "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EVALUATION_REPORT.md"
+      ],
+      "recorded_result": "Held-out defect cases: baseline promotions 36/36; join validator 0/36",
+      "coverage": "Held-out synthetic composition patterns, including new split-half pattern",
+      "boundary": "Project-constructed fixtures and trusted adjudicator; not deployed failure prevalence",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EVALUATION_REPORT.md",
+          "sha256": "fb7993a4e8d3d67c99efee5dddac2a57c4ab73611b55f09f0cfea3415008db1b"
+        }
+      ]
+    },
+    {
+      "scope_id": "IARB",
+      "prefixes": [
+        "sp2027/analysis/experiment_b_20261019/iar_b/",
+        "sp2027/analysis/experiment_b_20261019/iar_b_heldout/"
+      ],
+      "authorities": [
+        "sp2027/analysis/experiment_b_20261019/IAR_B_RESULTS_REPORT.md",
+        "sp2027/paper/capability_revision_20261020/supp_sections/S28c_lineage_cells.tex"
+      ],
+      "recorded_result": "Held-out attack-family promotions: joins 16/44; signatures 28/44; combined 0/44",
+      "coverage": "Separate held-out IDs/keys and an unseen reference-replay pattern",
+      "boundary": "Shared project, schema and cryptographic infrastructure; malformed controls remain in denominator",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/analysis/experiment_b_20261019/IAR_B_RESULTS_REPORT.md",
+          "sha256": "e5a988fbfcf5a7505575a48534304afbe41594b31678bdf98f5dea40fe0e770a"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/supp_sections/S28c_lineage_cells.tex",
+          "sha256": "ceb7bab2ede602f4b3d07c1907ded4182a53002c6b316a74baefc4f0084adbf1"
+        }
+      ]
+    },
+    {
+      "scope_id": "IARC",
+      "prefixes": [
+        "sp2027/analysis/experiment_b_20261019/iar_c/"
+      ],
+      "authorities": [
+        "sp2027/analysis/experiment_b_20261019/iar_c/IAR_C_RESULTS_REPORT.md",
+        "sp2027/analysis/contribution_audit_20261021/attribution_evidence/REPORT.md"
+      ],
+      "recorded_result": "Preserved attack-family promotions: joins 10/28; signatures 14/28; combined 0/28",
+      "coverage": "Separately written generator and adjudicator",
+      "boundary": "Shared schema/crypto module; preserved cases used in calibration; not untouched held-out or external-lab replication",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/analysis/experiment_b_20261019/iar_c/IAR_C_RESULTS_REPORT.md",
+          "sha256": "7f9c7ecbd78c38e3898a49057e40dc14b6462608a54d5bec134dc44d0956ea02"
+        },
+        {
+          "path": "sp2027/analysis/contribution_audit_20261021/attribution_evidence/REPORT.md",
+          "sha256": "a767217639bc30727da23550feb6772bf0c25ba74f0248e83c0051b97c12173b"
+        }
+      ]
+    },
+    {
+      "scope_id": "INTOTO",
+      "prefixes": [
+        "sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/"
+      ],
+      "authorities": [
+        "sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/translation_results_v2.json",
+        "sp2027/paper/capability_revision_20261020/supp_sections/S27c_attribution_compact.tex"
+      ],
+      "recorded_result": "Configured inspection agrees 21/22 stateless, 22/22 with shared replay state",
+      "coverage": "Another implementation of the specified attribution policy",
+      "boundary": "Same evidence and policy design; not an independent benchmark or superiority test; SLSA not comparable",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/translation_results_v2.json",
+          "sha256": "be712fa8e1474e8dfc0455d72dd591226bb5e2d1450fba00c42f96378adad8d8"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/supp_sections/S27c_attribution_compact.tex",
+          "sha256": "9450701a7114aa770fc36a013e7c90833ef7c10d01ea6d3806223f87fbc60305"
+        }
+      ]
+    },
+    {
+      "scope_id": "LOCAL_TARGET_ATTRIBUTION",
+      "prefixes": [
+        "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/"
+      ],
+      "authorities": [
+        "sp2027/paper/capability_revision_20261020/supp_sections/S27c_attribution_compact.tex"
+      ],
+      "recorded_result": "Local target positive attribution and bounded failed model attempt; loopback exercise reported separately",
+      "coverage": "Operational reachability in a project-owned target environment",
+      "boundary": "One local deployment, trusted observer/reference roles; not arbitrary-host soundness",
+      "inventory_occurrences": 5,
+      "inventory_unique_hashes": 5,
+      "authority_files": [
+        {
+          "path": "sp2027/paper/capability_revision_20261020/supp_sections/S27c_attribution_compact.tex",
+          "sha256": "9450701a7114aa770fc36a013e7c90833ef7c10d01ea6d3806223f87fbc60305"
+        }
+      ]
+    },
+    {
+      "scope_id": "RELEASE_AUDIT",
+      "prefixes": [],
+      "authorities": [
+        "sp2027/paper/capability_revision_20261020/main_sections/09_audit.tex",
+        "sp2027/paper/capability_revision_20261020/supp_sections/S04_e1_provenance.tex"
+      ],
+      "recorded_result": "Six releases, 54 field assessments; 0/6 meet all nine reconstruction fields",
+      "coverage": "External documentary evidence about reconstructability",
+      "boundary": "No external executable benchmark or imported attack-success cohort; no program-inventory match expected",
+      "inventory_occurrences": 0,
+      "inventory_unique_hashes": 0,
+      "authority_files": [
+        {
+          "path": "sp2027/paper/capability_revision_20261020/main_sections/09_audit.tex",
+          "sha256": "f2733882f1fe93b3e3fdcbeacf726ffeb25e7c946ddd80bb9fa335391aadfb06"
+        },
+        {
+          "path": "sp2027/paper/capability_revision_20261020/supp_sections/S04_e1_provenance.tex",
+          "sha256": "287076d6aadabc703f3a1317c4e09355ccf6a5b0a55ebc7dcb0eaedc6e7f1059"
+        }
+      ]
+    }
+  ]
+}

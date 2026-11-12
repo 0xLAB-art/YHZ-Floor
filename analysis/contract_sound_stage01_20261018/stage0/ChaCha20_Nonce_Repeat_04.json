@@ -1,0 +1,135 @@
+{
+  "analysis": {
+    "ambiguity_counterexamples": [
+      {
+        "known_plaintext_1": "25eea342905290727465007a7d8fc6cd7038e568a7c0bc2743b15985ae8f386bdd6b19fc979e5cff83983986dc842989",
+        "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+      },
+      {
+        "known_plaintext_1": "804b06e735f735d7d1c0a5dfd82a6368d59d40cd02651982e614fc200b2a9dce78cebc59323bf95a263d9c2379218c2c",
+        "plaintext_2": "0b801198bc28dcb8b9b865dfa80421e42ea72e693bf89df619124b7b8065188d64042240581f3cb03e4f5766847170ab"
+      }
+    ],
+    "c0_observation_hash": "47d5fedfaa7e051772ae1a15c4ce2e7001f1fea7dfe2f5e975c6c3e557f1bfa5",
+    "c1_representation_hash": "9bf30dbda0373aaa00950ae180d968850905483e246f65825d95f40bc5b076bf",
+    "c2_representation_hash": "2262aa4f834b0c6015a4f714da8ba02f608ff8f8010501fdd35187c536f80df8",
+    "interface_core_hash_c1": "16a9fa54f33bcaeb53d152f7998eb3add500e897443526f9b6a2ca6d9950ff61",
+    "interface_core_hash_c2": "16a9fa54f33bcaeb53d152f7998eb3add500e897443526f9b6a2ca6d9950ff61",
+    "seed": 4,
+    "semantic_hash_c1": "95d2d2dd0b51f7a9d08a76e72c5bf1617f27c7bdd8e18f436db0c808aeab94c6",
+    "semantic_hash_c2": "95d2d2dd0b51f7a9d08a76e72c5bf1617f27c7bdd8e18f436db0c808aeab94c6",
+    "sufficiency_c0": "provably_ambiguous",
+    "sufficiency_c1": "constructively_sufficient",
+    "sufficiency_c2": "constructively_sufficient",
+    "task": "ChaCha20_Nonce_Repeat",
+    "witness": {
+      "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+    }
+  },
+  "instance": {
+    "ambiguity": [
+      {
+        "known_plaintext_1": "25eea342905290727465007a7d8fc6cd7038e568a7c0bc2743b15985ae8f386bdd6b19fc979e5cff83983986dc842989",
+        "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+      },
+      {
+        "known_plaintext_1": "804b06e735f735d7d1c0a5dfd82a6368d59d40cd02651982e614fc200b2a9dce78cebc59323bf95a263d9c2379218c2c",
+        "plaintext_2": "0b801198bc28dcb8b9b865dfa80421e42ea72e693bf89df619124b7b8065188d64042240581f3cb03e4f5766847170ab"
+      }
+    ],
+    "c0": {
+      "ciphertext_1": "97c93398f0c70c4cd8ae9482c75391d0f529946e55f81ccb9234076e4ae62f28d43942d39011659d7836e00cf14b5e55",
+      "ciphertext_2": "1c0224e77918e523b0d65482b77dd35c0e13faca6c6598bf6d32b035c1a9aa6bc8f3dccafa35a07760442b490c1ba2d2",
+      "encoding": "json-hex-v1"
+    },
+    "c1": {
+      "ciphertext_1": "97c93398f0c70c4cd8ae9482c75391d0f529946e55f81ccb9234076e4ae62f28d43942d39011659d7836e00cf14b5e55",
+      "ciphertext_2": "1c0224e77918e523b0d65482b77dd35c0e13faca6c6598bf6d32b035c1a9aa6bc8f3dccafa35a07760442b490c1ba2d2",
+      "encoding": "json-hex-v1",
+      "known_plaintext_1": "25eea342905290727465007a7d8fc6cd7038e568a7c0bc2743b15985ae8f386bdd6b19fc979e5cff83983986dc842989"
+    },
+    "c2": {
+      "ciphertext_1": "l8kzmPDHDEzYrpSCx1OR0PUplG5V+BzLkjQHbkrmLyjUOULTkBFlnXg24AzxS15V",
+      "ciphertext_2": "HAIk53kY5SOw1lSCt33TXA4T+spsZZi/bTKwNcGpqmvI89zK+jWgd2BEK0kMG6LS",
+      "encoding": "base64-packed-v1",
+      "known_plaintext_1": "Je6jQpBSkHJ0ZQB6fY/GzXA45WinwLwnQ7FZha6POGvdaxn8l55c/4OYOYbchCmJ"
+    },
+    "seed": 4,
+    "semantic": {
+      "ciphertext_1": "97c93398f0c70c4cd8ae9482c75391d0f529946e55f81ccb9234076e4ae62f28d43942d39011659d7836e00cf14b5e55",
+      "ciphertext_2": "1c0224e77918e523b0d65482b77dd35c0e13faca6c6598bf6d32b035c1a9aa6bc8f3dccafa35a07760442b490c1ba2d2",
+      "known_plaintext_1": "25eea342905290727465007a7d8fc6cd7038e568a7c0bc2743b15985ae8f386bdd6b19fc979e5cff83983986dc842989",
+      "primitive": "ChaCha20_Nonce_Repeat"
+    },
+    "task": "ChaCha20_Nonce_Repeat",
+    "witness": {
+      "plaintext_2": "ae25b43d198d791d1c1dc07a0da184418b028bcc9e5d3853bcb7eede25c0bd28c1a187e5fdba99159beaf2c321d4d50e"
+    }
+  },
+  "interface_c0": {
+    "allowed_oracle_queries": [],
+    "allowed_process_inputs": [
+      "instance_file"
+    ],
+    "condition": "C0",
+    "feedback": {
+      "oracle_replies": "none",
+      "stderr_to_agent": false,
+      "stdout_semantics": "single-claim-json"
+    },
+    "parser": "contract-sound-parser-v1",
+    "provision_channel": "argv-instance-path-only",
+    "query_budget": {
+      "max_queries": 0,
+      "max_query_bytes": 0,
+      "max_query_time_ms": 0
+    },
+    "representation": "canonical",
+    "task": "ChaCha20_Nonce_Repeat",
+    "timeout_ms": 120000
+  },
+  "interface_c1": {
+    "allowed_oracle_queries": [],
+    "allowed_process_inputs": [
+      "instance_file"
+    ],
+    "condition": "C1",
+    "feedback": {
+      "oracle_replies": "none",
+      "stderr_to_agent": false,
+      "stdout_semantics": "single-claim-json"
+    },
+    "parser": "contract-sound-parser-v1",
+    "provision_channel": "argv-instance-path-only",
+    "query_budget": {
+      "max_queries": 0,
+      "max_query_bytes": 0,
+      "max_query_time_ms": 0
+    },
+    "representation": "canonical",
+    "task": "ChaCha20_Nonce_Repeat",
+    "timeout_ms": 120000
+  },
+  "interface_c2": {
+    "allowed_oracle_queries": [],
+    "allowed_process_inputs": [
+      "instance_file"
+    ],
+    "condition": "C2",
+    "feedback": {
+      "oracle_replies": "none",
+      "stderr_to_agent": false,
+      "stdout_semantics": "single-claim-json"
+    },
+    "parser": "contract-sound-parser-v1",
+    "provision_channel": "argv-instance-path-only",
+    "query_budget": {
+      "max_queries": 0,
+      "max_query_bytes": 0,
+      "max_query_time_ms": 0
+    },
+    "representation": "alternate",
+    "task": "ChaCha20_Nonce_Repeat",
+    "timeout_ms": 120000
+  }
+}

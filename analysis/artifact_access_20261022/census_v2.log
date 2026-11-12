@@ -1,0 +1,124 @@
+{
+  "scope": "Recount retained records only; no candidate programs, policy evaluations or model calls executed",
+  "fixed_executor": {
+    "CBC_Padding_Oracle": {
+      "successes": 3,
+      "records": 3,
+      "median_executor_ms_from_this_file": 2433.733576,
+      "manuscript_reported_median_ms": 1981.6,
+      "timing_provenance_resolved": false
+    },
+    "ChaCha20_Nonce_Repeat": {
+      "successes": 3,
+      "records": 3,
+      "median_executor_ms_from_this_file": 0.240809,
+      "manuscript_reported_median_ms": 0.131647,
+      "timing_provenance_resolved": false
+    },
+    "ECDSA_Nonce_Reuse": {
+      "successes": 3,
+      "records": 3,
+      "median_executor_ms_from_this_file": 12.067539,
+      "manuscript_reported_median_ms": 6.956,
+      "timing_provenance_resolved": false
+    },
+    "RC4_Keystream": {
+      "successes": 3,
+      "records": 3,
+      "median_executor_ms_from_this_file": 0.145488,
+      "manuscript_reported_median_ms": 0.214196,
+      "timing_provenance_resolved": false
+    }
+  },
+  "fixed_recorded_successes": 12,
+  "ablation_record_recount": {
+    "IAR-B dev": {
+      "cases": 54,
+      "attack_inclusive": 40,
+      "honest_within_evidence": 14,
+      "false_promotions": {
+        "v2": 16,
+        "v3-sig": 24,
+        "v3-full": 0
+      }
+    },
+    "IAR-B held-out": {
+      "cases": 58,
+      "attack_inclusive": 44,
+      "honest_within_evidence": 14,
+      "false_promotions": {
+        "v2": 16,
+        "v3-sig": 28,
+        "v3-full": 0
+      }
+    },
+    "IAR-C preserved": {
+      "cases": 44,
+      "attack_inclusive": 28,
+      "honest_within_evidence": 16,
+      "false_promotions": {
+        "v2": 10,
+        "v3-sig": 14,
+        "v3-full": 0
+      }
+    }
+  },
+  "soundness_aggregate_recount": [
+    {
+      "file": "soundness_heb2_scripted.json",
+      "corpus_size": 1407,
+      "evaluations_from_decision_census": 2814,
+      "reported_evaluations": 2814,
+      "violations": 0,
+      "status": "archived aggregate reconstruction, not fresh evaluation"
+    },
+    {
+      "file": "soundness_model_arm_run1.json",
+      "corpus_size": 1407,
+      "evaluations_from_decision_census": 2814,
+      "reported_evaluations": 2814,
+      "violations": 0,
+      "status": "archived aggregate reconstruction, not fresh evaluation"
+    },
+    {
+      "file": "soundness_model_arm_run2.json",
+      "corpus_size": 1407,
+      "evaluations_from_decision_census": 2814,
+      "reported_evaluations": 2814,
+      "violations": 0,
+      "status": "archived aggregate reconstruction, not fresh evaluation"
+    },
+    {
+      "file": "soundness_stage1_scripted.json",
+      "corpus_size": 1407,
+      "evaluations_from_decision_census": 2814,
+      "reported_evaluations": 2814,
+      "violations": 0,
+      "status": "archived aggregate reconstruction, not fresh evaluation"
+    }
+  ],
+  "soundness_reported_evaluations": 11256,
+  "in_toto_archived_decision_recount": {
+    "in_toto_policy": {
+      "agreement": 21,
+      "cases": 22
+    },
+    "in_toto_policy_stateful": {
+      "agreement": 22,
+      "cases": 22
+    }
+  },
+  "ecdsa_recorded_diagnostic": {
+    "order_defect_records": 20,
+    "recorded_corrected_scalars": 20,
+    "independently_reexecuted_now": false
+  },
+  "findings": [
+    {
+      "severity": "requires-provenance-resolution",
+      "claim": "Fixed-executor timing medians",
+      "detail": "The supplied twelve recorded successes have different clock medians from the current manuscript. No values or records have been replaced."
+    }
+  ]
+}
+

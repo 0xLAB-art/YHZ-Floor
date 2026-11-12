@@ -1,0 +1,57 @@
+{
+  "arms": [
+    "A_INTERACTIVE",
+    "B_ONESHOT"
+  ],
+  "endpoint": "https://api.apmix.ai",
+  "exec_timeout_s": 20,
+  "max_tokens": 3000,
+  "model": "claude-sonnet-4-6-free",
+  "oracle_budget": 4096,
+  "order": [
+    [
+      61,
+      "A_INTERACTIVE"
+    ],
+    [
+      61,
+      "B_ONESHOT"
+    ],
+    [
+      62,
+      "A_INTERACTIVE"
+    ],
+    [
+      62,
+      "B_ONESHOT"
+    ],
+    [
+      63,
+      "A_INTERACTIVE"
+    ],
+    [
+      63,
+      "B_ONESHOT"
+    ],
+    [
+      64,
+      "A_INTERACTIVE"
+    ],
+    [
+      64,
+      "B_ONESHOT"
+    ]
+  ],
+  "predicate": "exact match on plaintext hex (lowercased)",
+  "preregistered": true,
+  "protocol": "H2-CBC-AGENCY-20261023-v1",
+  "provider_timeout_s": 300,
+  "seeds": [
+    61,
+    62,
+    63,
+    64
+  ],
+  "started": 1792819835.1052544,
+  "temperature": "provider default (not set)"
+}

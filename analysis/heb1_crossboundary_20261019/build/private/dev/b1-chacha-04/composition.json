@@ -1,0 +1,28 @@
+{
+  "family": "B1",
+  "intended": {
+    "claim_mismatches": [
+      "execution_identity",
+      "reference_oracle_acceptance",
+      "attribution"
+    ],
+    "crypto_cert": false,
+    "crypto_requested": false,
+    "joins_failed": [
+      "J1",
+      "J6",
+      "J7"
+    ],
+    "level": 1,
+    "malformed": false,
+    "missing_kinds": [],
+    "truth_strong": false
+  },
+  "mechanism": "cross-run join: run B evidence with agent artifact re-pointed to run A",
+  "ops": [
+    "agent_artifact re-pointed to run A session/hash",
+    "trace, effect, acceptance, claims kept from run B",
+    "candidate attached is run A faulty output",
+    "request binds run A"
+  ]
+}

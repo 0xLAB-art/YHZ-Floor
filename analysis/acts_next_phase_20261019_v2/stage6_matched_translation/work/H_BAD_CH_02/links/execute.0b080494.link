@@ -1,0 +1,45 @@
+{
+ "signatures": [
+  {
+   "keyid": "0b08049444925fa5d4e6b891be75fc513cd999595be8d0125d1a3ce52f76c962",
+   "sig": "43053da090602417226fe4a4e8cbde7bc1fb8dfa0f692eb274ea1d969f51134721a3dbadc6998be5f7a600bf479c8af02ab4411487759fd3bdaacb1440a97306"
+  }
+ ],
+ "signed": {
+  "_type": "link",
+  "byproducts": {
+   "context": {
+    "attempt_id": "e2a-H_BAD_CH_02",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+   },
+   "execution_status": "EXECUTED",
+   "observation_sha256": "f1dbc0578c8809964172260221eecc81ed3a0e538df1a5636353434c2721fd92",
+   "reference_sha256": "9c8a31f1ac92bb53d3a154ca0c9d7130d5c0e9a3fd629f05aa7d704e468000c5"
+  },
+  "command": [
+   "/usr/bin/python3",
+   "-I",
+   "/proc/self/fd/3",
+   "public_instance.json"
+  ],
+  "environment": {},
+  "materials": {
+   "program_source.py": {
+    "sha256": "ad17aac791d67ce7651398db34799a512f5d5c626d8fc9dd69352f23313813d7"
+   },
+   "public_instance.json": {
+    "sha256": "69d420e2ed39873290bf4c3ea6fb18bf9e215dc9ff41014f41e12c230b3ea363"
+   }
+  },
+  "name": "execute",
+  "products": {
+   "candidate_output.json": {
+    "sha256": "de8dd8163cc53363970990b8f525c166f43bdaa251eb3ae017b24580709f8a5b"
+   }
+  }
+ }
+}

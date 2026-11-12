@@ -1,0 +1,35 @@
+{
+  "signatures": [],
+  "signed": {
+    "_type": "link",
+    "name": "execute",
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "/proc/self/fd/3",
+      "public_instance.json"
+    ],
+    "environment": {},
+    "materials": {
+      "program_source.py": {
+        "sha256": "e5deb4fb042176380ac733b75076d978d679364c4de79a9e1c1087da44b30ee9"
+      },
+      "public_instance.json": {
+        "sha256": "10a0aeab605203134cf024a90352ea9987ce8c6cdf74b14d7d06becfaeadcf69"
+      }
+    },
+    "products": {},
+    "byproducts": {
+      "execution_status": "EXECUTION_FAILED",
+      "context": {
+        "attempt_id": "e2a-H_FAIL_EC_01",
+        "domain": "e2a:evidence:v1",
+        "epoch": 1,
+        "kind": "execution_observation",
+        "role": "execution_observer",
+        "target_id": "ECDSA_Nonce_Reuse-seed-01"
+      },
+      "observation_sha256": "4f8feef0d569234df6d717c935d9894d214d4786fd13f091f5d41c4f53b5e41d"
+    }
+  }
+}

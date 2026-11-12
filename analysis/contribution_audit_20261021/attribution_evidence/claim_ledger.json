@@ -1,0 +1,122 @@
+[
+  {
+    "allowed_claim": "Schema and hash baselines emitted unsupported attribution on HEB1 heldout defects",
+    "claim_id": "H01",
+    "denominator": 36,
+    "numerator": 36,
+    "population": "heb1_heldout B1-B5",
+    "qualification": "64 total; excludes28 coherent/control bundles; six patterns, two primitives; synthetic",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Join-only blocked all HEB1 heldout defect promotions",
+    "claim_id": "H02",
+    "denominator": 36,
+    "numerator": 0,
+    "population": "heb1_heldout B1-B5",
+    "qualification": "Not authenticated composition or general soundness",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Join-only emitted unsupported level6 claims",
+    "claim_id": "C01",
+    "denominator": 28,
+    "numerator": 10,
+    "population": "iar_c_preserved attack families",
+    "qualification": "Calibration saw same cases before freeze;44 total;not28 independent attacks",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Signature-only emitted unsupported level6 claims",
+    "claim_id": "C02",
+    "denominator": 28,
+    "numerator": 14,
+    "population": "iar_c_preserved attack families",
+    "qualification": "Authentic record origin does not imply claim-specific coherence",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Combined validator emitted no unsupported level6 claim",
+    "claim_id": "C03",
+    "denominator": 28,
+    "numerator": 0,
+    "population": "iar_c_preserved attack families",
+    "qualification": "Trust anchor and uncorrupted relevant signers assumed; known joins tested",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Join-only rejected honest-within-evidence bundles",
+    "claim_id": "C04",
+    "denominator": 16,
+    "numerator": 14,
+    "population": "iar_c_preserved honest",
+    "qualification": "14 are lower-level requests outside V2 full-attribution acceptance contract;not comparative FR evidence",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Join-only emitted unsupported level6 claims",
+    "claim_id": "B01",
+    "denominator": 44,
+    "numerator": 16,
+    "population": "iar_b_heldout non-H0/H7",
+    "qualification": "58 total;44 attack/control-negative cases includes8 malformed H8",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Signature-only emitted unsupported level6 claims",
+    "claim_id": "B02",
+    "denominator": 44,
+    "numerator": 28,
+    "population": "iar_b_heldout non-H0/H7",
+    "qualification": "Different population from44-case IAR-C",
+    "recomputed_artifact": "recomputed_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Stage1 full strict emitted no false attribution under posthoc attribution truth",
+    "claim_id": "S01",
+    "denominator": 25,
+    "numerator": 0,
+    "population": "TOEEA-1 strict non-success",
+    "qualification": "Preregistered crypto truth is different:0/6 FA and19/21 crypto-positive not attributed",
+    "recomputed_artifact": "stage1_summary.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Historical Stage01 falsely attributed two direct-analogue non-successes",
+    "claim_id": "S02",
+    "denominator": 11,
+    "numerator": 2,
+    "population": "TOEEA-1 Stage01",
+    "qualification": "13 analogues total;14 N/A;archived component decisions recomputed not rerun",
+    "recomputed_artifact": "stage1_summary.json",
+    "unit": "applicable constructed analogue"
+  },
+  {
+    "allowed_claim": "Configured stateful in-toto inspection agrees with ACTS decisions",
+    "claim_id": "P01",
+    "denominator": 22,
+    "numerator": 22,
+    "population": "stage6 matched translation",
+    "qualification": "Archived upstream outcomes recounted;implementation agreement,not superiority;policy arms added after review",
+    "recomputed_artifact": "supplementary_census.json",
+    "unit": "constructed bundle"
+  },
+  {
+    "allowed_claim": "Four aggregate mutation censuses report zero soundness violations",
+    "claim_id": "M01",
+    "denominator": 11256,
+    "numerator": 0,
+    "population": "four HEB2 corpora x1407 mutants x2 semantics",
+    "qualification": "Not11256 unique attacks;archived aggregates,no fresh proof;property and evaluator share contract module",
+    "recomputed_artifact": "supplementary_census.json",
+    "unit": "mutant-semantic evaluation"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "arm": "R0",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "runs/calibration/sessions/calibration-0013-xor-L2-5002-R0-r0-979dac73/candidate.py",
+    "returncode": 1,
+    "status": "EXECUTION_FAILED",
+    "stderr_path": "runs/calibration/sessions/calibration-0013-xor-L2-5002-R0-r0-979dac73/executor_stderr.txt",
+    "stdout_path": "runs/calibration/sessions/calibration-0013-xor-L2-5002-R0-r0-979dac73/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTION_FAILED",
+  "failure_stage": "EXECUTION",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L2-seed5002",
+  "kind": "primary",
+  "latency_s": 9.350262880325317,
+  "legacy_would_reject": false,
+  "level": "L2",
+  "max_tokens": 2600,
+  "ordinal": 13,
+  "output_schema_errors": [
+    "not-executed"
+  ],
+  "output_schema_ok": false,
+  "payload_chars": 1761,
+  "payload_sha256": "205ce5cf03b8a1ac6cc637d1009361942031678c7dd8fa8a9af980406f39e8b2",
+  "phase": "calibration",
+  "prompt_chars": 2574,
+  "prompt_sha256": "1d1405945836566b6881908e8d25f9b82c707cb7978cd085c38a93d288de1789",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": null,
+  "qualification_legacy": {
+    "imported_modules": [
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "candidate_len": null,
+      "expected_len": 64
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2
+      ],
+      "plaintext": "06a8bdddb9ccad70f2f02d0891e913b318b661f2dcabc14ba939b0557e3dbfeb79578e9e3672cee9876f673ae7d687e07a9428284eba737c9c55eef3a8754df8",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 1702,
+  "response_sha256": "2fd4767da0719baacf646e3e83a5048bea09b67b8c8b5cf486fe33fa26e58de3",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 5002,
+  "session_id": "calibration-0013-xor-L2-5002-R0-r0-979dac73",
+  "source_chars": 1689,
+  "source_sha256": "a1f25ac922b0ea41b09d3088cc0b36eef6af7e2e16ce5b0340941ad269578222",
+  "stderr_tail": "bwrap: Can't find source path runs/calibration/sessions/calibration-0013-xor-L2-5002-R0-r0-979dac73: No such file or directory\n",
+  "template_sha256": "cb3d05b8ea84025351f17064b9d0e938f13d7d09443a12c5b9c9d5725687f7a6",
+  "terminal": "EXECUTION",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 740,
+    "output_tokens": 542
+  }
+}

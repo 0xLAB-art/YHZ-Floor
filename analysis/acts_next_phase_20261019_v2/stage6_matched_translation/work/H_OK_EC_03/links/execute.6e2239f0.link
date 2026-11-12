@@ -1,0 +1,45 @@
+{
+ "signatures": [
+  {
+   "keyid": "6e2239f0e13c3fad2e370c79672b3652b9f23417af76bc7d5c788406cc590a16",
+   "sig": "3852bc01ddbf67f6e671b232dbc67ae981e60c54fb289cb145554203230ed75e54a9e3033cfd9fc9a7a91e6b489546f5f5988003a9246954cc08e7b2d5b0a101"
+  }
+ ],
+ "signed": {
+  "_type": "link",
+  "byproducts": {
+   "context": {
+    "attempt_id": "e2a-H_OK_EC_03",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ECDSA_Nonce_Reuse-seed-03"
+   },
+   "execution_status": "EXECUTED",
+   "observation_sha256": "62f649f41de75a15a8e592c31913b984abed87aaad633714d0e7e4994b75dc2c",
+   "reference_sha256": "3422806ebdb9dc2aa7f965d22e29f3246effdfc4f96a5bbcc0431032650a2d28"
+  },
+  "command": [
+   "/usr/bin/python3",
+   "-I",
+   "/proc/self/fd/3",
+   "public_instance.json"
+  ],
+  "environment": {},
+  "materials": {
+   "program_source.py": {
+    "sha256": "9ad852241e63f3d4015949eaa3ec776844ddc9d917419dafde7aa3f68fb1a8b1"
+   },
+   "public_instance.json": {
+    "sha256": "a168d6e79e849e27364a4b06e3547cc8e4f721b7c8c919ca02f54d9bb72993ff"
+   }
+  },
+  "name": "execute",
+  "products": {
+   "candidate_output.json": {
+    "sha256": "4f3db60cfa4e7771f1f48ee32fe612adeaed02a39eba48bb023771c2537a5de4"
+   }
+  }
+ }
+}

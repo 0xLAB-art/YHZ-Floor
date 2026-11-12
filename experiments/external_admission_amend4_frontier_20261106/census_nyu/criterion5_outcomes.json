@@ -1,0 +1,215 @@
+{
+  "schema": "external-admission-amend3-criterion5/1-draft",
+  "date": "2026-11-05",
+  "protocol": "PHASE2-EXTERNAL-ADMISSION-AMEND3-v1",
+  "pinned_archive": "nyu_ctf_bench__NYU_CTF_Bench__4c5744f55a31.tar.gz",
+  "pinned_archive_sha256": "ad376a2e1a33856fa3c0b4ac073d921b3337355bf966bd01dfb82a412d41f537",
+  "rule": "criterion 5 = an offline stdlib-only reference solve that reproduces the pinned answer byte-exactly, is admissible under the declared arm (v4 module, policy v3), carries no pinned-answer bytes in its source, and fits the fixed 1600-token per-session program budget",
+  "quorum": {
+    "required": 6,
+    "qualified": 7,
+    "status": "MET"
+  },
+  "grid_membership": [
+    "2015q-cry-eps",
+    "2015q-cry-eps_part2",
+    "2017q-cry-almost_xor",
+    "2017q-cry-another_xor",
+    "2018q-cry-babycrypto",
+    "2018q-cry-lowe",
+    "2021q-cry-crack_me"
+  ],
+  "qualified": [
+    {
+      "task_id": "2015q-cry-eps",
+      "name": "eps",
+      "path_rel": "development/2015/CSAW-Quals/crypto/eps",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_eps.py",
+      "solver_sha256": "5ccaf78feeefeeef5fa8d640a8b73f6ab1baaaec7d94173d071ff5be307bb2ba",
+      "solver_chars": 936,
+      "est_tokens_chars_div4": 234,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2015q-cry-eps_part2",
+      "name": "eps_part2",
+      "path_rel": "development/2015/CSAW-Quals/crypto/eps_part2",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_eps_part2.py",
+      "solver_sha256": "a85087c321f0460078d13ebec6ab970db60060d8851e9d9e0e626b9332325701",
+      "solver_chars": 1076,
+      "est_tokens_chars_div4": 269,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2017q-cry-almost_xor",
+      "name": "almost_xor",
+      "path_rel": "test/2017/CSAW-Quals/crypto/almost_xor",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_almost_xor.py",
+      "solver_sha256": "bbceebcd6abdd420b8810d3950a0f0f5c4f74311ec7d8234dc0e7f81f02586b7",
+      "solver_chars": 3003,
+      "est_tokens_chars_div4": 750,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2017q-cry-another_xor",
+      "name": "another_xor",
+      "path_rel": "test/2017/CSAW-Quals/crypto/another_xor",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_another_xor.py",
+      "solver_sha256": "82bc77e67b20c4a57cd9e41e661f9f0fc1926ae46c9733b94bb359a730ff7050",
+      "solver_chars": 2499,
+      "est_tokens_chars_div4": 624,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2018q-cry-babycrypto",
+      "name": "babycrypto",
+      "path_rel": "test/2018/CSAW-Quals/crypto/babycrypto",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_babycrypto.py",
+      "solver_sha256": "608b214dd802b41c0246e344e7697c86af4af7bc047a90b642de9f1a14adde94",
+      "solver_chars": 1027,
+      "est_tokens_chars_div4": 256,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2018q-cry-lowe",
+      "name": "lowe",
+      "path_rel": "test/2018/CSAW-Quals/crypto/lowe",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_lowe.py",
+      "solver_sha256": "edb73cabb12cbabe384e9c6dcedd42fbebdf9fddcd83397cf0c851e80d782937",
+      "solver_chars": 2212,
+      "est_tokens_chars_div4": 553,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "QUALIFIED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    },
+    {
+      "task_id": "2021q-cry-crack_me",
+      "name": "Crack Me",
+      "path_rel": "test/2021/CSAW-Quals/crypto/Crack-Me",
+      "status": "MATCH",
+      "solver": "reference_solvers/solve_crackme.py",
+      "solver_sha256": "119b2bf088ecad6a063f0bcdd210112cd1f5420f9f6a2a93d9cfbb5110c1bbb2",
+      "solver_chars": 4036,
+      "est_tokens_chars_div4": 1009,
+      "within_1600_token_budget_estimate": true,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true
+    }
+  ],
+  "verified_but_budget_excluded": [
+    {
+      "task_id": "2019q-cry-des2bites",
+      "name": "DES 2 Bites",
+      "path_rel": "test/2019/CSAW-Quals/crypto/DES2Bites",
+      "status": "VERIFIED_BUDGET_EXCLUDED",
+      "solver": "reference_solvers/solve_des2bites.py",
+      "solver_sha256": "dbcc1534c824ca6c13786d5e0f9f4fa9c13a9cacca8b80e8ba6a3bd677691be3",
+      "solver_chars": 8191,
+      "est_tokens_chars_div4": 2047,
+      "within_1600_token_budget_estimate": false,
+      "declared_arm": "QUALIFIED",
+      "stress_arm": "SANDBOX_REJECTED",
+      "answer_bytes_in_solver_source": false,
+      "output_equals_pinned_answer": true,
+      "reason": "the reference solve reproduces the pinned answer byte-exactly under the declared arm, but the pure-stdlib DES implementation it needs is 8191 source chars (~2047+ tokens at a conservative 4 chars/token), above the registered 1600-token program budget; excluded conservatively from grid membership"
+    }
+  ],
+  "criterion5_failures": [
+    {
+      "task_id": "2013f-cry-stfu",
+      "name": "stfu",
+      "path_rel": "development/2013/CSAW-Finals/crypto/stfu",
+      "status": "FAIL_CRITERION_5",
+      "reason": "the decoded artifact (LFSR keystream reproduced from the release header) is a 25,300-byte printable visual rendering of the answer; reading it requires a human viewer, and no admissible programmatic derivation was found within the registered budget"
+    },
+    {
+      "task_id": "2018q-cry-collusion",
+      "name": "collusion",
+      "path_rel": "test/2018/CSAW-Quals/crypto/collusion",
+      "status": "FAIL_CRITERION_5",
+      "reason": "the declared artifacts' message body is a 31-byte GCM payload (15-byte plaintext; the release's generator encrypts the literal 'mission payload'), while the pinned answer is a 48-byte string \u2014 the answer cannot be the decrypted message, and no derivation rule from the declared files produces it (recorded as a selection outcome, not a claim about the benchmark)"
+    }
+  ],
+  "not_reached": [
+    {
+      "task_id": "2013q-cry-csawpad",
+      "name": "CSAWpad",
+      "path_rel": "development/2013/CSAW-Quals/crypto/CSAWpad",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    },
+    {
+      "task_id": "2013q-cry-onlythisprogram",
+      "name": "onlythisprogram",
+      "path_rel": "development/2013/CSAW-Quals/crypto/onlythisprogram",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    },
+    {
+      "task_id": "2015q-cry-bricks_of_gold",
+      "name": "bricks_of_gold",
+      "path_rel": "development/2015/CSAW-Quals/crypto/bricks_of_gold",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    },
+    {
+      "task_id": "2016f-cry-killer_cipher",
+      "name": "Killer cipher",
+      "path_rel": "development/2016/CSAW-Finals/crypto/Killer_cipher",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    },
+    {
+      "task_id": "2017f-cry-ecxor",
+      "name": "ECXOR",
+      "path_rel": "test/2017/CSAW-Finals/crypto/ECXOR",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    },
+    {
+      "task_id": "2022f-cry-m_ster_0f_prn9",
+      "name": "M@sTEr 0F PrN9",
+      "path_rel": "test/2022/CSAW-Finals/crypto/M@sTEr 0F PrN9",
+      "status": "NOT_REACHED",
+      "reason": "not reached: the pre-registered verification schedule stopped once the quorum was exceeded; no eligibility claim is made"
+    }
+  ],
+  "counts": {
+    "offline_candidates": 16,
+    "qualified": 7,
+    "budget_excluded": 1,
+    "failures": 2,
+    "not_reached": 6
+  },
+  "boundary": "This record is a task-selection artifact. It makes no claim about the quality of any benchmark; every non-qualifying disposition is a statement about our contract's ability to derive the pinned answer from the declared handout files within the registered budget."
+}

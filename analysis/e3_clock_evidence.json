@@ -1,0 +1,90 @@
+{
+  "generated_utc": "2026-09-27T13:54:25.861878+00:00",
+  "corpora": {
+    "legacy_v1": {
+      "rows": 54,
+      "dual_clock_rows": 51,
+      "op_span_rows": 14,
+      "request_record_rows": 0
+    },
+    "w2_pilot": {
+      "rows": 20,
+      "dual_clock_rows": 20,
+      "op_span_rows": 1,
+      "request_record_rows": 20
+    }
+  },
+  "dual_clock_drift": {
+    "tolerance_ms": 1.0,
+    "n_dual": 71,
+    "n_within": 67,
+    "n_breach": 4,
+    "within_ms": {
+      "median": 0.045839,
+      "p95": 0.295062,
+      "max": 0.384907
+    },
+    "breach_ms": [
+      1020.4,
+      1074.7,
+      1092.7,
+      1301.4
+    ],
+    "breach_status_counts": {
+      "ORACLE_FAIL": 4
+    },
+    "within_rate": {
+      "legacy_v1": {
+        "within": 47,
+        "n": 51,
+        "rate": 0.9215686274509803,
+        "ci95": [
+          0.8150005368740411,
+          0.9690778032115107
+        ]
+      },
+      "w2_pilot": {
+        "within": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8388748419471806,
+          1.0
+        ]
+      }
+    }
+  },
+  "tte_m_landscape": {
+    "n_graded_with_dual_clocks": 26,
+    "seconds": {
+      "median": 27.503362762000002,
+      "p25": 7.13684601775,
+      "p75": 252.92271423250003,
+      "min": 3.238392208,
+      "max": 682.724915915
+    },
+    "by_corpus": {
+      "legacy_v1": {
+        "n": 23,
+        "median_s": 15.658161599
+      },
+      "w2_pilot": {
+        "n": 3,
+        "median_s": 421.77713479799996
+      }
+    },
+    "note": "agent-inclusive TTE_M; the frozen E3 factorial decomposes this into T_model/T_tools/T_exec/T_oracle via the component stamps the v2 harness already logs"
+  },
+  "aor_feasibility": {
+    "n_op_span_rows": 15,
+    "n_admissible_aor": 15,
+    "preview_log10_aor": {
+      "median": 2.0065271757351474e-05,
+      "iqr": [
+        9.405370450448097e-06,
+        0.016921870846529675
+      ]
+    },
+    "caveat": "preview over legacy+ pilot rows only; the frozen E3 factorial (2000 trials/cell on the timing rig) is the evidence source for Table C \u2014 this analysis bounds the agent-session side of the contrast and demonstrates the pipeline end-to-end"
+  }
+}

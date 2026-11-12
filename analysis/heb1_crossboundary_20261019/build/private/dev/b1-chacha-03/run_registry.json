@@ -1,0 +1,28 @@
+{
+  "composition_ops": [
+    "agent_artifact re-pointed to run A session/hash",
+    "trace, effect, acceptance, claims kept from run B",
+    "candidate attached is run A faulty output",
+    "request binds run A"
+  ],
+  "runs": {
+    "sess-59a193ce921e5f6f": {
+      "base_instance_id": "inst-489468e0cbac",
+      "candidate_sha256": "abc07f366f7fd47f765382b7dc581d5ec01a42865399d184185fe6c3c6f16760",
+      "condition_id": "C0",
+      "crypto_ok": true,
+      "effect_status": "OBSERVED",
+      "reference_accepted": true,
+      "target_id": "target-b1-chacha-03"
+    },
+    "sess-73237642dfba046f": {
+      "base_instance_id": "inst-489468e0cbac",
+      "candidate_sha256": "e876ab137b3eeb5ea94f853c59c7d5522be784abe9f309e30734f4e11730effa",
+      "condition_id": "C0",
+      "crypto_ok": false,
+      "effect_status": "NOT_OBSERVED",
+      "reference_accepted": false,
+      "target_id": "target-b1-chacha-03"
+    }
+  }
+}

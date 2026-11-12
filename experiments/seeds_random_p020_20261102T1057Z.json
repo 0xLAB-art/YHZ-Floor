@@ -1,0 +1,70 @@
+{
+  "bit_length": 63,
+  "count": 8,
+  "draw_order": [
+    1047792615613731969,
+    5197379716332103652,
+    411940919485712370,
+    5668959420676185108,
+    3475759585745935795,
+    9061909019000159649,
+    8318222496953004377,
+    4557560747022903031
+  ],
+  "drawn_at_utc": "2026-11-02T10:57:10Z",
+  "excluded_prior_seeds": 48,
+  "excluded_sources": [
+    {
+      "count": 16,
+      "max": 416,
+      "min": 401,
+      "path": "info_contract_aesgcm_20261102/_LAUNCH.json"
+    },
+    {
+      "count": 16,
+      "max": 616,
+      "min": 601,
+      "path": "info_contract_aesgcm_labels_20261102/_REGISTRATION.json"
+    },
+    {
+      "count": 16,
+      "max": 616,
+      "min": 601,
+      "path": "info_contract_aesgcm_labels_20261102/gpt_5_6_sol/_LAUNCH.json"
+    },
+    {
+      "count": 16,
+      "max": 616,
+      "min": 601,
+      "path": "info_contract_aesgcm_labels_20261102/gpt_6_1_sol/_LAUNCH.json"
+    },
+    {
+      "count": 16,
+      "max": 716,
+      "min": 701,
+      "path": "info_contract_aesgcm_p017_20261102/_LAUNCH.json"
+    },
+    {
+      "count": 16,
+      "max": 716,
+      "min": 701,
+      "path": "info_contract_aesgcm_p017_20261102/_REGISTRATION.json"
+    }
+  ],
+  "protocol": "ACTS-INSTANCE-SEED-DRAW-v1",
+  "script": "register_instance_seeds.py",
+  "script_sha256": "1c86a484452ed3d751deea4b1e58a884cf1782b3da8039a5b5a04344506a9034",
+  "seeds_sha256": "c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48",
+  "seeds_sorted": [
+    411940919485712370,
+    1047792615613731969,
+    3475759585745935795,
+    4557560747022903031,
+    5197379716332103652,
+    5668959420676185108,
+    8318222496953004377,
+    9061909019000159649
+  ],
+  "source": "secrets.randbits (OS CSPRNG: getrandom/urandom)",
+  "usage_note": "Consume the first N values of draw_order for N instances. The draw is fixed at this timestamp and is not re-drawn, reordered or extended after the first provider call."
+}

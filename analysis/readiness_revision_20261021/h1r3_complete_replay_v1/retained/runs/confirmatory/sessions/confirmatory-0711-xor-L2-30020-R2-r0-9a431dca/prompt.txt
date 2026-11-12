@@ -1,0 +1,17 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"plaintext": "lowercase hex, exactly target.length bytes"}
+
+Instance (JSON):
+{"ciphertexts":[{"data":"P/ZFUk8W3hdze6MFDRok1YmUzNPMKS6MAdOEBJy9Ddl2bydFGgOZ61XTtH5ngv9gGbVN3gvkwhk0Za0zqIH+YyG773h1QQm3vHVM9MprbpH45Nk+1TLzirat4jpV5RI2dP/w57wdyow+/NpIn+pyh0nXJejXqalOVhfbV98jYGk=","message_index":0},{"data":"+AoCeYY91kDwi5Q05o+bc7N6/GofiglQJi2Fbe4+tFug3B4hzxmbHwEn5bhX4T9NRV31sIOhoHYCunhlOXdkhmdK8S9YSu1qle16UFMISxCYpUpTkWapXbLa0u+0eW1RRPqaIhwW5WqJRlG5aY+QAbhJhmy8T1qsy3n4xNf3DnI=","message_index":1},{"data":"zj4J9P6yJmILz4dyhw/abDdUFYsSG+29VO0koMhm6ROnrBZ+P2UPH+o7+vLy9IzdMiGGteRJaLGXCJEmq7VB8vTPp7ndEsaBr3DnBGca19Z6vhRvZAJmv0XuV/phl55PpKHwAwgnDw+S0+BpCqE6JExfeiKwvMg68zG2JnqoHU8=","message_index":2},{"data":"14C1B+RI3K7NHL/Irt6NcMVkChwfkEd5YVICsR4IHEqnjGz57eR/dEXWUdq/aTZOIIOulxr67P7CuMkWE23/m8kEBpsOgp+X2KZ9g3GpFxfxbtvCv+i8hDomi7+Yw5UDIctX2qzioMMR/7DA+FkTAHuDdKdN43mX36mi0w+G7ck=","message_index":3}],"encoding":"base64-v1","known_plaintexts":[{"data":"df3PYHCU","message_index":1,"offset":32},{"data":"uUG/felPubI=","message_index":2,"offset":38},{"data":"Il3N","message_index":1,"offset":46},{"data":"q0SW","message_index":0,"offset":49},{"data":"bSU=","message_index":2,"offset":52},{"data":"u406gwQ=","message_index":0,"offset":54},{"data":"XLNL","message_index":1,"offset":59},{"data":"tg==","message_index":2,"offset":62},{"data":"JSQ=","message_index":0,"offset":63},{"data":"OY28iJtDKg==","message_index":1,"offset":65},{"data":"61QF","message_index":0,"offset":72},{"data":"rLo93g==","message_index":1,"offset":75},{"data":"urh+DXmzk/hUZRGcaJh8","message_index":2,"offset":79},{"data":"fZo=","message_index":0,"offset":94},{"data":"dw01z619","message_index":0,"offset":112}],"target":{"length":64,"message_index":3,"offset":32}}

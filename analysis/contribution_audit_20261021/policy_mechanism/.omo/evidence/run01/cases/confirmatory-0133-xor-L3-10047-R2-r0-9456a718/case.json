@@ -1,0 +1,249 @@
+{
+  "arm": "R2",
+  "current_outcome_correct": true,
+  "derivative": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0133-xor-L3-10047-R2-r0-9456a718/derivative",
+    "candidate": {
+      "plaintext": "5cd486d660b450cda6cb407ddbd1c287ee5f8e9fc295096da9a81297fd540191f32cf723f6da97e9da1894c77e0204143df497f506c2d477bad98858e3afd6f547f1b9f241b6d479db033c583f17d0ea0f7b10076a721e5ab786c99d9d2c25db1bec8d5d332d526e214c0f0281ec1ae2b5572344a9e25a40e82655eb704942d8"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "a4405b926b4604b3b47f64d56486b9be35ccf9907af94bf2ada78c9dc4133d09"
+  },
+  "derivative_legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "derivative_legacy_admitted": true,
+  "derivative_same_output_as_original": true,
+  "derivative_sha256": "286e565f8f47cb6b7e6e87285ea99ee8e2f3a3c7ee3e482c150a641a0f8a4098",
+  "edits": [
+    {
+      "after": "\n",
+      "before": "from typing import List, Tuple, Dict\n",
+      "bindings": [
+        "List",
+        "Tuple",
+        "Dict"
+      ],
+      "end_line": 4,
+      "start_line": 4
+    }
+  ],
+  "family": "XOR_Keystream_Reuse",
+  "fresh_output_equality": true,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "EXECUTED",
+  "historical_predicate": true,
+  "imports": [
+    {
+      "alias": null,
+      "binding": "sys",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 1,
+      "module": "sys",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "json",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 2,
+      "module": "json",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "base64",
+      "classification": "referenced_preserve",
+      "disallowed_legacy": false,
+      "line": 3,
+      "module": "base64",
+      "reasons": [
+        "name-reference-any-scope",
+        "module-side-effects-not-qualified"
+      ]
+    },
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    }
+  ],
+  "kind": "primary",
+  "legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "Dict",
+      "List",
+      "Tuple",
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "legacy_class": "unused_only_removable",
+  "legacy_disallowed_but_prompt_allowed": [
+    {
+      "alias": null,
+      "binding": "List",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Tuple",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    },
+    {
+      "alias": null,
+      "binding": "Dict",
+      "classification": "conservatively_unused",
+      "disallowed_legacy": true,
+      "line": 4,
+      "module": "typing",
+      "reasons": []
+    }
+  ],
+  "legacy_rejected_correct": true,
+  "level": "L3",
+  "original": {
+    "artifact_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/policy_mechanism/.omo/evidence/run01/cases/confirmatory-0133-xor-L3-10047-R2-r0-9456a718/original",
+    "candidate": {
+      "plaintext": "5cd486d660b450cda6cb407ddbd1c287ee5f8e9fc295096da9a81297fd540191f32cf723f6da97e9da1894c77e0204143df497f506c2d477bad98858e3afd6f547f1b9f241b6d479db033c583f17d0ea0f7b10076a721e5ab786c99d9d2c25db1bec8d5d332d526e214c0f0281ec1ae2b5572344a9e25a40e82655eb704942d8"
+    },
+    "cryptographic_predicate": true,
+    "matches_retained_output": true,
+    "reference_reconstruction_valid": true,
+    "returncode": 0,
+    "schema_ok": true,
+    "scope": "cryptographic/output checks only; no derivative attribution certificate acceptance",
+    "single_json_object_stdout": true,
+    "status": "EXECUTED",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "a4405b926b4604b3b47f64d56486b9be35ccf9907af94bf2ada78c9dc4133d09"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "07fea0bb7a439eb4046464236ab0231678078fc03abe2976b348e193ff838b28",
+  "replicate_index": 0,
+  "runtime_import_use": null,
+  "seed": 10047,
+  "session_id": "confirmatory-0133-xor-L3-10047-R2-r0-9456a718",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0133-xor-L3-10047-R2-r0-9456a718/candidate.py",
+  "source_sha256": "37317bff7e6459941f2675b492b78c7faf45f02f8d0c3a6370567ac01693abd2",
+  "transform_eligibility": "eligible_full_import_statements_removed",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": true,
+  "uncertainties": [],
+  "unused_removal_rescues_legacy_qualification": true,
+  "v3": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "Dict",
+      "List",
+      "Tuple",
+      "typing"
+    ],
+    "violations": []
+  }
+}

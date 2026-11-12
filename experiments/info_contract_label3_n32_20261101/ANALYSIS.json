@@ -1,0 +1,106 @@
+{
+  "confirmatory": false,
+  "corrections": [
+    "Fisher p printed by analyze_p011.py as 0 is floating-point underflow; recorded here as the returned value with that caveat, not as an exact p."
+  ],
+  "instrument_duplicate_rows": {
+    "count": 1,
+    "run_ids": [
+      "info_contract_2x2_20261018__chacha20__C1__seed_301__e72a28984ec2"
+    ]
+  },
+  "interpretation": "Registered scale-up of P010L3 from n=8 to n=32 per cell on the same frozen methodology. Mechanism identification only: not a capability rate estimate, not pooled with any other cohort. The stated arm is not deterministic at this size (C1 27/32, C3 30/32); the paired contrast and the premise marginal stand on their own population.",
+  "namespace": "info_contract_label3_n32_20261101",
+  "paired_primary": {
+    "discordant_c1_only": 17,
+    "discordant_c4_only": 0,
+    "evaluable_pairs": 17,
+    "p_two_sided": 1.52587890625e-05,
+    "test": "exact binomial two-sided, C1 vs C4 on shared seeds"
+  },
+  "per_cell": {
+    "C1": {
+      "accepted": 27,
+      "drop_seeds": [
+        306,
+        322,
+        323,
+        326,
+        327
+      ],
+      "evaluable": 27,
+      "provider_drops": 5
+    },
+    "C2": {
+      "accepted": 0,
+      "drop_seeds": [
+        302,
+        308,
+        309,
+        310,
+        311,
+        313,
+        314,
+        316,
+        318,
+        320,
+        321,
+        322,
+        325,
+        327,
+        329,
+        332
+      ],
+      "evaluable": 16,
+      "provider_drops": 16
+    },
+    "C3": {
+      "accepted": 30,
+      "drop_seeds": [
+        321,
+        330
+      ],
+      "evaluable": 30,
+      "provider_drops": 2
+    },
+    "C4": {
+      "accepted": 0,
+      "drop_seeds": [
+        302,
+        304,
+        307,
+        314,
+        315,
+        319,
+        320,
+        324,
+        326,
+        327,
+        330,
+        331
+      ],
+      "evaluable": 20,
+      "provider_drops": 12
+    }
+  },
+  "premise_marginal": {
+    "p_two_sided": 0.0,
+    "stated": 57,
+    "stated_evaluable": 57,
+    "test": "Fisher exact two-sided",
+    "withheld": 0,
+    "withheld_evaluable": 36
+  },
+  "preregistered": true,
+  "protocol": "P011-INFO-CONTRACT-2X2-CHACHA20-LABEL3-N32-v1",
+  "provider_dropout": {
+    "share_of_registered": 0.2734,
+    "terminal_rows": 35
+  },
+  "seeds": {
+    "count": 32,
+    "first": 301,
+    "last": 332
+  },
+  "sessions_recorded": 128
+}

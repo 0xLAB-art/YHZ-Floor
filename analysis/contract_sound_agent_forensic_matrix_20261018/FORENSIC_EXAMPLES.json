@@ -1,0 +1,198 @@
+{
+  "ChaCha20_Nonce_Repeat:C0": {
+    "candidate_output_present": false,
+    "condition": "C0",
+    "extracted_source_sha256": "b8f8209fc53409bf46164da535acf6d2cf5a18f090f2b06e6ede73c529233524",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "control",
+    "ordinal": 61,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "4ffe0914e8d7aa34072aa82534ec3a78e101740a05d1a6f74c1c43360cda74c0",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-061-69c68ae8e771",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ChaCha20_Nonce_Repeat",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "open(sys.argv[1], 'r')",
+        "line": 5,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  },
+  "ChaCha20_Nonce_Repeat:C1": {
+    "candidate_output_present": false,
+    "condition": "C1",
+    "extracted_source_sha256": "5706af33ca6453b934b8ba34baf5a0c0ac2421ebbb4e76bac4ba08cf77187a90",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "primary",
+    "ordinal": 26,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "88dbf8773ee27e9c325ca5431f8b60c268b76a8a703e4e88759b82b372946aa8",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-026-ece8c08ecaaf",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ChaCha20_Nonce_Repeat",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "open(sys.argv[1], 'r')",
+        "line": 9,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  },
+  "ChaCha20_Nonce_Repeat:C2": {
+    "candidate_output_present": false,
+    "condition": "C2",
+    "extracted_source_sha256": "a9702512ffa1c0f85c3902a3adca483ed2bb5921d87340854321b9f46bad62bb",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "primary",
+    "ordinal": 25,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "3f42b16ff1cd2fd6bad4758e44c1d98a699b2bc83557ff99b28654b8b59436d2",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-025-9c90a80b0096",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ChaCha20_Nonce_Repeat",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "open(sys.argv[1])",
+        "line": 8,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  },
+  "ECDSA_Nonce_Reuse:C0": {
+    "candidate_output_present": false,
+    "condition": "C0",
+    "extracted_source_sha256": "720eb52c4c43ca0855a64bf16143c9f3d047047161707cb29eeb29e13227a8d4",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "control",
+    "ordinal": 49,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "af6cbff08bd473ca5f0a3c2f36f6d0bd9f7758d265c0c95d0069e422eaf66378",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-049-240c898b0a07",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ECDSA_Nonce_Reuse",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "open(sys.argv[1])",
+        "line": 4,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  },
+  "ECDSA_Nonce_Reuse:C1": {
+    "candidate_output_present": false,
+    "condition": "C1",
+    "extracted_source_sha256": "01c4251c7b92a7e59b5246d1fab6e46930f79367716b5b2b63dbebdb48db59c7",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "primary",
+    "ordinal": 2,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "dbb63446ee748adb69b7575ea78e574a53bcb2af202c8d342701ea6de4ea2686",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-002-7fa51993acb7",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ECDSA_Nonce_Reuse",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "json.load(open(sys.argv[1]))",
+        "line": 19,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      },
+      {
+        "expression": "open(sys.argv[1])",
+        "line": 19,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  },
+  "ECDSA_Nonce_Reuse:C2": {
+    "candidate_output_present": false,
+    "condition": "C2",
+    "extracted_source_sha256": "671b4ecf7a9b374ca2d2f498d8903e78960641307a9f447c900f4290cf7fce75",
+    "extraction_mode": "first_python_fence_or_full_text",
+    "extraction_reproduces_candidate_file": true,
+    "failure_stage_from_retained_result": "HARNESS_SERIALIZATION_BEFORE_ORACLE",
+    "kind": "primary",
+    "ordinal": 1,
+    "original_artifacts_immutable": true,
+    "original_terminal_status": "HARNESS_FAILURE",
+    "provider_output_sha256": "c91864c551d91cb24cd1c0ef0ba3ebb7d0f24adc40fd3d6f1078791e102d20f7",
+    "reference_verdict_present": false,
+    "seed": 1,
+    "session_id": "contract-sound-001-087b5f465b46",
+    "source_qualification_reason": "disallowed-boundary",
+    "source_qualification_stage": "SANDBOX_REJECTED",
+    "task": "ECDSA_Nonce_Reuse",
+    "validator_verdict_present": false,
+    "violations": [
+      {
+        "expression": "json.load(open(sys.argv[1]))",
+        "line": 8,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      },
+      {
+        "expression": "open(sys.argv[1])",
+        "line": 8,
+        "rule": "disallowed-boundary",
+        "values": [
+          "open("
+        ]
+      }
+    ]
+  }
+}

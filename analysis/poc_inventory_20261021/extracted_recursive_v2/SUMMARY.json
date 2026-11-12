@@ -1,0 +1,62 @@
+{
+  "duplicate_source_occurrences": 3846,
+  "execution_performed": false,
+  "extraction_rules": {
+    "excluded_directories": [
+      ".git",
+      ".venv",
+      "__pycache__",
+      "node_modules",
+      "site-packages",
+      "venv"
+    ],
+    "filenames": [
+      "candidate.py",
+      "e5_attack_code.py",
+      "program_source.py",
+      "*.agent.py"
+    ],
+    "record_path_keys": "(candidate|program|exploit|attack).*?(path|file)|(?:path|file).*?(candidate|program|exploit|attack)",
+    "source_extensions": [
+      ".py",
+      ".c",
+      ".rs",
+      ".go",
+      ".js",
+      ".java"
+    ]
+  },
+  "json_or_jsonl_records_scanned": 8364490,
+  "limits": [
+    "Embedded code snippets in free-form transcripts are not independently parsed; only saved source files and structured source-path references are included.",
+    "Presence in this inventory does not mean the program is a valid PoC, was executed, or succeeded.",
+    "Source records and duplicate experiment copies remain distinct manifest rows; identical bytes share one stored object."
+  ],
+  "malformed_or_unreadable_record_files_or_lines": 52,
+  "recursive": true,
+  "schema": "acts-poc-inventory/1",
+  "scope": [
+    "ACTS-ATTACK",
+    "agent-eval",
+    "analysis",
+    "artifact",
+    "artifacts",
+    "evaluations",
+    "extracted",
+    "frozen_snapshots",
+    "human_audit",
+    "human_reaudit",
+    "inventory_export_20261018T083057Z",
+    "inventory_export_20261018T083537Z_v2",
+    "inventory_export_20261018T083537Z_v3",
+    "inventory_export_20261018T083537Z_v4",
+    "inventory_export_20261018T085024Z_v5",
+    "inventory_export_20261018T091940Z_v6_literal",
+    "sp2027/agent-eval",
+    "sp2027/analysis",
+    "sp2027/research_execution"
+  ],
+  "source_occurrences": 5004,
+  "unique_sha256_objects": 1158,
+  "unreadable_poc_sources": []
+}

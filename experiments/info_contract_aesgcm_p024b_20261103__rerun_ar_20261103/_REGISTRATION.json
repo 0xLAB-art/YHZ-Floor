@@ -1,0 +1,75 @@
+{
+ "adapter": "provider_adapter_agentrouter_p024b_floor8400.py",
+ "adapter_sha256": "c9637232a09e691703ee0c5dee0251f23d3bf724f2f575c8d07f64e70cbf1aa7",
+ "adapter_sha256_note": "P023 transport + registered floor + textless attribution",
+ "fixture": "aesgcm",
+ "label": "gpt-5.6-sol",
+ "launcher_patched": {
+  "run_p024_arm.py": []
+ },
+ "paired_arm": "same 24 CSPRNG instances in both arms; floor identical across arms",
+ "preregistration": "PREREGISTRATION.md",
+ "protocol": "P024B-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1-RERUN-AR-v1",
+ "registered": "2026-11-03",
+ "rerun_of": "info_contract_aesgcm_p024b_20261103",
+ "rerun_reason": "transport-damaged cohort re-run; same label, seeds, fixture, prompts, oracle and registered token floor; only the transport/adapter generation differs",
+ "runner": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+ "runner_path": "run_info_contract_2x2_aesgcm.py",
+ "same_design_as": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A/B-v1",
+ "seed_receipt": "seeds_random_p024_20261103.json",
+ "seeds": [
+  6053757933470368991,
+  4024580240848245945,
+  6660787263210023586,
+  706851478915918331,
+  4642169946606242158,
+  6952609208550192760,
+  6371583657490919742,
+  8167853899477376958,
+  7747240405343580101,
+  3613370146640568885,
+  5917691052662730068,
+  7289094409850097839,
+  1085919367790942384,
+  5868884880163035447,
+  8393952239108227573,
+  7242823496162646513,
+  1969294029438652755,
+  8310229218680981790,
+  1928355936991434887,
+  5665272107773633994,
+  3048559450184869761,
+  4820171042784110258,
+  575165618341891725,
+  2210489604031318807
+ ],
+ "seeds_sha256": "2dc0653f256e0cf5c0fdb7b0c03f3c737240032e1d66b32d82f2cc16c3b9b217",
+ "sessions_registered": 96,
+ "token_floor": 8400,
+ "token_floor_effective": 8400,
+ "token_floor_probe": {
+  "arm_b_expected_model_level_null": false,
+  "decided_floor": 8400,
+  "decision_rule": "text@4200 -> 4200; no text@4200 and text@8400 -> 8400; no text at either -> 4200 with arm-b model-level null flag",
+  "file": "probe_p024_floor.json",
+  "sha256": "21b1546ab5f000832df6b950b3f7b69d0c0767961a10a757756260e8d65ac367"
+ },
+ "transport_policy": {
+  "backoff_seconds": [
+   2,
+   5,
+   12
+  ],
+  "forensics": "failure_log.jsonl (attempt, category, status, stop_reason, usage, body)",
+  "jitter": false,
+  "max_attempts_per_call": 4,
+  "never_retried": [
+   "EMPTY_RESPONSE",
+   "INCOMPLETE_RESPONSE",
+   "HTTP_ERROR outside the retry class",
+   "oracle/parse outcomes"
+  ],
+  "retried": "transport failures with no completion delivered"
+ },
+ "workers": 8
+}

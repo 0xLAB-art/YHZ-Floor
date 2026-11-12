@@ -1,0 +1,158 @@
+{
+  "design": {
+    "arms": [
+      "R0",
+      "R2"
+    ],
+    "c0_levels": [
+      "L3"
+    ],
+    "c0_seeds": [
+      7001
+    ],
+    "families": [
+      "XOR_Keystream_Reuse",
+      "ECDSA_Nonce_Reuse"
+    ],
+    "levels": [
+      "L3"
+    ],
+    "noise_levels": [
+      "L3"
+    ],
+    "noise_repeats": 2,
+    "noise_seeds": [
+      7001
+    ],
+    "phase": "sanity",
+    "schedule_seed": 20261019,
+    "seeds": [
+      7001
+    ]
+  },
+  "n_sessions": 10,
+  "schedule": [
+    {
+      "arm": "R0",
+      "family": "XOR_Keystream_Reuse",
+      "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+      "kind": "c0",
+      "level": "L3",
+      "ordinal": 1,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0001-xor-L3-7001-R0-r0-27b70049"
+    },
+    {
+      "arm": "R0",
+      "family": "XOR_Keystream_Reuse",
+      "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+      "kind": "primary",
+      "level": "L3",
+      "ordinal": 2,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0002-xor-L3-7001-R0-r0-170b01ac"
+    },
+    {
+      "arm": "R4",
+      "family": "ECDSA_Nonce_Reuse",
+      "instance_id": "ECDSA_Nonce_Reuse-L3-seed7001",
+      "kind": "noise",
+      "level": "L3",
+      "ordinal": 3,
+      "phase": "sanity",
+      "replicate_index": 1,
+      "seed": 7001,
+      "session_id": "sanity-0003-ecd-L3-7001-R4-r1-d2b9b6b1"
+    },
+    {
+      "arm": "R0",
+      "family": "ECDSA_Nonce_Reuse",
+      "instance_id": "ECDSA_Nonce_Reuse-L3-seed7001",
+      "kind": "primary",
+      "level": "L3",
+      "ordinal": 4,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0004-ecd-L3-7001-R0-r0-911fb167"
+    },
+    {
+      "arm": "R4",
+      "family": "XOR_Keystream_Reuse",
+      "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+      "kind": "noise",
+      "level": "L3",
+      "ordinal": 5,
+      "phase": "sanity",
+      "replicate_index": 1,
+      "seed": 7001,
+      "session_id": "sanity-0005-xor-L3-7001-R4-r1-88ff11dd"
+    },
+    {
+      "arm": "R2",
+      "family": "ECDSA_Nonce_Reuse",
+      "instance_id": "ECDSA_Nonce_Reuse-L3-seed7001",
+      "kind": "primary",
+      "level": "L3",
+      "ordinal": 6,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0006-ecd-L3-7001-R2-r0-a116d4b8"
+    },
+    {
+      "arm": "R4",
+      "family": "ECDSA_Nonce_Reuse",
+      "instance_id": "ECDSA_Nonce_Reuse-L3-seed7001",
+      "kind": "noise",
+      "level": "L3",
+      "ordinal": 7,
+      "phase": "sanity",
+      "replicate_index": 2,
+      "seed": 7001,
+      "session_id": "sanity-0007-ecd-L3-7001-R4-r2-1ffa6f9e"
+    },
+    {
+      "arm": "R2",
+      "family": "XOR_Keystream_Reuse",
+      "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+      "kind": "primary",
+      "level": "L3",
+      "ordinal": 8,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0008-xor-L3-7001-R2-r0-60babe55"
+    },
+    {
+      "arm": "R4",
+      "family": "XOR_Keystream_Reuse",
+      "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+      "kind": "noise",
+      "level": "L3",
+      "ordinal": 9,
+      "phase": "sanity",
+      "replicate_index": 2,
+      "seed": 7001,
+      "session_id": "sanity-0009-xor-L3-7001-R4-r2-4caa593a"
+    },
+    {
+      "arm": "R0",
+      "family": "ECDSA_Nonce_Reuse",
+      "instance_id": "ECDSA_Nonce_Reuse-L3-seed7001",
+      "kind": "c0",
+      "level": "L3",
+      "ordinal": 10,
+      "phase": "sanity",
+      "replicate_index": 0,
+      "seed": 7001,
+      "session_id": "sanity-0010-ecd-L3-7001-R0-r0-d1e2d97f"
+    }
+  ],
+  "schedule_hash": "34fdf34453983d94d9e10a2b6ebb292ddd84805be4dc22a39ae52f902f6ea046",
+  "schedule_seed": 20261019
+}

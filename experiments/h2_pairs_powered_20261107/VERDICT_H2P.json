@@ -1,0 +1,74 @@
+{
+ "schema": "h2-pairs-powered-paired-verdict/1",
+ "protocol": "H2-CBC-PAIRS-POWERED-20261107-v1 (amendment 4)",
+ "registered_statistic": {
+  "name": "paired exact binomial on the A-vs-B acceptance discordance",
+  "significance": "b_A >= 6 one-directional (p = 2*0.5^b_A)",
+  "counter_directional_must_be": 0
+ },
+ "rows_read": 64,
+ "evaluable_pairs": 32,
+ "pairs": {
+  "b_A_interactive_advantage": 0,
+  "b_B_counter_directional": 0,
+  "ties": 32,
+  "a_only_seeds": [],
+  "b_only_seeds": []
+ },
+ "verdict": {
+  "b_A": 0,
+  "p": null,
+  "significant_at_registered_bar": false,
+  "one_directional": true,
+  "directional_claim": false,
+  "note": "registered bar is b_A >= 6 AND zero counter-directional discordances; no other test; no pooling"
+ },
+ "wilson_bound_if_not_significant": {
+  "one_directional_rate": 0.0,
+  "upper_95": 0.10717919829998272
+ },
+ "arms": {
+  "A_INTERACTIVE": {
+   "sessions": 32,
+   "accepted": 32,
+   "turn2_submissions": 0,
+   "turn1_rejections": 0,
+   "rejected_program_error_classes": {},
+   "accepted_query_range": [
+    1384,
+    2561
+   ],
+   "budget_violations": 0,
+   "transport_attempts": {
+    "calls": 32,
+    "calls_needing_retry": 12,
+    "retry_share": 0.375,
+    "max_attempts": 4,
+    "fail_categories": {
+     "BAD_RESPONSE": 19
+    }
+   }
+  },
+  "B_ONESHOT": {
+   "sessions": 32,
+   "accepted": 32,
+   "turn2_submissions": 0,
+   "turn1_rejections": 0,
+   "rejected_program_error_classes": {},
+   "accepted_query_range": [
+    1385,
+    2562
+   ],
+   "budget_violations": 0,
+   "transport_attempts": {
+    "calls": 32,
+    "calls_needing_retry": 9,
+    "retry_share": 0.2812,
+    "max_attempts": 4,
+    "fail_categories": {
+     "BAD_RESPONSE": 14
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "bounded_unresolved",
+  "archive_receipt_sha256": "0373823a1f617ae04cd1886b166a73fa89db6cb58dc5a3e63109a000e800ee7b",
+  "surfaces": {
+    "WebSP-Eval": {
+      "archive": "human_audit/source_freeze_20261005/archives/websp_eval__webspeval_code__cc0bbc411666.tar.gz",
+      "archive_sha256": "81090dda278486ec2a30ef434c57d22375a1c3f36c7c36ce1728873ca76a3045",
+      "members": 356,
+      "state_trace_json": 96,
+      "paper_time_runs": "absent",
+      "linkage": "source-addressable but paper-run unresolved",
+      "claim_boundary": "evaluator/release audit only; not ACTS execution or recoverable denominator"
+    },
+    "Cybench": {
+      "archive": "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz",
+      "archive_sha256": "261cc002d315776cf424322a18a645a21b48b418f1425e3b10271e298da0b805",
+      "members": 9734,
+      "metrics_csv_sha256": "34e05a721176e744f5a51528dc1dedadf10e9040fc50c215df685dfa2c6a4397",
+      "metrics_rows": 1,
+      "detail_rows": 11,
+      "lfs_output_payloads": "absent; inspected members are pointer stubs",
+      "linkage": "partial metric structure but producing-run unresolved",
+      "claim_boundary": "retain aggregate fields descriptively; do not infer runs, oracle independence, or paper-time checkout identity"
+    }
+  },
+  "decision": "No additional archive execution or denominator reconstruction is justified from the retained evidence. Preserve both joins as unresolved external-evaluator evidence."
+}

@@ -1,0 +1,52 @@
+{
+  "files_scanned": {
+    "all_sessions_files": 67,
+    "model_visible_set": 41
+  },
+  "note": "pre-freeze instrument dry-run captures (authored test programs that deliberately embedded fixture material to exercise the classifier) were relocated from sessions/execution_captures/ to preflight/instrument_dryrun/ before this scan; they are instrument-validation artifacts, not session evidence; session captures contain exactly the 8 real sessions",
+  "per_seed": {
+    "61": {
+      "clean": true,
+      "key_hex_anywhere_in_sessions": [],
+      "prefix_hex_anywhere_in_sessions": [],
+      "truth_hex_in_execution_stdout_expected": [
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__A_INTERACTIVE__seed_61__aaa0e77a6e9c__turn1.stdout.txt",
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__B_ONESHOT__seed_61__8455da425ebd__turn1.stdout.txt"
+      ],
+      "truth_hex_in_model_visible": []
+    },
+    "62": {
+      "clean": true,
+      "key_hex_anywhere_in_sessions": [],
+      "prefix_hex_anywhere_in_sessions": [],
+      "truth_hex_in_execution_stdout_expected": [
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__A_INTERACTIVE__seed_62__d2d6c5ff52b0__turn1.stdout.txt"
+      ],
+      "truth_hex_in_model_visible": []
+    },
+    "63": {
+      "clean": true,
+      "key_hex_anywhere_in_sessions": [],
+      "prefix_hex_anywhere_in_sessions": [],
+      "truth_hex_in_execution_stdout_expected": [
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__A_INTERACTIVE__seed_63__ed2194e21999__turn1.stdout.txt"
+      ],
+      "truth_hex_in_model_visible": []
+    },
+    "64": {
+      "clean": true,
+      "key_hex_anywhere_in_sessions": [],
+      "prefix_hex_anywhere_in_sessions": [],
+      "truth_hex_in_execution_stdout_expected": [
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__A_INTERACTIVE__seed_64__5b22e238de7b__turn1.stdout.txt",
+        "sp2027/research_execution/h2_cbc_agency_20261023/sessions/execution_captures/h2_cbc_agency_20261023__cbc__B_ONESHOT__seed_64__5b3e85e20c57__turn1.stdout.txt"
+      ],
+      "truth_hex_in_model_visible": []
+    }
+  },
+  "protocol": "H2-CBC-AGENCY-20261023-v1",
+  "result": "PASS",
+  "rule": "no truth/key/prefix material in prompts, raw provider responses, events, model-written programs, or oracle usage files; truth hex in accepted programs' execution stdout is expected (own recovered output), per PREREGISTRATION.md \u00a79",
+  "scan_time": "2026-10-24T05:37:52Z",
+  "violations": []
+}

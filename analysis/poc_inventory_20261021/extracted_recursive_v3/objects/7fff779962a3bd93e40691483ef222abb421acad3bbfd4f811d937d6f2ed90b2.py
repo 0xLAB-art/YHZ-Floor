@@ -1,0 +1,1 @@
+import sys;c1_hex='...';c2_hex='...';c1=bytes.fromhex(c1_hex);c2=bytes.fromhex(c2_hex);p1=bytes(a^b for a,b in zip(c1,c2));print("CLAIM:{\"plaintext2_hex\": \""+p1.hex()+"\"}")

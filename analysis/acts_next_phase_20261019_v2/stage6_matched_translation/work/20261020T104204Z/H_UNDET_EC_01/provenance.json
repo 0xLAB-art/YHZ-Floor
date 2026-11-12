@@ -1,0 +1,34 @@
+{
+  "signatures": [],
+  "signed": {
+    "_type": "https://in-toto.io/Statement/v1",
+    "subject": [
+      {
+        "name": "candidate_output.json",
+        "digest": {
+          "sha256": "1103186f8d5bcd7349f60b02868550385c6a0afcc0f8fab3243212ca96377829"
+        }
+      }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v1",
+    "predicate": {
+      "buildDefinition": {
+        "buildType": "https://acts-attack.invalid/e2a-attribution/v1",
+        "externalParameters": {
+          "target_id": "ECDSA_Nonce_Reuse-seed-01",
+          "attempt_id": "e2a-H_UNDET_EC_01",
+          "epoch": 1
+        },
+        "internalParameters": {}
+      },
+      "runDetails": {
+        "builder": {
+          "id": "https://acts-attack.invalid/e2a-aggregator/v1"
+        },
+        "metadata": {
+          "invocationId": "e2a-H_UNDET_EC_01"
+        }
+      }
+    }
+  }
+}

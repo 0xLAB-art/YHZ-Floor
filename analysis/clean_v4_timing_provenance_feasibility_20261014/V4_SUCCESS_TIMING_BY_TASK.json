@@ -1,0 +1,96 @@
+{
+  "cohort": "EXP-034 / CLEAN V4-02",
+  "scheduled_n": 12,
+  "retained_n": 12,
+  "qualified_source_supported_success_timing_n": 8,
+  "independently_recomputable_from_raw_monotonic_endpoints_n": 0,
+  "tasks": {
+    "RC4": {
+      "scheduled_n": 3,
+      "retained_n": 3,
+      "success_n": 0,
+      "timing_admissible_success_n": 0,
+      "successful_agent_tm_median_s": null,
+      "minimum_s": null,
+      "maximum_s": null,
+      "individual_successful_run_timings_s": [],
+      "timing_qualification": "reported duration is retained and source-defined; raw monotonic boundary readings are not independently retained"
+    },
+    "ChaCha20": {
+      "scheduled_n": 3,
+      "retained_n": 3,
+      "success_n": 2,
+      "timing_admissible_success_n": 2,
+      "successful_agent_tm_median_s": 18.370820229,
+      "minimum_s": 17.501390429,
+      "maximum_s": 19.240250029,
+      "individual_successful_run_timings_s": [
+        {
+          "run_id": "qedd7c9aab5dcad7ed9f33482__chacha20_nonce_reuse__T1_known__rep1",
+          "replicate": 1,
+          "tm_s": 17.501390429
+        },
+        {
+          "run_id": "qaef4f421945ab6cf6bf8ba2f__chacha20_nonce_reuse__T1_known__rep2",
+          "replicate": 2,
+          "tm_s": 19.240250029
+        }
+      ],
+      "timing_qualification": "reported duration is retained and source-defined; raw monotonic boundary readings are not independently retained"
+    },
+    "CBC": {
+      "scheduled_n": 3,
+      "retained_n": 3,
+      "success_n": 3,
+      "timing_admissible_success_n": 3,
+      "successful_agent_tm_median_s": 50.062237569,
+      "minimum_s": 39.437837586,
+      "maximum_s": 71.12747577,
+      "individual_successful_run_timings_s": [
+        {
+          "run_id": "qb043d10ca94bb987b03fd142__cbc_padding_oracle__T1_known__rep1",
+          "replicate": 1,
+          "tm_s": 50.062237569
+        },
+        {
+          "run_id": "qf86aba4885ba256ad42fb17a__cbc_padding_oracle__T1_known__rep2",
+          "replicate": 2,
+          "tm_s": 39.437837586
+        },
+        {
+          "run_id": "q83ce3aca8c16001d24a2a383__cbc_padding_oracle__T1_known__rep3",
+          "replicate": 3,
+          "tm_s": 71.12747577
+        }
+      ],
+      "timing_qualification": "reported duration is retained and source-defined; raw monotonic boundary readings are not independently retained"
+    },
+    "ECDSA": {
+      "scheduled_n": 3,
+      "retained_n": 3,
+      "success_n": 3,
+      "timing_admissible_success_n": 3,
+      "successful_agent_tm_median_s": 15.294515114,
+      "minimum_s": 14.470609464,
+      "maximum_s": 16.63520679,
+      "individual_successful_run_timings_s": [
+        {
+          "run_id": "qb868b7c841e0cd44e83089eb__ecdsa_nonce_reuse__T1_known__rep1",
+          "replicate": 1,
+          "tm_s": 15.294515114
+        },
+        {
+          "run_id": "qdde825bc566a03f633adaf41__ecdsa_nonce_reuse__T1_known__rep2",
+          "replicate": 2,
+          "tm_s": 14.470609464
+        },
+        {
+          "run_id": "q94a788081121781914024471__ecdsa_nonce_reuse__T1_known__rep3",
+          "replicate": 3,
+          "tm_s": 16.63520679
+        }
+      ],
+      "timing_qualification": "reported duration is retained and source-defined; raw monotonic boundary readings are not independently retained"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "adapter": "provider_adapter_agentrouter_p017.py",
+  "adapter_sha256": "d9f2995dc42c7a063d37b704179030a60b28435978db4157eed4d8a48438da7f",
+  "attribution_rule": {
+    "3-7": "PARTIAL_BUDGET",
+    "<=2": "BUDGET_EXPLAINS",
+    ">=8": "BUDGET_HYPOTHESIS_FAILS"
+  },
+  "change_vs_P014": {
+    "token_floor": {
+      "from": 2800,
+      "to": 4200
+    }
+  },
+  "label": "gpt-6-astra",
+  "protocol": "P017-INFO-CONTRACT-2X2-AESGCM-FLOOR4200-v1",
+  "purpose": "withheld-arm dropout attribution at a data-derived token floor",
+  "registered": "2026-11-02",
+  "route": "agentrouter",
+  "runner": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+  "runner_path": "run_info_contract_2x2_aesgcm.py",
+  "scheduling": "sequential; starts only after P016 has fully finished",
+  "seeds": [
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716
+  ],
+  "sessions_registered": 64,
+  "token_floor": 4200,
+  "token_floor_rule": "round_up(1.5 * max_observed_P014_output_tokens(2747), 400)"
+}

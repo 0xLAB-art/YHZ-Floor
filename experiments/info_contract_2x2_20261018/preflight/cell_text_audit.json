@@ -1,0 +1,72 @@
+{
+  "c1_equals_historical_default": true,
+  "cells": {
+    "C1": {
+      "naming_slot": "This is a qualified synthetic ChaCha20 nonce-reuse instance. ",
+      "reference_slot": "Two 64-byte ciphertexts were made with the same key and nonce; c2 encrypts a 64-byte all-zero reference. "
+    },
+    "C2": {
+      "naming_slot": "The public JSON contains a qualified synthetic cryptographic recovery instance, but the family and weakness label are intentionally withheld. Infer the construction from the public observations. ",
+      "reference_slot": "Two 64-byte ciphertexts were made with the same key and nonce; c2 encrypts a 64-byte reference. "
+    },
+    "C3": {
+      "naming_slot": "The public JSON contains a qualified synthetic cryptographic recovery instance, but the family and weakness label are intentionally withheld. Infer the construction from the public observations. ",
+      "reference_slot": "Two 64-byte ciphertexts were made with the same key and nonce; c2 encrypts a 64-byte all-zero reference. "
+    },
+    "C4": {
+      "naming_slot": "This is a qualified synthetic ChaCha20 nonce-reuse instance. ",
+      "reference_slot": "Two 64-byte ciphertexts were made with the same key and nonce; c2 encrypts a 64-byte reference. "
+    }
+  },
+  "middle_block_sha256": "2c8be955c6f87d1183551b2d8da935f45a4158cc6cfa4cb2e8ed8b5aa5f44710",
+  "pairwise_diff_spans": {
+    "C1_C2": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 444,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C1_C3": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 539,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C1_C4": {
+      "common_prefix_len": 195,
+      "common_suffix_len": 444,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C2_C3": {
+      "common_prefix_len": 329,
+      "common_suffix_len": 444,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C2_C4": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 530,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    },
+    "C3_C4": {
+      "common_prefix_len": 51,
+      "common_suffix_len": 444,
+      "diff_within_slot_region": true,
+      "prefix_identical": true,
+      "tail_identical": true
+    }
+  },
+  "template_sha256": {
+    "C1": "036d57634e1314d2eae14b8e2c64857ac91873e49929b6db2972479933b79c5c",
+    "C2": "c5bc0ac28bb6d2cfe84d34b8443a130bbe6d03ab13852d8d4d1457e71336f8a3",
+    "C3": "33051027dbd0dddb664d36154d760efd0803c4c67e13c630075422919ce193c7",
+    "C4": "c9f3d2b9f94ed24bfe4947a7f310b39f40acbf033b17944cc058d520dea6e04f"
+  }
+}

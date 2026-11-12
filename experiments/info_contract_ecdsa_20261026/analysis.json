@@ -1,0 +1,117 @@
+{
+ "cmh_premise_stratified_by_seed": {
+  "chi2_cc": 0.0,
+  "note": "zero variance (degenerate strata)",
+  "p_two_sided": 1.0
+ },
+ "cross_fixture_descriptive": {
+  "ChaCha20 (hidden premise)": {
+   "P010 n=4": {
+    "C1": "4/4",
+    "C2": "4/4",
+    "C3": "4/4",
+    "C4": "0/4"
+   },
+   "P010L2 n=8": {
+    "C1": "8/8",
+    "C2": "0/8",
+    "C3": "8/8",
+    "C4": "0/8"
+   },
+   "P010N16 n=16": {
+    "C1": "16/16",
+    "C2": "3/16",
+    "C3": "16/16",
+    "C4": "6/16"
+   },
+   "P010P n=8": {
+    "C1": "8/8",
+    "C2": "0/8",
+    "C3": "8/8",
+    "C4": "3/8"
+   }
+  },
+  "ECDSA (observable premise) P012 n=16": {
+   "C1": "16/16",
+   "C2": "16/16",
+   "C3": "16/16",
+   "C4": "16/16"
+  },
+  "RC4 (saturated ceiling, honest null)": {
+   "C1": "4/4",
+   "C2": "4/4",
+   "C3": "4/4",
+   "C4": "4/4"
+  },
+  "note": "descriptive only \u2014 never pooled as a rate; premise-observability axis"
+ },
+ "falsifiers": {
+  "F1_stated_arm_ceiling": "FALSE (C1 at stated-arm ceiling; fixture reproduces stated-arm determinism)",
+  "F2_naming_gates": "FALSE (C3 == C1; naming never gates when the premise is stated)",
+  "F3_derive_frame": "TRUE (C2 near C1 \u2014 success without the premise; on this fixture the premise is redundantly OBSERVABLE, the preregistered predicted null / observability control)"
+ },
+ "instrument_duplicates": [
+  [
+   141,
+   "C1"
+  ],
+  [
+   141,
+   "C2"
+  ]
+ ],
+ "leak_scan_verdict": "PASS",
+ "naming_marginal": {
+  "A+ (C1+C4)": "32/32",
+  "A- (C2+C3)": "32/32",
+  "fisher_two_sided_p": 1.0
+ },
+ "per_cell": {
+  "C1": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 19
+  },
+  "C2": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 18
+  },
+  "C3": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 19
+  },
+  "C4": {
+   "accepted": 16,
+   "sessions": 16,
+   "submissions": 16,
+   "turns": 19
+  }
+ },
+ "premise_marginal": {
+  "B+ (C1+C3)": "32/32",
+  "B- (C2+C4)": "32/32",
+  "fisher_two_sided_p": 1.0
+ },
+ "primary_paired_C1_vs_C4": {
+  "c1_wins": 0,
+  "c4_wins": 0,
+  "discordant": 0,
+  "exact_binomial_two_sided_p": 1.0,
+  "ties": 16
+ },
+ "protocol": "P012-INFO-CONTRACT-2X2-ECDSA-NONCE-REUSE-v1",
+ "reading": "Observability control as preregistered: all four cells at 16/16. The ECDSA nonce-reuse premise is redundantly observable in the public data (r1 == r2 plus a public nonce_reuse flag), so withholding the premise sentence costs nothing BY CONSTRUCTION. This is the predicted structural null, not a refutation of the premise share; it brackets the claim to fixtures whose premise is a fact about secret content (ChaCha20, AES-CTR).",
+ "schema": "infoc-p012-analysis/1",
+ "unique_sessions": 64,
+ "usage": {
+  "calls": 77,
+  "estimated_accounting_cost_usd": 0.585873,
+  "input_tokens": 32851,
+  "output_tokens": 32488
+ }
+}

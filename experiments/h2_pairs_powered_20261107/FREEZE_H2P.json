@@ -1,0 +1,59 @@
+{
+ "schema": "h2-pairs-powered-freeze/1",
+ "status": "FROZEN \u2014 awaiting namespace-restricted commit; live mode refuses until FREEZE_COMMIT_H2P.txt exists",
+ "protocol": "H2-CBC-PAIRS-POWERED-20261107-v1",
+ "registered_date": "2026-11-07",
+ "registered_primary": {
+  "statistic": "paired exact binomial on the A-vs-B acceptance discordance",
+  "significance": "b >= 6 one-directional (p = 2*0.5^6 = 0.03125)",
+  "counter_directional_must_be": "reported; 0 required for a directional claim"
+ },
+ "design": {
+  "grid": "32 seeds (441-472) x 2 arms = 64 sessions",
+  "floor": 8400,
+  "label": "gpt-6.1-sol (amendment 4)",
+  "temperature": "route default (uniform)",
+  "ceiling": "2.5M output tokens enforced live"
+ },
+ "files": {
+  "PREREGISTRATION_H2_POWERED.md": {
+   "sha256": "990429a21c7885088f6a1972c670ca807baf9a933688b5813ccb7718ddb63f26"
+  },
+  "run_h2_pairs_powered.py": {
+   "sha256": "1d5d672b719acc5032f17d23b0d193a14988cda06f8e2241f57c83bbe6f2f58b"
+  },
+  "agentrouter_client.py": {
+   "sha256": "45347562b3441a9869aa118f4d8daa78148f1cbc456893ce95fd9590caafc59b"
+  },
+  "fixture_cbc.py": {
+   "sha256": "f4a69e2dd0baec66da8374761ddc645fe4b81ea4655ef287e68b18424dacd60b"
+  }
+ },
+ "amendments": [
+  {
+   "n": 1,
+   "date": "2026-11-07",
+   "what": "transport revert to the frozen H2 APMIX route + label claude-sonnet-4-6-free + floor 3000 verbatim; reason: agentrouter content-filters the CBC prompt (pre-evidence, zero accepted outcomes)"
+  },
+  {
+   "n": 2,
+   "date": "2026-11-07",
+   "what": "TRANSPORT-BLOCKED: APMIX 404 (64 pre-output failures recorded, seeds 441-472 spent), APINEX 402, agentrouter content-filtered \u2014 pending an operator route decision; zero outcomes, no statistic computed"
+  },
+  {
+   "n": 3,
+   "date": "2026-11-07",
+   "what": "funded-account recovery wave: agentrouter transport, label gpt-5.6-sol only (astra excluded by the author), floor 8400, seeds 441-472 re-run; blocked rows relocated to results_transport_blocked_441_472.jsonl (retained+disclosed); probe: the CBC prompt passes funded"
+  },
+  {
+   "n": 3.5,
+   "date": "2026-11-07",
+   "what": "the max_tokens threshold measured: 16-32 pass 5/5; 3000/5000 content-blocked; 8400 rate-limited \u2014 the filter triggers on the generation budget; the agentrouter transport is unusable for the CBC task at every useful floor"
+  },
+  {
+   "n": 4,
+   "date": "2026-11-07",
+   "what": "operator key rotation ($125 replacement key) + registered label gpt-5.6-sol -> gpt-6.1-sol (measured: 5.6-sol pool passes 2/9 at the 8400 floor, 6.1-sol 2/3; retry policy preserves the 32-pair denominator) + transport retry policy (6 attempts, backoff 20-320s, pre-output conditions only, attempt counts logged per call, per-arm distribution reported) + halt rule implemented (3 consecutive fully-exhausted calls -> HALT_WAVE.txt); zero accepted outcomes at amendment time"
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+  "arm": "R2",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py",
+    "returncode": 1,
+    "status": "EXECUTION_FAILED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTION_FAILED",
+  "failure_stage": "EXECUTION",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": false
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L3-seed10050",
+  "kind": "primary",
+  "latency_s": 17.548835277557373,
+  "legacy_would_reject": false,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 453,
+  "output_schema_errors": [
+    "not-executed"
+  ],
+  "output_schema_ok": false,
+  "payload_chars": 5288,
+  "payload_sha256": "4e9e3cc1ca00550e5e3dd11f9805c08f9fa7831c2cda1277a49afea7a3b0c323",
+  "phase": "confirmatory",
+  "prompt_chars": 6239,
+  "prompt_sha256": "de5c8bab85a117d4563dd7fa34afefe52ed54ea08d321565f47501e66b2792bc",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": null,
+  "qualification_legacy": {
+    "imported_modules": [
+      "base64",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [],
+    "violations": []
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "candidate_len": null,
+      "expected_len": 128
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "plaintext": "7b42ad0fb593781825402df49fc24966b6921c773ec7df2ae6abec51e0f678c86b68f66f94c0704f5a9b527d917ad044c74b5e286b47c50b9ca269271453db51656a5e149236a9ce275ac15bbe3c43f7dcfc6d2bc9a6e6ba46735a5d649645799965ba50e0bb129601710111013d363ef5d21029974673af9e2c5449f796fe06",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 3706,
+  "response_sha256": "aa44a8fb0085baa938df8e6afdd75477371c4c8e15ccc1cac5e049418c675040",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 10050,
+  "session_id": "confirmatory-0453-xor-L3-10050-R2-r0-74add262",
+  "source_chars": 2566,
+  "source_sha256": "db401dfdf05bbe8be610fa8ce18c86f8c69ae5263f0979edb44925e21ff3401d",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 88, in <module>\n    main()\n  File \"/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0453-xor-L3-10050-R2-r0-74add262/candidate.py\", line 59, in main\n    keystream[pos] = pt_byte ^ ct_data[pos]\n    ~~~~~~~~~^^^^^\nIndexError: list assignment index out of range\n",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "EXECUTION",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 1787,
+    "output_tokens": 1054
+  }
+}

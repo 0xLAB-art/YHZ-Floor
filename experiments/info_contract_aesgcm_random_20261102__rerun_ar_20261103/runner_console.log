@@ -1,0 +1,87 @@
+{
+  "adapter_sha256": "6b1d14182df3da751f41b710c660cefcb1e280fa5a2acd6796f78f9c7b7922d2",
+  "endpoint_host": "agentrouter.org",
+  "fixture": "aesgcm",
+  "fixture_name": "AES-GCM",
+  "keystream_exposed": true,
+  "model_label": "gpt-6-astra",
+  "namespace": "info_contract_aesgcm_random_20261102__rerun_ar_20261103",
+  "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1",
+  "route": "agentrouter",
+  "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+  "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_20261102T104901Z.json",
+  "seeds": [
+    4341632355670108071,
+    1836670359943586176,
+    1981783119675249472,
+    3916232020641995939,
+    4354334167774334418,
+    4531526566231898715,
+    7014918998516996865,
+    3258729467659588962,
+    8894167450342848201,
+    4547687412542884783,
+    1886411320658882987,
+    8691536372558532513,
+    9046778987526785167,
+    1018275184611445198,
+    3022835445592480914,
+    6485199372483446888,
+    8349717704060307758,
+    848145829905836168,
+    5823544179236115972,
+    4311182388579029051,
+    5860371846351031738,
+    5390375271399277462,
+    2086593926320372253,
+    992142491735793747
+  ],
+  "seeds_registered_sha256": "4bc60999fa6747971828c0e2c0642edc0225802556751c41a37e88be75763f06",
+  "sessions_registered": 96,
+  "started": 1793724307.941443,
+  "token_floor": 4200,
+  "token_floor_basis": {
+    "applied_to": "uniformly across C1/C2/C3/C4",
+    "previous_floor": 2800,
+    "previous_headroom_tokens": 53,
+    "rule": "round_up(1.5 * max_observed, 400)",
+    "source_cohort": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+    "source_max_observed_output_tokens": 2747
+  },
+  "user_agent": "claude-cli/2.0.0 (external, cli)"
+}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "d4778fd9ed921223e40eba0fb2ca00018980a741dbafacf6aa022b91933280b3", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_4341632355670108071__950f90428ab5", "seed": 4341632355670108071, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "d4778fd9ed921223e40eba0fb2ca00018980a741dbafacf6aa022b91933280b3", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_4341632355670108071__588fe1843d3c", "seed": 4341632355670108071, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "d4778fd9ed921223e40eba0fb2ca00018980a741dbafacf6aa022b91933280b3", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_4341632355670108071__0c02c0495ed3", "seed": 4341632355670108071, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "d4778fd9ed921223e40eba0fb2ca00018980a741dbafacf6aa022b91933280b3", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_4341632355670108071__f6a3767da55f", "seed": 4341632355670108071, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77290baf37e2ece9f45d3fa17164bf7f3d0e45f1322b6f7eab79c6af8c64a71f", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_1836670359943586176__da6c0d3fc682", "seed": 1836670359943586176, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77290baf37e2ece9f45d3fa17164bf7f3d0e45f1322b6f7eab79c6af8c64a71f", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_1836670359943586176__702309acea3c", "seed": 1836670359943586176, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77290baf37e2ece9f45d3fa17164bf7f3d0e45f1322b6f7eab79c6af8c64a71f", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_1836670359943586176__3b2a1db399ac", "seed": 1836670359943586176, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "77290baf37e2ece9f45d3fa17164bf7f3d0e45f1322b6f7eab79c6af8c64a71f", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_1836670359943586176__86c9dc4c7dd4", "seed": 1836670359943586176, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "83bd6dae59c7ebabf6f7c55a03172604f16f6e52ccb9767e9b2a0292ae664b9e", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_1981783119675249472__d8de30ea4400", "seed": 1981783119675249472, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "83bd6dae59c7ebabf6f7c55a03172604f16f6e52ccb9767e9b2a0292ae664b9e", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_1981783119675249472__e0b797380911", "seed": 1981783119675249472, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "83bd6dae59c7ebabf6f7c55a03172604f16f6e52ccb9767e9b2a0292ae664b9e", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_1981783119675249472__3ee0067c183c", "seed": 1981783119675249472, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "83bd6dae59c7ebabf6f7c55a03172604f16f6e52ccb9767e9b2a0292ae664b9e", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_1981783119675249472__1e27c7e9ac6b", "seed": 1981783119675249472, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "ca15c607c8d0ee5e621c5962a7245922b3bc766fbf21495343ab6bcd18a1831a", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_3916232020641995939__b784ce39e3fe", "seed": 3916232020641995939, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "ca15c607c8d0ee5e621c5962a7245922b3bc766fbf21495343ab6bcd18a1831a", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_3916232020641995939__58081fb2620e", "seed": 3916232020641995939, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "ca15c607c8d0ee5e621c5962a7245922b3bc766fbf21495343ab6bcd18a1831a", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_3916232020641995939__b9fd4c01cf95", "seed": 3916232020641995939, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "ca15c607c8d0ee5e621c5962a7245922b3bc766fbf21495343ab6bcd18a1831a", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_3916232020641995939__a6a8be5bc626", "seed": 3916232020641995939, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "6c7d4adf7ff089627eabc440a5abca543ab915077697aa07ee5f1c4daf419ffb", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_4354334167774334418__3600e16fd18c", "seed": 4354334167774334418, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "6c7d4adf7ff089627eabc440a5abca543ab915077697aa07ee5f1c4daf419ffb", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_4354334167774334418__5fa5d7129d9e", "seed": 4354334167774334418, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "6c7d4adf7ff089627eabc440a5abca543ab915077697aa07ee5f1c4daf419ffb", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_4354334167774334418__330e589f79af", "seed": 4354334167774334418, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "6c7d4adf7ff089627eabc440a5abca543ab915077697aa07ee5f1c4daf419ffb", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_4354334167774334418__7a0e3897eeb9", "seed": 4354334167774334418, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "cab828b31c26c57248130ebe463db0f1b87f8108a97bdbc0cf6d359f324c5bea", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_4531526566231898715__b064b9f5bc11", "seed": 4531526566231898715, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "cab828b31c26c57248130ebe463db0f1b87f8108a97bdbc0cf6d359f324c5bea", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_4531526566231898715__06a6dfb6ac8c", "seed": 4531526566231898715, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "cab828b31c26c57248130ebe463db0f1b87f8108a97bdbc0cf6d359f324c5bea", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_4531526566231898715__5030548c808a", "seed": 4531526566231898715, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "cab828b31c26c57248130ebe463db0f1b87f8108a97bdbc0cf6d359f324c5bea", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_4531526566231898715__3fe2921febe9", "seed": 4531526566231898715, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "9e374dc9058f1b0beca8ec2fb5e26ca72d32cae6941fa7f233b0d85bc080f69a", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_7014918998516996865__e1dace2722ad", "seed": 7014918998516996865, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "9e374dc9058f1b0beca8ec2fb5e26ca72d32cae6941fa7f233b0d85bc080f69a", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_7014918998516996865__a293122d4273", "seed": 7014918998516996865, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "9e374dc9058f1b0beca8ec2fb5e26ca72d32cae6941fa7f233b0d85bc080f69a", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_7014918998516996865__b5e0c39fad83", "seed": 7014918998516996865, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "9e374dc9058f1b0beca8ec2fb5e26ca72d32cae6941fa7f233b0d85bc080f69a", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_7014918998516996865__9150b36407f4", "seed": 7014918998516996865, "status": "EMPTY_RESPONSE", "submissions": 1, "turns": 1}
+{"cell": "C4", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "463954b5f9012ca53c5f93644dfd0ae157c4350838828d0f2d3ece3882d10665", "run_id": "info_contract_2x2_aesgcm_20261102__C4__seed_3258729467659588962__89bf3f576310", "seed": 3258729467659588962, "status": "ORACLE_FAIL", "submissions": 2, "turns": 2}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "463954b5f9012ca53c5f93644dfd0ae157c4350838828d0f2d3ece3882d10665", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_3258729467659588962__c3dd34fe946a", "seed": 3258729467659588962, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "463954b5f9012ca53c5f93644dfd0ae157c4350838828d0f2d3ece3882d10665", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_3258729467659588962__7acc7f35537e", "seed": 3258729467659588962, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "463954b5f9012ca53c5f93644dfd0ae157c4350838828d0f2d3ece3882d10665", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_3258729467659588962__2fdfc91b6bc7", "seed": 3258729467659588962, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C1", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "67a2d30f50e55ba08681559d93463be7cb1c2db30acd8a6a964c285f6021cdd5", "run_id": "info_contract_2x2_aesgcm_20261102__C1__seed_8894167450342848201__4ab8aba55b7a", "seed": 8894167450342848201, "status": "SUCCESS", "submissions": 1, "turns": 1}
+{"cell": "C2", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 1, "public_input_sha256": "67a2d30f50e55ba08681559d93463be7cb1c2db30acd8a6a964c285f6021cdd5", "run_id": "info_contract_2x2_aesgcm_20261102__C2__seed_8894167450342848201__8b0d9c67d904", "seed": 8894167450342848201, "status": "EMPTY_RESPONSE", "submissions": 0, "turns": 0}
+{"cell": "C3", "oracle_verdict": "accepted", "protocol": "P018-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1-RERUN-AR-v1", "provider_failures": 0, "public_input_sha256": "67a2d30f50e55ba08681559d93463be7cb1c2db30acd8a6a964c285f6021cdd5", "run_id": "info_contract_2x2_aesgcm_20261102__C3__seed_8894167450342848201__d84cd3175962", "seed": 8894167450342848201, "status": "SUCCESS", "submissions": 1, "turns": 1}

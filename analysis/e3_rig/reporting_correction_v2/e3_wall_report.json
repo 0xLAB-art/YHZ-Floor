@@ -1,0 +1,308 @@
+{
+  "correction": "R2: both arms estimate perf_counter_ns subprocess wall elapsed time",
+  "measurement_scope": {
+    "workload": "Synthetic indexed lookup versus full 256-entry scan, 20000 iterations; not AES leakage testing",
+    "interval": "Fresh subprocess launch, execution and output capture",
+    "cold": "sync and drop_caches=3 before timing; filesystem-cache operation",
+    "warm": "Skip drop_caches, still a fresh subprocess",
+    "smt": "Recorded labels; retained initial source toggles during block preparation, with no per-trial hardware attestation for the interrupted prefix. No identified causal SMT effect."
+  },
+  "raw_trials": 32000,
+  "capture_arms": {
+    "perf_counter_ns_monotonic": "Wall only",
+    "getruseru_utime_split": "Wall + rusage"
+  },
+  "input_sha256": {
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_rig/samples_full.jsonl": "bb05d7be0f17755e736b9be40ebe864bfe339c45724e592f9a1ba7bb9e5546cf",
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_rig/e3_analyze_results.json": "ec79ae941e1454372ee5d90e7026ec9209c9d2037a780cf007879ef3d8d10bc3",
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_analyze.py": "1ddc428223293a22e112bb55d4e2771e7a986ec35152e62a0e9195eae58cb1d1",
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_rig_driver.py": "2b7a501c215c6a34315d1ab8660c63c3715471012a905637e5746fff9b44a66a",
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_rig/gate_verdict.json": "e471eff75175b34fce954fbcb163d45c839ec6ee000fe853ac52bd44f822c1dd",
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/e3_gate_check.py": "4381ba1c4c3796eba188c694a897cc4f76dd71ac432b0e96489b8e22c6a4d484"
+  },
+  "interval_provenance": "Intervals and pooled Welch diagnostics retained from frozen historical analysis; no new resampling or hypothesis test. Welch diagnostics do not test the median-of-cell-medians estimand.",
+  "cpu_scope": "Descriptive child-user-CPU summaries include zeros and preserve trial pairing; not a second timer estimate of the published contrasts.",
+  "historical_gate": {
+    "recorded_verdict": "PASS",
+    "n_control_fixed": 60,
+    "n_control_random": 60,
+    "recorded_control_p": 0.6768910193567681,
+    "actual_canary_comparison": "vulnerable fixed seed versus control random seeds",
+    "leakage_validation_established": false,
+    "meaning": "Historical PASS is not constant-time assurance or evidence of within-vulnerable input-dependent sensitivity; non-rejection is not equivalence. Current wall reporting does not use this verdict as a scientific admission gate."
+  },
+  "primary_estimand": "Median of V-minus-CT cell-median differences; bootstrap conditional on retained host/label strata",
+  "cell_summaries": {
+    "constant_time_control:getruseru_utime_split:cold:off": {
+      "n": 2000,
+      "wall_median_ms": 8.011549,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 2,
+        "median_ms": 2.16800000000017,
+        "median_fraction_of_paired_wall": 0.18949431969268252
+      }
+    },
+    "constant_time_control:getruseru_utime_split:cold:on": {
+      "n": 2000,
+      "wall_median_ms": 26.5316595,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 6,
+        "median_ms": 1.7245000000002397,
+        "median_fraction_of_paired_wall": 0.08592236678890947
+      }
+    },
+    "constant_time_control:getruseru_utime_split:warm:off": {
+      "n": 2000,
+      "wall_median_ms": 2.822786,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 0,
+        "median_ms": 1.8219999999994352,
+        "median_fraction_of_paired_wall": 0.8095992161492569
+      }
+    },
+    "constant_time_control:getruseru_utime_split:warm:on": {
+      "n": 2000,
+      "wall_median_ms": 2.20697,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 2,
+        "median_ms": 1.7860000000000653,
+        "median_fraction_of_paired_wall": 0.6243385983174525
+      }
+    },
+    "constant_time_control:perf_counter_ns_monotonic:cold:off": {
+      "n": 2000,
+      "wall_median_ms": 8.106231000000001
+    },
+    "constant_time_control:perf_counter_ns_monotonic:cold:on": {
+      "n": 2000,
+      "wall_median_ms": 27.482976
+    },
+    "constant_time_control:perf_counter_ns_monotonic:warm:off": {
+      "n": 2000,
+      "wall_median_ms": 2.81788
+    },
+    "constant_time_control:perf_counter_ns_monotonic:warm:on": {
+      "n": 2000,
+      "wall_median_ms": 2.236145
+    },
+    "vulnerable_ttable:getruseru_utime_split:cold:off": {
+      "n": 2000,
+      "wall_median_ms": 6.338191999999999,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 1220,
+        "median_ms": 0.0,
+        "median_fraction_of_paired_wall": 0.0
+      }
+    },
+    "vulnerable_ttable:getruseru_utime_split:cold:on": {
+      "n": 2000,
+      "wall_median_ms": 25.188015500000002,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 1301,
+        "median_ms": 0.0,
+        "median_fraction_of_paired_wall": 0.0
+      }
+    },
+    "vulnerable_ttable:getruseru_utime_split:warm:off": {
+      "n": 2000,
+      "wall_median_ms": 0.7588174999999999,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 790,
+        "median_ms": 0.39100000000025226,
+        "median_fraction_of_paired_wall": 0.5423056461334153
+      }
+    },
+    "vulnerable_ttable:getruseru_utime_split:warm:on": {
+      "n": 2000,
+      "wall_median_ms": 0.778172,
+      "user_cpu_descriptive": {
+        "n": 2000,
+        "zero_samples": 828,
+        "median_ms": 0.40599999999996195,
+        "median_fraction_of_paired_wall": 0.29810114218561645
+      }
+    },
+    "vulnerable_ttable:perf_counter_ns_monotonic:cold:off": {
+      "n": 2000,
+      "wall_median_ms": 6.388401999999999
+    },
+    "vulnerable_ttable:perf_counter_ns_monotonic:cold:on": {
+      "n": 2000,
+      "wall_median_ms": 24.716012499999998
+    },
+    "vulnerable_ttable:perf_counter_ns_monotonic:warm:off": {
+      "n": 2000,
+      "wall_median_ms": 0.7484855
+    },
+    "vulnerable_ttable:perf_counter_ns_monotonic:warm:on": {
+      "n": 2000,
+      "wall_median_ms": 0.78244
+    }
+  },
+  "paired_cell_differences": [
+    {
+      "arm": "perf_counter_ns_monotonic",
+      "cache": "cold",
+      "smt": "on",
+      "wall_delta_ms": -2.766963500000003
+    },
+    {
+      "arm": "perf_counter_ns_monotonic",
+      "cache": "cold",
+      "smt": "off",
+      "wall_delta_ms": -1.7178290000000018
+    },
+    {
+      "arm": "perf_counter_ns_monotonic",
+      "cache": "warm",
+      "smt": "on",
+      "wall_delta_ms": -1.453705
+    },
+    {
+      "arm": "perf_counter_ns_monotonic",
+      "cache": "warm",
+      "smt": "off",
+      "wall_delta_ms": -2.0693945
+    },
+    {
+      "arm": "getruseru_utime_split",
+      "cache": "cold",
+      "smt": "on",
+      "wall_delta_ms": -1.3436439999999976
+    },
+    {
+      "arm": "getruseru_utime_split",
+      "cache": "cold",
+      "smt": "off",
+      "wall_delta_ms": -1.673357000000001
+    },
+    {
+      "arm": "getruseru_utime_split",
+      "cache": "warm",
+      "smt": "on",
+      "wall_delta_ms": -1.428798
+    },
+    {
+      "arm": "getruseru_utime_split",
+      "cache": "warm",
+      "smt": "off",
+      "wall_delta_ms": -2.0639684999999997
+    }
+  ],
+  "wall_contrasts": {
+    "combined": {
+      "wall_effect_ms": -1.6955930000000015,
+      "retained_ci95_ms": [
+        -1.9128159999999992,
+        -1.5897290687500003
+      ],
+      "historical_key": "combined"
+    },
+    "build | capture_arm=Wall only": {
+      "wall_effect_ms": -1.893611750000001,
+      "retained_ci95_ms": [
+        -1.9531062999999997,
+        -1.6039432124999997
+      ],
+      "historical_key": "build | timer=perf_counter_ns_monotonic"
+    },
+    "build | capture_arm=Wall + rusage": {
+      "wall_effect_ms": -1.5510775000000006,
+      "retained_ci95_ms": [
+        -1.88773825625,
+        -1.49756596875
+      ],
+      "historical_key": "build | timer=getruseru_utime_split"
+    },
+    "build | cache=cold": {
+      "wall_effect_ms": -1.6955930000000015,
+      "retained_ci95_ms": [
+        -2.0857916,
+        -1.5812168062499985
+      ],
+      "historical_key": "build | cache=cold"
+    },
+    "build | cache=warm": {
+      "wall_effect_ms": -1.75883675,
+      "retained_ci95_ms": [
+        -1.77907271875,
+        -1.7448239374999999
+      ],
+      "historical_key": "build | cache=warm"
+    },
+    "build | smt=on": {
+      "wall_effect_ms": -1.4412515,
+      "retained_ci95_ms": [
+        -1.9702828500000003,
+        -1.41588931875
+      ],
+      "historical_key": "build | smt=on"
+    },
+    "build | smt=off": {
+      "wall_effect_ms": -1.8908987500000007,
+      "retained_ci95_ms": [
+        -1.9507919375000002,
+        -1.8484358812500006
+      ],
+      "historical_key": "build | smt=off"
+    }
+  },
+  "auxiliary_pooled_mean_diagnostics": {
+    "combined": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -12.113617911612334,
+      "welch_df": 31997.583239339092,
+      "recorded_normal_approximation_p": 8.94593894773284e-34,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | capture_arm=Wall only": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -9.249460336609776,
+      "welch_df": 15996.982508173749,
+      "recorded_normal_approximation_p": 2.256289551139209e-20,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | capture_arm=Wall + rusage": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -7.880261143900523,
+      "welch_df": 15997.98729937157,
+      "recorded_normal_approximation_p": 3.2669756806300952e-15,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | cache=cold": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -8.121153789090782,
+      "welch_df": 15996.752675091682,
+      "recorded_normal_approximation_p": 4.61772442493777e-16,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | cache=warm": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -115.17252604821438,
+      "welch_df": 15535.156986744954,
+      "recorded_normal_approximation_p": 0.0,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | smt=on": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -7.485964359183534,
+      "welch_df": 15997.049447529756,
+      "recorded_normal_approximation_p": 7.102366949348937e-14,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    },
+    "build | smt=off": {
+      "null": "Equal pooled trial mean wall spans across builds within this label stratum",
+      "welch_t": -10.421836288827409,
+      "welch_df": 15997.966720829647,
+      "recorded_normal_approximation_p": 1.9711022906173608e-25,
+      "scope": "Auxiliary pooled-mean diagnostic, not a test of the median-of-cell-medians effect"
+    }
+  }
+}

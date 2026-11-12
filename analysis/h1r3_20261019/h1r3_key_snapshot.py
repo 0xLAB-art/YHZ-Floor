@@ -1,0 +1,3 @@
+# key snapshot: APMIX_API_KEY_sha256=702839baeb4a13e2b7327e93a97110fbfbcfc782f04ad9a8856fe1528b29443e
+APMIX_API_KEY_HASH = "702839baeb4a13e2b7327e93a97110fbfbcfc782f04ad9a8856fe1528b29443e"
+# do NOT include production keys here

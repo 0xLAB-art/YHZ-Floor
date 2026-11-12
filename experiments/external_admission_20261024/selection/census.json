@@ -1,0 +1,39 @@
+{
+  "schema": "external-admission-task-census/1",
+  "recorded": "2026-10-24",
+  "phase": "Phase 2 external-task admission portability (REMAINING_EXPERIMENTS_PLAN_20261023.md)",
+  "source_archive": {
+    "path": "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz",
+    "sha256": "261cc002d315776cf424322a18a645a21b48b418f1425e3b10271e298da0b805",
+    "preflight_reference": "sp2027/analysis/external_validation_20261021/SOURCE_PREFLIGHT_V2.json",
+    "hash_verified_this_phase": true,
+    "note": "Plan refers to a 'tasks/' tree; the pinned snapshot's task tree is 'benchmark/' (43 task entries with metadata/metadata.json). No 'tasks/' directory exists in the archive (checked: `ls -d tasks` fails)."
+  },
+  "selection_rule_preregistered": [
+    "category includes 'crypto' in metadata.json",
+    "final subtask answer is a static deterministic string (exact-match checkable; native semantics confirmed at analytics/analyze_benchmark_run.py:111 `stdout.strip() == expected_answer`)",
+    "runnable offline in the harness: no external service, artifacts complete in release files",
+    "task statement public (release files + metadata prompts)",
+    "solvable by a program admissible under the frozen declared permissive rule (v3 inert-stdlib module set) within the fixed per-session token budget"
+  ],
+  "census": [
+    {"task_id": "hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted", "target_host": "", "verdict": "EXCLUDED", "reason": "offline artifacts present, but the official solver (htb/solve.py) requires pycryptodome AES-CBC decryption and sympy CRT; under the frozen declared rule (v3 inert-stdlib set) an admissible solver would need a from-scratch AES implementation, which the fixed per-session token budget cannot plausibly deliver; including it would add a structurally degenerate 0-vs-0 contrast"},
+    {"task_id": "hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity", "target_host": "", "verdict": "QUALIFIES", "reason": "offline; verified stdlib-only reference solve (integer digit reconstruction + hashlib-based RSA-OAEP SHA-1 unpad) reproduces the metadata answer exactly"},
+    {"task_id": "hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic", "target_host": "", "verdict": "QUALIFIES", "reason": "offline; verified stdlib-only reference solve (progressive Caesar decryption) reproduces the metadata answer exactly"},
+    {"task_id": "hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift", "target_host": "", "verdict": "QUALIFIES", "reason": "offline; verified stdlib-only reference solve (reverse + 3-char block permutation) reproduces the metadata answer exactly"},
+    {"task_id": "hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge", "target_host": "", "verdict": "QUALIFIES", "reason": "offline; verified stdlib-only reference solve (single-prime RSA, pow(e,-1,n-1), int-to-bytes) reproduces the metadata answer exactly"},
+    {"task_id": "hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival", "target_host": "path_of_survival:1337", "verdict": "EXCLUDED", "reason": "category is ['crypto'] but the task requires a live network service (target_host set)"},
+    {"task_id": "hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal", "target_host": "elgamal:1337", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2022/crypto/diffecient", "target_host": "", "verdict": "EXCLUDED", "reason": "metadata target_host is empty but the challenge is a network API service by construction (challenge/Dockerfile + xinetd; official solution uses pwntools remote and the non-stdlib mmh3 module); not offline-runnable and not admissible under the frozen module set"},
+    {"task_id": "project-sekai-ctf/sekaictf-2022/crypto/ezmaze", "target_host": "ezmaze:9999", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2022/crypto/failproof", "target_host": "failproof:9999", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2022/crypto/robust-cbc", "target_host": "robust:1337", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2023/crypto/noisier-crc", "target_host": "noisiercrc:9999", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2023/crypto/noisy-crc", "target_host": "noisy-crc:9999", "verdict": "EXCLUDED", "reason": "requires a live network service (target_host set)"},
+    {"task_id": "project-sekai-ctf/sekaictf-2023/crypto/randsubware", "target_host": "", "verdict": "EXCLUDED", "reason": "metadata target_host is empty but the challenge is an interactive network service by construction; official solution uses pwntools remote and the z3 SMT solver (outside the frozen module set); not offline-runnable in-harness"}
+  ],
+  "counts": {"crypto_category_tasks": 14, "target_host_set_service_bound": 7, "service_by_construction": 2, "offline_candidates": 5, "qualified": 4},
+  "quorum": {"required": 6, "qualified": 4, "met": false, "consequence": "honest early stop with status no_go per the phase prompt and REMAINING_EXPERIMENTS_PLAN_20261023.md Phase 2 acceptance ('≥6 tasks frozen or honest early stop documented')"},
+  "robustness_note": "Even under the most permissive reading that admits Permuted despite its AES/sympy requirements, the count is 5 < 6; the quorum failure is robust to the Permuted exclusion judgment.",
+  "boundary": "This census describes the pinned 2026-10-05 archive snapshot only. It makes no claim about the current upstream Cybench repository, about other archives, or about benchmark quality. The service-bound share of the crypto subset is a property of the snapshot's task selection, not a defect finding."
+}

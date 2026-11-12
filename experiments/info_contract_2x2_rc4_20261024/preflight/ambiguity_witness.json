@@ -1,0 +1,129 @@
+{
+  "claim": "With the reference content withheld, the public JSON does not determine a unique exact-match answer: for any 32-byte reference R, candidate = c_target XOR c_ref XOR R is consistent with every public field; only the true R yields the oracle-accepted hex.",
+  "seeds": {
+    "81": {
+      "all_candidates_consistent_with_public_fields": true,
+      "candidates_by_assumed_reference": {
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f": {
+          "candidate_hex": "a03df3432788444b1ff467ad5d38a19a99575a825b0b20224092a7a7aa7852f1",
+          "is_truth": false,
+          "reference_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+        },
+        "4141414141414141414141414141414141414141414141414141414141414141": {
+          "candidate_hex": "e17db00162cc030d56bc2ce71074eed4c80709d00e5f777419cafcfdf7240daf",
+          "is_truth": false,
+          "reference_hex": "4141414141414141414141414141414141414141414141414141414141414141"
+        },
+        "all_zero_reference": {
+          "candidate_hex": "a03cf140238d424c17fd6da65135af95894648914f1e3635588bbdbcb6654cee",
+          "is_truth": true,
+          "reference_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "distinct_candidate_count": 3,
+      "note": "The RC4 effective key is not derivable from the public JSON (no keystream is exposed without the reference premise), so no public route pins R.",
+      "public_input": {
+        "algorithm": "RC4",
+        "c_ref_hex": "9a6988be64832a350a8cd8744237a4a00eaa4162453349debd86438649cda7a0",
+        "c_target_hex": "3a5579fe470e68791d71b5d213020b3587ec09f30a2d7febe50dfe3affa8eb4e",
+        "claim_field": "target_plaintext_hex",
+        "keystream_reuse": true,
+        "protected_length": 32
+      },
+      "underdetermined_for_exact_match": true
+    },
+    "82": {
+      "all_candidates_consistent_with_public_fields": true,
+      "candidates_by_assumed_reference": {
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f": {
+          "candidate_hex": "d6caae2d47f357a9e82aaac0ecf6d2d69996ed82d04f2fd471303de3b734de6f",
+          "is_truth": false,
+          "reference_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+        },
+        "4141414141414141414141414141414141414141414141414141414141414141": {
+          "candidate_hex": "978aed6f02b710efa162e18aa1ba9d98c8c6bed0851b7882286866b9ea688131",
+          "is_truth": false,
+          "reference_hex": "4141414141414141414141414141414141414141414141414141414141414141"
+        },
+        "all_zero_reference": {
+          "candidate_hex": "d6cbac2e43f651aee023a0cbe0fbdcd98987ff91c45a39c3692927f8ab29c070",
+          "is_truth": true,
+          "reference_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "distinct_candidate_count": 3,
+      "note": "The RC4 effective key is not derivable from the public JSON (no keystream is exposed without the reference premise), so no public route pins R.",
+      "public_input": {
+        "algorithm": "RC4",
+        "c_ref_hex": "173cf5b654ab61f5b2aad10bfb5c87df9a2cf5bbe48d3da911f1daf4f39c71c4",
+        "c_target_hex": "c1f75998175d305b528971c01ba75b0613ab0a2a20d7046a78d8fd0c58b5b1b4",
+        "claim_field": "target_plaintext_hex",
+        "keystream_reuse": true,
+        "protected_length": 32
+      },
+      "underdetermined_for_exact_match": true
+    },
+    "83": {
+      "all_candidates_consistent_with_public_fields": true,
+      "candidates_by_assumed_reference": {
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f": {
+          "candidate_hex": "737238486c36383c43fa91d1a40c727f9009bb7d5683f347886f3a20b10df332",
+          "is_truth": false,
+          "reference_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+        },
+        "4141414141414141414141414141414141414141414141414141414141414141": {
+          "candidate_hex": "32327b0a29727f7a0ab2da9be9403d31c159e82f03d7a411d137617aec51ac6c",
+          "is_truth": false,
+          "reference_hex": "4141414141414141414141414141414141414141414141414141414141414141"
+        },
+        "all_zero_reference": {
+          "candidate_hex": "73733a4b68333e3b4bf39bdaa8017c708018a96e4296e5509076203bad10ed2d",
+          "is_truth": true,
+          "reference_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "distinct_candidate_count": 3,
+      "note": "The RC4 effective key is not derivable from the public JSON (no keystream is exposed without the reference premise), so no public route pins R.",
+      "public_input": {
+        "algorithm": "RC4",
+        "c_ref_hex": "245647c1aaabc3549de330d706a600f095463d58c301c3edd1eeeeadf7cc59aa",
+        "c_target_hex": "57257d8ac298fd6fd610ab0daea77c80155e9436819726bd4198ce965adcb487",
+        "claim_field": "target_plaintext_hex",
+        "keystream_reuse": true,
+        "protected_length": 32
+      },
+      "underdetermined_for_exact_match": true
+    },
+    "84": {
+      "all_candidates_consistent_with_public_fields": true,
+      "candidates_by_assumed_reference": {
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f": {
+          "candidate_hex": "26ff10c93ef24b976f3589339f831771cdeedb0090cdde15176a05738581306b",
+          "is_truth": false,
+          "reference_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+        },
+        "4141414141414141414141414141414141414141414141414141414141414141": {
+          "candidate_hex": "67bf538b7bb60cd1267dc279d2cf583f9cbe8852c59989434e325e29d8dd6f35",
+          "is_truth": false,
+          "reference_hex": "4141414141414141414141414141414141414141414141414141414141414141"
+        },
+        "all_zero_reference": {
+          "candidate_hex": "26fe12ca3af74d90673c8338938e197eddffc91384d8c8020f731f68999c2e74",
+          "is_truth": true,
+          "reference_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "distinct_candidate_count": 3,
+      "note": "The RC4 effective key is not derivable from the public JSON (no keystream is exposed without the reference premise), so no public route pins R.",
+      "public_input": {
+        "algorithm": "RC4",
+        "c_ref_hex": "48f7e9a3c535a4dab7be996ac0aab7890d4522041e19d85be2424f7d92924e85",
+        "c_target_hex": "6e09fb69ffc2e94ad0821a525324aef7d0baeb179ac11059ed3150150b0e60f1",
+        "claim_field": "target_plaintext_hex",
+        "keystream_reuse": true,
+        "protected_length": 32
+      },
+      "underdetermined_for_exact_match": true
+    }
+  }
+}

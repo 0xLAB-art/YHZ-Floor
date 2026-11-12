@@ -1,0 +1,16 @@
+[14:33:19Z] queue start; waiting for info_contract_aesgcm_random_p021ar_20261103 to finish
+[14:33:31Z] queue start; waiting for info_contract_aesgcm_random_p021ar_20261103 to finish
+[15:15:33Z] P021AR finished or stopped; starting cohort queue
+[15:15:33Z] start info_contract_gcmsiv_random_20261102
+[clone] info_contract_gcmsiv_random_20261102 -> info_contract_gcmsiv_random_20261102__rerun_ar_20261103 sharded x6 label=gpt-6-astra
+[shard] 6 shards started
+[16:24:38Z] queue start; waiting for info_contract_aesgcm_random_p021ar_20261103 to finish
+[16:24:38Z] P021AR finished or stopped; starting cohort queue
+[16:24:38Z] skip info_contract_gcmsiv_random_20261102 (already complete)
+[16:24:38Z] start info_contract_chachapoly_random_20261102
+[clone] info_contract_chachapoly_random_20261102 -> info_contract_chachapoly_random_20261102__rerun_ar_20261103 sharded x6 label=gpt-6-astra
+[shard] 6 shards started
+[shard] merged sessions=96 failures=14 bad_shards=0
+[16:45:07Z] done info_contract_chachapoly_random_20261102 provider_failures=14
+[16:45:07Z] start info_contract_aesgcm_random_20261102
+[clone] info_contract_aesgcm_random_20261102 -> info_contract_aesgcm_random_20261102__rerun_ar_20261103 via run_p018_aesgcm.py label=gpt-6-astra

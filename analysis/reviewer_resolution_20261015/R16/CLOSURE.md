@@ -1,0 +1,7 @@
+# R16: component-bounded H1 control trace
+
+Disposition: **addressed**. The environment component is now bounded at the digest-identified runtime and its declared inputs; the framework and results text state that the host kernel, CPU, external services and any provider remain trusted components outside that boundary, present the missing-component control as an implementation demonstration that claims neither necessity, sufficiency nor reliability, and record its H1=0/12 outcome without a provider/model call. The supplement records the H1PC201--203 controls passing source, configuration, task, immutable environment, execution, result and overall H1: 3/3 per field.
+
+The21-check component verifier regenerates VALIDATION.json and H1_COMPONENT_TRACE.json, including sha256 digests of the three edited manuscript files (02_framework.tex, 05_results.tex and S04c_h1_provenance_control.tex), the six-field PASS rows H1PC201--203 with run identifiers bound to the sha256-fixed payload, and the recorded control manifest and base-image digests. The H1=0/54 and H1=0/12 statements remain inside their control scope; the control results file records 3/3 with POSITIVE CONTROL PASSED.
+
+The20-check preservation/reporting regression and clean13/5/18 page builds pass; the supplement returned to5 pages through a net reduction of about228 characters that changes no reported value. No larger campaign, model comparison or provider call is implied.

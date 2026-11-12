@@ -1,0 +1,32 @@
+{
+  "namespace": "runs_009",
+  "generated_at_unix": 1792266015.2944713,
+  "cbc": {
+    "frozen_budget": 400,
+    "frozen_recovered": null,
+    "frozen_queries": 400,
+    "amended_budget": 4096,
+    "amended_success": true,
+    "amended_queries": 2021,
+    "ground_truth_match": true
+  },
+  "rc4": {
+    "public_observation_keys": [
+      "known_ciphertext",
+      "known_plaintext",
+      "target_ciphertext"
+    ],
+    "success": true,
+    "truth_used_by_solver": false
+  },
+  "ecdsa": {
+    "public_key_verified": true,
+    "different_message_hashes": true,
+    "signatures_valid": true,
+    "shared_nonce_r_equal": true
+  },
+  "xor": {
+    "named_and_unnamed_observation_contract_equal": true,
+    "underdetermined_control": "no_unique_secret_claimed"
+  }
+}

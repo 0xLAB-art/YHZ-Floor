@@ -1,0 +1,146 @@
+{
+  "schema": "contribution_audit_claim_comparison/v1",
+  "worker": "abc_prior",
+  "date": "2026-10-21",
+  "comparator": {
+    "id": "abc",
+    "title": "Establishing Best Practices for Building Rigorous Agentic Benchmarks",
+    "venue": "NeurIPS 2025 Track on Datasets and Benchmarks",
+    "authors": "Zhu, Jin, Pruksachatkun, Zhang, Liu, Cui, Kapoor, Longpre, Meng, Weiss, Barez, Gupta, Dhamala, Merizian, Giulianelli, Coppock, Ududec, Sekhon, Steinhardt, Kellermann, Schwettmann, Zaharia, Stoica, Liang, Kang",
+    "primary_source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/f316275b44ee2de533102913828a8107-Paper-Datasets_and_Benchmarks_Track.pdf",
+    "local_snapshot": "sources/abc_neurips2025.pdf",
+    "sha256_verified": "2485616a805951e0b3904a4229b97949263c8846b4bda8fcdf8a0582ed58080f",
+    "physical_pages": 41,
+    "identity_verified_from": "PDF title page, physical p. 1 (title, author list, '39th Conference on Neural Information Processing Systems (NeurIPS 2025) Track on Datasets and Benchmarks' footer)",
+    "coverage_inspected": "full text, all 41 physical pages: main body pp. 1-10 (Sec 1-7, Figs 1-6, Table 1), references pp. 11-16, Appendix A (p. 17), B (pp. 17-19), C (pp. 19-21), D (p. 21), E (pp. 21-28, Tables 6-15), F (pp. 28-32, F.1-F.6), G (p. 32), H (pp. 32-35, Table 16), I (pp. 35-41)",
+    "comparator_validity": "NOT a matched comparator: ABC's benchmark (CVE-Bench, web exploitation, state matching) and the audited artifact (cryptographic construction, predicate-based) are different systems with different task contracts. No head-to-head is possible and no superiority over ABC is claimed. The six-release documentary audit is not external executable validation and is not treated as such."
+  },
+  "uncertainty_boundary": "All 'ABC does not do X' statements are bounded by: (a) the 41-page PDF text read in full plus a case-insensitive keyword sweep of that full text; (b) ABC's unreleased/unread artifacts (code repo uiuc-kang-lab/agentic-benchmarks, project website, CVE-Bench harness) were not executed or read, so a mechanism could exist there that is not described in the paper; (c) no claim is made about other work by the same authors.",
+  "rows": [
+    {
+      "id": "C1",
+      "claim": "A controlled separation of attack correctness, source admission and execution attribution as an evaluation procedure.",
+      "abc_overlap": [
+        {
+          "anchor": "Appendix A, physical p. 17, Eq. 1-2 and surrounding definition of RT and f_Eval",
+          "what": "ABC already separates the true task-completion flag RT (which 'often requires manual inspection') from the automatic evaluator output f_Eval, defining outcome validity as RT='success' iff f_Eval=1. This is a two-layer correctness-versus-evaluator-output separation, i.e. a structural analogue of our correctness layer."
+        },
+        {
+          "anchor": "Figure 3 item O.g.2, physical p. 6; Section 4.2 discussion, physical p. 7",
+          "what": "Ground truth must include relevant AND irrelevant states 'to help detect whether agents affect the environment outside the target scope' - ABC anticipates a limited form of execution attribution (what else changed)."
+        },
+        {
+          "anchor": "Figure 2 items T.5 and T.10, physical p. 5; Section 4.1, physical p. 5",
+          "what": "T.5 (agent isolated from ground truth) and T.10 (implementation free of vulnerabilities that could be exploited to pass evaluations) anticipate admissibility/shortcut conditions at the environment and implementation level."
+        }
+      ],
+      "abc_distinction": "ABC's taxonomy is two-layer and has no source-admission layer: keyword sweep finds 'admission', 'source admission', 'import' (as policy) and 'predicate' have 0 occurrences. ABC's method is a static, human-scored checklist audit (1 point per satisfied item, p. 4) plus per-issue designed experiments (Sec 5.2, p. 9); it never re-admits byte-identical artifacts under a changed rule, and it never decomposes a single reported result into three separately measured causes. ABC quantifies flaw-induced score distortion (KernelBench 31% absolute, p. 9; CVE-Bench time-based SQLi 32.5%, p. 10); our procedure quantifies the share of outcomes that flip under a different admission rule applied to unchanged programs (46/256, 16/256, 122/256; 6.2%-47.7% per arms, manuscript Sec 4/Fig policy-effect). This is a difference in kind of evidence (intervention vs audit), not only in domain.",
+      "novelty_type": "measurement_technique",
+      "evidence_strength": "moderate for the procedure (single cryptographic study, single fixture, manuscript-reported); strong for the overlap claim (primary source read in full, with anchors). Generality of the procedure is not established.",
+      "differentiating_evidence": "Apply the three-way separation to a second, non-cryptographic benchmark's harness and show the decomposition is recoverable from a third party's artifacts rather than only from our own capture-first records; and re-grade publicly retained agent submissions from a third-party benchmark under two admission rules with byte-identical artifacts (see C2 study). Not launched here.",
+      "limitations": "Demonstrated once, in one domain, on a local fixture; the ABC two-layer taxonomy already covers a large part of the conceptual claim; no external matched comparator exists; the six-release audit is documentary, not executable validation."
+    },
+    {
+      "id": "C2",
+      "claim": "Paired representation contrasts under a common executor, followed by a changed admission rule applied to unchanged programs, estimating evaluator-policy dependence under the tested contract (not model rankings, not a general causal capability effect).",
+      "abc_overlap": [
+        {
+          "anchor": "Appendix G, physical p. 32",
+          "what": "STRONGEST OVERLAP. ABC varies the evaluator on FIXED agent artifacts: LLM-as-a-Judge (GPT-5) over AgentOccam historical trajectories, ten independent rounds with majority voting, against manually verified ground truth; reports judge accuracy 80.0% and self-consistency rate 99.2%. This is the same move as the second half of C2 (vary the evaluation rule, hold the agent output fixed, measure the effect)."
+        },
+        {
+          "anchor": "Section 5.3 and Figure 6, physical pp. 9-10",
+          "what": "ABC's CVE-Bench revision is a before/after changed-rule contrast on a security benchmark (Success@1/Success@5 for Cy-A, Aut, T-Ag arms, zero-day and one-day): 32.5% overestimation removed for time-based SQL injection; 10% success-rate drop after denying the ungated outbound server; 33% absolute overestimation reduction overall (abstract p. 1, p. 2)."
+        },
+        {
+          "anchor": "Appendix F.6, physical pp. 31-32",
+          "what": "ABC re-scores previously generated kernels (Lange et al.'s generations) with newly generated test cases, obtaining a 31% overestimation estimate - i.e. re-grading retained artifacts with a strengthened evaluator."
+        }
+      ],
+      "abc_distinction": "ABC's contrasts are not paired at the instance level: no matched instance units, no paired test, no equivalence margin, no preregistration; ABC's own statistics are descriptive percentages, and its Appendix H intervals are a normality-based interval for ground-truth noise (Eq. 3, p. 34), a different quantity. The NeurIPS checklist answer to Q7 (p. 38) states all reported numbers are deterministic and carry no error bars - incompatible with paired inference. ABC never varies a source-admission rule (0 occurrences of 'admission'), never manipulates representation as an independent variable, and never frames an estimand of evaluator-policy dependence. ABC's varied dimension is outcome grading (state/substring/whole-string matching, judge configuration), not program admission. App. G varies a judge over text answers; C2 varies an admission gate over generated source programs.",
+      "novelty_type": "measurement_technique",
+      "evidence_strength": "moderate. The overlap is strong and directly sourced; the increment (admission-rule as the varied factor, paired instance-level contrasts with a preregistered +/-0.10 margin, matched instance units) is absent from ABC but demonstrated on one study and one contract. No transfer evidence; no general causal or model-ranking claim follows.",
+      "differentiating_evidence": "Re-grade byte-identical, publicly retained agent submissions from a third-party benchmark under two admission rules and report paired instance-level contrasts with an equivalence margin; compare against ABC's Fig. 6 before/after numbers, which do not hold programs fixed. Requires no hosted model: only the evaluator changes on already-generated artifacts. Proposed only; not launched.",
+      "limitations": "The 'vary the rule on fixed artifacts' shape is anticipated by ABC App. G and Sec 5.3; ABC's CVE-Bench narrative does not state whether trajectories were re-executed or re-graded, so the exact degree of the difference in experimental design cannot be characterised from the paper alone. Single study; ABC provides no matched comparator."
+    },
+    {
+      "id": "C3",
+      "claim": "Independent cryptographic predicates and full fresh program replay against retained public inputs.",
+      "abc_overlap": [
+        {
+          "anchor": "Figure 2 items T.7 and T.9, physical p. 5; Section 4.1, physical p. 5",
+          "what": "ABC requires annotated ground truth to be verified for correctness (T.7) and requires an Oracle solver that can automatically solve all challenges (T.9) - the independent-correctness-oracle concept is part of ABC's best-practice vocabulary."
+        },
+        {
+          "anchor": "Figure 3 item O.d.1, physical p. 6; Section 4.2, physical p. 6",
+          "what": "Test cases for code-generation benchmarks must be verified for correctness and quality (O.d.1) - the same discipline applied to a different outcome type."
+        },
+        {
+          "anchor": "Figure 2 item T.6, physical p. 5",
+          "what": "Environment setup must be fully reproducible and frozen at benchmark release - the frozen-environment precondition for replay."
+        },
+        {
+          "anchor": "Appendix H, physical pp. 32-35, Table 16",
+          "what": "A worked template for quantifying ground-truth error (11.65% incorrect queries) and its effect on reported success rates and rank intervals - the closest ABC analogue to 'measure the consequence of a flawed oracle'."
+        }
+      ],
+      "abc_distinction": "'Cryptographic predicate' is a domain instantiation: 'cryptograph*' has 0 occurrences in the 41-page text and no assessed benchmark (Table 1 p. 8, Table 3 p. 19) contains a cryptographic task; the closest cyber items are answer-matching on Cybench (Table 8, p. 23) and CVE-Bench state matching (Sec 5.3). 'Full fresh program replay against retained public inputs' is a re-execution discipline with no counterpart in ABC: 'replay' has 0 occurrences; ABC's KernelBench re-scoring applies NEW tests to OLD outputs, which is not replay of old programs against old retained inputs.",
+      "novelty_type": "domain_application",
+      "evidence_strength": "moderate for the domain application; the independent-oracle half is anticipated in spirit by T.7/T.9/O.d.1; the fresh-replay discipline is genuinely absent from ABC but sits close to the general reproducibility literature ABC cites (R.1-R.5, R.8). No support for a general-method claim on ABC-comparison grounds.",
+      "differentiating_evidence": "Demonstrate that fresh replay changes conclusions relative to transcription (i.e. that replayed outcomes differ from recorded outcomes at a non-zero rate) on a second study, and show the fresh-replay denominator discipline alters at least one published-style claim. Proposed only; not launched.",
+      "limitations": "Domain-specific; the replay discipline is a rigour practice rather than a new principle; ABC's independent-ground-truth requirements mean the general idea is not new even though the instantiation is."
+    },
+    {
+      "id": "C4",
+      "claim": "Complementarity of authenticated evidence and claim-specific joins in bounded adversarial attribution tests, using existing provenance mechanisms.",
+      "abc_overlap": [
+        {
+          "anchor": "Full-text keyword sweep over pp. 1-41 (main body + Appendices A-I)",
+          "what": "NO DIRECT OVERLAP. 'attribution', 'provenance', 'signature'/'signed' (as cryptographic concepts; only 'designed' occurs), 'claim-specific' and 'trust' (only 'can be trusted' p. 1 and reference titles) have 0 substantive occurrences. ABC's T.5 (Fig. 2, p. 5) and O.c.2 (Fig. 3, p. 6) concern attacks BY the agent ON the benchmark, not authenticity of the evaluator's own evidence chain; R.8 (Fig. 4, p. 7) is a reporting obligation. The nearest cousins are T.9 (oracle establishing correctness) and Appendix A's RT/f_Eval separation (p. 17), which separates what happened from what the score says but supplies no mechanism for proving which happened."
+        }
+      ],
+      "abc_distinction": "ABC supplies no attribution machinery, no trust model, no signed-record design, no claim scoping, and no mutation-based testing of an evaluation decision; its unit of analysis is the benchmark, not a claim about one execution. Our design deliberately reuses existing provenance mechanisms (in-toto inspection, SLSA arm, shared replay ledger) and tests a fixed decision policy over 11,256 mutation evaluations with no observed soundness violation, plus live-target and loopback-ingress exercises against fabricated claims; the manuscript concedes this is 'its measured application to cryptographic attack claims rather than a new signing, logging or isolation primitive'.",
+      "novelty_type": "domain_application",
+      "evidence_strength": "strong for the absence of overlap in the primary source (full-text read plus keyword sweep); weak for competitive novelty, because ABC is NOT a valid comparator or validation baseline for an attribution policy - that argument must be made against provenance-aware comparators (in-toto/SLSA, CTF-ABACUS, ORTHRUS, PROV-AGENT), which are out of this worker's scope.",
+      "differentiating_evidence": "Implement the claim-specific-join policy against a public provenance-carrying agent-security benchmark (e.g. CyberGym or CTF-ABACUS traces) with an in-toto/SLSA-only baseline arm and report false-promotion and false-rejection counts under the same bounded mutation protocol, so the policy has a matched comparator. Proposed only; not launched; no hosted model required.",
+      "limitations": "ABC's silence here shows a checklist gap, not a competitive advantage; the candidate's design is general-purpose but its demonstrated instance is domain-bound; the in-toto agreement result (21/22, reaching 22/22 with a shared replay ledger) checks implementation, not framework superiority."
+    },
+    {
+      "id": "C5",
+      "claim": "An integrated security-specific empirical method, rather than generic discovery that benchmark flaws distort performance.",
+      "abc_overlap": [
+        {
+          "anchor": "Abstract physical p. 1; Section 1 physical p. 2; Section 5.2 physical p. 9",
+          "what": "ABC's core thesis IS the generic discovery claim: many agentic benchmarks have issues in task setup or reward design, causing under- or overestimation of agent performance by up to 100% in relative terms. The proposed contrastive framing ('rather than generic discovery that benchmark flaws distort performance') is directly contradicted by the comparator."
+        },
+        {
+          "anchor": "Section 5.3 'Revising CVE-Bench' and Figure 6, physical pp. 9-10; abstract p. 1; p. 2",
+          "what": "ABC already performs the security-domain application: a cybersecurity benchmark is audited and revised, with two domain-specific flaws fixed (naive state matching for time-based SQL injection, violating O.g.1; an ungated outbound server reachable from the same Docker network, 'creating a shortcut'), reducing performance overestimation by 33% in absolute terms, 'as confirmed by cybersecurity experts' (p. 2)."
+        },
+        {
+          "anchor": "Figure 2 item T.9, physical p. 5; Figure 3 item O.g.1, physical p. 6; Section 5.3, physical pp. 9-10",
+          "what": "ABC's CVE-Bench remediation is explicitly driven by checklist items T.9 and O.g.1, i.e. the security case study is a checklist-driven application of the general method, not a competing method."
+        }
+      ],
+      "abc_distinction": "The only defensible differences are: (i) our case study is cryptographic and constructive (agent-written attack programs against a declared task contract) rather than web-exploitation state matching; (ii) it integrates a paired contrast and a policy-sensitivity contrast absent from ABC's single-case CVE-Bench narrative; (iii) it adds an attribution layer (E5) with no ABC analogue. All three are incremental and domain-level. A defensible narrowing: 'an integrated cryptographic case study that adds a policy-sensitivity contrast and an attribution layer to the ABC-style audit.'",
+      "novelty_type": "domain_application",
+      "evidence_strength": "strong overlap evidence, weak novelty evidence. The candidate as stated (contrast against generic discovery) is NOT supported against ABC; the narrowed version is a domain application and should not be presented as a general methodological contribution.",
+      "differentiating_evidence": "Replication of the policy-sensitivity contrast on a second, non-cryptographic benchmark with retained programs (see C2) plus a second attribution evaluation (see C4) would be required before any 'integrated method' framing could be defended; if replication fails, the contribution reduces to the ABC-style single-case audit and must be reported as such.",
+      "limitations": "The stated contrastive framing is contradicted by the comparator; 'integration' of a general framework with a security case study is what ABC itself already did with CVE-Bench; no head-to-head is possible because the benchmarks differ."
+    }
+  ],
+  "summary": {
+    "per_candidate_novelty": {
+      "C1": "measurement_technique (three-way decomposition as a controlled procedure); partially anticipated by ABC Appendix A (p. 17), O.g.2 (pp. 6-7), T.5/T.10 (p. 5); not general - one study",
+      "C2": "measurement_technique; 'vary the rule on fixed artifacts' shape anticipated by ABC Appendix G (p. 32) and Sec 5.3/Fig. 6 (pp. 9-10); admission-rule variable, paired contrasts and equivalence margin absent; not general",
+      "C3": "domain_application; independent-oracle practice anticipated by T.7/T.9/O.d.1 (pp. 5-6); fresh replay genuinely absent (0 occurrences of 'replay')",
+      "C4": "domain_application; NO ABC overlap and NO ABC-based validation (ABC cannot serve as comparator for an attribution policy)",
+      "C5": "domain_application (narrowed); the contrastive framing 'rather than generic discovery' is contradicted by ABC, which is the generic discovery work and already owns a security case study (CVE-Bench, 33% absolute overestimation reduction)"
+    },
+    "strongest_genuine_increment": "C4 - the claim-specific attribution contract: the only candidate for which the 41-page primary source provides no anticipation of any kind (no attribution, provenance, signing, claim-scoping or trust content).",
+    "strongest_overlap": "C2's second half vs ABC Appendix G (p. 32) and Sec 5.3/Fig. 6 (pp. 9-10): ABC already varies the evaluation rule on fixed agent artifacts and reports the resulting score movement in a security benchmark.",
+    "single_most_important_open_differentiator": "Whether byte-identical, publicly retained agent programs from a SECOND, non-cryptographic benchmark can be re-graded under two admission rules with paired instance-level contrasts (proposed study 1). If yes, C1/C2 upgrade from a local technique to a portable evaluation method and C5's framing becomes defensible in narrowed form; if no, the defensible claim is a well-instrumented security-domain case study extending ABC's audit with a policy-sensitivity contrast and an attribution layer - valuable, and not a new general principle.",
+    "no_superiority_claim": "ABC is not a matched comparator; no head-to-head is possible or claimed. The six-release documentary audit is not external executable validation and is not treated as such.",
+    "not_run": "No experiment launched, no benchmark installed, no hosted model invoked, no manuscript/raw/frozen/lock/other-worker file modified. All proposed studies are designs only."
+  }
+}

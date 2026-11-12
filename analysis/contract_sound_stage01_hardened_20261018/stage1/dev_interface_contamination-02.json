@@ -1,0 +1,28 @@
+{
+  "case_id": "interface_contamination-02",
+  "defect_family": "interface_contamination",
+  "label_disagreement": true,
+  "primitive": "ChaCha20_Nonce_Repeat",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "boundary"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "lengths_match": true,
+      "xor_recovery_matches": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 39.52056201524101,
+  "split": "dev",
+  "stored_label": "ACCEPTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "boundary"
+  },
+  "validator_overhead_ms": 39.878101990325376
+}

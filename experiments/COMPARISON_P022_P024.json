@@ -1,0 +1,1005 @@
+{
+  "arms": {
+    "P022a": {
+      "fails": {
+        "C2:EMPTY_RESPONSE": 11,
+        "C2:HTTP_ERROR": 2
+      },
+      "floor": 4200,
+      "label": "gpt-6.1-sol",
+      "launch": {
+        "adapter_sha256": "d9f2995dc42c7a063d37b704179030a60b28435978db4157eed4d8a48438da7f",
+        "endpoint_host": "agentrouter.org",
+        "fixture": "aesgcm",
+        "fixture_name": "AES-GCM",
+        "keystream_exposed": true,
+        "model_label": "gpt-6.1-sol",
+        "namespace": "info_contract_aesgcm_p022a_20261102",
+        "paired_arm": "same 24 CSPRNG instances in both arms (paired cross-label comparison, P016 repair)",
+        "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A-v1",
+        "route": "agentrouter",
+        "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+        "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p022_20261102T183823Z.json",
+        "seeds": [
+          2984588382247702924,
+          6724306853478449109,
+          6349250927050090397,
+          2355624695296600144,
+          6989315948663911021,
+          1749650009589181305,
+          6413979494616509432,
+          1209531023828816636,
+          4056512863242200783,
+          7970393089860827483,
+          4320778129598402266,
+          1290785066155433429,
+          8737563916646659647,
+          6077076155366862441,
+          2612354140245307989,
+          5999090958330857419,
+          4244936706120645790,
+          6259174544355439484,
+          4880052499569360314,
+          3769669869940314033,
+          427867426869415814,
+          1267109517121949936,
+          6828115294609372402,
+          4701885329669827374
+        ],
+        "seeds_registered_sha256": "4c3f863f366fb8765c96cb6cbed55c806e978890c58a31c64ab72b7a0098c334",
+        "sessions_registered": 96,
+        "started": 1793662106.925591,
+        "token_floor": 4200,
+        "token_floor_basis": {
+          "applied_to": "uniformly across C1/C2/C3/C4",
+          "previous_floor": 2800,
+          "previous_headroom_tokens": 53,
+          "rule": "round_up(1.5 * max_observed, 400)",
+          "source_cohort": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+          "source_max_observed_output_tokens": 2747
+        },
+        "user_agent": "claude-cli/2.0.0 (external, cli)"
+      },
+      "per_cell": {
+        "C1": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C2": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            2.7755575615628914e-17,
+            0.2588400172488141
+          ],
+          "accepted": 0,
+          "drop_rate": 0.5416666666666666,
+          "drop_statuses": {
+            "EMPTY_RESPONSE": 11,
+            "HTTP_ERROR": 2
+          },
+          "drop_wilson": [
+            0.35074553553106635,
+            0.7210894164831857
+          ],
+          "drops": 13,
+          "evaluable": 11,
+          "model": 11,
+          "model_rate": 0.4583333333333333,
+          "sessions": 24,
+          "transport": 2,
+          "transport_rate": 0.08333333333333333
+        },
+        "C3": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C4": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "accepted": 0,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        }
+      },
+      "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A-v1",
+      "seeds": [
+        2984588382247702924,
+        6724306853478449109,
+        6349250927050090397,
+        2355624695296600144,
+        6989315948663911021,
+        1749650009589181305,
+        6413979494616509432,
+        1209531023828816636,
+        4056512863242200783,
+        7970393089860827483,
+        4320778129598402266,
+        1290785066155433429,
+        8737563916646659647,
+        6077076155366862441,
+        2612354140245307989,
+        5999090958330857419,
+        4244936706120645790,
+        6259174544355439484,
+        4880052499569360314,
+        3769669869940314033,
+        427867426869415814,
+        1267109517121949936,
+        6828115294609372402,
+        4701885329669827374
+      ],
+      "total": {
+        "acc_rate": 0.5783132530120482,
+        "accepted": 48,
+        "drop_rate": 0.13541666666666666,
+        "drop_wilson": [
+          0.08087629796762788,
+          0.21801314290671706
+        ],
+        "drops": 13,
+        "evaluable": 83,
+        "model": 11,
+        "model_rate": 0.11458333333333333,
+        "sessions": 96,
+        "transport": 2,
+        "transport_rate": 0.020833333333333332
+      }
+    },
+    "P022b": {
+      "fails": {
+        "C2:EMPTY_RESPONSE": 24,
+        "C4:EMPTY_RESPONSE": 24
+      },
+      "floor": 4200,
+      "label": "gpt-5.6-sol",
+      "launch": {
+        "adapter_sha256": "d9f2995dc42c7a063d37b704179030a60b28435978db4157eed4d8a48438da7f",
+        "endpoint_host": "agentrouter.org",
+        "fixture": "aesgcm",
+        "fixture_name": "AES-GCM",
+        "keystream_exposed": true,
+        "model_label": "gpt-5.6-sol",
+        "namespace": "info_contract_aesgcm_p022b_20261102",
+        "paired_arm": "same 24 CSPRNG instances in both arms (paired cross-label comparison, P016 repair)",
+        "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022B-v1",
+        "route": "agentrouter",
+        "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+        "seed_receipt": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/seeds_random_p022_20261102T183823Z.json",
+        "seeds": [
+          2984588382247702924,
+          6724306853478449109,
+          6349250927050090397,
+          2355624695296600144,
+          6989315948663911021,
+          1749650009589181305,
+          6413979494616509432,
+          1209531023828816636,
+          4056512863242200783,
+          7970393089860827483,
+          4320778129598402266,
+          1290785066155433429,
+          8737563916646659647,
+          6077076155366862441,
+          2612354140245307989,
+          5999090958330857419,
+          4244936706120645790,
+          6259174544355439484,
+          4880052499569360314,
+          3769669869940314033,
+          427867426869415814,
+          1267109517121949936,
+          6828115294609372402,
+          4701885329669827374
+        ],
+        "seeds_registered_sha256": "4c3f863f366fb8765c96cb6cbed55c806e978890c58a31c64ab72b7a0098c334",
+        "sessions_registered": 96,
+        "started": 1793669401.158305,
+        "token_floor": 4200,
+        "token_floor_basis": {
+          "applied_to": "uniformly across C1/C2/C3/C4",
+          "previous_floor": 2800,
+          "previous_headroom_tokens": 53,
+          "rule": "round_up(1.5 * max_observed, 400)",
+          "source_cohort": "P014-INFO-CONTRACT-2X2-AESGCM-NONCE-REUSE-v1",
+          "source_max_observed_output_tokens": 2747
+        },
+        "user_agent": "claude-cli/2.0.0 (external, cli)"
+      },
+      "per_cell": {
+        "C1": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C2": {
+          "acc_rate": null,
+          "acc_wilson": null,
+          "accepted": 0,
+          "drop_rate": 1.0,
+          "drop_statuses": {
+            "EMPTY_RESPONSE": 24
+          },
+          "drop_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "drops": 24,
+          "evaluable": 0,
+          "model": 24,
+          "model_rate": 1.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C3": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C4": {
+          "acc_rate": null,
+          "acc_wilson": null,
+          "accepted": 0,
+          "drop_rate": 1.0,
+          "drop_statuses": {
+            "EMPTY_RESPONSE": 24
+          },
+          "drop_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "drops": 24,
+          "evaluable": 0,
+          "model": 24,
+          "model_rate": 1.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        }
+      },
+      "protocol": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022B-v1",
+      "seeds": [
+        2984588382247702924,
+        6724306853478449109,
+        6349250927050090397,
+        2355624695296600144,
+        6989315948663911021,
+        1749650009589181305,
+        6413979494616509432,
+        1209531023828816636,
+        4056512863242200783,
+        7970393089860827483,
+        4320778129598402266,
+        1290785066155433429,
+        8737563916646659647,
+        6077076155366862441,
+        2612354140245307989,
+        5999090958330857419,
+        4244936706120645790,
+        6259174544355439484,
+        4880052499569360314,
+        3769669869940314033,
+        427867426869415814,
+        1267109517121949936,
+        6828115294609372402,
+        4701885329669827374
+      ],
+      "total": {
+        "acc_rate": 1.0,
+        "accepted": 48,
+        "drop_rate": 0.5,
+        "drop_wilson": [
+          0.40192229167030874,
+          0.5980777083296912
+        ],
+        "drops": 48,
+        "evaluable": 48,
+        "model": 48,
+        "model_rate": 0.5,
+        "sessions": 96,
+        "transport": 0,
+        "transport_rate": 0.0
+      }
+    },
+    "P024a": {
+      "fails": {},
+      "floor": 8400,
+      "label": "gpt-6.1-sol",
+      "launch": {
+        "adapter_sha256": "c2985a47aee84c39501312c26201792a8bb58a692bb5059ba2cd3a09fc3c7791",
+        "endpoint_host": "agentrouter.org",
+        "fixture": "aesgcm",
+        "fixture_name": "AES-GCM",
+        "keystream_exposed": true,
+        "model_label": "gpt-6.1-sol",
+        "namespace": "info_contract_aesgcm_p024a_20261103",
+        "paired_arm": "same 24 CSPRNG instances in both arms; floor identical across arms",
+        "protocol": "P024A-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1",
+        "route": "agentrouter",
+        "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+        "seed_receipt": "seeds_random_p024_20261103.json",
+        "seeds": [
+          6053757933470368991,
+          4024580240848245945,
+          6660787263210023586,
+          706851478915918331,
+          4642169946606242158,
+          6952609208550192760,
+          6371583657490919742,
+          8167853899477376958,
+          7747240405343580101,
+          3613370146640568885,
+          5917691052662730068,
+          7289094409850097839,
+          1085919367790942384,
+          5868884880163035447,
+          8393952239108227573,
+          7242823496162646513,
+          1969294029438652755,
+          8310229218680981790,
+          1928355936991434887,
+          5665272107773633994,
+          3048559450184869761,
+          4820171042784110258,
+          575165618341891725,
+          2210489604031318807
+        ],
+        "seeds_registered_sha256": "2dc0653f256e0cf5c0fdb7b0c03f3c737240032e1d66b32d82f2cc16c3b9b217",
+        "sessions_registered": 96,
+        "started": 1793698576.536472,
+        "supersedes_design_of": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A/B-v1",
+        "token_floor": 8400,
+        "token_floor_probe": {
+          "arm_b_expected_model_level_null": false,
+          "decided_floor": 8400,
+          "decision_rule": "text@4200 -> 4200; no text@4200 and text@8400 -> 8400; no text at either -> 4200 with arm-b model-level null flag",
+          "file": "probe_p024_floor.json",
+          "sha256": "21b1546ab5f000832df6b950b3f7b69d0c0767961a10a757756260e8d65ac367"
+        },
+        "transport_policy": {
+          "backoff_seconds": [
+            2,
+            5,
+            12
+          ],
+          "floor_source": "ACTS_TOKEN_FLOOR, registered in _REGISTRATION.json",
+          "jitter": false,
+          "max_attempts_per_call": 4,
+          "never_retried": [
+            "EMPTY_RESPONSE",
+            "INCOMPLETE_RESPONSE",
+            "HTTP_ERROR outside retry_status",
+            "CREDENTIAL_MISSING",
+            "CREDENTIAL_EMPTY"
+          ],
+          "retried_classes": [
+            "TIMEOUT",
+            "PROVIDER_UNAVAILABLE",
+            "MALFORMED_PROVIDER_JSON",
+            "HTTP_ERROR with retry_status",
+            "HTTP 400 carrying a retry_body_marker"
+          ],
+          "retry_body_markers": [
+            "stream_options"
+          ],
+          "retry_status": [
+            408,
+            409,
+            425,
+            429,
+            500,
+            501,
+            502,
+            503,
+            504,
+            520,
+            521,
+            522,
+            523,
+            524,
+            529
+          ],
+          "textless_attribution": "stop_reason checked before EMPTY_RESPONSE"
+        },
+        "user_agent": "claude-cli/2.0.0 (external, cli)"
+      },
+      "per_cell": {
+        "C1": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C2": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "accepted": 0,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C3": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C4": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "accepted": 0,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        }
+      },
+      "protocol": "P024A-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1",
+      "seeds": [
+        6053757933470368991,
+        4024580240848245945,
+        6660787263210023586,
+        706851478915918331,
+        4642169946606242158,
+        6952609208550192760,
+        6371583657490919742,
+        8167853899477376958,
+        7747240405343580101,
+        3613370146640568885,
+        5917691052662730068,
+        7289094409850097839,
+        1085919367790942384,
+        5868884880163035447,
+        8393952239108227573,
+        7242823496162646513,
+        1969294029438652755,
+        8310229218680981790,
+        1928355936991434887,
+        5665272107773633994,
+        3048559450184869761,
+        4820171042784110258,
+        575165618341891725,
+        2210489604031318807
+      ],
+      "total": {
+        "acc_rate": 0.5,
+        "accepted": 48,
+        "drop_rate": 0.0,
+        "drop_wilson": [
+          0.0,
+          0.03847694748481595
+        ],
+        "drops": 0,
+        "evaluable": 96,
+        "model": 0,
+        "model_rate": 0.0,
+        "sessions": 96,
+        "transport": 0,
+        "transport_rate": 0.0
+      }
+    },
+    "P024b": {
+      "fails": {
+        "C2:INCOMPLETE_RESPONSE": 19,
+        "C4:INCOMPLETE_RESPONSE": 21
+      },
+      "floor": 8400,
+      "label": "gpt-5.6-sol",
+      "launch": {
+        "adapter_sha256": "c2985a47aee84c39501312c26201792a8bb58a692bb5059ba2cd3a09fc3c7791",
+        "endpoint_host": "agentrouter.org",
+        "fixture": "aesgcm",
+        "fixture_name": "AES-GCM",
+        "keystream_exposed": true,
+        "model_label": "gpt-5.6-sol",
+        "namespace": "info_contract_aesgcm_p024b_20261103",
+        "paired_arm": "same 24 CSPRNG instances in both arms; floor identical across arms",
+        "protocol": "P024B-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1",
+        "route": "agentrouter",
+        "runner_sha256": "cf0a806a09307979adca7f544ecd99e07e443e475cc12744465f0bbebd49afb9",
+        "seed_receipt": "seeds_random_p024_20261103.json",
+        "seeds": [
+          6053757933470368991,
+          4024580240848245945,
+          6660787263210023586,
+          706851478915918331,
+          4642169946606242158,
+          6952609208550192760,
+          6371583657490919742,
+          8167853899477376958,
+          7747240405343580101,
+          3613370146640568885,
+          5917691052662730068,
+          7289094409850097839,
+          1085919367790942384,
+          5868884880163035447,
+          8393952239108227573,
+          7242823496162646513,
+          1969294029438652755,
+          8310229218680981790,
+          1928355936991434887,
+          5665272107773633994,
+          3048559450184869761,
+          4820171042784110258,
+          575165618341891725,
+          2210489604031318807
+        ],
+        "seeds_registered_sha256": "2dc0653f256e0cf5c0fdb7b0c03f3c737240032e1d66b32d82f2cc16c3b9b217",
+        "sessions_registered": 96,
+        "started": 1793699563.5158188,
+        "supersedes_design_of": "P022-INFO-CONTRACT-2X2-AESGCM-CSPRNG-P022A/B-v1",
+        "token_floor": 8400,
+        "token_floor_probe": {
+          "arm_b_expected_model_level_null": false,
+          "decided_floor": 8400,
+          "decision_rule": "text@4200 -> 4200; no text@4200 and text@8400 -> 8400; no text at either -> 4200 with arm-b model-level null flag",
+          "file": "probe_p024_floor.json",
+          "sha256": "21b1546ab5f000832df6b950b3f7b69d0c0767961a10a757756260e8d65ac367"
+        },
+        "transport_policy": {
+          "backoff_seconds": [
+            2,
+            5,
+            12
+          ],
+          "floor_source": "ACTS_TOKEN_FLOOR, registered in _REGISTRATION.json",
+          "jitter": false,
+          "max_attempts_per_call": 4,
+          "never_retried": [
+            "EMPTY_RESPONSE",
+            "INCOMPLETE_RESPONSE",
+            "HTTP_ERROR outside retry_status",
+            "CREDENTIAL_MISSING",
+            "CREDENTIAL_EMPTY"
+          ],
+          "retried_classes": [
+            "TIMEOUT",
+            "PROVIDER_UNAVAILABLE",
+            "MALFORMED_PROVIDER_JSON",
+            "HTTP_ERROR with retry_status",
+            "HTTP 400 carrying a retry_body_marker"
+          ],
+          "retry_body_markers": [
+            "stream_options"
+          ],
+          "retry_status": [
+            408,
+            409,
+            425,
+            429,
+            500,
+            501,
+            502,
+            503,
+            504,
+            520,
+            521,
+            522,
+            523,
+            524,
+            529
+          ],
+          "textless_attribution": "stop_reason checked before EMPTY_RESPONSE"
+        },
+        "user_agent": "claude-cli/2.0.0 (external, cli)"
+      },
+      "per_cell": {
+        "C1": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C2": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            0.0,
+            0.43449149475208104
+          ],
+          "accepted": 0,
+          "drop_rate": 0.7916666666666666,
+          "drop_statuses": {
+            "INCOMPLETE_RESPONSE": 19
+          },
+          "drop_wilson": [
+            0.5952915551476452,
+            0.9075531089521192
+          ],
+          "drops": 19,
+          "evaluable": 5,
+          "model": 19,
+          "model_rate": 0.7916666666666666,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C3": {
+          "acc_rate": 1.0,
+          "acc_wilson": [
+            0.8620194241710247,
+            1.0
+          ],
+          "accepted": 24,
+          "drop_rate": 0.0,
+          "drop_statuses": {},
+          "drop_wilson": [
+            0.0,
+            0.13798057582897535
+          ],
+          "drops": 0,
+          "evaluable": 24,
+          "model": 0,
+          "model_rate": 0.0,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        },
+        "C4": {
+          "acc_rate": 0.0,
+          "acc_wilson": [
+            0.0,
+            0.5615060804490177
+          ],
+          "accepted": 0,
+          "drop_rate": 0.875,
+          "drop_statuses": {
+            "INCOMPLETE_RESPONSE": 21
+          },
+          "drop_wilson": [
+            0.6899571185214243,
+            0.9565574496068442
+          ],
+          "drops": 21,
+          "evaluable": 3,
+          "model": 21,
+          "model_rate": 0.875,
+          "sessions": 24,
+          "transport": 0,
+          "transport_rate": 0.0
+        }
+      },
+      "protocol": "P024B-INFO-CONTRACT-2X2-AESGCM-CSPRNG-PAIRED-v1",
+      "seeds": [
+        6053757933470368991,
+        4024580240848245945,
+        6660787263210023586,
+        706851478915918331,
+        4642169946606242158,
+        6952609208550192760,
+        6371583657490919742,
+        8167853899477376958,
+        7747240405343580101,
+        3613370146640568885,
+        5917691052662730068,
+        7289094409850097839,
+        1085919367790942384,
+        5868884880163035447,
+        8393952239108227573,
+        7242823496162646513,
+        1969294029438652755,
+        8310229218680981790,
+        1928355936991434887,
+        5665272107773633994,
+        3048559450184869761,
+        4820171042784110258,
+        575165618341891725,
+        2210489604031318807
+      ],
+      "total": {
+        "acc_rate": 0.8571428571428571,
+        "accepted": 48,
+        "drop_rate": 0.4166666666666667,
+        "drop_wilson": [
+          0.3231140125768062,
+          0.5166321453373298
+        ],
+        "drops": 40,
+        "evaluable": 56,
+        "model": 40,
+        "model_rate": 0.4166666666666667,
+        "sessions": 96,
+        "transport": 0,
+        "transport_rate": 0.0
+      }
+    }
+  },
+  "cross_cohort": {
+    "a:C1": {
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "newcombe": [
+        -0.13798057582897535,
+        0.13798057582897535
+      ]
+    },
+    "a:C2": {
+      "delta": -0.5416666666666666,
+      "fisher_p": 2.5876397148768954e-05,
+      "newcombe": [
+        -0.7210894164831857,
+        -0.30610453554157957
+      ]
+    },
+    "a:C3": {
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "newcombe": [
+        -0.13798057582897535,
+        0.13798057582897535
+      ]
+    },
+    "a:C4": {
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "newcombe": [
+        -0.13798057582897535,
+        0.13798057582897535
+      ]
+    },
+    "a:total": {
+      "delta": -0.13541666666666666,
+      "fisher_p": 0.00015804124763069315,
+      "newcombe": [
+        -0.21801314290671706,
+        -0.06866992662959538
+      ]
+    },
+    "b:C1": {
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "newcombe": [
+        -0.13798057582897535,
+        0.13798057582897535
+      ]
+    },
+    "b:C2": {
+      "delta": -0.20833333333333337,
+      "fisher_p": 0.04964539007092199,
+      "newcombe": [
+        -0.4047084448523548,
+        -0.02814369208923989
+      ]
+    },
+    "b:C3": {
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "newcombe": [
+        -0.13798057582897535,
+        0.13798057582897535
+      ]
+    },
+    "b:C4": {
+      "delta": -0.125,
+      "fisher_p": 0.23404255319148937,
+      "newcombe": [
+        -0.3100428814785757,
+        0.03528180462070085
+      ]
+    },
+    "b:total": {
+      "delta": -0.08333333333333331,
+      "fisher_p": 0.3106376258107805,
+      "newcombe": [
+        -0.21887423475597056,
+        0.0567107090142753
+      ]
+    }
+  },
+  "missing": [],
+  "paired": {
+    "P022:C1": {
+      "both": 24,
+      "mcnemar_p": null,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P022:C2": {
+      "both": 0,
+      "mcnemar_p": null,
+      "neither": 24,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P022:C3": {
+      "both": 24,
+      "mcnemar_p": null,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P022:C4": {
+      "both": 0,
+      "mcnemar_p": null,
+      "neither": 24,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P024:C1": {
+      "both": 24,
+      "mcnemar_p": null,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P024:C2": {
+      "both": 0,
+      "mcnemar_p": null,
+      "neither": 24,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P024:C3": {
+      "both": 24,
+      "mcnemar_p": null,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    },
+    "P024:C4": {
+      "both": 0,
+      "mcnemar_p": null,
+      "neither": 24,
+      "only_a": 0,
+      "only_b": 0,
+      "pairs": 24
+    }
+  }
+}

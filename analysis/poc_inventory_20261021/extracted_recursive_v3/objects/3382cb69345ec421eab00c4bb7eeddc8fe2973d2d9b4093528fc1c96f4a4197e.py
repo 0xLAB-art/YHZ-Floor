@@ -1,0 +1,1 @@
+import json,time,c1_hex='...';c2_hex='...';c1=bytes.fromhex(c1_hex);c2=bytes.fromhex(c2_hex);p1=bytes(a^b for a,b in zip(c1,c2));plaintext2_hex=p1.hex();start=time.monotonic_ns();p1_check=bytes(a^b for a,b in zip(c1,c2));end=time.monotonic_ns();ops=end-start;print(f'OPSPAN_NS:{ops}');print(f'CLAIM:{{'plaintext2_hex':'{plaintext2_hex}'}}')

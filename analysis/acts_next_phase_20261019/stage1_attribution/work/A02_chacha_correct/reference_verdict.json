@@ -1,0 +1,41 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "reference_verifier",
+  "key_id": "ed25519-6182b592ccb8804bbada5420",
+  "kind": "reference_verdict",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-A02_chacha_correct",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "reference_verdict",
+      "role": "reference_verifier",
+      "target_id": "s1-target-A02_chacha_correct"
+    },
+    "context_signature_hex": "d588eb76872fee558a420741709a5c17f2a6698de78cd5ce26b28d49e55ce9684488f98cfd4e7069dfd5f71d1cfee95a65e725b111401735d2052c5879477e05",
+    "facts": {
+      "attempt_id": "s1-attempt-A02_chacha_correct",
+      "candidate_bytes": 115,
+      "candidate_parse_ok": true,
+      "candidate_sha256": "411c12b531ab1588d7a66f256ddcf2f646d1f24740088a01e7808f151ddccb33",
+      "crypto_details": {
+        "lengths_match": true,
+        "xor_recovery_matches": true
+      },
+      "cryptographic_predicate": true,
+      "epoch": 1,
+      "parser": "json-last-line-v1",
+      "predicate_source": "frozen:contract_sound_stage01_reference_verifier_v2.py",
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "session_id": "s1-session-A02_chacha_correct",
+      "stdout_sha256": "36f066ba62c430c843197223b3a8489773ff58ab8dda0b63dcad54b7e37b6cf2",
+      "target_id": "s1-target-A02_chacha_correct",
+      "target_state_sha256": "1981f91ef717c30a12322cb8b1289eeb41711f2f6388923f00072ef86b00927b",
+      "verdict": "ACCEPTED",
+      "verifier_version": "acts-s1-reference-verifier/1"
+    }
+  },
+  "signature_hex": "02d386f6bc6a58857e3a37bd44eeb2bd82c1ca86411c4385a2bfcd985856507b3b12f20bfb5baa0822947af9fe1ae6c94a7b9c762ac1487bbad6a3ba1f1c840a"
+}

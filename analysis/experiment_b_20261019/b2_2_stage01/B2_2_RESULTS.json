@@ -1,0 +1,536 @@
+{
+  "cases": [
+    {
+      "case": {
+        "candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control",
+        "construction": {
+          "added_trace_candidate_sha256": null,
+          "candidate_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/candidate.json",
+          "private_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/certificate.private.json",
+          "public_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/public_certificate.json",
+          "target_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/target_state.private.json"
+        },
+        "name": "clean_control",
+        "private_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/private_certificate.json",
+        "private_certificate_sha256": "44177e7e8e8a6250c75226664ca33462c4e7359f9693e1e59e2d2b9fe60cf7c0",
+        "public_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/public_certificate.json",
+        "public_certificate_sha256": "b40ee524cd5469df5d75f5ac8db80512ebc3c4ffc0c06b61fe28afe6e56d4bfa",
+        "reference_input": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/reference_input.json"
+      },
+      "external_binding_wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/public_certificate.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      },
+      "original_reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/reference_input.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "original_validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      }
+    },
+    {
+      "case": {
+        "candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction",
+        "construction": {
+          "added_trace_candidate_sha256": null,
+          "candidate_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_candidate.json",
+          "private_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1_trace_candidate_splice.private_certificate.json",
+          "public_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1_trace_candidate_splice.public_certificate.json",
+          "target_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_target_state.private.json"
+        },
+        "name": "a1_reproduction",
+        "private_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/private_certificate.json",
+        "private_certificate_sha256": "1607faa948c4bb45a7b524c3e4b6d1ffcae9d0aa4a0f6cca09f38322835dd364",
+        "public_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/public_certificate.json",
+        "public_certificate_sha256": "7765f9169bd0c379ec1dec766f3fc2db14d06341baf23e0dbbab951f695c7db2",
+        "reference_input": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/reference_input.json"
+      },
+      "external_binding_wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/public_certificate.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      },
+      "original_reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/reference_input.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "original_validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      }
+    },
+    {
+      "case": {
+        "candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction",
+        "construction": {
+          "added_trace_candidate_sha256": null,
+          "candidate_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_candidate.json",
+          "private_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1b_session_binding.private_certificate.json",
+          "public_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1b_session_binding.public_certificate.json",
+          "target_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_target_state.private.json"
+        },
+        "name": "a1b_reproduction",
+        "private_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/private_certificate.json",
+        "private_certificate_sha256": "ba6346bcd673d71658b601367e00002855f028a445ad17cde14082d84d2f08e7",
+        "public_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/public_certificate.json",
+        "public_certificate_sha256": "509b2a429771108f3fb9b960b354c3243429cd43a9f0c8bca2f0681bf852f770",
+        "reference_input": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/reference_input.json"
+      },
+      "external_binding_wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/public_certificate.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      },
+      "original_reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/reference_input.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [\"execution-session-binding\"], \"certificate_integrity\": false, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"REJECTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [
+            "execution-session-binding"
+          ],
+          "certificate_integrity": false,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "REJECTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "original_validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"REJECT\", \"reason\": \"execution-session-binding\"}\n",
+        "verdict": {
+          "decision": "REJECT",
+          "reason": "execution-session-binding"
+        }
+      }
+    },
+    {
+      "case": {
+        "candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch",
+        "construction": {
+          "added_trace_candidate_sha256": "aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad",
+          "candidate_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_candidate.json",
+          "private_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1_trace_candidate_splice.private_certificate.json",
+          "public_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/A1_trace_candidate_splice.public_certificate.json",
+          "target_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/heb1_crossboundary_20261019/iar/iar_a_20261019/y_target_state.private.json"
+        },
+        "name": "candidate_binding_mismatch",
+        "private_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/private_certificate.json",
+        "private_certificate_sha256": "336f740ce3a6f6ddcb28b8f19df6cd05d8149906d54f7285ba984473c9341cea",
+        "public_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/public_certificate.json",
+        "public_certificate_sha256": "52721ac900ca8beb703c9378361a035cd2364a4b368f03ac390d6a622046fd21",
+        "reference_input": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/reference_input.json"
+      },
+      "external_binding_wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/public_certificate.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\", \"reason\": \"semantic-candidate-execution-mismatch\", \"status\": \"REJECT\", \"system\": \"external-candidate-binding-wrapper\", \"trace_candidate_sha256\": \"aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad\"}\n",
+        "verdict": {
+          "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "reason": "semantic-candidate-execution-mismatch",
+          "status": "REJECT",
+          "system": "external-candidate-binding-wrapper",
+          "trace_candidate_sha256": "aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad"
+        }
+      },
+      "original_reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/reference_input.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "original_validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      }
+    },
+    {
+      "case": {
+        "candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control",
+        "construction": {
+          "added_trace_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "candidate_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/candidate.json",
+          "private_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/certificate.private.json",
+          "public_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/public_certificate.json",
+          "target_source": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_hardened_v2_20261018/stage1/clean/clean_01/target_state.private.json"
+        },
+        "name": "candidate_binding_match_control",
+        "private_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/private_certificate.json",
+        "private_certificate_sha256": "d74a7e72ba2e7136589218250f06450888d50013784b2486933db96f07b72f5d",
+        "public_certificate": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/public_certificate.json",
+        "public_certificate_sha256": "68ea20f25971a269ffeafb3d49d79dc1949345ac219d6ad6c1622efa806fbed0",
+        "reference_input": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/reference_input.json"
+      },
+      "external_binding_wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/public_certificate.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\", \"reason\": \"candidate-execution-bound\", \"status\": \"ACCEPT\", \"system\": \"external-candidate-binding-wrapper\", \"trace_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\"}\n",
+        "verdict": {
+          "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "reason": "candidate-execution-bound",
+          "status": "ACCEPT",
+          "system": "external-candidate-binding-wrapper",
+          "trace_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7"
+        }
+      },
+      "original_reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/reference_input.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "original_validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      }
+    }
+  ],
+  "date": "2026-10-19 14:33:19",
+  "determination": {
+    "authenticated_baseline_comparison": "NOT_PERFORMED_IN_B2_2; V3-full is NOT_COMPARABLE to the Stage01 input contract without a separate authenticated adapter.",
+    "novelty": "NOT_ESTABLISHED; this is a real-component reproduction/repair-boundary measurement and may only reconfirm IAR-A.",
+    "operational_exploitability": "NOT_DEMONSTRATED",
+    "reachability": "NOT_REACHABLE_IN_CURRENT_PIPELINE",
+    "repair_validation": "The external wrapper rejects the constructed semantic candidate-to-execution mismatch and accepts the matching positive control; this validates the wrapper, not a repair of the original components.",
+    "reproduction": "A1 and A1b outcomes are reproduced through the frozen real components; clean is reproduced as a positive control."
+  },
+  "experiment": "B2-2 constructed untrusted submission through real Stage01 components",
+  "integrity": {
+    "component_expected_match": {
+      "reference": true,
+      "validator": true
+    },
+    "component_hashes": {
+      "protocol": "a08869a5e103d54404e819bcd9f93fb369f186320e3b388699f64d54330ef53c",
+      "reference": "15bb4095ee39f6ff558c5989450238e20f1d371712b31817d657f49232c7584b",
+      "validator": "f248413d9b476531faf786ab92f513595959b02563576749e4c3b0b196875b3a",
+      "wrapper": "2589c98c89fe965846995bf2d8ef6f400481715768fb89f22c165a22fd0f3c64"
+    },
+    "manifest": {
+      "model_calls": 0,
+      "network_calls": 0,
+      "provider_calls": 0,
+      "spend_usd": 0
+    },
+    "protected_after": {
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+    },
+    "protected_before": {
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+    },
+    "protected_unchanged": true
+  },
+  "protocol": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/B2_2_PROTOCOL.md",
+  "reachability": {
+    "basis": "read-only source scan; no campaign runner was executed",
+    "determination": "NOT_REACHABLE_IN_CURRENT_PIPELINE",
+    "runners": [
+      {
+        "external_input_matches": [],
+        "internal_certificate_matches": [
+          [
+            244,
+            "def base_certificate(case_dir: Path, idx: int, valid=True) -> dict:"
+          ],
+          [
+            251,
+            "cert = {"
+          ],
+          [
+            331,
+            "valid = base_certificate(OUT / \"schema_cases\" / \"valid\", 1, True)"
+          ],
+          [
+            347,
+            "write_json(OUT / \"schema_cases\" / f\"{name}.json\", {\"certificate\": cert, \"result\": result})"
+          ],
+          [
+            357,
+            "cert = base_certificate(case_dir, idx, valid_flag)"
+          ],
+          [
+            369,
+            "cert = base_certificate(case_dir, case_idx, True)"
+          ]
+        ],
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01.py"
+      },
+      {
+        "external_input_matches": [],
+        "internal_certificate_matches": [
+          [
+            82,
+            "cert = {"
+          ],
+          [
+            201,
+            "row={\"case\":name,\"schema_valid\":schema_ok,\"expected_schema_valid\":expect_schema,\"integrity_valid\":integ,\"runtime_integrity_valid\":runtime_ok,\"expected_integrity_valid\":expect_integrity,\"schema_errors\":[e.message for e in errs]}; schema_rows.append(row); write_json(OUT/\"schema_cases\"/f\"{name}.json\",{\"certificate\":cert,\"result\":row})"
+          ],
+          [
+            242,
+            "cert=json.loads((OUT/\"stage1\"/row[\"split\"]/(row[\"defect_family\"] if row[\"defect_family\"]!=\"none\" else \"\")).read_text()) if False else None"
+          ]
+        ],
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01_hardened.py"
+      },
+      {
+        "external_input_matches": [],
+        "internal_certificate_matches": [
+          [
+            87,
+            "def make_certificate(case_dir: Path, session_id: str, base_id: str, task: str, condition: str, seed: int, execution: dict, target_status: str) -> dict:"
+          ],
+          [
+            167,
+            "base_id=f\"{task}-seed-{seed:02d}\"; cert=make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status); cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+          ],
+          [
+            168,
+            "bundle=case/\"reference_input.json\"; write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+          ],
+          [
+            170,
+            "reference=invoke_json(REFERENCE,bundle); public_cert=copy.deepcopy(cert); public_cert.pop(\"verification\",None); public_cert[\"claims\"][\"reference_oracle_acceptance\"]=\"NOT_ESTABLISHED\"; validator=invoke_json(VALIDATOR,public_cert)"
+          ]
+        ],
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_pilot.py"
+      },
+      {
+        "external_input_matches": [],
+        "internal_certificate_matches": [
+          [
+            86,
+            "def make_certificate(case_dir: Path, session_id: str, base_id: str, task: str, condition: str, seed: int, execution: dict, target_status: str) -> dict:"
+          ],
+          [
+            193,
+            "base_id=f\"{task}-seed-{seed:02d}\"; cert=make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status); cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+          ],
+          [
+            194,
+            "bundle=case/\"reference_input.json\"; write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+          ],
+          [
+            196,
+            "reference=invoke_json(REFERENCE,bundle); public_cert=copy.deepcopy(cert); public_cert.pop(\"verification\",None); public_cert[\"claims\"][\"reference_oracle_acceptance\"]=\"NOT_ESTABLISHED\"; validator=invoke_json(VALIDATOR,public_cert)"
+          ]
+        ],
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_pilot_free_v2.py"
+      },
+      {
+        "external_input_matches": [],
+        "internal_certificate_matches": [
+          [
+            172,
+            "cert = helpers.make_certificate(case, session_id, base_id, task, condition, seed, execution, target_status)"
+          ],
+          [
+            175,
+            "write_json(bundle, {\"case_id\": session_id, \"target_state_path\": str(case / \"target_state.private.json\"), \"candidate_path\": str(case / \"candidate_output.json\"), \"certificate_path\": str(cert_path)})"
+          ],
+          [
+            177,
+            "public_cert = copy.deepcopy(cert); public_cert.pop(\"verification\", None); public_cert[\"claims\"][\"reference_oracle_acceptance\"] = \"NOT_ESTABLISHED\""
+          ]
+        ],
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_replacement_v1.py"
+      }
+    ]
+  },
+  "schema": "b2-2-stage01-results/1",
+  "v3_full_comparison": {
+    "action": "not invoked; no V3-full verdict is claimed",
+    "missing_contract_elements": [
+      "heb1-signed/1 certificate schema and request.json",
+      "Ed25519 detached signatures and external trust anchor",
+      "six evidence kinds including reference_acceptance",
+      "V3-full private/public case layout"
+    ],
+    "reason": "Stage01 format cannot satisfy frozen V3-full input contract without adding a separate authenticated HEB1-signed adapter; B2-2 does not rerun or redesign IAR-B/IAR-C.",
+    "status": "NOT_COMPARABLE",
+    "system": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/eb_v3_full.py"
+  }
+}

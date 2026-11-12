@@ -1,0 +1,130 @@
+{
+  "arm": "R0",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "c0_correct_abstention": 1,
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "collections",
+        "defaultdict",
+        "json",
+        "sys"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [
+        "collections"
+      ],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "ECDSA_Nonce_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": false
+  },
+  "http_status": 200,
+  "instance_id": "ECDSA_Nonce_Reuse-L3-seed10005",
+  "kind": "c0",
+  "latency_s": 17.600270986557007,
+  "legacy_would_reject": true,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 334,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 3633,
+  "payload_sha256": "7309cebb747f0829067b07221881d37a4eb86714ce64bdf6a44e385b073b6465",
+  "phase": "confirmatory",
+  "prompt_chars": 4585,
+  "prompt_sha256": "f1d713ee1691c987381f60b8e6039092080da13b605d9ce44f2f2b81f534425c",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "collections",
+      "defaultdict",
+      "json",
+      "sys"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "collections"
+    ],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "collections",
+      "defaultdict",
+      "json",
+      "sys"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "collections"
+    ],
+    "violations": [
+      {
+        "line": 3,
+        "rule": "disallowed-import-from",
+        "value": "collections"
+      }
+    ]
+  },
+  "reference": {
+    "abstained": true,
+    "candidate_matches_truth": null,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": null,
+    "process": null,
+    "public_reconstruction": {
+      "sufficient": false
+    },
+    "public_sufficiency_confirmed": false,
+    "truth_source": "recomputed-public-insufficiency",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2943,
+  "response_sha256": "772139697d8a0c95c257ecb7a8ec22e8daf2792aa91528681ff9545cdba52abb",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 10005,
+  "session_id": "confirmatory-0334-ecd-L3-10005-R0-r0-fbb79365",
+  "source_chars": 2273,
+  "source_sha256": "0721b4914dd9356ea13b8cc057732ab8ab436676e23edd07bee98055ccf37693",
+  "stderr_tail": "",
+  "template_sha256": "898e0117594401286a564ef1cedff37c3e1c15251f22db41742d1c3f44af486b",
+  "terminal": "SUCCESS",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 1314,
+    "output_tokens": 1019
+  }
+}

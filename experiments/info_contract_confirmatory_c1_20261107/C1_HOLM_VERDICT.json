@@ -1,0 +1,87 @@
+{
+ "schema": "info-contract-confirmatory-c1-holm/1",
+ "protocol": "P010-INFO-CONTRACT-2X2-CHACHA20-CONFIRMATORY-C1-v1",
+ "registered_family": {
+  "m": 3,
+  "alpha": 0.05,
+  "tests": [
+   "H1_paired (PRIMARY)",
+   "H2_premise",
+   "H3_naming"
+  ],
+  "correction": "Holm step-down within the family",
+  "registered_bar": "H1 clears Holm within the family AND the discordance is one-directional"
+ },
+ "sessions": 64,
+ "cell_counts": {
+  "C1": {
+   "accepted": 16,
+   "sessions": 16
+  },
+  "C2": {
+   "accepted": 15,
+   "sessions": 16
+  },
+  "C3": {
+   "accepted": 16,
+   "sessions": 16
+  },
+  "C4": {
+   "accepted": 11,
+   "sessions": 16
+  }
+ },
+ "pairs": {
+  "evaluable_discordant_pairs": 5,
+  "discordant_c1_wins": 5,
+  "discordant_c4_wins": 0,
+  "ties": 11
+ },
+ "marginals": {
+  "premise": {
+   "stated_accepted": 32,
+   "stated_n": 32,
+   "withheld_accepted": 26,
+   "withheld_n": 32
+  },
+  "naming": {
+   "named_accepted": 27,
+   "named_n": 32,
+   "unnamed_accepted": 31,
+   "unnamed_n": 32
+  }
+ },
+ "tests": {
+  "H1_paired": {
+   "p": 0.0625
+  },
+  "H2_premise": {
+   "p": 0.012086690747429841
+  },
+  "H3_naming": {
+   "p": 0.19607298323608408
+  }
+ },
+ "holm": {
+  "H2_premise": {
+   "p": 0.012086690747429841,
+   "holm_adjusted": 0.036260072242289526,
+   "significant": true
+  },
+  "H1_paired": {
+   "p": 0.0625,
+   "holm_adjusted": 0.125,
+   "significant": false
+  },
+  "H3_naming": {
+   "p": 0.19607298323608408,
+   "holm_adjusted": 0.19607298323608408,
+   "significant": false
+  }
+ },
+ "verdicts": {
+  "H1_registered_bar": "NOT_CLEARED",
+  "one_directional": true,
+  "note": "the registered bar is H1 clearing Holm within the declared family and one-directionality; no other test is registered; no pooling"
+ }
+}

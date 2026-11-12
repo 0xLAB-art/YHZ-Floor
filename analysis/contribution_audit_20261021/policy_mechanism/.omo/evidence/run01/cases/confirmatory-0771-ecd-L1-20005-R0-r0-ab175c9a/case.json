@@ -1,0 +1,93 @@
+{
+  "arm": "R0",
+  "current_outcome_correct": false,
+  "derivative_legacy": {
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SOURCE_PARSE_REJECTED",
+    "violations": [
+      {
+        "line": 1,
+        "message": "invalid syntax",
+        "rule": "syntax"
+      }
+    ]
+  },
+  "derivative_legacy_admitted": false,
+  "edits": [],
+  "family": "ECDSA_Nonce_Reuse",
+  "fresh_output_equality": null,
+  "fresh_output_equality_scope": "parsed JSON equality for executed derivative; null means no derivative executed",
+  "historical_execution_status": "SOURCE_PARSE_REJECTED",
+  "historical_predicate": false,
+  "imports": [],
+  "kind": "primary",
+  "legacy": {
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SOURCE_PARSE_REJECTED",
+    "violations": [
+      {
+        "line": 1,
+        "message": "invalid syntax",
+        "rule": "syntax"
+      }
+    ]
+  },
+  "legacy_class": "syntax",
+  "legacy_disallowed_but_prompt_allowed": [],
+  "legacy_rejected_correct": false,
+  "level": "L1",
+  "original": {
+    "cryptographic_predicate": false,
+    "status": "SOURCE_PARSE_REJECTED"
+  },
+  "original_legacy_admitted": false,
+  "prompt_allowed_modules": [
+    "base64",
+    "binascii",
+    "collections",
+    "decimal",
+    "fractions",
+    "functools",
+    "hashlib",
+    "itertools",
+    "json",
+    "math",
+    "operator",
+    "re",
+    "statistics",
+    "string",
+    "struct",
+    "sys",
+    "typing"
+  ],
+  "prompt_hash_matches_record": true,
+  "prompt_sha256": "e293c5e6b65084fb74087fdd937f3d9ae3072fa8deae8308f11d4588d5c6f42d",
+  "replicate_index": 0,
+  "runtime_import_use": null,
+  "seed": 20005,
+  "session_id": "confirmatory-0771-ecd-L1-20005-R0-r0-ab175c9a",
+  "source_hash_matches_record": true,
+  "source_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0771-ecd-L1-20005-R0-r0-ab175c9a/candidate.py",
+  "source_sha256": "299bf6ad20d8a5e3e513155e0d182965d2a3552212c54986168e41df38c96bde",
+  "transform_eligibility": "no_eligible_full_import_statement",
+  "transform_reason": "Remove only top-level whole imports whose every binding lacks any syntax/name/string/dynamic access concern; retain all mixed, used, nested, unknown-side-effect imports.",
+  "transformation_applied": false,
+  "uncertainties": [
+    "syntax"
+  ],
+  "unused_removal_rescues_legacy_qualification": false,
+  "v3": {
+    "policy": "v3",
+    "qualified": false,
+    "status": "SOURCE_PARSE_REJECTED",
+    "violations": [
+      {
+        "line": 1,
+        "message": "invalid syntax",
+        "rule": "syntax"
+      }
+    ]
+  }
+}

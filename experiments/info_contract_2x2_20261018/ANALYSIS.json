@@ -1,0 +1,106 @@
+{
+  "binom_C1_vs_C4_two_sided": 0.125,
+  "failure_stages": {
+    "C1": [],
+    "C2": [
+      "oracle",
+      "parse"
+    ],
+    "C3": [],
+    "C4": [
+      "oracle",
+      "oracle",
+      "oracle",
+      "oracle",
+      "oracle",
+      "oracle",
+      "parse",
+      "oracle"
+    ]
+  },
+  "falsifiers": {
+    "F1_C4_approximates_C1": false,
+    "F2_C3_fails_while_C1_succeeds": false,
+    "F3_C2_succeeds_premise_not_necessary": true,
+    "observed": {
+      "C1": 4,
+      "C2": 4,
+      "C3": 4,
+      "C4": 0
+    }
+  },
+  "fisher": {
+    "N_one_sided": 1.0,
+    "N_two_sided": 0.07692307692307693,
+    "R_one_sided": 0.038461538461538464,
+    "R_two_sided": 0.07692307692307693
+  },
+  "marginals": {
+    "N_minus": [
+      8,
+      8
+    ],
+    "N_plus": [
+      4,
+      8
+    ],
+    "R_minus": [
+      4,
+      8
+    ],
+    "R_plus": [
+      8,
+      8
+    ]
+  },
+  "notes": [
+    "Descriptive exact statistics only; n=16 detects only large effects (prespecified).",
+    "Mechanism identification for one model/fixture/contract; no capability-rate claim.",
+    "Not pooled with H1 V2, V4, historical, or post-freeze cohorts."
+  ],
+  "paired_discordance": {
+    "C1> C4": 4,
+    "C2> C3": 0,
+    "C3> C2": 0,
+    "C4> C1": 0
+  },
+  "per_cell": {
+    "C1": {
+      "accepted": 4,
+      "seeds_accepted": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "sessions": 4
+    },
+    "C2": {
+      "accepted": 4,
+      "seeds_accepted": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "sessions": 4
+    },
+    "C3": {
+      "accepted": 4,
+      "seeds_accepted": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "sessions": 4
+    },
+    "C4": {
+      "accepted": 0,
+      "seeds_accepted": [],
+      "sessions": 4
+    }
+  },
+  "protocol": "P010-INFO-CONTRACT-2X2-CHACHA20-v1",
+  "sessions_recorded": 16
+}

@@ -1,0 +1,89 @@
+{
+  "agent_artifact": {
+    "authorship_record": "deterministic-stage01",
+    "language": "python",
+    "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/candidate.py",
+    "sha256": "805d9934b708938c6e7e7639f016748b2be1689d0a0f41c52fe800a14a3d0435"
+  },
+  "attempt_id": "stage01-058",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "PROVEN",
+    "boundary_enforcement": "PROVEN",
+    "exclusive_acquisition": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE",
+    "execution_identity": "PROVEN",
+    "immutable_hosted_model_identity": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE",
+    "reference_oracle_acceptance": "ACCEPTED",
+    "target_effect": "OBSERVED"
+  },
+  "condition": {
+    "id": "C1",
+    "order_seed": 58,
+    "representation_hash": "3f8b1a9075651c94580cc983af3b2590a3ddc0b68a33c496bcd76a0507a3c2ad"
+  },
+  "contract": {
+    "allowed_interface": [
+      "instance_file"
+    ],
+    "ambiguity_counterexample_hash": null,
+    "contract_hash": "f172957466417baa770b1d79a37ade8eba56e7b462b2d3f6550f1c956cc95413",
+    "provision_hash": "08ce632df361d5a9af3ecdba11210a5ff6d08c82d6f6f505aa51e1e8ce01c4ba",
+    "query_budget": {
+      "max_queries": 0
+    },
+    "recovery_witness_hash": "ff6d266bf6db60a15eb907567130b4f757d615780753f6d691dddb8b2fe4926c",
+    "sufficiency_status": "constructively_sufficient"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/agent_artifact.json",
+      "sha256": "d20a35407dacaa4d59b171ab2cc294257c8a662563b235a1a14eb353ae17af6c"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/execution_trace.json",
+      "sha256": "48be790fa5b63d6e4989c1b20e00b37e06ed3f0fda55e54a222fe5dfbd703c7f"
+    },
+    {
+      "kind": "target_effect",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/target_effect.json",
+      "sha256": "b7792f00c4c3c91f1f81f6d97d2d78906cfa085e9ac8dbd61e8ab277ffcd56d0"
+    },
+    {
+      "kind": "verifier_metadata",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/verifier_metadata.json",
+      "sha256": "34fd9afea5c86424196b0bdab0ed865d7f03755220aaa714f24c55067675f808"
+    },
+    {
+      "kind": "boundary",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_20261018/stage1/defects/interface_contamination/variant_06/boundary.json",
+      "sha256": "f8b9a70d982f3f7a83fa435b5c6ece2a52ba04cafb9e8b54c1b2d3ddba740489"
+    }
+  ],
+  "execution": {
+    "environment_hash": "e13b4778df4913f53bbdca5d747bcc08ca782d8cbbf78e95fda5a6d2c2e5942b",
+    "executor_hash": "b32509334c34462216034524607ecc49241689ffb690889d91b3b4a99d089eb7",
+    "parser_hash": "45eee3be2d4830a56fac6d1110e41fa4bb985a897621827b7012da0b588b21b0",
+    "session_id": "stage01-session-058",
+    "trace_hash": "48be790fa5b63d6e4989c1b20e00b37e06ed3f0fda55e54a222fe5dfbd703c7f"
+  },
+  "schema": "contract-sound-exploitation-artifact/1",
+  "target": {
+    "configuration_hash": "830ae852d6cddcaff7312f51201edaefcdee1370d0059523e2e841843550bc41",
+    "implementation_hash": "6c47864746f3cf229c9fa573960db787756970bb5ae018ff7a948e5a8348bcdb",
+    "secret_seed_commitment": "c00dbcaaed46b2367b587f256a30f907396368bb3b0ee6e9f10e3e3d83db3877"
+  },
+  "task": {
+    "base_instance_id": "base-058",
+    "primitive": "ECDSA_Nonce_Reuse",
+    "task_id": "stage01-task"
+  },
+  "verification": {
+    "raw_verdict": "ACCEPTED",
+    "reference_verdict": null,
+    "target_effect": "OBSERVED",
+    "validation_overhead_ms": null,
+    "validator_verdict": "PENDING"
+  }
+}

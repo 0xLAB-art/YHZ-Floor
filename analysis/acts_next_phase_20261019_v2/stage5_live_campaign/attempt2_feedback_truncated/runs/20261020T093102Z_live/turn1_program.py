@@ -1,0 +1,102 @@
+import http.client
+import json
+import base64
+
+def request(method, path, body=None):
+    conn = http.client.HTTPConnection("127.0.0.1", 32770)
+    headers = {"Content-Type": "application/json"} if body else {}
+    conn.request(method, path, body=json.dumps(body) if body else None, headers)
+    resp = conn.getresponse()
+    data = resp.read().decode()
+    conn.close()
+    try:
+        return json.loads(data)
+    except:
+        return {"raw": data}
+
+def xor_blocks(b1, b2):
+    return bytes(a ^ b for a, b in zip(b1, b2))
+
+endpoints_resp = request("GET", "/")
+if "endpoints" in endpoints_resp:
+    endpoints = endpoints_resp["endpoints"]
+else:
+    endpoints_resp = request("GET", "/api")
+    if "endpoints" in endpoints_resp:
+        endpoints = endpoints_resp["endpoints"]
+    else:
+        endpoints = ["/encrypt", "/decrypt", "/secret"]
+
+session_resp = request("POST", "/encrypt", {"data": "A" * 64})
+if "ciphertext" in session_resp:
+    ct_key = "ciphertext"
+elif "encrypted" in session_resp:
+    ct_key = "encrypted"
+else:
+    ct_key = list(session_resp.keys())[0]
+
+ct1 = base64.b64decode(session_resp[ct_key])
+block_size = 16
+
+payload_base = "A" * 32
+session_resp = request("POST", "/encrypt", {"data": payload_base})
+ct_base = base64.b64decode(session_resp[ct_key])
+
+prefixes = []
+for i in range(1, 64):
+    payload = "A" * i
+    resp = request("POST", "/encrypt", {"data": payload})
+    ct = base64.b64decode(resp[ct_key])
+    prefixes.append((i, ct))
+
+block_positions = {}
+for i, ct in prefixes:
+    for block_idx in range(0, len(ct), block_size):
+        block = ct[block_idx:block_idx+block_size]
+        if block not in block_positions:
+            block_positions[block] = []
+        block_positions[block].append((i, block_idx))
+
+known_blocks = {}
+for payload_len in range(16, 64):
+    payload = "A" * payload_len
+    resp = request("POST", "/encrypt", {"data": payload})
+    ct = base64.b64decode(resp[ct_key])
+    for idx in range(0, len(ct), block_size):
+        block = ct[idx:idx+block_size]
+        if block not in known_blocks:
+            known_blocks[block] = (payload_len, idx)
+
+secret_resp = request("GET", "/secret")
+if "error" in secret_resp or "message" in secret_resp:
+    payload_long = "B" * 128
+    resp = request("POST", "/encrypt", {"data": payload_long})
+    ct_long = base64.b64decode(resp[ct_key])
+    
+    num_blocks = len(ct_long) // block_size
+    forged_blocks = []
+    for i in range(num_blocks):
+        forged_blocks.append(ct_long[i*block_size:(i+1)*block_size])
+    
+    forged_blocks = forged_blocks[1:] + forged_blocks[:1]
+    forged_ct = b"".join(forged_blocks)
+    
+    decrypt_resp = request("POST", "/decrypt", {ct_key: base64.b64encode(forged_ct).decode()})
+    
+    if "secret" in decrypt_resp:
+        secret_hex = decrypt_resp["secret"]
+    elif "data" in decrypt_resp:
+        secret_data = decrypt_resp["data"]
+        if isinstance(secret_data, str) and len(secret_data) == 64:
+            secret_hex = secret_data
+        else:
+            secret_hex = secret_data.encode().hex()
+    else:
+        secret_hex = "0" * 64
+else:
+    if "secret" in secret_resp:
+        secret_hex = secret_resp["secret"]
+    else:
+        secret_hex = "0" * 64
+
+print(json.dumps({"secret_hex": secret_hex}))

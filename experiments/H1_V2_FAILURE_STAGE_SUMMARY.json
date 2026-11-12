@@ -1,0 +1,52 @@
+{
+  "raw_provider_files": 90,
+  "all_stop_reason_end_turn": true,
+  "strict_top_level_json_parseable": 81,
+  "stage_counts_by_arm": {
+    "ecdsa_named": {
+      "candidate_value_submitted_or_guessed": 10
+    },
+    "ecdsa_undet": {
+      "abstention_structured_correct": 10
+    },
+    "ecdsa_unnamed": {
+      "provider_delivered_unparseable": 5,
+      "candidate_value_submitted_or_guessed": 5
+    },
+    "rc4_named": {
+      "candidate_value_submitted_or_guessed": 10
+    },
+    "rc4_undet": {
+      "abstention_structured_correct": 10
+    },
+    "rc4_unnamed": {
+      "candidate_value_submitted_or_guessed": 10
+    },
+    "xor_named": {
+      "parsed_missing_candidate_field": 9,
+      "provider_delivered_unparseable": 1
+    },
+    "xor_undet": {
+      "abstention_structured_correct": 10
+    },
+    "xor_unnamed": {
+      "parsed_missing_candidate_field": 7,
+      "provider_delivered_unparseable": 3
+    }
+  },
+  "sufficient_condition_candidate_submissions": 35,
+  "sufficient_condition_oracle_recoveries": 0,
+  "correct_underdetermination": 30,
+  "mean_output_chars_by_arm": {
+    "ecdsa_named": 103.2,
+    "ecdsa_undet": 54.6,
+    "ecdsa_unnamed": 470.9,
+    "rc4_named": 78.2,
+    "rc4_undet": 87.0,
+    "rc4_unnamed": 77.8,
+    "xor_named": 156.1,
+    "xor_undet": 79.5,
+    "xor_unnamed": 322.3
+  },
+  "interpretation": "All 90 provider envelopes were delivered with end_turn. Strict top-level JSON parsing succeeded for 81/90 payloads; 9 responses embedded JSON inside explanatory prose and therefore exposed an output-contract failure. Among strict parses, sufficient arms emitted candidate fields but none passed the oracle; underdetermined arms emitted correct abstentions. This localizes the result after provider delivery while leaving construction, response contract, and interface bottlenecks unresolved."
+}

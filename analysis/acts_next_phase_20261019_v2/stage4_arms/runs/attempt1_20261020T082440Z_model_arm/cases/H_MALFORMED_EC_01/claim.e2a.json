@@ -1,0 +1,41 @@
+{
+  "context": {
+    "attempt_id": "e2a-H_MALFORMED_EC_01",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "attribution_claim",
+    "role": "aggregator",
+    "target_id": "ECDSA_Nonce_Reuse-seed-01"
+  },
+  "context_signature_hex": "36dd1bdc710a32cae84b6732239d1eb8cb70eb1f515d2a25a725b14dec36324af9f9b6b3ffcd787c440bc998c53c84115e1de7dfd15ac3afa3eb91f5534afc06",
+  "issuer_role": "aggregator",
+  "kind": "attribution_claim",
+  "record": {
+    "context": "e2a:evidence:v1",
+    "domain": "heb1:evidence:v1",
+    "format": "heb1-protected-signing-v1",
+    "issuer_role": "aggregator",
+    "key_id": "ed25519-266f0d4e7bcd36b88608b235",
+    "kind": "attribution_claim",
+    "payload": {
+      "attempt_id": "e2a-H_MALFORMED_EC_01",
+      "attributed_success": false,
+      "case_id": "H_MALFORMED_EC_01",
+      "context": {
+        "attempt_id": "e2a-H_MALFORMED_EC_01",
+        "domain": "e2a:evidence:v1",
+        "epoch": 1,
+        "kind": "attribution_claim",
+        "role": "aggregator",
+        "target_id": "ECDSA_Nonce_Reuse-seed-01"
+      },
+      "decision": "REJECT",
+      "epoch": 1,
+      "reason": "candidate-output-substitution",
+      "reason_family": "contradicted_by_evidence",
+      "target_id": "ECDSA_Nonce_Reuse-seed-01"
+    },
+    "signature_hex": "4172fe7adf69b5b7c024303b94b80d91b48faa94328e6c79c7e6a8c0dba2331371a3a98c0c6163d6f208ef64e72026f246c54715f4ece6e33b14aa9d78d08902"
+  },
+  "schema": "e2a-signed-record/1"
+}

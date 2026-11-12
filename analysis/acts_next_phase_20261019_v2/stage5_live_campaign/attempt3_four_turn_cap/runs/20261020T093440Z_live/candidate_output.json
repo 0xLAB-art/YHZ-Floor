@@ -1,0 +1,6 @@
+GET /session -> 200: {"token_hex": "c4388732134b0353a6fdadda393cf41baa2846066b422c084b8ba5525e678f6f", "mode": "AES-128-ECB", "mac": "none"}
+POST /session (set data) -> 404: {"error": "not found"}
+GET /session (with cookie) -> 200: {"token_hex": "c4388732134b0353a6fdadda393cf41baa2846066b422c084b8ba5525e678f6f", "mode": "AES-128-ECB", "mac": "none"}
+GET /data -> 404: {"error": "not found"}
+POST /encrypt -> 404: {"error": "not found"}
+POST /decrypt -> 404: {"error": "not found"}

@@ -1,0 +1,151 @@
+{
+  "cases": [
+    {
+      "name": "clean_control",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "wrapper": {
+        "reason": "trace-has-no-candidate-hash",
+        "status": "INCONCLUSIVE",
+        "system": "external-candidate-binding-wrapper"
+      }
+    },
+    {
+      "name": "a1_reproduction",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "wrapper": {
+        "reason": "trace-has-no-candidate-hash",
+        "status": "INCONCLUSIVE",
+        "system": "external-candidate-binding-wrapper"
+      }
+    },
+    {
+      "name": "a1b_reproduction",
+      "reference": {
+        "certificate_errors": [
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "REJECT",
+        "reason": "execution-session-binding"
+      },
+      "wrapper": {
+        "reason": "trace-has-no-candidate-hash",
+        "status": "INCONCLUSIVE",
+        "system": "external-candidate-binding-wrapper"
+      }
+    },
+    {
+      "name": "candidate_binding_mismatch",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "wrapper": {
+        "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "reason": "semantic-candidate-execution-mismatch",
+        "status": "REJECT",
+        "system": "external-candidate-binding-wrapper",
+        "trace_candidate_sha256": "aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad"
+      }
+    },
+    {
+      "name": "candidate_binding_match_control",
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "wrapper": {
+        "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "reason": "candidate-execution-bound",
+        "status": "ACCEPT",
+        "system": "external-candidate-binding-wrapper",
+        "trace_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7"
+      }
+    }
+  ],
+  "component_hashes": {
+    "protocol": "a08869a5e103d54404e819bcd9f93fb369f186320e3b388699f64d54330ef53c",
+    "reference": "15bb4095ee39f6ff558c5989450238e20f1d371712b31817d657f49232c7584b",
+    "validator": "f248413d9b476531faf786ab92f513595959b02563576749e4c3b0b196875b3a",
+    "wrapper": "2589c98c89fe965846995bf2d8ef6f400481715768fb89f22c165a22fd0f3c64"
+  },
+  "protected_unchanged": true,
+  "reachability": "NOT_REACHABLE_IN_CURRENT_PIPELINE",
+  "results": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/B2_2_RESULTS.json",
+  "results_sha256": "ad4be099a2cb97a4fd86eb497d3b7c8bdaea38f8848be00801cb632a4128a7cd",
+  "v3_full": "NOT_COMPARABLE"
+}

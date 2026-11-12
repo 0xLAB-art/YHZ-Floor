@@ -1,0 +1,84 @@
+{
+  "files": {
+    "HEALTH.json": {
+      "group": "harness",
+      "sha256": "7f114c8a03382385d08c79877a637075a1973a585a8c24d70a5f4bd672759329"
+    },
+    "apmix_client.py": {
+      "group": "harness",
+      "sha256": "1ed19542734af16350aac644fd180c77a7813dad7cdab2c2c5f1e77322de90b7"
+    },
+    "smoke.py": {
+      "group": "harness",
+      "sha256": "77215e14e9a935730c4bfa8fb89d268bfa6e927f175e5871bf0fe165f6209f3b"
+    },
+    "PREREGISTRATION.md": {
+      "group": "preregistration_and_selection",
+      "sha256": "e5d365c93484ea0ac44f5b6c004f7fac4986e1b32bee24ea0b0c38a887dbfb6c"
+    },
+    "TASK_SELECTION.md": {
+      "group": "preregistration_and_selection",
+      "sha256": "8e3faf51ae52c0c80ce2717de964d5f116e71d0bbc19e232a3d9208a02502fe0"
+    },
+    "ARCHIVE_VERIFICATION.json": {
+      "group": "preregistration_and_selection",
+      "sha256": "a4ce3fbb42cb789ae3701fb9d8a82d5885bf207f7177606a916a1cb50c22528c"
+    },
+    "selection/census.json": {
+      "group": "preregistration_and_selection",
+      "sha256": "3cb174a4fc45f95764428b05d8738fee171e630304917542746aac42f7cc3981"
+    },
+    "selection/reference_solve_run.jsonl": {
+      "group": "preregistration_and_selection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "selection/REFERENCE_SOLVE_EMPTY_STATE.md": {
+      "group": "preregistration_and_selection",
+      "sha256": "6f0af66908c09df1c1872e1ed5c093d0c5d8af51369b85b9a9d70c8aeacf8ab8"
+    },
+    "fixtures/EMPTY_STATE.md": {
+      "group": "empty_states",
+      "sha256": "953f1812532b0fcf92d3b452ca2c203e9d4a819abccc5032f05a68695a986837"
+    },
+    "sessions/EMPTY_STATE.md": {
+      "group": "empty_states",
+      "sha256": "02dfdfd488b217ad6ad51bf064094e9709d9ed572dd41755ccffacef0184887d"
+    },
+    "regrade/EMPTY_STATE.md": {
+      "group": "empty_states",
+      "sha256": "137161c6fbf0a5ab3314a77c0acaef2cad9ca9a8338cf9d8879a17631a7ba524"
+    }
+  },
+  "frozen_utc": "2026-10-24T07:23:16Z",
+  "namespace": "cvebench_census_20261024",
+  "note": "SHA-256 of every census/prompt-template/fixture/policy/harness input of the CVE-Bench census phase, committed before any experiment model call. No experiment model call exists (census-only no_go). Generated outcome documents (REPORT.md, results.jsonl, summary.json) are excluded from this manifest and hash-checked at the outcomes commit.",
+  "provider": {
+    "auth_smoke": "HEALTH.json (non-evidence, 16-token probe, msg_5b7f43c1eb77e7f6027b4e78)",
+    "config": ".env (APMIX_BASE_URL, APMIX_API_KEY, APMIX_MODEL); key never printed or persisted",
+    "model_label": "claude-sonnet-4-6-free"
+  },
+  "purpose": "Census-freeze for the CVE-Bench external source census (expanded-source option). The conditional grid arm (6x2x2, seeds 95-96) is preregistered in PREREGISTRATION.md section 6 but NOT triggered: quorum unmet (0 of 40 qualify).",
+  "schema": "cvebench-census-freeze/1",
+  "seed_verification": {
+    "seeds": [
+      95,
+      96
+    ],
+    "checked": "all PREREGISTRATION.md files and results.jsonl files under sp2027/ searched for seed 95/96 prior use; zero matches (verified this phase)",
+    "status": "UNUSED, available for the (untriggered) grid"
+  },
+  "source_archive": {
+    "path": "human_audit/source_freeze_20261005/archives/cve_bench__cve-bench__9fb3e068f260.tar.gz",
+    "sha256": "b7ccc67e777412e46ec4dbff1f0a3871ff268cb9ac4f3ce4f6db7f799ee9c239",
+    "verification": "sha256sum + streaming hashlib recompute this phase; matches SOURCE_PREFLIGHT_V2.json (550 regular files); extracted read-only to /tmp/cvebench_pin",
+    "verification_record": "ARCHIVE_VERIFICATION.json"
+  },
+  "external_references_hash_verified": {
+    "note": "rt_transform semantics and regrade policy snapshots are hash-referenced (not copied) from external_admission_20261024/ per the phase instruction; recomputed this phase with sha256sum and matching that namespace FREEZE.json",
+    "external_admission_20261024/fixtures/rt_transform/build_representations.py": "5b12a85329539053eb5bd7f4539c7bfe27910cba39d53cee3379c2d5756a649e",
+    "external_admission_20261024/fixtures/rt_transform/verify_decode_equality.py": "27d2263fadf50aeca2965b79f51e28f5a06afd4bfbbc79cfcfa1089c5b8e4cc0",
+    "external_admission_20261024/policies/rule_a_permissive_v3.py": "372bab44bc12ff6a377671516217f268e55132cda9d0304405d1c8619602df6f",
+    "external_admission_20261024/policies/rule_b_stress_legacy.py": "257b7805a847729c29ebf2960b6d00d7a73845721459fbd3fd972b36c93a2891",
+    "external_admission_20261024/policies/rule_c_cleanup.py": "7419e861a4d1abeb5f9d7623ab2b4c4d79ef4647b7ea186639379771313a4373"
+  }
+}

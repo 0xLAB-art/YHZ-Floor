@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "9fc757a34da64f23e49e6f72f95b507ce1dcce7b131b1fd479547ba54a4d2a71",
+  "output_text": "```python\nimport sys\nimport json\n\ndef main():\n    with open(sys.argv[1], 'r') as f:\n        instance = json.load(f)\n    \n    result = {\n        \"status\": \"UNDERDETERMINED\",\n        \"reason\": \"Nonce reuse detection requires plaintext, key, nonce, or distinguishing oracle; ciphertexts alone are insufficient under C0\"\n    }\n    \n    print(json.dumps(result))\n\nif __name__ == \"__main__\":\n    main()\n```",
+  "prompt_sha256": "6595c1ee508c4cd0607106ebaaa9eee2af7cdadfe19a481f326cab08159c6ede",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341943.432425,
+  "response_bytes": 726,
+  "response_finished": 1792341949.1590738,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:45:49 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2549072",
+    "x-apmix-request-id": "req_a1cc768d2b834970b5c95699",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "450928",
+    "x-apmix-weighted-tokens": "371",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "f08506f7d79d4a965ce13f74c445ea82e9dc7bb136a8cdc91dfe200c76f9f0c8",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 244,
+    "output_tokens": 127
+  }
+}

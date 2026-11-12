@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "292eb47d006ff0f26370e2d211b84ef99736bbca8dbbce2b40fe097fa4ad624f",
+  "output_text": "```python\nimport sys\nimport json\nimport base64\n\ndef xor_bytes(a, b):\n    return bytes(x ^ y for x, y in zip(a, b))\n\ndata = json.load(open(sys.argv[1]))\n\nc1 = base64.b64decode(data['ciphertext_1'])\nc2 = base64.b64decode(data['ciphertext_2'])\np1 = base64.b64decode(data['known_plaintext_1'])\n\nkeystream = xor_bytes(c1, p1)\np2 = xor_bytes(c2, keystream)\n\nprint(json.dumps({\"plaintext_2\": p2.hex()}))\n```",
+  "prompt_sha256": "9bd379db791aa82fde89b8fef24ea5fd5c76d9281e4a24b5adeb4a2eff285bcf",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341806.4443417,
+  "response_bytes": 719,
+  "response_finished": 1792341812.8635116,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:43:32 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2557305",
+    "x-apmix-request-id": "req_b2dc87daad484759aa4cc860",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "442695",
+    "x-apmix-weighted-tokens": "395",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "855a701fb329fd3ffed3f2b254f1d0c66f7491c50417790a903f2c7b6691e514",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 225,
+    "output_tokens": 170
+  }
+}

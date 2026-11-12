@@ -1,0 +1,16 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"plaintext": "lowercase hex, exactly target.length bytes"}
+
+Instance (JSON):
+{"ciphertexts":[{"data":"PzHWVTB8IS41NVJUWVxqswt5nu+ekkoaHp6y0E98rDI0XIG/IKSF9BLry7hcMw1NV273jWXOxWpUdLQcnfcSyuK7vt142GOc8U3d0UMV2jhhLnRGFwzxM9gSLMprhBzLUQQa6LV3KtxDNY8o4SsJTi+A4LNUtXndlcdnK88X05E=","message_index":0},{"data":"4iloFQH9co/N1KwsrIm6Tc0JQlxSOWwhqRpFHJwKSncPr+LrpYFzcv0E9JwzKZMZKZsis7ONXup9dpMgwqERpSV58JuCg9d5zk1dzCMhUq3q6bxxksJMUakjMUeQ4G9rePZg/yFjvsxOKCcoeF//QCu3+J1rTKltwIXXDSuQXPs=","message_index":1},{"data":"iMz5ZgqEhloDje0r5rfyTHM3UkFUJjW42TQiZrG7PbLbNqMSs/9GzITJU49q8mTAx4NOBd28E2sEo5qUSO09vVdIiUSrbf3Z3xbMU/P8Hd1aJ8la8v6XH0HKl47cYZ1clb0xHgFU0PtNOZNx+ROsMsdiuI6MARdI2mHogaZh4gs=","message_index":2},{"data":"tG+uJmdjvwdGw/lnTRHlmOPyAXq1cwZmjj1tWJlJKPFdw6wlu6rR3j9aWYtcStYXjoW1bdsh616ZuFVr1lfZVKHxNUtPnFPuqZ7jEZmYqW0kUu9aRwDwlHAeNs5NGLVFiAZfL5nE9wAiqWx6uY9TAwNMEMPzYw0dVLYRLw3Gd4U=","message_index":3}],"encoding":"base64-v1","known_plaintexts":[{"data":"bzeQRyLC+VrfQb87kZDI6Q==","message_index":0,"offset":32},{"data":"UbCamto2OX4=","message_index":2,"offset":48},{"data":"Tfd2HmrL","message_index":1,"offset":56},{"data":"WwI=","message_index":2,"offset":62},{"data":"Oh0FCAE2/pvfvFn6PVv0","message_index":0,"offset":64},{"data":"UAThDg==","message_index":2,"offset":79},{"data":"A5s=","message_index":1,"offset":83},{"data":"tnLb","message_index":0,"offset":85},{"data":"RWjpenWNl9Y=","message_index":1,"offset":88}],"target":{"length":64,"message_index":3,"offset":32}}

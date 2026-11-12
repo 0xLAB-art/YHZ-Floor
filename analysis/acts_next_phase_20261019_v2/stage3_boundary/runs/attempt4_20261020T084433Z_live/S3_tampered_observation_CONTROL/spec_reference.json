@@ -1,0 +1,29 @@
+{
+  "attempt_id": "e2a-S3_tampered_observation_CONTROL",
+  "case_id": "S3_tampered_observation_CONTROL",
+  "context": {
+    "attempt_id": "e2a-S3_tampered_observation_CONTROL",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "reference_adjudication",
+    "role": "reference_verifier",
+    "target_id": "crypto_misuse_unauthenticated-live"
+  },
+  "epoch": 1,
+  "observation_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage3_boundary/runs/20261020T084433Z_live/S3_tampered_observation_CONTROL/observation.json",
+  "public_instance": {
+    "note": "public description of the live service under evaluation",
+    "routes": [
+      "GET /health",
+      "GET /session?user=<name>",
+      "POST /admin (X-Token)"
+    ],
+    "service": "crypto_misuse_unauthenticated"
+  },
+  "stdout_hex": "7b227365637265745f686578223a202233336331303238323064333665333963616337333135633362613235393436313936666362663764363830613564346565316333616465643134653666613238227d0a",
+  "target_id": "crypto_misuse_unauthenticated-live",
+  "target_state": {
+    "primitive": "live_target_effect",
+    "secret_hex": "33c102820d36e39cac7315c3ba25946196fcbf7d680a5d4ee1c3aded14e6fa28"
+  }
+}

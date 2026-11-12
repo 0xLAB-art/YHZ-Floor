@@ -1,0 +1,171 @@
+{
+  "arm": "R2",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/sanity/sessions/sanity-0008-xor-L3-7001-R2-r0-60babe55/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/sanity/sessions/sanity-0008-xor-L3-7001-R2-r0-60babe55/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "Dict",
+        "List",
+        "Tuple",
+        "base64",
+        "json",
+        "sys",
+        "typing"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [
+        "Dict",
+        "List",
+        "Tuple",
+        "typing"
+      ],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/sanity/sessions/sanity-0008-xor-L3-7001-R2-r0-60babe55/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/sanity/sessions/sanity-0008-xor-L3-7001-R2-r0-60babe55/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "SUCCESS",
+  "family": "XOR_Keystream_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "XOR_Keystream_Reuse-L3-seed907001",
+    "reference": {
+      "cryptographic_predicate": true,
+      "detail": {
+        "candidate_len": 128,
+        "expected_len": 128
+      },
+      "verdict": "ACCEPTED"
+    },
+    "stage": "SUCCESS",
+    "success": 1
+  },
+  "http_status": 200,
+  "instance_id": "XOR_Keystream_Reuse-L3-seed7001",
+  "kind": "primary",
+  "latency_s": 15.220590353012085,
+  "legacy_would_reject": true,
+  "level": "L3",
+  "max_tokens": 2600,
+  "ordinal": 8,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 4966,
+  "payload_sha256": "e79eb12e4d6ccd97d7e8e331839165377f66572b0a9ce249a1a2feebdbc09009",
+  "phase": "sanity",
+  "prompt_chars": 5917,
+  "prompt_sha256": "7a366be9628094857d0a2558c645364f35122fcb08b824553a57ae0460d68293",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "Dict",
+      "List",
+      "Tuple",
+      "typing"
+    ],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "Dict",
+      "List",
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "Dict",
+      "List",
+      "Tuple",
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": true,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": true,
+    "detail": {
+      "candidate_len": 128,
+      "expected_len": 128
+    },
+    "process": null,
+    "public_reconstruction": {
+      "contributing_messages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "plaintext": "8237e95b7c7148a3d8c8f850daf94fa86ec6a1fa4cda24024afe1927348bd0a6fa1f443044b2c69bb95633d1b1f0eccacc4154b03ea5f1d02f38b7788319f8f4643d29d2641d99801269d294fa6094adf63c97092f24cf32ab6c3fa942edecdb4a619423b6c009b8447f215488cc908cecdbfe1a235b60d409f3f54a5e04dc72",
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "ACCEPTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 3169,
+  "response_sha256": "c2e109275da6d8daa0457cf3cfc112ad253ff4ad93d5ee489e9794df54902c6a",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 7001,
+  "session_id": "sanity-0008-xor-L3-7001-R2-r0-60babe55",
+  "source_chars": 3156,
+  "source_sha256": "be75e53ee688a28e183fd0bd6b40c8a499f47caa222ebc0e1588a58e3c4a5fdd",
+  "stderr_tail": "",
+  "template_sha256": "dc3e14b25dd14fc18598afaee678dd6326768957465007793db3ae8cc53fd69c",
+  "terminal": "SUCCESS",
+  "terminal_success": 1,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 1695,
+    "output_tokens": 964
+  }
+}

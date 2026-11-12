@@ -1,0 +1,50 @@
+import sys
+import json
+import http.client
+import base64
+
+def request(method, path, body=None, headers=None):
+    conn = http.client.HTTPConnection("127.0.0.1", 32772)
+    if headers is None:
+        headers = {}
+    if body is not None and 'Content-Type' not in headers:
+        headers['Content-Type'] = 'application/json'
+    conn.request(method, path, body, headers)
+    resp = conn.getresponse()
+    data = resp.read().decode('utf-8')
+    conn.close()
+    return resp.status, data
+
+# Get session token
+status, data = request("GET", "/session")
+print(f"GET /session -> {status}: {data}")
+session = json.loads(data)
+token = session["token_hex"]
+
+# Try to find endpoints that use the token
+# Common patterns: /encrypt, /decrypt, /api/encrypt, /update, /set, /get
+
+endpoints_to_try = [
+    ("POST", "/encrypt", json.dumps({"data": "test"})),
+    ("POST", "/decrypt", json.dumps({"data": "test"})),
+    ("POST", "/update", json.dumps({"data": "test"})),
+    ("POST", "/set", json.dumps({"key": "test", "value": "data"})),
+    ("GET", "/get", None),
+    ("GET", "/data", None),
+    ("POST", "/api/encrypt", json.dumps({"data": "test"})),
+]
+
+for method, path, body in endpoints_to_try:
+    headers = {"Authorization": f"Bearer {token}"}
+    status, data = request(method, path, body, headers)
+    print(f"{method} {path} (with token) -> {status}: {data}")
+    if status != 404:
+        break
+
+# Try without Authorization header format
+for method, path, body in endpoints_to_try[:3]:
+    headers = {"X-Token": token}
+    status, data = request(method, path, body, headers)
+    print(f"{method} {path} (X-Token) -> {status}: {data}")
+    if status != 404:
+        break

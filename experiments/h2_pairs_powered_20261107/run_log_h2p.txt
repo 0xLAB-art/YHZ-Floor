@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/agentrouter_client.py", line 57, in call
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/run_h2_pairs_powered.py", line 726, in <module>
+    main()
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/run_h2_pairs_powered.py", line 469, in main
+    result = provider.call(prompt, MAX_TOKENS)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/h2_pairs_powered_20261107/agentrouter_client.py", line 72, in call
+    raise ProviderFailure("BAD_RESPONSE", f"HTTP {exc.code}: {detail}")
+agentrouter_client.ProviderFailure: BAD_RESPONSE: HTTP 400: {"error":{"message":"This content was flagged for possible cybersecurity risk. If this seems wrong, try rephrasing your request. To get authorized for security work, join the Trusted Access for Cyber program: https://***.com/*** (request id: 20261107080835947320898fg2dq1Gn) [trace_id=698f294959fe6fc

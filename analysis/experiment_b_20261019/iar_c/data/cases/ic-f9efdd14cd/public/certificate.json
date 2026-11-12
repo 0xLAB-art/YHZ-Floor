@@ -1,0 +1,60 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "ic-sess-3c4f8d568a1bb2b7",
+    "sha256": "9f5e16b2f651d8360cc1b17d61d2dd036f4f735178569ea56446aa1c559f54ad"
+  },
+  "attempt_id": "ic-attempt-ic-f9efdd14cd",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "NOT_ESTABLISHED",
+    "boundary_enforcement": "NOT_ESTABLISHED",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "ACCEPTED",
+    "target_effect": "OBSERVED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "97169e8a5016d4f0fb1c6cf20bf64a157987579d15f6be3252a4cd96321b8a8f"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "9e59cee7402a50d0659bd7d2a3a3a2331a9a81d31473842b578501be8d60c6ba"
+    },
+    {
+      "kind": "target_effect",
+      "path": "evidence/target_effect.json",
+      "sha256": "4a1c40d75a2ba7f023adb0f1c747ec0cedda0c01e3a4b8610fcd513daafa1606"
+    },
+    {
+      "kind": "reference_acceptance",
+      "path": "evidence/reference_acceptance.json",
+      "sha256": "aa2fe521713e578600c578f02ae3c42ed541e77135ea030339ce2af39b9e856e"
+    }
+  ],
+  "execution": {
+    "executor": "ic-executor-r",
+    "exit_status": "completed",
+    "session_id": "ic-sess-3c4f8d568a1bb2b7",
+    "trace_hash": "9e59cee7402a50d0659bd7d2a3a3a2331a9a81d31473842b578501be8d60c6ba"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "a8c63005d6ed1056b401d6bfbfff1317c56ddeff67882bb74461ec63318e91a1",
+    "target_id": "tid-ic-inst-8ef31c0b7468"
+  },
+  "task": {
+    "base_instance_id": "ic-inst-8ef31c0b7468",
+    "primitive": "chacha",
+    "task_id": "task-chacha-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

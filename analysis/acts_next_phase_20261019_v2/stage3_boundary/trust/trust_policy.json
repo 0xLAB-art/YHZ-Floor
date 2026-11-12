@@ -1,0 +1,30 @@
+{
+  "notes": "The allow-list context is a fixed namespace string. The per-case six-field binding is carried inside every signed payload and is additionally signed by the audited context_validator component.",
+  "roles": {
+    "aggregator": {
+      "contexts": [
+        "e2a:evidence:v1"
+      ],
+      "kinds": [
+        "attribution_claim"
+      ]
+    },
+    "execution_observer": {
+      "contexts": [
+        "e2a:evidence:v1"
+      ],
+      "kinds": [
+        "execution_observation"
+      ]
+    },
+    "reference_verifier": {
+      "contexts": [
+        "e2a:evidence:v1"
+      ],
+      "kinds": [
+        "reference_adjudication"
+      ]
+    }
+  },
+  "schema": "e2a-issuer-policy/1"
+}

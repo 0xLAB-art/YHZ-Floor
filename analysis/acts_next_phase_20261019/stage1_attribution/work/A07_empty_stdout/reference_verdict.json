@@ -1,0 +1,41 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "reference_verifier",
+  "key_id": "ed25519-6182b592ccb8804bbada5420",
+  "kind": "reference_verdict",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-A07_empty_stdout",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "reference_verdict",
+      "role": "reference_verifier",
+      "target_id": "s1-target-A07_empty_stdout"
+    },
+    "context_signature_hex": "306435f03ac96767dbd7a7d27403f092b0d949d185642348f9c5b6af37a5c39547972c16fc5f5cb01915bc48373478b4ce440e7e893c882574bda5aeb104dc0e",
+    "facts": {
+      "attempt_id": "s1-attempt-A07_empty_stdout",
+      "candidate_bytes": 0,
+      "candidate_parse_ok": false,
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "crypto_details": {
+        "candidate_unparseable": true,
+        "parse_or_math_error": true
+      },
+      "cryptographic_predicate": false,
+      "epoch": 1,
+      "parser": "json-last-line-v1",
+      "predicate_source": "frozen:contract_sound_stage01_reference_verifier_v2.py",
+      "primitive": "ECDSA_Nonce_Reuse",
+      "session_id": "s1-session-A07_empty_stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_id": "s1-target-A07_empty_stdout",
+      "target_state_sha256": "d10950c72a579b96daa8b301e64823c652f1a7af795c01d2fa09b1f59462704b",
+      "verdict": "REJECTED",
+      "verifier_version": "acts-s1-reference-verifier/1"
+    }
+  },
+  "signature_hex": "0e4c0aafd69d6d49b146547049010fb30a718aff859373d39697ad4bcee387d5123583a1964878109055a58dea7a7b58edcda2cf5bc5c66d749f6ab87db72f05"
+}

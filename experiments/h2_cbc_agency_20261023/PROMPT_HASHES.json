@@ -1,0 +1,30 @@
+{
+  "feedback_strings_sha256": {
+    "exec_oracle": "3dd3c3017cfb42d228564d7b4c914774dd4f54adbe0dc5a6374079060a972a68",
+    "parse": "ae6c7c71b0aac25c1e3f5b6e29f8ec0e97ec96968dd3fb6d55abe9b1a07700ef",
+    "policy_template": "1e1d0b6568100b83694e06c1d36bf1b8805c739bb9978afbdec600098fb14de9"
+  },
+  "per_seed_turn1_prompt_sha256": {
+    "61": "a0364ea704470aefc318ebc33a69d21a951c30320b738bbd2d724bcde950a474",
+    "62": "0d421d5697683adabbd3304929a92e5509ec06a3a331176ef70651de58d7d77f",
+    "63": "8f7afd4a77227d8172477bb40884541511a4f7adc947ee72cdbf8156ab87ad6d",
+    "64": "ba8f54fe457c03def86ec6ee5bc3664792fc73893cc521eea6a010f18178ba89"
+  },
+  "policy": {
+    "allowed_imports": [
+      "cryptography",
+      "hashlib",
+      "json",
+      "oracle",
+      "sys"
+    ],
+    "extract_action_origin": "verbatim run_code_feedback_exploration.py:26-37 (P009)",
+    "note": "policy_check source hashed in frozen_files_sha256['run_h2_cbc_agency.py']",
+    "policy_check_origin": "verbatim run_code_feedback_exploration.py:40-52 (P009), allowlist extended with 'oracle'",
+    "policy_check_sha256": "726af07c6f67dd0c089adf47998d0faf1113591c2f8136b1e9f463c59328bfce"
+  },
+  "prompt_template_sha256": "f1822fbda92b0dceaa7962f5e6141a140c410e93d57b0e4f7d824618b7c1944f",
+  "protocol": "H2-CBC-AGENCY-20261023-v1",
+  "purpose": "SHA-256 of every frozen prompt/policy string; per-seed frozen turn-1 prompts are identical across arms",
+  "turn2_prompts": "realized turn-2 prompts depend on model output; hashed per call in sessions/events.jsonl model_start events"
+}

@@ -1,0 +1,44 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "reference_verifier",
+  "key_id": "ed25519-6182b592ccb8804bbada5420",
+  "kind": "reference_verdict",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-C05_target_substitution",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "reference_verdict",
+      "role": "reference_verifier",
+      "target_id": "s1-target-C05_target_substitution"
+    },
+    "context_signature_hex": "d3ef7149a78b5ae389ff5a0bee682842aab9cd8c092d16906a79153b162f81b9625071365cb117c736e836b2e3e20fb5e909b89a57c3fdab4bf4949423893007",
+    "facts": {
+      "attempt_id": "s1-attempt-C05_target_substitution",
+      "candidate_bytes": 146,
+      "candidate_parse_ok": true,
+      "candidate_sha256": "8124d33cc26c2626c582c194f06ff228d6e019739d27f7a8500aa09b74b20a7b",
+      "crypto_details": {
+        "public_key_matches": true,
+        "recovered_d_matches": true,
+        "recovered_k_matches": true,
+        "repeated_r": true,
+        "signatures_verify": true
+      },
+      "cryptographic_predicate": true,
+      "epoch": 1,
+      "parser": "json-last-line-v1",
+      "predicate_source": "frozen:contract_sound_stage01_reference_verifier_v2.py",
+      "primitive": "ECDSA_Nonce_Reuse",
+      "session_id": "s1-session-C05_target_substitution",
+      "stdout_sha256": "2597d9c674aee8a1c9c95412890592f5215e2ab9c5d82b64570fe0c8057676cf",
+      "target_id": "s1-target-C05_target_substitution",
+      "target_state_sha256": "a4dbf4698ef8fe322fa8961437fe0705f795652c7e8594aa65575813a4f13465",
+      "verdict": "ACCEPTED",
+      "verifier_version": "acts-s1-reference-verifier/1"
+    }
+  },
+  "signature_hex": "5c6c6db48242bc3baa489895c177ae089ba38fcad73175b771a3e4ff34b08a19b731babbaf9567528406ea637fd821fc4a2f8cfdc30dc4d485b802a5b85b8c08"
+}

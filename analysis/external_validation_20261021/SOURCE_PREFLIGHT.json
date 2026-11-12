@@ -1,0 +1,170 @@
+{
+  "schema": "acts-external-source-preflight/1",
+  "benchmarks": [
+    {
+      "benchmark": "cybench",
+      "archive": "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz",
+      "sha256": "261cc002d315776cf424322a18a645a21b48b418f1425e3b10271e298da0b805",
+      "execution": "none; source inventory only",
+      "replication_status": "NOT_RUN",
+      "entrypoints": [
+        {
+          "requested": "README.md",
+          "matches": 568
+        },
+        {
+          "path": "agent/agent.py",
+          "sha256": "cbd177e91c84b3d622add10ff298db28151ef7a92c9d2053b0157abe21412ec3",
+          "lines": 734,
+          "relevant_lines": [
+            {
+              "line": 26,
+              "text": "from requests.exceptions import ConnectionError, HTTPError, Timeout"
+            },
+            {
+              "line": 52,
+              "text": "TIMEOUT_PER_COMMAND = 120"
+            },
+            {
+              "line": 142,
+              "text": "(HTTPError, ConnectionError, Timeout, http.client.RemoteDisconnected)"
+            },
+            {
+              "line": 232,
+              "text": "f\"Connection error or timeout when querying HELM API: {str(e)}. No more retries left.\""
+            },
+            {
+              "line": 299,
+              "text": "timeout=TIMEOUT_PER_COMMAND,"
+            },
+            {
+              "line": 305,
+              "text": "except subprocess.TimeoutExpired as e:"
+            },
+            {
+              "line": 310,
+              "text": "stdout=f\"Command '{e.cmd}' timed out after {e.timeout} seconds.\","
+            },
+            {
+              "line": 410,
+              "text": "(HTTPError, ConnectionError, Timeout, http.client.RemoteDisconnected)"
+            },
+            {
+              "line": 432,
+              "text": "(HTTPError, ConnectionError, Timeout, http.client.RemoteDisconnected)"
+            },
+            {
+              "line": 458,
+              "text": "(HTTPError, ConnectionError, Timeout, http.client.RemoteDisconnected)"
+            }
+          ]
+        },
+        {
+          "path": "grading/unguided_run.py",
+          "sha256": "aba70de0d058910a74be8ea3866c6c6b0be31e1ff050da9018fd2709d34e53ed",
+          "lines": 148,
+          "relevant_lines": []
+        }
+      ],
+      "regular_files": 7460,
+      "log_path_members": [
+        "benchmark/bug_bounty/lunary/packages/frontend/pages/logs/[id].tsx",
+        "benchmark/bug_bounty/lunary/packages/frontend/pages/logs/index.tsx"
+      ],
+      "boundary": "Path/keyword inventory is not proof of missing policy or missing public traces; external releases may provide separate logs. No admission effect was measured."
+    },
+    {
+      "benchmark": "cve_bench",
+      "archive": "human_audit/source_freeze_20261005/archives/cve_bench__cve-bench__9fb3e068f260.tar.gz",
+      "sha256": "b7ccc67e777412e46ec4dbff1f0a3871ff268cb9ac4f3ce4f6db7f799ee9c239",
+      "execution": "none; source inventory only",
+      "replication_status": "NOT_RUN",
+      "entrypoints": [
+        {
+          "path": "cve_bench__cve-bench__9fb3e068f260__9fb3e068f260/README.md",
+          "sha256": "ad067b546b08139cb65f42f4c481abbdbbc99f6ac30d88e7229dd25bdb69f125",
+          "lines": 192,
+          "relevant_lines": []
+        },
+        {
+          "path": "cve_bench__cve-bench__9fb3e068f260__9fb3e068f260/src/cvebench/cvebench.py",
+          "sha256": "93b99cf809f184ee9a061da7155586bbf484a55b1a50febb88675cbaa275395d",
+          "lines": 242,
+          "relevant_lines": [
+            {
+              "line": 12,
+              "text": "from inspect_ai.util import SandboxEnvironmentSpec, sandbox, store"
+            },
+            {
+              "line": 45,
+              "text": "os.environ.setdefault(\"CVEBENCH_SANDBOXES_DIR\", str(_REPO_ROOT / \"src\" / \"common\" / \"sandboxes\"))"
+            },
+            {
+              "line": 53,
+              "text": "GRADER_EXEC_TIMEOUT_SECONDS = 500  # Bounds done.sh end to end."
+            },
+            {
+              "line": 82,
+              "text": "scorer=check_exploit(STORE_KEY_ATTACK_SUCCESSFUL, check_target_server_for_exploit_success),"
+            },
+            {
+              "line": 109,
+              "text": "scorer=check_exploit(STORE_KEY_ATTACK_SUCCESSFUL, check_target_server_for_exploit_success),"
+            },
+            {
+              "line": 135,
+              "text": "sandbox=\"default\","
+            },
+            {
+              "line": 146,
+              "text": "sandbox=\"default\","
+            },
+            {
+              "line": 156,
+              "text": "target_sandbox = sandbox(target_name)"
+            },
+            {
+              "line": 159,
+              "text": "result = await target_sandbox.exec("
+            },
+            {
+              "line": 161,
+              "text": "timeout=GRADER_EXEC_TIMEOUT_SECONDS,"
+            },
+            {
+              "line": 181,
+              "text": "except TimeoutError:"
+            },
+            {
+              "line": 182,
+              "text": "LOGGER.warning(\"Timeout when checking target server for exploit success.\")"
+            },
+            {
+              "line": 228,
+              "text": "sample.sandbox = SandboxEnvironmentSpec("
+            },
+            {
+              "line": 236,
+              "text": "from k8s_sandbox import K8sSandboxEnvironmentConfig"
+            },
+            {
+              "line": 238,
+              "text": "return K8sSandboxEnvironmentConfig("
+            }
+          ]
+        },
+        {
+          "path": "cve_bench__cve-bench__9fb3e068f260__9fb3e068f260/src/cvebench/prompts.py",
+          "sha256": "7ef42d7ea728a998832587e249e1fb9885797e44d40ad0777f437c51fb19a93c",
+          "lines": 19,
+          "relevant_lines": []
+        }
+      ],
+      "regular_files": 550,
+      "log_path_members": [
+        "cve_bench__cve-bench__9fb3e068f260__9fb3e068f260/.git/logs/HEAD"
+      ],
+      "boundary": "Path/keyword inventory is not proof of missing policy or missing public traces; external releases may provide separate logs. No admission effect was measured."
+    }
+  ]
+}

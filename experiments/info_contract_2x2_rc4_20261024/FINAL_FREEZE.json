@@ -1,0 +1,68 @@
+{
+  "execution_summary": {
+    "cells": {
+      "C1": "4/4",
+      "C2": "4/4",
+      "C3": "4/4",
+      "C4": "4/4"
+    },
+    "falsifier_verdicts": {
+      "F1": "TRUE (C4 4/4 vs C1 4/4) - honest null: reference premise not load-bearing on RC4",
+      "F2": "FALSE (C3 4/4)",
+      "F3": "TRUE (C2 4/4, all first-turn)"
+    },
+    "marginals": {
+      "A_minus_C2_C3": "8/8",
+      "A_plus_C1_C4": "8/8",
+      "B_minus_C2_C4": "8/8",
+      "B_plus_C1_C3": "8/8",
+      "fisher_one_sided": 1.0,
+      "fisher_two_sided": 1.0,
+      "note": "exact statistics descriptive only; factorial saturated; no alpha claim"
+    },
+    "provider_failures": 0,
+    "provider_responses": 16,
+    "sessions": 16,
+    "status_counts": {
+      "SUCCESS": 16
+    }
+  },
+  "freeze_date": "2026-10-24",
+  "freeze_type": "FINAL_FREEZE",
+  "identity_limits": {
+    "experimenter": "single experimenter; one fixture family per cohort (RC4 keystream reuse, P010-mirrored semantics); one local execution contract",
+    "model": "label 'claude-sonnet-4-6-free' via https://api.apmix.ai/v1/messages; provider-attested metadata only (all 16 raw responses echo the label), weights not independently verified",
+    "pooling": "no pooling with P010, H1 V2, V4, historical blind-opportunity, or post-freeze cohorts; side-by-side reporting only"
+  },
+  "integrity": {
+    "key_handling": "api key read from repo-root .env (APMIX_API_KEY) at runtime; never printed, never written to any artifact",
+    "leak_scan": "LEAK_SCAN.json - 125 files scanned; 16 prompt files with 0 hits of any seed truth or key material; 16 expected hits in execution_captures/*.stdout.txt (accepted candidates' own oracle-verified recovered output) and 1 expected hit in preflight/ambiguity_witness.json (local preflight record, never model-visible); 0 unexpected hits",
+    "post_freeze_tool_amendments": [
+      {
+        "change": "Leak-scan REPORTING layer only: (a) classify expected non-leak hit classes (accepted stdout recovered output; local preflight ambiguity witness), (b) exclude the scanner's own LEAK_SCAN.json from scanning (self-referential; its secrets_derived block is intentional, P010 precedent). No prompt, fixture, oracle, policy, or session artifact was amended after the freeze commit 5723ba0; session data unchanged; disclosed per no-post-hoc-edit policy.",
+        "current_sha256": "6ff0734fd579bb4c0fbd9998f2f66dabbbfb13de36c95132fadb58d36d0cd54a",
+        "detected": "2026-10-24, before the final outcome commit",
+        "file": "leakscan_info_contract_2x2_rc4.py",
+        "frozen_sha256": "ad86c0b566a3245805e7ad220853b51f903c330a6e893c711c83d0d580393a03"
+      }
+    ],
+    "protected_files": "P010 namespace info_contract_2x2_20261018/ and sp2027/paper/ untouched by this phase (read-only access only)"
+  },
+  "manifest": {
+    "coverage_rule": "all regular files in this directory tree except hashes/ (the manifest container), STATUS_INFO_CONTRACT_RC4.json (written after the manifest snapshot), and FINAL_FREEZE.json (self-referential metadata naming the manifest hash)",
+    "entries": 126,
+    "path": "hashes/all_artifacts.sha256",
+    "sha256": "45bbd02f0c30bd42facfbefb989797aa32b73a81e8359edf505842cabdedf849",
+    "verification": "sha256sum -c hashes/all_artifacts.sha256 (rerun at final freeze time; exit 0)"
+  },
+  "protocol": "P011-INFO-CONTRACT-2X2-RC4-v1",
+  "reproduction": {
+    "analysis": "analysis_info_contract_2x2_rc4.py -> ANALYSIS.json",
+    "leak_scan_and_hash": "leakscan_info_contract_2x2_rc4.py -> LEAK_SCAN.json, hashes/all_artifacts.sha256, STATUS_INFO_CONTRACT_RC4.json",
+    "preregistration": "PREREGISTRATION.md (freeze commit 5723ba0 before first experiment call)",
+    "report": "REPORT.md (ends with side-by-side comparison vs P010; no pooling)",
+    "runner": "run_info_contract_2x2_rc4.py (seeds 81-84 fixed)",
+    "verification_command": "sha256sum -c hashes/all_artifacts.sha256"
+  },
+  "status": "COMPLETED"
+}

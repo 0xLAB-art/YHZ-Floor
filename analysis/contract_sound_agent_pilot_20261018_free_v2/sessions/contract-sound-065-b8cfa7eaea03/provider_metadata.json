@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "badc7218a7eba333958f6621f4963a0ea0eb7ebbebcc6d103fa8d04a573eba5b",
+  "output_text": "```python\nimport json\nimport sys\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nprint(json.dumps({\n    \"status\": \"UNDERDETERMINED\",\n    \"reason\": \"ChaCha20 nonce reuse detection requires known or guessable plaintext, a decryption oracle, or the secret key; given only two ciphertexts, the XOR reveals the plaintext XOR but not whether the nonce was reused\"\n}))\n```",
+  "prompt_sha256": "147f2c9f838a709cba03c4cdcbceeb6276a3bb9d1454423b2b6a304ab38ddfa4",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792339233.4990711,
+  "response_bytes": 690,
+  "response_finished": 1792339239.4299545,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:00:39 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2588004",
+    "x-apmix-request-id": "req_1da9a722746246abacc99969",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "411996",
+    "x-apmix-weighted-tokens": "362",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "3156f8394af628afd987253e21411f9a650b47bdc64613bcc419c7e17da0f10b",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 244,
+    "output_tokens": 118
+  }
+}

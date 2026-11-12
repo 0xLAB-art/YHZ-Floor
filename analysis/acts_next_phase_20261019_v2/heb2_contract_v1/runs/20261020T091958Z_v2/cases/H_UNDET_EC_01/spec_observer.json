@@ -1,0 +1,34 @@
+{
+  "attempt_id": "e2a-H_UNDET_EC_01",
+  "case_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/runs/20261020T091958Z_v2/cases/H_UNDET_EC_01",
+  "case_id": "H_UNDET_EC_01",
+  "context": {
+    "attempt_id": "e2a-H_UNDET_EC_01",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ECDSA_Nonce_Reuse-seed-01"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_UNDET_EC_01",
+    "producer_id": "e2a-scripted-producer-v1",
+    "producer_kind": "scripted",
+    "producer_nonce": "769b1e9c8954e3138e501388411e30d2e1c219813e2265d2493cbca258baac69"
+  },
+  "program_source_text": "\"\"\"\nACTS-Attack E2A scripted producer program.\n\"\"\"\nimport json\nimport sys\n\n\ndef main():\n    with open(sys.argv[1], \"r\", encoding=\"utf-8\") as handle:\n        instance = json.load(handle)\n    print(json.dumps({\"status\": \"UNDERDETERMINED\",\n                      \"reason\": \"the public instance does not determine a unique target\"},\n                     sort_keys=True))\n\n\nmain()\n",
+  "public_instance": {
+    "encoding": "json-hex-v1",
+    "public_key": [
+      "286a592fc9259c05137208d79725950ca3b591fcdc5ff482153ddefa1774a7eb",
+      "924636cff9e61ccd3be181df379a425ee366611f0339ae377c9be728538e8cea"
+    ],
+    "signature_1": {
+      "r": "367b2679871807d0a761e213a533d80d48ab7db5cc03cd2d4aedc90e0113bb3d",
+      "s": "2974c5f5bbe0d6637d2666f66d46aa4e68a6b40badfebe1f46484fe01c32b16c",
+      "z": "a5327cbd8fef280bddbe80766681b03694695bd6f6ae3b2205f7c8e190aea844"
+    }
+  },
+  "target_id": "ECDSA_Nonce_Reuse-seed-01"
+}

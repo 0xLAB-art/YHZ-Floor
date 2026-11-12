@@ -1,0 +1,25 @@
+{
+ "schema": "infoc-powered-freeze/1",
+ "namespace": "info_contract_powered_20261025",
+ "authorization": "five-referee panel requirement (REVIEW_PANEL_20261025.md): powered test of the RQ2 interaction claim",
+ "design": "ChaCha20 2x2, cells C1-C4 identical slots, 8 fresh seeds 101-108, 32 sessions, frozen runner imported byte-for-byte",
+ "frozen_runner": {
+  "path": "sp2027/research_execution/run_info_contract_2x2_chacha20.py",
+  "sha256": "a08eab6f4be2401aacf1b39a47ba6960373164dcc57640d3672d8c36583ee198"
+ },
+ "files": {
+  "PREREGISTRATION.md": "b53196bcd089a4e6abcc20cc15e6495726df73eefd1d55b80a6127bec2c96e80",
+  "run_powered_chacha20.py": "cf4fc66211a1545cb2c6ffafd2c12fd5a556f0da02afb68c7c5ba16b42c378e5"
+ },
+ "provider_probe": {
+  "kind": "AUTH_SMOKE",
+  "tokens": "11 in / 4 out",
+  "result": "OK end_turn",
+  "evidence": false
+ },
+ "second_label": "UNAVAILABLE \u2014 provider /v1/models returns exactly one label (claude-sonnet-4-6-free); probed 2026-10-25; remains registered future work",
+ "rc4_fixture": "NOT re-run (P011 saturated 16/16; no detectable effect possible; disclosed design decision)",
+ "provider_calls_experiment": 0,
+ "cost_ceiling_usd": 5.0,
+ "freeze_note": "wrapper hash refreshed after a pre-first-call launch crash (missing namespace subdirs; zero provider calls occurred, zero sessions recorded)"
+}

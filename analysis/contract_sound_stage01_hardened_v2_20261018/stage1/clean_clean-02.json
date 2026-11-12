@@ -1,0 +1,26 @@
+{
+  "case_id": "clean-02",
+  "defect_family": "none",
+  "label_disagreement": false,
+  "primitive": "ChaCha20_Nonce_Repeat",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "crypto_details": {
+      "lengths_match": true,
+      "xor_recovery_matches": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "ACCEPTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 62.05330399097875,
+  "split": "clean",
+  "stored_label": "ACCEPTED",
+  "validator": {
+    "decision": "ACCEPT",
+    "reason": "public-evidence-consistent"
+  },
+  "validator_overhead_ms": 54.56689198035747
+}

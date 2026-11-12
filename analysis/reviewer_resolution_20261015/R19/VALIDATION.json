@@ -1,0 +1,73 @@
+{
+  "checks": 12,
+  "all_pass": true,
+  "failures": [],
+  "check_details": [
+    {
+      "check": "package_dir_and_manifest_exist",
+      "pass": true,
+      "detail": "pkg=/mnt/nvme5/ACTS-Attack/sp2027/paper/anonymous_lock_replay_v12 manifest=True"
+    },
+    {
+      "check": "manifest_sha256",
+      "pass": true,
+      "detail": "got=281ecfec0f1769ef3874c522acc85fe5b1e6dfb7e52cbe0b3b974ae6546f365b"
+    },
+    {
+      "check": "manifest_bytes",
+      "pass": true,
+      "detail": "got=479246"
+    },
+    {
+      "check": "manifest_files_count",
+      "pass": true,
+      "detail": "got=816 expected=816"
+    },
+    {
+      "check": "on_disk_set_equality",
+      "pass": true,
+      "detail": "missing_on_disk=[] extra_on_disk=[]"
+    },
+    {
+      "check": "all_manifest_digests_match",
+      "pass": true,
+      "detail": "mismatches=0 []"
+    },
+    {
+      "check": "runner_scripts_present",
+      "pass": true,
+      "detail": "all sizes match"
+    },
+    {
+      "check": "token_screen_clean",
+      "pass": true,
+      "detail": "hits=0 []"
+    },
+    {
+      "check": "addendum_withheld_vs_missing",
+      "pass": true,
+      "detail": "withheld=True missing=True nothing=True"
+    },
+    {
+      "check": "readme_staging_statement",
+      "pass": true,
+      "detail": "present=True"
+    },
+    {
+      "check": "placeholder_dirs_present",
+      "pass": true,
+      "detail": "human_audit=True; LEGACY_STUDY=True; docs=True"
+    },
+    {
+      "check": "manifest_scope_fields",
+      "pass": true,
+      "detail": "scope=registered_claim_replay_over_explicitly_transformed_evidence full=False raw=False claims=56"
+    }
+  ],
+  "files": {
+    "anonymous_lock_replay_v12/PACKAGE_MANIFEST.json": "281ecfec0f1769ef3874c522acc85fe5b1e6dfb7e52cbe0b3b974ae6546f365b",
+    "sp2027/paper/build_lock_replay_artifact.py": "4357872b4171ea46b1763c9b690a181170196215b1cb16c4f1ebaa7f9b70b985",
+    "sp2027/paper/artifact_tools/MANUSCRIPT_AND_COHORT_ADDENDUM.md": "8d7fb8a6bab6332cf44f941ff1db04eb73616248c43f423cbd51b288bed48a27",
+    "anonymous_lock_replay_v12/MANUSCRIPT_AND_COHORT_ADDENDUM.md": "8d7fb8a6bab6332cf44f941ff1db04eb73616248c43f423cbd51b288bed48a27"
+  }
+}

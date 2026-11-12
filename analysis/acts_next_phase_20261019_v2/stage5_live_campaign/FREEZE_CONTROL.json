@@ -1,0 +1,95 @@
+{
+  "case_inventory": {
+    "count": 22,
+    "files": {
+      "01_H_OK_EC_01.json": "ba7088cf634831c5babab4ff857f670506fa2a42b6b15fc537b9022d41314624",
+      "02_H_OK_EC_02.json": "4e368bc1471c529e523084f9bfeae3da0d17781ddf07c8809b820ca50c38f107",
+      "03_H_OK_EC_03.json": "52b17d75e17d0fd2912ba6d83a287f1594ce9aee09c297f3b843df9576c2ef0b",
+      "04_H_OK_CH_01.json": "4d28ed04b0c65badf1950edfd7e1e21654b16fad6db8fa731e5d7da9acf8c63d",
+      "05_H_OK_CH_02.json": "df73dd24d789abc86cb6b5fd7ae3eb5e65b8710ae02fb756452367052b0487dc",
+      "06_H_OK_CH_03.json": "a61b1cded9c20adf949cefce8aa2e1fccf4128dfd45fa6899e14b7477c7032c8",
+      "07_H_BAD_EC_01.json": "5b30e7b94b508a7f8c9178ce70c43f8909898158ff341beb896df709badd75ec",
+      "08_H_BAD_EC_02.json": "fa0ca844bd4f5ab6c57929e364e8eab1dae98657ccea1585940abcfcd79d1fb7",
+      "09_H_BAD_CH_01.json": "a11db8e40bcc646c5ac9c3e526d10e1a559968315e45f987edb824efc90fa443",
+      "10_H_BAD_CH_02.json": "6ed58b8ed004059179f5345ee72276c06694764589f76fb350c1378432016487",
+      "11_H_FAIL_EC_01.json": "14cd9ed6a66a1c938fd7f26a5952b74a945a5eff09dbccf13afa474cfa46eb8c",
+      "12_H_FAIL_CH_01.json": "0597620b9a67d6862f2e499e586ace9598141439ec37a6b17856420f89283641",
+      "13_H_MALFORMED_EC_01.json": "888ea394bf2d6503b0678bd21932ca6d8cf9fea22ab0027f300b689cb5c30cee",
+      "14_H_UNDET_EC_01.json": "c41143a3e68b412b2d2a2c0d2718b881ebebe6bf93e5d6e3fd67d9b2dd742791",
+      "15_M_MISSING_OBS.json": "7cd920142dc79183e1dc95ac2fcb853bbc959f8fbee3352abca7b19125cd23c9",
+      "16_M_MISSING_REF.json": "f51977d169506035ebe1e931666bd4a414928e0250c2b635302b4e64d4d7c924",
+      "17_X_IDENTITY.json": "9c66b652d438302b6a2603430c5069a0096fa23f31ed05a262f18e0ca0d85f02",
+      "18_X_OUTPUT_SWAP.json": "00c7a933afe6bdb864263af8f09c14993e4d3dd8525017aa8cfab8a097f47dce",
+      "19_X_STALE_ATTEMPT.json": "06fd3283cf0fef6961950a2b087fcc667ccc2a4b84056ce007a6f85e720551e2",
+      "20_X_CONTEXT_CONFLICT.json": "1fd64364a0ca675c179c226b6a3ae3491398df990934b9fbba8ca533a8904f54",
+      "21_X_REPLAY.json": "b0270a5a1719162da296d171a2fcd0edb91f1e2c42d22a5c42c22b636124a813",
+      "22_X_REF_MISMATCH.json": "c29befc1fc38ee9d65e1f95696ef0012a6c6553601db4c1bf2658a58de800d7c"
+    },
+    "root": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/frozen/cases"
+  },
+  "components": {
+    "aggregator": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/aggregator.py",
+      "sha256": "9dc164d1ffea19024aab1cf2e039a8c4add10902e599e849e4c8b18bd6b49908"
+    },
+    "campaign_live_reference": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/live_reference.py",
+      "sha256": "24aa7f26c550bf6600732d2430e0a47167484f0ffd7c4fc5522655704dcb3eb0"
+    },
+    "campaign_oracle": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/oracle_process.py",
+      "sha256": "72ba8233eb114b350274e4580ebe955178a96d7b9cc1571a0ed9449b6518a042"
+    },
+    "campaign_runner": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/run_campaign.py",
+      "sha256": "f60aab7d7544342c6daff1ec3f40c1c404669501186a501e4bbe86bf39f1cbb0"
+    },
+    "canonical": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/canonical.py",
+      "sha256": "6d5a34d37893a7abd211c50904ecad6dd8c70e43b4ab7dcc13fbfbef2519e14a"
+    },
+    "contract_v2": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/contract.py",
+      "sha256": "497e36ade814643816c885946913ac9a12311e0d9384f40229b32cd6ae2f3726"
+    },
+    "observer": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/observer.py",
+      "sha256": "74d1fda15b9e40f0d86a92b33877cada8800a1ff6eacc05ea141fb3aaf6693ae"
+    },
+    "prepare": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/prepare.py",
+      "sha256": "cee3819fdacee2615ce80051196adbff664da2164ea0df981b5f2fbced98ebca"
+    },
+    "reference": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/reference.py",
+      "sha256": "a4dd26475cffd42c7fb1e924392aab2d6d724790c251cef6fed2ab40dc9c09f6"
+    },
+    "remediation": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/e2a/remediation.py",
+      "sha256": "95ccb31c432c8013b73590fa5bd2b06d59ad0bfb57854e74a0e661ff00c3ebc4"
+    },
+    "target_card": {
+      "path": "sp2027/pre-registration/cards/crypto_misuse_unauthenticated.json",
+      "sha256": "8ed407bbf13bdb90fce7db518a8f392ebb50d6566790c008abd77b641b4ddc65"
+    }
+  },
+  "labels_trust": {
+    "labels": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage1_e2a/frozen/labels.json",
+      "sha256": "996328fb4539f3a20a1c3656d2d975de83c4b7ef14d2435df1e250341a1ce053"
+    },
+    "trust": {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/trust/trust_policy.json",
+      "sha256": "6ee72589852c16ccc963c61f1a8d82388d24106c278300a5c7a3b99d425988bf"
+    }
+  },
+  "measurement_runner": {
+    "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/run_live_positive_control.py",
+    "sha256": "29454e88ce51e73e22b9fe191b2cc2e14a044489414c81bde0792d8ca4f6fb48"
+  },
+  "protocol": {
+    "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/PREREGISTRATION.md",
+    "sha256": "12b96e5d6b397bf0470203d7797456ffd99e7bdcb5f06e3fa9ce698b545bbf1c"
+  },
+  "schema": "acts-integrity-remediation/1"
+}

@@ -2,6 +2,8 @@
 
 **The complete, verifiable evidence bundle for a pre-registered ownership audit of AI-agent attack success.**
 
+📗 **[Read the Guide first](GUIDE.md)** — how the audit works, how to run it, how to plug in an API, and where every number lives. Then browse **[experiments/INDEX.md](experiments/INDEX.md)**: all 81 registered cohorts, browsable, with their per-session results.
+
 *Prepared for double-blind review (IEEE S&P 2027, Cycle 2). This repository is the anonymized evidence projection: no author identities, no experimental reruns during packaging, every retained record byte-preserving. The manuscript itself is delivered to reviewers through the venue's submission system.*
 
 <img src="assets/owners_3d.svg" width="860" alt="The five owners of a reported attack success — animated isometric decomposition with the YHZ floor"/>
@@ -29,6 +31,10 @@ The external audit's headline finding: a published protocol's *declared 12,000-t
 ```
 YHZ-Floor/
 ├── README.md                        ← this file
+├── GUIDE.md                         ← the reviewer guide (setup, API, running, verifying)
+├── docs/                            ← the guide pages (mermaid diagrams, worked examples)
+├── experiments/INDEX.md             ← every cohort: directory → paper section → numbers
+├── experiments/ + analysis/         ← all registered cohorts and results, browsable
 ├── assets/                          ← animated SVG figures (CSS/SMIL, no scripts)
 │   ├── gen_animations.py            ← the generator
 │   ├── owners_3d.svg                ← the five-owner decomposition (3D)

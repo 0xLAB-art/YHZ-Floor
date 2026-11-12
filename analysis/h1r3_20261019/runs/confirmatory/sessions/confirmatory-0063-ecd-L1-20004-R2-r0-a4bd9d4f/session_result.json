@@ -1,0 +1,152 @@
+{
+  "arm": "R2",
+  "blind_validator": {
+    "cryptographic_claim": false,
+    "decision": "ACCEPT",
+    "reasons": [],
+    "scope": "evidence-integrity-only"
+  },
+  "cache_read_input_tokens": 0,
+  "code_fence_found": true,
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f/candidate.py",
+    "extra_stdout_lines": 0,
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f/candidate_output.json",
+    "qualification": {
+      "imported_modules": [
+        "Tuple",
+        "base64",
+        "json",
+        "sys",
+        "typing"
+      ],
+      "policy": "v3",
+      "qualified": true,
+      "status": "QUALIFIED",
+      "unused_imports": [
+        "typing"
+      ],
+      "violations": []
+    },
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/h1r3_20261019/runs/confirmatory/sessions/confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f/executor_stdout.txt"
+  },
+  "execution_status": "EXECUTED",
+  "failure_stage": "CRYPTOGRAPHIC_PREDICATE",
+  "family": "ECDSA_Nonce_Reuse",
+  "fence_count": 1,
+  "finish_reason": "end_turn",
+  "generalization": {
+    "attempted": true,
+    "instance_id": "ECDSA_Nonce_Reuse-L1-seed920004",
+    "reference": {
+      "cryptographic_predicate": false,
+      "detail": {
+        "d_ok": false,
+        "k_ok": true,
+        "require_k": false
+      },
+      "verdict": "REJECTED"
+    },
+    "stage": "CRYPTOGRAPHIC_PREDICATE",
+    "success": 0
+  },
+  "http_status": 200,
+  "instance_id": "ECDSA_Nonce_Reuse-L1-seed20004",
+  "kind": "primary",
+  "latency_s": 14.041476964950562,
+  "legacy_would_reject": true,
+  "level": "L1",
+  "max_tokens": 2600,
+  "ordinal": 63,
+  "output_schema_errors": [],
+  "output_schema_ok": true,
+  "payload_chars": 466,
+  "payload_sha256": "758bf918a36971007292c98d1d9ea5f061ba50c3524763eb776bfa2fd8b3ec94",
+  "phase": "confirmatory",
+  "prompt_chars": 1394,
+  "prompt_sha256": "38b27a271d20d324c7ce3b34836025ce8b15f12a36c4bfdfef4101bf1e22ed25",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_status": "SUCCESS",
+  "qualification": {
+    "imported_modules": [
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "v3",
+    "qualified": true,
+    "status": "QUALIFIED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": []
+  },
+  "qualification_legacy": {
+    "imported_modules": [
+      "Tuple",
+      "base64",
+      "json",
+      "sys",
+      "typing"
+    ],
+    "policy": "legacy",
+    "qualified": false,
+    "status": "SANDBOX_REJECTED",
+    "unused_imports": [
+      "typing"
+    ],
+    "violations": [
+      {
+        "line": 4,
+        "rule": "disallowed-import-from",
+        "value": "typing"
+      }
+    ]
+  },
+  "reference": {
+    "abstained": null,
+    "candidate_matches_truth": false,
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "cryptographic_predicate": false,
+    "detail": {
+      "d_ok": false,
+      "k_ok": true,
+      "require_k": false
+    },
+    "process": null,
+    "public_reconstruction": {
+      "pair": [
+        0,
+        1
+      ],
+      "sufficient": true
+    },
+    "public_sufficiency_confirmed": true,
+    "truth_source": "recomputed-from-private-state-and-public-observation",
+    "verdict": "REJECTED"
+  },
+  "replicate_index": 0,
+  "response_chars": 2164,
+  "response_sha256": "65bbfdd8ff3158a85eea37d67b14ac9008c38e1b6a79037e21574ec414bd3154",
+  "route": "claude-sonnet-4-6-free",
+  "seed": 20004,
+  "session_id": "confirmatory-0063-ecd-L1-20004-R2-r0-a4bd9d4f",
+  "source_chars": 2151,
+  "source_sha256": "d847a493eb7351147abf3a7b0589380da129ed41f90caebb6ccbd3877bf29433",
+  "stderr_tail": "",
+  "template_sha256": "54d7bbb68987d71771098bc475196e01c23ee1d8328de2e563b58f5f51236c8f",
+  "terminal": "CRYPTOGRAPHIC_PREDICATE",
+  "terminal_success": 0,
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 402,
+    "output_tokens": 880
+  }
+}

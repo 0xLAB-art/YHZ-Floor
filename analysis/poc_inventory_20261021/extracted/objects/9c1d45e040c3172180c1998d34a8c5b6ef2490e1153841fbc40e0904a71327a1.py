@@ -1,0 +1,2 @@
+import json
+print(json.dumps({"plaintext_2": "0705110db7b9b48a6d2b241bfa82340db0f5026a5be56aab4389324967b19df2b60d88b2cc5ae7d6822c111ca58ee716"}))

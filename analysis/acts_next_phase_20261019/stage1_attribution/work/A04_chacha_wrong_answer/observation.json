@@ -1,0 +1,74 @@
+{
+  "context": "acts-s1/attribution/v1",
+  "domain": "heb1:evidence:v1",
+  "format": "heb1-protected-signing-v1",
+  "issuer_role": "execution_observer",
+  "key_id": "ed25519-9db076cd2140268153030d07",
+  "kind": "execution_observation",
+  "payload": {
+    "context": {
+      "attempt_id": "s1-attempt-A04_chacha_wrong_answer",
+      "domain": "acts-s1/attribution/v1",
+      "epoch": 1,
+      "kind": "execution_observation",
+      "role": "execution_observer",
+      "target_id": "s1-target-A04_chacha_wrong_answer"
+    },
+    "context_signature_hex": "4b8f5901247ee9e5675ac97737133ba926cc74bea82c5f4c5ac71a93a532cf7961005a1ce349c24ba58a7a420e430a28b2b0a2b591ac1bfaac1a343fa5059c08",
+    "facts": {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A04_chacha_wrong_answer/program/candidate.py",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A04_chacha_wrong_answer/program/public_instance.json"
+      ],
+      "attempt_id": "s1-attempt-A04_chacha_wrong_answer",
+      "boundary": {
+        "allowed_interface": "argv-instance-json",
+        "enforced": true,
+        "network": "none-declared",
+        "restricted_python_subset": [
+          "base64",
+          "json",
+          "sys"
+        ]
+      },
+      "cwd": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019/stage1_attribution/work/A04_chacha_wrong_answer/execution",
+      "duration_ms": 27,
+      "env_allowlist": [
+        "PATH",
+        "PYTHONHASHSEED",
+        "LC_ALL"
+      ],
+      "env_sha256": "ab4390dda94a5975560e4eeeab9d3dc1ded6abf369c4317b40390913d63f325e",
+      "epoch": 1,
+      "executed_program_sha256": "b627982dd2c89f4fe7a4f4a7167024aae9b48cc1f44bb0b391a49d6f396b08c1",
+      "finished_at": "2026-10-20T08:29:30.314+00:00",
+      "input_sha256": "5e942a9ec48057ef05a66277adc940156c361864b23a792658210f633e9fe572",
+      "observer_nonce": "c65c57416d3b028f7920976c11c0d525a9bd6e4ac10922b35f957001e2ff5d0d",
+      "observer_version": "acts-s1-trusted-observer/1",
+      "output_file_bytes": 120,
+      "output_file_present": true,
+      "output_file_sha256": "eee394ac119c1a8aa75169853078ebbac3ba62e635b9a6364030b27622d00774",
+      "output_parsed": true,
+      "parser": "json-last-line-v1",
+      "program_source_sha256": "b627982dd2c89f4fe7a4f4a7167024aae9b48cc1f44bb0b391a49d6f396b08c1",
+      "program_source_sha256_after": "b627982dd2c89f4fe7a4f4a7167024aae9b48cc1f44bb0b391a49d6f396b08c1",
+      "returncode": 0,
+      "session_id": "s1-session-A04_chacha_wrong_answer",
+      "source_policy": {
+        "reason": "syntax-and-boundary-pass",
+        "status": "PASS"
+      },
+      "started_at": "2026-10-20T08:29:30.287+00:00",
+      "status": "EXECUTED",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdin_sha256": "5e942a9ec48057ef05a66277adc940156c361864b23a792658210f633e9fe572",
+      "stdout_bytes": 116,
+      "stdout_sha256": "cf7e17e3140a880cb80292a03d59663b72eeb76d0750ec079bf1fce76d232743",
+      "target_id": "s1-target-A04_chacha_wrong_answer"
+    }
+  },
+  "signature_hex": "c18a522967653878afaa19b53e9b941e863b953ac3cab05c7feb9c941b1f1ff37b9bb30e61b3a4087a2b41cc34fc735e186b81391ebc99eb74a97545d6a8f507"
+}

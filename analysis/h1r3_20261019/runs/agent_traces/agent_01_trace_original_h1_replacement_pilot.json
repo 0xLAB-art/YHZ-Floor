@@ -1,0 +1,72 @@
+{
+  "agent": "trace_agent_01_original_h1_replacement_pilot",
+  "scope": "original 72-session replacement pilot artifacts only",
+  "provider_calls": false,
+  "started_utc": "\"2026-10-19T15:22:51.515776+00:00\"",
+  "has_H1_FINAL_DISPOSITION": false,
+  "found_summaries": [
+    "sp2027/analysis/contract_sound_agent_replacement_20261018/AGENT_PILOT_RESULTS_SUMMARY.json",
+    "sp2027/analysis/contract_sound_agent_replacement_20261018/AGENT_PILOT_PAIRED_RESULTS.json"
+  ],
+  "found_replay_tables": [
+    "sp2027/analysis/contract_sound_replacement_readiness_20261018/PAIRED_C1_C2_REPLAY_TABLE.json",
+    "sp2027/analysis/contract_sound_replacement_readiness_20261018/C0_AUDIT.json"
+  ],
+  "paired_c1c2_rows": 24,
+  "c0_rows": 24,
+  "paired_counts": {
+    "c1_executed": 24,
+    "c2_executed": 22,
+    "c2_sandbox_rejected": 1,
+    "c2_execution_failed": 1,
+    "c1_reference_accepted": 24,
+    "c2_reference_accepted": 21
+  },
+  "c0_rejected": 24,
+  "c0_unexplained_acceptance": 0,
+  "failure_session_lines_in_disposition": [],
+  "critical_issues_traced": [
+    {
+      "type": "source_qualification_failure_not_crypto_failure",
+      "where": "H1_FINAL_DISPOSITION.md \u00a74",
+      "recorded_sessions": [
+        "replacement-005-8163a4307df9",
+        "replacement-013-d23672d9f3fe"
+      ],
+      "issue": "C2 losses were pre-execution sandbox/source-qualification rejections, not oracle/cryptographic rejections",
+      "note": "AST found unused hashlib import; programs never executed; thus C1-C2 contrast contaminated by interface/qualification failure"
+    },
+    {
+      "type": "contrast_not_representation_only",
+      "where": "72_EXPERIMENT_DESIGN_VALIDITY_AUDIT.md",
+      "issue": "C1 and C2 differed in prompt label, encoding family, prompt length, and decoding burden, not only representation",
+      "note": "Does not isolate representation as a single independent variable"
+    },
+    {
+      "type": "sampling_controls_not_documented",
+      "where": "72_EXPERIMENT_DESIGN_VALIDITY_AUDIT.md and repair protocol",
+      "issue": "Request rows recorded only model + max_tokens; temperature/top_p/seed/system/stop not captured",
+      "note": "Model stochasticity remains an explicit limitation"
+    },
+    {
+      "type": "c0_endpoint_mismatch",
+      "where": "72_EXPERIMENT_DESIGN_VALIDITY_AUDIT.md \u00a77 and repair protocol",
+      "issue": "C0 required UNDERDETERMINED abstention JSON, a different predicate/endpoint than C1/C2",
+      "note": "C0 outcomes cannot be read on the C1/C2 scale"
+    },
+    {
+      "type": "global_randomization_weak",
+      "where": "72_EXPERIMENT_DESIGN_VALIDITY_AUDIT.md and repair protocol",
+      "issue": "Randomization was only C1/C2 order within each seed pair; block order was ECDSA -> ChaCha20 -> C0",
+      "note": "No global randomization across the full schedule"
+    },
+    {
+      "type": "small_effective_sample_for_claimed_effect",
+      "where": "H1_FINAL_DISPOSITION.md \u00a78 and repair protocol \u00a710",
+      "issue": "With 24 pairs, power for a true 0.25 effect is materially limited under the relevant discordance scenarios",
+      "note": "A non-significant result is inconclusive, not equivalence"
+    }
+  ],
+  "stop_rule_applied": "No provider calls; trace-only from retained artifacts.",
+  "completed_utc": "\"2026-10-19T15:22:51.536297+00:00\""
+}

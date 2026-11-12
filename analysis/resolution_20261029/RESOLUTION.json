@@ -1,0 +1,120 @@
+{
+ "alpha": 0.05,
+ "baseline_p": 0.5,
+ "caveat": "MDE is the best case; at any baseline away from 0.5 the same n resolves less. Used to state what a design cannot resolve, never to convert a null into a positive.",
+ "method": "exact enumeration, two-sided Fisher, maximum-variance baseline (best case)",
+ "n_required": {
+  "10pp": 388,
+  "20pp": 93
+ },
+ "n_required_method": "standard normal approximation (pooled variance), per-arm n; no continuity correction; exact enumeration for these n is out of scope of this offline script",
+ "observed": [
+  {
+   "ci": [
+    [
+     0.187,
+     0.813
+    ],
+    [
+     0.348,
+     0.933
+    ]
+   ],
+   "claim": "H2 wrapper extension (accepted)",
+   "k": [
+    5,
+    7
+   ],
+   "mde_none": true,
+   "mde_pp": null,
+   "n_per_arm": 10,
+   "note": "registered direction reversal; null by design"
+  },
+  {
+   "ci": [
+    [
+     0.068,
+     0.932
+    ],
+    [
+     0.194,
+     0.994
+    ]
+   ],
+   "claim": "H2 frozen pairs (accepted)",
+   "k": [
+    2,
+    3
+   ],
+   "mde_none": true,
+   "mde_pp": null,
+   "n_per_arm": 4,
+   "note": "registered n>=4 pairs"
+  },
+  {
+   "ci": [
+    [
+     0.0,
+     0.369
+    ],
+    [
+     0.631,
+     1.0
+    ]
+   ],
+   "claim": "P010L2 withheld arm (accepted)",
+   "k": [
+    0,
+    8
+   ],
+   "mde_none": true,
+   "mde_pp": null,
+   "n_per_arm": 8,
+   "note": "informative: at the floor"
+  }
+ ],
+ "paired_exact": {
+  "min_one_way_discordant_p05": 6,
+  "observed": {
+   "P010L2": 8,
+   "P010L3": 8,
+   "P010N16": 10,
+   "P010P": 5
+  },
+  "p_at_floor": 0.03125,
+  "p_at_floor_minus_one": 0.0625
+ },
+ "power": 0.8,
+ "table": [
+  {
+   "max_power_at_p2_1": 0.063,
+   "mde_pp_at_p05_80power": null,
+   "n_per_arm": 4
+  },
+  {
+   "max_power_at_p2_1": 0.363,
+   "mde_pp_at_p05_80power": null,
+   "n_per_arm": 8
+  },
+  {
+   "max_power_at_p2_1": 0.623,
+   "mde_pp_at_p05_80power": null,
+   "n_per_arm": 10
+  },
+  {
+   "max_power_at_p2_1": 0.962,
+   "mde_pp_at_p05_80power": 0.46,
+   "n_per_arm": 16
+  },
+  {
+   "max_power_at_p2_1": 1.0,
+   "mde_pp_at_p05_80power": 0.35,
+   "n_per_arm": 32
+  },
+  {
+   "max_power_at_p2_1": 1.0,
+   "mde_pp_at_p05_80power": 0.25,
+   "n_per_arm": 64
+  }
+ ]
+}

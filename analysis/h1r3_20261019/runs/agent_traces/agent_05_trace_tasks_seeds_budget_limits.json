@@ -1,0 +1,90 @@
+{
+  "agent": "trace_agent_05_tasks_seeds_budget_limits",
+  "scope": "task/seed/budget/model-identity limits from retained results",
+  "provider_calls": false,
+  "started_utc": "\"2026-10-19T15:22:52.275738+00:00\"",
+  "sources_used": {
+    "scientific_results_report": true,
+    "evidence_package": true,
+    "coverage_audit": true,
+    "rq_evidence_map": true
+  },
+  "task_family_outcomes": {
+    "V4_frozen_cohort": "8/12 accepted total; RC4 0/3, ChaCha20 2/3, CBC 3/3, ECDSA 3/3",
+    "bounded_reproduction": "18/18 across RC4/ECDSA/ChaCha20 explicit-observation lanes",
+    "held_out_attempt4": "4/4 oracle accepted with integrity gate PASS and leak audit 0 hits",
+    "adaptive_xor": "8 queries and 39 queries accepted runs; no adaptive-necessity claim",
+    "composition": "1 accepted scaffolded chain; oracle_queries=1; not discovery",
+    "surrogate": "9,640-query success on reconstructed executed bytes; exact control 20,480 by construction",
+    "escrow_e5": "1/14 descriptive accepted; candidate-equals-commitment; not enforced acquisition"
+  },
+  "not_established": [
+    "any universal capability rate",
+    "cross-family generalization",
+    "causal feedback benefit",
+    "enforced secret acquisition / host isolation",
+    "immutable model identity beyond provider-attested label",
+    "independently recomputable V4 raw timings",
+    "external benchmark joins"
+  ],
+  "seed_and_scope_notes": [
+    {
+      "item": "V4 cohort",
+      "note": "12 sessions; 31 nested programs; 4 oracle failures retained; Wilson interval illustrative only"
+    },
+    {
+      "item": "Explicit-observation lanes",
+      "note": "18 distinct physical run IDs across family-stratified namespaces; no pooled rate"
+    },
+    {
+      "item": "2x2 information-contract lane",
+      "note": "n=4 per cell; one fixture family; one provider-attested model label; descriptive exact statistics"
+    },
+    {
+      "item": "Task difficulty",
+      "note": "ECDSA and ChaCha20 treated as calibration families; harder tasks with sufficiency witness flagged as needed for broader claims"
+    },
+    {
+      "item": "Model identity",
+      "note": "Hosted model weights are provider-attested labels only; independent immutable weight identity not available"
+    },
+    {
+      "item": "Budget/paid path",
+      "note": "Free route only in the reported completion work; paid fallback not authorized"
+    }
+  ],
+  "critical_issues_traced": [
+    {
+      "type": "calibration_families_not_generalization_evidence",
+      "issue": "Strongest success clusters are in relatively easy, well-known algebraic/controlled fixtures",
+      "impact": "Success there does not imply broad cryptographic-agent capability",
+      "status": "documented as limit"
+    },
+    {
+      "type": "no_pooled_estimate_anywhere",
+      "issue": "Denominators are per-contract and per-namespace; no merged rate",
+      "impact": "Any claim of an overall success rate would be unsupported",
+      "status": "enforced by admissibility rules"
+    },
+    {
+      "type": "provider_attested_model_only",
+      "issue": "Model identity is provider-attested, not independently verified",
+      "impact": "Cannot claim immutable model identity from these records",
+      "status": "documented as limit"
+    },
+    {
+      "type": "timing_not_recomputable_for_v4",
+      "issue": "V4 raw monotonic endpoint pairs not retained",
+      "impact": "Elapsed durations are recorded evidence only, not recomputable measurements",
+      "status": "documented as limit"
+    },
+    {
+      "type": "acquisition_claims_not_surviving",
+      "issue": "E5-style results show candidate-vs-commitment behavior only",
+      "impact": "No enforced-acquisition/host-isolation claim survives",
+      "status": "documented as weakened claim"
+    }
+  ],
+  "stop_rule_applied": "No provider calls; trace-only from retained reports, evidence package, coverage audit, and RQ map.",
+  "completed_utc": "\"2026-10-19T15:22:52.292243+00:00\""
+}

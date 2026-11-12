@@ -1,0 +1,39 @@
+{
+  "attempt_id": "e2a-H_BAD_EC_01",
+  "case_dir": "runs/20261020T065943Z_confirmatory/cases/H_BAD_EC_01",
+  "case_id": "H_BAD_EC_01",
+  "context": {
+    "attempt_id": "e2a-H_BAD_EC_01",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "execution_observation",
+    "role": "execution_observer",
+    "target_id": "ECDSA_Nonce_Reuse-seed-01"
+  },
+  "epoch": 1,
+  "producer": {
+    "case_id": "H_BAD_EC_01",
+    "producer_id": "e2a-scripted-producer-v1",
+    "producer_kind": "scripted",
+    "producer_nonce": "d3be9525940c823fbc070d5541c136b7bd8d6295728e65817247eea555c64a39"
+  },
+  "program_source_text": "\"\"\"\nACTS-Attack E2A scripted producer program.\n\"\"\"\n\nimport json\nimport sys\n\nN = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141\n\n\ndef inv(x, m):\n    return pow(x % m, -1, m)\n\n\ndef main():\n    with open(sys.argv[1], \"r\", encoding=\"utf-8\") as handle:\n        instance = json.load(handle)\n    sig1 = instance[\"signature_1\"]\n    sig2 = instance[\"signature_2\"]\n    r1 = int(sig1[\"r\"], 16)\n    z1 = int(sig1[\"z\"], 16)\n    z2 = int(sig2[\"z\"], 16)\n    s1 = int(sig1[\"s\"], 16)\n    s2 = int(sig2[\"s\"], 16)\n    k = ((z1 - z2) * inv((s1 - s2) % N, N)) % N\n    d = ((s1 * k - z1) * inv(r1, N)) % N\n    d = (d + 1) % N\n\n    print(json.dumps({\"d\": \"%064x\" % d, \"k\": \"%064x\" % k}, sort_keys=True))\n\n\nmain()\n",
+  "public_instance": {
+    "encoding": "json-hex-v1",
+    "public_key": [
+      "286a592fc9259c05137208d79725950ca3b591fcdc5ff482153ddefa1774a7eb",
+      "924636cff9e61ccd3be181df379a425ee366611f0339ae377c9be728538e8cea"
+    ],
+    "signature_1": {
+      "r": "367b2679871807d0a761e213a533d80d48ab7db5cc03cd2d4aedc90e0113bb3d",
+      "s": "2974c5f5bbe0d6637d2666f66d46aa4e68a6b40badfebe1f46484fe01c32b16c",
+      "z": "a5327cbd8fef280bddbe80766681b03694695bd6f6ae3b2205f7c8e190aea844"
+    },
+    "signature_2": {
+      "r": "367b2679871807d0a761e213a533d80d48ab7db5cc03cd2d4aedc90e0113bb3d",
+      "s": "c65a98ccb9a9670dfec5fc6ed7fcfc02fb3c2e7773418b727e52038d7dd0d820",
+      "z": "cd5af74c41c7c74dcfac0e9de30cd428ba11f9abe9fb7fe2df12d3989ea1bac5"
+    }
+  },
+  "target_id": "ECDSA_Nonce_Reuse-seed-01"
+}

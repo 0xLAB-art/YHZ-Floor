@@ -1,0 +1,72 @@
+{
+  "cases": [
+    {
+      "case": "valid",
+      "expected_integrity_valid": true,
+      "expected_schema_valid": true,
+      "integrity_valid": true,
+      "runtime_integrity_valid": true,
+      "schema_errors": [],
+      "schema_valid": true
+    },
+    {
+      "case": "missing_evidence",
+      "expected_integrity_valid": false,
+      "expected_schema_valid": false,
+      "integrity_valid": true,
+      "runtime_integrity_valid": false,
+      "schema_errors": [
+        "'evidence' is a required property"
+      ],
+      "schema_valid": false
+    },
+    {
+      "case": "invalid_identifier",
+      "expected_integrity_valid": true,
+      "expected_schema_valid": false,
+      "integrity_valid": true,
+      "runtime_integrity_valid": true,
+      "schema_errors": [
+        "'C9' is not one of ['C0', 'C1', 'C2', 'C3']"
+      ],
+      "schema_valid": false
+    },
+    {
+      "case": "mismatched_hash",
+      "expected_integrity_valid": false,
+      "expected_schema_valid": true,
+      "integrity_valid": false,
+      "runtime_integrity_valid": false,
+      "schema_errors": [],
+      "schema_valid": true
+    },
+    {
+      "case": "invalid_version_binding",
+      "expected_integrity_valid": false,
+      "expected_schema_valid": true,
+      "integrity_valid": true,
+      "runtime_integrity_valid": false,
+      "schema_errors": [],
+      "schema_valid": true
+    },
+    {
+      "case": "missing_boundary_kind",
+      "expected_integrity_valid": false,
+      "expected_schema_valid": true,
+      "integrity_valid": true,
+      "runtime_integrity_valid": false,
+      "schema_errors": [],
+      "schema_valid": true
+    },
+    {
+      "case": "stale_run_id",
+      "expected_integrity_valid": false,
+      "expected_schema_valid": true,
+      "integrity_valid": true,
+      "runtime_integrity_valid": false,
+      "schema_errors": [],
+      "schema_valid": true
+    }
+  ],
+  "schema_id": "acts-attack/contract-sound-exploitation-artifact/1"
+}

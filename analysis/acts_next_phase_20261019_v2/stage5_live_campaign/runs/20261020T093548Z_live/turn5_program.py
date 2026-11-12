@@ -1,0 +1,64 @@
+import http.client
+import json
+import sys
+
+HOST = "127.0.0.1"
+PORT = 32773
+
+def get_json(path, token=None):
+    conn = http.client.HTTPConnection(HOST, PORT)
+    headers = {}
+    if token:
+        headers["Cookie"] = f"session={token}"
+    conn.request("GET", path, headers=headers)
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    conn.close()
+    return resp.status, body
+
+def post_json(path, data, token=None):
+    conn = http.client.HTTPConnection(HOST, PORT)
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Cookie"] = f"session={token}"
+    conn.request("POST", path, json.dumps(data), headers)
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    conn.close()
+    return resp.status, body
+
+# Get session token
+status, body = get_json("/session")
+data = json.loads(body)
+token = data["token_hex"]
+print(f"Token: {token}", file=sys.stderr)
+
+# Try different endpoints WITH the session token
+for endpoint in ["/", "/secret", "/flag", "/data", "/admin", "/user"]:
+    status, body = get_json(endpoint, token)
+    print(f"GET {endpoint} with token -> {status}: {body}", file=sys.stderr)
+
+for endpoint in ["/secret", "/data", "/admin", "/user"]:
+    status, body = post_json(endpoint, {}, token)
+    print(f"POST {endpoint} with token -> {status}: {body}", file=sys.stderr)
+
+# Try manipulating the token
+token_bytes = bytes.fromhex(token)
+block1 = token_bytes[:16]
+block2 = token_bytes[16:]
+
+# Swap blocks
+swapped = (block2 + block1).hex()
+status, body = get_json("/secret", swapped)
+print(f"GET /secret swapped token -> {status}: {body}", file=sys.stderr)
+
+# Try just block 2
+status, body = get_json("/secret", block2.hex())
+print(f"GET /secret block2 only -> {status}: {body}", file=sys.stderr)
+
+# Try duplicated blocks
+status, body = get_json("/secret", (block1 + block1).hex())
+print(f"GET /secret block1+block1 -> {status}: {body}", file=sys.stderr)
+
+status, body = get_json("/secret", (block2 + block2).hex())
+print(f"GET /secret block2+block2 -> {status}: {body}", file=sys.stderr)

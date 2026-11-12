@@ -1,0 +1,32 @@
+{
+  "keystore_note": "The repository filesystem in this environment (fuseblk) reports every file as 0777 and does not honour chmod, so the vetted protected_signing loader refuses to read a key from the in-tree location.  The private keystore is therefore placed on a filesystem that does enforce 0600/0700.  Only the PUBLIC trust material lives in the repository.",
+  "note": "Each issuer key was generated with Ed25519PrivateKey.generate() at setup time and is stored 0600 inside a 0700 directory.  No key is derived from a public session id, task seed, or any other public constant.",
+  "private_keystore_outside_repository": true,
+  "private_keystore_root": "/tmp/acts_s1_keystore",
+  "public_bundle": "trust/public_bundle.json",
+  "public_bundle_sha256": "5c0dec5d9b82f9fede33db99bc765e5e64c79adc383e0bda8b45c1313d430f68",
+  "roles": {
+    "artifact_producer": {
+      "holder": "candidate producer (local scripted producer)",
+      "key_id": "ed25519-e2a288cfef0fdd9bc9371642",
+      "private_directory_mode": "0700",
+      "private_key_mode": "0600",
+      "private_key_path": "/tmp/acts_s1_keystore/artifact_producer/ed25519-e2a288cfef0fdd9bc9371642.json"
+    },
+    "execution_observer": {
+      "holder": "Stage 1 harness (executes the candidate)",
+      "key_id": "ed25519-9db076cd2140268153030d07",
+      "private_directory_mode": "0700",
+      "private_key_mode": "0600",
+      "private_key_path": "/tmp/acts_s1_keystore/execution_observer/ed25519-9db076cd2140268153030d07.json"
+    },
+    "reference_verifier": {
+      "holder": "Stage 1 harness (holds the private target state)",
+      "key_id": "ed25519-6182b592ccb8804bbada5420",
+      "private_directory_mode": "0700",
+      "private_key_mode": "0600",
+      "private_key_path": "/tmp/acts_s1_keystore/reference_verifier/ed25519-6182b592ccb8804bbada5420.json"
+    }
+  },
+  "schema": "acts-s1/key-custody/1"
+}

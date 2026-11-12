@@ -1,0 +1,156 @@
+{
+  "amendments": [
+    {
+      "cause": "first launch crashed after session 1 was recorded: console summary print referenced session['accepted_turn'] which exists only on accepted sessions (KeyError) \u2014 display bug only; session recording/aggregation unaffected",
+      "design_changes": "none \u2014 arms, prompts, budget, parser, oracle, seeds unchanged",
+      "fixes": [
+        "console print uses session.get()",
+        "provider_failure events and session rows now carry a sanitized exception detail (forensic only)",
+        "resume guard: (seed, arm) pairs already terminal in results.jsonl are skipped verbatim; no session is ever retried",
+        "final aggregation reads all recorded sessions from results.jsonl"
+      ],
+      "id": "A1",
+      "recorded": "2026-10-24T05:24:30Z",
+      "recorded_before": "resuming sessions after session 1; before any model content existed in this phase (session 1 failed provider-side pre-output)",
+      "runner_sha256": {
+        "after": "2eea8c9d4f44ef9d0ae4290cd7d071483ace98b6c2c2f2c4b9ce8038d2cffdfe",
+        "before": "b7572291623fa19b18687b8a6af22ad4092439f1f292f192e5469060e51114c9"
+      },
+      "session_1_disposition": "seed 61 / A_INTERACTIVE retained as PROVIDER_UNAVAILABLE (0 turns, 0 submissions, 1 provider failure); not retried, not replaced"
+    },
+    {
+      "cause": "ProviderClient appended /v1/messages unconditionally while APMIX_BASE_URL already ends with /v1, so every experiment call of launch attempt 1 requested https://api.apmix.ai/v1/v1/messages and received HTTP 404 pre-output. The AUTH_SMOKE probe passed because the probe script normalized the base URL correctly; the wire probe did not exercise the runner's exact provider-code path (the P010 preflight wire-probe pattern was not followed).",
+      "design_changes": "none \u2014 arms, prompts, budget, parser, oracle, seeds unchanged",
+      "fixes": [
+        "ProviderClient normalizes the base URL (strips a trailing /v1 before appending /v1/messages), matching the probe construction",
+        "a wire probe through the exact ProviderClient.call code path (16 tokens, AUTH_SMOKE classification, non-evidence) is now mandatory before the definitive run"
+      ],
+      "id": "A2",
+      "launch_attempt_1_disposition": "8 pre-output infrastructure failures (seeds 61-64 x both arms), all retained verbatim in sessions/launch_attempt_1_provider_failures.jsonl and in BUDGET_LEDGER.jsonl 0-token lines; results.jsonl reset for the definitive 8-session run; no model content existed; no task outcome was ever produced, so no task session is retried or replaced",
+      "recorded": "2026-10-24T05:29:22Z",
+      "recorded_before": "any model content in this phase (launch attempt 1 produced zero model content: all calls failed pre-output)",
+      "runner_sha256": {
+        "after": "ff0571c1b90cb4a8266b33f39900ef27c0482304b231d0b7d80074314ed526f8",
+        "before": "2eea8c9d4f44ef9d0ae4290cd7d071483ace98b6c2c2f2c4b9ce8038d2cffdfe"
+      }
+    }
+  ],
+  "auth_smoke": {
+    "classification": "AUTH_SMOKE, non-evidence",
+    "file": "provider_health/AUTH_SMOKE.json",
+    "result": "ok"
+  },
+  "design": {
+    "arm_axis_only_differs": true,
+    "arms": [
+      "A_INTERACTIVE",
+      "B_ONESHOT"
+    ],
+    "exec_timeout_s": 20,
+    "feedback": "fixed rejection feedback strings after turn 1, arm A only (hashes in prompt_feedback below)",
+    "fixture": "AES-CBC padding oracle, 15-byte plaintext + PKCS#7, per-session fresh key/IV (seed-derived, formulas in PREREGISTRATION.md \u00a73)",
+    "max_tokens": 3000,
+    "oracle_budget_queries": 4096,
+    "predicate": "exact match on plaintext hex (lowercased)",
+    "provider_timeout_s": 300,
+    "seeds": [
+      61,
+      62,
+      63,
+      64
+    ],
+    "session_order": [
+      [
+        "A_INTERACTIVE",
+        61
+      ],
+      [
+        "B_ONESHOT",
+        61
+      ],
+      [
+        "A_INTERACTIVE",
+        62
+      ],
+      [
+        "B_ONESHOT",
+        62
+      ],
+      [
+        "A_INTERACTIVE",
+        63
+      ],
+      [
+        "B_ONESHOT",
+        63
+      ],
+      [
+        "A_INTERACTIVE",
+        64
+      ],
+      [
+        "B_ONESHOT",
+        64
+      ]
+    ],
+    "sessions": 8,
+    "turn_limit": {
+      "A_INTERACTIVE": 2,
+      "B_ONESHOT": 1
+    }
+  },
+  "freeze_date": "2026-10-24",
+  "freeze_type": "PREREGISTRATION_FREEZE",
+  "frozen_before_first_experiment_model_call": true,
+  "frozen_files_sha256": {
+    "PREREGISTRATION.md": "44f0edcc8eac938e12a4b298deaa424720adac56411095175647c7e53377f88a",
+    "preflight/fixture_cbc.py": "f4a69e2dd0baec66da8374761ddc645fe4b81ea4655ef287e68b18424dacd60b",
+    "preflight/gate_output.json": "2ca257dda1f400fc5f42f6ff24a874032a16330b4ef8bf7ecd5cec9c6031165d",
+    "preflight/gate_solver.py": "d4e24d84af87096cfd2de6cd5c76d034488059d328ff087acd2800835cbf52c1",
+    "preflight/oracle_template.py": "d0acf1afdfdafa7e48bd3413a57841c318a0116803e75d0796f43bab123116e5",
+    "provider_health/AUTH_SMOKE.json": "7579722a2c6cac4ef6303cb8235502d47d574654ec1a8de8bf97c97b14c82db3",
+    "provider_health/auth_smoke_probe.py": "37cf835261894a335c87366b65ca7c40586334c3967abef81e99bd873ca49598",
+    "run_h2_cbc_agency.py": "ff0571c1b90cb4a8266b33f39900ef27c0482304b231d0b7d80074314ed526f8"
+  },
+  "gate": {
+    "output_sha256": "2ca257dda1f400fc5f42f6ff24a874032a16330b4ef8bf7ecd5cec9c6031165d",
+    "per_seed_queries": {
+      "61": 2067,
+      "62": 2048,
+      "63": 2238,
+      "64": 1842
+    },
+    "result": "PASS"
+  },
+  "per_seed_frozen_turn1_prompt": {
+    "61": {
+      "identical_across_arms": true,
+      "public_input_sha256": "1cc1a60510303933871f8cdcafa525c93828febfb140867d35fff3af6e6777d2",
+      "turn1_prompt_sha256": "a0364ea704470aefc318ebc33a69d21a951c30320b738bbd2d724bcde950a474"
+    },
+    "62": {
+      "identical_across_arms": true,
+      "public_input_sha256": "b847976606e87d9f7d6322d42976e234d3b5479d2e13e836ac9637e81b336a49",
+      "turn1_prompt_sha256": "0d421d5697683adabbd3304929a92e5509ec06a3a331176ef70651de58d7d77f"
+    },
+    "63": {
+      "identical_across_arms": true,
+      "public_input_sha256": "0824b5ac608b86d2859815c884575525371aca321ceea6eb8416edb1d2dfc3fd",
+      "turn1_prompt_sha256": "8f7afd4a77227d8172477bb40884541511a4f7adc947ee72cdbf8156ab87ad6d"
+    },
+    "64": {
+      "identical_across_arms": true,
+      "public_input_sha256": "7ddaba55636d8e21382f3cc2db8144725c87e9ddb61828835f7a9b248b18b8aa",
+      "turn1_prompt_sha256": "ba8f54fe457c03def86ec6ee5bc3664792fc73893cc521eea6a010f18178ba89"
+    }
+  },
+  "phase": "Phase 1 (H2: CBC agency/delegation) of REMAINING_EXPERIMENTS_PLAN_20261023.md",
+  "prompt_frozen_sha256": {
+    "feedback_exec_oracle": "3dd3c3017cfb42d228564d7b4c914774dd4f54adbe0dc5a6374079060a972a68",
+    "feedback_parse": "ae6c7c71b0aac25c1e3f5b6e29f8ec0e97ec96968dd3fb6d55abe9b1a07700ef",
+    "feedback_policy_template": "1e1d0b6568100b83694e06c1d36bf1b8805c739bb9978afbdec600098fb14de9",
+    "note": "PREREGISTRATION.md \u00a74 renders the template; the runner constant is authoritative",
+    "prompt_template": "f1822fbda92b0dceaa7962f5e6141a140c410e93d57b0e4f7d824618b7c1944f"
+  },
+  "protocol": "H2-CBC-AGENCY-20261023-v1"
+}

@@ -1,0 +1,30 @@
+P021 power cohort (96 CSPRNG instances, running) + P022 cross-label repair registered before first call
+
+P021-INFO-CONTRACT-2X2-AESGCM-CSPRNG-SEEDS-v1: 96 OS-CSPRNG instances
+(seeds_random_p021_20261102T182345Z.json, seeds_sha256 07a9e442..., disjoint
+from 104 prior seeds across 12 sources) x 4 cells = 384 sessions, AES-GCM @
+floor 4200, gpt-6-astra; registered primary = paired C1-vs-C4 one-directional
+replication; enters the Holm family as a pre-specified member. Launched only
+after the P018-P020 chain exited; one instrument-duplicate row from a
+double-launch accident is retained and will be flagged by the frozen analysis
+(disclosed, never deleted). Completion watcher schedule_p021.sh writes
+analysis_p021.txt + budget append.
+
+P022 (two arms, one shared seed receipt seeds_random_p022_20261102T183823Z.json,
+seeds_sha256 4c3f863f..., 24 instances run in BOTH arms for a paired
+cross-label comparison): arm a gpt-6.1-sol, arm b gpt-5.6-sol, 96 sessions
+each; repairs the P016 generality gap (whose 5.6-sol arm lost every
+withheld-arm session to provider failures). Arms chain after P021 via
+schedule_p022.sh (one key never carries two cohorts); per-arm paired primary +
+descriptive cross-arm instance agreement. Budget: ~USD 31 total projected,
+cumulative stays under the USD 200 hard stop.
+
+Security triage note: the Mimosa pre-commit gate flags intentional provider
+HTTP clients in frozen, hash-pinned instrument files (route_probe_*.py,
+provider_adapter_*.py, provider_client.py — SSRF class; run_amend2_regrade.py
+— path-traversal class). These are research harnesses whose endpoints are
+configured constants with no untrusted input; the flagged frozen files cannot
+be modified mid-cohort without breaking every registration's hash assertion.
+Normal-depth scan sealed before this commit:
+scan-2026-11-02T18-47-17.646Z-c3df7326bf49, seal sha256:72af1f436f69f0c1895b8
+4dd523013abbd974cc40b9b9e3137cf49cac5a4fcee.

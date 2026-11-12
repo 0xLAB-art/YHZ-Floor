@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acts-attack/contract-sound-exploitation-artifact/1",
+  "title": "Contract-Sound Cryptographic Exploitation Artifact",
+  "type": "object",
+  "required": [
+    "schema",
+    "attempt_id",
+    "task",
+    "condition",
+    "contract",
+    "target",
+    "agent_artifact",
+    "execution",
+    "verification",
+    "claims",
+    "evidence"
+  ],
+  "properties": {
+    "schema": {"const": "contract-sound-exploitation-artifact/1"},
+    "attempt_id": {"type": "string", "minLength": 1},
+    "task": {
+      "type": "object",
+      "required": ["task_id", "base_instance_id", "primitive"],
+      "properties": {
+        "task_id": {"type": "string"},
+        "base_instance_id": {"type": "string"},
+        "primitive": {"enum": ["ECDSA_Nonce_Reuse", "ChaCha20_Nonce_Repeat", "CBC_Padding_Oracle", "RC4_Keystream"]}
+      },
+      "additionalProperties": false
+    },
+    "condition": {
+      "type": "object",
+      "required": ["id", "representation_hash", "order_seed"],
+      "properties": {
+        "id": {"enum": ["C0", "C1", "C2", "C3"]},
+        "representation_hash": {"type": "string"},
+        "order_seed": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "contract": {
+      "type": "object",
+      "required": ["contract_hash", "provision_hash", "allowed_interface", "query_budget", "sufficiency_status"],
+      "properties": {
+        "contract_hash": {"type": "string"},
+        "provision_hash": {"type": "string"},
+        "allowed_interface": {"type": "array", "items": {"type": "string"}},
+        "query_budget": {"type": "object"},
+        "sufficiency_status": {"enum": ["constructively_sufficient", "provably_ambiguous", "interface_incomplete"]},
+        "recovery_witness_hash": {"type": ["string", "null"]},
+        "ambiguity_counterexample_hash": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "target": {
+      "type": "object",
+      "required": ["implementation_hash", "configuration_hash", "secret_seed_commitment"],
+      "properties": {
+        "implementation_hash": {"type": "string"},
+        "configuration_hash": {"type": "string"},
+        "secret_seed_commitment": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "agent_artifact": {
+      "type": "object",
+      "required": ["path", "sha256", "language", "authorship_record"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string"},
+        "language": {"type": "string"},
+        "authorship_record": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "execution": {
+      "type": "object",
+      "required": ["session_id", "executor_hash", "parser_hash", "environment_hash", "trace_hash"],
+      "properties": {
+        "session_id": {"type": "string"},
+        "executor_hash": {"type": "string"},
+        "parser_hash": {"type": "string"},
+        "environment_hash": {"type": "string"},
+        "trace_hash": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": ["raw_verdict", "reference_verdict", "validator_verdict", "target_effect"],
+      "properties": {
+        "raw_verdict": {"type": "string"},
+        "reference_verdict": {"type": "string"},
+        "validator_verdict": {"type": "string"},
+        "target_effect": {"type": "string"},
+        "validation_overhead_ms": {"type": ["number", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "claims": {
+      "type": "object",
+      "required": ["artifact_authorship", "execution_identity", "target_effect", "reference_oracle_acceptance", "boundary_enforcement", "attribution"],
+      "properties": {
+        "artifact_authorship": {"type": "string"},
+        "execution_identity": {"type": "string"},
+        "target_effect": {"type": "string"},
+        "reference_oracle_acceptance": {"type": "string"},
+        "boundary_enforcement": {"type": "string"},
+        "attribution": {"type": "string"},
+        "exclusive_acquisition": {"const": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE"},
+        "immutable_hosted_model_identity": {"const": "NOT_ESTABLISHED_BY_THIS_CERTIFICATE"}
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "path", "sha256"],
+        "properties": {
+          "kind": {"type": "string"},
+          "path": {"type": "string"},
+          "sha256": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

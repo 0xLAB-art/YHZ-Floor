@@ -1,0 +1,17 @@
+# P020-INFO-CONTRACT-2X2-GCMSIV-CSPRNG-SEEDS-v1
+# fixture: AES-GCM-SIV (misuse-resistant), floor 4200, label gpt-6-astra
+# instances: 8 drawn from seeds_random_p020_20261102T1057Z.json (seeds_sha256 c660f63be7a4a50ac0278ec8a543cf6a02b8f1850e383fe5391f58a3c3ca0e48)
+
+cell  accepted/evaluable  wilson95            drops
+C1     0/3              (0.0, 0.5615)        5
+C2     0/7              (0.0, 0.3543)        1
+C3     0/1              (0.0, 0.7935)        7
+C4     0/5              (0.0, 0.4345)        3
+
+paired C1-vs-C4: 0/0 over 2 evaluable instance pairs, exact binomial two-sided p=None
+premise marginal: 0/4 vs 0/12, Fisher two-sided p=1.0
+
+negative control: accepted sessions = 0 (predicted 0). consistent
+  a misuse-resistant AEAD must not admit the P014 keystream attack; any acceptance means the fixture or harness is wrong.
+
+No rate is pooled across cohorts; instances are the unit of analysis.

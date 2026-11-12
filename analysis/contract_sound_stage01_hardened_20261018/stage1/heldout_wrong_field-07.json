@@ -1,0 +1,32 @@
+{
+  "case_id": "wrong_field-07",
+  "defect_family": "wrong_field",
+  "label_disagreement": true,
+  "primitive": "ECDSA_Nonce_Reuse",
+  "public_forbidden_fields": false,
+  "reference": {
+    "certificate_errors": [
+      "hash:target_effect",
+      "target-effect-binding"
+    ],
+    "certificate_integrity": false,
+    "crypto_details": {
+      "public_key_matches": true,
+      "recovered_d_matches": true,
+      "recovered_k_matches": true,
+      "repeated_r": true,
+      "signatures_verify": true
+    },
+    "cryptographic_predicate": true,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "reference_overhead_ms": 133.2489769847598,
+  "split": "heldout",
+  "stored_label": "ACCEPTED",
+  "validator": {
+    "decision": "REJECT",
+    "reason": "hash:target_effect"
+  },
+  "validator_overhead_ms": 50.31918900203891
+}

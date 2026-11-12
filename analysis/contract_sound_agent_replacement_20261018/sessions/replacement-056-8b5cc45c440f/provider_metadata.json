@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://api.apmix.ai/v1/messages",
+  "finish_reason": "end_turn",
+  "http_status": 200,
+  "max_tokens": 1800,
+  "model_requested": "claude-sonnet-4-6-free",
+  "output_sha256": "28b8a70dfce8aecbc395a5b12cf954e6c55bc2f0a277694c80a1d7654da8fed0",
+  "output_text": "```python\nimport sys\nimport json\n\nwith open(sys.argv[1]) as f:\n    data = json.load(f)\n\nprint(json.dumps({\n    \"status\": \"UNDERDETERMINED\",\n    \"reason\": \"ECDSA nonce reuse requires two signatures; only one signature provided\"\n}))\n```",
+  "prompt_sha256": "6b76257e4d1ba05fdba59b1ee53a970646bec7007c3331f3a455bdc0835821fd",
+  "provider_model": "claude-sonnet-4-6-free",
+  "provider_object": null,
+  "request_started": 1792341866.448037,
+  "response_bytes": 551,
+  "response_finished": 1792341872.0513616,
+  "response_headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "x-apmix-request-id, x-apmix-model, x-apmix-plan, x-apmix-key-limit, x-apmix-key-remaining, x-apmix-allowance, x-apmix-used, x-apmix-remaining, x-apmix-topup, x-apmix-balance, x-apmix-weighted-tokens, retry-after",
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 16:44:31 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "via": "1.1 Caddy",
+    "x-apmix-allowance": "3000000",
+    "x-apmix-model": "claude-sonnet-4-6-free",
+    "x-apmix-plan": "free",
+    "x-apmix-remaining": "2553825",
+    "x-apmix-request-id": "req_5c5b2e3a7fb44a17bf22cfef",
+    "x-apmix-topup": "0",
+    "x-apmix-used": "446175",
+    "x-apmix-weighted-tokens": "365",
+    "x-content-type-options": "nosniff"
+  },
+  "response_sha256": "c38588d373a2a30ab50a42eea143a47a0842df99ee267c9ab3d232ad86d25cfb",
+  "usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 288,
+    "output_tokens": 77
+  }
+}

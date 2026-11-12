@@ -1,0 +1,55 @@
+{
+  "container_id": "a0f228642f74",
+  "decisions": {
+    "completion": {
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution"
+    },
+    "output": {
+      "decision": "REJECT",
+      "reason": "candidate-output-substitution"
+    }
+  },
+  "freeze_sha256": "2d7fc8de9fd5b56cc249fddd4e2694efb5f962903f5662d69ac544f5026989ed",
+  "image": "crypto_misuse_unauthenticated:v2",
+  "observation": {
+    "execution_status": "EXECUTION_FAILED",
+    "parse_status": "EMPTY",
+    "parsed_candidate": null,
+    "returncode": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "oracle_verdict": {},
+  "port": "32769",
+  "preflight": {
+    "checked_files": 37,
+    "errors": [],
+    "passed": true
+  },
+  "provider": {
+    "endpoint": "https://api.apmix.ai",
+    "http_status": 200,
+    "response_sha256": "8e8c84abd5934ed60e1414b64662fac7c165878e06c446c296c76bf41bd51d6d",
+    "route": "claude-sonnet-4-6-free",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 310,
+      "output_tokens": 390
+    }
+  },
+  "reference": {
+    "crypto_details": {
+      "parse_status": "EMPTY"
+    },
+    "crypto_ok": false,
+    "status": "STDOUT_UNPARSEABLE",
+    "verdict": "REJECTED"
+  },
+  "run_dir": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage5_live_campaign/runs/20261020T092928Z_live",
+  "schema": "acts-stage5-live-campaign/1",
+  "screen": {
+    "accepted": true,
+    "reason": "syntax-and-boundary-pass"
+  }
+}

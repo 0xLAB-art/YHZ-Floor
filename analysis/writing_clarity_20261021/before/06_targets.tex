@@ -1,0 +1,73 @@
+\section{When Recovery Reaches a Target Effect}
+\label{sec:targetsres}
+The AES-CTR chain connects recovery to payload release because its final
+predicate checks that release. Protocol tasks require an analogous final
+check: producing valid bytes alone does not establish a completed downgrade.
+To complete RQ2, C2b varies server policy with the same client bytes, while
+wire-editing records test message validity. The remaining recorded arms
+provide configuration context under their own predicates and denominators.
+\subsection{Policy Matrix and Negotiation Census}\label{sec:c2b}
+The policy matrix runs 9 cells $\times$ 5 handshakes $=$ 45 (EXP-022, V
+tier). Every verdict is unanimous and matches the expected outcome: a
+classical-only client against an allow-list server completes classical 5/5;
+against a require-hybrid server it is rejected 5/5 (alert 40, no Finished);
+hybrid-capable controls complete 5/5; classical servers reject hybrid-only
+clients 5/5. The causal contrast is allow vs.\ require with the same client
+bytes, differing only in the server \texttt{-groups} list. An exploratory
+order check (classical-first client against an allow server) negotiates
+X25519 5/5, showing that client offer order governs; this is descriptive only.
+Environment: OpenSSL 3.0.13 + liboqs 0.15 + oqsprovider 0.11, Ubuntu 24.04.4,
+i7-9850H, taskset-pinned; 90 trace files. The claim is local policy
+enforcement, not arbitrary on-path downgrade.
+The C3 census runs 10 TLS-policy sessions and 10 SSH weak-algorithm sessions.
+TLS: 4 accepted, 4 tool-failure, 2 oracle-failure. SSH: 4 accepted, 2
+tool-failure, 3 oracle-failure, 1 harness-error, taken from individual run
+records rather than an older TLS secondary summary. Predicates check
+task-specific negotiation claims under reserved target state; they do not
+establish arbitrary on-path downgrade, and the two censuses are not pooled
+with each other or with C2b. Earlier C2 records (4 local hybrid-group
+configurations) lack a per-run model-generation chain. C2, C2b, C2-T1, and C3
+distinguish four things: a negotiable policy path, verified policy
+enforcement, syntactic message editing, and agent-executed negotiation.
+\subsection{Wire-Format Editing and a Second Toolchain}\label{sec:wire}
+Three wire-format-valid TLS group edits (2-byte replacement
+\texttt{0x2F39}$\to$\texttt{0x001D} plus key-share removal) complete in
+0.903713/1.144359/0.999399\,s with per-operation times 9/12/32\,$\mu$s
+(V tier, partial: wire-valid only). All three have
+\texttt{r2\_verified=false} and no completed post-edit handshake transcript:
+producing an edited message is not a verified end-to-end downgrade. These
+records are never merged with plaintext or scalar recovery.
+An OpenHands+GPT-4o closed-model replication with radare2 and E2B completes
+3/3 wire-format-valid edits (0.90/1.00/1.14\,s; per-operation 9--32\,$\mu$s;
+8 tool calls; ClientHello 1{,}349$\to$159 bytes; the same 2-byte group
+replacement and key-share removal as C2-T1). All three carry
+\texttt{r2\_verified=false} and \texttt{wire\_format\_valid=true}; the
+record's own \texttt{tte\_ratio} of 0.08 is an in-file parity claim that we do
+not validate. This is a bounded toolchain-diversity replication on both sides
+of the same byte sequence, not an independent attack.
+\subsection{Configurations, Ablation, and the Initial Campaign}\label{sec:c2}
+Four testable OpenSSL 3.5.4 hybrid configurations (X25519+ML-KEM-768,
+SecP256r1+ML-KEM-768, SecP384r1+ML-KEM-1024, and a cross-curve
+SecP384r1MLKEM1024/P-384 server against a P-256 client) each complete in
+0.020--0.024\,s (mean 0.022\,s TTE$_{OP}$, 28 LoC, 6 bytes per handshake,
+ASR 4/4, R tier). X448MLKEM1024 is not a TLS group and HQC-128 was
+unavailable; the generalization is bounded to ``all four testable
+configurations of OpenSSL 3.5.4.''
+A nine-run prompt ablation (direct / chain-of-thought / role) yields ASR 9/9
+with operation medians $2.1\times10^{-5}$ / $1.2\times10^{-5}$ /
+$1.1\times10^{-5}$\,s and LoC 45/72/58. The direct-prompt mean
+($2.3\times10^{-4}$\,s) is inflated by a cold-start outlier
+($6.7\times10^{-4}$\,s); the median is the reported statistic. Prompt
+framing changes tool-call counts and code size while the success label
+remains the same.
+The initial campaign comprises 11 primary runs and 11 phase-4 replay runs
+(R tier). Recorded execution times vary across the target mechanisms: the
+hybrid-TLS downgrade completes in 0.118--0.122\,s and the binary fallback in
+36.9--38.2\,s, while cryptanalytic runs (DES weak-key, RSA-1024) complete in
+0.39--0.41\,s and 200.0\,s respectively; the proto/deploy measurement median
+is 18.5\,s and the cryptanalytic median 0.41\,s. The DES
+brute-force run is a feasibility estimate ($>$1e16\,s, tier E), not an
+execution. Sweet32 physical runs take 274.88/271.44\,s. A descriptive Spearman
+$\rho=-0.81$ ($n{=}6$) is retained but its exact two-sided $p\approx0.12$ does
+not support a rank claim. The supplement's replay log gives the phase-4 and
+extended-target medians and the per-run operation times.

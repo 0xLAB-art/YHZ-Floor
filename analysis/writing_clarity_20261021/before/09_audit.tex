@@ -1,0 +1,74 @@
+\subsection{Public Evidence and Reconstruction}
+\label{sec:audit}
+E5 illustrates why a candidate match can leave its history unresolved.
+The six-release audit asks the complementary question of whether public
+artifacts support reconstruction of a published agent outcome. It applies a
+predeclared nine-field rubric to six public releases, yielding
+$6\times9=54$ release--field assessments (A tier); the supplement retains
+the source-linked method, dispositions, and mechanism examples.
+
+No release satisfies all nine fields (0/6): the retained public material does
+not bind implementation, configuration, task, immutable environment, execution
+identity, and result for one end-to-end success. The 54 field-level cells carry graded rather than uniformly absent
+evidence, with the per-cell dispositions in the supplement.
+The published-outcome field alone blocks the all-nine conjunction;
+Table~\ref{tab:audit-fields} therefore reports each field separately.
+Removing it still leaves 0/6 satisfying all eight remaining fields; this
+sensitivity check does not validate the rubric or make every field
+necessary for every claim. Clock and cost evidence support timing and resource
+claims; weakness and discovery fields support mechanism and autonomy claims.
+They are not prerequisites for a candidate-correctness claim. The all-nine
+conjunction addresses complete historical reconstruction only, and the finding
+concerns reconstructability of the published evidence rather than correctness
+of the audited systems. The audit remains separate from V4, E5, and the
+executed attack families.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Release-audit field profiles at the inspected snapshots. Y/P/N are
+yes/partial/no under the frozen evidence rules, not quality scores.}
+\label{tab:audit-fields}
+\begin{tabularx}{\columnwidth}{@{}Y c c c@{}}
+\toprule
+\tablehead Field and supported claim & Y & P & N\\
+\midrule
+Clock boundary / elapsed time & 1 & 3 & 2\\
+Oracle isolation / grading authority & 0 & 4 & 2\\
+Failure retention / outcome denominator & 0 & 1 & 5\\
+Ordered traces / execution sequence & 0 & 1 & 5\\
+Hash pinning / artifact identity & 0 & 1 & 5\\
+Weakness attribution / mechanism & 0 & 2 & 4\\
+Discovery--execution split / autonomy & 5 & 1 & 0\\
+Query accounting / resource cost & 2 & 4 & 0\\
+Published-outcome probe / reconstruction & 0 & 1 & 5\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Attribution Policy and Tests}\label{sec:attribution-contract}
+The audit concerns available records; RQ3 additionally requires testing what
+records justify. The policy separates authenticity from consistency: a signed
+record must come from an authorized role, and its contents must agree with
+the other records for the requested claim. An observer-signed record
+covers the exact executed bytes and captured stdout; a reference-signed record
+recomputes the task predicate from private target state against that stdout and
+names the observer record. Attribution requires agreement of the declared
+digests, matching identity fields, authorized observer and reference roles, and
+the applicable replay policy; the claimant's own \texttt{claims} block never
+influences the decision. Trust assumptions concern the observer, reference
+verifier, and role policy.
+
+Whether a non-zero exit may accompany a predicate-satisfying output is a
+declared policy choice, and two readings were fixed before evaluation. Across
+four corpora, the property check evaluates 1{,}407 mutants under each reading,
+for 11{,}256 evaluations without a soundness violation: bounded mechanized
+testing, not a formal proof. The live-target and
+loopback-ingress exercises test the same rule against fabricated claims; the
+supplement gives their controls and outcomes.
+
+The contract uses existing provenance mechanisms to express the policy: a
+configured in-toto inspection reproduces 21/22 decisions, reaching 22/22 with a
+shared replay ledger, while the SLSA arm stops at provenance acquisition and is
+not comparable. These results support an explicit claim policy and clarify its
+configuration requirements; they do not establish superiority over provenance
+frameworks.

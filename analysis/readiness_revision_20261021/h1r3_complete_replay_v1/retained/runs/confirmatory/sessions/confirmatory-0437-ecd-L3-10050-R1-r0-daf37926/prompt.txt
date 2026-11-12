@@ -1,0 +1,105 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"d": "64 lowercase hex characters", "k": "64 lowercase hex characters"}
+
+Instance (JSON):
+{
+  "signatures": [
+    {
+      "r": "f14b1e75c24a2c7985a370277d19598f342b5979be549c1505fdd7ffb8809a08",
+      "s": "f59831ce8c2220f33975a81fc9fa1b09c1fcdf5d12ba9ca33d1d39bac7dadd57",
+      "z": "edd2183bc4e5e3b3765760790d38a86c22752509d444c406600658624fd36596"
+    },
+    {
+      "r": "d6c23c91254303a0655520c92ae8504521d74404bc759e040b46560362c0dfd5",
+      "s": "234b72e3cd672290fc861ff48f83ff9f17e89a992bc99eb4d0e3a7d2c6494a3a",
+      "z": "65721704392afa4180738db8cf1ddf2f7adc40ae650dc0d373492c9990cd3702"
+    },
+    {
+      "r": "6c0469ae8bad24dba945a5ba48d41b1bf0f9001ad321d09dc4c7827ec74a2d3e",
+      "s": "09de57f7de87a1dcd440ab43561077381ea2740d49a59b3c1908aa632b42144a",
+      "z": "914035b9609c94cd7c4da257d77d2f7778bf788ca12e43bfaadde0582432cd7c"
+    },
+    {
+      "r": "cb610382a497102c8eb3fcec4c347be82be63da307c4de6ad275db7e80492c3c",
+      "s": "d3cb378479a325403e0b811329fccc4e05a4c27de2857a3f89626352ef0c6e3d",
+      "z": "47b38578bdb5ed82a1ca7bc5a4ee6b0cfd0c73964653095f155fa4dbdea00326"
+    },
+    {
+      "r": "4bc6eb9ddf7d6807fd3de34a61e80f4ac0412fc37e8dc625954c4e4aa1872799",
+      "s": "898ce35b1daa6575615a42f6059ded2ad3bb0d207f4a0f60b0b85245ccedbf59",
+      "z": "70d70d11213161c8cb7cda2dc4fdfc7dddb83b1a9a5bce1b88e7c9584dbc51d2"
+    },
+    {
+      "r": "d987b4aa0cf9ca967cfaffb886acbeacc3122a854810b45fc8d62acff90c4a45",
+      "s": "56a7e7a0da7c44ab196a16cde62ef310ddc2b9428f31dce9d49dfff79e686671",
+      "z": "e06cc9316f667bb4e3331227c9f5ef0dceb7c1e9b52be8bd30c313120a90330a"
+    },
+    {
+      "r": "f734b0e0e5b266dc87b5b2e6785007b482ecbf86ae0274cbe19ec2d51f9126d9",
+      "s": "79c57033bc8ba61d2e001b55ea401828894b71180ee99984b823feb0955455dc",
+      "z": "fd5dc1a2ed3443e1f8a31f9d76afc3c9536ef9f0bd27ca97b824a082bcd7f2a7"
+    },
+    {
+      "r": "7efc04a27d4ee79cf600424b10f4445cfa1a2a465a8feb567b744ca80bca8404",
+      "s": "e83146684fe0adc4fb2cb422107703d00a8ab099f1426d873e710db743bb5f03",
+      "z": "101cc9525c5398a4d429dc6c798292c51dff5735f4ce7dd5d3a08a4ea94b7325"
+    },
+    {
+      "r": "830aea04f6e59817358acc4e40851fac7b68cf6059602f9b6a6775aa59393317",
+      "s": "e5e579b0827c59f9ec407a0a766f3e57955bf2be179d07eded818d5d7dc8f10c",
+      "z": "cc0eaa14f3f83ca0f83cf01867aba244dcc9855a14eb74c6482a3b83bc98cc81"
+    },
+    {
+      "r": "da3b5cdcfa2911530886aa5f697622d9fd62dd035c2060783e2d631d54804512",
+      "s": "bc56e1d7d67f237344657fad72ce565fc282d229454a35f3332ffdd82c313b5e",
+      "z": "7ae3ce8c638415be20e8fcea564c28c921bb8544c0451541ea38fbe08b3b0739"
+    },
+    {
+      "r": "c25008c8837cca316ad7c5cd34b5def8b800663031ff1b65990b3221c9eac001",
+      "s": "c75ea991f380d2425fc0d36d19401021aa803d12ca42d84f1e1f11705183891d",
+      "z": "55c4fbfc9a1bd0e17846a620e2d8e028d68d756689ba05aa1da356338a4c51b0"
+    },
+    {
+      "r": "d16904a424322e9336982896a8d140f96fe4c3763de38c6cede83f5c8c8769ba",
+      "s": "37309da5459553f71ad1518b0fd440d0e1963def405966e5cfd446e26efe57c1",
+      "z": "fd7e07d1bf204d541ee33ff66467d21e401c78edba5927926d757263ce359c70"
+    },
+    {
+      "r": "baba72f01a35cfca4b93c2c69a67a0c6d83ada5fa3650335eeb6128f796208dc",
+      "s": "1a5c9d2c9ce23d3a43dc2d07a6b761a646e9cbb870ca51271a6f7795e0c0ed7f",
+      "z": "7c4558ed0072fe9f35007a67a1c737609d29dbf97744eed9b80a2fc01069bb22"
+    },
+    {
+      "r": "e36ed1c517f85a6ea3f7d32f0fc8ac6aa210eff55ea341c651018b21e384ffc6",
+      "s": "d505ae4803553db78743425413fdca346ce5d4c0972e8fc3f98a0a520042f775",
+      "z": "c60a76f272f1a9159aada108d039c82633434f9d9b71e2d02f71378db34b34e7"
+    },
+    {
+      "r": "45805435dd504c5f65c349ce6b8bb55cdb5bb237f7e5810da4043e208e900664",
+      "s": "f3f213260bcff4db93e51c40577e9f10431a88c2834c05b96ddf036b542679a2",
+      "z": "425dc3e218025329cbfc98b31d18a18154bdfe0db6c26fa47a352a339a178326"
+    },
+    {
+      "r": "da3b5cdcfa2911530886aa5f697622d9fd62dd035c2060783e2d631d54804512",
+      "s": "0e7b7fb56df876afecd155840d119af3f09e10ddbdc5f45219a15f9e7ae8fb90",
+      "z": "dd7b412ac9b6168b9776880b07b5403efaed236e0c6a44ddda37056f44e7ce5a"
+    }
+  ],
+  "encoding": "hex-v1",
+  "public_key": {
+    "x": "2d030e7d8802f190ddb34473a94fbfdc5a32b8156a3a3084ed167439fb197016",
+    "y": "d8d17f25e90300694d8e685ea5fea731f84d42439e4e2949550a8e5c4e12dee6"
+  }
+}

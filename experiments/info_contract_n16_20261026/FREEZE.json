@@ -1,0 +1,28 @@
+{
+ "schema": "infoc-n16-freeze/1",
+ "namespace": "info_contract_n16_20261026",
+ "authorization": "REVISION_NOTES_20261026.md 'Still open' item 1: increase per-cell n for the 2x2 cohorts (headline rests on 5 and 8 discordant pairs)",
+ "open_weight_decision": "declined by decision — this project has never executed a local/open-weight model; every cohort in its record ran through an API provider route; attestation gap stays disclosed in paper limits (REVISION_NOTES_20261026.md 'Still open' item 2 NOT executed)",
+ "design": "ChaCha20 2x2, cells C1-C4 identical slots, 16 fresh seeds 121-136, 64 sessions, frozen runner imported byte-for-byte, primary label claude-sonnet-4-6-free via api.apmix.ai",
+ "frozen_runner": {
+  "path": "sp2027/research_execution/run_info_contract_2x2_chacha20.py",
+  "sha256": "a08eab6f4be2401aacf1b39a47ba6960373164dcc57640d3672d8c36583ee198"
+ },
+ "files": {
+  "PREREGISTRATION.md": "5a3d48648dce564411da8bc99b7a7d00a0ac14de6a020ebbe0932f6a519ba96b",
+  "run_n16_chacha20.py": "147ae1447edfd703925803005462dbba901e402be21fa8007c1a13ed7230c281",
+  "auth_smoke.py": "9d68cab6c3a54a4c95eafe8487053ede427aa1caf6e4a0ee56ba06c1ba09c423"
+ },
+ "provider_probe": {
+  "kind": "AUTH_SMOKE",
+  "tokens": "13 in / 4 out",
+  "result": "OK end_turn",
+  "attest": "200, provider_model_ids [claude-sonnet-4-6-free]",
+  "evidence": false
+ },
+ "rc4_fixture": "NOT re-run (P011 saturated 16/16; no detectable effect possible; disclosed design decision)",
+ "second_label_cohort": "NOT re-run (P010L2 exists at n=8; its n-increase is separate registered future work)",
+ "provider_calls_experiment": 0,
+ "cost_ceiling_usd": 5.0,
+ "freeze_note": "written after AUTH_SMOKE health probe, before any experiment call"
+}

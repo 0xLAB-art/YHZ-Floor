@@ -1,0 +1,74 @@
+{
+  "/v1/models": {
+    "body": {
+      "data": [
+        {
+          "context_window": 200000,
+          "created": 0,
+          "display_name": "Claude Sonnet 4.6 Free",
+          "id": "claude-sonnet-4-6-free",
+          "multiplier": 1,
+          "object": "model",
+          "owned_by": "claude",
+          "plan": "free"
+        }
+      ],
+      "object": "list"
+    },
+    "headers": {},
+    "status": 200
+  },
+  "/v1/usage": {
+    "body": {
+      "allowance": 3000000,
+      "key": {
+        "name": "ACTS",
+        "remaining": null,
+        "usage_limit": null,
+        "used": 0
+      },
+      "limits": {
+        "daily": null,
+        "daily_used": 16542,
+        "weekly": null,
+        "weekly_used": 654815
+      },
+      "object": "usage",
+      "plan": "free",
+      "remaining": 2621405,
+      "resets_at": null,
+      "topup_remaining": 0,
+      "used": 378595
+    },
+    "headers": {},
+    "status": 200
+  },
+  "automatic_retries": 0,
+  "decision": "PASS",
+  "endpoint": "https://api.apmix.ai",
+  "fallback_allowed": false,
+  "key_sha256_prefix": "18ada46714d0fb98",
+  "message_check": {
+    "content": [
+      {
+        "text": "HEALTH_OK",
+        "type": "text"
+      }
+    ],
+    "elapsed_s": 3.488,
+    "provider_model": "claude-sonnet-4-6-free",
+    "response_bytes": 305,
+    "response_sha256": "7af02131a52a36234b35b2c5963745a529b1d977ecd836efc706277b00e6b126",
+    "status": 200,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 13,
+      "output_tokens": 4
+    }
+  },
+  "model": "claude-sonnet-4-6-free",
+  "pilot_sessions_counted": 0,
+  "timestamp_utc": "2026-10-18T15:50:23Z"
+}

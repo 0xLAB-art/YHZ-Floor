@@ -1,0 +1,106 @@
+{
+  "mission_target": "improve the results of the experiments that are currently weak/defective",
+  "current_status": "tracing complete; no rerun executed yet in this turn; no provider calls made",
+  "principle": "improvement only counts if a specific broken claim is repaired under a fixed protocol and verified on retained or freshly generated evidence",
+  "forbidden": [
+    "pooling incomparable cohorts",
+    "renaming old failures as successes",
+    "silent seed/outcome selection",
+    "provider calls without explicit in-session authorization",
+    "claiming novelty or better results without a repaired protocol and verified evidence",
+    "changing multiple confounds at once",
+    "using old results as if they were newly repaired",
+    "post-hoc rescuing a failed contrast by expanding it after seeing outcomes"
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "name": "select one defected experiment to improve",
+      "decision_needed": [
+        "which experiment is the priority",
+        "which specific result/claim is too weak right now",
+        "what would count as a genuine improvement for that claim"
+      ],
+      "candidate_targets_from_record": [
+        {
+          "experiment": "Original 72-session H1 replacement pilot (C1 vs C2)",
+          "why_defective": "contrast was not representation-only; C2 failures were pre-execution source-qualification failures; sampling controls under-documented; C0 used different endpoint; weak randomization",
+          "current_status_in_record": "locked NOT SUPPORTED; bounded null/inconclusive"
+        },
+        {
+          "experiment": "Surrogate conversion attempt-3",
+          "why_defective": "executed candidate bytes and archived candidate file diverged; risk of promoting wrong artifact",
+          "current_status_in_record": "resolved via reconstruction + replay + live grading; archived file documented as post-run replacement"
+        },
+        {
+          "experiment": "XOR endpoint in H1 V2 instrument",
+          "why_defective": "apparent zero-capability endpoint traced to scorer/contract defect",
+          "current_status_in_record": "characterized as evaluator-contract defect; controlled; not repaired in place"
+        },
+        {
+          "experiment": "Corrected R0/R1 72-session design",
+          "why_defective": "design repaired on paper, but not yet executed against a provider; blocked pending gates",
+          "current_status_in_record": "design + deterministic gates only; no provider execution"
+        },
+        {
+          "experiment": "HEB-1 evaluator-boundary novelty proposal",
+          "why_defective": "proposal only; no completed experiment; no validated novelty result; open gates",
+          "current_status_in_record": "proposal/design stage; blocked pending offline gates"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "freeze a corrected protocol for the selected experiment",
+      "required_elements": [
+        "one clearly stated scientific question",
+        "one clearly stated estimand",
+        "one clearly stated success/failure classification",
+        "exact fixed elements: task, seeds, interface, parser, oracle, budget, executor",
+        "exact changed element(s) and why they are the only changed element(s)",
+        "denominator and exclusion rules",
+        "preregistered falsifiers or negative controls where applicable",
+        "what improvement means numerically or evidentially"
+      ],
+      "do_not_allow": [
+        "changing multiple confounds at once",
+        "using old results as if they were newly repaired",
+        "rescuing a failed contrast by expanding it after seeing outcomes"
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "prepare controlled rerun/repair artifacts",
+      "preferred_first_moves": [
+        "offline deterministic repair/gates where possible",
+        "replay/reconstruction checks for artifact-identity problems",
+        "control experiments that isolate whether a result was instrument/scorer/interface-contaminated",
+        "held-out or negative controls where the claim requires them"
+      ],
+      "if_provider_needed": [
+        "use one clearly authorized route only",
+        "record complete request/response metadata",
+        "record failures by stage",
+        "do not retry/reseed/adaptively stop without an explicit preregistered rule",
+        "stop if the design is still invalid"
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "decide whether re-execution is authorized now",
+      "decision_points": [
+        "is this experiment fixable offline first",
+        "does it require a provider call",
+        "is the provider route authorized in this session/environment",
+        "are the corrected gates satisfied before any call"
+      ],
+      "default": "do not call a provider until the user explicitly authorizes it in-session for the selected experiment"
+    }
+  ],
+  "recommended_next_action": "choose the one experiment you want improved first from the candidate list, and state what improved result would mean for that experiment",
+  "pending_user_input": [
+    "which experiment is the priority",
+    "what result would count as an improvement",
+    "whether provider calls are authorized for the selected experiment in this environment"
+  ]
+}

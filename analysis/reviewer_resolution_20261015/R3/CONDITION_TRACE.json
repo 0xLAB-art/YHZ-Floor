@@ -1,0 +1,56 @@
+{
+  "scope": "Static retained-source and recorded-label trace; no timing or hardware operation executed",
+  "checks": {
+    "two_20000_iteration_programs": true,
+    "indexed_lookup_vs_256_entry_scan": true,
+    "drop_filesystem_caches_command": true,
+    "initial_trial_loop_has_no_toggle": true,
+    "initial_prepare_loop_has_toggle": true,
+    "resume_toggles_inside_block": true,
+    "prefix_count_15971": true,
+    "trial_indices_in_order": true,
+    "no_raw_per_trial_actual_state": true
+  },
+  "all_pass": true,
+  "input_sha256": {
+    "sp2027/analysis/e3_rig_driver.py": "2b7a501c215c6a34315d1ab8660c63c3715471012a905637e5746fff9b44a66a",
+    "sp2027/analysis/e3_rig_resume.py": "8024932ea5962042e4ac67ebb225d9b0d6cb493473f105758124367231c7cb44",
+    "sp2027/analysis/e3_rig/samples_full.jsonl": "bb05d7be0f17755e736b9be40ebe864bfe339c45724e592f9a1ba7bb9e5546cf",
+    "sp2027/analysis/e3_rig/e3_rig_env.json": "54ab6cb3b95ac9e96cd2f2cbbf7d1911889497b139ad0456ebd4d76321f47a13"
+  },
+  "initial_source_block_facts": [
+    {
+      "loop_line": 244,
+      "toggle_lines": [
+        252
+      ],
+      "trial_lines": []
+    },
+    {
+      "loop_line": 321,
+      "toggle_lines": [],
+      "trial_lines": [
+        324
+      ]
+    }
+  ],
+  "resume_source_block_facts": [
+    {
+      "loop_line": 110,
+      "toggle_lines": [
+        111
+      ],
+      "trial_lines": [
+        122
+      ]
+    }
+  ],
+  "prefix_recorded_smt_labels": {
+    "on": 15971
+  },
+  "suffix_recorded_smt_labels": {
+    "on": 29,
+    "off": 16000
+  },
+  "interpretation": "Retained source contains a preparation/execution toggle placement defect. Matching trial-order labels and resumed aggregate metadata do not establish actual hardware state throughout the original prefix. Historical runtime source identity is not independently recovered."
+}

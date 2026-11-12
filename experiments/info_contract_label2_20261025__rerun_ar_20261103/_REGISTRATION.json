@@ -1,0 +1,78 @@
+{
+ "adapter": "provider_adapter_agentrouter_p016_floor2800.py",
+ "adapter_sha256": "f21ddf3d7fbfc7e0b1003639daff3928e0e223218aa15e8ac778b7b0581663fb",
+ "authorization": "five-referee panel requirement (REVIEW_PANEL_20261025.md, R3): 'which shares move across labels'; user provisioned a second route 2026-10-25 and authorized model choice",
+ "cost_ceiling_usd": 5.0,
+ "design": "ChaCha20 2x2, cells C1-C4 identical slots to P010/P010P, 8 fresh seeds 111-118, 32 sessions, frozen runner imported byte-for-byte; ONLY transport differs (disclosed D1a-d)",
+ "files": {
+  "../provider_adapter_agentrouter.py": "d26dd920d8c2dda1d4ef919daa07d3e82dcd8109f14175e335f2da428aaaa3dc",
+  "PREREGISTRATION.md": "585bcc4d974b399dcae33ae27d47dc0b1a52632a5755c205368a546c82c269ab",
+  "run_label2_chacha20.py": "2a8fb6b30e0454ad2181f42f7dc7123f0355d49b1fb8911c0be301bc79536e5d"
+ },
+ "fixture": "chacha20",
+ "frozen_runner": {
+  "path": "sp2027/research_execution/run_info_contract_2x2_chacha20.py",
+  "sha256": "a08eab6f4be2401aacf1b39a47ba6960373164dcc57640d3672d8c36583ee198"
+ },
+ "label": "gpt-6.1-sol",
+ "label_selection_probe": {
+  "evidence": false,
+  "gpt-5.6-sol": "EXCLUDED \u2014 1400 output tokens exhausted on reasoning, zero text (stop=length)",
+  "gpt-6-astra": "usable \u2014 1361/1400 out, 36s, parseable JSON-with-code",
+  "gpt-6.1-sol": "SELECTED \u2014 1211/1400 out, 26s, parseable JSON-with-code; newest + fastest",
+  "kind": "NON-experiment transport probe (generic XOR task, no fixture, no cell slots)"
+ },
+ "launcher_patched": {
+  "run_label2_chacha20.py": [
+   "adapter_name",
+   "adapter_sha"
+  ]
+ },
+ "namespace": "info_contract_label2_20261025",
+ "protocol": "info_contract_label2_20261025-RERUN-AR-v1",
+ "provider_calls_experiment": 0,
+ "provider_probe": {
+  "evidence": false,
+  "kind": "AUTH_SMOKE via exact adapter code path (HEALTH.json)",
+  "result": "OK end_turn",
+  "token_floor_sent": 2800,
+  "tokens": "11 in / 18 out"
+ },
+ "provider_route": {
+  "attest_status": "ATTESTED_METADATA_ONLY (route/weights identity is provider-attested only \u2014 same epistemic status as the primary label; disclosed)",
+  "attested_model_ids": [
+   "gpt-5.6-sol",
+   "gpt-6-astra",
+   "gpt-6.1-sol"
+  ],
+  "endpoint": "https://agentrouter.org",
+  "model": "gpt-6.1-sol",
+  "path": "/v1/messages (Anthropic-compatible; router serves GPT-family labels through it)"
+ },
+ "rc4_fixture": "NOT re-run (P011 saturated 16/16; no detectable effect possible; disclosed design decision, same as P010P)",
+ "registered": "2026-11-03",
+ "rerun_of": "info_contract_label2_20261025",
+ "rerun_reason": "transport-damaged cohort re-run; same label, seeds, fixture, prompts, oracle and registered token floor; only the transport/adapter generation differs",
+ "runner_path": "run_info_contract_2x2_chacha20.py",
+ "schema": "infoc-label2-freeze/1",
+ "seed_verification": "111-118 verified unused 2026-10-25 across preregistrations + all results.jsonl under sp2027/research_execution/ \u2014 zero hits",
+ "seeds": [
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118
+ ],
+ "token_floor": 2800,
+ "token_floor_effective": 2800,
+ "transport_deviations": {
+  "D1a": "route/credentials from env (gitignored .env); same header shape as frozen adapter",
+  "D1b": "User-Agent claude-cli/2.0.0 (external, cli) REQUIRED (isolated probe: python-requests UA 401, empty UA 401, claude-cli UA 200)",
+  "D1c": "token floor 2800 uniform across all cells (max_tokens_sent recorded per call; rationale: reasoning-family labels, truncation must not correlate with cell)",
+  "D1d": "timeout default 600s (frozen runner passes none)"
+ },
+ "workers": 8
+}

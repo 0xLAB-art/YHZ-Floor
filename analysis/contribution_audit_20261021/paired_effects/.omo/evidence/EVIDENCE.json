@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "cwd": "/mnt/nvme5/ACTS-Attack",
+  "attempt_status": "No active ULW plan; evidence kept under assigned directory/.omo/evidence",
+  "criteria": [
+    {
+      "scenario": "Cohort and recomputed source admission",
+      "invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/analyze.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log 2>&1",
+      "binary_observable": "PASS; 852 source hash/admission checks; 768 primary rows; 256 complete triplets",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/results.json",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/source_admission_audit.csv",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log"
+      ]
+    },
+    {
+      "scenario": "Paired current/legacy and policy interactions",
+      "invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/analyze.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log 2>&1",
+      "binary_observable": "18 contrasts, 54 metrics, 512 contrast-instance ledger rows; 50000 resamples seed20261021",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/results.json",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/contrasts.csv",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/paired_instances.csv",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/cells.csv"
+      ]
+    },
+    {
+      "scenario": "Family pooling, shared-seed, zero discordance and multiplicity sensitivity",
+      "invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/analyze.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log 2>&1",
+      "binary_observable": "Each of 6 pooled contrasts has instance and seed cluster sensitivity; all 54 metrics have Bonferroni intervals; all 36 McNemar tests have Holm values",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/results.json",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/contrasts.csv"
+      ]
+    },
+    {
+      "scenario": "Original preregistered L3 retained",
+      "invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/analyze.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log 2>&1",
+      "binary_observable": "Original code produces both original EQUIVALENT_WITHIN_MARGIN labels; original seed20261019/20000 draws",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/preregistered_L3_reproduction.json"
+      ]
+    },
+    {
+      "scenario": "Pairing and estimand adversarial/synthetic tests",
+      "invocation": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s sp2027/analysis/contribution_audit_20261021/paired_effects -p test_analysis.py -v > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/tests.log 2>&1",
+      "binary_observable": "Ran 9 tests; OK",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/test_analysis.py",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/tests.log"
+      ]
+    },
+    {
+      "scenario": "Bounded scientific interpretation",
+      "invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/render_report.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/report.log 2>&1",
+      "binary_observable": "PASS: REPORT.md generated; explicit exploratory/counterfactual/ceiling limits",
+      "artifact_paths": [
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/REPORT.md",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/render_report.py",
+        "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/report.log"
+      ]
+    }
+  ],
+  "artifacts": {
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/analyze.py": {
+      "bytes": 13318,
+      "sha256": "df8fb9589198fe54fc96f6bf9a7af37f08ff72d69e5d7141fe5a1afd233aaccb"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/test_analysis.py": {
+      "bytes": 3605,
+      "sha256": "e8a56eda26d05345a53af111fd30bb8e612a5ed7500027cfdef08d9c20e27598"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/render_report.py": {
+      "bytes": 13223,
+      "sha256": "8dd64e0e02e126f10ab8ddb143eb39a6e6efb1812fec65cbb12e3a1d76f03635"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/record_evidence.py": {
+      "bytes": 3674,
+      "sha256": "b335e9f672dc33143e5798bb6495b5dcfb7e83deb3e909e5578af7b3b6cb1a94"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/results.json": {
+      "bytes": 56643,
+      "sha256": "6a04e4ec0706e2b036e6970d007b1a047da3e9067191745684fcfc812a82474a"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/contrasts.csv": {
+      "bytes": 7958,
+      "sha256": "8a4e0f137b098f73a8b598f4a249f84247778be91fa891961dc1d289658a06a8"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/paired_instances.csv": {
+      "bytes": 93860,
+      "sha256": "b9a6b4f64a5bfb1bcfea1ffc1faf2e1e179aae16d8d9e9996317b521af376053"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/cells.csv": {
+      "bytes": 1067,
+      "sha256": "408e41a556a62f5defd1c21de9359d0479eb68cd6d58eefde2c5a094c3a7f480"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/source_admission_audit.csv": {
+      "bytes": 108310,
+      "sha256": "eca58663630de0b69fdb27515fe4c0ca87480c88c74feab9e77ab6415f67918c"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/preregistered_L3_reproduction.json": {
+      "bytes": 6985,
+      "sha256": "bbd5bc7461fb18baf9304406f255896c5432f0c75cbdace6cfd7c835681ab0a2"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/REPORT.md": {
+      "bytes": 14022,
+      "sha256": "b45aeff55d91fc594406af77f296c2ac0218d1b0c86ed20af930c55cd46cd94f"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/analysis.log": {
+      "bytes": 236,
+      "sha256": "1a25908e89f0469e9f62c7ceccd754718e1504f936e457495b1a07eac3071a30"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/tests.log": {
+      "bytes": 1386,
+      "sha256": "0661f8ec49e1f6e2591cfdac81d59b281c3d048b9034d3917267ea1da04f2721"
+    },
+    "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/report.log": {
+      "bytes": 44,
+      "sha256": "e716961cbce06f86ba81c4185bc2a683d74d0788d2e9dce958459e3df6b3d964"
+    }
+  },
+  "validation_invocation": "python sp2027/analysis/contribution_audit_20261021/paired_effects/record_evidence.py > sp2027/analysis/contribution_audit_20261021/paired_effects/.omo/evidence/validation.log 2>&1"
+}

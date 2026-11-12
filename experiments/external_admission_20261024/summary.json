@@ -1,0 +1,42 @@
+{
+  "protocol": "PHASE2-EXTERNAL-ADMISSION-v1",
+  "namespace": "external_admission_20261024",
+  "phase": "Phase 2 of sp2027/research_execution/REMAINING_EXPERIMENTS_PLAN_20261023.md",
+  "status": "NO_GO",
+  "status_reason": "fewer than 6 crypto tasks qualify from the pinned Cybench archive under the preregistered selection rule; honest early stop executed as prescribed by the phase prompt",
+  "preregistration": "PREREGISTRATION.md (freeze commit 08d9fb5, before any experiment model call)",
+  "task_selection": {
+    "archive": "human_audit/source_freeze_20261005/archives/cybench__cybench__ca483c6443f1.tar.gz",
+    "archive_sha256": "261cc002d315776cf424322a18a645a21b48b418f1425e3b10271e298da0b805",
+    "hash_matches_preflight": true,
+    "crypto_category_tasks": 14,
+    "qualified": 4,
+    "required": 6,
+    "details": "TASK_SELECTION.md + selection/census.json",
+    "qualified_tasks": [
+      "htb_cyber_apocalypse_2024__Makeshift",
+      "htb_cyber_apocalypse_2024__Dynastic",
+      "htb_cyber_apocalypse_2024__Primary_Knowledge",
+      "htb_cyber_apocalypse_2024__Partial_Tenacity"
+    ],
+    "verification": "all four metadata answers reproduced exactly by offline stdlib-only reference solvers (selection/reference_solve_run.jsonl)"
+  },
+  "provider_health": {
+    "auth_smoke": "HEALTH.json — non-evidence",
+    "attempts": 2,
+    "detail": "attempt 1: HTTP 404 pre-output (client appended /v1 to a base URL already ending in /v1; zero model content, zero tokens; client fixed before any evidence call); attempt 2: OK msg_a185a3eb47b22dec20ce6bf3, 11 input / 1 output tokens"
+  },
+  "sessions": {"total": 0, "by_terminal_state": {}, "note": "grid never instantiated (quorum unmet); no model call made"},
+  "decode_equality_gate": {"status": "PASS", "tasks": 4, "log": "fixtures/decode_equality_log.json", "scope": "design readiness; executed offline before any generation would have been permitted"},
+  "regrade_triple": {"status": "NOT_RUN", "reason": "no retained programs", "snapshots": ["policies/rule_a_permissive_v3.py", "policies/rule_b_stress_legacy.py", "policies/rule_c_cleanup.py"]},
+  "falsifier_verdicts": {"F1": "NOT_EVALUABLE (no sessions)", "F2": "NOT_EVALUABLE (no sessions)", "F3": "NOT_EVALUABLE (no programs)"},
+  "budget": {
+    "estimated_cost_usd": 4.8e-05,
+    "phase_ceiling_usd": 5.0,
+    "ledger_lines_namespace": 2,
+    "ledger": "sp2027/research_execution/BUDGET_LEDGER.jsonl"
+  },
+  "commits": {"freeze": "08d9fb5", "outcomes": "see git log for this namespace"},
+  "conclusion_boundary": "No portability, mechanism, or evaluator-sensitivity conclusion was produced. No benchmark-quality claim of any kind is made. The census describes the pinned 2026-10-05 snapshot only.",
+  "interpretation": "The requested 6-task offline crypto grid is not achievable from the pinned source without relaxing preregistered selection criteria (admitting service-bound tasks or non-stdlib-solvable tasks). Widening selection post hoc would have been an unregistered design change, so the phase stopped honestly instead."
+}

@@ -1,0 +1,1589 @@
+{
+ "generated": "2026-11-03 (idempotent; rerun at freeze)",
+ "rules": {
+  "dedup": "a (seed, cell) pair counts accepted iff ANY judgment succeeded",
+  "labels": "primary vs author-directed substitute, split at the recorded boundary; never mixed",
+  "floor_exhausted": "measurement layer: HTTP 200 + output_tokens == floor + stop_reason length + empty text; not acceptance evidence, not transport loss"
+ },
+ "cohorts": [
+  {
+   "rerun": "info_contract_aesgcm_random_p021ar_20261103",
+   "original": {
+    "rows_raw": 385,
+    "pairs": 384,
+    "accepted_any": 106
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 384,
+   "pairs_total": 384,
+   "groups": {
+    "primary": {
+     "sessions": 384,
+     "accepted": 192,
+     "per_cell": {
+      "C1": {
+       "accepted": 96,
+       "sessions": 96
+      },
+      "C2": {
+       "floor_exhausted": 51,
+       "sessions": 96,
+       "text_fail": 45
+      },
+      "C3": {
+       "accepted": 96,
+       "sessions": 96
+      },
+      "C4": {
+       "text_fail": 96,
+       "sessions": 96
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 96,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 96,
+      "exact_two_sided_p": 2.524354896707238e-29
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 96,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 96,
+      "exact_two_sided_p": 2.524354896707238e-29
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 192,
+       "evaluable": 192,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 141,
+       "floor_exhausted": 51,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 384,
+    "pairs": 384,
+    "accepted_any": 191
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": 340,
+   "rows_raw": 384,
+   "pairs_total": 384,
+   "groups": {
+    "primary": {
+     "sessions": 340,
+     "accepted": 171,
+     "per_cell": {
+      "C1": {
+       "accepted": 85,
+       "sessions": 85
+      },
+      "C2": {
+       "floor_exhausted": 52,
+       "sessions": 85,
+       "text_fail": 33
+      },
+      "C3": {
+       "accepted": 86,
+       "sessions": 86
+      },
+      "C4": {
+       "text_fail": 83,
+       "sessions": 84,
+       "floor_exhausted": 1
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 84,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 84,
+      "exact_two_sided_p": 1.0339757656912846e-25
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 83,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 83,
+      "exact_two_sided_p": 2.0679515313825692e-25
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 171,
+       "evaluable": 171,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 116,
+       "floor_exhausted": 53,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 44,
+     "accepted": 21,
+     "per_cell": {
+      "C1": {
+       "accepted": 11,
+       "sessions": 11
+      },
+      "C2": {
+       "floor_exhausted": 6,
+       "sessions": 11,
+       "text_fail": 5
+      },
+      "C3": {
+       "accepted": 10,
+       "sessions": 10
+      },
+      "C4": {
+       "text_fail": 12,
+       "sessions": 12
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 10,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 10,
+      "exact_two_sided_p": 0.001953125
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 11,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 11,
+      "exact_two_sided_p": 0.0009765625
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 21,
+       "evaluable": 21,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 17,
+       "floor_exhausted": 6,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 65,
+    "pairs": 64,
+    "accepted_any": 32
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6-astra",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 128,
+   "pairs_total": 64,
+   "groups": {
+    "primary": {
+     "sessions": 64,
+     "accepted": 32,
+     "per_cell": {
+      "C1": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C2": {
+       "floor_exhausted": 15,
+       "sessions": 16,
+       "text_fail": 1
+      },
+      "C3": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C4": {
+       "text_fail": 13,
+       "sessions": 16,
+       "floor_exhausted": 3
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 16,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 16,
+      "exact_two_sided_p": 3.0517578125e-05
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 13,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 13,
+      "exact_two_sided_p": 0.000244140625
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 32,
+       "evaluable": 32,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 14,
+       "floor_exhausted": 18,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_random_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 96,
+    "pairs": 96,
+    "accepted_any": 46
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": 54,
+   "rows_raw": 102,
+   "pairs_total": 96,
+   "groups": {
+    "primary": {
+     "sessions": 48,
+     "accepted": 24,
+     "per_cell": {
+      "C1": {
+       "accepted": 12,
+       "sessions": 12
+      },
+      "C2": {
+       "text_fail": 3,
+       "sessions": 12,
+       "floor_exhausted": 9
+      },
+      "C3": {
+       "accepted": 12,
+       "sessions": 12
+      },
+      "C4": {
+       "text_fail": 12,
+       "sessions": 12
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 12,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 12,
+      "exact_two_sided_p": 0.00048828125
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 12,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 12,
+      "exact_two_sided_p": 0.00048828125
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 24,
+       "evaluable": 24,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 15,
+       "floor_exhausted": 9,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 48,
+     "accepted": 24,
+     "per_cell": {
+      "C1": {
+       "accepted": 12,
+       "sessions": 12
+      },
+      "C2": {
+       "floor_exhausted": 9,
+       "sessions": 12,
+       "text_fail": 3
+      },
+      "C3": {
+       "accepted": 12,
+       "sessions": 12
+      },
+      "C4": {
+       "text_fail": 12,
+       "sessions": 12
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 12,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 12,
+      "exact_two_sided_p": 0.00048828125
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 12,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 12,
+      "exact_two_sided_p": 0.00048828125
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 24,
+       "evaluable": 24,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 15,
+       "floor_exhausted": 9,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_p017_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 64,
+    "pairs": 64,
+    "accepted_any": 32
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 202,
+   "pairs_total": 64,
+   "groups": {
+    "primary": {
+     "sessions": 64,
+     "accepted": 32,
+     "per_cell": {
+      "C1": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C2": {
+       "text_fail": 9,
+       "sessions": 16,
+       "floor_exhausted": 7
+      },
+      "C3": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C4": {
+       "text_fail": 16,
+       "sessions": 16
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 16,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 16,
+      "exact_two_sided_p": 3.0517578125e-05
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 16,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 16,
+      "exact_two_sided_p": 3.0517578125e-05
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 32,
+       "evaluable": 32,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 25,
+       "floor_exhausted": 7,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_p022a_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 96,
+    "pairs": 96,
+    "accepted_any": 48
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6.1-sol",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 192,
+   "pairs_total": 96,
+   "groups": {
+    "primary": {
+     "sessions": 96,
+     "accepted": 48,
+     "per_cell": {
+      "C1": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C2": {
+       "text_fail": 13,
+       "sessions": 24,
+       "floor_exhausted": 11
+      },
+      "C3": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C4": {
+       "text_fail": 24,
+       "sessions": 24
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 48,
+       "evaluable": 48,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 37,
+       "floor_exhausted": 11,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_p022b_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 96,
+    "pairs": 96,
+    "accepted_any": 48
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-5.6-sol",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 192,
+   "pairs_total": 96,
+   "groups": {
+    "primary": {
+     "sessions": 96,
+     "accepted": 48,
+     "per_cell": {
+      "C1": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C2": {
+       "floor_exhausted": 24,
+       "sessions": 24
+      },
+      "C3": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C4": {
+       "floor_exhausted": 24,
+       "sessions": 24
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 48,
+       "evaluable": 48,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 48,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_p024b_20261103__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 96,
+    "pairs": 96,
+    "accepted_any": 48
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-5.6-sol",
+   "token_floor": 8400,
+   "label_boundary_row": null,
+   "rows_raw": 96,
+   "pairs_total": 96,
+   "groups": {
+    "primary": {
+     "sessions": 96,
+     "accepted": 48,
+     "per_cell": {
+      "C1": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C2": {
+       "floor_exhausted": 23,
+       "sessions": 24,
+       "text_fail": 1
+      },
+      "C3": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C4": {
+       "floor_exhausted": 23,
+       "sessions": 24,
+       "text_fail": 1
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 1,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 1,
+      "exact_two_sided_p": 1.0
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 48,
+       "evaluable": 48,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 2,
+       "floor_exhausted": 46,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_chachapoly_random_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 96,
+    "pairs": 96,
+    "accepted_any": 42
+   },
+   "fixture": "ChaCha20-Poly1305",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 192,
+   "pairs_total": 96,
+   "groups": {
+    "primary": {
+     "sessions": 96,
+     "accepted": 48,
+     "per_cell": {
+      "C1": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C2": {
+       "floor_exhausted": 14,
+       "sessions": 24,
+       "text_fail": 10
+      },
+      "C3": {
+       "accepted": 24,
+       "sessions": 24
+      },
+      "C4": {
+       "text_fail": 24,
+       "sessions": 24
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 24,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 24,
+      "exact_two_sided_p": 1.1920928955078125e-07
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 48,
+       "evaluable": 48,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 34,
+       "floor_exhausted": 14,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_gcmsiv_random_20261102__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 32,
+    "pairs": 32,
+    "accepted_any": 0
+   },
+   "fixture": "AES-GCM-SIV",
+   "label": "gpt-6-astra",
+   "token_floor": 4200,
+   "label_boundary_row": null,
+   "rows_raw": 70,
+   "pairs_total": 32,
+   "groups": {
+    "primary": {
+     "sessions": 32,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {
+       "text_fail": 6,
+       "sessions": 8,
+       "floor_exhausted": 2
+      },
+      "C2": {
+       "floor_exhausted": 1,
+       "sessions": 8,
+       "text_fail": 7
+      },
+      "C3": {
+       "floor_exhausted": 7,
+       "sessions": 8,
+       "text_fail": 1
+      },
+      "C4": {
+       "text_fail": 8,
+       "sessions": 8
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 6,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 7,
+       "floor_exhausted": 9,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 15,
+       "floor_exhausted": 1,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_label2_20261025__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 32,
+    "pairs": 32,
+    "accepted_any": 16
+   },
+   "fixture": "ChaCha20",
+   "label": "gpt-6.1-sol",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 64,
+   "pairs_total": 32,
+   "groups": {
+    "primary": {
+     "sessions": 32,
+     "accepted": 16,
+     "per_cell": {
+      "C1": {
+       "accepted": 8,
+       "sessions": 8
+      },
+      "C2": {
+       "text_fail": 7,
+       "sessions": 8,
+       "floor_exhausted": 1
+      },
+      "C3": {
+       "accepted": 8,
+       "sessions": 8
+      },
+      "C4": {
+       "text_fail": 8,
+       "sessions": 8
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 8,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 8,
+      "exact_two_sided_p": 0.0078125
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 8,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 8,
+      "exact_two_sided_p": 0.0078125
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 16,
+       "evaluable": 16,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 15,
+       "floor_exhausted": 1,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_label3_n32_20261101__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 129,
+    "pairs": 128,
+    "accepted_any": 57
+   },
+   "fixture": "ChaCha20",
+   "label": "gpt-6.1-sol",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 256,
+   "pairs_total": 128,
+   "groups": {
+    "primary": {
+     "sessions": 128,
+     "accepted": 64,
+     "per_cell": {
+      "C1": {
+       "accepted": 32,
+       "sessions": 32
+      },
+      "C2": {
+       "text_fail": 29,
+       "sessions": 32,
+       "floor_exhausted": 3
+      },
+      "C3": {
+       "accepted": 32,
+       "sessions": 32
+      },
+      "C4": {
+       "text_fail": 32,
+       "sessions": 32
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 32,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 32,
+      "exact_two_sided_p": 4.656612873077393e-10
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 32,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 32,
+      "exact_two_sided_p": 4.656612873077393e-10
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 64,
+       "evaluable": 64,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 61,
+       "floor_exhausted": 3,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_label4_20261030__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 32,
+    "pairs": 32,
+    "accepted_any": 18
+   },
+   "fixture": "ChaCha20",
+   "label": "gpt-5.6-sol",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 64,
+   "pairs_total": 32,
+   "groups": {
+    "primary": {
+     "sessions": 32,
+     "accepted": 18,
+     "per_cell": {
+      "C1": {
+       "accepted": 8,
+       "sessions": 8
+      },
+      "C2": {
+       "floor_exhausted": 6,
+       "sessions": 8,
+       "accepted": 2
+      },
+      "C3": {
+       "accepted": 8,
+       "sessions": 8
+      },
+      "C4": {
+       "floor_exhausted": 8,
+       "sessions": 8
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 6,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 6,
+      "exact_two_sided_p": 0.03125
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 16,
+       "evaluable": 16,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 2,
+       "evaluable": 2,
+       "floor_exhausted": 14,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 64,
+    "pairs": 64,
+    "accepted_any": 28
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-6.1-sol",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 62,
+   "pairs_total": 62,
+   "groups": {
+    "primary": {
+     "sessions": 62,
+     "accepted": 31,
+     "per_cell": {
+      "C1": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C2": {
+       "floor_exhausted": 15,
+       "sessions": 15
+      },
+      "C3": {
+       "accepted": 15,
+       "sessions": 15
+      },
+      "C4": {
+       "text_fail": 12,
+       "sessions": 16,
+       "floor_exhausted": 4
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 15,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 15,
+      "exact_two_sided_p": 6.103515625e-05
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 12,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 12,
+      "exact_two_sided_p": 0.00048828125
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 31,
+       "evaluable": 31,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 12,
+       "floor_exhausted": 19,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  },
+  {
+   "rerun": "info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103",
+   "original": {
+    "rows_raw": 64,
+    "pairs": 64,
+    "accepted_any": 32
+   },
+   "fixture": "AES-GCM",
+   "label": "gpt-5.6-sol",
+   "token_floor": 2800,
+   "label_boundary_row": null,
+   "rows_raw": 62,
+   "pairs_total": 62,
+   "groups": {
+    "primary": {
+     "sessions": 62,
+     "accepted": 31,
+     "per_cell": {
+      "C1": {
+       "accepted": 16,
+       "sessions": 16
+      },
+      "C2": {
+       "floor_exhausted": 15,
+       "sessions": 15
+      },
+      "C3": {
+       "accepted": 15,
+       "sessions": 15
+      },
+      "C4": {
+       "floor_exhausted": 16,
+       "sessions": 16
+      }
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 15,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 15,
+      "exact_two_sided_p": 6.103515625e-05
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 31,
+       "evaluable": 31,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 31,
+       "transport": 0
+      }
+     }
+    },
+    "substitute": {
+     "sessions": 0,
+     "accepted": 0,
+     "per_cell": {
+      "C1": {},
+      "C2": {},
+      "C3": {},
+      "C4": {}
+     },
+     "paired_C1_vs_C2": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "n_discordant": 0,
+      "exact_two_sided_p": null
+     },
+     "paired_C1_vs_C4": {
+      "discordant_stated_wins": 0,
+      "discordant_withheld_wins": 0,
+      "evaluable_pairs": 0,
+      "exact_two_sided_p": null
+     },
+     "marginals": {
+      "stated": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      },
+      "withheld": {
+       "accepted": 0,
+       "evaluable": 0,
+       "floor_exhausted": 0,
+       "transport": 0
+      }
+     }
+    }
+   }
+  }
+ ],
+ "p026": {
+  "sessions": 96,
+  "outcomes": {
+   "text_fail": 88,
+   "floor_exhausted": 7,
+   "transport": 1
+  },
+  "note": "floor-sensitivity cohort (registered P026): C2 only, floor 8000, same 96 seeds as P021AR \u2014 validates the floor-exhaustion mechanism; measurement layer, not acceptance evidence"
+ },
+ "deliberation_gradient_p021ar": {
+  "C1": {
+   "n": 96,
+   "median": 875.5,
+   "min": 551,
+   "max": 1483
+  },
+  "C3": {
+   "n": 96,
+   "median": 988.5,
+   "min": 604,
+   "max": 1492
+  },
+  "C2": {
+   "n": 51,
+   "median": 3450,
+   "min": 2198,
+   "max": 4185
+  },
+  "C4": {
+   "n": 96,
+   "median": 2403.0,
+   "min": 1484,
+   "max": 3799
+  }
+ }
+}

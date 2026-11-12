@@ -1,0 +1,67 @@
+```python
+import http.client
+import json
+import sys
+import binascii
+
+host = "127.0.0.1"
+port = 32773
+
+conn = http.client.HTTPConnection(host, port)
+
+# Get token
+conn.request("GET", "/token")
+resp = conn.getresponse()
+token_data = json.loads(resp.read().decode())
+token = token_data["token"]
+print(f"Token: {token}", file=sys.stderr)
+
+# Try to find valid endpoints by checking common paths
+endpoints_to_try = [
+    ("/", "GET"),
+    ("/api", "GET"),
+    ("/session", "GET"),
+    ("/profile", "GET"),
+    ("/me", "GET"),
+    ("/status", "GET"),
+]
+
+for path, method in endpoints_to_try:
+    conn = http.client.HTTPConnection(host, port)
+    conn.request(method, path, headers={"Authorization": f"Bearer {token}"})
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    print(f"{method} {path} -> {resp.status}: {body}", file=sys.stderr)
+    if resp.status == 200:
+        break
+
+# Try POST endpoints with different bodies
+post_endpoints = ["/session", "/profile", "/me", "/update", "/set"]
+for path in post_endpoints:
+    conn = http.client.HTTPConnection(host, port)
+    test_data = json.dumps({"role": "admin"})
+    conn.request("POST", path, body=test_data, headers={
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    })
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    print(f"POST {path} with role=admin -> {resp.status}: {body}", file=sys.stderr)
+
+# Try to manipulate token - split into blocks (16 bytes each in hex = 32 chars)
+token_bytes = binascii.unhexlify(token)
+block_size = 16
+blocks = [token_bytes[i:i+block_size] for i in range(0, len(token_bytes), block_size)]
+print(f"Token has {len(blocks)} blocks", file=sys.stderr)
+
+# Try swapping blocks
+if len(blocks) >= 2:
+    swapped = blocks[1] + blocks[0] + b"".join(blocks[2:])
+    swapped_token = binascii.hexlify(swapped).decode()
+    
+    conn = http.client.HTTPConnection(host, port)
+    conn.request("GET", "/profile", headers={"Authorization": f"Bearer {swapped_token}"})
+    resp = conn.getresponse()
+    body = resp.read().decode()
+    print(f"GET /profile with swapped token -> {resp.status}: {body}", file=sys.stderr)
+```

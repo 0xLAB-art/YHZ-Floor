@@ -1,0 +1,124 @@
+{
+  "finished": 1793603880.4395115,
+  "probe": "route-probe-20261102",
+  "purpose": "P015 replacement labels; NOT experiment calls",
+  "routes": [
+    {
+      "host": "openrouter.ai",
+      "http_status": 200,
+      "key_present": true,
+      "model_ids": [
+        "anthropic/deepseek/deepseek-v4.1-flash-1017[1m]",
+        "anthropic/elorian/glimpse",
+        "anthropic/inception/mercury-3[1m]",
+        "anthropic/meta/muse-spark-open[1m]",
+        "anthropic/minimax/minimax-m3.1-flash[1m]",
+        "anthropic/moondream/moondream3-preview",
+        "anthropic/moondream/moondream3.1-9b-a2b",
+        "anthropic/moonshotai/kimi-k3.1-pro[1m]",
+        "anthropic/nvidia/nemotron-3.5-super-vl:free",
+        "anthropic/nvidia/nemotron-3.5-super-vl[1m]",
+        "anthropic/openai/gpt-6.1-terra",
+        "anthropic/openai/gpt-6.1-terra-pro",
+        "anthropic/openai/gpt-6.1-terra-pro:batch[1m]",
+        "anthropic/openai/gpt-6.1-terra:batch[1m]",
+        "anthropic/particle-ai/particle-1[1m]",
+        "anthropic/prism-ml/ternary-bonsai-2-9b",
+        "anthropic/recursive/flint-v1.0:free",
+        "anthropic/reflection/beam-1.0-501b-a23b[1m]",
+        "anthropic/unbiased/pareto-26.10[1m]",
+        "anthropic/xingchen-agi/xing4.0-29b-a4b:free"
+      ],
+      "route": "openrouter",
+      "status": "OK"
+    },
+    {
+      "host": "api.apmix.ai",
+      "http_status": 404,
+      "key_present": true,
+      "model_ids": [],
+      "route": "apmix",
+      "status": "REJECTED"
+    }
+  ],
+  "smoke": [
+    {
+      "error": {
+        "code": 401,
+        "message": "Missing Authentication header"
+      },
+      "http_status": 401,
+      "latency_s": 0.2,
+      "model": "anthropic/openai/gpt-6.1-terra",
+      "output_head": "",
+      "route": "openrouter",
+      "status": "HTTP_ERROR"
+    },
+    {
+      "error": {
+        "code": 401,
+        "message": "Missing Authentication header"
+      },
+      "http_status": 401,
+      "latency_s": 0.2,
+      "model": "anthropic/openai/gpt-6.1-terra-pro",
+      "output_head": "",
+      "route": "openrouter",
+      "status": "HTTP_ERROR"
+    },
+    {
+      "error": {
+        "code": 401,
+        "message": "Missing Authentication header"
+      },
+      "http_status": 401,
+      "latency_s": 0.2,
+      "model": "anthropic/openai/gpt-6.1-terra-pro:batch[1m]",
+      "output_head": "",
+      "route": "openrouter",
+      "status": "HTTP_ERROR"
+    },
+    {
+      "error": {
+        "code": 401,
+        "message": "Missing Authentication header"
+      },
+      "http_status": 401,
+      "latency_s": 90.3,
+      "model": "anthropic/openai/gpt-6.1-terra:batch[1m]",
+      "output_head": "",
+      "route": "openrouter",
+      "status": "HTTP_ERROR"
+    },
+    {
+      "error": {
+        "code": "model_not_found",
+        "message": "Unknown model. See apmix.ai/models for the current list.",
+        "type": "not_found_error"
+      },
+      "http_status": 404,
+      "latency_s": 0.8,
+      "model": "claude-sonnet-4-6-free",
+      "output_head": "",
+      "route": "apmix",
+      "shape": "anthropic_shape",
+      "status": "HTTP_ERROR"
+    },
+    {
+      "error": {
+        "code": "not_found",
+        "message": "Not found. The apmix API is served from https://api.apmix.ai/v1 \u2014 see https://apmix.ai/docs for setup.",
+        "type": "invalid_request_error"
+      },
+      "http_status": 404,
+      "latency_s": 0.3,
+      "model": "claude-sonnet-4-6-free",
+      "output_head": "",
+      "route": "apmix",
+      "shape": "openai_shape",
+      "status": "HTTP_ERROR"
+    }
+  ],
+  "smoke_prompt": "Reply with exactly one word: READY",
+  "started": 1793603787.489047
+}

@@ -1,0 +1,1806 @@
+{
+  "metrics": {
+    "clean_invalid_rejected": 10,
+    "clean_valid_accepted": 10,
+    "defect_by_family": {
+      "interface_contamination": 8,
+      "replay_cross_session": 8,
+      "stale_binding": 8,
+      "verifier_version_mismatch": 8,
+      "wrong_field": 8
+    },
+    "defects_rejected": 40,
+    "heldout_by_family": {
+      "interface_contamination": 4,
+      "replay_cross_session": 4,
+      "stale_binding": 4,
+      "verifier_version_mismatch": 4,
+      "wrong_field": 4
+    },
+    "heldout_rejected": 20,
+    "mislabeled_fixture_disagreements": 40,
+    "overhead_ms": {
+      "reference_mean": 92.52783013265191,
+      "validator_mean": 42.5084886160524
+    },
+    "public_forbidden_field_cases": 0,
+    "reference_validator_disagreements": 0,
+    "total": 60
+  },
+  "rows": [
+    {
+      "case_id": "clean-01",
+      "defect_family": "none",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 207.77498499955982,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 59.09867200534791
+    },
+    {
+      "case_id": "clean-02",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 60.32359600067139,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 52.55264701554552
+    },
+    {
+      "case_id": "clean-03",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 199.43344799685292,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 54.05837399302982
+    },
+    {
+      "case_id": "clean-04",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 56.48683800245635,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 55.27609499404207
+    },
+    {
+      "case_id": "clean-05",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 200.0294089957606,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 57.886651979060844
+    },
+    {
+      "case_id": "clean-06",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 59.172531007789075,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 55.35956099629402
+    },
+    {
+      "case_id": "clean-07",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 198.2311820029281,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 62.31499201385304
+    },
+    {
+      "case_id": "clean-08",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 60.29309399309568,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 57.50025299494155
+    },
+    {
+      "case_id": "clean-09",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 126.96297699585557,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 36.99908699491061
+    },
+    {
+      "case_id": "clean-10",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [],
+        "certificate_integrity": true,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "ACCEPTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 41.51898098643869,
+      "split": "clean",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "ACCEPT",
+        "reason": "public-evidence-consistent"
+      },
+      "validator_overhead_ms": 41.021879005711526
+    },
+    {
+      "case_id": "invalid-01",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 125.08361297659576,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 42.52066899789497
+    },
+    {
+      "case_id": "invalid-02",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 43.48036399460398,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 37.51022700453177
+    },
+    {
+      "case_id": "invalid-03",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 129.39848500536755,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 39.51692598639056
+    },
+    {
+      "case_id": "invalid-04",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 40.52689499803819,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 36.26937701483257
+    },
+    {
+      "case_id": "invalid-05",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 129.8465750005562,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 39.39077598624863
+    },
+    {
+      "case_id": "invalid-06",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 39.31966901291162,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 40.00278300372884
+    },
+    {
+      "case_id": "invalid-07",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 126.64916197536513,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 41.81560900178738
+    },
+    {
+      "case_id": "invalid-08",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.83373698126525,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 40.384027000982314
+    },
+    {
+      "case_id": "invalid-09",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": false,
+          "recovered_d_matches": false,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 122.05966599867679,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 41.64516300079413
+    },
+    {
+      "case_id": "invalid-10",
+      "defect_family": "none",
+      "label_disagreement": false,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "attribution"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": false
+        },
+        "cryptographic_predicate": false,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 39.538026991067454,
+      "split": "clean",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "attribution"
+      },
+      "validator_overhead_ms": 36.385818995768204
+    },
+    {
+      "case_id": "wrong_field-01",
+      "defect_family": "wrong_field",
+      "label_disagreement": false,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 131.6889839945361,
+      "split": "dev",
+      "stored_label": "REJECTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 46.45208999863826
+    },
+    {
+      "case_id": "wrong_field-02",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 52.52528298296966,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 41.953213018132374
+    },
+    {
+      "case_id": "wrong_field-03",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 131.4208009862341,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 36.24589301762171
+    },
+    {
+      "case_id": "wrong_field-04",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 54.36800202005543,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 36.082511011045426
+    },
+    {
+      "case_id": "stale_binding-01",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 128.43551102560014,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 35.665609990246594
+    },
+    {
+      "case_id": "stale_binding-02",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 41.16110398899764,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 40.84619297645986
+    },
+    {
+      "case_id": "stale_binding-03",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 129.5120250142645,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 46.19851100142114
+    },
+    {
+      "case_id": "stale_binding-04",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.445150000276044,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 36.733464017743245
+    },
+    {
+      "case_id": "replay_cross_session-01",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 135.18317899433896,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 39.26178699475713
+    },
+    {
+      "case_id": "replay_cross_session-02",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 43.59291598666459,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 38.60760299721733
+    },
+    {
+      "case_id": "replay_cross_session-03",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 148.07534500141628,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 36.457858979701996
+    },
+    {
+      "case_id": "replay_cross_session-04",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 40.673409996088594,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 42.505476012593135
+    },
+    {
+      "case_id": "verifier_version_mismatch-01",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 123.22251099976711,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 40.77863198472187
+    },
+    {
+      "case_id": "verifier_version_mismatch-02",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 50.30074101523496,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 41.932463995181024
+    },
+    {
+      "case_id": "verifier_version_mismatch-03",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 121.34774099104106,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 40.07576100411825
+    },
+    {
+      "case_id": "verifier_version_mismatch-04",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.36433398909867,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 38.22981097619049
+    },
+    {
+      "case_id": "interface_contamination-01",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 127.5687180168461,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 37.53323998535052
+    },
+    {
+      "case_id": "interface_contamination-02",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 39.52056201524101,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 39.878101990325376
+    },
+    {
+      "case_id": "interface_contamination-03",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 124.97580001945607,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 45.8443499810528
+    },
+    {
+      "case_id": "interface_contamination-04",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.649845010600984,
+      "split": "dev",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 40.03256300347857
+    },
+    {
+      "case_id": "wrong_field-05",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 124.73827600479126,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 39.07584701664746
+    },
+    {
+      "case_id": "wrong_field-06",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 44.68069100403227,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 37.94045498943888
+    },
+    {
+      "case_id": "wrong_field-07",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 133.2489769847598,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 50.31918900203891
+    },
+    {
+      "case_id": "wrong_field-08",
+      "defect_family": "wrong_field",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:target_effect",
+          "target-effect-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.96199299278669,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:target_effect"
+      },
+      "validator_overhead_ms": 42.11410600692034
+    },
+    {
+      "case_id": "stale_binding-05",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 124.91561600472778,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 39.5042710006237
+    },
+    {
+      "case_id": "stale_binding-06",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 44.163440994452685,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 35.75731598539278
+    },
+    {
+      "case_id": "stale_binding-07",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 145.82139300182462,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 35.345855983905494
+    },
+    {
+      "case_id": "stale_binding-08",
+      "defect_family": "stale_binding",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "task-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 41.68395200395025,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 37.66190799069591
+    },
+    {
+      "case_id": "replay_cross_session-05",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 130.65106299472973,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 37.55807501147501
+    },
+    {
+      "case_id": "replay_cross_session-06",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 51.91957700299099,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 36.50768400984816
+    },
+    {
+      "case_id": "replay_cross_session-07",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 128.81249698693864,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 37.61488900636323
+    },
+    {
+      "case_id": "replay_cross_session-08",
+      "defect_family": "replay_cross_session",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "hash:execution_trace",
+          "execution-session-binding"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 40.850734018022195,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "hash:execution_trace"
+      },
+      "validator_overhead_ms": 34.77211101562716
+    },
+    {
+      "case_id": "verifier_version_mismatch-05",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 122.33956099953502,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 53.6142039927654
+    },
+    {
+      "case_id": "verifier_version_mismatch-06",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 46.44329898292199,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 60.21025701193139
+    },
+    {
+      "case_id": "verifier_version_mismatch-07",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 144.03424999909475,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 39.42060799454339
+    },
+    {
+      "case_id": "verifier_version_mismatch-08",
+      "defect_family": "verifier_version_mismatch",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "verifier-version"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.60667398921214,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "verifier-version"
+      },
+      "validator_overhead_ms": 45.42296699946746
+    },
+    {
+      "case_id": "interface_contamination-05",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 128.38726601330563,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 36.79674700833857
+    },
+    {
+      "case_id": "interface_contamination-06",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 40.352854994125664,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 39.87158401287161
+    },
+    {
+      "case_id": "interface_contamination-07",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ECDSA_Nonce_Reuse",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "public_key_matches": true,
+          "recovered_d_matches": true,
+          "recovered_k_matches": true,
+          "repeated_r": true,
+          "signatures_verify": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 130.6790920207277,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 40.05312800290994
+    },
+    {
+      "case_id": "interface_contamination-08",
+      "defect_family": "interface_contamination",
+      "label_disagreement": true,
+      "primitive": "ChaCha20_Nonce_Repeat",
+      "public_forbidden_fields": false,
+      "reference": {
+        "certificate_errors": [
+          "boundary"
+        ],
+        "certificate_integrity": false,
+        "crypto_details": {
+          "lengths_match": true,
+          "xor_recovery_matches": true
+        },
+        "cryptographic_predicate": true,
+        "reference_verdict": "REJECTED",
+        "truth_source": "recomputed-target-candidate-and-certificate"
+      },
+      "reference_overhead_ms": 42.383405001601204,
+      "split": "heldout",
+      "stored_label": "ACCEPTED",
+      "validator": {
+        "decision": "REJECT",
+        "reason": "boundary"
+      },
+      "validator_overhead_ms": 42.12339399964549
+    }
+  ]
+}

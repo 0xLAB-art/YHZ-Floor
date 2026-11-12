@@ -1,0 +1,59 @@
+# Does the drop pattern cluster in execution order?
+
+Execution order = order rows appear in `results.jsonl` (append order). Permutation null: 10,000 shuffles, seed 20261103. A **low** runs p means fewer runs than chance, i.e. clustering.
+
+| cohort | sessions | drops | runs | expected runs | runs p (normal) | runs p (permutation) | lag-1 | longest drop run |
+|---|---|---|---|---|---|---|---|---|
+| P021 | 384 | 226 (58.9%) | 179 | 186.98 | 0.3998 | 0.4302 | 0.039 | 10 |
+| P023 | 384 | 52 (13.5%) | 99 | 90.92 | 0.0769 | 0.0940 | -0.090 | 2 |
+
+## Execution blocks (4 contiguous quarters)
+
+| cohort | block | sessions | drops | rate (95% Wilson) |
+|---|---|---|---|---|
+| P021 | Q1 (0–95) | 96 | 43 | 44.8% [35.2, 54.7] |
+| P021 | Q2 (96–191) | 96 | 63 | 65.6% [55.7, 74.4] |
+| P021 | Q3 (192–287) | 96 | 59 | 61.5% [51.5, 70.6] |
+| P021 | Q4 (288–383) | 96 | 61 | 63.5% [53.6, 72.5] |
+| P021 | — | — | — | chi2=4.442, df=3, p=0.2175 |
+| P023 | Q1 (0–95) | 96 | 12 | 12.5% [7.3, 20.6] |
+| P023 | Q2 (96–191) | 96 | 14 | 14.6% [8.9, 23.0] |
+| P023 | Q3 (192–287) | 96 | 10 | 10.4% [5.8, 18.1] |
+| P023 | Q4 (288–383) | 96 | 16 | 16.7% [10.5, 25.4] |
+| P023 | — | — | — | chi2=1.538, df=3, p=0.6734 |
+
+## Rotation phase (position within each instance's 4-cell rotation)
+
+| cohort | phase | sessions | drops | rate (95% Wilson) |
+|---|---|---|---|---|
+| P021 | 0 | 96 | 62 | 64.6% [54.6, 73.4] |
+| P021 | 1 | 96 | 56 | 58.3% [48.3, 67.7] |
+| P021 | 2 | 96 | 60 | 62.5% [52.5, 71.5] |
+| P021 | 3 | 96 | 48 | 50.0% [40.2, 59.8] |
+| P023 | 0 | 96 | 10 | 10.4% [5.8, 18.1] |
+| P023 | 1 | 96 | 11 | 11.5% [6.5, 19.4] |
+| P023 | 2 | 96 | 17 | 17.7% [11.4, 26.5] |
+| P023 | 3 | 96 | 14 | 14.6% [8.9, 23.0] |
+
+## Per-cell positional runs test
+
+| cohort | cell | sessions | any-drop runs p | transport drops | transport runs p | model drops | model runs p |
+|---|---|---|---|---|---|---|---|
+| P021 | C1 | 96 | 0.6010 | 43 | 0.6010 | 0 | — |
+| P021 | C2 | 96 | 2.53e-04 | 46 | 0.8505 | 35 | 0.5764 |
+| P021 | C3 | 96 | 0.6010 | 43 | 0.6010 | 0 | — |
+| P021 | C4 | 96 | 0.1603 | 59 | 0.1603 | 0 | — |
+| P023 | C1 | 96 | 0.8840 | 1 | 0.8840 | 0 | — |
+| P023 | C2 | 96 | 0.4322 | 0 | — | 51 | 0.4322 |
+| P023 | C3 | 96 | — | 0 | — | 0 | — |
+| P023 | C4 | 96 | — | 0 | — | 0 | — |
+
+## Reading
+
+- P021: 226/384 drops, 179 runs vs 186.98 expected; runs p=0.3998 (permutation 0.4302), lag-1 0.039.
+- P023: 52/384 drops, 99 runs vs 90.92 expected; runs p=0.0769 (permutation 0.0940).
+- Read the **transport** column for provider bursts and the **model** column for condition-driven textless completions. The any-drop column mixes both and is misleading when a cell is near-saturated.
+- P021: transport clustering at p<0.05 in no cell; model-level clustering in no cell.
+- P023: transport clustering at p<0.05 in no cell; model-level clustering in no cell.
+- P021: cell(s) C2 are near-saturated (>=80% drops). The any-drop runs test is uninformative there — with almost no zeros, any clumping of the few evaluable sessions looks like clustering. Read the transport and model-level columns instead.
+

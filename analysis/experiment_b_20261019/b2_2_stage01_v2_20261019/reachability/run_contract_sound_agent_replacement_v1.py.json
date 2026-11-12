@@ -1,0 +1,127 @@
+{
+  "ast_input_findings": [
+    {
+      "kind": "Call",
+      "line": 95,
+      "source": "json.loads(path.read_text())"
+    },
+    {
+      "kind": "Attribute",
+      "line": 95,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Call",
+      "line": 172,
+      "source": "helpers.make_certificate(case, session_id, base_id, task, condition, seed, execution, target_status)"
+    },
+    {
+      "kind": "Name",
+      "line": 174,
+      "source": "bundle"
+    },
+    {
+      "kind": "Call",
+      "line": 175,
+      "source": "write_json(bundle, {\"case_id\": session_id, \"target_state_path\": str(case / \"target_state.private.json\"), \"candidate_path\": str(case / \"candidate_output.json\"), \"certificate_path\": str(cert_path)})"
+    },
+    {
+      "kind": "Attribute",
+      "line": 172,
+      "source": "helpers.make_certificate"
+    },
+    {
+      "kind": "Name",
+      "line": 175,
+      "source": "bundle"
+    },
+    {
+      "kind": "Call",
+      "line": 176,
+      "source": "repair.invoke_reference(REFERENCE, bundle)"
+    },
+    {
+      "kind": "Name",
+      "line": 176,
+      "source": "bundle"
+    }
+  ],
+  "certificate_write_lines": [
+    {
+      "line": 38,
+      "text": "    return json.dumps(value, sort_keys=True, separators=(\",\", \":\")).encode()"
+    },
+    {
+      "line": 45,
+      "text": "def write_json(path: Path, value) -> None:"
+    },
+    {
+      "line": 47,
+      "text": "    path.write_text(json.dumps(value, indent=2, sort_keys=True) + \"\\n\")"
+    },
+    {
+      "line": 72,
+      "text": "        \"Public instance:\\n\" + json.dumps(instance, sort_keys=True, separators=(\",\", \":\"))"
+    },
+    {
+      "line": 112,
+      "text": "        raise SystemExit(\"provider health gate failed: \" + json.dumps(checks, sort_keys=True))"
+    },
+    {
+      "line": 127,
+      "text": "    write_json(OUT / \"EXECUTION_FREEZE.json\", {"
+    },
+    {
+      "line": 141,
+      "text": "    write_json(OUT / \"schedule.json\", {\"schedule\": schedule_rows, \"schedule_seed\": 20261018})"
+    },
+    {
+      "line": 151,
+      "text": "        write_json(case / \"session_manifest.json\", {"
+    },
+    {
+      "line": 161,
+      "text": "            write_json(case / \"provider_metadata.json\", result[\"metadata\"])"
+    },
+    {
+      "line": 167,
+      "text": "            write_json(case / \"target_state.private.json\", target)"
+    },
+    {
+      "line": 172,
+      "text": "            cert = helpers.make_certificate(case, session_id, base_id, task, condition, seed, execution, target_status)"
+    },
+    {
+      "line": 173,
+      "text": "            cert_path = case / \"certificate.private.json\"; write_json(cert_path, cert)"
+    },
+    {
+      "line": 175,
+      "text": "            write_json(bundle, {\"case_id\": session_id, \"target_state_path\": str(case / \"target_state.private.json\"), \"candidate_path\": str(case / \"candidate_output.json\"), \"certificate_path\": str(cert_path)})"
+    },
+    {
+      "line": 186,
+      "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+    },
+    {
+      "line": 189,
+      "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+    },
+    {
+      "line": 192,
+      "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+    },
+    {
+      "line": 193,
+      "text": "    write_json(OUT / \"pilot_results.json\", {"
+    },
+    {
+      "line": 198,
+      "text": "    print(json.dumps({\"output\": str(OUT), \"rows\": len(rows), \"provider_charge_usd\": 0.0, \"provider_route\": ROUTE}, indent=2, sort_keys=True))"
+    }
+  ],
+  "cli_or_input_lines": [],
+  "external_interface_detected": false,
+  "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_replacement_v1.py",
+  "sha256": "76f5b530a0a805e8dcbe3a44e23ae75fae1038103a5fc4a1d79e6bd9e850ad8d"
+}

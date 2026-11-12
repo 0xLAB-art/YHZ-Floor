@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "wsl_current_has_no_n_valid": true,
+    "reachable_named_path_versions_have_no_n_valid": true,
+    "wsl_method_records_trials_and_rounds": true,
+    "vmware_explicit_n_valid": true
+  },
+  "all_pass": true,
+  "named_path_git_history": [
+    {
+      "commit": "b6ce150aaad0a72c1e42c52a8a5ea2d8ac5b7956",
+      "blob_sha256": "6392cab01b69360ca5b887ff3e1863554545e0bfc9ae9e673425e119c908a4d6",
+      "contains_n_valid": false
+    },
+    {
+      "commit": "368fea3e6d20c3ebc52901713c0c2d66a145a787",
+      "blob_sha256": "6392cab01b69360ca5b887ff3e1863554545e0bfc9ae9e673425e119c908a4d6",
+      "contains_n_valid": false
+    }
+  ],
+  "wsl_method": "Interleaved 1000-block chunks, zero-key vs ones-key, 10k rounds, 10 trials",
+  "vmware_n_valid": 90000,
+  "interpretation": "No comparable WSL2 retained-valid-sample count established. Do not promote counts from later summaries or multiply round/chunk/trial units into an invented trimmed census.",
+  "input_sha256": {
+    "ACTS-ATTACK/data/A1_openssl_timing.json": "6392cab01b69360ca5b887ff3e1863554545e0bfc9ae9e673425e119c908a4d6",
+    "ACTS-ATTACK/data/A1_vmware_timing.json": "73e89c695d9b405b6b12208ffd2b522eaf8feed5d5fc900abc48e64c019cb92a"
+  }
+}

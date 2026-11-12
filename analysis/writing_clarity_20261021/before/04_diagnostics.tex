@@ -1,0 +1,80 @@
+\subsection{Operational and Contract Diagnostics}\label{sec:diagnostics}
+The construction results above concern declared task conditions. Historical
+records and corrected contracts explain why a missing recovery cannot always
+be assigned to cryptanalytic failure. Their operational populations and weaker
+reconstruction support remain separate from the matched and prospective studies.
+
+\paragraph{Historical Transcript Census}\label{sec:historical}
+A census of 74 retained session-end records (V2/V3 byte-identical copies
+counted once) yields 42 accepted, 2 rejected, and 30 no-verdict (R tier); the
+per-task split and the service-secret claims are in the supplement and are
+recomputed by the artifact's study replay. The census
+is not pooled with the prospective or legacy cohorts; earlier tables reused run
+numbers across tables with no reconciled common membership, so no unified
+historical attack rate is reported.
+
+\paragraph{Legacy Agent Loop}\label{sec:legacy}
+The legacy real-agent loop (EXP-014) schedules 54 sessions. Twenty-eight are
+provider-unavailable (retained, never counted as failures); 3 are relay-invalid;
+23 are valid, of which 10 succeed. The yield is 10/23 $=$ 43.5\% on the valid
+subset and 10/51 $=$ 19.6\% provider-inclusive (R tier); the population
+partition is in the supplement. Terminal statuses: 10 SUCCESS, 12 AGENT\_GIVEUP,
+4 ORACLE\_FAIL. Canonical session statuses are reported separately from the
+legacy \texttt{no\_claim}/\texttt{failure} labels: provider-unavailable and
+relay-invalid rows are excluded under the stated rules, and their field-level
+mapping stays in the run-level audit rather than becoming a V4 denominator.
+
+Per-task: RC4 8/12, ChaCha20 2/3, CBC 0/4, ECDSA 0/4. Clock drift across 51
+paired sessions has median $\approx$0.049\,ms; 4 rows exceed 1\,ms (max
+$\approx$1{,}301\,ms) and 18 exceed 0.1\,ms; the strict timing-admissible subset
+is 19 sessions. Agent-session medians ($T_M$, legacy): RC4 8.37\,s ($n{=}8$),
+ChaCha20 3.57\,s ($n{=}2$). These are session spans over the successful
+sessions and are not the $T_{op}$ operation spans of Section~\ref{sec:floor}.
+
+\paragraph{Failure Anatomy}\label{sec:failures}
+Across 230 attempts in the continuation cohorts, 135 do not reach success:
+48 tool failures + 23 harness failures (52.6\% combined), 45 oracle failures
+(33.3\%), 13 silent refusals (9.6\%), and 6 timeout/give-up; a separate
+545-record census gives the same ordering, and two further negative arms are
+retained (a clean-primary CBC arm, 15 records, all tool/give-up/timeout
+non-successes; and a contract-v3 arm, 12/12 provider-unavailable, excluded
+under the PU rule). Tool and harness failures dominate the recorded
+non-success labels, locating an operational bottleneck rather than resolving
+the relation in those runs.
+
+\paragraph{Independent Revalidation (Checkpoint 009)}\label{sec:revalidation}
+A separately registered revalidation arm re-queries three families under
+named, unnamed, and underdetermined opportunity statements with 10 matched
+seeds each: for each of RC4, ECDSA, and XOR, 0/10 recoveries named, 0/10
+unnamed, and 10/10 correct abstentions when observations are structurally
+insufficient---90 calls, zero provider failures, \$0.1389 estimated cost.
+The retained records mark the prior report on this arm invalid (placeholder
+prompts, arm-ID mismatch) and keep it as provenance. Validation confirms
+independent local fixture recoverability with no verifier truth in the
+prompts: the bounded reading is inference/construction failure under this
+contract, not cryptographic non-identifiability (R tier). A companion
+output-contract arm (9 calls, same public instances) parses 4/9 strict
+single-object JSON responses yet finds 0 oracle recoveries: format compliance
+alone does not build a model-to-oracle path.
+
+\paragraph{Pilot and Halted Campaigns}\label{sec:pilot}
+An E4 pilot rescores 20 historical attempts: 1 operational success (1/3 on
+the rescored subset). The E2/W3 continuation campaign halts at 33/270---a
+fail-closed non-result, not a rate. Continuations EXP-024/025/026 (230-session
+and related cohorts) are separate censuses, never pooled with each other or
+with the V4 cohort.
+
+
+\paragraph{Recorded Refusal Diagnostics}\label{sec:safety}
+The safety cost transfer SCT $=(1-\mathrm{SRR})/(1+\log_{10}(\mathrm{TTE}_M+1))$
+gives Claw Code SCT 0.671 against an aligned Gemma4 configuration at 0.150, a
+$4.5\times$ reduction (R tier, $n{=}5$/model, exploratory). This is a response
+study --- a generated answer is not an executed exploit --- so it reports no
+chain result. The composite is retained here as a historical diagnostic, not a
+validated capability or risk measure. The artifact recomputes the refusal
+rates; the supplement records the escalation ladder, the four silent
+refusals, and the comparability limits.
+
+These diagnostics qualify how construction outcomes are counted. Even an
+accepted recovery program leaves a further question: does the target permit
+the claimed security effect? The next section tests that requirement.

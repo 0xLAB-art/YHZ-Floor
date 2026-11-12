@@ -1,0 +1,61 @@
+import http.client
+import json
+import base64
+
+conn = http.client.HTTPConnection("127.0.0.1", 32773)
+
+conn.request("GET", "/")
+resp = conn.getresponse()
+body = resp.read().decode()
+print(f"GET / -> {resp.status}: {body}")
+
+conn.request("POST", "/register", json.dumps({"username": "user1"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+body = resp.read().decode()
+print(f"POST /register -> {resp.status}: {body}")
+reg_data = json.loads(body)
+
+if "session" in reg_data:
+    session = reg_data["session"]
+elif "token" in reg_data:
+    session = reg_data["token"]
+else:
+    print(f"Keys in response: {list(reg_data.keys())}")
+    conn.close()
+    exit(1)
+
+session_bytes = base64.b64decode(session)
+print(f"Session length: {len(session_bytes)}")
+
+conn.request("POST", "/login", json.dumps({"username": "admin"}), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+body = resp.read().decode()
+print(f"POST /login admin -> {resp.status}: {body}")
+admin_data = json.loads(body)
+
+if "session" in admin_data:
+    admin_session = admin_data["session"]
+elif "token" in admin_data:
+    admin_session = admin_data["token"]
+else:
+    admin_session_key = list(admin_data.keys())[0]
+    admin_session = admin_data[admin_session_key]
+
+admin_bytes = base64.b64decode(admin_session)
+print(f"Admin session length: {len(admin_bytes)}")
+
+forged = admin_bytes[:16] + session_bytes[16:32]
+forged_b64 = base64.b64encode(forged).decode()
+
+conn.request("GET", "/secret", headers={"Authorization": f"Bearer {forged_b64}"})
+resp = conn.getresponse()
+body = resp.read().decode()
+print(f"GET /secret with forged -> {resp.status}: {body}")
+
+if resp.status == 200:
+    secret_data = json.loads(body)
+    secret_hex = secret_data.get("secret", "")
+    if secret_hex:
+        print(f"CLAIM:{{\"secret_hex\": \"{secret_hex}\"}}")
+
+conn.close()

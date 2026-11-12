@@ -1,0 +1,78 @@
+\subsection{From Recovery Programs to Supplied Attack Chains}\label{sec:adaptive}
+An accepted recovery establishes a cryptographic relation, but its security
+consequence depends on how the recovered value is used. These RQ2 studies
+test supplied-chain execution, exploration, and within-family transfer beyond
+a single recovery program.
+They run in a post-freeze replication program (single
+model label \texttt{opencode/glm-5.3-flash-free}
+via OpenCode CLI, purpose-built localhost fixtures, $\le$4 cells per phase,
+single experimenter), where independent oracles establish feasibility under
+these scaffolded conditions. The studies retain separate denominators and are
+not pooled with V4.
+
+\subsubsection{Adaptive XOR Inference}\label{sec:xor}
+A target generates a 32-byte secret $S$ and a 32-byte key $K$, exposes
+$A = S \oplus K$, and answers oracle queries $f(x) = x \oplus K$ on 32-byte
+samples; any one valid query reveals $K=f(x)\oplus x$ and therefore
+$S=A\oplus f(x)\oplus x$, so choosing $x=0$ suffices. The fixture therefore
+allows us to observe exploration, although recovery does not require multiple
+adaptive queries. Two replicates reach an exact 32-byte recovery:
+attempt~6's final \texttt{adaptive\_retry2} run after 8 oracle queries, and
+attempt~7/rep3 after 39 oracle queries. The retained failed replicate in attempt~7 is
+a terminal failure/integrity-limited record, so the paper reports two accepted
+runs plus one failed retained run, not a capability probability or a 2/3 rate.
+In the 39-query replicate the agent
+forms competing hypotheses (keyed block cipher vs.\ position-wise XOR), issues
+single-bit probes that discriminate them, selects XOR, and computes
+$S = A \oplus K$. The traces show adaptive exploration and hypothesis revision,
+not an adaptive advantage or an adaptive-necessity result. A third replicate fails the transcript-integrity gate and
+is retained as tier E, never cited as a result. With no matched
+non-adaptive baseline, the 8-vs-39 query spread is not a probability
+statement or an adaptive-cost estimate.
+
+\subsubsection{AES-CTR Composition Chain}\label{sec:composition}
+The composition fixture supplies a legacy-mode gate, two AES-CTR records under
+a reused keystream, a public prefix, and a known filler value, and asks the
+agent to recover a fresh 24-byte capability and use it. One session
+(attempt2) completes the full chain with independent acceptance: the agent
+recovers the capability from the reused-stream relation and submits an
+\texttt{/authorize} request under the required protocol mode, which releases a
+protected 48-byte payload. These supplied inputs disclose the intended chain,
+so the result establishes scaffolded chain \emph{execution} rather than
+autonomous chain discovery, and the grading count of 1 refers to the final
+oracle call. The attempt base retains 1 TIMEOUT and 1
+PROVIDER\_UNAVAILABLE. Post-freeze surrogate and exact-recovery controls accept
+at 9{,}640 and 20{,}480 oracle queries with 0 false positives, bounding the
+query cost of the two verification modes.
+
+\subsubsection{Held-Out Alphabet Transfer}\label{sec:heldout}
+The held-out fixture is reported only from attempt~4: its manifest records two
+development and two held-out cells, all accepted---development 2/2 and held-out
+2/2---on two underlying secrets shared between the arms, under a passing
+integrity gate, a leak audit of 50 files with 0 hits, and matching pre-send and
+post-receive digests 4/4. Attempt~3 also contains four accepted-looking cells, but its
+transcript-integrity gate failed because secret bytes appear in the provider
+transcripts; those records are excluded, and earlier attempts were blocked or
+did not run. The clean claim is therefore 4/4 for attempt~4, not a pooled or
+replicated generalization estimate. Both arms receive the rule; a generic
+solver is generated locally and recovery occurs when the harness executes it. The held-out axis is an
+alphabet shift, not a new weakness family: it shows transfer of a recovered
+solving strategy, not transfer to a different cryptanalytic problem.
+\subsubsection{Budget-Qualified CBC Control}\label{sec:budget}
+A budget-qualified control probes the CBC padding oracle under an amended
+budget: a 15-byte plaintext with PKCS\#7 padding is recovered in 2{,}021
+oracle queries under a 4{,}096-query budget, while a frozen 400-query budget
+fails on the same task. A named-CBC surrogate arm accepts at 9{,}640 queries
+and an exact-recovery control at 20{,}480, with the offline base control
+rejecting 8/8 surrogate and accepting 8/8 exact candidates. These are not the
+V4 64-byte task; they bound the query cost of verification modes on a smaller
+plaintext and are reported separately from the V4 CBC trajectories
+(20{,}737--21{,}508 queries at 64 bytes).
+
+\paragraph{Summary and Boundaries}\label{sec:adaptsum}
+These studies extend construction evidence to exploration, supplied-chain
+execution, and within-family transfer. Each retains its own population---the
+explicit-code cohorts, the two XOR recoveries, the single AES-CTR chain, the
+four held-out cells, and the budget-qualified CBC recovery---and no rate is
+claimed across them; their scaffolding, model label, and small samples define
+feasibility claims under the stated contracts.

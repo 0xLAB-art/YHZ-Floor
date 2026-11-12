@@ -1,0 +1,41 @@
+{
+  "context": {
+    "attempt_id": "e2a-H_BAD_CH_02",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "attribution_claim",
+    "role": "aggregator",
+    "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+  },
+  "context_signature_hex": "8b688ed0a4f748293918ffa29cff3996f23d3db2578044e83a347abf33d40e8d97fbff85cd60c79d7767c7f1ae8f4c893774a780cd67976ed94ee1704ad4e904",
+  "issuer_role": "aggregator",
+  "kind": "attribution_claim",
+  "record": {
+    "context": "e2a:evidence:v1",
+    "domain": "heb1:evidence:v1",
+    "format": "heb1-protected-signing-v1",
+    "issuer_role": "aggregator",
+    "key_id": "ed25519-227ead9f7504715d064d5ae5",
+    "kind": "attribution_claim",
+    "payload": {
+      "attempt_id": "e2a-H_BAD_CH_02",
+      "attributed_success": false,
+      "case_id": "H_BAD_CH_02",
+      "context": {
+        "attempt_id": "e2a-H_BAD_CH_02",
+        "domain": "e2a:evidence:v1",
+        "epoch": 1,
+        "kind": "attribution_claim",
+        "role": "aggregator",
+        "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+      },
+      "decision": "REJECT",
+      "epoch": 1,
+      "reason": "cryptographic-predicate-false",
+      "reason_family": "contradicted_by_evidence",
+      "target_id": "ChaCha20_Nonce_Repeat-seed-02"
+    },
+    "signature_hex": "08b8e9073aea51a758e2c1bebc83a38f33630d55f4575825eb91e4b343235f8fb0022a7eada1fcf5499317a7684ed39fc2024dc0046a71af896a005a073aab04"
+  },
+  "schema": "e2a-signed-record/1"
+}

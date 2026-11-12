@@ -1,0 +1,77 @@
+{
+  "generated_utc": "2026-10-07T13:52:06.473926+00:00",
+  "draft": false,
+  "seed": 20261026,
+  "effects": [
+    {
+      "contrast": "combined",
+      "effect_ms": -1.6955930000000003,
+      "ci95_ms": [
+        -1.9128159999999992,
+        -1.5897290687500003
+      ],
+      "dudect_p": 8.94593894773284e-34,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | timer=perf_counter_ns_monotonic",
+      "effect_ms": -1.8936117500000005,
+      "ci95_ms": [
+        -1.9531062999999997,
+        -1.6039432124999997
+      ],
+      "dudect_p": 2.256289551139209e-20,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | timer=getruseru_utime_split",
+      "effect_ms": -1.5510775000000003,
+      "ci95_ms": [
+        -1.88773825625,
+        -1.49756596875
+      ],
+      "dudect_p": 3.2669756806300952e-15,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | cache=cold",
+      "effect_ms": -1.6955930000000003,
+      "ci95_ms": [
+        -2.0857916,
+        -1.5812168062499985
+      ],
+      "dudect_p": 4.61772442493777e-16,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | cache=warm",
+      "effect_ms": -1.75883675,
+      "ci95_ms": [
+        -1.77907271875,
+        -1.7448239374999999
+      ],
+      "dudect_p": 0.0,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | smt=on",
+      "effect_ms": -1.4412515,
+      "ci95_ms": [
+        -1.9702828500000003,
+        -1.41588931875
+      ],
+      "dudect_p": 7.102366949348937e-14,
+      "verdict": "difference"
+    },
+    {
+      "contrast": "build | smt=off",
+      "effect_ms": -1.8908987500000003,
+      "ci95_ms": [
+        -1.9507919375000002,
+        -1.8484358812500006
+      ],
+      "dudect_p": 1.9711022906173608e-25,
+      "verdict": "difference"
+    }
+  ]
+}

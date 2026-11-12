@@ -1,0 +1,14 @@
+{
+ "model": "gpt-5.6-sol",
+ "review": "amend4_verify",
+ "elapsed_s": 56.0,
+ "stop_reason": "end_turn",
+ "content": "{\"B1\":{\"total\":168,\"by_label\":{\"gpt-5.6-sol\":56,\"gpt-6-astra\":56,\"gpt-6.1-sol\":56},\"by_status\":{\"SUCCESS\":11,\"ORACLE_FAIL\":24,\"CRASH\":0,\"TIMEOUT\":0,\"AGENT_GIVEUP\":61,\"PROVIDER_UNAVAILABLE\":72},\"c1_accepted\":11,\"c2_accepted\":24},\"B2\":{\"programs\":57,\"oracle_match_c1\":11,\"oracle_match_c2\":57,\"declared_v4\":55,\"stress_repaired\":52},\"B3\":{\"violation_kinds\":{\"disallowed-boundary\":2},\"import_violation_exists\":false},\"B4\":{\"tasks_with_programs\":[\"eps\",\"lowe\"],\"tasks_with_zero_programs\":[\"eps_part2\",\"almost_xor\",\"another_xor\",\"babycrypto\",\"crack_me\"]},\"B5\":{\"gpt-5.6-sol\":{\"eps\":{\"status\":\"defined\",\"R0\":{\"rate\":1.0,\"n\":8},\"RT\":{\"rate\":1.0,\"n\":6}},\"lowe\":{\"status\":\"undefined\",\"n\":{\"R0\":2,\"RT\":0}}},\"gpt-6-astra\":{\"eps\":{\"status\":\"defined\",\"R0\":{\"rate\":1.0,\"n\":8},\"RT\":{\"rate\":1.0,\"n\":8}},\"lowe\":{\"status\":\"undefined\",\"n\":{\"R0\":3,\"RT\":0}}},\"gpt-6.1-sol\":{\"eps\":{\"status\":\"defined\",\"R0\":{\"rate\":1.0,\"n\":8},\"RT\":{\"rate\":1.0,\"n\":8}},\"lowe\":{\"status\":\"undefined\",\"n\":{\"R0\":4,\"RT\":0}}}},\"B6\":{\"verdict\":true,\"tasks\":[\"eps\",\"lowe\"]}}",
+ "usage": {
+  "input_tokens": 16193,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 6030,
+  "server_tool_use": null
+ }
+}

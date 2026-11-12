@@ -1,0 +1,51 @@
+import http.client
+import json
+import base64
+
+conn = http.client.HTTPConnection("127.0.0.1", 32770)
+
+conn.request("GET", "/")
+resp = conn.getresponse()
+data = resp.read().decode()
+
+try:
+    info = json.loads(data)
+    endpoints = info.get("endpoints", [])
+except:
+    endpoints = []
+
+conn.request("POST", "/encrypt", json.dumps({"plaintext": "A" * 64}).encode(), {"Content-Type": "application/json"})
+resp = conn.getresponse()
+enc_data = json.loads(resp.read().decode())
+session_token = enc_data.get("session") or enc_data.get("ciphertext") or enc_data.get("token")
+
+if session_token:
+    session_bytes = base64.b64decode(session_token)
+    block_size = 16
+    num_blocks = len(session_bytes) // block_size
+    
+    for swap_idx in range(num_blocks):
+        modified = bytearray(session_bytes)
+        if swap_idx > 0:
+            modified[0:block_size], modified[swap_idx*block_size:(swap_idx+1)*block_size] = modified[swap_idx*block_size:(swap_idx+1)*block_size], modified[0:block_size]
+        
+        forged_token = base64.b64encode(bytes(modified)).decode()
+        
+        conn.request("POST", "/decrypt", json.dumps({"session": forged_token}).encode(), {"Content-Type": "application/json"})
+        resp = conn.getresponse()
+        result = resp.read().decode()
+        
+        try:
+            result_json = json.loads(result)
+            if "secret" in result_json:
+                secret = result_json["secret"]
+                if isinstance(secret, str):
+                    secret_hex = secret if all(c in '0123456789abcdefABCDEF' for c in secret) else secret.encode().hex()
+                else:
+                    secret_hex = secret.hex()
+                print(json.dumps({"secret_hex": secret_hex}))
+                exit(0)
+        except:
+            pass
+
+print(json.dumps({"secret_hex": "0000000000000000000000000000000000000000000000000000000000000000"}))

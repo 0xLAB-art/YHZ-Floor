@@ -1,0 +1,510 @@
+{
+  "heb1_frozen_current_checks": [
+    {
+      "actual": "ab25961e5410aee514e209b921cd0c7842cadd4af90705b6220286ee71f646b7",
+      "expected": "ab25961e5410aee514e209b921cd0c7842cadd4af90705b6220286ee71f646b7",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EXPERIMENT_PROTOCOL_20261019.md",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "42e27af97bbaeaeff5dbe586e0a3c2dc26af30332b4e697bbfd2aa93337cd0df",
+      "expected": "42e27af97bbaeaeff5dbe586e0a3c2dc26af30332b4e697bbfd2aa93337cd0df",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_common.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "1da5d88f406e3cf83e1da96015d7a5478c9078f018c9c0dc9cee3bceb7fa4135",
+      "expected": "1da5d88f406e3cf83e1da96015d7a5478c9078f018c9c0dc9cee3bceb7fa4135",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_crypto_lib.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "cd3d6424fd85457dddbaf59fc3b962ca5e091832eec297e57f1f0dd7523f3c4e",
+      "expected": "cd3d6424fd85457dddbaf59fc3b962ca5e091832eec297e57f1f0dd7523f3c4e",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_fixtures.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "d84ba407dbf33ea1db59dd10cc2f0ea3736d2ef5d8101716b9e419718ec8d665",
+      "expected": "d84ba407dbf33ea1db59dd10cc2f0ea3736d2ef5d8101716b9e419718ec8d665",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_runner.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "be77b017f278cac79d239a61c768370ee66f385daea9f4e05823f3183e2a3fc6",
+      "expected": "be77b017f278cac79d239a61c768370ee66f385daea9f4e05823f3183e2a3fc6",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_adjudicator.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "683102ee1211a063e58b3d1af70ec1a581a37adb4006bbf8aeb95a82d23744a1",
+      "expected": "683102ee1211a063e58b3d1af70ec1a581a37adb4006bbf8aeb95a82d23744a1",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_certificate_schema.json",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "74ae7c747e3c6c840885c3363fadc1958b4ed1968a7b1301a5eacfe1d7533faf",
+      "expected": "74ae7c747e3c6c840885c3363fadc1958b4ed1968a7b1301a5eacfe1d7533faf",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_v0_schema_reference.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "9e73e83cf57f963c1fd59d625c99a2dd913631a7d920745c6899b3ee5c3ebef3",
+      "expected": "9e73e83cf57f963c1fd59d625c99a2dd913631a7d920745c6899b3ee5c3ebef3",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_v1_hash_integrity.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "match": true
+    },
+    {
+      "actual": "3585f876a39d136eb550db1cccb04a4b23f30e4b46a5bb2e6d97efb55194c53d",
+      "expected": "3585f876a39d136eb550db1cccb04a4b23f30e4b46a5bb2e6d97efb55194c53d",
+      "file": "sp2027/analysis/heb1_crossboundary_20261019/build/heb1_v2_claim_binding.py",
+      "manifest": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "match": true
+    }
+  ],
+  "independence": {
+    "calibration_cases": 44,
+    "heldout_generator_imports": {
+      "sp2027/analysis/experiment_b_20261019/heldout/eb_iar_b_heldout.py": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import shutil",
+        "import sys",
+        "from pathlib import Path"
+      ],
+      "sp2027/analysis/experiment_b_20261019/iar_c/eb_independent_adj.py": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import sys",
+        "from pathlib import Path",
+        "from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey",
+        "import eb_crypto  # noqa: E402  (shared target-domain primitive module)"
+      ],
+      "sp2027/analysis/experiment_b_20261019/iar_c/eb_independent_gen.py": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import shutil",
+        "import sys",
+        "from pathlib import Path",
+        "from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey",
+        "import eb_crypto  # noqa: E402"
+      ],
+      "sp2027/analysis/heb1_crossboundary_20261019/heldout/heb1_heldout_gen.py": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import shutil",
+        "import sys",
+        "from collections import Counter",
+        "from pathlib import Path",
+        "import heb1_fixtures as F  # frozen constructors; read-only import  # noqa: E402",
+        "from heb1_common import (STRONG_CLAIMS, blob, build_cert, build_request,  # noqa: E402"
+      ]
+    },
+    "iar_c_calibration_and_preserved_identical_case_results": true,
+    "iar_c_calibration_and_preserved_same_ids": true,
+    "preserved_cases": 44
+  },
+  "mutation_census": [
+    {
+      "accepted_evaluations": 94,
+      "accepted_operators": {
+        "completion:claims_attribution_not_established": 25,
+        "completion:claims_attribution_proven": 22,
+        "output:claims_attribution_not_established": 25,
+        "output:claims_attribution_proven": 22
+      },
+      "corpus_size": 1407,
+      "evaluations": 2814,
+      "evidence_class": "aggregate census reconstruction; no retained per-mutant decision table or fresh soundness execution",
+      "genuine_cases": 22,
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_heb2_scripted.json",
+      "reported_evaluations": 2814,
+      "seed": 20261020,
+      "violations": 0
+    },
+    {
+      "accepted_evaluations": 43,
+      "accepted_operators": {
+        "completion:claims_attribution_not_established": 8,
+        "completion:claims_attribution_proven": 10,
+        "output:claims_attribution_not_established": 11,
+        "output:claims_attribution_proven": 14
+      },
+      "corpus_size": 1407,
+      "evaluations": 2814,
+      "evidence_class": "aggregate census reconstruction; no retained per-mutant decision table or fresh soundness execution",
+      "genuine_cases": 22,
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_model_arm_run1.json",
+      "reported_evaluations": 2814,
+      "seed": 20261020,
+      "violations": 0
+    },
+    {
+      "accepted_evaluations": 43,
+      "accepted_operators": {
+        "completion:claims_attribution_not_established": 8,
+        "completion:claims_attribution_proven": 10,
+        "output:claims_attribution_not_established": 11,
+        "output:claims_attribution_proven": 14
+      },
+      "corpus_size": 1407,
+      "evaluations": 2814,
+      "evidence_class": "aggregate census reconstruction; no retained per-mutant decision table or fresh soundness execution",
+      "genuine_cases": 22,
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_model_arm_run2.json",
+      "reported_evaluations": 2814,
+      "seed": 20261020,
+      "violations": 0
+    },
+    {
+      "accepted_evaluations": 94,
+      "accepted_operators": {
+        "completion:claims_attribution_not_established": 25,
+        "completion:claims_attribution_proven": 22,
+        "output:claims_attribution_not_established": 25,
+        "output:claims_attribution_proven": 22
+      },
+      "corpus_size": 1407,
+      "evaluations": 2814,
+      "evidence_class": "aggregate census reconstruction; no retained per-mutant decision table or fresh soundness execution",
+      "genuine_cases": 22,
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_stage1_scripted.json",
+      "reported_evaluations": 2814,
+      "seed": 20261020,
+      "violations": 0
+    }
+  ],
+  "sources": [
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/translation_results_v2.json",
+      "sha256": "be712fa8e1474e8dfc0455d72dd591226bb5e2d1450fba00c42f96378adad8d8",
+      "size": 45404
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_heb2_scripted.json",
+      "sha256": "e2fa2a9ca3b59879c898dd0209a0c82e86ff1a31e0acf3cb4dc4c8d7a9041f0d",
+      "size": 9201
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_model_arm_run1.json",
+      "sha256": "b98be4154ce37f0400fcc55218b5d2eb349baee1383599a443a16001c5f4f07f",
+      "size": 9082
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_model_arm_run2.json",
+      "sha256": "97ec556bf65ba9718e5daf64a68e6a545c46b2d897b27e283055d0f580f146a4",
+      "size": 9082
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/soundness_stage1_scripted.json",
+      "sha256": "e2fa2a9ca3b59879c898dd0209a0c82e86ff1a31e0acf3cb4dc4c8d7a9041f0d",
+      "size": 9201
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/iar_c/runs/20261019_121420/results.json",
+      "sha256": "cb3df2b0a6668812990536dd3f6bc8b24a0b334ea04403cc4b7b0c1e7b79c185",
+      "size": 35982
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/iar_c/runs/20261019_121621/results.json",
+      "sha256": "7ad02c14f9328d82ccdfe3cdfbe7b0d0d88143b6f8393222701c7872187de785",
+      "size": 37750
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_CONFIG_FREEZE.json",
+      "sha256": "a538c3df9c9b6179a75561a8e4073a0efd22ae431921e5bbbd4d74d58d1cb360",
+      "size": 736
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/freeze/HEB1_VALIDATOR_FREEZE.json",
+      "sha256": "0424eaa326130a7a8fb0ee708330aa9085414ff59efa283d583c5149c093c5fb",
+      "size": 782
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/iar_c/freeze/IAR_C_FREEZE.json",
+      "sha256": "a2145de564c1781b9463a0a9cd6ed1c908a5de16dc240b67ac196a29bacb7ff8",
+      "size": 3960
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/iar_c/freeze/IAR_C_CASE_MANIFEST.json",
+      "sha256": "d2640d40988611e0fc65e228ae31c33cb6e06324ec6743f590caa7baaa6c0faf",
+      "size": 96294
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/freeze/HEB_IARB_FREEZE.json",
+      "sha256": "cc0fde9e750b84baea80fe3d9bf58f6ca88ae53370b769b74508856de59e0570",
+      "size": 1459
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_ADJUDICATION_RESPONSE_20261019.md",
+      "sha256": "d0ab76e110d9786b2729d1ea276cb8dc2d969d22420b8e74b9ed410741564ac1",
+      "size": 13770
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EVALUATION_REPORT.md",
+      "sha256": "fb7993a4e8d3d67c99efee5dddac2a57c4ab73611b55f09f0cfea3415008db1b",
+      "size": 9937
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_EXPERIMENT_PROTOCOL_20261019.md",
+      "sha256": "ab25961e5410aee514e209b921cd0c7842cadd4af90705b6220286ee71f646b7",
+      "size": 7988
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/HEB1_PRIOR_ART_ASSESSMENT_20261019.md",
+      "sha256": "a4fab74bc45df34a56311f11d862d8097188974f7804cd2c0f9409e32137c7ee",
+      "size": 14625
+    },
+    {
+      "path": "sp2027/analysis/heb1_crossboundary_20261019/PRIOR_ART_NOTES_20261019.md",
+      "sha256": "a16f5ce5b5e286d0993150fe47f4255ca3257592837ec8ba932b45141d183afe",
+      "size": 11523
+    },
+    {
+      "path": "sp2027/analysis/heb1_independent_adversarial_audit_20261019/AUDIT_PROTOCOL.md",
+      "sha256": "0751bf54b2a276b8664bf7c6166b40cb794982c9a2284667c601137e67627961",
+      "size": 2406
+    },
+    {
+      "path": "sp2027/analysis/heb1_independent_adversarial_audit_20261019/EVIDENCE_LEDGER.md",
+      "sha256": "8d065d3a2a3a231a7960fac3635ccd6f667c4196b8cdc24880c6b79bcf6f49bc",
+      "size": 5719
+    },
+    {
+      "path": "sp2027/analysis/heb1_independent_adversarial_audit_20261019/HEB1_INDEPENDENT_ADVERSARIAL_AUDIT.md",
+      "sha256": "c7e8eb680afd2a91d16edfd429252b782c736ac507f358c2c0e5e117a355b8ba",
+      "size": 13663
+    },
+    {
+      "path": "sp2027/analysis/heb1_independent_adversarial_audit_20261019/HEB1_MULTIAGENT_REAUDIT_20261019.md",
+      "sha256": "150b485af5179950dfe8d96a0e090f4258998b7b5d635111a2b9e7cf7ea3c37a",
+      "size": 18200
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/EXPERIMENT_B_PROTOCOL.md",
+      "sha256": "f44218172f43177498ee30090ee999a6c3c8e132332c153bc07737020557fe2b",
+      "size": 15538
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/EXPERIMENT_B_REPORT.md",
+      "sha256": "fd6cdb6bceb5dbe593459b52aa20098934dfa7fb75edc0c00a17123a7e694667",
+      "size": 32692
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/IAR_B_RESULTS_REPORT.md",
+      "sha256": "e5a988fbfcf5a7505575a48534304afbe41594b31678bdf98f5dea40fe0e770a",
+      "size": 10713
+    },
+    {
+      "path": "sp2027/analysis/experiment_b_20261019/iar_c/IAR_C_RESULTS_REPORT.md",
+      "sha256": "7f9c7ecbd78c38e3898a49057e40dc14b6462608a54d5bec134dc44d0956ea02",
+      "size": 10815
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019/stage1_attribution/s1_deviations.md",
+      "sha256": "d732a055ec0d2cd6473671529b2c453a5c2dd5a1eea9b11f4777e90a0aa5991d",
+      "size": 11239
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019/stage1_attribution/s1_protocol.md",
+      "sha256": "4ed638ee41a4b296de72e4f3015284d0de9994f7df49481901e0c5804c69e027",
+      "size": 21541
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/END_TO_END_ATTRIBUTION_PROTOCOL.md",
+      "sha256": "5681964a7caabbf1253b5fbf044d0db43a912f9e8376879e47ba9f72f7f33f18",
+      "size": 6187
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/END_TO_END_ATTRIBUTION_RESULTS.md",
+      "sha256": "f18506fedee72caf289267f633f15e7aabe806e22edc8b80ccba60c2fcb10475",
+      "size": 7711
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/FINAL_FOUR_OBJECTIVE_DETERMINATION.md",
+      "sha256": "d37144a478d225921c80f504c77384375d9e43ec94b01f0624de86592a01a812",
+      "size": 9901
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/HEB2_CONTRACT_V2_RESULTS.md",
+      "sha256": "bdfb8e6f3e22ea71f44caf1031200c2a9e02947c3f48f4c6d324b145e1f554aa",
+      "size": 8322
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/MASTER_PROGRESS_REPORT.md",
+      "sha256": "82820c2afe5a8300af77c3b4563a6b7846757fd220d75ecb63fff11a8b4474b0",
+      "size": 9560
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/MECHANISM_SPECIFICATION.md",
+      "sha256": "c880b2e6a6e057f286385d254d0576f855a708f37c8ac2c7b2dbc5b7f34127e2",
+      "size": 10470
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/NOVELTY_PRIOR_ART_MATRIX.md",
+      "sha256": "f4f27c370b60700570bbfc28e1863c0570068506af475fbc197d06721d6c9db0",
+      "size": 11524
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/REAL_PROVENANCE_BASELINE_COMPARISON.md",
+      "sha256": "a03a0eb68ea46e533494cf454934053a01084f70a6f58dccfd57e85da90ac219",
+      "size": 8997
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/REPOSITORY_AND_TRUST_BOUNDARY_MAP.md",
+      "sha256": "d71992d03d37ff716de91c97d0b0a502e5a5ee0d26a477923d84f9a19d1a8dc8",
+      "size": 10167
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/RESOURCE_AND_PERMISSION_REQUESTS.md",
+      "sha256": "a3f3b84c1ef688cafe93fb49e02581eb0633b60eb54417999d1a8fbc00bbfe38",
+      "size": 4481
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/SCIENTIFIC_VALIDITY_AUDIT.md",
+      "sha256": "cd319f787face4167a804356743a94523b560694bcbb4a0e3108d9eddbd732b2",
+      "size": 14366
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE0_REPOSITORY_INVENTORY.md",
+      "sha256": "e2421dae6f74621ecad56ea17dd65d3ba5d9655b171a28015a835170d662ee97",
+      "size": 4707
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE0_REPRODUCTION_REPORT.md",
+      "sha256": "6ee8aa0f6a00870a152f99b067e34ca52e30acd56d44f47716ad1a747915a56b",
+      "size": 5265
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE0_RESOURCE_GAPS.md",
+      "sha256": "006d7cec1ee8341385804f4e319c5ac13dd0b1b690ecad112051c0aa988161c8",
+      "size": 2823
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE3_BOUNDARY_RESULTS.md",
+      "sha256": "87e136360f88d5a1dadb5caf5f93f2eddf1cd6bbcfeb65d27dc9e172ca7723fc",
+      "size": 11415
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE4_AI_AGENT_COMPARISON.md",
+      "sha256": "8703016d829711e9a70fe59d9bc244d2e39fb3adb3f08123a163c085ea72b945",
+      "size": 15652
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE5_LIVE_CAMPAIGN_RESULTS.md",
+      "sha256": "5f22643c1125991fbe38b623502f35ff78914525640b0e81a7003cca28736f23",
+      "size": 7596
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/research/deliverables/STAGE6_MATCHED_TRANSLATION_RESULTS.md",
+      "sha256": "82d6c08bc8a79e2dfada77c776e1c7b9ef5bfde9b44a0c9b4c9523e9414c3fe4",
+      "size": 10517
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/stage6_matched_translation/PREREGISTRATION.md",
+      "sha256": "c3cf67788bc415435cb6f7362305677159a8639cdb107049b4f22dcc4968329a",
+      "size": 4394
+    },
+    {
+      "path": "sp2027/analysis/acts_next_phase_20261019_v2/heb2_contract_v1/PREREGISTRATION.md",
+      "sha256": "f3d7ce2f5f674faaa2b623f2af255c7228da9e7f643f2f1ad8b1171eefbc7f86",
+      "size": 7687
+    }
+  ],
+  "total_mutation_evaluations": 11256,
+  "translation_archived_row_recomputation": {
+    "in_toto_acts_integration": {
+      "accepted": 7,
+      "agreement": 21,
+      "false_promotion": [
+        1,
+        16
+      ],
+      "false_rejection": [
+        0,
+        6
+      ],
+      "stages": {
+        "not_recorded": 22
+      },
+      "total": 22
+    },
+    "in_toto_default": {
+      "accepted": 22,
+      "agreement": 6,
+      "false_promotion": [
+        16,
+        16
+      ],
+      "false_rejection": [
+        0,
+        6
+      ],
+      "stages": {
+        "not_recorded": 22
+      },
+      "total": 22
+    },
+    "in_toto_policy": {
+      "accepted": 7,
+      "agreement": 21,
+      "false_promotion": [
+        1,
+        16
+      ],
+      "false_rejection": [
+        0,
+        6
+      ],
+      "stages": {
+        "not_recorded": 22
+      },
+      "total": 22
+    },
+    "in_toto_policy_stateful": {
+      "accepted": 6,
+      "agreement": 22,
+      "false_promotion": [
+        0,
+        16
+      ],
+      "false_rejection": [
+        0,
+        6
+      ],
+      "stages": {
+        "not_recorded": 22
+      },
+      "total": 22
+    },
+    "slsa": {
+      "accepted": 0,
+      "agreement": 16,
+      "false_promotion": [
+        0,
+        16
+      ],
+      "false_rejection": [
+        6,
+        6
+      ],
+      "stages": {
+        "provenance-acquisition-rekor": 20,
+        "timeout": 2
+      },
+      "total": 22
+    }
+  }
+}

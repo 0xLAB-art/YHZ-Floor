@@ -1,0 +1,58 @@
+{
+  "agent": "trace_agent_02_executed_artifact_identity",
+  "scope": "surrogate attempt-3 identity defect and its resolution",
+  "provider_calls": false,
+  "started_utc": "\"2026-10-19T15:22:51.706234+00:00\"",
+  "dossier_dir_exists": true,
+  "dossier_index": [
+    "README.md",
+    "SHA256SUMS",
+    "evidence"
+  ],
+  "evidence_files": {
+    "executed_candidate_reconstructed_path": "sp2027/analysis/postfreeze_integrity_resolution_20261018/evidence/executed_candidate_reconstructed.py",
+    "replay_results": "sp2027/analysis/postfreeze_integrity_resolution_20261018/evidence/replay_results.json",
+    "replay_manifest": "sp2027/analysis/postfreeze_integrity_resolution_20261018/evidence/SHA256SUMS"
+  },
+  "evidence_present": {
+    "executed_candidate_reconstructed_path": true,
+    "replay_results": true,
+    "replay_manifest": false
+  },
+  "replay_high_level": {
+    "full_match": null,
+    "claim_sha256": null,
+    "claim_sha_match_run_result": true,
+    "oracle_queries_replayed": null
+  },
+  "reconstructed_source_sha256": "a5e8ed514c5c769b3e4e2dbbdd51ea276c852d11d8145b2f344ca7184f78e399",
+  "reconstructed_source_bytes": 2603,
+  "contains_code_markers": false,
+  "recorded_executed_candidate_sha256": "a5e8ed51...",
+  "recorded_archived_candidate_sha256": "4fbd70a0...",
+  "recorded_claim_object_sha256": "919ca521...",
+  "defect_summary": {
+    "what_diverged": "executed agent-bytes vs archived candidate file",
+    "resolution_method": "recover executed candidate from generator transcript; bit-exact replay against recorded oracle replies; live re-grade of reconstructed candidate",
+    "preserved_limit": "archived on-disk file is a post-run replacement and is not used as executed bytes",
+    "why_this_matters": "results must stand on hash-proven executed bytes, not on a replaced archived file"
+  },
+  "critical_issues_traced": [
+    {
+      "type": "executed_vs_archived_mismatch",
+      "where": "postfreeze_integrity_resolution_20261018 and surrounding completion records",
+      "issue": "Executed candidate bytes and archived candidate file did not agree",
+      "impact": "Could promote wrong bytes if archived file were treated as executed",
+      "status": "resolved by reconstruction + replay + live grading; archived file documented as post-run replacement"
+    },
+    {
+      "type": "claim_hash_identity",
+      "where": "same dossier",
+      "issue": "Claim-object hash is defined on canonical claim JSON, not on candidate source alone",
+      "impact": "Source hash and claim hash must not be conflated",
+      "status": "documented"
+    }
+  ],
+  "stop_rule_applied": "No provider calls; trace-only from retained integrity dossier and replay evidence.",
+  "completed_utc": "\"2026-10-19T15:22:51.732893+00:00\""
+}

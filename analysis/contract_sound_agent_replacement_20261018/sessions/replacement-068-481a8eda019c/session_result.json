@@ -1,0 +1,43 @@
+{
+  "condition": "C0",
+  "execution": {
+    "artifact_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/candidate.py",
+    "output": {
+      "reason": "ChaCha20 nonce reuse detection requires known plaintext, key material, or distinguishing oracle; ciphertexts alone are insufficient",
+      "status": "UNDERDETERMINED"
+    },
+    "output_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/candidate_output.json",
+    "returncode": 0,
+    "status": "EXECUTED",
+    "stderr_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/executor_stderr.txt",
+    "stdout_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_agent_replacement_20261018/sessions/replacement-068-481a8eda019c/executor_stdout.txt"
+  },
+  "kind": "control",
+  "latency_s": 4.79535436630249,
+  "ordinal": 68,
+  "provider_charge_usd": 0.0,
+  "provider_status": "SUCCESS",
+  "reference": {
+    "certificate_errors": [],
+    "certificate_integrity": true,
+    "crypto_details": {
+      "parse_or_math_error": true
+    },
+    "cryptographic_predicate": false,
+    "reference_verdict": "REJECTED",
+    "truth_source": "recomputed-target-candidate-and-certificate"
+  },
+  "seed": 8,
+  "session_id": "replacement-068-481a8eda019c",
+  "task": "ChaCha20_Nonce_Repeat",
+  "token_usage": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 244,
+    "output_tokens": 92
+  },
+  "validator": {
+    "decision": "ACCEPT",
+    "reason": "public-evidence-consistent"
+  }
+}

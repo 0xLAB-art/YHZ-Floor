@@ -1,0 +1,12 @@
+# RECOMPUTED 2026-11-02 after fixing analyze_p011.fisher_2x2 fallback.
+# scipy is absent, so the pure-Python fallback ran; it read the observed
+# cell as `c` instead of `a`, returning p=0.0 for every degenerate table.
+# Cohort data, acceptance counts and the estimator are unchanged; only the
+# Fisher p-values below differ from the original run.
+=== P014 AES-GCM (16 seeds x 4 cells) ===
+accepted / evaluable: {'C1': '16/16', 'C2': '0/2', 'C3': '16/16', 'C4': '0/11'}
+provider drops: {'C1': 0, 'C2': 14, 'C3': 0, 'C4': 5}
+instrument-duplicate rows: 1: ['info_contract_2x2_aesgcm_20261102__C1__seed_401__11a15b2da9d5']
+paired C1-vs-C4: 11/0 over 11 evaluable pairs, p=0.0009765625
+premise marginal 32/32 vs 0/13, p=1.369746509346368e-11
+naming marginal 16/27 vs 16/18, p=0.04548543101249314

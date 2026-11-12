@@ -1,0 +1,47 @@
+{
+  "adapter_sha256": "c2985a47aee84c39501312c26201792a8bb58a692bb5059ba2cd3a09fc3c7791",
+  "arm_b_expected_model_level_null": false,
+  "decided_floor": 8400,
+  "decision_rule": "text@4200 -> 4200; no text@4200 and text@8400 -> 8400; no text at either -> 4200 with arm-b model-level null flag",
+  "generated_at": 1793698576.1522694,
+  "note": "Diagnostic replay of one already-spent P022 instance. No P024 seed is used; the sample enters no analysis.",
+  "protocol": "P024-PROBE-TOKEN-FLOOR-v1",
+  "rows": [
+    {
+      "category": "INCOMPLETE_RESPONSE",
+      "cell": "C2",
+      "floor": 4200,
+      "label": "gpt-5.6-sol",
+      "latency_s": 70.8,
+      "outcome": "NO_TEXT",
+      "p022_seed": 2984588382247702924,
+      "prompt_sha256": "ba6ec46e6388c37b3ba1a7eb896c471bbdff96b256dc4372247355721337881b",
+      "stop_reason": "{\"stop_reason\": \"length\", \"usage\": {\"input_tokens\": 422, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0, \"output_tokens\": 4200, \"server_tool_use\": null}, \"content_block_types\": [\"text\"]}",
+      "text_chars": 0
+    },
+    {
+      "body_excerpt": "{\"id\":\"chatcmpl-Eg5D07c7pIOT3ukv0hlT3qnNO0wSM\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"{\\\"code\\\":\\\"import json\\\\nimport sys\\\\n\\\\n\\\\ndef main():\\\\n    with open(sys.argv[1], \\\\\\\"r\\\\\\\", encoding=\\\\\\\"utf-8\\\\\\\") as f:\\\\n        data = json.load(f)\\\\n\\\\n    record_length = i",
+      "cell": "C2",
+      "content_block_types": [
+        "text"
+      ],
+      "floor": 8400,
+      "label": "gpt-5.6-sol",
+      "latency_s": 70.8,
+      "outcome": "TEXT",
+      "p022_seed": 2984588382247702924,
+      "prompt_sha256": "ba6ec46e6388c37b3ba1a7eb896c471bbdff96b256dc4372247355721337881b",
+      "stop_reason": "end_turn",
+      "text_chars": 721,
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 422,
+        "output_tokens": 5919,
+        "server_tool_use": null
+      }
+    }
+  ],
+  "text_at_4200": false,
+  "text_at_8400": true
+}

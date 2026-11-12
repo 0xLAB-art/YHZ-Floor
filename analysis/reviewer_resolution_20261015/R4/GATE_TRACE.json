@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "control_fixed_vs_random": true,
+    "canary_is_cross_build": true,
+    "no_vulnerable_random_class": true,
+    "retained_control_classes_60_each": true,
+    "no_class_samples_in_verdict": true
+  },
+  "all_pass": true,
+  "welch_arguments": [
+    [
+      "samples['ct_fix']",
+      "samples['ct_rand']"
+    ],
+    [
+      "samples['vuln_spot']",
+      "samples['ct_rand']"
+    ]
+  ],
+  "historical_verdict": "PASS",
+  "control_p": 0.6768910193567681,
+  "canary_p_as_recorded": 0.0,
+  "interpretation": "Cross-build runtime canary and failure to reject control seed difference are insufficient for leakage-sensitivity or constant-time assurance. No test or new trial executed.",
+  "input_sha256": {
+    "sp2027/analysis/e3_gate_check.py": "4381ba1c4c3796eba188c694a897cc4f76dd71ac432b0e96489b8e22c6a4d484",
+    "sp2027/analysis/e3_rig/gate_verdict.json": "e471eff75175b34fce954fbcb163d45c839ec6ee000fe853ac52bd44f822c1dd"
+  }
+}

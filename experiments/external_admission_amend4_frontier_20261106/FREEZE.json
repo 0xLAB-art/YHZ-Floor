@@ -1,0 +1,299 @@
+{
+ "schema": "external-admission-amend4-freeze/1",
+ "status": "FROZEN \u2014 awaiting namespace-restricted commit; the live runner refuses to run until FREEZE_COMMIT.txt exists",
+ "protocol": "PHASE2-EXTERNAL-ADMISSION-AMEND4-FRONTIER-v1",
+ "namespace": "external_admission_amend4_frontier_20261106",
+ "frozen_date": "2026-11-06",
+ "authorization": "Author decision 2026-11-06 (option B): the registered 4-of-7 portability bar receives its first full test on the paper's own frontier GPT-family labels; Amendment-3's record stands unchanged; full design in PREREGISTRATION_AMEND4_FRONTIER.md",
+ "purpose": "SHA-256 of every prompt, fixture, policy, oracle, census, seed-sweep record, gate, and harness input of Amendment 4, committed BEFORE the first experiment model call. Basis files are hash-verified read-only references.",
+ "conclusion_boundary": "portability + evaluator sensitivity under OUR stress rule only; never a native benchmark defect; census describes the pinned 2026-10-05 NYU CTF Bench release only; per-label verdicts are never pooled across labels, codings, or with any other cohort; no benchmark-quality claim",
+ "design": {
+  "grid": "3 labels x 7 tasks x {R0, RT} x seeds [421, 422, 423, 424] = 168 sessions, n=4 per (label, task, representation) cell",
+  "tasks": [
+   "2015q-cry-eps",
+   "2015q-cry-eps_part2",
+   "2017q-cry-almost_xor",
+   "2017q-cry-another_xor",
+   "2018q-cry-babycrypto",
+   "2018q-cry-lowe",
+   "2021q-cry-crack_me"
+  ],
+  "representations": [
+   "R0",
+   "RT"
+  ],
+  "seeds": [
+   421,
+   422,
+   423,
+   424
+  ],
+  "labels": [
+   "gpt-5.6-sol",
+   "gpt-6-astra",
+   "gpt-6.1-sol"
+  ],
+  "temperature": 0.2,
+  "temperature_by_label": {
+   "all": "route default (temperature field omitted for every label; the route rejects explicit 0.2 \u2014 pre-first-call amendments 1-2)"
+  },
+  "max_tokens": 4200,
+  "turns": "<=2 (turn-2 identical rejection feedback across representations)",
+  "feedback_string": "EXECUTION_OR_ORACLE_REJECTED: your previous submission did not run to completion or the oracle did not accept its output. Revise the program using only the provided artifacts and resubmit. Return exactly one JSON object with a single \"code\" string and no prose.",
+  "execution": "[python, -I, prog] list argv, shell=False, cwd = per-session sandbox holding only the declared artifacts, 30s timeout, no extra argv",
+  "oracle": {
+   "C1_primary": "stdout.strip() == pinned answer, rc==0 (registered; unchanged from Amendment 3)",
+   "C2_second_admissible_normalization": "first flag-shaped token (flag\\{[ -~]*?\\}) in stdout == pinned answer, rc==0 \u2014 registered before the first call; acceptance/SUCCESS is C1; C2 reported side by side (P024b both-codings discipline)"
+  },
+  "parser": "verbatim P009-family extract_action (JSON object with string 'code')",
+  "provider": {
+   "route": "agentrouter gateway, Anthropic-messages /v1/messages",
+   "base_url": "https://agentrouter.org",
+   "labels": [
+    "gpt-5.6-sol",
+    "gpt-6-astra",
+    "gpt-6.1-sol"
+   ],
+   "label_count": 3,
+   "identity_note": "provider-attested labels only; no hosted-weight identity claimed; claude-cli User-Agent per the frozen adapters (basis hash-verified)",
+   "key_handling": "AGENTROUTER_API_KEY read from the process environment at runtime; never printed, never written to any sp2027 artifact",
+   "substitution_order": [
+    "gpt-6.1-sol",
+    "gpt-5.6-sol",
+    "gpt-6-astra"
+   ],
+   "output_token_ceiling": 2500000,
+   "output_token_checkpoint": 2000000,
+   "accounting": "token counts ledgered per call; USD reconciled at settlement from the gateway's invoicing",
+   "two_sided_rule": "pre-content provider failures: up to 2 recorded re-attempts per failed call; exhausted => PROVIDER_UNAVAILABLE/TIMEOUT and exclusion from acceptance denominators only when no model content was produced; post-content failures keep the task-side terminal state; auth/billing errors are HARNESS_ERROR and halt the phase; >=3 consecutive pre-output session failures => halted"
+  },
+  "halt_rule": ">=3 consecutive provider-side pre-output failures => status halted",
+  "terminal_enum": [
+   "SUCCESS",
+   "CRASH",
+   "ORACLE_FAIL",
+   "TIMEOUT",
+   "AGENT_GIVEUP",
+   "MODEL_REFUSAL",
+   "TOOL_FAILURE",
+   "PROVIDER_UNAVAILABLE",
+   "HARNESS_ERROR"
+  ],
+  "crash_class": "CRASH = the FINAL submitted program exited non-zero (registered up front per the Amendment-3 decomposition finding: 103 terminal crashes hid inside ORACLE_FAIL)",
+  "artifact_name_policy": "declared basenames, materialized flat"
+ },
+ "falsifiers": {
+  "N": 7,
+  "M": 4,
+  "margin_pp": 10.0,
+  "per_label": "F1_l TRUE iff movement is DEFINED and outside \u00b110 pp on >=4 of 7 tasks, computed under C1 and under C2 separately; F2_l otherwise; F3_l requires every program's output_preserved True; undefined is never counted as movement",
+  "cross_label": ">=2 of 3 labels with F1 TRUE and F3 PASSED => replicable_across_labels; otherwise report the vector; no pooling",
+  "quantity_script": "regrade_amend4_contrast.py (both codings)"
+ },
+ "pre_freeze_checks": {
+  "census": "NYU CTF Bench: 75 crypto rows, 16 offline candidates (copied byte-identical from Amendment 3)",
+  "criterion5": "7 qualified >= 6 required (quorum MET); same grid membership",
+  "seed_range": "[421, 422, 423, 424] verified free by the sweep over every research_execution results.jsonl seed field and seeds receipt (seed_sweep_SEED_SWEEP_json; P022's 19-digit CSPRNG seeds are a different magnitude class)",
+  "decode_equality": "PASS (fixtures/decode_equality_log.json, copied byte-identical from Amendment 3)",
+  "prompt_identity": "the 14 prompt files and 10 artifacts are byte-identical to Amendment-3's frozen inputs (PROMPT_HASHES.json re-verified this namespace); their admission compatibility was exercised by the Amendment-3 run itself (261/282 declared-qualified, 0/37-style degeneracy absent)",
+  "prompt_flag_scan": "CLEAN 14/14 (no literal pinned answer in any prompt)",
+  "compat_gate": "demonstration mode on the frozen Amend-1 prompts reproduced the expected panel (gate_exit 0); the Amend-4 prompts are the Amend-3 prompts already compat-exercised end to end"
+ },
+ "post_freeze_non_evidence": {
+  "auth_smoke": "one AUTH_SMOKE per label before the run (HEALTH.json; evidence=false)",
+  "fingerprint_audit": "post-run per-label echo check; a drifting cohort is withdrawn to same-label"
+ },
+ "excluded_from_manifest": [
+  "FREEZE.json",
+  "FREEZE_COMMIT.txt",
+  "FREEZE_DRAFT.json",
+  "HEALTH.json",
+  "build_freeze.py",
+  "results.jsonl"
+ ],
+ "files": {
+  "PREREGISTRATION_AMEND4_FRONTIER.md": {
+   "group": "prereg_and_records",
+   "sha256": "d1cdd6a1b91b31dd04c55e57a6515bff9f5219b6489a50883b8c0da8b27fcfaa"
+  },
+  "PROMPT_HASHES.json": {
+   "group": "harness_and_analysis",
+   "sha256": "05b90e50137c4db18aa276d247f2e95dafaf50013a271643b7ebf8725281aabb"
+  },
+  "agentrouter_client.py": {
+   "group": "harness_and_analysis",
+   "sha256": "45347562b3441a9869aa118f4d8daa78148f1cbc456893ce95fd9590caafc59b"
+  },
+  "census_nyu/census_nyu_crypto.json": {
+   "group": "census",
+   "sha256": "2345134775102610d83067589b4811cee14a13f9ae0420de10935e0367ba7e13"
+  },
+  "census_nyu/criterion5_outcomes.json": {
+   "group": "census",
+   "sha256": "32c38eef36570e3a57344011a696be3d30469a85bc61c7caff07a7db8eed8fe9"
+  },
+  "compat_gate/gate_prompt_rule_compat.py": {
+   "group": "gates",
+   "sha256": "0ef2602d718dbb72c23d7b33c985a74f688573812ed8b090d54a1a3055e16c22"
+  },
+  "compat_gate/gate_run_log.json": {
+   "group": "gates",
+   "sha256": "dd997cf924fc4cd727f8ed4a8fb42f7f9a981eb5be7ef66cbc06f7b1879ce7e7"
+  },
+  "fixtures/build_representations.py": {
+   "group": "fixtures_and_transforms",
+   "sha256": "d4cc597f0fb576139544b1071367af23aa38c84f92988385dcaef63939de39df"
+  },
+  "fixtures/decode_equality_log.json": {
+   "group": "fixtures_and_transforms",
+   "sha256": "e5306698702ee84715a1dafa678ae01b34d72326c3a02a7dd6e62e5d3b655bde"
+  },
+  "fixtures/rt_transform/2015q-cry-eps/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "e3eb0ce531a3a13f073f9d27a05b93ad6bba0be4dccd15bc84f1ca370cd09a94"
+  },
+  "fixtures/rt_transform/2015q-cry-eps/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "6371cee2aa619a02dcaf9e962182b757da238abbb37754352b3fe96299ac5903"
+  },
+  "fixtures/rt_transform/2015q-cry-eps_part2/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "9701636b6d614fc489d691c15d42c42be49670babc835bc144d98702fdc619b0"
+  },
+  "fixtures/rt_transform/2015q-cry-eps_part2/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "8f165ecfec3744032929053fd6e9a8e5feb1a8adfdfcbbbd389764ce618f1508"
+  },
+  "fixtures/rt_transform/2017q-cry-almost_xor/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "b304de0581b542ea6a7031830cdbabd2457aeb0bd7eb1362b6624888c6fb74c5"
+  },
+  "fixtures/rt_transform/2017q-cry-almost_xor/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "7127ba377fb2c0770bfddf98bb3dfb76d4854a03621b9ada738ed1d4a7309e28"
+  },
+  "fixtures/rt_transform/2017q-cry-another_xor/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "80f0098b4de13a5abb7425627ff306f7fc82ea738a60ae0c2a38dab6ec5a0d25"
+  },
+  "fixtures/rt_transform/2017q-cry-another_xor/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "5cb5257de9917705930fac4d061bf348c4fa3ac42fcc981164fa5d869a0367f3"
+  },
+  "fixtures/rt_transform/2018q-cry-babycrypto/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "e1077392b41cfab48b2d6971a595f0756e39e06724f0fcfbcc27ee88259aeb08"
+  },
+  "fixtures/rt_transform/2018q-cry-babycrypto/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "02c0243be26b978349fc7ce71477a6d142b8c2c2d49db1d33dcc6d783995ced0"
+  },
+  "fixtures/rt_transform/2018q-cry-lowe/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "88946eff860097a469f85eef2f22cfc5444210fce8d56ec1b9c0b2285e3ef0e0"
+  },
+  "fixtures/rt_transform/2018q-cry-lowe/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "1894df6f840fafc75b6cb0b70e37a3de8d4643cccfcd96af5cf6dfa3689eec6b"
+  },
+  "fixtures/rt_transform/2021q-cry-crack_me/prompt_R0.txt": {
+   "group": "prompts",
+   "sha256": "9f65d8b5d7f6f549c98184824e750946177f9736833234c41e0529ed808ed962"
+  },
+  "fixtures/rt_transform/2021q-cry-crack_me/prompt_RT.txt": {
+   "group": "prompts",
+   "sha256": "7b1fcb67961f082429b08a13c1ac4db4ab12fffc3b56a50851190b81b48d438f"
+  },
+  "fixtures/tasks/2015q-cry-eps/eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg": {
+   "group": "fixtures_tasks",
+   "sha256": "84d07ff51775b05c3cd763494e4aa0a3389183c13b1666a631aa97ff35f0b710"
+  },
+  "fixtures/tasks/2015q-cry-eps_part2/eps1.9_zer0-day_b7604a922c8feef666a957933751a074.avi": {
+   "group": "fixtures_tasks",
+   "sha256": "68a1d2879a402940b260c4409774b8904ea1ffad7cbdd750af23746d8c50dec2"
+  },
+  "fixtures/tasks/2017q-cry-almost_xor/almostxor.py": {
+   "group": "fixtures_tasks",
+   "sha256": "21179d141a48c71dec5c0bf4fb843c097cf0fee78b77dd76512f7eaa3aebe7d5"
+  },
+  "fixtures/tasks/2017q-cry-almost_xor/ciphertext": {
+   "group": "fixtures_tasks",
+   "sha256": "12d8ca8d0ea41386e143d5d6c6d659889b2f41712220d270d69d0ff9395f5da8"
+  },
+  "fixtures/tasks/2017q-cry-another_xor/encrypted": {
+   "group": "fixtures_tasks",
+   "sha256": "0fa92f4aba7e043f89ca00c692f247458c0470ffa24af04445ca59ccadfd678a"
+  },
+  "fixtures/tasks/2018q-cry-babycrypto/ciphertext.txt": {
+   "group": "fixtures_tasks",
+   "sha256": "bca6d18795f6f31ba3d88a89a8166025deb4954f51264b9346592a51ca2f96ac"
+  },
+  "fixtures/tasks/2018q-cry-lowe/file.enc": {
+   "group": "fixtures_tasks",
+   "sha256": "a8cb221e2af4feaf484f1799b8ab53bdc9658fa540fc16a5cb8ffd58c05fd2d5"
+  },
+  "fixtures/tasks/2018q-cry-lowe/key.enc": {
+   "group": "fixtures_tasks",
+   "sha256": "af80d57cf58ebc2e110caf52bf2f2382ce6d99afd2a52520fbee4e64add39966"
+  },
+  "fixtures/tasks/2018q-cry-lowe/pubkey.pem": {
+   "group": "fixtures_tasks",
+   "sha256": "dcef9416a3efc79cbaae1e31267f671e7ad9048388358cbba1beceb2eab1ccf7"
+  },
+  "fixtures/tasks/2021q-cry-crack_me/README.md": {
+   "group": "fixtures_tasks",
+   "sha256": "0a31dc6addee567dc8e212cb42f39b40fd212b1b60e174cdc19d585396d5f9eb"
+  },
+  "fixtures/verify_decode_equality.py": {
+   "group": "fixtures_and_transforms",
+   "sha256": "096851ad2b2f1e3821c36139d4cd321f2fdae57f81bb473070799c198eeb63ab"
+  },
+  "oracle/answers.json": {
+   "group": "oracle",
+   "sha256": "7b965b0d637177cc4e5438016094440b5422d97fe354eb5a0e65c719501527d0"
+  },
+  "oracle/build_answers.py": {
+   "group": "oracle",
+   "sha256": "e32d8f86f6fba213eeed057a47d73f971e5a7cbda5a4597a166a332be7c26d2f"
+  },
+  "policies_amend4/rule_a_permissive_v4.py": {
+   "group": "policies",
+   "sha256": "3f68c3cbd001212bf4b4ca1473988dec15f09439747c74b1410202d5e34b4cf8"
+  },
+  "policies_amend4/rule_b_stress_legacy_repaired.py": {
+   "group": "policies",
+   "sha256": "e1a2885236a0ca404ac249889d51c911c2ce7b14c876fafd6fd2a37bef166bd4"
+  },
+  "policies_amend4/rule_c_cleanup.py": {
+   "group": "policies",
+   "sha256": "7419e861a4d1abeb5f9d7623ab2b4c4d79ef4647b7ea186639379771313a4373"
+  },
+  "run_amend4_sessions.py": {
+   "group": "harness_and_analysis",
+   "sha256": "c8fce7efe6aab171a047cd753d29a47a2436b37c7c2ecdd7661816c133197b05"
+  },
+  "seed_sweep_SEED_SWEEP.json": {
+   "group": "seed_sweep",
+   "sha256": "5936c389bf551f3667779af6094ad0ff8590a9bf20dd104bc24053b64b7ea951"
+  },
+  "smoke_auth_amend4.py": {
+   "group": "harness_and_analysis",
+   "sha256": "be7db2b0b41ba368c47a6767353f13bb46d6b189cde2184815fcfd1ce9eaf8ef"
+  },
+  "basis::provider_adapter_agentrouter_p017.py": {
+   "group": "basis_read_only_hash_verified",
+   "path": "external_admission_amend3_20261105/../provider_adapter_agentrouter_p017.py",
+   "sha256": "d9f2995dc42c7a063d37b704179030a60b28435978db4157eed4d8a48438da7f"
+  },
+  "basis::run_amend3_sessions.py": {
+   "group": "basis_read_only_hash_verified",
+   "path": "external_admission_amend3_20261105/run_amend3_sessions.py",
+   "sha256": "5643a5770394aa13b3be217a69791126861bf5aa417ee1f7da86f0b326d22257"
+  },
+  "basis::oracle_answers_amend3.json": {
+   "group": "basis_read_only_hash_verified",
+   "path": "external_admission_amend3_20261105/oracle/answers.json",
+   "sha256": "7b965b0d637177cc4e5438016094440b5422d97fe354eb5a0e65c719501527d0"
+  }
+ }
+}

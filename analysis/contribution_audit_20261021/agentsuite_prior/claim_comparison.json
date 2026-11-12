@@ -1,0 +1,184 @@
+{
+  "audit": "contribution_audit_20261021",
+  "worker": "agentsuite_prior",
+  "date": "2026-10-21",
+  "comparator": {
+    "name": "AgentSuite: Toward More Reliable Agent Evaluation with a Component-Based Benchmark Auditing Pipeline",
+    "venue": "ICML 2026, PMLR 306:116300-116319",
+    "snapshot_pdf": "sp2027/analysis/contribution_audit_20261021/sources/agentsuite_icml2026.pdf",
+    "sha256": "2c7c91f3aab411df69d8ae2255dab111cf3109547e36ed12c8c38923a1021dce",
+    "sha256_matches_sources_md": true,
+    "identity_verified_against": "PDF title page (p.1) and pdfinfo metadata",
+    "primary_links": [
+      "https://proceedings.mlr.press/v306/suh26a.html",
+      "https://raw.githubusercontent.com/mlresearch/v306/main/assets/suh26a/suh26a.pdf"
+    ],
+    "pages_inspected": "1-20 (complete: main body pp.1-9, references pp.10-11, Appendices A-E pp.12-20)",
+    "page_anchor_convention": "physical PDF page number; printed folio == physical page throughout",
+    "pipeline_summary": "COBA = component-based benchmark auditing: standardized task representation T = <U,E,G,V> (Sec. 3.1, Eq. 1, p.4); Stage 1 deterministic structural filtering (Sec. 3.2, p.4); Stage 2 taxonomy-guided LLM judgment phi(T) -> (y,c,r) (Sec. 3.1 Eq. 2 / Sec. 3.3, pp.4-5); optional Stage 3 adversarial rebuttal, Eq. 3 (Sec. 3.4, p.5; prompt App. D.3 p.18). Component-aligned issue taxonomy: Table 2, p.3. Evidence: 5086 tasks / 6 benchmarks (p.2), 5 annotators, Cohen's kappa 0.824 (App. B.1 p.13), judge F1 0.791-0.874 and post-hoc validation accuracy 72.1-92.0% (Table 3, p.6), generalization Table 4 p.7, judge ablation Table 9 p.19, FP/FN analysis Table 10 p.19, retention/repair Table 8 p.15, leaderboard Table 6 p.8 and App. E p.20.",
+    "unit_of_analysis": "the benchmark task as a static artifact; annotation guideline requires a 'benchmark-intrinsic' validity issue (App. B.1, p.13)"
+  },
+  "hard_constraints_observed": {
+    "no_manuscript_or_other_worker_files_modified": true,
+    "no_experiments_launched_no_benchmarks_installed_no_hosted_models_invoked": true,
+    "no_superiority_claims_without_matched_comparator": "No head-to-head exists (different systems); all 'would have produced' statements are design inferences, labeled as such.",
+    "six_release_audit_treated_as_external_validation": false,
+    "raw_and_frozen_records_unmodified": true
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "A controlled separation of attack correctness, source admission, and execution attribution as an evaluation procedure.",
+      "agentsuite_overlap": {
+        "level": "strong_structural",
+        "anchors": [
+          "Sec. 3.1, Eq. 1, p.4: standardized task representation T = <U,E,G,V> (User, Environment, Ground Truth, Evaluation System)",
+          "Table 2, p.3: component-aligned issue taxonomy separating where measurement invalidity originates",
+          "Table 2, p.3: Evaluation System categories 'Too lenient' and 'Too strict' - static counterpart of our source-admission separation (a rule that rejects a semantically correct artifact)",
+          "Table 2, p.3: Ground Truth 'Malformed tool calls' / 'Incorrect tool calls' - static counterpart of our correctness separation",
+          "Sec. 4.6, p.8: four issue-impact categories (inflation, deflation, unsolvable, noise) - an interpretation layer over the same separation we perform",
+          "Sec. 1, p.1: stated contribution (1) 'a component-based issue taxonomy for diagnosing validity issues'"
+        ],
+        "summary": "The decomposition of evaluation validity into components and the localization of the invalidity source is AgentSuite's own core methodological contribution; our C1 reuses that template."
+      },
+      "agentsuite_distinction": {
+        "level": "kind_on_one_axis",
+        "anchors": [
+          "App. B.1, p.13: annotation guideline requires 'clear, observable evidence of a benchmark-intrinsic validity issue' - the agent's own output is not the judged object",
+          "Fig. 1, p.2: Ground Truth is a design-time reference trajectory, not runtime evidence about a specific run",
+          "Sec. 3.2-3.3, p.4: no execution stage in the pipeline"
+        ],
+        "description": "Object of separation differs: COBA separates which BENCHMARK COMPONENT is broken (design-time artifact); we separate which STAGE OF THE RUN produced the failure (artifact correctness -> source qualification -> execution evidence) for agent-produced programs in a security setting. The 'execution attribution' class has no counterpart among the four components - it is a fifth, runtime-evidence axis.",
+        "is_domain_only": false
+      },
+      "novelty_type": "domain_application",
+      "evidence_strength": "high for overlap (full 20-page read, direct anchors); moderate for the distinction (interpretive mapping of our manuscript's procedure onto COBA's component model)",
+      "would_agentsuite_have_produced_same_finding": "No. COBA would produce a task-side audit of our task cards (e.g. an Evaluation-System label for a mis-specified oracle), but cannot separate failure stages over runs because it never executes the submitted program and has no evidence-binding axis. Partial overlap direction: a COBA-style audit of our harness could label the admission rule as an evaluation-component defect, but only as a static task-level label, not a byte-fixed counterfactual over 852 sessions.",
+      "differentiating_evidence": "Adapted-COBA study (REPORT.md section 6): map our task cards into T = <U,E,G,V>, run the released COBA judge on cards only (blinded to program bytes, verdicts, policy decisions), and test whether it (a) flags the admission-rejected tasks and localizes them to Evaluation System, and (b) can produce any per-program counterfactual (expected: no).",
+      "limitations": "Design inference from Sec. 3.1-3.4, not an execution of the released code; released AgentSuite repository not inspected; the novelty of the attribution axis cannot be settled against the provenance literature (out of scope for this worker)."
+    },
+    {
+      "id": "C2",
+      "claim": "Paired representation contrasts under a common executor, followed by a changed admission rule applied to unchanged programs; estimates evaluator-policy dependence under the tested contract, not model rankings and not a general causal capability effect.",
+      "agentsuite_overlap": {
+        "level": "partial_conceptual",
+        "anchors": [
+          "Sec. 4.6, p.8 and Table 6, p.8: ACEBench model rankings before vs after removing validated flawed tasks; 18/30 models shift (App. E, p.20)",
+          "Sec. 4.6, p.8: random-removal null baseline over 100 trials - Kendall's tau 0.871 (cleaned) vs 0.960 (random, 95% CI 0.935-0.981); pairwise flip rate 5.75% vs 1.50% (95% CI 0.46-2.65)",
+          "Sec. 4.6, p.8: 'Table 6 is based on a single evaluation run per model due to computational cost'",
+          "Sec. 2.2 / Table 7, p.14: 'Too lenient' - a trivial do-nothing model succeeds on 38% of tau-bench tasks (p.3, p.13), an evaluation rule admitting wrong artifacts"
+        ],
+        "summary": "The general claim that an evaluation-side choice changes reported capability is already established by AgentSuite, with disciplined controls (null baseline, single-run caveat) and a much larger evidence base than ours (5086 tasks, 30 models, expert-validated F1 0.791-0.874)."
+      },
+      "agentsuite_distinction": {
+        "level": "kind_in_the_estimator",
+        "anchors": [
+          "Sec. 4.6, p.8: AgentSuite varies the TASK SET and re-runs models - a between-set comparison whose unit is (model, task) and whose output is a leaderboard",
+          "Sec. 3.1-3.3, pp.4-5: no execution and no per-artifact rule re-application, so an artifact-level counterfactual is not producible",
+          "Sec. 4.1-4.2, pp.5-6: unit of analysis is the task, not a submitted program"
+        ],
+        "description": "Ours holds the generated program bytes fixed and varies only the admission rule, paired at the instance level, with a preregistered +/-10pp equivalence margin for the representation contrasts and a 6.2%-47.7% rejection rate across arms. Program bytes are fixed between policy evaluations, not across representation arms. This is a within-artifact counterfactual, a genuinely different estimator - but a narrower claim than AgentSuite's (we claim nothing about model rankings).",
+        "is_domain_only": false
+      },
+      "novelty_type": "measurement_technique",
+      "evidence_strength": "high for overlap (anchored to Sec. 4.6/Table 6 and App. E); moderate for the distinction (comparison of estimators from paper text plus our manuscript's H1-R3 description)",
+      "would_agentsuite_have_produced_same_finding": "No for the byte-fixed part (no execution, no per-artifact re-decision). But the asymmetry must be stated: if we had framed our result as 'removing flawed tasks changes reported capability / rankings', AgentSuite would have produced that finding first with stronger evidence. Our defensible framing is the narrow one we already use (unchanged programs, changed admission rule, no ranking claim).",
+      "differentiating_evidence": "The same adapted-COBA study; specifically the read-out question 'can a static, task-level audit produce a per-program admission counterfactual?' plus a counterfactual framing test (restate our headline as a task-removal ranking claim and check whether it is a replication of Sec. 4.6).",
+      "limitations": "We did not re-run AgentSuite's ACEBench analysis, so we cannot quantify the strength of the overlap, only establish it from the published numbers. Our own estimate is single-route, two task families, one margin, with the lower-level contrasts recorded as inconclusive (our own limitation statement, 11_limits.tex)."
+    },
+    {
+      "id": "C3",
+      "claim": "Independent cryptographic predicates and full fresh program replay against retained public inputs.",
+      "agentsuite_overlap": {
+        "level": "none_mechanistic",
+        "anchors": [
+          "Sec. 3.2, p.4: Stage 1 is rule-based structural filtering only",
+          "Sec. 3.3, p.4-5: Stage 2 is taxonomy-guided LLM judgment; no execution of candidate programs and no predicate recomputation",
+          "App. A, p.12: 'Task-specific validation methods, such as unit-test augmentation in SWE-Bench or execution-based matching in SQL benchmarks, rely on deterministic semantics and executable environments, limiting their applicability beyond narrow domains' - execution is cited as related work they deliberately do not generalize",
+          "Sec. 4.5, p.8: BFCL V4 ground truths 'may additionally become stale as external information changes, highlighting a maintenance challenge' - a staleness observation with no replay mechanism"
+        ],
+        "summary": "Overlap is at the level of the shared goal (verifiable ground truth) only; mechanically there is none."
+      },
+      "agentsuite_distinction": {
+        "level": "kind",
+        "anchors": [
+          "Sec. 3.1-3.3, pp.4-5: pipeline operates on static task artifacts with LLM judging; no execution module at any stage",
+          "App. A, p.12: execution-based validation treated as out-of-scope narrow-domain work"
+        ],
+        "description": "Ours introduces executable ground truth where the artifact is a program and the ground truth is a cryptographic relation, and replays admitted programs against retained public inputs (852/852 reference-replay agreement; staged full candidate re-executing 851 admitted programs), explicitly not fresh model generation.",
+        "is_domain_only": false
+      },
+      "novelty_type": "domain_application",
+      "evidence_strength": "high (direct absence confirmed over the full 20 pages; 'execution' occurs once, in App. A related work, p.12)",
+      "would_agentsuite_have_produced_same_finding": "No. There is no execution stage; and their structural filter targets tool-call schemas, not program source semantics.",
+      "differentiating_evidence": "Not needed for the contrast with AgentSuite (already clear); the open question is against the wider execution-based-validation literature (SWE-Bench unit tests, SQL execution matching - the very works AgentSuite cites, p.12), which is outside this worker's scope.",
+      "limitations": "Do not claim to have invented execution-based verification; the novelty is its application to security attack programs with an independent cryptographic predicate and an explicit non-regeneration caveat. Our staged re-execution is a separate, staged candidate and is not part of the executed evidence base."
+    },
+    {
+      "id": "C4",
+      "claim": "Complementarity of authenticated evidence and claim-specific joins in bounded adversarial attribution tests, using existing provenance mechanisms.",
+      "agentsuite_overlap": {
+        "level": "none",
+        "anchors": [
+          "Full text pp.1-20: 'provenance' 0 hits, 'attribution' 0 hits, 'signature' (cryptographic) 0 hits, 'admission' 0 hits, 'replay' 0 hits, 'counterfactual' 0 hits; 'signed' occurs only as 'assigned'",
+          "Fig. 1, p.2 and Sec. 3.1, p.4: Ground Truth is a design-time reference trajectory, not runtime evidence",
+          "Sec. 3.4, p.5 and App. D.3, p.18: adversarial rebuttal reviews a flagged TASK judgment, not a claim-evidence binding",
+          "App. C.1-C.2, p.15: issue-guided repair edits benchmark artifacts, not execution evidence"
+        ],
+        "summary": "No overlap at the level of mechanism; overlap only at the level of the goal (reliable evaluation)."
+      },
+      "agentsuite_distinction": {
+        "level": "kind",
+        "anchors": [
+          "Sec. 3.1, p.4: the four-component model contains no runtime-evidence component",
+          "App. A, p.12: related work covers benchmark validity, agent benchmark validation, but not evidence binding for observed executions"
+        ],
+        "description": "Our artifact is a claim-specific attribution policy (observer-signed record over exact executed bytes and captured stdout; reference-signed recomputation of the task predicate from private target state; role authorization; digest agreement; replay policy; the claimant's own claims block excluded from the decision), validated by bounded mechanized testing (1407 mutants x 2 readings = 11256 evaluations, no observed soundness violation), live-target and loopback-ingress exercises against fabricated claims, and an in-toto inspection reproducing 21/22 decisions (22/22 with a shared replay ledger).",
+        "is_domain_only": false
+      },
+      "novelty_type": "domain_application",
+      "evidence_strength": "high for the absence (full-text term search over all 20 pages); moderate for the novelty, because the underlying mechanisms are pre-existing (in-toto, SLSA) - the novelty is the policy plus its test regime, not the machinery",
+      "would_agentsuite_have_produced_same_finding": "No. Nothing in COBA's component model or pipeline touches runtime evidence, so this is the candidate with the least overlap with the comparator.",
+      "differentiating_evidence": "The adapted-COBA study should record whether ANY COBA taxonomy category corresponds to 'the evidence does not bind the claimed execution'. Separately, positioning against the provenance literature (in-toto, SLSA, ORTHRUS, PROV-AGENT - cited in our own related work) is required and was not audited here.",
+      "limitations": "Our six-release documentary audit (0/6 satisfy a nine-field rubric) is documentary, NOT external executable validation, and must not be presented as a benchmark-validation result that AgentSuite lacks. The in-toto agreement arm and the mutant-testing counts are recorded (not re-executed) in our current evidence base, per 11_limits.tex."
+    },
+    {
+      "id": "C5",
+      "claim": "An integrated security-specific empirical method, rather than generic discovery that benchmark flaws distort performance.",
+      "agentsuite_overlap": {
+        "level": "direct_strong",
+        "anchors": [
+          "Abstract, p.1: 'Our analysis shows that benchmark flaws are widespread and materially affect evaluation outcomes'",
+          "p.2: issues affect on average 27% of tasks",
+          "p.1 and Sec. 4.6, p.8: removing flawed tasks 'alters 60% of the model rankings in ACEBench' (18/30 models shift, App. E, p.20)",
+          "p.1 and Table 3, p.6: F1 0.791-0.874 against expert judgments across six benchmarks",
+          "Table 4, p.7: generalization to unseen benchmarks (BFCL V4, NexusBench)",
+          "App. A, p.12: AgentSuite already cites ABC as the design-level counterpart of this genre"
+        ],
+        "summary": "The generic half of C5 is AgentSuite's headline and its third stated contribution (p.1), established with stronger evidence than ours; it is not ours to claim."
+      },
+      "agentsuite_distinction": {
+        "level": "domain",
+        "anchors": [
+          "Full text pp.1-20: 'security' 0 hits, 'attack' 0 hits, 'cryptograph' 0 hits",
+          "Sec. 2.1, p.2: audited benchmarks are tool-calling, conversational and function-calling agent benchmarks (BFCL V3, ACEBench, DrafterBench, tau-bench, tau^2-bench, CFB) - not attack programs",
+          "Sec. 3.1-3.3, pp.4-5: no execution, no evidence-binding (see C3, C4)"
+        ],
+        "description": "The security-attack instantiation (cryptographic attack programs, three-way stage separation, provenance-based attribution, six-release documentary audit) is not covered by AgentSuite. The increment for C5 is the integration in this domain, not the discovery that benchmark flaws matter.",
+        "is_domain_only": true
+      },
+      "novelty_type": "domain_application",
+      "evidence_strength": "high (the generic claim is directly and explicitly made by the comparator, with anchors on p.1, p.2, p.7, p.8)",
+      "would_agentsuite_have_produced_same_finding": "Partly yes: for the generic claim ('benchmark flaws distort performance'), AgentSuite already has it with a larger sample and stronger validation. For the security-specific integration, no.",
+      "differentiating_evidence": "The adapted-COBA study, extended with a domain-transfer read-out: do COBA's component categories transfer to attack-program task cards, and do the residual failures that only our executable counterfactual exposes (admission rejections, attribution gaps) fall outside the taxonomy?",
+      "limitations": "C5 must be worded so that it does not restate the generic claim as new. ABC was assigned to a different worker and was not assessed here; cross-worker synthesis is root's."
+    }
+  ],
+  "summary": {
+    "overall_verdict": "The evidence does not support a general methodological contribution over AgentSuite. It supports a domain-specific instrument for security-agent attack evaluation whose mechanism differs from COBA in three places (byte-fixed admission counterfactual; independent cryptographic predicate with program replay; claim-specific attribution contract), while the general principle behind C1 and C5 is already established by AgentSuite and ABC.",
+    "strongest_genuine_increment": "The byte-fixed admission-policy counterfactual evaluated by an independent cryptographic predicate with full program replay (C2+C3): the only part of the paper a static, task-level, LLM-judged audit pipeline structurally cannot produce.",
+    "strongest_overlap": "The component-based separation-of-validity-sources template (C1: Table 2, p.3; Sec. 3.1 Eq. 1, p.4) and the generic 'flaws distort performance' empirical result (C5: pp.1-2, 7-8).",
+    "single_most_important_open_differentiator": "Whether an adapted COBA audit of our task cards can flag the same admission-policy and attribution defects - i.e. whether our increment is a new measurement modality (execution-based, artifact-level counterfactual plus evidence binding) or merely a domain transplant of AgentSuite's principle. Minimal design proposed in REPORT.md section 6; NOT launched.",
+    "no_superiority_claimed": true
+  }
+}

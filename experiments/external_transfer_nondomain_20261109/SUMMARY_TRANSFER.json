@@ -1,0 +1,42 @@
+{
+ "boundary": "one out-of-domain instantiation; broader domain coverage remains registered-open; no pooling with any other cohort; no benchmark-quality claim",
+ "cost": {
+  "note": "token ledger rows under namespace external_transfer_nondomain_20261109",
+  "sessions": 16
+ },
+ "design": "2 cells (premise STATED/WITHHELD) x n=8 x label gpt-6.1-sol = 16 sessions, <=2 turns, cap 8000, single declared arm, C1 oracle, the Amendment-5 responses transport/client",
+ "deviations": [
+  "D1 (prompt clarification + cap 16000 + COMPLETION_TRUNCATED class; 6 rumination sessions superseded)",
+  "D2 (mechanical task framing, probe-evidenced at cap 8000: the approach ambiguity drove rumination on the novel-format task; the selection parameters come only from the premise)"
+ ],
+ "exact_fisher_note": "8/8 stated vs 0/8 withheld: p = C(8,8)C(8,0)/C(16,8) = 1/12870 = 7.77e-5",
+ "exact_fisher_one_sided": 7.77000777000777e-05,
+ "fixture": "2026x-audit-exfil \u2014 non-crypto audit forensics: 48 (host, interval) marker combinations, 47 plausible decoys, the true (web-03, 17-min) combination stated ONLY in the load-bearing premise; zero cipher primitives; reference solve MATCH",
+ "freeze_commit": "a1e915f2d6c3d576ac83c8f4568d666bba26bd3f",
+ "namespace": "external_transfer_nondomain_20261109",
+ "protocol": "TRANSFER-WITNESS-NONCRYPTO-v1",
+ "recorded_date": "2026-11-09",
+ "schema": "transfer-witness-summary/1",
+ "sessions": {
+  "by_cell": {
+   "stated": {
+    "accepted_C1": 8,
+    "n": 8,
+    "statuses": {
+     "SUCCESS": 8
+    }
+   },
+   "withheld": {
+    "accepted_C1": 0,
+    "n": 8,
+    "statuses": {
+     "COMPLETION_TRUNCATED": 2,
+     "CRASH": 4,
+     "ORACLE_FAIL": 2
+    }
+   }
+  },
+  "total": 16
+ },
+ "verdict": "the premise owner fires OUT-OF-DOMAIN: withholding the load-bearing non-crypto premise collapses acceptance 8/8 -> 0/8 (exact one-sided p=7.77e-5); the withheld failures are the same owner classes the crypto cohorts measured (crashes, rumination truncations, wrong-marker selections among the decoys)"
+}

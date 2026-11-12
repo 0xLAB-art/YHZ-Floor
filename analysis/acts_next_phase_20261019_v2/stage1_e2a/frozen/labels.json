@@ -1,0 +1,243 @@
+{
+  "case_count": 22,
+  "class_count": 12,
+  "classes": [
+    "honest_success",
+    "honest_crypto_failure",
+    "honest_execution_failure",
+    "honest_malformed_output",
+    "honest_underdetermined",
+    "missing_evidence",
+    "identity_mismatch",
+    "output_substitution",
+    "stale_attempt",
+    "context_conflict",
+    "replay",
+    "reference_mismatch"
+  ],
+  "labels": [
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_EC_01",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_EC_02",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 2,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_EC_03",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 3,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_CH_01",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_CH_02",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 2,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_success",
+      "case_id": "H_OK_CH_03",
+      "condition": "C1",
+      "gt_success": true,
+      "producer_variant": "correct",
+      "seed": 3,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_crypto_failure",
+      "case_id": "H_BAD_EC_01",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "wrong",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_crypto_failure",
+      "case_id": "H_BAD_EC_02",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "wrong",
+      "seed": 2,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_crypto_failure",
+      "case_id": "H_BAD_CH_01",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "wrong",
+      "seed": 1,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_crypto_failure",
+      "case_id": "H_BAD_CH_02",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "wrong",
+      "seed": 2,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_execution_failure",
+      "case_id": "H_FAIL_EC_01",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "fail",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_execution_failure",
+      "case_id": "H_FAIL_CH_01",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "fail",
+      "seed": 1,
+      "task": "ChaCha20_Nonce_Repeat"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_malformed_output",
+      "case_id": "H_MALFORMED_EC_01",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "malformed",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": null,
+      "case_class": "honest_underdetermined",
+      "case_id": "H_UNDET_EC_01",
+      "condition": "C0",
+      "gt_success": false,
+      "producer_variant": "underdetermined",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "omit_observation",
+      "case_class": "missing_evidence",
+      "case_id": "M_MISSING_OBS",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "omit_reference",
+      "case_class": "missing_evidence",
+      "case_id": "M_MISSING_REF",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "identity_swap",
+      "case_class": "identity_mismatch",
+      "case_id": "X_IDENTITY",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "output_swap",
+      "case_class": "output_substitution",
+      "case_id": "X_OUTPUT_SWAP",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "wrong",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "stale_attempt",
+      "case_class": "stale_attempt",
+      "case_id": "X_STALE_ATTEMPT",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "context_conflict",
+      "case_class": "context_conflict",
+      "case_id": "X_CONTEXT_CONFLICT",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "replay",
+      "case_class": "replay",
+      "case_id": "X_REPLAY",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    },
+    {
+      "attack": "reference_mismatch",
+      "case_class": "reference_mismatch",
+      "case_id": "X_REF_MISMATCH",
+      "condition": "C1",
+      "gt_success": false,
+      "producer_variant": "correct",
+      "seed": 1,
+      "task": "ECDSA_Nonce_Reuse"
+    }
+  ],
+  "n_non_success": 16,
+  "n_success": 6,
+  "schema": "e2a-labels/1"
+}

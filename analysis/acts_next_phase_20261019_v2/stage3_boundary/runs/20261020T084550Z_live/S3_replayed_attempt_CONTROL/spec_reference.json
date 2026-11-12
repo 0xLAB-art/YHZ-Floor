@@ -1,0 +1,29 @@
+{
+  "attempt_id": "e2a-S3_replayed_attempt_CONTROL",
+  "case_id": "S3_replayed_attempt_CONTROL",
+  "context": {
+    "attempt_id": "e2a-S3_replayed_attempt_CONTROL",
+    "domain": "e2a:evidence:v1",
+    "epoch": 1,
+    "kind": "reference_adjudication",
+    "role": "reference_verifier",
+    "target_id": "crypto_misuse_unauthenticated-live"
+  },
+  "epoch": 1,
+  "observation_path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/acts_next_phase_20261019_v2/stage3_boundary/runs/20261020T084550Z_live/S3_replayed_attempt_CONTROL/observation.json",
+  "public_instance": {
+    "note": "public description of the live service under evaluation",
+    "routes": [
+      "GET /health",
+      "GET /session?user=<name>",
+      "POST /admin (X-Token)"
+    ],
+    "service": "crypto_misuse_unauthenticated"
+  },
+  "stdout_hex": "7b227365637265745f686578223a202264336566333333653931643033376339666630633437626635396533643736613339316134313031326564393137356132633563356566313034356138336330227d0a",
+  "target_id": "crypto_misuse_unauthenticated-live",
+  "target_state": {
+    "primitive": "live_target_effect",
+    "secret_hex": "d3ef333e91d037c9ff0c47bf59e3d76a391a41012ed9175a2c5c5ef1045a83c0"
+  }
+}

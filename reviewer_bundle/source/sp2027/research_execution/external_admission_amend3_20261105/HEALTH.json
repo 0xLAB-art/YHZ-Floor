@@ -1,0 +1,107 @@
+{
+  "classification": "AUTH_SMOKE, non-evidence",
+  "config": {
+    "endpoint": "https://api.apinex.bond/v1/chat/completions",
+    "identity_note": "provider-attested labels only; no hosted-weight identity claimed",
+    "key_handling": "APINEX_API_KEY read from the process environment at runtime; never printed, never written to any sp2027 artifact",
+    "labels": [
+      "free/gpt-6-luna",
+      "free/qwen-3.8-max",
+      "free/deepseek-v4.1-flash"
+    ],
+    "route": "APINEX OpenAI-compatible /v1/chat/completions"
+  },
+  "estimated_cost_usd": 0.0,
+  "namespace": "external_admission_amend3_20261105",
+  "probes": [
+    {
+      "attempted": 1793874815.8428493,
+      "model": "free/gpt-6-luna",
+      "observed": {
+        "cost_tokens": 0,
+        "finish_reason": "stop",
+        "reply": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1,
+            "rejected_prediction_tokens": 0
+          },
+          "cost_tokens": 0,
+          "prompt_tokens": 312,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "text_tokens": 0,
+            "video_tokens": 0
+          },
+          "total_tokens": 314
+        }
+      },
+      "probe": "POST /v1/chat/completions (16-token smoke)",
+      "result": "ok"
+    },
+    {
+      "attempted": 1793874817.8499935,
+      "model": "free/qwen-3.8-max",
+      "observed": {
+        "cost_tokens": 0,
+        "finish_reason": "stop",
+        "reply": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1,
+            "rejected_prediction_tokens": 0
+          },
+          "cost_tokens": 0,
+          "prompt_tokens": 310,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "text_tokens": 0,
+            "video_tokens": 0
+          },
+          "total_tokens": 312
+        }
+      },
+      "probe": "POST /v1/chat/completions (16-token smoke)",
+      "result": "ok"
+    },
+    {
+      "attempted": 1793874954.2306976,
+      "model": "free/deepseek-v4.1-flash",
+      "observed": {
+        "cost_tokens": 0,
+        "finish_reason": "stop",
+        "reply": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1,
+            "rejected_prediction_tokens": 0
+          },
+          "cost_tokens": 0,
+          "prompt_tokens": 313,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "text_tokens": 0,
+            "video_tokens": 0
+          },
+          "total_tokens": 315
+        }
+      },
+      "probe": "POST /v1/chat/completions (16-token smoke)",
+      "result": "ok"
+    }
+  ],
+  "purpose": "Provider health verification before Amendment-3 sessions; excluded from all analyses per project protocol",
+  "recorded": "2026-11-05T10:35:55Z"
+}

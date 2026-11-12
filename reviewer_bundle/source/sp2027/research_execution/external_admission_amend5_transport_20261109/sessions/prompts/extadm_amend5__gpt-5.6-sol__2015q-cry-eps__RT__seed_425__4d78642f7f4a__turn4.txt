@@ -1,0 +1,40 @@
+You are an authorized local cryptanalysis agent solving a capture-the-flag task offline.
+
+TASK STATEMENT (verbatim from the benchmark metadata):
+Note: The flag is the entire thing decrypted
+
+PROVIDED ARTIFACTS:
+--- FILE: eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg (base64) ---
+DECODE NOTE: the artifact block below is base64-encoded text of the original file bytes; decode it with base64.b64decode (or `base64 -d`) to obtain the exact original file. Nothing else about the file changed.
+MDExMDAxMTAwMTEwMTEwMDAxMTAwMDAxMDExMDAxMTEwMTExMTAxMTAxMDEwMDAwMDExMDAxMDEw
+MTEwMTExMTAxMTEwMDAwMDExMDExMDAwMTEwMDEwMTAwMTAwMDAwMDExMDAwMDEwMTEwMTEwMDAx
+MTEwMTExMDExMDAwMDEwMTExMTAwMTAxMTEwMDExMDAxMDAwMDAwMTEwMTEwMTAxMTAwMDAxMDEx
+MDEwMTEwMTEwMDEwMTAwMTAwMDAwMDExMTAxMDAwMTEwMTAwMDAxMTAwMTAxMDAxMDAwMDAwMTEw
+MDAxMDAxMTAwMTAxMDExMTAwMTEwMTExMDEwMDAwMTAwMDAwMDExMDAxMDEwMTExMTAwMDAxMTEw
+MDAwMDExMDExMDAwMTEwMTExMTAxMTAxMDAxMDExMTAxMDAwMTExMDAxMTAwMTAxMTEwMDExMTEx
+MDEwMDEwMDAwMDAxMDAxMDAxMDAxMDAxMTEwMTExMDExMDAxMTAwMTAxMDAxMDAwMDAwMTEwMTEx
+MDAxMTAwMTAxMDExMTAxMTAwMTEwMDEwMTAxMTEwMDEwMDAxMDAwMDAwMTEwMDExMDAxMTAxMTEx
+MDExMTAxMDEwMTEwMTExMDAxMTAwMTAwMDAxMDAwMDAwMTEwMTAwMTAxMTEwMTAwMDAxMDAwMDAw
+MTEwMTAwMDAxMTAwMDAxMDExMTAwMTAwMTEwMDEwMDAwMTAwMDAwMDExMTAxMDAwMTEwMTExMTAw
+MTAwMDAwMDExMDEwMDAwMTEwMDAwMTAxMTAwMDExMDExMDEwMTEwMDEwMDAwMDAxMTAxMTAxMDEx
+MDExMTEwMTExMDAxMTAxMTEwMTAwMDAxMDAwMDAwMTExMDAwMDAxMTAwMTAxMDExMDExMTEwMTEx
+MDAwMDAxMTAxMTAwMDExMDAxMDEwMDEwMTExMDAwMTAwMDAwMDEwMDEwMDEwMTEwMDExMDAwMTAw
+MDAwMDExMTEwMDEwMTEwMTExMTAxMTEwMTAxMDAxMDAwMDAwMTEwMTEwMDAxMTAxMDAxMDExMTAw
+MTEwMTExMDEwMDAxMTAwMTAxMDExMDExMTAwMDEwMDAwMDAxMTEwMTAwMDExMDExMTEwMDEwMDAw
+MDAxMTEwMTAwMDExMDEwMDAwMTEwMDEwMTAxMTAxMTAxMDAxMDExMDAwMDEwMDAwMDAxMTEwMTEx
+MDExMDAwMDEwMTExMDEwMDAxMTAwMDExMDExMDEwMDAwMDEwMDAwMDAxMTEwMTAwMDExMDEwMDAw
+MTEwMDEwMTAxMTAxMTAxMDAxMDExMDAwMDEwMDAwMDAxMTEwMTAwMDExMDEwMDAwMTEwMDEwMTAx
+MTAxMDAxMDExMTAwMTAwMDEwMDAwMDAxMTEwMTEwMDExMTAxMDEwMTEwMTEwMDAxMTAxMTEwMDEx
+MDAxMDEwMTExMDAxMDAxMTAwMDAxMDExMDAwMTAwMTEwMTAwMTAxMTAxMTAwMDExMDEwMDEwMTEx
+MDEwMDAxMTAxMDAxMDExMDAxMDEwMTExMDAxMTAwMTAwMDAwMDExMDAwMDEwMTExMDAxMDAxMTAw
+MTAxMDAxMDAwMDAwMTEwMTEwMDAxMTAxMDAxMDExMDEwMTEwMTEwMDEwMTAwMTAwMDAwMDExMDAw
+MDEwMDEwMDAwMDAxMTAxMTEwMDExMDAxMDEwMTEwMTExMTAxMTAxMTEwMDAxMDAwMDAwMTExMDAx
+MTAxMTAxMDAxMDExMDAxMTEwMTEwMTExMDAwMTAwMDAwMDExMTAwMTEwMTEwMDAxMTAxMTEwMDEw
+MDExMDAxMDEwMTExMDExMTAxMTAwMTAxMDExMDAxMDAwMDEwMDAwMDAxMTAxMDAxMDExMDExMTAw
+MTExMDEwMDAxMTAxMTExMDAxMDAwMDAwMTExMDEwMDAxMTAxMDAwMDExMDAxMDEwMTEwMTAwMTAx
+MTEwMDEwMDAxMDAwMDAwMTEwMTAwMDAxMTAwMTAxMDExMDAwMDEwMTEwMDEwMDAxMTEwMDExMDAx
+MDExMTAK
+
+Write complete Python 3 source that solves this task offline and prints exactly one line containing the final flag answer. The provided artifact files are also present, under the same names, in your program's working directory. Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing. Do not use network, subprocess, eval, exec, or any file outside the working directory. Do not guess. Return exactly one JSON object with a single "code" string and no prose.
+
+REVISION REQUEST: your last reply did NOT contain a parseable JSON object with a single "code" string (it was cut off or had prose around it). Reply with EXACTLY one JSON object: {"code": "..."} — no markdown, no commentary.

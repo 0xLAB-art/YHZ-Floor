@@ -1,0 +1,78 @@
+{
+  "analysis_decisions": {
+    "agreement": "cases where asserted == adjudicator supported",
+    "attack_families": [
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S14",
+      "S15"
+    ],
+    "false_reject": "cases with supported >= 1 and requested <= supported where asserted != supported (malformed excluded)",
+    "gates": {
+      "G-C1": "fixture integrity: adjudicator == generator labels (all 44)",
+      "G-C2": "determinism + frozen component hashes + protected files + offline (0 external calls)",
+      "G-C3": "v3-full attack-family level-6 false promotions == 0",
+      "G-C4": "v2 attack-family FP > 0 AND v3-sig attack-family FP > 0 (single-mechanism insufficiency)",
+      "G-C5": "v3-full false rejects == 0 AND v3-full overclaim == 0 AND full agreement on every honest-within-evidence case"
+    },
+    "honest_families": [
+      "S1",
+      "S2",
+      "S3",
+      "S13"
+    ],
+    "level6_false_promotion": "system asserts level 6 (v2 EMIT level 6; v3 ACCEPT supported 6) while independent adjudicator truth_strong is False",
+    "overclaim": "asserted level > adjudicator supported level (malformed excluded); asserted = EMIT level for v2, ACCEPT supported for v3"
+  },
+  "calibration_pass": {
+    "false_reject": {
+      "v2": 14,
+      "v3full": 0,
+      "v3sig": 0
+    },
+    "fixture_failures": 0,
+    "fp_level6": {
+      "v2_attack": 10,
+      "v3full_attack": 0,
+      "v3sig_attack": 14
+    },
+    "label_deviations": 0,
+    "note": "pre-freeze wiring check (single invocation per system, all 44 cases). Frozen systems are deterministic; the preserved post-freeze pass is expected to reproduce these numbers exactly. No component, case, label, or gate was modified after the calibration pass.",
+    "results": "iar_c/runs/20261019_121420/results.json",
+    "results_sha256": "cb3df2b0a6668812990536dd3f6bc8b24a0b334ea04403cc4b7b0c1e7b79c185"
+  },
+  "component_sha256": {
+    "case_manifest": "d2640d40988611e0fc65e228ae31c33cb6e06324ec6743f590caa7baaa6c0faf",
+    "eb_independent_adj.py": "528dcb43657e99a898f8de543cabf167f1c35f22b68ca11f66fa234b5f3d2b73",
+    "eb_independent_gen.py": "dba82edd4fd3d60b27d471a28cf0ba9ae0126bb578440a8bd24d62c1c37aa948",
+    "eb_v3_full.py": "6c7d0d8b564e0d0bdeace6ba59be90cd03cb9a8700df7649d6366a97ff280670",
+    "eb_v3_sig.py": "6b17954b0441dcf7ef0973d7e9c755df9707658119290a9d4e4bb5db64727329",
+    "heb1_v2_claim_binding.py": "3585f876a39d136eb550db1cccb04a4b23f30e4b46a5bb2e6d97efb55194c53d",
+    "iab_runner": "d9aebb8d93fd8c7322368842f1e8307a6c17f59bb2c3b862b559f6407a905de4",
+    "labels": "75776db2e9f2eea454c59a7db785633701537dd9859f0c8cc5adeee7a2291fa7",
+    "trust": "d4629a4aa477f0bdb001bb2624d4ddef8a81f2dc0d6beef76a1057d4a9283952"
+  },
+  "created": "2026-10-19 12:15:32",
+  "experiment": "IAR-C independent adversarial replication (Experiment B)",
+  "governing_protocol": "sp2027/analysis/experiment_b_20261019/EXPERIMENT_B_PROTOCOL.md",
+  "independence_commitments": [
+    "generator imports only eb_crypto + stdlib + cryptography. Ed25519; no eb_fixtures / eb_adjudicator / eb_v3_* / HEB-1 module imports",
+    "independent adjudicator (eb_independent_adj.py) separately written; imports only eb_crypto + stdlib + cryptography",
+    "own ids, own key derivation, own run builder, own scenario model, own truth model",
+    "wire format (certificate schema heb1-signed/1, evidence kinds, .sig sidecars, trust anchor) is the shared interface by necessity",
+    "no network calls, no model/provider calls; marginal spend $0",
+    "single preserved pass after this freeze; nothing modified afterwards"
+  ],
+  "known_limitations": [
+    "same-author construction (structural independence, not socio-technical independence)",
+    "shared eb_crypto target-domain primitive module and shared wire format",
+    "case classes S1-S15 mirror the IAR-B scenario taxonomy (independent implementations and parameters)"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "ic-sess-b11ea96219d4a754",
+    "sha256": "f7266abdcd4f4db633f0288ae1b34fbca37a6746454a9a5b25959bd03d2e5ee4"
+  },
+  "attempt_id": "ic-attempt-ic-b96fb64212",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "NOT_ESTABLISHED",
+    "boundary_enforcement": "NOT_ESTABLISHED",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "NOT_ESTABLISHED",
+    "target_effect": "OBSERVED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "8edea17246297b6d71350b4f00799476f8b5db6ae891a61a9977430da0caa7e9"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "4be89a08aaaea54e19ed2fa208fcbf3c6264a20de39611f6d0d8ee85c0fb04c3"
+    },
+    {
+      "kind": "target_effect",
+      "path": "evidence/target_effect.json",
+      "sha256": "7d47971e422937798d6b240988424aad60576fb6af5edc58f2339015ac114526"
+    }
+  ],
+  "execution": {
+    "executor": "ic-executor-r",
+    "exit_status": "completed",
+    "session_id": "ic-sess-b11ea96219d4a754",
+    "trace_hash": "4be89a08aaaea54e19ed2fa208fcbf3c6264a20de39611f6d0d8ee85c0fb04c3"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "e41d6312d8df8d094626528c7937a6499ab5f2e9dd6962c02fe82177c5b20017",
+    "target_id": "tid-ic-inst-18169bca90bb"
+  },
+  "task": {
+    "base_instance_id": "ic-inst-18169bca90bb",
+    "primitive": "chacha",
+    "task_id": "task-chacha-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "ic-sess-fd05604fc0d80397",
+    "sha256": "9e6026adb99885a9649989d553890bb3dd604505118ab04f73c5e1c28820a723"
+  },
+  "attempt_id": "ic-attempt-ic-42d4751ff1",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "PROVEN",
+    "boundary_enforcement": "PROVEN",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "ACCEPTED",
+    "target_effect": "OBSERVED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "6d21b43da734877e73594e3b757c9fe409d4f65f26c20628496bd7bd9ee553f1"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "f0321770227e42a55efd581da438fd9b193aa7aff911cf8caac389e0bfa6d5d5"
+    },
+    {
+      "kind": "target_effect",
+      "path": "evidence/target_effect.json",
+      "sha256": "001ab8a24f68801410b56517126e0fe1bbf5cb693794b279c8dbfcc301284825"
+    },
+    {
+      "kind": "reference_acceptance",
+      "path": "evidence/reference_acceptance.json",
+      "sha256": "ea255e728406f857b609dbe778c3b2043f00a5e3894617825e5a017a9e394d13"
+    },
+    {
+      "kind": "boundary",
+      "path": "evidence/boundary.json",
+      "sha256": "e2a7cc6e3c75288cf650590ce62d4b8fa5784af89bb04664bb218f4b98a8010e"
+    },
+    {
+      "kind": "verifier_metadata",
+      "path": "evidence/verifier_metadata.json",
+      "sha256": "e67b3d04a98d7ee3b3ab29b9fe043303cd944a7f9a330a1f70ebe6c3f375c608"
+    }
+  ],
+  "execution": {
+    "executor": "ic-executor-y",
+    "exit_status": "completed",
+    "session_id": "ic-sess-fd05604fc0d80397",
+    "trace_hash": "f0321770227e42a55efd581da438fd9b193aa7aff911cf8caac389e0bfa6d5d5"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "0ccdbac85db7b950299cb7a7bd8e08175e84aba0fc80ea0e18fb44a2d36e368b",
+    "target_id": "tid-ic-inst-8573c9cae000"
+  },
+  "task": {
+    "base_instance_id": "ic-inst-8573c9cae000",
+    "primitive": "ecdsa",
+    "task_id": "task-ecdsa-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

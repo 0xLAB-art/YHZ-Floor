@@ -1,0 +1,50 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "eb-sess-d34a4f2667694845",
+    "sha256": "e8e66573611c79786d834e86606a98150b93fdcbc88a8c7d52b6c59fee4f6c92"
+  },
+  "attempt_id": "eb-attempt-eb-a83eeee451",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "NOT_ESTABLISHED",
+    "boundary_enforcement": "NOT_ESTABLISHED",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "NOT_ESTABLISHED",
+    "target_effect": "NOT_ESTABLISHED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "9dd4c301d40d1a276d8a150be73ed35afca55536b90657e05257ff6eccd65d1a"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "4f5e9023e4d723db0638cc02a7d42f7d38f0eb86205e0356f102d4bf26a61e63"
+    }
+  ],
+  "execution": {
+    "executor": "eb-executor-r",
+    "exit_status": "completed",
+    "session_id": "eb-sess-d34a4f2667694845",
+    "trace_hash": "4f5e9023e4d723db0638cc02a7d42f7d38f0eb86205e0356f102d4bf26a61e63"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "4677600e83fc019c9e13859fd035f1e6b61ff1bd0f7a5ada06d897c4a745dc91",
+    "target_id": "tid-eb-inst-9bfdf9ddf694"
+  },
+  "task": {
+    "base_instance_id": "eb-inst-9bfdf9ddf694",
+    "primitive": "chacha",
+    "task_id": "task-chacha-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "eb-sess-cd392b91cb3b5c90",
+    "sha256": "8f49dcd61ab8a1ef0966ff4dba9410ff3ce1455b680d71806eced31d66f96b1b"
+  },
+  "attempt_id": "eb-attempt-eb-b39e1e1f90",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "PROVEN",
+    "boundary_enforcement": "PROVEN",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "ACCEPTED",
+    "target_effect": "OBSERVED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "b67e2db8b4d69702c91711e03a6c58aabe9bbbb95795df7c9fdeef309b902f70"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "1c61473f6822c73e7d00e07c83c201e499cc1189efc4e1ba3ff2885b4d925369"
+    },
+    {
+      "kind": "target_effect",
+      "path": "evidence/target_effect.json",
+      "sha256": "1303405c1d78107b7455588f651f1f196a38dbb9ad5c0196d8cf3b79706b2134"
+    },
+    {
+      "kind": "reference_acceptance",
+      "path": "evidence/reference_acceptance.json",
+      "sha256": "398a92c5f8954d54afb7a99cb53cd50660b8a9cd7d804e0b1f05595684a5e7b3"
+    },
+    {
+      "kind": "boundary",
+      "path": "evidence/boundary.json",
+      "sha256": "c1a90cdd2508c36e4a55edf1c0fe372b9a99bef20a1947327d8713954465a8f6"
+    },
+    {
+      "kind": "verifier_metadata",
+      "path": "evidence/verifier_metadata.json",
+      "sha256": "9f542bb9c085ec918fa172f2350b78797de42578b465befe9144702c547db15d"
+    }
+  ],
+  "execution": {
+    "executor": "eb-executor-x",
+    "exit_status": "completed",
+    "session_id": "eb-sess-cd392b91cb3b5c90",
+    "trace_hash": "1c61473f6822c73e7d00e07c83c201e499cc1189efc4e1ba3ff2885b4d925369"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "5ee8882b992f0b6ef20b29e449293ae881d54282314762d085ae5321c85ca2a4",
+    "target_id": "tid-eb-inst-d282893f8fe1"
+  },
+  "task": {
+    "base_instance_id": "eb-inst-d282893f8fe1",
+    "primitive": "chacha",
+    "task_id": "task-chacha-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

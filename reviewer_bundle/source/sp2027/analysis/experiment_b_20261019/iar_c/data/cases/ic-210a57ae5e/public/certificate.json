@@ -1,0 +1,50 @@
+{
+  "agent_artifact": {
+    "path": "candidate.json",
+    "session_id": "ic-sess-fed97cf63a0c08f2",
+    "sha256": "c134fa73df4ac6ec6b4d9818d253cc15e28da9bd3530216540eca17760ad13bc"
+  },
+  "attempt_id": "ic-attempt-ic-210a57ae5e",
+  "claims": {
+    "artifact_authorship": "PROVEN",
+    "attribution": "NOT_ESTABLISHED",
+    "boundary_enforcement": "NOT_ESTABLISHED",
+    "execution_identity": "PROVEN",
+    "reference_oracle_acceptance": "NOT_ESTABLISHED",
+    "target_effect": "NOT_ESTABLISHED"
+  },
+  "condition": {
+    "id": "cond-0"
+  },
+  "evidence": [
+    {
+      "kind": "agent_artifact",
+      "path": "evidence/agent_artifact.json",
+      "sha256": "4e7fd6a3ce212e4f74ec7a1a3395b89741712fdc659ab256c825ca2e6dc19cec"
+    },
+    {
+      "kind": "execution_trace",
+      "path": "evidence/execution_trace.json",
+      "sha256": "427318b14c4d4d4e11e9d7511a168367761177ca96c8d7aee2ce2394958e46c9"
+    }
+  ],
+  "execution": {
+    "executor": "ic-executor-r",
+    "exit_status": "completed",
+    "session_id": "ic-sess-fed97cf63a0c08f2",
+    "trace_hash": "427318b14c4d4d4e11e9d7511a168367761177ca96c8d7aee2ce2394958e46c9"
+  },
+  "schema": "heb1-signed/1",
+  "target": {
+    "artifact_sha256": "6fa7cabca1dfb93b228e8df98bd203f735e5f720cb0a547749158642d8b74e9d",
+    "target_id": "tid-ic-inst-ed3e2d10f445"
+  },
+  "task": {
+    "base_instance_id": "ic-inst-ed3e2d10f445",
+    "primitive": "chacha",
+    "task_id": "task-chacha-nonce-reuse"
+  },
+  "verification": {
+    "verifier_version": "heb1-reference-v1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "family": "C4",
+  "intended": {
+    "claim_mismatches": [
+      "attribution"
+    ],
+    "crypto_cert": true,
+    "crypto_requested": true,
+    "joins_failed": [
+      "J2",
+      "J6",
+      "J7"
+    ],
+    "level": 1,
+    "malformed": false,
+    "missing_kinds": [],
+    "truth_strong": false
+  },
+  "mechanism": "stale/mismatched session id: certificate execution id broken",
+  "ops": [
+    "cert execution session replaced with unknown ghost id",
+    "request binds the honest run session",
+    "J7 session leg also fails against the ghost execution id"
+  ]
+}

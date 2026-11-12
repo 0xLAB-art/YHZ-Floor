@@ -1,0 +1,260 @@
+{
+  "boundary": "the content filter is a measured, gateway-wide transport property (blocked under both the prior and the funded account, and under both endpoints); blocked pairs are a registered boundary of the panel, excluded by the two-sided rule, never counted as zero or as agent behavior",
+  "defined_grid": {
+    "labels": [
+      "gpt-5.6-sol",
+      "gpt-6-astra",
+      "gpt-6.1-sol"
+    ],
+    "pass_pairs": 2,
+    "seeds": [
+      425,
+      426,
+      427,
+      428
+    ],
+    "sessions": 24
+  },
+  "evidence": false,
+  "gate_blocked_pairs": [
+    [
+      "2015q-cry-eps_part2",
+      "R0"
+    ],
+    [
+      "2015q-cry-eps_part2",
+      "RT"
+    ],
+    [
+      "2017q-cry-almost_xor",
+      "RT"
+    ],
+    [
+      "2018q-cry-babycrypto",
+      "R0"
+    ],
+    [
+      "2018q-cry-babycrypto",
+      "RT"
+    ],
+    [
+      "2018q-cry-lowe",
+      "RT"
+    ]
+  ],
+  "gate_empty_text_pairs": [
+    [
+      "2017q-cry-almost_xor",
+      "R0"
+    ],
+    [
+      "2017q-cry-another_xor",
+      "R0"
+    ],
+    [
+      "2017q-cry-another_xor",
+      "RT"
+    ],
+    [
+      "2018q-cry-lowe",
+      "R0"
+    ],
+    [
+      "2021q-cry-crack_me",
+      "R0"
+    ],
+    [
+      "2021q-cry-crack_me",
+      "RT"
+    ]
+  ],
+  "gate_label": "gpt-5.6-sol",
+  "gate_pass_pairs": [
+    [
+      "2015q-cry-eps",
+      "R0"
+    ],
+    [
+      "2015q-cry-eps",
+      "RT"
+    ]
+  ],
+  "generated_date": "2026-11-09",
+  "labels_auth_smokes": {
+    "gpt-5.6-sol": {
+      "avg_elapsed_s": 4.08,
+      "finish_reason": "completed",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "AUTH_SMOKE_OK"
+    },
+    "gpt-6-astra": {
+      "avg_elapsed_s": 3.79,
+      "finish_reason": "completed",
+      "model_echo": "gpt-6-astra",
+      "outcome": "AUTH_SMOKE_OK"
+    },
+    "gpt-6.1-sol": {
+      "avg_elapsed_s": 5.53,
+      "finish_reason": "completed",
+      "model_echo": "gpt-6.1-sol",
+      "outcome": "AUTH_SMOKE_OK"
+    }
+  },
+  "probe_class": "non-evidence route/prompt smokes (AUTH_SMOKE precedent)",
+  "rows": [
+    {
+      "elapsed_s": 10.37,
+      "finish_reason": "completed",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_VISIBLE_JSON",
+      "output_tokens": 679,
+      "prompt_sha256": "e3eb0ce531a3a13f073f9d27a05b93ad6bba0be4dccd15bc84f1ca370cd09a94",
+      "reasoning_tokens": 506,
+      "representation": "R0",
+      "task_id": "2015q-cry-eps",
+      "text_chars": 481,
+      "transport": "responses_api"
+    },
+    {
+      "elapsed_s": 36.46,
+      "finish_reason": "completed",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_VISIBLE_JSON",
+      "output_tokens": 3288,
+      "prompt_sha256": "6371cee2aa619a02dcaf9e962182b757da238abbb37754352b3fe96299ac5903",
+      "reasoning_tokens": 3106,
+      "representation": "RT",
+      "task_id": "2015q-cry-eps",
+      "text_chars": 487,
+      "transport": "responses_api"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 20261109213355707362428r977zsnQaXPRj)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "9701636b6d614fc489d691c15d42c42be49670babc835bc144d98702fdc619b0",
+      "representation": "R0",
+      "task_id": "2015q-cry-eps_part2"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 2026110921335696430438572v5h8iD9fBzR)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "8f165ecfec3744032929053fd6e9a8e5feb1a8adfdfcbbbd389764ce618f1508",
+      "representation": "RT",
+      "task_id": "2015q-cry-eps_part2"
+    },
+    {
+      "elapsed_s": 58.55,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "b304de0581b542ea6a7031830cdbabd2457aeb0bd7eb1362b6624888c6fb74c5",
+      "reasoning_tokens": 4200,
+      "representation": "R0",
+      "task_id": "2017q-cry-almost_xor",
+      "text_chars": 0,
+      "transport": "responses_api"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 2026110921345657652496257v679h4qgMZe)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "7127ba377fb2c0770bfddf98bb3dfb76d4854a03621b9ada738ed1d4a7309e28",
+      "representation": "RT",
+      "task_id": "2017q-cry-almost_xor"
+    },
+    {
+      "elapsed_s": 45.14,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "80f0098b4de13a5abb7425627ff306f7fc82ea738a60ae0c2a38dab6ec5a0d25",
+      "reasoning_tokens": 4200,
+      "representation": "R0",
+      "task_id": "2017q-cry-another_xor",
+      "text_chars": 0,
+      "transport": "responses_api"
+    },
+    {
+      "elapsed_s": 49.77,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "5cb5257de9917705930fac4d061bf348c4fa3ac42fcc981164fa5d869a0367f3",
+      "reasoning_tokens": 4200,
+      "representation": "RT",
+      "task_id": "2017q-cry-another_xor",
+      "text_chars": 0,
+      "transport": "responses_api"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 202611092136325860497352rskrovajd08b)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "e1077392b41cfab48b2d6971a595f0756e39e06724f0fcfbcc27ee88259aeb08",
+      "representation": "R0",
+      "task_id": "2018q-cry-babycrypto"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 20261109213634760156369hcz7gLbaQEhLl)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "02c0243be26b978349fc7ce71477a6d142b8c2c2d49db1d33dcc6d783995ced0",
+      "representation": "RT",
+      "task_id": "2018q-cry-babycrypto"
+    },
+    {
+      "elapsed_s": 52.5,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "88946eff860097a469f85eef2f22cfc5444210fce8d56ec1b9c0b2285e3ef0e0",
+      "reasoning_tokens": 4200,
+      "representation": "R0",
+      "task_id": "2018q-cry-lowe",
+      "text_chars": 0,
+      "transport": "responses_api"
+    },
+    {
+      "category": "BAD_RESPONSE",
+      "detail": "HTTP 400: {\"error\":{\"code\":\"content-blocked\",\"message\":\"content-blocked (request id: 202611092137282197752416mf2r9vCxCbJj)\",\"param\":\"\",\"type\":\"agent_router_api_error\"}}",
+      "outcome": "PROVIDER_FAILURE",
+      "prompt_sha256": "1894df6f840fafc75b6cb0b70e37a3de8d4643cccfcd96af5cf6dfa3689eec6b",
+      "representation": "RT",
+      "task_id": "2018q-cry-lowe"
+    },
+    {
+      "elapsed_s": 58.05,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "9f65d8b5d7f6f549c98184824e750946177f9736833234c41e0529ed808ed962",
+      "reasoning_tokens": 4200,
+      "representation": "R0",
+      "task_id": "2021q-cry-crack_me",
+      "text_chars": 0,
+      "transport": "responses_api"
+    },
+    {
+      "elapsed_s": 64.21,
+      "finish_reason": "incomplete",
+      "model_echo": "gpt-5.6-sol",
+      "outcome": "PASS_EMPTY_TEXT",
+      "output_tokens": 4200,
+      "prompt_sha256": "7b1fcb67961f082429b08a13c1ac4db4ab12fffc3b56a50851190b81b48d438f",
+      "reasoning_tokens": 4200,
+      "representation": "RT",
+      "task_id": "2021q-cry-crack_me",
+      "text_chars": 0,
+      "transport": "responses_api"
+    }
+  ],
+  "schema": "external-admission-amend5-compat-gate/1",
+  "total_pairs": 14
+}

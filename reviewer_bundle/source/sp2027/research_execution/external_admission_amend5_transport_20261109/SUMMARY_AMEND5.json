@@ -1,0 +1,121 @@
+{
+  "cost": {
+    "experiment_calls": 65,
+    "input_tokens": 81854,
+    "note": "no halts; zero provider-side empty-content completions (the Amend-4 artifact did not occur on the responses transport)",
+    "output_tokens": 235464,
+    "reasoning_tokens": 219106
+  },
+  "fingerprint_audit": "FINGERPRINT_AUDIT_AMEND5.json \u2014 0 drift violations, 65/65 calls echo the registered slug",
+  "freeze_commit": "d82089f1442eeb71dedc3d34f7f295ef2ccdcccc",
+  "grid": "36 sessions = 9 census-pass (task,rep,label) combos x seeds 425-428",
+  "namespace": "external_admission_amend5_transport_20261109",
+  "protocol": "PHASE2-EXTERNAL-ADMISSION-AMEND5-TRANSPORT-v1",
+  "recorded_date": "2026-11-09",
+  "regrade_locked_machinery": {
+    "argv1_boundary_firings_among_rejected": 54,
+    "cross_label": {
+      "applicable": true,
+      "f1_false": [
+        "gpt-5.6-sol",
+        "gpt-6-astra",
+        "gpt-6.1-sol"
+      ],
+      "f1_true": [],
+      "f1_true_and_f3_passed": [],
+      "labels": [
+        "gpt-5.6-sol",
+        "gpt-6-astra",
+        "gpt-6.1-sol"
+      ],
+      "note": "per-label verdicts are reported side by side; no pooling; undefined is never counted as movement",
+      "registered_label_count": 3,
+      "replicable_across_labels": false,
+      "rule": ">=2 of 3 registered labels with F1 TRUE and F3 PASSED"
+    },
+    "declared_qualified": 7,
+    "oracle_correct_and_qualified": 1,
+    "oracle_correct_programs": 35,
+    "output_preserved": "61/61 (F3)",
+    "programs": 61,
+    "source": "Amendment-3 frozen machinery (run_amend3_regrade.py + regrade_amend3_contrast.py), policies hash-verified 3/3 against the Amend-3 FREEZE; --allow-small-grid (registered flag) because the census-defined grid covers 2 of 7 tasks",
+    "stress_qualified": 7,
+    "verdicts_per_label": {
+      "gpt-5.6-sol": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 2,
+        "margin_pp": 10.0,
+        "movement_defined_on": 0,
+        "tasks_defined_within_margin": [],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2015q-cry-eps",
+          "2018q-cry-lowe"
+        ],
+        "threshold_M": 1,
+        "undefined_not_zero": true
+      },
+      "gpt-6-astra": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 2,
+        "margin_pp": 10.0,
+        "movement_defined_on": 1,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2018q-cry-lowe"
+        ],
+        "threshold_M": 1,
+        "undefined_not_zero": true
+      },
+      "gpt-6.1-sol": {
+        "F1": "FALSE",
+        "F2": "TRUE",
+        "F3": "PASSED_PRESERVATION",
+        "N": 2,
+        "margin_pp": 10.0,
+        "movement_defined_on": 1,
+        "tasks_defined_within_margin": [
+          "2015q-cry-eps"
+        ],
+        "tasks_moved": [],
+        "tasks_undefined": [
+          "2018q-cry-lowe"
+        ],
+        "threshold_M": 1,
+        "undefined_not_zero": true
+      }
+    }
+  },
+  "schema": "external-admission-amend5-summary/1",
+  "sessions": {
+    "accepted_c1": 35,
+    "accepted_c2_any": 24,
+    "accepted_turn_census": {
+      "1": 12,
+      "2": 21,
+      "3": 1,
+      "4": 1
+    },
+    "eps_R0_accepted": "12/12",
+    "eps_RT_accepted": "11/12",
+    "lowe_R0_accepted": "12/12 (all turn-1)",
+    "statuses": {
+      "ORACLE_FAIL": 1,
+      "SUCCESS": 35
+    },
+    "terminal": 36
+  },
+  "verdict_reading": {
+    "admission_level": "the frozen declared v4 rule qualifies 7/61 retained programs; 54 rejections are the open:not-readonly-argv1 boundary clause firing on variable-path opens the prompts' working-directory contract permits \u2014 the SAME clause class that degenerated Amendment-1 (37/37) and was repaired in Amendment-2; 34/35 oracle-correct programs are boundary-rejected. The admission-interface owner re-fires on the new cohort's program style (Amend-3's free/-model cohort, with literal artifact-name opens, qualified 261/282 under the identical frozen rule)",
+    "boundary": "never a claim about the benchmarks themselves; per-label verdicts never pooled; the session-level capability fact is bounded to the census-pass tasks and does not alter the registered Amendment-3/4 records",
+    "registered_falsifiers": "F1 FALSE on all three labels (movement undefined where an arm qualifies nothing; defined-and-zero on astra/6.1-sol eps \u2014 registered bar >=4 of 7 unreachable under the census-defined grid, prereg \u00a76 caveat); F2 TRUE (no defined contrast outside the margin); F3 PASSED_PRESERVATION 61/61; cross-label rule not met",
+    "session_level": "the transport-repaired panel produces 35/36 oracle-correct sessions under the registered C1 rule on the SAME frozen prompts and oracle that yielded Amend-4's 100% transport-killed null \u2014 the Amendment-4 null's capability layer is superseded by a measured POSITIVE acceptance at session level, bounded to eps+lowe_R0 by the census"
+  }
+}

@@ -1,0 +1,1698 @@
+{
+  "base_protocol": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/B2_2_PROTOCOL.md",
+  "cases": [
+    {
+      "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control",
+      "input_case_files": {
+        "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "evidence/agent_artifact.json": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+        "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "evidence/execution_trace.json": "63d8f69a97e5a79c3752dbbdde7f519eca34b11a85f9e17e4d7daa439368c7fe",
+        "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "private_certificate.json": "44177e7e8e8a6250c75226664ca33462c4e7359f9693e1e59e2d2b9fe60cf7c0",
+        "public_certificate.json": "b40ee524cd5469df5d75f5ac8db80512ebc3c4ffc0c06b61fe28afe6e56d4bfa",
+        "reference_input.json": "d1e35f4b5066672c3c48e41fe82ffd8141fc4896ae757c00d1b759652a3b4216",
+        "source_private_certificate.json": "c1332c257563f0fc05ab557ef8f569400e138694a5432080e3f271f9ed6779f0",
+        "source_public_certificate.json": "f724138fb6bc3a590c274c743f35c466b86014e39b9210263d72f592aee102bf",
+        "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+      },
+      "name": "clean_control",
+      "outer_integrity": {
+        "candidate": {
+          "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "match": true,
+          "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/candidate.json"
+        },
+        "evidence": [
+          {
+            "actual_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+            "declared_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+            "kind": "agent_artifact",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/evidence/agent_artifact.json"
+          },
+          {
+            "actual_sha256": "63d8f69a97e5a79c3752dbbdde7f519eca34b11a85f9e17e4d7daa439368c7fe",
+            "declared_sha256": "63d8f69a97e5a79c3752dbbdde7f519eca34b11a85f9e17e4d7daa439368c7fe",
+            "kind": "execution_trace",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/evidence/execution_trace.json"
+          },
+          {
+            "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "kind": "target_effect",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/evidence/target_effect.json"
+          },
+          {
+            "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "kind": "verifier_metadata",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/evidence/verifier_metadata.json"
+          },
+          {
+            "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "kind": "boundary",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/evidence/boundary.json"
+          }
+        ]
+      },
+      "reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/reference_input.json"
+        ],
+        "elapsed_ms": 188.647,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "elapsed_ms": 77.91,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      },
+      "wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/clean_control/public_certificate.json"
+        ],
+        "elapsed_ms": 51.624,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      }
+    },
+    {
+      "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction",
+      "input_case_files": {
+        "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "evidence/agent_artifact.json": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+        "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "evidence/execution_trace.json": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+        "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "private_certificate.json": "1607faa948c4bb45a7b524c3e4b6d1ffcae9d0aa4a0f6cca09f38322835dd364",
+        "public_certificate.json": "7765f9169bd0c379ec1dec766f3fc2db14d06341baf23e0dbbab951f695c7db2",
+        "reference_input.json": "4a6f4911898f6bde1e353620def5c7108235a5b1878e191f7aa2b64beb93356a",
+        "source_private_certificate.json": "f965153fe4ac67567055f1f30f11cab08aca3c92ddc0f4202f2e06f086cf77be",
+        "source_public_certificate.json": "1e738566ae78a61806c55ca6b54add650da3defce9543c3e706506f5b2e0b0f2",
+        "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+      },
+      "name": "a1_reproduction",
+      "outer_integrity": {
+        "candidate": {
+          "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "match": true,
+          "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/candidate.json"
+        },
+        "evidence": [
+          {
+            "actual_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "declared_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "kind": "agent_artifact",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/evidence/agent_artifact.json"
+          },
+          {
+            "actual_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+            "declared_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+            "kind": "execution_trace",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/evidence/execution_trace.json"
+          },
+          {
+            "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "kind": "target_effect",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/evidence/target_effect.json"
+          },
+          {
+            "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "kind": "verifier_metadata",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/evidence/verifier_metadata.json"
+          },
+          {
+            "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "kind": "boundary",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/evidence/boundary.json"
+          }
+        ]
+      },
+      "reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/reference_input.json"
+        ],
+        "elapsed_ms": 174.51,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "elapsed_ms": 63.165,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      },
+      "wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1_reproduction/public_certificate.json"
+        ],
+        "elapsed_ms": 49.597,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      }
+    },
+    {
+      "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction",
+      "input_case_files": {
+        "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "evidence/agent_artifact.json": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+        "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "evidence/execution_trace.json": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+        "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "private_certificate.json": "ba6346bcd673d71658b601367e00002855f028a445ad17cde14082d84d2f08e7",
+        "public_certificate.json": "509b2a429771108f3fb9b960b354c3243429cd43a9f0c8bca2f0681bf852f770",
+        "reference_input.json": "794580d5b180165a6fd0d886475c0a8d471bc8c3983a21e04786b05063643a43",
+        "source_private_certificate.json": "198e407d8844a56b3947b1476094d81fe2b54dc795ff9c9f171d69737b2bd7ee",
+        "source_public_certificate.json": "87714a70e5ceb23f0fb201eed0bc45ec2f5cb1e84b18ace08c87a0769fa36002",
+        "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+      },
+      "name": "a1b_reproduction",
+      "outer_integrity": {
+        "candidate": {
+          "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "match": true,
+          "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/candidate.json"
+        },
+        "evidence": [
+          {
+            "actual_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "declared_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "kind": "agent_artifact",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/agent_artifact.json"
+          },
+          {
+            "actual_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+            "declared_sha256": "fe9f1e4bd070af83e7a7c11d09b2744838cb2b36a832d70d76b608a38887d9a7",
+            "kind": "execution_trace",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/execution_trace.json"
+          },
+          {
+            "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "kind": "target_effect",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/target_effect.json"
+          },
+          {
+            "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "kind": "verifier_metadata",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/verifier_metadata.json"
+          },
+          {
+            "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "kind": "boundary",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/evidence/boundary.json"
+          }
+        ]
+      },
+      "reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/reference_input.json"
+        ],
+        "elapsed_ms": 188.981,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [\"execution-session-binding\"], \"certificate_integrity\": false, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"REJECTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [
+            "execution-session-binding"
+          ],
+          "certificate_integrity": false,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "REJECTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "elapsed_ms": 59.275,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"REJECT\", \"reason\": \"execution-session-binding\"}\n",
+        "verdict": {
+          "decision": "REJECT",
+          "reason": "execution-session-binding"
+        }
+      },
+      "wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/a1b_reproduction/public_certificate.json"
+        ],
+        "elapsed_ms": 47.13,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"reason\": \"trace-has-no-candidate-hash\", \"status\": \"INCONCLUSIVE\", \"system\": \"external-candidate-binding-wrapper\"}\n",
+        "verdict": {
+          "reason": "trace-has-no-candidate-hash",
+          "status": "INCONCLUSIVE",
+          "system": "external-candidate-binding-wrapper"
+        }
+      }
+    },
+    {
+      "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch",
+      "input_case_files": {
+        "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "evidence/agent_artifact.json": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+        "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "evidence/execution_trace.json": "32f2c79d55283d5032f3d43e6aa2da1a7524e9254042a96c1ee88d4ad8da7679",
+        "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "private_certificate.json": "336f740ce3a6f6ddcb28b8f19df6cd05d8149906d54f7285ba984473c9341cea",
+        "public_certificate.json": "52721ac900ca8beb703c9378361a035cd2364a4b368f03ac390d6a622046fd21",
+        "reference_input.json": "407efb58d1f648bffb315ddda4ee755fd64b99560a8a2e3304cd9b48685b5596",
+        "source_private_certificate.json": "f965153fe4ac67567055f1f30f11cab08aca3c92ddc0f4202f2e06f086cf77be",
+        "source_public_certificate.json": "1e738566ae78a61806c55ca6b54add650da3defce9543c3e706506f5b2e0b0f2",
+        "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+      },
+      "name": "candidate_binding_mismatch",
+      "outer_integrity": {
+        "candidate": {
+          "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "match": true,
+          "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/candidate.json"
+        },
+        "evidence": [
+          {
+            "actual_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "declared_sha256": "7adb445bbc69534e91476f526f711b6c219780d258521436c57a1a0e1a3dc241",
+            "kind": "agent_artifact",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/evidence/agent_artifact.json"
+          },
+          {
+            "actual_sha256": "32f2c79d55283d5032f3d43e6aa2da1a7524e9254042a96c1ee88d4ad8da7679",
+            "declared_sha256": "32f2c79d55283d5032f3d43e6aa2da1a7524e9254042a96c1ee88d4ad8da7679",
+            "kind": "execution_trace",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/evidence/execution_trace.json"
+          },
+          {
+            "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "kind": "target_effect",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/evidence/target_effect.json"
+          },
+          {
+            "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "kind": "verifier_metadata",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/evidence/verifier_metadata.json"
+          },
+          {
+            "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "kind": "boundary",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/evidence/boundary.json"
+          }
+        ]
+      },
+      "reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/reference_input.json"
+        ],
+        "elapsed_ms": 136.574,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "elapsed_ms": 54.081,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      },
+      "wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_mismatch/public_certificate.json"
+        ],
+        "elapsed_ms": 41.716,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\", \"reason\": \"semantic-candidate-execution-mismatch\", \"status\": \"REJECT\", \"system\": \"external-candidate-binding-wrapper\", \"trace_candidate_sha256\": \"aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad\"}\n",
+        "verdict": {
+          "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "reason": "semantic-candidate-execution-mismatch",
+          "status": "REJECT",
+          "system": "external-candidate-binding-wrapper",
+          "trace_candidate_sha256": "aed7e1d8456b4e98548b7bb8b88dd2fbc7ae191e1feb7701448733b6eeaca8ad"
+        }
+      }
+    },
+    {
+      "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control",
+      "input_case_files": {
+        "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+        "evidence/agent_artifact.json": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+        "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "evidence/execution_trace.json": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+        "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "private_certificate.json": "d74a7e72ba2e7136589218250f06450888d50013784b2486933db96f07b72f5d",
+        "public_certificate.json": "68ea20f25971a269ffeafb3d49d79dc1949345ac219d6ad6c1622efa806fbed0",
+        "reference_input.json": "01a402da9970cd580e586bca5d0c74359247926cdc3f059b5e70615e43626e8a",
+        "source_private_certificate.json": "c1332c257563f0fc05ab557ef8f569400e138694a5432080e3f271f9ed6779f0",
+        "source_public_certificate.json": "f724138fb6bc3a590c274c743f35c466b86014e39b9210263d72f592aee102bf",
+        "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+      },
+      "name": "candidate_binding_match_control",
+      "outer_integrity": {
+        "candidate": {
+          "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "match": true,
+          "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/candidate.json"
+        },
+        "evidence": [
+          {
+            "actual_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+            "declared_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+            "kind": "agent_artifact",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/agent_artifact.json"
+          },
+          {
+            "actual_sha256": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+            "declared_sha256": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+            "kind": "execution_trace",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/execution_trace.json"
+          },
+          {
+            "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+            "kind": "target_effect",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/target_effect.json"
+          },
+          {
+            "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+            "kind": "verifier_metadata",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/verifier_metadata.json"
+          },
+          {
+            "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+            "kind": "boundary",
+            "match": true,
+            "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/boundary.json"
+          }
+        ]
+      },
+      "reference": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/reference_input.json"
+        ],
+        "elapsed_ms": 172.655,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+        "verdict": {
+          "certificate_errors": [],
+          "certificate_integrity": true,
+          "crypto_details": {
+            "public_key_matches": true,
+            "recovered_d_matches": true,
+            "recovered_k_matches": true,
+            "repeated_r": true,
+            "signatures_verify": true
+          },
+          "cryptographic_predicate": true,
+          "reference_verdict": "ACCEPTED",
+          "truth_source": "recomputed-target-candidate-and-certificate"
+        }
+      },
+      "validator": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+        ],
+        "elapsed_ms": 53.794,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+        "verdict": {
+          "decision": "ACCEPT",
+          "reason": "public-evidence-consistent"
+        }
+      },
+      "wrapper": {
+        "argv": [
+          "/usr/bin/python3",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+          "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/public_certificate.json"
+        ],
+        "elapsed_ms": 44.691,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"certificate_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\", \"reason\": \"candidate-execution-bound\", \"status\": \"ACCEPT\", \"system\": \"external-candidate-binding-wrapper\", \"trace_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\"}\n",
+        "verdict": {
+          "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+          "reason": "candidate-execution-bound",
+          "status": "ACCEPT",
+          "system": "external-candidate-binding-wrapper",
+          "trace_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7"
+        }
+      }
+    }
+  ],
+  "determination": {
+    "binding_wrapper": "external wrapper only; not Stage01 repair",
+    "novelty": "NOT_ESTABLISHED",
+    "operational_exploitability": "NOT_DEMONSTRATED",
+    "original_components": "reproduced from immutable B2-2 cases"
+  },
+  "integrity": {
+    "network_calls": 0,
+    "protected_after": {
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+    },
+    "protected_before": {
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK.json": "4b152f188d0781bada5e19f0f113067a7f1860ba98df6fd47862e974827d9e39",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/RESULTS_LOCK_H1PC.json": "8221cb86dd9bd808854cc1f7d098bc3396a4ae53504ea6e8f9eb0ef80e655103",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.pdf": "fd9a58894fa4e5b35a0980e47f488524f1099b6246c2207ff2900bbdf7dd887a",
+      "/mnt/nvme5/ACTS-Attack/sp2027/paper/main.tex": "51f97748b7efca9e525140af5b5e82dbf9ffa8c65b62473c38cf9c8a154be461"
+    },
+    "protected_unchanged": true,
+    "provider_calls": 0,
+    "reference_sha256": "15bb4095ee39f6ff558c5989450238e20f1d371712b31817d657f49232c7584b",
+    "spend_usd": 0.0,
+    "validator_sha256": "f248413d9b476531faf786ab92f513595959b02563576749e4c3b0b196875b3a",
+    "wrapper_sha256": "2589c98c89fe965846995bf2d8ef6f400481715768fb89f22c165a22fd0f3c64"
+  },
+  "reachability": [
+    {
+      "ast_input_findings": [
+        {
+          "kind": "Name",
+          "line": 247,
+          "source": "evidence"
+        },
+        {
+          "kind": "Call",
+          "line": 247,
+          "source": "make_evidence(case_dir, session, base, \"OBSERVED\" if valid else \"NOT_OBSERVED\")"
+        },
+        {
+          "kind": "Call",
+          "line": 271,
+          "source": "json.loads(proc.stdout)"
+        },
+        {
+          "kind": "Call",
+          "line": 278,
+          "source": "json.loads(proc.stdout)"
+        },
+        {
+          "kind": "Call",
+          "line": 305,
+          "source": "json.loads(SCHEMA_PATH.read_text())"
+        },
+        {
+          "kind": "Call",
+          "line": 331,
+          "source": "base_certificate(OUT / \"schema_cases\" / \"valid\", 1, True)"
+        },
+        {
+          "kind": "Call",
+          "line": 332,
+          "source": "invalid_missing.pop(\"evidence\")"
+        },
+        {
+          "kind": "Name",
+          "line": 247,
+          "source": "make_evidence"
+        },
+        {
+          "kind": "Name",
+          "line": 262,
+          "source": "evidence"
+        },
+        {
+          "kind": "Attribute",
+          "line": 271,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 278,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 305,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Name",
+          "line": 331,
+          "source": "base_certificate"
+        },
+        {
+          "kind": "Call",
+          "line": 341,
+          "source": "cert.get(\"evidence\", [])"
+        },
+        {
+          "kind": "Call",
+          "line": 347,
+          "source": "write_json(OUT / \"schema_cases\" / f\"{name}.json\", {\"certificate\": cert, \"result\": result})"
+        },
+        {
+          "kind": "Call",
+          "line": 357,
+          "source": "base_certificate(case_dir, idx, valid_flag)"
+        },
+        {
+          "kind": "Name",
+          "line": 250,
+          "source": "evidence"
+        },
+        {
+          "kind": "Name",
+          "line": 357,
+          "source": "base_certificate"
+        },
+        {
+          "kind": "Call",
+          "line": 369,
+          "source": "base_certificate(case_dir, case_idx, True)"
+        },
+        {
+          "kind": "Name",
+          "line": 369,
+          "source": "base_certificate"
+        },
+        {
+          "kind": "Name",
+          "line": 259,
+          "source": "evidence"
+        }
+      ],
+      "certificate_write_lines": [
+        {
+          "line": 8,
+          "text": "- certificate JSON-Schema validation and integrity-negative cases;"
+        },
+        {
+          "line": 54,
+          "text": "    return json.dumps(obj, sort_keys=True, separators=(\",\", \":\")).encode()"
+        },
+        {
+          "line": 216,
+          "text": "def write_json(path: Path, obj) -> None:"
+        },
+        {
+          "line": 218,
+          "text": "    path.write_text(json.dumps(obj, indent=2, sort_keys=True) + \"\\n\")"
+        },
+        {
+          "line": 239,
+          "text": "        write_json(p, obj)"
+        },
+        {
+          "line": 244,
+          "text": "def base_certificate(case_dir: Path, idx: int, valid=True) -> dict:"
+        },
+        {
+          "line": 261,
+          "text": "        \"claims\": {\"artifact_authorship\": \"PROVEN\", \"execution_identity\": \"PROVEN\", \"target_effect\": \"OBSERVED\" if valid else \"NOT_OBSERVED\", \"reference_oracle_acceptance\": \"ACCEPTED\" if valid else \"REJECTED\", \"boundary_enforcement\": \"PROVEN\", \"attribution\": \"PROVEN\" if valid else \"NOT_ESTABLISHED\", \"exclusive_acquisition\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\", \"immutable_hosted_model_identity\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+        },
+        {
+          "line": 268,
+          "text": "    proc = subprocess.run([sys.executable, str(VALIDATOR)], input=json.dumps(public_cert(cert)), text=True, capture_output=True, check=False)"
+        },
+        {
+          "line": 302,
+          "text": "    for name in [\"stage0\", \"stage1\", \"stage1/public\", \"stage1/private_truth\", \"schema_cases\", \"certificates\", \"controls\"]:"
+        },
+        {
+          "line": 326,
+          "text": "            write_json(OUT / \"stage0\" / f\"{task}_{seed:02d}.json\", {\"instance\": inst, \"interface_c1\": i1, \"interface_c2\": i2, \"interface_c0\": interface_spec(task, \"C0\"), \"analysis\": row})"
+        },
+        {
+          "line": 327,
+          "text": "    (OUT / \"stage0_ground_truth.jsonl\").write_text(\"\".join(json.dumps(r, sort_keys=True) + \"\\n\" for r in stage0_rows))"
+        },
+        {
+          "line": 329,
+          "text": "    write_json(OUT / \"stage0_summary.json\", stage0_summary)"
+        },
+        {
+          "line": 331,
+          "text": "    valid = base_certificate(OUT / \"schema_cases\" / \"valid\", 1, True)"
+        },
+        {
+          "line": 347,
+          "text": "        write_json(OUT / \"schema_cases\" / f\"{name}.json\", {\"certificate\": cert, \"result\": result})"
+        },
+        {
+          "line": 351,
+          "text": "    write_json(OUT / \"schema_validation_summary.json\", {\"cases\": schema_results, \"schema_id\": schema[\"$id\"]})"
+        },
+        {
+          "line": 357,
+          "text": "        cert = base_certificate(case_dir, idx, valid_flag)"
+        },
+        {
+          "line": 359,
+          "text": "        truth_path = OUT / \"stage1\" / \"private_truth\" / f\"clean_{idx:02d}.json\"; write_json(truth_path, truth)"
+        },
+        {
+          "line": 369,
+          "text": "            cert = base_certificate(case_dir, case_idx, True)"
+        },
+        {
+          "line": 371,
+          "text": "                target_path = case_dir / \"target_effect.json\"; write_json(target_path, {\"status\": \"NOT_OBSERVED\", \"predicate\": \"declared-target-predicate-v1\"})"
+        },
+        {
+          "line": 375,
+          "text": "                trace_path = case_dir / \"execution_trace.json\"; write_json(trace_path, {\"session_id\": \"stale-session\", \"base_instance_id\": f\"base-{case_idx:03d}\", \"executor\": \"stage01-executor-v1\"})"
+        },
+        {
+          "line": 379,
+          "text": "                trace_path = case_dir / \"execution_trace.json\"; write_json(trace_path, {\"session_id\": cert[\"execution\"][\"session_id\"], \"base_instance_id\": \"base-replayed\", \"executor\": \"stage01-executor-v1\"})"
+        },
+        {
+          "line": 383,
+          "text": "                vm_path = case_dir / \"verifier_metadata.json\"; write_json(vm_path, {\"verifier_version\": \"stage01-reference-v0\", \"implementation\": \"reference-verifier-v0\"})"
+        },
+        {
+          "line": 387,
+          "text": "                boundary_path = case_dir / \"boundary.json\"; write_json(boundary_path, {\"enforced\": False, \"allowed_interface\": \"unrestricted\"})"
+        },
+        {
+          "line": 392,
+          "text": "            truth_path = OUT / \"stage1\" / \"private_truth\" / f\"{defect}_{variant:02d}.json\"; write_json(truth_path, truth)"
+        },
+        {
+          "line": 394,
+          "text": "            # Store only the public certificate in the public split; truth remains private."
+        },
+        {
+          "line": 395,
+          "text": "            write_json(OUT / \"stage1\" / \"public\" / f\"{defect}_{variant:02d}.json\", public_cert(cert))"
+        },
+        {
+          "line": 414,
+          "text": "    write_json(OUT / \"stage1_results.json\", {\"cases\": stage1_rows, \"metrics\": metrics})"
+        },
+        {
+          "line": 423,
+          "text": "    write_json(OUT / \"paired_analysis_definition.json\", {\"planned\": analysis, \"self_test\": analysis_self_test, \"notes\": \"No agent outcomes were collected in Stage 0/1; actual discordances are therefore NOT_RUN, not zero.\"})"
+        },
+        {
+          "line": 430,
+          "text": "    write_json(OUT / \"AGENT_EXECUTION_FREEZE.json\", freeze)"
+        },
+        {
+          "line": 431,
+          "text": "    write_json(OUT / \"run_manifest.json\", {\"stage\": \"0/1\", \"created_utc\": datetime.now(timezone.utc).isoformat(), \"model_calls\": 0, \"network_calls\": 0, \"provider_calls\": 0, \"protocol_commit\": PROTOCOL_COMMIT, \"output_directory\": str(OUT), \"stage0_summary\": stage0_summary, \"stage1_metrics\": metrics, \"protected_baseline_hashes\": protected})"
+        },
+        {
+          "line": 432,
+          "text": "    print(json.dumps({\"output\": str(OUT), \"stage0\": stage0_summary, \"stage1\": metrics, \"agent_calls\": 0, \"provider_cost_ceiling_usd\": 0.0}, sort_keys=True))"
+        }
+      ],
+      "cli_or_input_lines": [],
+      "external_interface_detected": false,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01.py",
+      "sha256": "982978d1db85159f012f458a4d44a381e0c52e9622bbbcaf7841a2d9566ce158"
+    },
+    {
+      "ast_input_findings": [
+        {
+          "kind": "Call",
+          "line": 81,
+          "source": "evidence(case, session, base_id, status)"
+        },
+        {
+          "kind": "Call",
+          "line": 168,
+          "source": "json.loads(SCHEMA_PATH.read_text())"
+        },
+        {
+          "kind": "Call",
+          "line": 189,
+          "source": "cases[1][1].pop(\"evidence\")"
+        },
+        {
+          "kind": "Name",
+          "line": 81,
+          "source": "evidence"
+        },
+        {
+          "kind": "Call",
+          "line": 127,
+          "source": "json.loads(p.stdout)"
+        },
+        {
+          "kind": "Call",
+          "line": 138,
+          "source": "json.loads(Path(by_kind[\"execution_trace\"][\"path\"]).read_text())"
+        },
+        {
+          "kind": "Call",
+          "line": 139,
+          "source": "json.loads(Path(by_kind[\"verifier_metadata\"][\"path\"]).read_text())"
+        },
+        {
+          "kind": "Call",
+          "line": 140,
+          "source": "json.loads(Path(by_kind[\"target_effect\"][\"path\"]).read_text())"
+        },
+        {
+          "kind": "Call",
+          "line": 141,
+          "source": "json.loads(Path(by_kind[\"boundary\"][\"path\"]).read_text())"
+        },
+        {
+          "kind": "Attribute",
+          "line": 168,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Call",
+          "line": 198,
+          "source": "cert.get(\"evidence\",[])"
+        },
+        {
+          "kind": "Call",
+          "line": 201,
+          "source": "write_json(OUT/\"schema_cases\"/f\"{name}.json\",{\"certificate\":cert,\"result\":row})"
+        },
+        {
+          "kind": "Name",
+          "line": 211,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 212,
+          "source": "bundle_path"
+        },
+        {
+          "kind": "Call",
+          "line": 212,
+          "source": "write_json(bundle_path,bundle)"
+        },
+        {
+          "kind": "Call",
+          "line": 217,
+          "source": "invoke(REFERENCE,bundle_path)"
+        },
+        {
+          "kind": "Attribute",
+          "line": 127,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 138,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 139,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 140,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 141,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Name",
+          "line": 212,
+          "source": "bundle_path"
+        },
+        {
+          "kind": "Name",
+          "line": 212,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 217,
+          "source": "bundle_path"
+        },
+        {
+          "kind": "Call",
+          "line": 221,
+          "source": "AssertionError(f\"generated certificate is not schema-valid: {case_id}: {[e.message for e in generated_cert_errors]}\")"
+        },
+        {
+          "kind": "Call",
+          "line": 242,
+          "source": "json.loads((OUT/\"stage1\"/row[\"split\"]/(row[\"defect_family\"] if row[\"defect_family\"]!=\"none\" else \"\")).read_text())"
+        },
+        {
+          "kind": "Attribute",
+          "line": 242,
+          "source": "json.loads"
+        }
+      ],
+      "certificate_write_lines": [
+        {
+          "line": 26,
+          "text": "def canonical(o) -> bytes: return json.dumps(o, sort_keys=True, separators=(\",\", \":\")).encode()"
+        },
+        {
+          "line": 28,
+          "text": "def write_json(p: Path, o) -> None:"
+        },
+        {
+          "line": 29,
+          "text": "    p.parent.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(o, indent=2, sort_keys=True) + \"\\n\")"
+        },
+        {
+          "line": 60,
+          "text": "        p = case / f\"{kind}.json\"; write_json(p, obj)"
+        },
+        {
+          "line": 78,
+          "text": "    write_json(target_path, target); write_json(candidate_path, candidate)"
+        },
+        {
+          "line": 91,
+          "text": "      \"claims\": {\"artifact_authorship\": \"PROVEN\", \"execution_identity\": \"PROVEN\", \"target_effect\": status, \"reference_oracle_acceptance\": \"ACCEPTED\" if valid else \"REJECTED\", \"boundary_enforcement\": \"PROVEN\", \"attribution\": \"PROVEN\" if valid else \"NOT_ESTABLISHED\", \"exclusive_acquisition\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\", \"immutable_hosted_model_identity\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+        },
+        {
+          "line": 94,
+          "text": "    cert_path = case / \"certificate.private.json\"; write_json(cert_path, cert)"
+        },
+        {
+          "line": 101,
+          "text": "        write_json(case / \"target_effect.json\", {\"status\": \"NOT_OBSERVED\", \"predicate\": \"task-specific-cryptographic-predicate-v1\"})"
+        },
+        {
+          "line": 103,
+          "text": "        write_json(case / \"execution_trace.json\", {\"session_id\": cert[\"execution\"][\"session_id\"], \"base_instance_id\": \"stale-base\", \"executor\": \"stage01-executor-v1\"})"
+        },
+        {
+          "line": 105,
+          "text": "        write_json(case / \"execution_trace.json\", {\"session_id\": \"other-session\", \"base_instance_id\": cert[\"task\"][\"base_instance_id\"], \"executor\": \"stage01-executor-v1\"})"
+        },
+        {
+          "line": 107,
+          "text": "        write_json(case / \"verifier_metadata.json\", {\"verifier_version\": \"stage01-reference-v0\", \"implementation\": \"independent-reference-v1\"})"
+        },
+        {
+          "line": 109,
+          "text": "        write_json(case / \"boundary.json\", {\"enforced\": False, \"allowed_interface\": \"contract-sound-v1+hidden-channel\"})"
+        },
+        {
+          "line": 112,
+          "text": "    # Wrong-field and stale/replay defects intentionally keep the certificate's"
+        },
+        {
+          "line": 125,
+          "text": "    start = time.perf_counter(); p = subprocess.run(cmd, input=json.dumps(data) if data is not None else None, text=True, capture_output=True, check=False); elapsed = (time.perf_counter() - start) * 1000"
+        },
+        {
+          "line": 183,
+          "text": "            stage0.append(row); write_json(OUT/\"stage0\"/f\"{task}_{seed:02d}.json\",row)"
+        },
+        {
+          "line": 184,
+          "text": "    write_json(OUT/\"stage0_summary.json\", {\"total\":len(stage0),\"ecdsa\":12,\"chacha20\":12,\"c1_c2_equivalence\":len(stage0),\"c0_ambiguity\":len(stage0),\"scope\":\"zero-query ECDSA/ChaCha20; no CBC/RC4 claim\"})"
+        },
+        {
+          "line": 190,
+          "text": "    bad_meta = OUT / \"schema_cases\" / \"invalid_version_binding\" / \"verifier_metadata.json\"; write_json(bad_meta, {\"verifier_version\":\"stage01-reference-v999\",\"implementation\":\"independent-reference-v1\"})"
+        },
+        {
+          "line": 201,
+          "text": "        row={\"case\":name,\"schema_valid\":schema_ok,\"expected_schema_valid\":expect_schema,\"integrity_valid\":integ,\"runtime_integrity_valid\":runtime_ok,\"expected_integrity_valid\":expect_integrity,\"schema_errors\":[e.message for e in errs]}; schema_rows.append(row); write_json(OUT/\"schema_cases\"/f\"{name}.json\",{\"certificate\":cert,\"result\":row})"
+        },
+        {
+          "line": 204,
+          "text": "    write_json(OUT/\"schema_validation_summary.json\", {\"schema_id\":schema[\"$id\"],\"cases\":schema_rows})"
+        },
+        {
+          "line": 210,
+          "text": "        cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+        },
+        {
+          "line": 211,
+          "text": "        bundle={\"case_id\":case_id,\"target_state_path\":str(target_path),\"candidate_path\":str(candidate_path),\"certificate_path\":str(cert_path)}"
+        },
+        {
+          "line": 212,
+          "text": "        bundle_path=case/\"reference_input.json\"; write_json(bundle_path,bundle)"
+        },
+        {
+          "line": 216,
+          "text": "        label_path=OUT/\"stage1\"/\"labels\"/f\"{case_id}.json\"; write_json(label_path,label)"
+        },
+        {
+          "line": 217,
+          "text": "        ref, ref_ms=invoke(REFERENCE,bundle_path); pub=public_cert(cert); public_path=case/\"public_certificate.json\"; write_json(public_path,pub)"
+        },
+        {
+          "line": 219,
+          "text": "        forbidden_present=any(k in pub.get(\"verification\",{}) for k in [\"raw_verdict\",\"reference_verdict\",\"validator_verdict\"]) or any(k in json.dumps(pub) for k in [\"expected_reference_verdict\",\"hidden_secret\",\"defect_label\"])"
+        },
+        {
+          "line": 221,
+          "text": "        if generated_cert_errors: raise AssertionError(f\"generated certificate is not schema-valid: {case_id}: {[e.message for e in generated_cert_errors]}\")"
+        },
+        {
+          "line": 223,
+          "text": "        rows.append(row); write_json(OUT/\"stage1\"/f\"{split}_{case_id}.json\",row); return row"
+        },
+        {
+          "line": 233,
+          "text": "    freeze_hash=sha_file(VALIDATOR); write_json(OUT/\"controls\"/\"VALIDATOR_FREEZE.json\",{\"validator\":str(VALIDATOR),\"sha256_before_heldout\":freeze_hash,\"heldout_generation_after_freeze\":True,\"development_cases\":20})"
+        },
+        {
+          "line": 238,
+          "text": "    write_json(OUT/\"controls\"/\"HELDOUT_FREEZE_CHECK.json\",{\"validator_sha256_before\":freeze_hash,\"validator_sha256_after\":sha_file(VALIDATOR),\"unchanged\":sha_file(VALIDATOR)==freeze_hash,\"heldout_cases\":20})"
+        },
+        {
+          "line": 240,
+          "text": "    # All full certificates are schema-validated; aggregate independent metrics."
+        },
+        {
+          "line": 246,
+          "text": "    write_json(OUT/\"stage1_results.json\", {\"rows\":rows,\"metrics\":metrics})"
+        },
+        {
+          "line": 247,
+          "text": "    analysis=paired_analysis(); write_json(OUT/\"paired_analysis_definition.json\",analysis)"
+        },
+        {
+          "line": 249,
+          "text": "    write_json(OUT/\"protected_hashes.json\",{\"before\":before,\"after\":after,\"unchanged\":before==after})"
+        },
+        {
+          "line": 250,
+          "text": "    write_json(OUT/\"AGENT_EXECUTION_FREEZE.json\",{\"agent_calls_allowed\":False,\"provider_cost_ceiling_usd\":0.0,\"planned_sessions\":72,\"automatic_retries\":0,\"seed_replacement\":False,\"study_expansion\":False,\"status\":\"BLOCKED_PENDING_USER_APPROVAL\",\"provider_calls_observed\":0,\"network_calls_observed\":0})"
+        },
+        {
+          "line": 251,
+          "text": "    write_json(OUT/\"run_manifest.json\",{\"protocol_commit\":PROTOCOL_COMMIT,\"reference\":str(REFERENCE),\"validator\":str(VALIDATOR),\"output\":str(OUT),\"model_calls\":0,\"provider_calls\":0,\"network_calls\":0,\"manuscript_modified\":False,\"result_locks_modified\":False,\"scope\":\"zero-query ECDSA/ChaCha20 deterministic controls only\"})"
+        },
+        {
+          "line": 252,
+          "text": "    print(json.dumps({\"output\":str(OUT),\"stage0\":24,\"stage1\":len(rows),\"metrics\":metrics,\"paired_analysis\":analysis,\"protected_unchanged\":before==after},indent=2,sort_keys=True))"
+        }
+      ],
+      "cli_or_input_lines": [],
+      "external_interface_detected": false,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01_hardened.py",
+      "sha256": "f46395a309cddbd683aa74b045f0cc6a32295e790114694563310e2f7daa15a6"
+    },
+    {
+      "ast_input_findings": [
+        {
+          "kind": "Name",
+          "line": 89,
+          "source": "evidence_rows"
+        },
+        {
+          "kind": "Call",
+          "line": 89,
+          "source": "evidence(case_dir, session_id, base_id, target_status)"
+        },
+        {
+          "kind": "Call",
+          "line": 131,
+          "source": "json.loads(proc.stdout)"
+        },
+        {
+          "kind": "Name",
+          "line": 89,
+          "source": "evidence"
+        },
+        {
+          "kind": "Name",
+          "line": 100,
+          "source": "evidence_rows"
+        },
+        {
+          "kind": "Attribute",
+          "line": 131,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Call",
+          "line": 67,
+          "source": "json.loads(lines[-1])"
+        },
+        {
+          "kind": "Call",
+          "line": 97,
+          "source": "next(x[\"sha256\"] for x in evidence_rows if x[\"kind\"]==\"execution_trace\")"
+        },
+        {
+          "kind": "Call",
+          "line": 167,
+          "source": "make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status)"
+        },
+        {
+          "kind": "Name",
+          "line": 168,
+          "source": "bundle"
+        },
+        {
+          "kind": "Call",
+          "line": 168,
+          "source": "write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+        },
+        {
+          "kind": "Call",
+          "line": 170,
+          "source": "invoke_json(REFERENCE,bundle)"
+        },
+        {
+          "kind": "Attribute",
+          "line": 67,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Name",
+          "line": 167,
+          "source": "make_certificate"
+        },
+        {
+          "kind": "Name",
+          "line": 168,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 170,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 97,
+          "source": "evidence_rows"
+        }
+      ],
+      "certificate_write_lines": [
+        {
+          "line": 32,
+          "text": "def canonical(value) -> bytes: return json.dumps(value, sort_keys=True, separators=(\",\", \":\")).encode()"
+        },
+        {
+          "line": 34,
+          "text": "def write_json(path: Path, value) -> None:"
+        },
+        {
+          "line": 35,
+          "text": "    path.parent.mkdir(parents=True, exist_ok=True); path.write_text(json.dumps(value, indent=2, sort_keys=True) + \"\\n\")"
+        },
+        {
+          "line": 53,
+          "text": "            if any(token in text for token in [\"subprocess\", \"socket\", \"requests\", \"urllib\", \"os.\", \"open(\", \"__import__\"]): return False, \"disallowed-boundary\""
+        },
+        {
+          "line": 59,
+          "text": "    artifact.write_text(source); write_json(input_path, instance)"
+        },
+        {
+          "line": 69,
+          "text": "    write_json(output_path, output)"
+        },
+        {
+          "line": 83,
+          "text": "        path=case_dir/f\"{kind}.json\"; write_json(path,payload); result.append({\"kind\":kind,\"path\":str(path),\"sha256\":digest_file(path)})"
+        },
+        {
+          "line": 87,
+          "text": "def make_certificate(case_dir: Path, session_id: str, base_id: str, task: str, condition: str, seed: int, execution: dict, target_status: str) -> dict:"
+        },
+        {
+          "line": 99,
+          "text": "        \"claims\":{\"artifact_authorship\":\"PROVEN\",\"execution_identity\":\"PROVEN\",\"target_effect\":target_status,\"reference_oracle_acceptance\":\"PENDING\",\"boundary_enforcement\":\"PROVEN\",\"attribution\":\"PROVEN\" if target_status==\"OBSERVED\" else \"NOT_ESTABLISHED\",\"exclusive_acquisition\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\",\"immutable_hosted_model_identity\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+        },
+        {
+          "line": 120,
+          "text": "            \"Public instance:\\n\" + json.dumps(instance, sort_keys=True, separators=(\",\", \":\")))"
+        },
+        {
+          "line": 129,
+          "text": "    proc = subprocess.run([sys.executable, str(script)], input=json.dumps(payload), text=True, capture_output=True, check=False)"
+        },
+        {
+          "line": 150,
+          "text": "    write_json(OUT/\"EXECUTION_FREEZE.json\", {\"agent_calls_allowed\":True,\"provider_cost_ceiling_usd\":HALT_USD,\"alert_threshold_usd\":ALERT_USD,\"route\":ROUTE,\"planned_sessions\":72,\"automatic_retries\":0,\"seed_replacement\":False,\"study_expansion\":False,\"protocol_hashes\":protocol_hashes,\"status\":\"RUNNING_EXACT_FROZEN_PILOT\"})"
+        },
+        {
+          "line": 152,
+          "text": "    rows=[]; spend=0.0; schedule_rows=schedule(); write_json(OUT/\"schedule.json\",{\"schedule\":schedule_rows,\"schedule_seed\":20261018})"
+        },
+        {
+          "line": 157,
+          "text": "        prompt=prompt_for(task,condition,public); write_json(case/\"session_manifest.json\",{\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,\"prompt_sha256\":digest_bytes(prompt.encode()),\"route\":ROUTE,\"kind\":item[\"kind\"],\"input_hash\":digest_object(public)})"
+        },
+        {
+          "line": 159,
+          "text": "            write_json(case/\"session_result.json\",{\"status\":\"NOT_STARTED_COST_HALT\",\"reason\":\"accounting_halt_threshold\"}); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"status\":\"NOT_STARTED_COST_HALT\",\"task\":task,\"seed\":seed,\"condition\":condition}); continue"
+        },
+        {
+          "line": 163,
+          "text": "            raw_path=case/\"provider_raw.json\"; raw_path.write_text(result[\"raw_body\"]+\"\\n\"); write_json(case/\"provider_metadata.json\", result[\"metadata\"])"
+        },
+        {
+          "line": 167,
+          "text": "            base_id=f\"{task}-seed-{seed:02d}\"; cert=make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status); cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+        },
+        {
+          "line": 168,
+          "text": "            bundle=case/\"reference_input.json\"; write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+        },
+        {
+          "line": 169,
+          "text": "            target={\"primitive\":task,**((base.make_ecdsa(seed))[\"semantic\"] if task==\"ECDSA_Nonce_Reuse\" else (base.make_chacha(seed))[\"semantic\"])}; write_json(case/\"target_state.private.json\",target)"
+        },
+        {
+          "line": 173,
+          "text": "            write_json(case/\"session_result.json\",row); rows.append(row)"
+        },
+        {
+          "line": 176,
+          "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+        },
+        {
+          "line": 179,
+          "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+        },
+        {
+          "line": 180,
+          "text": "    write_json(OUT/\"pilot_results.json\",{\"rows\":rows,\"sessions_planned\":72,\"sessions_started\":sum(r.get(\"provider_status\")==\"SUCCESS\" or r.get(\"status\")==\"PROVIDER_FAILURE\" for r in rows),\"estimated_cost_usd\":spend,\"provider_route\":ROUTE,\"no_retries\":True})"
+        },
+        {
+          "line": 181,
+          "text": "    print(json.dumps({\"output\":str(OUT),\"rows\":len(rows),\"estimated_cost_usd\":spend,\"provider_route\":ROUTE},indent=2,sort_keys=True))"
+        }
+      ],
+      "cli_or_input_lines": [],
+      "external_interface_detected": false,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_pilot.py",
+      "sha256": "144984fcfd778a0948f85002a8827c0411ddd92167c0e9a258173bd8d070587a"
+    },
+    {
+      "ast_input_findings": [
+        {
+          "kind": "Name",
+          "line": 88,
+          "source": "evidence_rows"
+        },
+        {
+          "kind": "Call",
+          "line": 88,
+          "source": "evidence(case_dir, session_id, base_id, target_status)"
+        },
+        {
+          "kind": "Call",
+          "line": 125,
+          "source": "json.loads(proc.stdout)"
+        },
+        {
+          "kind": "Call",
+          "line": 144,
+          "source": "json.loads(health_path.read_text())"
+        },
+        {
+          "kind": "Name",
+          "line": 88,
+          "source": "evidence"
+        },
+        {
+          "kind": "Name",
+          "line": 99,
+          "source": "evidence_rows"
+        },
+        {
+          "kind": "Attribute",
+          "line": 125,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Attribute",
+          "line": 144,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Call",
+          "line": 66,
+          "source": "json.loads(lines[-1])"
+        },
+        {
+          "kind": "Call",
+          "line": 96,
+          "source": "next(x[\"sha256\"] for x in evidence_rows if x[\"kind\"]==\"execution_trace\")"
+        },
+        {
+          "kind": "Call",
+          "line": 193,
+          "source": "make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status)"
+        },
+        {
+          "kind": "Name",
+          "line": 194,
+          "source": "bundle"
+        },
+        {
+          "kind": "Call",
+          "line": 194,
+          "source": "write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+        },
+        {
+          "kind": "Call",
+          "line": 196,
+          "source": "invoke_json(REFERENCE,bundle)"
+        },
+        {
+          "kind": "Attribute",
+          "line": 66,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Name",
+          "line": 193,
+          "source": "make_certificate"
+        },
+        {
+          "kind": "Name",
+          "line": 194,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 196,
+          "source": "bundle"
+        },
+        {
+          "kind": "Name",
+          "line": 96,
+          "source": "evidence_rows"
+        }
+      ],
+      "certificate_write_lines": [
+        {
+          "line": 31,
+          "text": "def canonical(value) -> bytes: return json.dumps(value, sort_keys=True, separators=(\",\", \":\")).encode()"
+        },
+        {
+          "line": 33,
+          "text": "def write_json(path: Path, value) -> None:"
+        },
+        {
+          "line": 34,
+          "text": "    path.parent.mkdir(parents=True, exist_ok=True); path.write_text(json.dumps(value, indent=2, sort_keys=True) + \"\\n\")"
+        },
+        {
+          "line": 52,
+          "text": "            if any(token in text for token in [\"subprocess\", \"socket\", \"requests\", \"urllib\", \"os.\", \"open(\", \"__import__\"]): return False, \"disallowed-boundary\""
+        },
+        {
+          "line": 58,
+          "text": "    artifact.write_text(source); write_json(input_path, instance)"
+        },
+        {
+          "line": 68,
+          "text": "    write_json(output_path, output)"
+        },
+        {
+          "line": 82,
+          "text": "        path=case_dir/f\"{kind}.json\"; write_json(path,payload); result.append({\"kind\":kind,\"path\":str(path),\"sha256\":digest_file(path)})"
+        },
+        {
+          "line": 86,
+          "text": "def make_certificate(case_dir: Path, session_id: str, base_id: str, task: str, condition: str, seed: int, execution: dict, target_status: str) -> dict:"
+        },
+        {
+          "line": 98,
+          "text": "        \"claims\":{\"artifact_authorship\":\"PROVEN\",\"execution_identity\":\"PROVEN\",\"target_effect\":target_status,\"reference_oracle_acceptance\":\"PENDING\",\"boundary_enforcement\":\"PROVEN\",\"attribution\":\"PROVEN\" if target_status==\"OBSERVED\" else \"NOT_ESTABLISHED\",\"exclusive_acquisition\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\",\"immutable_hosted_model_identity\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+        },
+        {
+          "line": 119,
+          "text": "            \"Public instance:\\n\" + json.dumps(instance, sort_keys=True, separators=(\",\", \":\")))"
+        },
+        {
+          "line": 123,
+          "text": "    proc = subprocess.run([sys.executable, str(script)], input=json.dumps(payload), text=True, capture_output=True, check=False)"
+        },
+        {
+          "line": 161,
+          "text": "        raise SystemExit(\"provider health gate failed: \" + json.dumps(checks, sort_keys=True))"
+        },
+        {
+          "line": 178,
+          "text": "    write_json(OUT/\"EXECUTION_FREEZE.json\", {\"agent_calls_allowed\":True,\"provider_cost_ceiling_usd\":0.0,\"paid_fallback_allowed\":False,\"billing_basis\":\"explicit-free-plan-health-check\",\"route\":ROUTE,\"planned_sessions\":72,\"automatic_retries\":0,\"seed_replacement\":False,\"study_expansion\":False,\"adaptive_stopping\":False,\"protocol_commit\":\"4743d186bb64b07f5f81d5448bce3f2ab0237563\",\"protocol_hashes\":protocol_hashes,\"protected_hashes_before\":protected_hashes,\"provider_health\":health,\"status\":\"RUNNING_EXACT_FROZEN_PILOT\"})"
+        },
+        {
+          "line": 180,
+          "text": "    rows=[]; schedule_rows=schedule(); write_json(OUT/\"schedule.json\",{\"schedule\":schedule_rows,\"schedule_seed\":20261018})"
+        },
+        {
+          "line": 185,
+          "text": "        prompt=prompt_for(task,condition,public); write_json(case/\"session_manifest.json\",{\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,\"prompt_sha256\":digest_bytes(prompt.encode()),\"route\":ROUTE,\"kind\":item[\"kind\"],\"input_hash\":digest_object(public)})"
+        },
+        {
+          "line": 189,
+          "text": "            raw_path=case/\"provider_raw.json\"; raw_path.write_text(result[\"raw_body\"]+\"\\n\"); write_json(case/\"provider_metadata.json\", result[\"metadata\"])"
+        },
+        {
+          "line": 193,
+          "text": "            base_id=f\"{task}-seed-{seed:02d}\"; cert=make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status); cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+        },
+        {
+          "line": 194,
+          "text": "            bundle=case/\"reference_input.json\"; write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+        },
+        {
+          "line": 195,
+          "text": "            target={\"primitive\":task,**((base.make_ecdsa(seed))[\"semantic\"] if task==\"ECDSA_Nonce_Reuse\" else (base.make_chacha(seed))[\"semantic\"])}; write_json(case/\"target_state.private.json\",target)"
+        },
+        {
+          "line": 204,
+          "text": "            write_json(case/\"session_result.json\",row); rows.append(row)"
+        },
+        {
+          "line": 207,
+          "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+        },
+        {
+          "line": 210,
+          "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+        },
+        {
+          "line": 213,
+          "text": "    write_json(OUT/\"pilot_results.json\",{\"rows\":rows,\"sessions_planned\":72,\"sessions_started\":sum(r.get(\"provider_status\")==\"SUCCESS\" or r.get(\"status\")==\"PROVIDER_FAILURE\" for r in rows),\"provider_charge_usd\":0.0,\"provider_route\":ROUTE,\"no_retries\":True,\"no_fallback\":True,\"health_gate\":health})"
+        },
+        {
+          "line": 214,
+          "text": "    print(json.dumps({\"output\":str(OUT),\"rows\":len(rows),\"provider_charge_usd\":0.0,\"provider_route\":ROUTE},indent=2,sort_keys=True))"
+        }
+      ],
+      "cli_or_input_lines": [],
+      "external_interface_detected": false,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_pilot_free_v2.py",
+      "sha256": "7c81945d3e6d26bc75f9ddb66eb47f875f86b10d02bbfea5b5bc03ead62b53b0"
+    },
+    {
+      "ast_input_findings": [
+        {
+          "kind": "Call",
+          "line": 95,
+          "source": "json.loads(path.read_text())"
+        },
+        {
+          "kind": "Attribute",
+          "line": 95,
+          "source": "json.loads"
+        },
+        {
+          "kind": "Call",
+          "line": 172,
+          "source": "helpers.make_certificate(case, session_id, base_id, task, condition, seed, execution, target_status)"
+        },
+        {
+          "kind": "Name",
+          "line": 174,
+          "source": "bundle"
+        },
+        {
+          "kind": "Call",
+          "line": 175,
+          "source": "write_json(bundle, {\"case_id\": session_id, \"target_state_path\": str(case / \"target_state.private.json\"), \"candidate_path\": str(case / \"candidate_output.json\"), \"certificate_path\": str(cert_path)})"
+        },
+        {
+          "kind": "Attribute",
+          "line": 172,
+          "source": "helpers.make_certificate"
+        },
+        {
+          "kind": "Name",
+          "line": 175,
+          "source": "bundle"
+        },
+        {
+          "kind": "Call",
+          "line": 176,
+          "source": "repair.invoke_reference(REFERENCE, bundle)"
+        },
+        {
+          "kind": "Name",
+          "line": 176,
+          "source": "bundle"
+        }
+      ],
+      "certificate_write_lines": [
+        {
+          "line": 38,
+          "text": "    return json.dumps(value, sort_keys=True, separators=(\",\", \":\")).encode()"
+        },
+        {
+          "line": 45,
+          "text": "def write_json(path: Path, value) -> None:"
+        },
+        {
+          "line": 47,
+          "text": "    path.write_text(json.dumps(value, indent=2, sort_keys=True) + \"\\n\")"
+        },
+        {
+          "line": 72,
+          "text": "        \"Public instance:\\n\" + json.dumps(instance, sort_keys=True, separators=(\",\", \":\"))"
+        },
+        {
+          "line": 112,
+          "text": "        raise SystemExit(\"provider health gate failed: \" + json.dumps(checks, sort_keys=True))"
+        },
+        {
+          "line": 127,
+          "text": "    write_json(OUT / \"EXECUTION_FREEZE.json\", {"
+        },
+        {
+          "line": 141,
+          "text": "    write_json(OUT / \"schedule.json\", {\"schedule\": schedule_rows, \"schedule_seed\": 20261018})"
+        },
+        {
+          "line": 151,
+          "text": "        write_json(case / \"session_manifest.json\", {"
+        },
+        {
+          "line": 161,
+          "text": "            write_json(case / \"provider_metadata.json\", result[\"metadata\"])"
+        },
+        {
+          "line": 167,
+          "text": "            write_json(case / \"target_state.private.json\", target)"
+        },
+        {
+          "line": 172,
+          "text": "            cert = helpers.make_certificate(case, session_id, base_id, task, condition, seed, execution, target_status)"
+        },
+        {
+          "line": 173,
+          "text": "            cert_path = case / \"certificate.private.json\"; write_json(cert_path, cert)"
+        },
+        {
+          "line": 175,
+          "text": "            write_json(bundle, {\"case_id\": session_id, \"target_state_path\": str(case / \"target_state.private.json\"), \"candidate_path\": str(case / \"candidate_output.json\"), \"certificate_path\": str(cert_path)})"
+        },
+        {
+          "line": 186,
+          "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+        },
+        {
+          "line": 189,
+          "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+        },
+        {
+          "line": 192,
+          "text": "            write_json(case / \"session_result.json\", row); rows.append(row)"
+        },
+        {
+          "line": 193,
+          "text": "    write_json(OUT / \"pilot_results.json\", {"
+        },
+        {
+          "line": 198,
+          "text": "    print(json.dumps({\"output\": str(OUT), \"rows\": len(rows), \"provider_charge_usd\": 0.0, \"provider_route\": ROUTE}, indent=2, sort_keys=True))"
+        }
+      ],
+      "cli_or_input_lines": [],
+      "external_interface_detected": false,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_replacement_v1.py",
+      "sha256": "76f5b530a0a805e8dcbe3a44e23ae75fae1038103a5fc4a1d79e6bd9e850ad8d"
+    }
+  ],
+  "schema": "b2-2-independent-audit/1",
+  "v3_full_established_results": [
+    {
+      "exists": true,
+      "mode": "read-only established result; not rerun",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_b/runs/20261019_112227/results.json",
+      "sha256": "032c93bedb65fec8cadd80d1ec2b0af5e6bb1e30ac4e30e6d105eb14eebcdf15"
+    },
+    {
+      "exists": true,
+      "mode": "read-only established result; not rerun",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_b_heldout/runs/20261019_114849/results.json",
+      "sha256": "be08433db0da8ded6bed2c5edc1730b11b204b828660c3775c0340c2b818f640"
+    },
+    {
+      "exists": true,
+      "mode": "read-only established result; not rerun",
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/iar_c/runs/20261019_121621/results.json",
+      "sha256": "7ad02c14f9328d82ccdfe3cdfbe7b0d0d88143b6f8393222701c7872187de785"
+    }
+  ]
+}

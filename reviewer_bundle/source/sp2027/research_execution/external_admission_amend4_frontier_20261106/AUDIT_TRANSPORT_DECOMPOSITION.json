@@ -1,0 +1,103 @@
+{
+  "boundaries": {
+    "no_benchmark_quality_claim": true,
+    "no_model_call": true,
+    "no_new_sessions": true,
+    "offline": true,
+    "registered_verdicts_unchanged": true
+  },
+  "inputs": {
+    "budget_ledger": "/mnt/nvme5/ACTS-Attack/sp2027/research_execution/BUDGET_LEDGER.jsonl",
+    "content_filter_map": "CONTENT_FILTER_MAP.json",
+    "raw_provider_responses_dir": "sessions/raw_provider_responses",
+    "results_primary": "results.jsonl",
+    "results_recovery": "results_recovery_8400.jsonl"
+  },
+  "layer0_production_defect_disclosure": "v1 of this audit keys raw files to sessions by file-name prefix; names are {run_id}__turn{n}.json where run_id already ends with a 12-hex suffix, so the prior subtraction bug is avoided here.",
+  "layerA_raw_provider_body_census": {
+    "backend_id_prefixes": {
+      "chatcmpl": 279
+    },
+    "charged_output_tokens_on_empty_calls": 1323000,
+    "charged_output_tokens_split_on_empty_calls": {
+      "4200": 125,
+      "8400": 95
+    },
+    "empty_visible_text_and_length_cut_calls": 220,
+    "note": "every length-cut call's content is a single empty text block; the gateway re-serializes an OpenAI-chat-style backend (id prefix 'chatcmpl-'); hidden reasoning consumed the whole completion budget under the Anthropic-messages facade",
+    "raw_files": 279,
+    "stop_reason_counts": {
+      "end_turn": 59,
+      "length": 220
+    },
+    "visible_text_chars_by_stop_reason": {
+      "end_turn": {
+        "max": 2614,
+        "min": 266,
+        "n": 59
+      },
+      "length": {
+        "max": 0,
+        "min": 0,
+        "n": 220
+      }
+    }
+  },
+  "layerB_session_cross_tab": {
+    "per_status_raw_call_accounting": {
+      "AGENT_GIVEUP": {
+        "end_turn_calls": 0,
+        "length_calls": 216,
+        "raw_calls": 216,
+        "sessions": 108
+      },
+      "ORACLE_FAIL": {
+        "end_turn_calls": 46,
+        "length_calls": 2,
+        "raw_calls": 48,
+        "sessions": 24
+      },
+      "PROVIDER_UNAVAILABLE": {
+        "end_turn_calls": 0,
+        "length_calls": 0,
+        "raw_calls": 0,
+        "sessions": 72
+      },
+      "SUCCESS": {
+        "end_turn_calls": 13,
+        "length_calls": 1,
+        "raw_calls": 14,
+        "sessions": 12
+      },
+      "UNRECORDED_SESSION": {
+        "end_turn_calls": 0,
+        "length_calls": 1,
+        "raw_calls": 1,
+        "sessions": 0
+      }
+    },
+    "primary_giveup_finish_reason_pairs": {
+      "('length', 'length')": 61
+    },
+    "recovery_giveup_finish_reason_pairs": {
+      "('length', 'length')": 47
+    }
+  },
+  "layerC_transport_failure_accounting": {
+    "blocked_fraction_of_grid": 0.4286,
+    "content_filter_blocked_session_slots": 72,
+    "events_log_provider_failure_reasons": {
+      "HTTP_400_content_blocked": 216
+    },
+    "grid_sessions": 168,
+    "http_400_content_blocked_events": 216
+  },
+  "regression_of_registered_taxonomy": {
+    "claimed": "AGENT_GIVEUP reads as the agent declining to submit",
+    "measured": "all AGENT_GIVEUP sessions ended both turns with stop_reason=length and EMPTY visible content; the model never produced a visible answer",
+    "proper_class_under_registered_taxonomy": "PROVIDER-side completion (route's hidden-reasoning budget consumed the max_tokens floor before any text); classification as agent behavior is a taxonomy artifact"
+  },
+  "schema": "amend4-transport-decomposition-audit/1",
+  "scope": "post-hoc offline audit of registered Amendment-4 artifacts; zero model calls, zero network, zero changes to registered verdicts",
+  "title": "Transport decomposition of the Amendment-4 null"
+}

@@ -1,0 +1,104 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"plaintext": "lowercase hex, exactly target.length bytes"}
+
+Instance (JSON):
+{
+  "target": {
+    "message_index": 3,
+    "offset": 32,
+    "length": 64
+  },
+  "ciphertexts": [
+    {
+      "message_index": 0,
+      "data": "e396df1e7eec63a7847fdef52daddde7fce7a2380e9192cddd4d3d4fd18214359ca44e124bc3923930c493726f22a03e24e5798d68627afcfb8916a4fd7921702f3903c265a499b721ef3d4824421404eb07832a0843a76cf700d5c598d6804e03d78b57b6d99ebe52bc710ef6cb7265bdb4f6a980d4f4fe6111ecd75762b3cb"
+    },
+    {
+      "message_index": 1,
+      "data": "54aa222a0d611bd48f049de3347cccc7d1f3078bc47fbae030ab65faa7b63de5aa5db95b65e9899dccce083d4978a3c491c7f9822288ca24ae1f0bd986984058d7e25f8dfddd2283f353bb239a1653b9a5164e66c1a4935d5d473018364f8a36fa03c1103f1dd00a55bcc565170173bb0ebe54cd9d96c2bb4d03cd88a09a47eb"
+    },
+    {
+      "message_index": 2,
+      "data": "f82d2aa231274646839888440f2ee415a131a1ffc0672800b56f8db25b4c26fc2108998229fd76f52d1e6f450c64fda2ee64df42ac13cc730b7ae1bb898dc0ff14fad85a45523e231f63664b8adfaca91b182529d690712d628702ccfa1310f2de9b0add537b317266878176b0e07d7c1957ef6ce60548fa92b2632bc72dfdd8"
+    },
+    {
+      "message_index": 3,
+      "data": "b0713b1fd9922e3f476f6dc7adfa98dd20e6b2b6df778054b8ab4edefc3604c14c7156c62e6997daf3e89aaec64116b2f685864e5b5715990e51a3d2c55d22a3495ca9cdf18c37e29a95abd8cbac5586f0823699e30413b109e690a0e304d48eb17715d87bfccfd691a757b166c12c61668aef49de30fd7b337f3771ace6feba"
+    }
+  ],
+  "encoding": "hex-v1",
+  "known_plaintexts": [
+    {
+      "message_index": 1,
+      "offset": 32,
+      "data": "7c2a53976a8794"
+    },
+    {
+      "message_index": 0,
+      "offset": 39,
+      "data": "f42b6acb"
+    },
+    {
+      "message_index": 2,
+      "offset": 43,
+      "data": "aafeca"
+    },
+    {
+      "message_index": 0,
+      "offset": 46,
+      "data": "908b634948ffb3e16820e565"
+    },
+    {
+      "message_index": 1,
+      "offset": 58,
+      "data": "873356f5"
+    },
+    {
+      "message_index": 0,
+      "offset": 62,
+      "data": "8a"
+    },
+    {
+      "message_index": 2,
+      "offset": 63,
+      "data": "4c94abe48d7f843fa34c1c1581c2f9d1"
+    },
+    {
+      "message_index": 1,
+      "offset": 79,
+      "data": "4d274a4e9121"
+    },
+    {
+      "message_index": 2,
+      "offset": 85,
+      "data": "f6b2de"
+    },
+    {
+      "message_index": 0,
+      "offset": 88,
+      "data": "f23a1bd0eb"
+    },
+    {
+      "message_index": 1,
+      "offset": 93,
+      "data": "c76062"
+    },
+    {
+      "message_index": 1,
+      "offset": 18,
+      "data": "10c1f79c"
+    }
+  ]
+}

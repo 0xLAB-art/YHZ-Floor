@@ -1,0 +1,104 @@
+{
+  "boundaries": {
+    "cleanup_compare_timeout_s": 30,
+    "no_benchmark_quality_claim": true,
+    "no_model_call": true,
+    "no_new_sessions": true,
+    "offline": true
+  },
+  "gates": {
+    "program_hashes_verified": 2,
+    "programs": 2
+  },
+  "generated_date": "2026-11-06",
+  "inputs_sha256": {
+    "cleanup_policy": "7419e861a4d1abeb5f9d7623ab2b4c4d79ef4647b7ea186639379771313a4373",
+    "declared_policy": "fd9553d5450d2266be4a5e9f380c82f7dc4967ec4df0151300aa373edac23f83",
+    "results": "8ff6f6d29957db659119319a46128db3de4e58f32abe82bb6ea79b97b0eb23ed",
+    "stress_policy": "2c9e924155382f52aa4fa80f6ade8d4587fa451e2fd17638ae54e282ad633633"
+  },
+  "namespace": "external_admission_amend4_frontier_20261106",
+  "per_program": [
+    {
+      "clean_returncode": null,
+      "clean_timed_out": false,
+      "cleanup_dynamic": [
+        "syntax"
+      ],
+      "cleanup_edits": 0,
+      "cleanup_qualified": false,
+      "compare_note": "no eligible edit; source identical",
+      "declared_v4": false,
+      "declared_v4_violations": [
+        {
+          "line": 43,
+          "message": "unexpected indent",
+          "rule": "syntax"
+        }
+      ],
+      "label": "gpt-6-astra",
+      "oracle_match": false,
+      "oracle_match_c2": false,
+      "orig_returncode": null,
+      "orig_timed_out": false,
+      "output_preserved": true,
+      "program": "sessions/programs/extadm_amend4__gpt-6-astra__2018q-cry-lowe__R0__seed_421__rec8400__6e8d6497b4e8__turn1.py",
+      "program_sha256": "91477fb13e408ea7982d566cd7cbef982b53eaee43e08170d642d6202f2c22d8",
+      "representation": "R0",
+      "seed": 421,
+      "stress_repaired": false,
+      "stress_violations": [
+        {
+          "line": 43,
+          "message": "unexpected indent",
+          "rule": "syntax"
+        }
+      ],
+      "task_id": "2018q-cry-lowe",
+      "turn": 1
+    },
+    {
+      "clean_returncode": null,
+      "clean_timed_out": false,
+      "cleanup_dynamic": [],
+      "cleanup_edits": 0,
+      "cleanup_qualified": false,
+      "compare_note": "no eligible edit; source identical",
+      "declared_v4": true,
+      "declared_v4_violations": [],
+      "label": "gpt-6-astra",
+      "oracle_match": true,
+      "oracle_match_c2": true,
+      "orig_returncode": null,
+      "orig_timed_out": false,
+      "output_preserved": true,
+      "program": "sessions/programs/extadm_amend4__gpt-6-astra__2018q-cry-lowe__R0__seed_421__rec8400__6e8d6497b4e8__turn2.py",
+      "program_sha256": "e7b47dc06a68d5fbee3a894809bed2904ce73a1414e06a4137b33bf9602c5e8b",
+      "representation": "R0",
+      "seed": 421,
+      "stress_repaired": false,
+      "stress_violations": [
+        {
+          "line": 2,
+          "rule": "disallowed-import",
+          "value": "re"
+        }
+      ],
+      "task_id": "2018q-cry-lowe",
+      "turn": 2
+    }
+  ],
+  "protocol": "PHASE2-EXTERNAL-ADMISSION-AMEND4-FRONTIER-v1",
+  "schema": "external-admission-amend4-regrade/1",
+  "totals": {
+    "cleanup_qualified": 0,
+    "declared_qualified": 1,
+    "oracle_correct_programs_c1": 1,
+    "oracle_correct_programs_c2": 1,
+    "output_preserved_false": 0,
+    "output_preserved_true": 2,
+    "programs": 2,
+    "sessions": 48,
+    "stress_qualified": 0
+  }
+}

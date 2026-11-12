@@ -1,0 +1,17 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"plaintext": "lowercase hex, exactly target.length bytes"}
+
+Instance (JSON):
+{"ciphertexts":[{"data":"186Gtbs5MCTiZce0sYO2xghWQTVlQUCqOWMVtLVoNIjNNdbT6Dty1NIX0ayW1fjgzgTxjJnJGdhZ/KZbUjxRdA==","message_index":0},{"data":"j5Hsg6d9/mI7cUv6vIdwLgIoDLIHTLjnm+r20KFOQ4AzcXxF4cbflzUT/KAN6mfIAzcSfJ1ksEirZNyZXkVXGg==","message_index":1}],"encoding":"base64-v1","known_plaintexts":[{"data":"5AElT7PP/epGPMy/tStvqD+w+Y/QdcuwdLziMaPUNPfYiuBplX6SkbjwX2RQnrJsdrQ8L7l3lzmQFazxSrJkvg==","message_index":0,"offset":0}],"target":{"length":64,"message_index":1,"offset":0}}

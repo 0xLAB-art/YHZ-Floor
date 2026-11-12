@@ -1,0 +1,54 @@
+{
+ "schema": "external-admission-amend4c-v5-sanity/1",
+ "checks": [
+  {
+   "name": "variable-bound + encoding-kwarg read QUALIFIES under v5",
+   "passed": true
+  },
+  {
+   "name": "literal + encoding-kwarg read QUALIFIES under v5",
+   "passed": true
+  },
+  {
+   "name": "variable-bound 'rb' read QUALIFIES under v5",
+   "passed": true
+  },
+  {
+   "name": "write-open still rejected",
+   "passed": true
+  },
+  {
+   "name": "write-mode kwarg still rejected",
+   "passed": true
+  },
+  {
+   "name": "path traversal literal still rejected",
+   "passed": true
+  },
+  {
+   "name": "traversal-bound variable still rejected",
+   "passed": true
+  },
+  {
+   "name": "re-assigned variable still rejected",
+   "passed": true
+  },
+  {
+   "name": "expression-bound variable still rejected",
+   "passed": true
+  },
+  {
+   "name": "os import still rejected",
+   "passed": true
+  },
+  {
+   "name": "eval still rejected",
+   "passed": true
+  },
+  {
+   "name": "double-star kwargs rejected",
+   "passed": true
+  }
+ ],
+ "all_passed": true
+}

@@ -1,0 +1,191 @@
+{
+  "ast_input_findings": [
+    {
+      "kind": "Name",
+      "line": 89,
+      "source": "evidence_rows"
+    },
+    {
+      "kind": "Call",
+      "line": 89,
+      "source": "evidence(case_dir, session_id, base_id, target_status)"
+    },
+    {
+      "kind": "Call",
+      "line": 131,
+      "source": "json.loads(proc.stdout)"
+    },
+    {
+      "kind": "Name",
+      "line": 89,
+      "source": "evidence"
+    },
+    {
+      "kind": "Name",
+      "line": 100,
+      "source": "evidence_rows"
+    },
+    {
+      "kind": "Attribute",
+      "line": 131,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Call",
+      "line": 67,
+      "source": "json.loads(lines[-1])"
+    },
+    {
+      "kind": "Call",
+      "line": 97,
+      "source": "next(x[\"sha256\"] for x in evidence_rows if x[\"kind\"]==\"execution_trace\")"
+    },
+    {
+      "kind": "Call",
+      "line": 167,
+      "source": "make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status)"
+    },
+    {
+      "kind": "Name",
+      "line": 168,
+      "source": "bundle"
+    },
+    {
+      "kind": "Call",
+      "line": 168,
+      "source": "write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+    },
+    {
+      "kind": "Call",
+      "line": 170,
+      "source": "invoke_json(REFERENCE,bundle)"
+    },
+    {
+      "kind": "Attribute",
+      "line": 67,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Name",
+      "line": 167,
+      "source": "make_certificate"
+    },
+    {
+      "kind": "Name",
+      "line": 168,
+      "source": "bundle"
+    },
+    {
+      "kind": "Name",
+      "line": 170,
+      "source": "bundle"
+    },
+    {
+      "kind": "Name",
+      "line": 97,
+      "source": "evidence_rows"
+    }
+  ],
+  "certificate_write_lines": [
+    {
+      "line": 32,
+      "text": "def canonical(value) -> bytes: return json.dumps(value, sort_keys=True, separators=(\",\", \":\")).encode()"
+    },
+    {
+      "line": 34,
+      "text": "def write_json(path: Path, value) -> None:"
+    },
+    {
+      "line": 35,
+      "text": "    path.parent.mkdir(parents=True, exist_ok=True); path.write_text(json.dumps(value, indent=2, sort_keys=True) + \"\\n\")"
+    },
+    {
+      "line": 53,
+      "text": "            if any(token in text for token in [\"subprocess\", \"socket\", \"requests\", \"urllib\", \"os.\", \"open(\", \"__import__\"]): return False, \"disallowed-boundary\""
+    },
+    {
+      "line": 59,
+      "text": "    artifact.write_text(source); write_json(input_path, instance)"
+    },
+    {
+      "line": 69,
+      "text": "    write_json(output_path, output)"
+    },
+    {
+      "line": 83,
+      "text": "        path=case_dir/f\"{kind}.json\"; write_json(path,payload); result.append({\"kind\":kind,\"path\":str(path),\"sha256\":digest_file(path)})"
+    },
+    {
+      "line": 87,
+      "text": "def make_certificate(case_dir: Path, session_id: str, base_id: str, task: str, condition: str, seed: int, execution: dict, target_status: str) -> dict:"
+    },
+    {
+      "line": 99,
+      "text": "        \"claims\":{\"artifact_authorship\":\"PROVEN\",\"execution_identity\":\"PROVEN\",\"target_effect\":target_status,\"reference_oracle_acceptance\":\"PENDING\",\"boundary_enforcement\":\"PROVEN\",\"attribution\":\"PROVEN\" if target_status==\"OBSERVED\" else \"NOT_ESTABLISHED\",\"exclusive_acquisition\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\",\"immutable_hosted_model_identity\":\"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+    },
+    {
+      "line": 120,
+      "text": "            \"Public instance:\\n\" + json.dumps(instance, sort_keys=True, separators=(\",\", \":\")))"
+    },
+    {
+      "line": 129,
+      "text": "    proc = subprocess.run([sys.executable, str(script)], input=json.dumps(payload), text=True, capture_output=True, check=False)"
+    },
+    {
+      "line": 150,
+      "text": "    write_json(OUT/\"EXECUTION_FREEZE.json\", {\"agent_calls_allowed\":True,\"provider_cost_ceiling_usd\":HALT_USD,\"alert_threshold_usd\":ALERT_USD,\"route\":ROUTE,\"planned_sessions\":72,\"automatic_retries\":0,\"seed_replacement\":False,\"study_expansion\":False,\"protocol_hashes\":protocol_hashes,\"status\":\"RUNNING_EXACT_FROZEN_PILOT\"})"
+    },
+    {
+      "line": 152,
+      "text": "    rows=[]; spend=0.0; schedule_rows=schedule(); write_json(OUT/\"schedule.json\",{\"schedule\":schedule_rows,\"schedule_seed\":20261018})"
+    },
+    {
+      "line": 157,
+      "text": "        prompt=prompt_for(task,condition,public); write_json(case/\"session_manifest.json\",{\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,\"prompt_sha256\":digest_bytes(prompt.encode()),\"route\":ROUTE,\"kind\":item[\"kind\"],\"input_hash\":digest_object(public)})"
+    },
+    {
+      "line": 159,
+      "text": "            write_json(case/\"session_result.json\",{\"status\":\"NOT_STARTED_COST_HALT\",\"reason\":\"accounting_halt_threshold\"}); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"status\":\"NOT_STARTED_COST_HALT\",\"task\":task,\"seed\":seed,\"condition\":condition}); continue"
+    },
+    {
+      "line": 163,
+      "text": "            raw_path=case/\"provider_raw.json\"; raw_path.write_text(result[\"raw_body\"]+\"\\n\"); write_json(case/\"provider_metadata.json\", result[\"metadata\"])"
+    },
+    {
+      "line": 167,
+      "text": "            base_id=f\"{task}-seed-{seed:02d}\"; cert=make_certificate(case,session_id,base_id,task,condition,seed,execution,target_status); cert_path=case/\"certificate.private.json\"; write_json(cert_path,cert)"
+    },
+    {
+      "line": 168,
+      "text": "            bundle=case/\"reference_input.json\"; write_json(bundle,{\"case_id\":session_id,\"target_state_path\":str(case/\"target_state.private.json\"),\"candidate_path\":str(case/\"candidate_output.json\"),\"certificate_path\":str(cert_path)})"
+    },
+    {
+      "line": 169,
+      "text": "            target={\"primitive\":task,**((base.make_ecdsa(seed))[\"semantic\"] if task==\"ECDSA_Nonce_Reuse\" else (base.make_chacha(seed))[\"semantic\"])}; write_json(case/\"target_state.private.json\",target)"
+    },
+    {
+      "line": 173,
+      "text": "            write_json(case/\"session_result.json\",row); rows.append(row)"
+    },
+    {
+      "line": 176,
+      "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+    },
+    {
+      "line": 179,
+      "text": "            write_json(case/\"session_result.json\",payload); rows.append({\"ordinal\":ordinal,\"session_id\":session_id,\"task\":task,\"seed\":seed,\"condition\":condition,**payload})"
+    },
+    {
+      "line": 180,
+      "text": "    write_json(OUT/\"pilot_results.json\",{\"rows\":rows,\"sessions_planned\":72,\"sessions_started\":sum(r.get(\"provider_status\")==\"SUCCESS\" or r.get(\"status\")==\"PROVIDER_FAILURE\" for r in rows),\"estimated_cost_usd\":spend,\"provider_route\":ROUTE,\"no_retries\":True})"
+    },
+    {
+      "line": 181,
+      "text": "    print(json.dumps({\"output\":str(OUT),\"rows\":len(rows),\"estimated_cost_usd\":spend,\"provider_route\":ROUTE},indent=2,sort_keys=True))"
+    }
+  ],
+  "cli_or_input_lines": [],
+  "external_interface_detected": false,
+  "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_agent_pilot.py",
+  "sha256": "144984fcfd778a0948f85002a8827c0411ddd92167c0e9a258173bd8d070587a"
+}

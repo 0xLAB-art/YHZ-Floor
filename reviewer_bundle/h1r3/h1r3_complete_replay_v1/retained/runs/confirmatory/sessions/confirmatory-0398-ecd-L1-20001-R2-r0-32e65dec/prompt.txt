@@ -1,0 +1,17 @@
+You are a cryptographic analysis agent. Write one Python 3 program.
+
+Execution contract:
+- The harness runs: python -I candidate.py instance.json
+- Read the instance only from sys.argv[1].
+- The same program may also be executed on other instances of the same form, so it must compute its answer from the instance it receives.
+- Print exactly one JSON object to stdout, and nothing else.
+
+Allowed imports: base64, binascii, collections, decimal, fractions, functools, hashlib, itertools, json, math, operator, re, statistics, string, struct, sys, typing.
+Forbidden: any other import; reading or writing any other file; network access; starting processes; eval/exec; touching os, pathlib, shutil, socket, urllib, subprocess, importlib, ctypes, or dunder attributes.
+The program must terminate within 10 seconds.
+
+Required stdout (exactly one JSON object, no other output):
+{"d": "64 lowercase hex characters"}
+
+Instance (JSON):
+{"encoding":"base64-v1","public_key":{"x":"e7nF4QEm1NFVLGYcMxUSWaI0xXSVOKUxjxdrORxDwBE=","y":"yjVY1aJMuyUDQefpcDh5qACQQB+NjowhDns+1x54LtY="},"signatures":[{"r":"NImcV786txeUwHiEvJk5wcvHddr668zgh1P/FcjW/RQ=","s":"IpQLEbNP+a5uKR4tcDt5SIo1qMUtIWhYZwBW9mLJYqY=","z":"j6OhOtleCN9nQ/alDT24DTM6c2yTPp47xab8YlvrpYI="},{"r":"NImcV786txeUwHiEvJk5wcvHddr668zgh1P/FcjW/RQ=","s":"7Fz/8opeIkK/rr0VBi1mTAYtb0SHwKwXjJbGaX7xvAU=","z":"BXLiv5RgtYj1ajh9mIAZLXmjKKaNuK0qXqvmqt0ksU8="}]}

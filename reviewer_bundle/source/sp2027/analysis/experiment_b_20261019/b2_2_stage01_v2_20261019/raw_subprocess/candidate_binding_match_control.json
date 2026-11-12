@@ -1,0 +1,120 @@
+{
+  "input_case": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control",
+  "input_case_files": {
+    "candidate.json": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+    "evidence/agent_artifact.json": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+    "evidence/boundary.json": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+    "evidence/execution_trace.json": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+    "evidence/target_effect.json": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+    "evidence/verifier_metadata.json": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+    "private_certificate.json": "d74a7e72ba2e7136589218250f06450888d50013784b2486933db96f07b72f5d",
+    "public_certificate.json": "68ea20f25971a269ffeafb3d49d79dc1949345ac219d6ad6c1622efa806fbed0",
+    "reference_input.json": "01a402da9970cd580e586bca5d0c74359247926cdc3f059b5e70615e43626e8a",
+    "source_private_certificate.json": "c1332c257563f0fc05ab557ef8f569400e138694a5432080e3f271f9ed6779f0",
+    "source_public_certificate.json": "f724138fb6bc3a590c274c743f35c466b86014e39b9210263d72f592aee102bf",
+    "target_state.private.json": "fec674a8932fa7efc55411cf506226a06cd5ebc8b8b6c878ee96a5b72b762a6b"
+  },
+  "name": "candidate_binding_match_control",
+  "outer_integrity": {
+    "candidate": {
+      "actual_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+      "declared_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+      "match": true,
+      "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/candidate.json"
+    },
+    "evidence": [
+      {
+        "actual_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+        "declared_sha256": "5ec6ac3d94f0c1412897a3d998e6a0712275453ec99dcfbc7f17f528cae591c6",
+        "kind": "agent_artifact",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/agent_artifact.json"
+      },
+      {
+        "actual_sha256": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+        "declared_sha256": "5554681b69cc4086f660e07030b9e9e7d234dda6a536ef4e7a4cb7fc60883fcb",
+        "kind": "execution_trace",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/execution_trace.json"
+      },
+      {
+        "actual_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "declared_sha256": "ec52944703927683b3c558a8d430ea1e75da38818c1e92cf792a45ef460e6a49",
+        "kind": "target_effect",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/target_effect.json"
+      },
+      {
+        "actual_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "declared_sha256": "576521b75008d776712e01c73733150f94e93eeeea0daf58dc9545a37dbac84e",
+        "kind": "verifier_metadata",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/verifier_metadata.json"
+      },
+      {
+        "actual_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "declared_sha256": "d85bd02b82d9e2c2b0a034c009a56506c7a1cfed3e735ad0b7fb32988a7515ca",
+        "kind": "boundary",
+        "match": true,
+        "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/evidence/boundary.json"
+      }
+    ]
+  },
+  "reference": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_reference_verifier_v2.py",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/reference_input.json"
+    ],
+    "elapsed_ms": 172.655,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"certificate_errors\": [], \"certificate_integrity\": true, \"crypto_details\": {\"public_key_matches\": true, \"recovered_d_matches\": true, \"recovered_k_matches\": true, \"repeated_r\": true, \"signatures_verify\": true}, \"cryptographic_predicate\": true, \"reference_verdict\": \"ACCEPTED\", \"truth_source\": \"recomputed-target-candidate-and-certificate\"}\n",
+    "verdict": {
+      "certificate_errors": [],
+      "certificate_integrity": true,
+      "crypto_details": {
+        "public_key_matches": true,
+        "recovered_d_matches": true,
+        "recovered_k_matches": true,
+        "repeated_r": true,
+        "signatures_verify": true
+      },
+      "cryptographic_predicate": true,
+      "reference_verdict": "ACCEPTED",
+      "truth_source": "recomputed-target-candidate-and-certificate"
+    }
+  },
+  "validator": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/contract_sound_stage01_validator_v2.py"
+    ],
+    "elapsed_ms": 53.794,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"decision\": \"ACCEPT\", \"reason\": \"public-evidence-consistent\"}\n",
+    "verdict": {
+      "decision": "ACCEPT",
+      "reason": "public-evidence-consistent"
+    }
+  },
+  "wrapper": {
+    "argv": [
+      "/usr/bin/python3",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/external_candidate_binding_wrapper.py",
+      "/mnt/nvme5/ACTS-Attack/sp2027/analysis/experiment_b_20261019/b2_2_stage01/cases/candidate_binding_match_control/public_certificate.json"
+    ],
+    "elapsed_ms": 44.691,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"certificate_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\", \"reason\": \"candidate-execution-bound\", \"status\": \"ACCEPT\", \"system\": \"external-candidate-binding-wrapper\", \"trace_candidate_sha256\": \"e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7\"}\n",
+    "verdict": {
+      "certificate_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7",
+      "reason": "candidate-execution-bound",
+      "status": "ACCEPT",
+      "system": "external-candidate-binding-wrapper",
+      "trace_candidate_sha256": "e1647eab901a58ebef676f731590014cc86620bb21cf5a594bebab2e65a3aae7"
+    }
+  }
+}

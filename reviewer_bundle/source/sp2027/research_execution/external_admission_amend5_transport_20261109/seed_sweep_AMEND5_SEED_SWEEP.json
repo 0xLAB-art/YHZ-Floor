@@ -1,0 +1,16 @@
+{
+ "schema": "external-admission-amend5-seed-sweep/1",
+ "generated": "2026-11-09",
+ "candidate_range": [425, 426, 427, 428],
+ "candidate_range_free": true,
+ "verification": {
+  "ledger_scan": "BUDGET_LEDGER.jsonl seed tokens: no 425/426/427/428 usage anywhere",
+  "results_lock_scan": "sp2027/analysis/RESULTS_LOCK.json: 0 matches for seed_42[5-8]",
+  "prior_registered_ranges": {
+   "amendment3": [417, 418, 419, 420],
+   "amendment4_primary": [421, 422, 423, 424],
+   "amendment4_recovery_8400": [421, 422, 423, 424]
+  },
+  "boundary": "seeds label the session only (no per-seed randomness — Amendment-3 convention); the sweep verifies the label range is previously unregistered, it does not seed sampling"
+ }
+}

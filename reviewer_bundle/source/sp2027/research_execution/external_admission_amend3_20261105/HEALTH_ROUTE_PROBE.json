@@ -1,0 +1,130 @@
+{
+  "boundary": "Route availability record only; not experiment evidence, not a benchmark-quality claim.",
+  "classification": "ROUTE_PROBE, non-evidence",
+  "previous_route_note": "the earlier single-route plan (claude-sonnet-4-6-free via APMIX) was found unavailable pre-freeze: APMIX 404; agentrouter keys 401. No task-prompt call was made on it.",
+  "probe": {
+    "max_tokens": 16,
+    "prompt": "Reply with exactly: OK",
+    "temperature": 0.2
+  },
+  "probes": [
+    {
+      "cost_tokens": 0,
+      "finish_reason": "stop",
+      "latency_s": 1.6,
+      "model": "free/gpt-6-luna",
+      "reply": "OK",
+      "status": "ok",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1,
+          "rejected_prediction_tokens": 0
+        },
+        "cost_tokens": 0,
+        "prompt_tokens": 312,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "text_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 314
+      }
+    },
+    {
+      "cost_tokens": 0,
+      "finish_reason": "stop",
+      "latency_s": 2.151,
+      "model": "free/qwen-3.8-max",
+      "reply": "OK",
+      "status": "ok",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1,
+          "rejected_prediction_tokens": 0
+        },
+        "cost_tokens": 0,
+        "prompt_tokens": 310,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "text_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 312
+      }
+    },
+    {
+      "cost_tokens": 0,
+      "finish_reason": "stop",
+      "latency_s": 0.921,
+      "model": "free/deepseek-v4.1-flash",
+      "reply": "OK",
+      "status": "ok",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1,
+          "rejected_prediction_tokens": 0
+        },
+        "cost_tokens": 0,
+        "prompt_tokens": 313,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "text_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 315
+      }
+    },
+    {
+      "cost_tokens": 0,
+      "finish_reason": "stop",
+      "latency_s": 0.851,
+      "model": "free/kimi-k3",
+      "reply": "OK",
+      "status": "ok",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1,
+          "rejected_prediction_tokens": 0
+        },
+        "cost_tokens": 0,
+        "prompt_tokens": 307,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "text_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 309
+      }
+    }
+  ],
+  "provider": {
+    "endpoint": "https://api.apinex.bond/v1/chat/completions",
+    "key_handling": "APINEX_API_KEY read from the process environment at runtime; never printed, never written to any sp2027 artifact",
+    "route": "APINEX OpenAI-compatible /v1/chat/completions",
+    "tier": "free (usage cost_tokens 0; no invoice claim)"
+  },
+  "purpose": "pre-freeze provider-route selection and free-tier health; no task prompt or task content; excluded from all analyses",
+  "recorded_utc": "2026-11-05T10:18:48Z",
+  "schema": "external-admission-amend3-route-probe/1",
+  "selected_labels": [
+    "free/gpt-6-luna",
+    "free/qwen-3.8-max",
+    "free/deepseek-v4.1-flash"
+  ]
+}

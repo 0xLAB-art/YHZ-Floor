@@ -1,0 +1,59 @@
+{
+  "boundary": "Sweep record only; it registers nothing until the freeze commit. The grid's seed labels carry no per-seed randomness.",
+  "candidate_conflicts": {},
+  "candidate_range": [
+    417,
+    418,
+    419,
+    420
+  ],
+  "candidate_range_free": true,
+  "date": "2026-11-05",
+  "draft_range_rejected": {
+    "in_use_sources": {
+      "101": "research_execution/info_contract_powered_20261025/results.jsonl",
+      "102": "research_execution/info_contract_powered_20261025/results.jsonl",
+      "103": "research_execution/info_contract_powered_20261025/results.jsonl",
+      "104": "research_execution/info_contract_powered_20261025/results.jsonl"
+    },
+    "range": [
+      101,
+      104
+    ],
+    "reason": "101\u2013104 are already spent (info_contract_powered 101\u2013108; P010-family preregs list 101\u2013118)"
+  },
+  "excluded_from_sweep": "research_execution/external_admission_amend3_20261105/ (the reservation itself, not a cohort)",
+  "free_4_runs_300_999": [
+    [
+      333,
+      400
+    ],
+    [
+      417,
+      428
+    ],
+    [
+      430,
+      500
+    ],
+    [
+      517,
+      600
+    ],
+    [
+      617,
+      700
+    ],
+    [
+      717,
+      999
+    ]
+  ],
+  "method": "field-level scan of every research_execution/**/results.jsonl seed field and every PREREGISTRATION*.md numeric seed range/label; the prereg reservation list is also checked",
+  "schema": "external-admission-amend3-seed-sweep/1-draft",
+  "sources_checked": [
+    "research_execution/**/results.jsonl",
+    "research_execution/**/*.jsonl (seed field)",
+    "research_execution/**/PREREGISTRATION*.md"
+  ]
+}

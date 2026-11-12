@@ -1,0 +1,239 @@
+{
+  "ast_input_findings": [
+    {
+      "kind": "Name",
+      "line": 247,
+      "source": "evidence"
+    },
+    {
+      "kind": "Call",
+      "line": 247,
+      "source": "make_evidence(case_dir, session, base, \"OBSERVED\" if valid else \"NOT_OBSERVED\")"
+    },
+    {
+      "kind": "Call",
+      "line": 271,
+      "source": "json.loads(proc.stdout)"
+    },
+    {
+      "kind": "Call",
+      "line": 278,
+      "source": "json.loads(proc.stdout)"
+    },
+    {
+      "kind": "Call",
+      "line": 305,
+      "source": "json.loads(SCHEMA_PATH.read_text())"
+    },
+    {
+      "kind": "Call",
+      "line": 331,
+      "source": "base_certificate(OUT / \"schema_cases\" / \"valid\", 1, True)"
+    },
+    {
+      "kind": "Call",
+      "line": 332,
+      "source": "invalid_missing.pop(\"evidence\")"
+    },
+    {
+      "kind": "Name",
+      "line": 247,
+      "source": "make_evidence"
+    },
+    {
+      "kind": "Name",
+      "line": 262,
+      "source": "evidence"
+    },
+    {
+      "kind": "Attribute",
+      "line": 271,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 278,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Attribute",
+      "line": 305,
+      "source": "json.loads"
+    },
+    {
+      "kind": "Name",
+      "line": 331,
+      "source": "base_certificate"
+    },
+    {
+      "kind": "Call",
+      "line": 341,
+      "source": "cert.get(\"evidence\", [])"
+    },
+    {
+      "kind": "Call",
+      "line": 347,
+      "source": "write_json(OUT / \"schema_cases\" / f\"{name}.json\", {\"certificate\": cert, \"result\": result})"
+    },
+    {
+      "kind": "Call",
+      "line": 357,
+      "source": "base_certificate(case_dir, idx, valid_flag)"
+    },
+    {
+      "kind": "Name",
+      "line": 250,
+      "source": "evidence"
+    },
+    {
+      "kind": "Name",
+      "line": 357,
+      "source": "base_certificate"
+    },
+    {
+      "kind": "Call",
+      "line": 369,
+      "source": "base_certificate(case_dir, case_idx, True)"
+    },
+    {
+      "kind": "Name",
+      "line": 369,
+      "source": "base_certificate"
+    },
+    {
+      "kind": "Name",
+      "line": 259,
+      "source": "evidence"
+    }
+  ],
+  "certificate_write_lines": [
+    {
+      "line": 8,
+      "text": "- certificate JSON-Schema validation and integrity-negative cases;"
+    },
+    {
+      "line": 54,
+      "text": "    return json.dumps(obj, sort_keys=True, separators=(\",\", \":\")).encode()"
+    },
+    {
+      "line": 216,
+      "text": "def write_json(path: Path, obj) -> None:"
+    },
+    {
+      "line": 218,
+      "text": "    path.write_text(json.dumps(obj, indent=2, sort_keys=True) + \"\\n\")"
+    },
+    {
+      "line": 239,
+      "text": "        write_json(p, obj)"
+    },
+    {
+      "line": 244,
+      "text": "def base_certificate(case_dir: Path, idx: int, valid=True) -> dict:"
+    },
+    {
+      "line": 261,
+      "text": "        \"claims\": {\"artifact_authorship\": \"PROVEN\", \"execution_identity\": \"PROVEN\", \"target_effect\": \"OBSERVED\" if valid else \"NOT_OBSERVED\", \"reference_oracle_acceptance\": \"ACCEPTED\" if valid else \"REJECTED\", \"boundary_enforcement\": \"PROVEN\", \"attribution\": \"PROVEN\" if valid else \"NOT_ESTABLISHED\", \"exclusive_acquisition\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\", \"immutable_hosted_model_identity\": \"NOT_ESTABLISHED_BY_THIS_CERTIFICATE\"},"
+    },
+    {
+      "line": 268,
+      "text": "    proc = subprocess.run([sys.executable, str(VALIDATOR)], input=json.dumps(public_cert(cert)), text=True, capture_output=True, check=False)"
+    },
+    {
+      "line": 302,
+      "text": "    for name in [\"stage0\", \"stage1\", \"stage1/public\", \"stage1/private_truth\", \"schema_cases\", \"certificates\", \"controls\"]:"
+    },
+    {
+      "line": 326,
+      "text": "            write_json(OUT / \"stage0\" / f\"{task}_{seed:02d}.json\", {\"instance\": inst, \"interface_c1\": i1, \"interface_c2\": i2, \"interface_c0\": interface_spec(task, \"C0\"), \"analysis\": row})"
+    },
+    {
+      "line": 327,
+      "text": "    (OUT / \"stage0_ground_truth.jsonl\").write_text(\"\".join(json.dumps(r, sort_keys=True) + \"\\n\" for r in stage0_rows))"
+    },
+    {
+      "line": 329,
+      "text": "    write_json(OUT / \"stage0_summary.json\", stage0_summary)"
+    },
+    {
+      "line": 331,
+      "text": "    valid = base_certificate(OUT / \"schema_cases\" / \"valid\", 1, True)"
+    },
+    {
+      "line": 347,
+      "text": "        write_json(OUT / \"schema_cases\" / f\"{name}.json\", {\"certificate\": cert, \"result\": result})"
+    },
+    {
+      "line": 351,
+      "text": "    write_json(OUT / \"schema_validation_summary.json\", {\"cases\": schema_results, \"schema_id\": schema[\"$id\"]})"
+    },
+    {
+      "line": 357,
+      "text": "        cert = base_certificate(case_dir, idx, valid_flag)"
+    },
+    {
+      "line": 359,
+      "text": "        truth_path = OUT / \"stage1\" / \"private_truth\" / f\"clean_{idx:02d}.json\"; write_json(truth_path, truth)"
+    },
+    {
+      "line": 369,
+      "text": "            cert = base_certificate(case_dir, case_idx, True)"
+    },
+    {
+      "line": 371,
+      "text": "                target_path = case_dir / \"target_effect.json\"; write_json(target_path, {\"status\": \"NOT_OBSERVED\", \"predicate\": \"declared-target-predicate-v1\"})"
+    },
+    {
+      "line": 375,
+      "text": "                trace_path = case_dir / \"execution_trace.json\"; write_json(trace_path, {\"session_id\": \"stale-session\", \"base_instance_id\": f\"base-{case_idx:03d}\", \"executor\": \"stage01-executor-v1\"})"
+    },
+    {
+      "line": 379,
+      "text": "                trace_path = case_dir / \"execution_trace.json\"; write_json(trace_path, {\"session_id\": cert[\"execution\"][\"session_id\"], \"base_instance_id\": \"base-replayed\", \"executor\": \"stage01-executor-v1\"})"
+    },
+    {
+      "line": 383,
+      "text": "                vm_path = case_dir / \"verifier_metadata.json\"; write_json(vm_path, {\"verifier_version\": \"stage01-reference-v0\", \"implementation\": \"reference-verifier-v0\"})"
+    },
+    {
+      "line": 387,
+      "text": "                boundary_path = case_dir / \"boundary.json\"; write_json(boundary_path, {\"enforced\": False, \"allowed_interface\": \"unrestricted\"})"
+    },
+    {
+      "line": 392,
+      "text": "            truth_path = OUT / \"stage1\" / \"private_truth\" / f\"{defect}_{variant:02d}.json\"; write_json(truth_path, truth)"
+    },
+    {
+      "line": 394,
+      "text": "            # Store only the public certificate in the public split; truth remains private."
+    },
+    {
+      "line": 395,
+      "text": "            write_json(OUT / \"stage1\" / \"public\" / f\"{defect}_{variant:02d}.json\", public_cert(cert))"
+    },
+    {
+      "line": 414,
+      "text": "    write_json(OUT / \"stage1_results.json\", {\"cases\": stage1_rows, \"metrics\": metrics})"
+    },
+    {
+      "line": 423,
+      "text": "    write_json(OUT / \"paired_analysis_definition.json\", {\"planned\": analysis, \"self_test\": analysis_self_test, \"notes\": \"No agent outcomes were collected in Stage 0/1; actual discordances are therefore NOT_RUN, not zero.\"})"
+    },
+    {
+      "line": 430,
+      "text": "    write_json(OUT / \"AGENT_EXECUTION_FREEZE.json\", freeze)"
+    },
+    {
+      "line": 431,
+      "text": "    write_json(OUT / \"run_manifest.json\", {\"stage\": \"0/1\", \"created_utc\": datetime.now(timezone.utc).isoformat(), \"model_calls\": 0, \"network_calls\": 0, \"provider_calls\": 0, \"protocol_commit\": PROTOCOL_COMMIT, \"output_directory\": str(OUT), \"stage0_summary\": stage0_summary, \"stage1_metrics\": metrics, \"protected_baseline_hashes\": protected})"
+    },
+    {
+      "line": 432,
+      "text": "    print(json.dumps({\"output\": str(OUT), \"stage0\": stage0_summary, \"stage1\": metrics, \"agent_calls\": 0, \"provider_cost_ceiling_usd\": 0.0}, sort_keys=True))"
+    }
+  ],
+  "cli_or_input_lines": [],
+  "external_interface_detected": false,
+  "path": "/mnt/nvme5/ACTS-Attack/sp2027/analysis/run_contract_sound_stage01.py",
+  "sha256": "982978d1db85159f012f458a4d44a381e0c52e9622bbbcaf7841a2d9566ce158"
+}

@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/owners_3d.svg" width="820" alt="Five isometric pillars — the five owners of a published attack-success rate, with the YHZ floor beneath them"/>
-
 # YHZ-Floor
 
 **The complete, verifiable evidence bundle for a pre-registered, hash-frozen,
@@ -15,13 +13,15 @@ five-owner audit of AI-agent attack success.**
 
 [Guide](GUIDE.md) &nbsp;·&nbsp; [Explanation](EXPLANATION.md) &nbsp;·&nbsp; [Experiments index](experiments/INDEX.md) &nbsp;·&nbsp; [Rendered docs](https://0xlab-art.github.io/YHZ-Floor/) &nbsp;·&nbsp; [Contributing](CONTRIBUTING.md) &nbsp;·&nbsp; [Security](SECURITY.md) &nbsp;·&nbsp; [Cite](CITATION.cff)
 
+<img src="assets/banner_owners.svg" width="100%" alt="Who owns a published attack-success rate? Five cards — admission, information contract, session wrapper, compute allowance, execution evidence — each with its registered result and its bound"/>
+
 </div>
 
-## What this is
+## Why this exists
 
-A published AI-agent attack-success rate is not a property of the model. It is the output of a **measurement contract** with five identifiable owners: the evaluator's acceptance rule, the task prompt's information contract, the session wrapper, the compute allowance, and the evidence binding a verdict to an execution.
+A published AI-agent attack-success rate is not a property of the model. It is the output of a **measurement contract** — the evaluator's acceptance rule, the task prompt's disclosures, the session wrapper, the token allowance, and the evidence binding a verdict to an execution.
 
-This repository freezes that contract and moves **one owner at a time** on matched cryptographic tasks — then serves every frozen row the numbers were measured on:
+This bundle freezes that contract, moves **one owner at a time** on matched cryptographic tasks, and serves every frozen row the numbers were measured on:
 
 - **33 registered cohorts · 3,562 retained sessions** — every design pre-specified before the first model call
 - a **separate 60-session published-protocol audit** of a public benchmark, run under its own declared rules
@@ -38,25 +38,29 @@ python3 -B offline_checks.py verify
 integrity: PASS  ·  24,023 payloads  ·  0 errors
 ```
 
-Every payload's SHA-256 is checked against `MANIFEST.json`. Nothing executes, nothing contacts a provider. That is the entry point: **every number below traces to rows you can open and recount yourself.** [docs/VERIFYING.md](docs/VERIFYING.md) re-derives the headline contrast in ten lines of standard-library Python.
+Every payload's SHA-256 is checked against `MANIFEST.json`. Nothing executes, nothing contacts a provider. That is the entry point: **every number on this page traces to rows you can open and recount yourself.** [docs/VERIFYING.md](docs/VERIFYING.md) re-derives the headline contrast in ten lines of standard-library Python.
 
 ## The five owners, and what moving each one did
 
-> **How to read the table.** *pp* = percentage points. *a/b* = a paired discordance on shared seeds: *a* sessions succeeded with the owner moved, *b* with it held. *Holm* = family-wise correction across the 16 registered contrasts. *Wilson* = 95% confidence upper bound.
+> **Reading key.** *pp* = percentage points. *a/b* = paired discordance on shared seeds: *a* sessions succeeded with the owner moved, *b* with it held. *Holm* = family-wise correction across the 16 registered contrasts. *Wilson* = 95% confidence upper bound.
 
-| Owner | Question it answers | Registered result | Bound that stays attached |
-|---|---|---|---|
-| **Admission** | does the evaluator's rule change the verdict on the *same* programs? | regrade of fixed bytes: −0.8 → −32.8 → +3.9 pp | trigger executes in 100/101 retained traces |
-| **Information contract** | which prompt disclosure decides the outcome? | 2×2 over the zero-reference premise — paired one-way in all 16 registered contrasts (96/0, Holm 4.0×10⁻²⁸) | RC4 4/4 · ECDSA 32/32 withheld · AES-GCM-SIV accepts nothing in any cell |
-| **Session wrapper** | does an interactive loop help? | interactive vs one-shot: 0/32 each direction at the powered size | advantage ≤ 10.7% (Wilson 95%) |
-| **Compute allowance** | how much of the number is the token budget? | declared 12,000 vs raised: 20/50 → 28/50, 8/10 task-level pairs | 17 slots transport-unmeasured |
-| **Execution evidence** | does the record *prove* the claimed execution? | attribution ablations: 0/44 combined (16/44, 28/44 alone) | constructed cases, not deployment rates |
+| Owner | Registered result | Bound that stays attached |
+|---|---|---|
+| **Admission** | regrade of fixed bytes: −0.8 → −32.8 → +3.9 pp | trigger executes in 100/101 retained traces |
+| **Information contract** | paired one-way in 16/16 contrasts (96/0, Holm 4.0×10⁻²⁸) | RC4 4/4 · ECDSA 32/32 withheld · AES-GCM-SIV accepts nothing |
+| **Session wrapper** | interactive vs one-shot: 0/32 each direction | advantage ≤ 10.7% (Wilson 95%) |
+| **Compute allowance** | declared 12,000 vs raised: 20/50 → 28/50 | 17 slots transport-unmeasured |
+| **Execution evidence** | attribution ablations: 0/44 combined (16/44, 28/44 alone) | constructed cases, not deployment rates |
 
-### Finding 1 — the information contract dominates
+## Finding 1 — the information contract dominates
 
-Withhold the zero-reference premise and **no withheld seed ever beats its stated counterpart** — across every cohort, model label, and replication. The one borderline cohort prints as its own bound instead of being absorbed into the family. The negative controls bracket the claim from both sides: the honest-null cipher, the second fixture family, and the registered AES-GCM-SIV control that accepts nothing in any cell.
+<img src="assets/fig_family.svg" width="100%" alt="Bar chart of the 16 registered paired contrasts: stated-arm wins from 5 to 96, withheld-arm wins zero in every row, with Holm-adjusted p-values; the one borderline (P010P) highlighted as its own bound"/>
 
-### Finding 2 — the allowance censors the number
+Withhold the zero-reference premise and **no withheld seed ever beats its stated counterpart** — across every cohort, model label, and replication. The one borderline cohort (P010P, Holm 0.0625) prints as its own bound instead of being absorbed into the family. The negative controls bracket the claim from both sides: the honest-null cipher (RC4 4/4), the second fixture family (ECDSA 32/32 withheld), and the registered AES-GCM-SIV control that accepts nothing in any cell.
+
+## Finding 2 — the allowance censors the number
+
+<img src="assets/fig_censoring.svg" width="100%" alt="Two bars: 20/50 solved at the declared 12,000-token allowance vs 28/50 after the raised allowances, with annotations — 30 of 60 sessions never acted, task pairs 6/10 to 8/10, 17 slots transport-unmeasured"/>
 
 Re-running a published benchmark protocol on its own frozen inputs, at that protocol's declared 12,000-token allowance: **30 of 60 sessions never act** — every turn spent in hidden reasoning, zero submissions. Six of ten task-level pairs are *unmeasured, not failed*. Raising the allowance (32k, then 64k — each change a numbered amendment recorded before it ran) recovers them: 28/50, 8/10 pairs, identical under all five evaluator rules.
 
@@ -89,8 +93,8 @@ YHZ-Floor/
 │                           replay) · source/sp2027/ (the cited wave trees)
 ├── GUIDE.md + docs/     ← the guide: setup, running, verifying (mermaid + examples)
 ├── EXPLANATION.md       ← how to read the audit
-├── tools/               ← regenerates INDEX.md and the asset figures
-└── assets/              ← the animated SVG figures (+ gen_animations.py)
+├── tools/               ← regenerate INDEX.md, the figures, and the docs site
+└── assets/              ← the SVG figures (banner_owners, fig_family, fig_censoring)
 ```
 
 ## The three counts, reconciled

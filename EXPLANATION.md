@@ -52,3 +52,11 @@ The design travels to any domain with a **binarizable oracle verdict** and a **l
 - [The Guide](GUIDE.md) — running and verifying
 - [The experiments index](experiments/INDEX.md) — every cohort, its registration, and its rows
 - [The rendered documentation](https://0xlab-art.github.io/YHZ-Floor/) — diagrams and search
+
+---
+
+<div align="center">
+
+Next: <b><a href="GUIDE.md">The Guide</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

@@ -50,3 +50,11 @@ flowchart TD
 - The manuscript (compiled or source) — venue-only during double-blind review.
 - Raw per-turn provider responses, per-session prompt dumps, execution captures, ops event logs — the per-slot rows carry every recorded outcome; raw bulk stays with the authors.
 - Any author-identity material — scanned out (0 hits).
+
+---
+
+<div align="center">
+
+Next: <b><a href="../experiments/INDEX.md">Experiments index</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

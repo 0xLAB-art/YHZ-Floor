@@ -67,3 +67,11 @@ All runners share: environment-only keys, hash-gated freezes, append-only result
 2. Amendments that touched the protocol are cross-checked against `PREREGISTRATION*.md`.
 3. The evidence gate (`verify_evidence_revision.py`, 194 checks) pins the headline numbers to the source text.
 4. Nothing is pooled: the cohort's paired contrast is reported with its own population and interval.
+
+---
+
+<div align="center">
+
+Next: <b><a href="docs/VERIFYING.md">Verifying results</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

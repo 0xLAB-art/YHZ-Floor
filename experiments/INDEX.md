@@ -6,18 +6,18 @@ analyses, and the sweep/summary outputs. The paper's §7.1 table (registered ses
 
 | Directory | rows | artifacts | what it is (paper section) |
 |---|---|---|---|
-| [`blind_opportunity_chacha20_20261018/`](blind_opportunity_chacha20_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`blind_opportunity_ecdsa_20261018/`](blind_opportunity_ecdsa_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`blind_opportunity_rc4_20261018/`](blind_opportunity_rc4_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`cvebench_census_20261024/`](cvebench_census_20261024/) | 1 | results.jsonl,summary.json |  |
-| [`diag_empty_20261103/`](diag_empty_20261103/) |  |  |  |
-| [`exploratory_code_feedback_20261017/`](exploratory_code_feedback_20261017/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_20261017_v2/`](exploratory_code_feedback_20261017_v2/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_chacha20_20261018/`](exploratory_code_feedback_chacha20_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_chacha20_replication_20261018/`](exploratory_code_feedback_chacha20_replication_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_chacha20_replication_20261018_seeds56/`](exploratory_code_feedback_chacha20_replication_20261018_seeds56/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_ecdsa_replication_20261018/`](exploratory_code_feedback_ecdsa_replication_20261018/) | 2 | results.jsonl,summary.json |  |
-| [`exploratory_code_feedback_ecdsa_replication_20261018_seeds56/`](exploratory_code_feedback_ecdsa_replication_20261018_seeds56/) | 2 | results.jsonl,summary.json |  |
+| [`blind_opportunity_chacha20_20261018/`](blind_opportunity_chacha20_20261018/) | 2  | the ChaCha20 blind-opportunity diagnostic (paper §4)|  |
+| [`blind_opportunity_ecdsa_20261018/`](blind_opportunity_ecdsa_20261018/) | 2  | the ECDSA blind-opportunity diagnostic (paper §4)|  |
+| [`blind_opportunity_rc4_20261018/`](blind_opportunity_rc4_20261018/) | 2  | the RC4 blind-opportunity diagnostic (paper §4)|  |
+| [`cvebench_census_20261024/`](cvebench_census_20261024/) | 1  | the CVE-Bench census — 40 web-CVE targets, zero crypto (paper §7)|  |
+| [`diag_empty_20261103/`](diag_empty_20261103/) |   | the empty-diagnostic control (paper §5)|  |
+| [`exploratory_code_feedback_20261017/`](exploratory_code_feedback_20261017/) | 2  | the exploratory code-feedback probe (pre-registered cohort era, paper §8)|  |
+| [`exploratory_code_feedback_20261017_v2/`](exploratory_code_feedback_20261017_v2/) | 2  | its v2 (paper §8)|  |
+| [`exploratory_code_feedback_chacha20_20261018/`](exploratory_code_feedback_chacha20_20261018/) | 2  | the ChaCha20 code-feedback probe (paper §8)|  |
+| [`exploratory_code_feedback_chacha20_replication_20261018/`](exploratory_code_feedback_chacha20_replication_20261018/) | 2  | the ChaCha20 code-feedback replication (paper §8)|  |
+| [`exploratory_code_feedback_chacha20_replication_20261018_seeds56/`](exploratory_code_feedback_chacha20_replication_20261018_seeds56/) | 2  | the seeds-56 variant (paper §8)|  |
+| [`exploratory_code_feedback_ecdsa_replication_20261018/`](exploratory_code_feedback_ecdsa_replication_20261018/) | 2  | the ECDSA code-feedback replication (paper §8)|  |
+| [`exploratory_code_feedback_ecdsa_replication_20261018_seeds56/`](exploratory_code_feedback_ecdsa_replication_20261018_seeds56/) | 2  | the seeds-56 variant (paper §8)|  |
 | [`exploratory_code_feedback_rc4_20261018/`](exploratory_code_feedback_rc4_20261018/) | 2 | results.jsonl,summary.json |  |
 | [`exploratory_code_feedback_rc4_replication_20261018/`](exploratory_code_feedback_rc4_replication_20261018/) | 2 | results.jsonl,summary.json |  |
 | [`exploratory_code_feedback_rc4_replication_20261018_seeds56/`](exploratory_code_feedback_rc4_replication_20261018_seeds56/) | 2 | results.jsonl,summary.json |  |
@@ -25,68 +25,68 @@ analyses, and the sweep/summary outputs. The paper's §7.1 table (registered ses
 | [`external_admission_20261024/`](external_admission_20261024/) | 1 | results.jsonl,summary.json |  |
 | [`external_admission_amend1_20261024/`](external_admission_amend1_20261024/) | 33 | results.jsonl,summary.json | the HTB grid cohort A — 31/37 vs 0/37 admission contrast (paper §7) |
 | [`external_admission_amend2_20261025/`](external_admission_amend2_20261025/) |  | summary.json |  |
-| [`external_admission_amend2_20261029/`](external_admission_amend2_20261029/) |  |  |  |
+| [`external_admission_amend2_20261029/`](external_admission_amend2_20261029/) |  | registration + qualification arms | the Amend-2 qualification cohort (paper §7) |
 | [`external_admission_amend3_20261105/`](external_admission_amend3_20261105/) | 168 | results.jsonl | the NYU three-label panel cohort B — 282 programs, 0 oracle-correct, 18/282 regrade (paper §7) |
 | [`external_admission_amend4_frontier_20261106/`](external_admission_amend4_frontier_20261106/) | 168 | results.jsonl |  |
-| [`external_admission_amend5_transport_20261109/`](external_admission_amend5_transport_20261109/) | 36 | results.jsonl,freeze | the frontier repanel cohort C — 35/36 oracle-correct, 7/61 admission, 61/61 external (paper §7) |
-| [`external_published_audit_20261110/`](external_published_audit_20261110/) | 60 | results.jsonl,freeze | the M1 published-protocol audit — 60 sessions, censoring finding, 20/50→28/50 (paper §7, abstract) |
-| [`external_review_amend4_c1_20261107/`](external_review_amend4_c1_20261107/) |  |  | the blind 3-reviewer re-derivation of the headline counts (paper §7) |
-| [`external_rule_admission_20261110/`](external_rule_admission_20261110/) |  |  |  |
-| [`external_transfer_nondomain_20261109/`](external_transfer_nondomain_20261109/) | 16 | results.jsonl | the out-of-domain premise witness — 8/8 vs 0/8, Fisher 7.8e-5 (paper §10.2) |
-| [`h2_cbc_agency_20261023/`](h2_cbc_agency_20261023/) | 8 | results.jsonl,summary.json |  |
-| [`h2_no_oracle_p025_20261103/`](h2_no_oracle_p025_20261103/) | 10 | results.jsonl,summary.json | the oracle-separation control — 0/10, 256 probes (paper §6) |
-| [`h2_pairs_extension_20261024/`](h2_pairs_extension_20261024/) | 20 | results.jsonl,summary.json | the 10-pair extension + the format-compliance reversal diagnosis (paper §6) |
-| [`h2_pairs_powered_20261107/`](h2_pairs_powered_20261107/) | 64 | results.jsonl,summary.json | the powered 32-pair wrapper cohort — 0/32 each direction, ≤10.7% Wilson (paper §6) |
-| [`info_contract_2x2_20261018/`](info_contract_2x2_20261018/) | 16 | results.jsonl,summary.json |  |
-| [`info_contract_2x2_rc4_20261024/`](info_contract_2x2_rc4_20261024/) | 16 | results.jsonl,summary.json | the saturated RC4 honest null — 4/4 (paper §5) |
-| [`info_contract_aesctr_20261026/`](info_contract_aesctr_20261026/) | 64 | results.jsonl,summary.json | the AES-CTR boundary run — both withheld arms 0/16 (paper §5) |
-| [`info_contract_aesgcm_20261102/`](info_contract_aesgcm_20261102/) | 65 | results.jsonl,summary.json |  |
+| [`external_admission_amend5_transport_20261109/`](external_admission_amend5_transport_20261109/) | 36  | the frontier repanel on the visible-completion transport — 35/36 oracle-correct (paper §7)| the frontier repanel cohort C — 35/36 oracle-correct, 7/61 admission, 61/61 external (paper §7) |
+| [`external_published_audit_20261110/`](external_published_audit_20261110/) | 60  | the M1 published-protocol audit — 60 sessions, the censoring finding, 20/50→28/50 (paper §7)| the M1 published-protocol audit — 60 sessions, censoring finding, 20/50→28/50 (paper §7, abstract) |
+| [`external_review_amend4_c1_20261107/`](external_review_amend4_c1_20261107/) |   | the blind 3-reviewer re-derivation of the headline counts (paper §7)| the blind 3-reviewer re-derivation of the headline counts (paper §7) |
+| [`external_rule_admission_20261110/`](external_rule_admission_20261110/) |   | the external-rule admission read on the frozen windows (paper §7)|  |
+| [`external_transfer_nondomain_20261109/`](external_transfer_nondomain_20261109/) | 16  | the out-of-domain premise witness — 8/8 vs 0/8 (paper §10.2)| the out-of-domain premise witness — 8/8 vs 0/8, Fisher 7.8e-5 (paper §10.2) |
+| [`h2_cbc_agency_20261023/`](h2_cbc_agency_20261023/) | 8  | the H2 agency probe cohort (paper §6)|  |
+| [`h2_no_oracle_p025_20261103/`](h2_no_oracle_p025_20261103/) | 10  | the oracle-separation control — 0/10, 256 probes (paper §6)| the oracle-separation control — 0/10, 256 probes (paper §6) |
+| [`h2_pairs_extension_20261024/`](h2_pairs_extension_20261024/) | 20  | the 10-pair wrapper extension + the format-compliance diagnosis (paper §6)| the 10-pair extension + the format-compliance reversal diagnosis (paper §6) |
+| [`h2_pairs_powered_20261107/`](h2_pairs_powered_20261107/) | 64  | the powered 32-pair wrapper cohort — 0/32 each direction (paper §6)| the powered 32-pair wrapper cohort — 0/32 each direction, ≤10.7% Wilson (paper §6) |
+| [`info_contract_2x2_20261018/`](info_contract_2x2_20261018/) | 16  | the original 2×2 factorial that isolated the zero-reference premise (paper §5)|  |
+| [`info_contract_2x2_rc4_20261024/`](info_contract_2x2_rc4_20261024/) | 16  | the saturated RC4 honest null — 4/4 (paper §5)| the saturated RC4 honest null — 4/4 (paper §5) |
+| [`info_contract_aesctr_20261026/`](info_contract_aesctr_20261026/) | 64  | the AES-CTR boundary run — both withheld arms 0/16 (paper §5)| the AES-CTR boundary run — both withheld arms 0/16 (paper §5) |
+| [`info_contract_aesgcm_20261102/`](info_contract_aesgcm_20261102/) | 65  | the AES-GCM cohort opening the modern-AEAD wave (paper §5)|  |
 | [`info_contract_aesgcm_20261102__rerun_ar_20261103/`](info_contract_aesgcm_20261102__rerun_ar_20261103/) | 64 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_apinex_20261102/`](info_contract_aesgcm_apinex_20261102/) |  |  |  |
+| [`info_contract_aesgcm_apinex_20261102/`](info_contract_aesgcm_apinex_20261102/) |   | the APINEX-routed cohort — transport deviation disclosed (paper §5)|  |
 | [`info_contract_aesgcm_c2_floor8000_p026_20261103/`](info_contract_aesgcm_c2_floor8000_p026_20261103/) | 96 | results.jsonl,summary.json | floor-sensitivity dose-response: 53.1%→7.3% floor-exhaustion, zero acceptance at both floors (paper §5) |
-| [`info_contract_aesgcm_labels_20261102/`](info_contract_aesgcm_labels_20261102/) |  |  |  |
+| [`info_contract_aesgcm_labels_20261102/`](info_contract_aesgcm_labels_20261102/) |   | the multi-label scheduling cohort (paper §5)|  |
 | [`info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103/`](info_contract_aesgcm_labels_gpt_5_6_sol__rerun_ar_20261103/) | 62 | results.jsonl,summary.json |  |
 | [`info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103/`](info_contract_aesgcm_labels_gpt_6_1_sol__rerun_ar_20261103/) | 62 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_p017_20261102/`](info_contract_aesgcm_p017_20261102/) | 64 | results.jsonl,summary.json |  |
+| [`info_contract_aesgcm_p017_20261102/`](info_contract_aesgcm_p017_20261102/) | 64  | the P017 AES-GCM cohort (paper §5)|  |
 | [`info_contract_aesgcm_p017_20261102__rerun_ar_20261103/`](info_contract_aesgcm_p017_20261102__rerun_ar_20261103/) | 93 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_p022a_20261102/`](info_contract_aesgcm_p022a_20261102/) | 96 | results.jsonl,summary.json |  |
+| [`info_contract_aesgcm_p022a_20261102/`](info_contract_aesgcm_p022a_20261102/) | 96  | the P022a AES-GCM cohort (paper §5)|  |
 | [`info_contract_aesgcm_p022a_20261102__rerun_ar_20261103/`](info_contract_aesgcm_p022a_20261102__rerun_ar_20261103/) | 96 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_p022b_20261102/`](info_contract_aesgcm_p022b_20261102/) | 96 | results.jsonl,summary.json |  |
+| [`info_contract_aesgcm_p022b_20261102/`](info_contract_aesgcm_p022b_20261102/) | 96  | the P022b AES-GCM cohort — the transport-damaged first pass (paper §5)|  |
 | [`info_contract_aesgcm_p022b_20261102__rerun_ar_20261103/`](info_contract_aesgcm_p022b_20261102__rerun_ar_20261103/) | 96 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_p024a_20261103/`](info_contract_aesgcm_p024a_20261103/) | 96 | results.jsonl,summary.json | the truncation-reading closure — withholding makes every answer wrong (paper §5) |
-| [`info_contract_aesgcm_p024b_20261103/`](info_contract_aesgcm_p024b_20261103/) | 96 | results.jsonl,summary.json | the printed boundary condition — consistent, under-powered at every coding (paper §5) |
+| [`info_contract_aesgcm_p024a_20261103/`](info_contract_aesgcm_p024a_20261103/) | 96  | the P024a closure of the truncation reading (paper §5)| the truncation-reading closure — withholding makes every answer wrong (paper §5) |
+| [`info_contract_aesgcm_p024b_20261103/`](info_contract_aesgcm_p024b_20261103/) | 96  | the P024b boundary condition — consistent, under-powered at every coding (paper §5)| the printed boundary condition — consistent, under-powered at every coding (paper §5) |
 | [`info_contract_aesgcm_p024b_20261103__rerun_ar_20261103/`](info_contract_aesgcm_p024b_20261103__rerun_ar_20261103/) | 96 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_random_20261102/`](info_contract_aesgcm_random_20261102/) | 96 | results.jsonl,summary.json |  |
+| [`info_contract_aesgcm_random_20261102/`](info_contract_aesgcm_random_20261102/) | 96  | the first CSPRNG-sampled AES-GCM cohort (paper §5)|  |
 | [`info_contract_aesgcm_random_20261102__rerun_ar_20261103/`](info_contract_aesgcm_random_20261102__rerun_ar_20261103/) | 102 | results.jsonl,summary.json |  |
-| [`info_contract_aesgcm_random_p021_20261102/`](info_contract_aesgcm_random_p021_20261102/) | 385 | results.jsonl,summary.json |  |
+| [`info_contract_aesgcm_random_p021_20261102/`](info_contract_aesgcm_random_p021_20261102/) | 385  | the P021 power cohort, first pass on the degraded transport (paper §5)|  |
 | [`info_contract_aesgcm_random_p021ar_20261103/`](info_contract_aesgcm_random_p021ar_20261103/) | 384 | results.jsonl,summary.json | the 96-instance CSPRNG power cohort (repairs P021) — paired C1-vs-C4 96/0, Holm 4.04e-28 (paper §5, Table 3) |
-| [`info_contract_aesgcm_random_p021r_20261103/`](info_contract_aesgcm_random_p021r_20261103/) | 73 | results.jsonl |  |
-| [`info_contract_aesgcm_random_p023_20261103/`](info_contract_aesgcm_random_p023_20261103/) | 384 | results.jsonl,summary.json | the fresh-seed 96-instance cohort — paired 95/0 (paper §5) |
+| [`info_contract_aesgcm_random_p021r_20261103/`](info_contract_aesgcm_random_p021r_20261103/) | 73  | the APINEX label probe — superseded, never pooled (paper §5)|  |
+| [`info_contract_aesgcm_random_p023_20261103/`](info_contract_aesgcm_random_p023_20261103/) | 384  | the P023 fresh-seed cohort — paired 95/0 (paper §5)| the fresh-seed 96-instance cohort — paired 95/0 (paper §5) |
 | [`info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103/`](info_contract_aesgcm_random_p023_20261103__rerun_ar_20261103/) | 384 | results.jsonl,summary.json |  |
-| [`info_contract_chachapoly_random_20261102/`](info_contract_chachapoly_random_20261102/) | 96 | results.jsonl,summary.json |  |
+| [`info_contract_chachapoly_random_20261102/`](info_contract_chachapoly_random_20261102/) | 96  | the ChaCha20-Poly1305 CSPRNG cohort (paper §5)|  |
 | [`info_contract_chachapoly_random_20261102__rerun_ar_20261103/`](info_contract_chachapoly_random_20261102__rerun_ar_20261103/) | 96 | results.jsonl,summary.json |  |
 | [`info_contract_confirmatory_c1_20261107/`](info_contract_confirmatory_c1_20261107/) | 64 | results.jsonl,summary.json | the m=3 confirmatory cohort on gpt-5.6-sol — bar NOT cleared, the observability axis's prediction (paper §11) |
-| [`info_contract_ecdsa_20261018/`](info_contract_ecdsa_20261018/) |  |  | the observable-premise ECDSA control — 32/32 withheld null (paper §5) |
-| [`info_contract_ecdsa_20261026/`](info_contract_ecdsa_20261026/) | 66 | results.jsonl,summary.json |  |
-| [`info_contract_gcmsiv_random_20261102/`](info_contract_gcmsiv_random_20261102/) | 32 | results.jsonl,summary.json | the registered negative control — accepts nothing in any cell (paper §5) |
+| [`info_contract_ecdsa_20261018/`](info_contract_ecdsa_20261018/) |   | the first observable-premise ECDSA control (paper §5)| the observable-premise ECDSA control — 32/32 withheld null (paper §5) |
+| [`info_contract_ecdsa_20261026/`](info_contract_ecdsa_20261026/) | 66  | the second observable-premise ECDSA control (paper §5)|  |
+| [`info_contract_gcmsiv_random_20261102/`](info_contract_gcmsiv_random_20261102/) | 32  | the AES-GCM-SIV negative control — accepts nothing in any cell (paper §5)| the registered negative control — accepts nothing in any cell (paper §5) |
 | [`info_contract_gcmsiv_random_20261102__rerun_ar_20261103/`](info_contract_gcmsiv_random_20261102__rerun_ar_20261103/) | 35 | results.jsonl,summary.json |  |
-| [`info_contract_label2_20261025/`](info_contract_label2_20261025/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_label2_20261025/`](info_contract_label2_20261025/) | 32  | the label-2 replication (paper §5)|  |
 | [`info_contract_label2_20261025__rerun_ar_20261103/`](info_contract_label2_20261025__rerun_ar_20261103/) | 32 | results.jsonl,summary.json |  |
-| [`info_contract_label3_20261029/`](info_contract_label3_20261029/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_label3_20261029/`](info_contract_label3_20261029/) | 32  | the label-3 replication (paper §5)|  |
 | [`info_contract_label3_n32_20261101/`](info_contract_label3_n32_20261101/) | 129 | results.jsonl,summary.json | the n=32 scale-up + its damaged first pass and clean rerun (paper §5) |
 | [`info_contract_label3_n32_20261101__rerun_ar_20261103/`](info_contract_label3_n32_20261101__rerun_ar_20261103/) | 128 | results.jsonl,summary.json |  |
-| [`info_contract_label4_20261030/`](info_contract_label4_20261030/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_label4_20261030/`](info_contract_label4_20261030/) | 32  | the label-4 replication (paper §5)|  |
 | [`info_contract_label4_20261030__rerun_ar_20261103/`](info_contract_label4_20261030__rerun_ar_20261103/) | 32 | results.jsonl,summary.json |  |
-| [`info_contract_label5_20261030/`](info_contract_label5_20261030/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_label5_20261030/`](info_contract_label5_20261030/) | 32  | the label-5 replication, first pass after quota exhaustion (paper §5)|  |
 | [`info_contract_label5_20261030__rerun_ar_20261103/`](info_contract_label5_20261030__rerun_ar_20261103/) | 44 | results.jsonl,summary.json |  |
-| [`info_contract_label5r_20261030/`](info_contract_label5r_20261030/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_label5r_20261030/`](info_contract_label5r_20261030/) | 32  | the label-5 recovery rerun, disclosed per-label (paper §5)|  |
 | [`info_contract_label5r_20261030__rerun_ar_20261103/`](info_contract_label5r_20261030__rerun_ar_20261103/) | 44 | results.jsonl,summary.json |  |
-| [`info_contract_n16_20261026/`](info_contract_n16_20261026/) | 64 | results.jsonl,summary.json |  |
-| [`info_contract_p010_driftcheck_20261026/`](info_contract_p010_driftcheck_20261026/) | 17 | results.jsonl,summary.json |  |
-| [`info_contract_powered_20261025/`](info_contract_powered_20261025/) | 32 | results.jsonl,summary.json |  |
+| [`info_contract_n16_20261026/`](info_contract_n16_20261026/) | 64  | the n=16 ChaCha20 cohort resolving the exact-test floor — paired 10/0 (paper §5)|  |
+| [`info_contract_p010_driftcheck_20261026/`](info_contract_p010_driftcheck_20261026/) | 17  | the drift check on the P010 family (paper §5)|  |
+| [`info_contract_powered_20261025/`](info_contract_powered_20261025/) | 32  | the powered information-contract cohort (paper §5)|  |
 | [`info_contract_x1_gptoss_20261026/`](info_contract_x1_gptoss_20261026/) | 67 | results.jsonl,summary.json |  |
-| [`paper_tables_20261103/`](paper_tables_20261103/) |  |  |  |
-| [`provider_health_20261023/`](provider_health_20261023/) |  |  |  |
+| [`paper_tables_20261103/`](paper_tables_20261103/) |   | the generator for the paper's registered tables|  |
+| [`provider_health_20261023/`](provider_health_20261023/) |   | the provider-health calibration record (infrastructure)|  |
 
 ## Top-level records
 

@@ -47,3 +47,11 @@ The exact two-sided binomial p for (96, 0) is `2.5e-29`; the Holm step-down over
 ## The chain of custody
 
 `COPY_LINEAGE.json` (in `reviewer_bundle/`) records source→destination SHA-256 for every copied payload; `MANIFEST.json` hashes the assembled package; failed attempts remain separate (no trial added or removed); nothing was executed during packaging. Records retain the originating workstation's bare mount prefix — a filesystem location, not an identity.
+
+---
+
+<div align="center">
+
+Next: <b><a href="docs/REPO_MAP.md">Repository map</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

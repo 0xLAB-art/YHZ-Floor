@@ -108,3 +108,11 @@ Per-cohort regeneration is closed-form (standard library only): each cohort's `r
 - **The manuscript**: during double-blind review the paper travels through the venue's submission system only.
 - **Raw per-turn provider responses** (the largest bulk): the per-slot `results.jsonl` rows and per-slot summaries carry every recorded outcome; raw response dumps remain with the authors and can be shared on request.
 - **Anything identity-carrying**: the bundle passed a direct-identifier scan (0 hits); frozen records retain a bare mount prefix (`/mnt/nvme5/...`) — a filesystem location, not an identity.
+
+---
+
+<div align="center">
+
+Next: <b><a href="docs/SETUP_AND_API.md">Setup & API</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
+
+</div>

@@ -13,6 +13,19 @@
 [![bundle](https://img.shields.io/badge/evidence%20bundle-24%2C023%20files%20verified%20%7C%200%20identity%20hits-2ea043)](#)
 [![release](https://img.shields.io/badge/release-v1.0.0--codes--results-blue)](../../releases/tag/v1.0.0-codes-results)
 
+<div align="center">
+
+**[📖 README](#-the-five-owner-audit)** &nbsp;·&nbsp;
+**[📗 Guide](GUIDE.md)** &nbsp;·&nbsp;
+**[🧠 Explanation](EXPLANATION.md)** &nbsp;·&nbsp;
+**[🧪 Experiments & results](experiments/INDEX.md)** &nbsp;·&nbsp;
+**[🤝 Contributing](CONTRIBUTING.md)** &nbsp;·&nbsp;
+**[🛡️ Security](SECURITY.md)** &nbsp;·&nbsp;
+**[🌐 Rendered docs](https://0xlab-art.github.io/YHZ-Floor/)** &nbsp;·&nbsp;
+**[📦 Release](../../releases/tag/v1.0.0-codes-results)**
+
+</div>
+
 📖 **[The rendered Guide](https://0xlab-art.github.io/YHZ-Floor/)** &nbsp;·&nbsp;
 🗂️ **[Experiments index](experiments/INDEX.md)** &nbsp;·&nbsp;
 📦 **[Release: codes + results](../../releases/tag/v1.0.0-codes-results)** &nbsp;·&nbsp;

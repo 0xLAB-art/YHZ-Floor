@@ -1,0 +1,53 @@
+site_name: YHZ-Floor — The Five-Owner Audit
+site_description: The complete verifiable evidence bundle for a pre-registered ownership audit of AI-agent attack success
+repo_url: https://github.com/0xLAB-art/YHZ-Floor
+repo_name: 0xLAB-art/YHZ-Floor
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: dark mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: light mode
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Guide:
+      - The audit model: guide.md
+      - Setup & API: setup_and_api.md
+      - Running experiments: running_experiments.md
+      - Verifying results: verifying.md
+  - Experiments index: experiments_index.md
+  - Repository map: repo_map.md
+  - Reviewer bundle: reviewer_bundle.md

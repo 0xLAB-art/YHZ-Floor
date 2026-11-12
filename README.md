@@ -2,6 +2,9 @@
 
 **The complete, verifiable evidence bundle for a pre-registered ownership audit of AI-agent attack success.**
 
+> 📖 **[Read the full rendered documentation →](https://0xlab-art.github.io/YHZ-Floor/)**
+> (the Guide, the API setup, the experiment lifecycle, the verification walkthroughs — with search and diagrams)
+
 📗 **[Read the Guide first](GUIDE.md)** — how the audit works, how to run it, how to plug in an API, and where every number lives. Then browse **[experiments/INDEX.md](experiments/INDEX.md)**: all 81 registered cohorts, browsable, with their per-session results.
 
 *Prepared for double-blind review (IEEE S&P 2027, Cycle 2). This repository is the anonymized evidence projection: no author identities, no experimental reruns during packaging, every retained record byte-preserving. The manuscript itself is delivered to reviewers through the venue's submission system.*

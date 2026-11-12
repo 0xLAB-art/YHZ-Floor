@@ -1,108 +1,106 @@
-# YHZ-Floor
+<div align="center">
 
-**The complete, verifiable evidence bundle for a pre-registered ownership audit of AI-agent attack success.**
+<img src="assets/owners_3d.svg" width="860" alt="The five owners of a reported attack success — animated isometric decomposition"/>
 
-> 📖 **[Read the full rendered documentation →](https://0xlab-art.github.io/YHZ-Floor/)**
-> (the Guide, the API setup, the experiment lifecycle, the verification walkthroughs — with search and diagrams)
+### The Five-Owner Audit — YHZ-Floor
 
-📗 **[Read the Guide first](GUIDE.md)** — how the audit works, how to run it, how to plug in an API, and where every number lives. Then browse **[experiments/INDEX.md](experiments/INDEX.md)**: all 81 registered cohorts, browsable, with their per-session results.
+**A pre-registered, hash-frozen ownership audit of AI-agent attack success**
 
-*Prepared for double-blind review (IEEE S&P 2027, Cycle 2). This repository is the anonymized evidence projection: no author identities, no experimental reruns during packaging, every retained record byte-preserving. The manuscript itself is delivered to reviewers through the venue's submission system.*
+[![venue](https://img.shields.io/badge/venue-IEEE%20S%26P%202027%20Cycle%202-blue)](#)
+[![status](https://img.shields.io/badge/status-double--blind%20review-orange)](#)
+[![pre-registration](https://img.shields.io/badge/preregistration-all%20cohorts%20hash--frozen-8a63d2)](#)
+[![evidence gate](https://img.shields.io/badge/evidence%20gate-194%2F194%20checks-2ea043)](#)
+[![bundle](https://img.shields.io/badge/evidence%20bundle-24%2C023%20files%20verified%20%7C%200%20identity%20hits-2ea043)](#)
+[![release](https://img.shields.io/badge/release-v1.0.0--codes--results-blue)](../../releases/tag/v1.0.0-codes-results)
 
-<img src="assets/owners_3d.svg" width="860" alt="The five owners of a reported attack success — animated isometric decomposition with the YHZ floor"/>
+📖 **[The rendered Guide](https://0xlab-art.github.io/YHZ-Floor/)** &nbsp;·&nbsp;
+🗂️ **[Experiments index](experiments/INDEX.md)** &nbsp;·&nbsp;
+📦 **[Release: codes + results](../../releases/tag/v1.0.0-codes-results)** &nbsp;·&nbsp;
+🔍 **[Verify the bundle](#quick-start)**
+
+</div>
 
 ---
 
-## What this is
+## Quick start
 
-A reported AI-agent attack-success number is a property of the **evaluation contract** that produced it — not an intrinsic property of the agent. The associated manuscript ("*Who Owns the Number? A Pre-Registered Audit of Five Owners Behind AI-Agent Attack Success*") measures the share of each owner through **hash-frozen, one-owner-at-a-time interventions** on matched cryptographic tasks: 33 registered cohorts, 3,562 retained sessions, plus a 60-session published-protocol audit — every design pre-specified, every number frozen before the first call.
+A few options to get into the evidence, no trust required:
+
+```sh
+# 1. verify the curated bundle (24,023 payloads, no execution)
+cd reviewer_bundle
+python3 -B offline_checks.py verify        # → integrity: PASS, 0 errors
+
+# 2. download the full codes+results record (107 MB)
+#    Releases → v1.0.0-codes-results, then:
+sha256sum -c MANIFEST_CODES_RESULTS.sha256 # 117,330 files
+tar xzf codes_results.tar.gz
+```
+
+## Why this exists
+
+A reported AI-agent attack-success number is a property of the **evaluation contract** that produced it — not an intrinsic property of the agent. This repository is the complete verifiable record of an audit that measures the share of each owner through **hash-frozen, one-owner-at-a-time interventions** on matched cryptographic tasks: 33 registered cohorts, 3,562 retained sessions, plus a 60-session published-protocol audit — every design pre-specified, every number frozen before the first call.
 
 ## The registered 16-member family
 
 Every information-contract cohort's paired contrast is **one-way**: no withheld seed ever beats its stated counterpart.
 
-<img src="assets/discordance_family.svg" width="860" alt="Animated bars: the 16 Holm-family cohorts, every paired contrast one-way; the 5/0 borderline prints as its own bound"/>
+<img src="assets/discordance_family.svg" width="860" alt="Animated bars: the 16 Holm-family cohorts, every paired contrast one-way"/>
 
 ## The allowance owns part of the number
 
-The external audit's headline finding: a published protocol's *declared 12,000-token allowance* censors 30 of 60 sessions into unshown reasoning — **six of ten task-level pairs are unmeasured, not failed**. Raising the allowance recovers the ceiling-censored slots under all five evaluator rules. A published rate is only as strong as the allowance it was measured under.
+The external audit's headline finding: a published protocol's *declared 12,000-token allowance* censors 30 of 60 sessions into unshown reasoning — **six of ten task-level pairs are unmeasured, not failed**. Raising the allowance recovers the ceiling-censored slots under all five evaluator rules. **A published rate is only as strong as the allowance it was measured under.**
 
 <img src="assets/allowance_censoring.svg" width="860" alt="Animated slot grid: 20/50 solved at the declared allowance rising to 28/50 after the 32k/64k amendments"/>
+
+## The ownership ledger
+
+| Owner | Intervention | Registered result | Bound |
+|---|---|---|---|
+| **Admission** | regrade fixed bytes; cleanup | $-0.8 \to -32.8 \to +3.9$ pp | trigger executes in 100/101 traces |
+| **Information contract** | $2{\times}2$ prompt slots | paired one-way in all 16 family members (96/0, Holm $4.04{\times}10^{-28}$) | RC4 + ECDSA nulls; AES-GCM-SIV accepts nothing |
+| **Session wrapper** | interactive vs one-shot | powered 32-pair null: 0/32 each direction | advantage $\le 10.7\%$ (Wilson 95%) |
+| **Compute allowance** | declared vs raised | 20/50 $\to$ 28/50 (8/10 task-level) | 17 slots transport-unmeasured |
+| **Execution evidence** | attribution ablations | combination 0/44 (16/44, 28/44 alone) | constructed-case outcomes, not deployment rates |
+
+## Documentation
+
+| | |
+|---|---|
+| 📗 [The Guide](GUIDE.md) | the audit model, the lifecycle, where every number lives |
+| ⚙️ [Setup & API](docs/SETUP_AND_API.md) | environment-only keys, gateway behaviour (measured), budget discipline |
+| 🧪 [Running experiments](docs/RUNNING_EXPERIMENTS.md) | the M1 audit end-to-end, one recorded slot anatomy |
+| 🔍 [Verifying results](docs/VERIFYING.md) | three verification layers + a worked regeneration example |
+| 🗺️ [Repository map](docs/REPO_MAP.md) | every directory, what it carries, where the paper cites it |
+| 🌐 [Rendered site](https://0xlab-art.github.io/YHZ-Floor/) | the same guide as a browsable site with search |
 
 ## Repository layout
 
 ```
 YHZ-Floor/
 ├── README.md                        ← this file
-├── GUIDE.md                         ← the reviewer guide (setup, API, running, verifying)
-├── docs/                            ← the guide pages (mermaid diagrams, worked examples)
-├── experiments/INDEX.md             ← every cohort: directory → paper section → numbers
-├── experiments/ + analysis/         ← all registered cohorts and results, browsable
-├── assets/                          ← animated SVG figures (CSS/SMIL, no scripts)
-│   ├── gen_animations.py            ← the generator
-│   ├── owners_3d.svg                ← the five-owner decomposition (3D)
-│   ├── discordance_family.svg       ← the Holm family, animated
-│   └── allowance_censoring.svg      ← the M1 censoring story, animated
-└── reviewer_bundle/                 ← the anonymized evidence projection (24,023 manifest files)
-    ├── offline_checks.py            ← safe-default verification (no execution required)
+├── GUIDE.md + docs/                 ← the reviewer guide (mermaid diagrams, worked examples)
+├── assets/                          ← animated SVG figures (CSS/SMIL — no scripts at render time)
+│   └── gen_animations.py            ← the generator
+├── experiments/                     ← all 60+ registered cohorts, browsable + INDEX.md
+│   └── (registration, per-session results.jsonl, analyses, censuses per cohort)
+├── analysis/                        ← the E2/E5/RQ4 trees, evaluators, the H1-R3 replay validation
+└── reviewer_bundle/                 ← the curated offline projection (24,023 manifest files)
+    ├── offline_checks.py            ← the no-execution verifier
     ├── MANIFEST.json                ← SHA-256 per file
     ├── COPY_LINEAGE.json            ← byte-preserving payload hashes
-    ├── ANONYMITY_SCOPE.json         ← direct-identifier scan results
-    ├── CLAIMS.json                  ← claim → evidence map
+    ├── ANONYMITY_SCOPE.json         ← direct-identifier scan (0 hits)
     ├── review.py                    ← optional reviewer re-execution entry points
-    ├── h1r3/                        ← 852-session H1-R3 component + sandboxed replay
-    ├── evidence/fixed_executor/     ← the historical 12/12 fixed-executor records
-    ├── prior_validation/            ← prior portable-execution reports + BINDING.json
-    └── source/sp2027/               ← analysis trees + the external-boundary wave records
-        ├── research_execution/external_admission_amend1..5/   (HTB grid, NYU panel, frontier repanel)
-        ├── research_execution/external_review_amend4_c1/      (C1 confirmatory review)
-        └── research_execution/external_published_audit_20261110/  (the M1 published-protocol audit)
+    ├── h1r3/                        ← 852 sessions + sandboxed replay
+    └── source/sp2027/               ← the wave trees the main text cites
 ```
-
-## Quick start — verify without executing anything
-
-Python 3.10+ and the standard library suffice:
-
-```sh
-cd reviewer_bundle
-python3 -B offline_checks.py verify
-```
-
-This checks **every manifest-listed payload** and reports missing, changed, or unlisted files. Expected: `integrity: PASS` over 24,023 files, 0 errors. The census (`python3 -B offline_checks.py census`) reads archived records only — it never runs attack programs, evaluates mutations, contacts a provider, or re-adjudicates cryptographic outcomes.
-
-Optional reviewer re-execution (launches retained programs in a sandbox; **not** run during packaging):
-
-```sh
-python3 -B review.py h1r3 --output /tmp/acts-independent-h1r3
-```
-
-## How the numbers regenerate
-
-Every registered statistic regenerates from the raw per-seed rows by **closed-form enumeration** (Python standard library — no statistical package) and is checked by the evidence gate shipped with the paper source. `SOURCE_MAP` pointers resolve each printed cell to its raw `results.jsonl` row. Nothing is pooled: each cohort's paired contrast stands on its own population, with Holm step-down over the registered family and Clopper–Pearson bounds per cohort.
 
 ## Provenance and anonymity
 
-- **Byte-preserving packaging**: `COPY_LINEAGE.json` records source→destination SHA-256 for every copied payload; failed attempts remain separate and no trial was added or removed.
-- **Anonymity**: `ANONYMITY_SCOPE.json` reports the direct-identifier scan (0 hits across author-name, email, affiliation, and handle needles). The submission renders with an empty author field; reference [1] is anonymized.
-- **Frozen records carry infrastructure paths**: per the byte-preservation contract, some archived records retain the originating workstation's mount prefix (`/mnt/nvme5/ACTS-Attack/...`) — a filesystem location, not a user identity. Frozen records are never rewritten to conceal or decorate.
-- **No rerun during packaging**: no attack program, mutation test, or provider call was executed while preparing this bundle; the component-level prior validation is bound to its exact archive (`prior_validation/BINDING.json`).
-
-## The full campaign record
-
-The reviewer bundle above is the *curated projection*. The **codes and the per-cohort experiment results** — runner and analyzer scripts, frozen preregistrations, per-session `results.jsonl` rows, censuses, verdict records, amendments, the decision ledger, and the canonical campaign inventory across all 33 registered cohorts / 3,562 retained sessions + the 60-session published-protocol audit — ship as a single release asset with a SHA-256 manifest:
-
-**[Releases → v1.0.0-codes-results](../../releases/tag/v1.0.0-codes-results)** (107 MB):
-
-```sh
-sha256sum -c MANIFEST_CODES_RESULTS.sha256   # 117,330 files
-tar xzf codes_results.tar.gz
-```
-
-Bulk raw material (per-turn provider responses, per-session prompt dumps, execution captures, ops event logs) is intentionally not part of this asset — the curated `reviewer_bundle/` in the repository root carries the retained-session evidence, and the raw originals remain available to the authors on request.
-
-## Scope
-
-None of this grades an agent. It accounts for who else owns the number — and it is **audit-only**: the external cohorts register where the instrument travels and where it stops, every boundary is named by its owner (transport, answer normalization, admission interface, benchmark domain, capability floor), and no benchmark-quality claim is made about any audited system. Negative results are the boundary of the claim, not caveats.
+- **Byte-preserving packaging**: `COPY_LINEAGE.json` records source→destination SHA-256 for every copied payload; no trial was added or removed.
+- **Anonymity**: the direct-identifier scan across the whole tree returns **0 hits** (author names, emails, affiliations, handles); frozen records retain a bare mount prefix (`/mnt/nvme5/...`) — a filesystem location, not an identity.
+- **No rerun during packaging**: no attack program, mutation test, or provider call was executed while preparing this bundle.
+- **The manuscript is not here**: during double-blind review it travels through the venue's submission system only.
 
 ## The five preconditions (the YHZ floor)
 
@@ -112,7 +110,7 @@ None of this grades an agent. It accounts for who else owns the number — and i
 4. **Publish** the raw outputs — claims attach to frozen per-seed rows and receipted censuses.
 5. **Bind** the claim to its negatives — registered nulls stated as the claim's boundary.
 
-A benchmark that skips these reproduces the failure modes this audit measured. The full checklist (condition → demand → what a compliant release shows) is Table 9 of the paper.
+A benchmark that skips these reproduces the failure modes this audit measured. The full checklist is Table 9 of the paper.
 
 ---
 

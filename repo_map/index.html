@@ -803,7 +803,7 @@
 point at the accompanying manuscript (under review, served through the venue only).</p>
 <pre  class="mermaid"><code>flowchart TD
     R["YHZ-Floor/"] --> G["GUIDE.md + docs/<br/>the guide and its pages"]
-    R --> A["assets/<br/>animated SVG figures"]
+    R --> A["assets/<br/>the three SVG figures"]
     R --> T["tools/<br/>INDEX + figure generators"]
     R --> E["experiments/<br/>80 record directories + INDEX.md"]
     R --> AN["analysis/<br/>the campaign's working archive"]
@@ -862,12 +862,16 @@ point at the accompanying manuscript (under review, served through the venue onl
 <td>per-call cost estimates for the whole campaign (3,494 rows)</td>
 </tr>
 <tr>
-<td><code>assets/gen_animations.py</code></td>
-<td>regenerates the animated SVGs (CSS/SMIL only — nothing runs at render time)</td>
+<td><code>tools/build_assets.py</code></td>
+<td>rebuilds the three SVG figures from the frozen records (<code>analysis/INFO_CONTRACT_FAMILY.json</code> + the M1 sweep)</td>
 </tr>
 <tr>
 <td><code>tools/build_experiments_index.py</code></td>
 <td>regenerates <code>experiments/INDEX.md</code> from the frozen tree</td>
+</tr>
+<tr>
+<td><code>tools/build_docs_site.py</code></td>
+<td>syncs the rendered site's pages from this repository's markdown</td>
 </tr>
 </tbody>
 </table>

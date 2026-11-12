@@ -75,7 +75,13 @@ def transform(src_repo_path: str, text: str) -> str:
         # everything else: a repository path → GitHub
         return f"{m.group(1)}{GITHUB}/blob/main/{resolved}{anchor}{m.group(3)}"
 
-    return LINK.sub(repl, text)
+    out = LINK.sub(repl, text)
+    # Python-Markdown passes HTML-block content through raw unless blocks are
+    # marked markdown="1" (GitHub/GFM needs no marker — the repository README
+    # keeps its plain <div>/<details>; only the site copy is patched).
+    out = out.replace('<div align="center">', '<div align="center" markdown="1">')
+    out = out.replace('<details>', '<details markdown="1">')
+    return out
 
 
 def main() -> int:

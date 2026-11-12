@@ -111,7 +111,7 @@ Per-cohort regeneration is closed-form (standard library only): each cohort's `r
 
 ---
 
-<div align="center">
+<div align="center" markdown="1">
 
 Next: <b><a href="docs/SETUP_AND_API.md">Setup & API</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
 

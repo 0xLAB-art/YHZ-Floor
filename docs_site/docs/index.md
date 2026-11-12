@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-<div align="center">
+<div align="center" markdown="1">
 
 # YHZ-Floor
 
@@ -119,7 +119,7 @@ YHZ-Floor/
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Retained-programs notice</summary>
 
 Retained records are provided for review purposes. Retained attack programs target local, self-contained fixtures — containers with reserved secrets and a same-host reference oracle, no reachable production target. Execute them only inside the provided sandboxed replay (`reviewer_bundle/h1r3/h1r3_complete_replay_v1/`) or your own equivalent isolation. See [SECURITY.md](https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md).

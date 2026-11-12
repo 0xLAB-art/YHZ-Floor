@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-this-exists" class="md-skip">
+        <a href="#yhz-floor" class="md-skip">
           Skip to content
         </a>
       
@@ -373,6 +373,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -414,6 +416,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -800,6 +804,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -928,27 +934,18 @@
   
 
 
-  <h1>Home</h1>
-
 <div align="center">
-
-# YHZ-Floor
-
-**The complete, verifiable evidence bundle for a pre-registered, hash-frozen,
-five-owner audit of AI-agent attack success.**
-
-[![pre-registration](https://img.shields.io/badge/preregistration-all%20cohorts%20hash--frozen-8a63d2)](running_experiments.md)
-[![integrity](https://img.shields.io/badge/integrity-24%2C023%20payloads%20verified%20%C2%B7%200%20errors-2ea043)](#verify-before-you-read--10-seconds-no-trust-required)
-[![release](https://img.shields.io/badge/release-v1.0.0--codes--results-blue)](https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results)
-[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](https://github.com/0xLAB-art/YHZ-Floor/blob/main/LICENSE)
-[![docs](https://img.shields.io/badge/docs-rendered%20site-0969da)](https://0xlab-art.github.io/YHZ-Floor/)
-
-[Guide](guide.md) &nbsp;·&nbsp; [Explanation](guide.md) &nbsp;·&nbsp; [Experiments index](experiments_index.md) &nbsp;·&nbsp; [Rendered docs](https://0xlab-art.github.io/YHZ-Floor/) &nbsp;·&nbsp; [Contributing](https://github.com/0xLAB-art/YHZ-Floor/blob/main/CONTRIBUTING.md) &nbsp;·&nbsp; [Security](https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md) &nbsp;·&nbsp; [Cite](https://github.com/0xLAB-art/YHZ-Floor/blob/main/CITATION.cff)
-
-<img src="assets/banner_owners.svg" width="100%" alt="Who owns a published attack-success rate? Five cards — admission, information contract, session wrapper, compute allowance, execution evidence — each with its registered result and its bound"/>
-
+<h1 id="yhz-floor">YHZ-Floor<a class="headerlink" href="#yhz-floor" title="Permanent link">&para;</a></h1>
+<p><strong>The complete, verifiable evidence bundle for a pre-registered, hash-frozen,
+five-owner audit of AI-agent attack success.</strong></p>
+<p><a href="running_experiments/"><img alt="pre-registration" src="https://img.shields.io/badge/preregistration-all%20cohorts%20hash--frozen-8a63d2" /></a>
+<a href="#verify-before-you-read--10-seconds-no-trust-required"><img alt="integrity" src="https://img.shields.io/badge/integrity-24%2C023%20payloads%20verified%20%C2%B7%200%20errors-2ea043" /></a>
+<a href="https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results"><img alt="release" src="https://img.shields.io/badge/release-v1.0.0--codes--results-blue" /></a>
+<a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-Apache--2.0-blue" /></a>
+<a href="https://0xlab-art.github.io/YHZ-Floor/"><img alt="docs" src="https://img.shields.io/badge/docs-rendered%20site-0969da" /></a></p>
+<p><a href="guide/">Guide</a> &nbsp;·&nbsp; <a href="guide/">Explanation</a> &nbsp;·&nbsp; <a href="experiments_index/">Experiments index</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered docs</a> &nbsp;·&nbsp; <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/CONTRIBUTING.md">Contributing</a> &nbsp;·&nbsp; <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md">Security</a> &nbsp;·&nbsp; <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/CITATION.cff">Cite</a></p>
+<p><img src="assets/banner_owners.svg" width="100%" alt="Who owns a published attack-success rate? Five cards — admission, information contract, session wrapper, compute allowance, execution evidence — each with its registered result and its bound"/></p>
 </div>
-
 <h2 id="why-this-exists">Why this exists<a class="headerlink" href="#why-this-exists" title="Permanent link">&para;</a></h2>
 <p>A published AI-agent attack-success rate is not a property of the model. It is the output of a <strong>measurement contract</strong> — the evaluator's acceptance rule, the task prompt's disclosures, the session wrapper, the token allowance, and the evidence binding a verdict to an execution.</p>
 <p>This bundle freezes that contract, moves <strong>one owner at a time</strong> on matched cryptographic tasks, and serves every frozen row the numbers were measured on:</p>
@@ -1087,9 +1084,7 @@ python3<span class="w"> </span>-B<span class="w"> </span>offline_checks.py<span 
 <hr />
 <details>
 <summary>Retained-programs notice</summary>
-
-Retained records are provided for review purposes. Retained attack programs target local, self-contained fixtures — containers with reserved secrets and a same-host reference oracle, no reachable production target. Execute them only inside the provided sandboxed replay (`reviewer_bundle/h1r3/h1r3_complete_replay_v1/`) or your own equivalent isolation. See [SECURITY.md](https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md).
-
+<p>Retained records are provided for review purposes. Retained attack programs target local, self-contained fixtures — containers with reserved secrets and a same-host reference oracle, no reachable production target. Execute them only inside the provided sandboxed replay (<code>reviewer_bundle/h1r3/h1r3_complete_replay_v1/</code>) or your own equivalent isolation. See <a href="https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md">SECURITY.md</a>.</p>
 </details>
 
 

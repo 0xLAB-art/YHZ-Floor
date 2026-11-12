@@ -70,7 +70,7 @@ All runners share: environment-only keys, hash-gated freezes, append-only result
 
 ---
 
-<div align="center">
+<div align="center" markdown="1">
 
 Next: <b><a href="docs/VERIFYING.md">Verifying results</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
 

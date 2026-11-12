@@ -62,7 +62,7 @@ The fingerprint audit re-checks every stored call echoes the registered label ex
 
 ---
 
-<div align="center">
+<div align="center" markdown="1">
 
 Next: <b><a href="docs/RUNNING_EXPERIMENTS.md">Running experiments</a></b> &nbsp;·&nbsp; <a href="README.md">README</a> &nbsp;·&nbsp; <a href="https://0xlab-art.github.io/YHZ-Floor/">Rendered site</a>
 

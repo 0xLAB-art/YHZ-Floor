@@ -33,4 +33,4 @@ If you believe a registered number does not follow from its rows, or a claim ove
 
 ## License
 
-By contributing, you agree that your contributions are licensed under the [MIT License](LICENSE). The frozen records themselves are cited, not licensed — see [CITATION.cff](CITATION.cff).
+By contributing, you agree that your contributions are licensed under the [Apache License, Version 2.0](LICENSE). The frozen records themselves are cited, not licensed — see [CITATION.cff](CITATION.cff).

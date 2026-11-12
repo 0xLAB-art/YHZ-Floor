@@ -8,7 +8,7 @@ five-owner audit of AI-agent attack success.**
 [![pre-registration](https://img.shields.io/badge/preregistration-all%20cohorts%20hash--frozen-8a63d2)](docs/RUNNING_EXPERIMENTS.md)
 [![integrity](https://img.shields.io/badge/integrity-24%2C023%20payloads%20verified%20%C2%B7%200%20errors-2ea043)](#verify-before-you-read--10-seconds-no-trust-required)
 [![release](https://img.shields.io/badge/release-v1.0.0--codes--results-blue)](../../releases/tag/v1.0.0-codes-results)
-[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![docs](https://img.shields.io/badge/docs-rendered%20site-0969da)](https://0xlab-art.github.io/YHZ-Floor/)
 
 [Guide](GUIDE.md) &nbsp;·&nbsp; [Explanation](EXPLANATION.md) &nbsp;·&nbsp; [Experiments index](experiments/INDEX.md) &nbsp;·&nbsp; [Rendered docs](https://0xlab-art.github.io/YHZ-Floor/) &nbsp;·&nbsp; [Contributing](CONTRIBUTING.md) &nbsp;·&nbsp; [Security](SECURITY.md) &nbsp;·&nbsp; [Cite](CITATION.cff)

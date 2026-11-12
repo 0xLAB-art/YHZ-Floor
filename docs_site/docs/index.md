@@ -13,7 +13,7 @@ five-owner audit of AI-agent attack success.**
 [![pre-registration](https://img.shields.io/badge/preregistration-all%20cohorts%20hash--frozen-8a63d2)](running_experiments.md)
 [![integrity](https://img.shields.io/badge/integrity-24%2C023%20payloads%20verified%20%C2%B7%200%20errors-2ea043)](#verify-before-you-read--10-seconds-no-trust-required)
 [![release](https://img.shields.io/badge/release-v1.0.0--codes--results-blue)](https://github.com/0xLAB-art/YHZ-Floor/releases/tag/v1.0.0-codes-results)
-[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/0xLAB-art/YHZ-Floor/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](https://github.com/0xLAB-art/YHZ-Floor/blob/main/LICENSE)
 [![docs](https://img.shields.io/badge/docs-rendered%20site-0969da)](https://0xlab-art.github.io/YHZ-Floor/)
 
 [Guide](guide.md) &nbsp;·&nbsp; [Explanation](guide.md) &nbsp;·&nbsp; [Experiments index](experiments_index.md) &nbsp;·&nbsp; [Rendered docs](https://0xlab-art.github.io/YHZ-Floor/) &nbsp;·&nbsp; [Contributing](https://github.com/0xLAB-art/YHZ-Floor/blob/main/CONTRIBUTING.md) &nbsp;·&nbsp; [Security](https://github.com/0xLAB-art/YHZ-Floor/blob/main/SECURITY.md) &nbsp;·&nbsp; [Cite](https://github.com/0xLAB-art/YHZ-Floor/blob/main/CITATION.cff)

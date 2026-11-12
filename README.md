@@ -85,8 +85,9 @@ The reviewer bundle above is the *curated projection*. The complete campaign rec
 **[Releases → v1.0.0-evidence](../../releases/tag/v1.0.0-evidence)** — download all parts of an archive set, then:
 
 ```sh
-cat yhz_core.part-*.tar.gz | tar xzf -
-sha256sum -c MANIFEST.sha256          # verify every extracted file
+cat yhz_evidence.tar.gz.chunk-* > yhz_evidence.tar.gz
+sha256sum -c MANIFEST.sha256          # 155,056 file hashes + the archive + the chunk hashes
+tar xzf yhz_evidence.tar.gz
 ```
 
 ## Scope
